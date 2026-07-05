@@ -18,7 +18,7 @@ Mas a verdade é que existem quatro componentes trabalhando juntos para que isso
 - SSD.
 - Placa-mãe.
 
-Se você entender quatro componentes, já compreenderá a base de praticamente qualquer computador.
+Se você entender esses quatro componentes, já compreenderá a base de praticamente qualquer computador.
 
 ## O computador como uma cidade
 Imagine uma cidade moderna.
@@ -116,7 +116,7 @@ Quando instala um jogo; Ele vai para o SSD.
 Quando salva um docomento; Ele vai para o SSD.
 
 ## Placa-mãe - As ruas da cidade
-Agora iamgine uma cidade sem ruas.
+Agora imagine uma cidade sem ruas.
 O que acontece?
 Nada conseguiria se conectar.
 A cidade pararia.
