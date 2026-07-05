@@ -31,3 +31,4 @@ Acesse a primeira aula:
 
 - [Aula 1 - o que é informática?](modulo-1/aula-1-o-que-e-informatica.md)
 - [Aula 2 - CPU, RAM. SSD e Placa-mãe](modulo-1/aula-2-cpu-ram-ssd-e-placa-mae.md)
+- [Aula 3 - Dipositivos de entrada e saída](modulo-1/aula-3-dispositivos-de-entrada-e-saida.md)
