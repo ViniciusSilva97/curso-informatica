@@ -1,0 +1,32 @@
+site_name: Curso de informática
+site_description: Curso gratuito de informática, hardware, redes, sistema operacionais e infraestrutura 
+site_author: Vinícius Silva
+
+site_url: https://github.com/ViniciusSilva97/curso-informatica
+repo_name: ViniciusSilva97/curso-informatica
+
+theme:
+  name: material
+  language: pt-BR
+
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Início: index.md
+
+markdown_extension:
+  - admonition
+  - attr_list
+  - tables
+  - toc: 
+    permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+    anchor_linenums: true
