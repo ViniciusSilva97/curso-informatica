@@ -40,6 +40,7 @@ Na verdade, você está cercado por ela neste exato momento.
 Olha ao seu redor.
 
 Talvez você veja:
+
 - Um celular.
 - Uma televisão.
 - Um notebook.
@@ -47,6 +48,7 @@ Talvez você veja:
 - Um roteador.
 - Uma caixa de som Bluetooth.
 - Um videgame.
+
 Todos esses equipamentos utilizam informática.
 
 ## Origem da palavra
@@ -56,6 +58,7 @@ A palavra informática surgiu da combinação de duas ideias:
 ### Informação
 Tudo aquilo que pode ser comunicado ou armazenado.
 Exemplos:
+
 - Uma foto.
 - Uma mensagem.
 - Um vídeo.
@@ -73,6 +76,7 @@ Você tira uma foto e envia para um amigo.
 A ação dura apenas alguns segundos.
 
 Mas o que acontence nos bastidores?
+
 - 1. A câmera registra a imagem.
 - 2. O celular transforma a imagem em dados.
 - 3. O aplicativo prepara esses dados para envio.
@@ -92,6 +96,7 @@ Todo sistema computacional possui elementos fundamentais.
 ### Hardware
 É tudo aquilo que você pode tocar.
 Exemplos:
+
 - Mouse.
 - Teclado.
 - Monitor.
@@ -105,6 +110,7 @@ O hardware representa a parte física.
 ### Software
 É tudo aquilo que você utiliza, mas não pode tocar.
 Exemplos:
+
 - Windows.
 - Linux.
 - Android.
