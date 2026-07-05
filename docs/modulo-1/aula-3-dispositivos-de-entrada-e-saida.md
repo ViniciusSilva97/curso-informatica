@@ -43,7 +43,7 @@ Ele possui dispositivos para receber informações e dispositivos para apresenta
 ## O que são dispositivos de entrada?
 **São equipamentos que enviam informações para o computador.**
 Em outras palavaras.
-"Eles permitem que o susário converse com o computador."
+"Eles permitem que o usuário converse com o computador."
 
 ### Exemplo simples
 Quando você digita; "Olá" no teclado. O computador não entende letras.
