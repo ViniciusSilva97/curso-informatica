@@ -20,6 +20,9 @@ theme:
 nav:
   - Início: index.md
 
+  - Módulo 1 - Fundamentos da informática
+    - Aula 1 - O que é informática?: modulo-1/aula-1-o-que-e-informatica.md
+
 markdown_extension:
   - admonition
   - attr_list

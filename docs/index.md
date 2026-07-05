@@ -10,7 +10,7 @@ Durante o curso, aprenderemos sobre:
 
 - fundamentos da informática;
 - componentes internos do computador;
-- perféricos;
+- periféricos;
 - sistemas operacionais;
 - redes de computadores;
 - segurança da informação;
@@ -24,3 +24,8 @@ Durante o curso, aprenderemos sobre:
 - situações profissionais;
 - atividades práticas;
 - seções especiais **Dentro da caixa**.
+
+## Comece por aqui
+
+Acesse a primeira aula:
+[Aula 1 - o que é informática?](modulo-1/aula-1-o-que-e-informatica.md)
