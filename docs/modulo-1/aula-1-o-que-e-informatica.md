@@ -77,13 +77,13 @@ A ação dura apenas alguns segundos.
 
 Mas o que acontence nos bastidores?
 
-- 1. A câmera registra a imagem.
-- 2. O celular transforma a imagem em dados.
-- 3. O aplicativo prepara esses dados para envio.
-- 4. A internet transporta esses dados.
-- 5. Servidores processam as informações.
-- 6. Outro celular recebe os dados.
-- 7. Seu amigo visualizou a foto.
+1. A câmera registra a imagem.
+2. O celular transforma a imagem em dados.
+3. O aplicativo prepara esses dados para envio.
+4. A internet transporta esses dados.
+5. Servidores processam as informações.
+6. Outro celular recebe os dados.
+7. Seu amigo visualizou a foto.
 
 Tudo isso acontence em poucos segundos.
 Milhões de operações são realizadas.
