@@ -158,9 +158,10 @@ Você enviar uma mensagem no WhatsApp.
 Percebe? Praticamente tudo na informática segue esse ciclo.
 
 **O ciclo mais importante da computação**
-'''text
+
+```text
 ENTRADA -> PROCESSAMENTO -> SAIDA
-'''
+```
 
 ## Curiosidade
 Os primeiros computadores utilizavam cartões perfurados para a entrada de dados.
