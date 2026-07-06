@@ -9,16 +9,16 @@ Provavelmente você:
 - Desligou o despertador do celular.
 - Olhou mensagens no WhatsApp.
 - Viu notificações do Instagram.
-- Assistiu vídeos no TikTok no YouTube.
+- Assistiu vídeos no TikTok ou YouTube.
 - Fez uma pesquisa no Google.
 - Escutou música.
 - Pagou alguma conta usando Pix.
 - Conversou em uma rede social.
 
-Agora pare por algumns segundos e pense:
+Agora pare por alguns segundos e pense:
 
 **O que todas essas atividades têm em comum?**
-A reposta é simples:
+A resposta é simples:
 Todas dependem da informática.
 
 Mas aqui está algo curioso...
@@ -47,7 +47,7 @@ Talvez você veja:
 - Um smartwatch
 - Um roteador.
 - Uma caixa de som Bluetooth.
-- Um videgame.
+- Um videogame.
 
 Todos esses equipamentos utilizam informática.
 
@@ -122,8 +122,8 @@ Exemplos:
 O software representa a inteligência que faz o hardware funcionar.
 
 ## Curiosidade
-O smartphone que está no seu bolso possui mais capacidade de processamento do que os computadores utilziados na missão da Apollo 11 que levou o ser humano à Lua.
-Mesmo assim, a maioria das pessoas utliza apenas uma pequena parte do potencial da tecnologia que possui.
+O smartphone que está no seu bolso possui mais capacidade de processamento do que os computadores utiliziados na missão da Apollo 11 que levou o ser humano à Lua.
+Mesmo assim, a maioria das pessoas utiliza apenas uma pequena parte do potencial da tecnologia que possui.
 Imagine o que acontece quando alguém aprende como essa tecnologia realmente funciona.
 
 

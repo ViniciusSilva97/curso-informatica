@@ -1,7 +1,8 @@
 # Aula 2 - CPU, RAM, SSD e Placa-mãe
 
 ## Antes de começar
-Imagine que você acabou de abrir o Instagram 
+Imagine que você acabou de abrir o Instagram.
+
 Em menos de um segundo:
 
 - O aplicativo aparece.
@@ -35,8 +36,11 @@ Essa cidade é o seu computador.
 A CPU(Processador) é o Cérebro do computador.
 
 Ela recebe informações.
+
 Ela toma decisões.
-Ele executa instruções.
+
+Ela executa instruções.
+
 Tudo passa pela CPU.
 
 Quando você:
@@ -57,7 +61,7 @@ Agora imagina um estudante.
 
 Ele possui:
 
-- Uma estante cheia de livros
+- Uma estante cheia de livros.
 - Uma mesa para estudar.
 
 A estante representa o SSD.
@@ -121,8 +125,8 @@ O que acontece?
 Nada conseguiria se conectar.
 A cidade pararia.
 
-### O que a placa-mãe?
-Ela conectar todos os componentes.
+### O que a placa-mãe faz?
+Ela conecta todos os componentes.
 Ela permite a comunicação entre:
 
 - CPU
@@ -144,6 +148,9 @@ Você clica no Chrome.
 
 ### Passo 2
 O Chrome está armazenado no SSD.
+
+### Passo 3
+Os arquivos são enviados para a RAM.
 
 ### Passo 4
 A CPU processa as informações.
@@ -171,6 +178,6 @@ Todos precisam trabalhar juntos.
 CPU = Cérebro do computador.
 RAM = Área temporária de trabalho.
 SSD = Armazenamento permanente.
-Placa-mãe = conexão entre os componentes.
+Placa-mãe = Conexão entre os componentes.
 O desempenho depende do trabalho conjunto desses elementos.
-Todo programa executado passa por CPU, SSD, RAM e placa-mãe.
+Todo programa executado passa por CPU, SSD, RAM e Placa-mãe.

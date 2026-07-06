@@ -1,7 +1,7 @@
-# Aula 3 - Dispositivos de entrada e saida
+# Aula 3 - Dispositivos de entrada e saída
 
 ## Antes de começar
-Imagine que voc~e está conversando com um amigo.
+Imagine que você está conversando com um amigo.
 Durante a conversa você:
 
 - Escuta.
@@ -9,7 +9,7 @@ Durante a conversa você:
 - Fala.
 - Escreve.
 
-Ou seja; Você recebe informações e transmite informações.
+Ou seja, você recebe informações e transmite informações.
 
 Ele também precisa:
 
@@ -46,13 +46,13 @@ Em outras palavaras.
 "Eles permitem que o usuário converse com o computador."
 
 ### Exemplo simples
-Quando você digita; "Olá" no teclado. O computador não entende letras.
+Quando você digita: "Olá" no teclado. O computador não entende letras.
 Ele recebe sinais eletrônicos.
 
 O teclado envia esses sinais para o sistema.
 Isso é uma entrada de dados.
 
-### Principais dipositivos de entrada
+### Principais dispositivos de entrada
 
 #### Teclado
 Permite inserir:
@@ -61,7 +61,7 @@ Permite inserir:
 - Números.
 - Comandos.
 
-É um dos dipositivos de entrada mais utilizados do mundo.
+É um dos dispositivos de entrada mais utilizados do mundo.
 
 #### Mouse
 Permite: 
@@ -106,7 +106,7 @@ A tela está realizando uma saída de dados.
 Apresenta:
 
 - Textos.
-- Imagnes.
+- Imagens.
 - Vídeos.
 
 É o principal dispositivo de saída.
@@ -119,7 +119,7 @@ Converte dados digitais em áudio
 
 #### Headset e fones de ouvido
 Também reproduzem sons.
-São dipositivos de saída.
+São dispositivos de saída.
 
 ### E os dispositivos de entrada e saída
 
@@ -136,7 +136,7 @@ Envia:
 - Vídeo.
 - Vibrações.
 
-#### Tela touchscreen
+#### Tela touch screen
 Recebe:
 
 - Toques.
@@ -147,7 +147,7 @@ Exibe:
 
 ## A jornada da informação
 Imagine o seguinte:
-Você enviar uma mensagem no WhatsApp.
+Você envia uma mensagem no WhatsApp.
 
 **Entrada**; Você digita no teclado.
 
@@ -160,7 +160,7 @@ Percebe? Praticamente tudo na informática segue esse ciclo.
 **O ciclo mais importante da computação**
 
 ```text
-ENTRADA -> PROCESSAMENTO -> SAIDA
+ENTRADA -> PROCESSAMENTO -> SAÍDA
 ```
 
 ## Curiosidade
