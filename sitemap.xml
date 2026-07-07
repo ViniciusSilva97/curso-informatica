@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/ViniciusSilva97/curso-informatica/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-07</lastmod>
     </url>
     <url>
          <loc>https://github.com/ViniciusSilva97/curso-informatica/modulo-1/aula-1-o-que-e-informatica/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-07</lastmod>
     </url>
     <url>
          <loc>https://github.com/ViniciusSilva97/curso-informatica/modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-07</lastmod>
     </url>
     <url>
          <loc>https://github.com/ViniciusSilva97/curso-informatica/modulo-1/aula-3-dispositivos-de-entrada-e-saida/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/ViniciusSilva97/curso-informatica/modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/</loc>
+         <lastmod>2026-07-07</lastmod>
     </url>
 </urlset>
