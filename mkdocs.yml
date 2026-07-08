@@ -25,6 +25,7 @@ nav:
     - Aula 2 - CPU, RAM, SSD e Placa-mãe: modulo-1/aula-2-cpu-ram-ssd-e-placa-mae.md
     - Aula 3 - Dispositivos de entrada e saída: modulo-1/aula-3-dispositivos-de-entrada-e-saida.md
     - Aula 4 - Sistemas operacionais o maestro do computador: modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador.md
+    - Aula 5 - Windows, Linux, MacOS, Android e IOS. Entendendo as diferenças.: modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas.md
 markdown_extension:
   - admonition
   - attr_list
