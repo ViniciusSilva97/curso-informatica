@@ -34,4 +34,5 @@ Acesse a primeira aula:
 - [Aula 3 - Dispositivos de entrada e saída](modulo-1/aula-3-dispositivos-de-entrada-e-saida.md)
 - [Aula 4 - Sistemas operacionais o maestro do computador](modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador.md)
 - [Aula 5 - Windows, Linux, MacOS, Android e IOS: Entendendo as diferenças.](modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas.md)
--[Aula 6 - Por que um computador fica lento?](aula-6-por-que-um-computador-fica-lento.md)
+- [Aula 6 - Por que um computador fica lento?](modulo-1/aula-6-por-que-um-computador-fica-lento.md)
+- [Aula 7 - O que acontece quando você liga um computador?](modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador.md)
