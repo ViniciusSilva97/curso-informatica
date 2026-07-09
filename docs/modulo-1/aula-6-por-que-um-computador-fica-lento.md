@@ -22,39 +22,39 @@ No computador acontece a mesma coisa.
 
 ## Os quatro grandes responsáveis pelo desempenho
 
-1. CPU 
+### CPU 
 A CPU executa cálculos e processa instruções.  
 Se muitos programas exigem processamento ao mesmo tempo, ela pode atingir seu limite.  
 Sinais comuns:
 
-- Lentidão ao abrir programas pesados;
-- Travamentos durante os jogos;
-- Demora para editar vídeos.
+ - Lentidão ao abrir programas pesados;
+ - Travamentos durante os jogos;
+ - Demora para editar vídeos.
 
-2. Memória RAM
+### Memória RAM
 A RAM funciona como a mesa de trabalho.  
 Quando ela fica cheia, o computador precisa utilizar o armazenamento como apoio.  
 Esse processo é muito mais lento. 
 
-- Muitas abas abertas deixam o computador lento;
-- Programas fecham inesperadamente;
-- O sistema demora para alternar entre aplicativos.
+ - Muitas abas abertas deixam o computador lento;
+ - Programas fecham inesperadamente;
+ - O sistema demora para alternar entre aplicativos.
 
-3. SSD ou HD
+### SSD ou HD
 Imagine procurar um livro em uma biblioteca organizada, você encontra rapidamente.  
 Em um depósito bagunçado, demora muito mais.  
 o SSD encontra e entrega dados com muito mais rapidez do que um HD tradicional.  
 Por isso, substituir um HD por um SSD costuma ser uma das melhorias mais perceptíveis para o usuário.  
 
 
-4. Sistema operacional
+### Sistema operacional
 Mesmo com bom hardware, um sistema mal configurado pode prejudicar o desempenho.  
 Exemplos:
 
-- Muitos programas iniciando automaticamente;
-- Atualizações interrompidas;
-- Poucos espaço livre em disco;
-- Arquivos temporários acumulados;
+ - Muitos programas iniciando automaticamente;
+ - Atualizações interrompidas;
+ - Poucos espaço livre em disco;
+ - Arquivos temporários acumulados;
 
 ### Exemplo do mundo real
 Imagine dois computadores. 
