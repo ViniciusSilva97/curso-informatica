@@ -15,7 +15,7 @@ Nós falamos:
 - Espanhol.
 
 O computador possui apenas um idioma.  
-Esse idioma chama-se..
+Esse idioma chama-se...
 
 ### Linguagem Binária
 Ela possui somente dois valores.  
