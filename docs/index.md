@@ -37,3 +37,4 @@ Acesse a primeira aula:
 - [Aula 6 - Por que um computador fica lento?](modulo-1/aula-6-por-que-um-computador-fica-lento.md)
 - [Aula 7 - O que acontece quando você liga um computador?](modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador.md)
 - [Aula 8 - Como o computador entende as informações? (Bits, Bytes e dados)](modulo-1/aula-8-como-o-computador-entende-as-informacoes.md)
+- [Aula 9 - Como a internet funciona? A maior rede do mundo](modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo.md)
