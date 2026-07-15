@@ -32,6 +32,8 @@ nav:
     - Aula 9 - Como a internet funciona? A maior rede do mundo: modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo.md
     - Aula 10 - Como um site chega até você?: modulo-1/aula-10-como-um-site-chega-ate-voce.md
     - Aula 11 - Como os arquivos são organizados?: modulo-1/aula-11-como-os-arquivos-sao-organizados.md
+  - Módulo 2 - Investigação Computacional I: 
+    - O método da investigação computacional: modulo-2/aula-1-o-metodo-da-investigacao-computacional.md
 markdown_extension:
   - admonition
   - attr_list

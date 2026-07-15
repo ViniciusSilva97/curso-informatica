@@ -27,7 +27,7 @@ Durante o curso, aprenderemos sobre:
 
 ## Comece por aqui
 
-Acesse a primeira aula:
+# Módulo 1 - Fundamentos da informática:  
 
 - [Aula 1 - o que é informática?](modulo-1/aula-1-o-que-e-informatica.md)
 - [Aula 2 - CPU, RAM. SSD e Placa-mãe](modulo-1/aula-2-cpu-ram-ssd-e-placa-mae.md)
@@ -40,3 +40,28 @@ Acesse a primeira aula:
 - [Aula 9 - Como a internet funciona? A maior rede do mundo](modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo.md)
 - [Aula 10 - Como um site chega até você?](modulo-1/aula-10-como-um-site-chega-ate-voce.md)
 - [Aula 11 - Como os arquivos são organizados?](modulo-1/aula-11-como-os-arquivos-sao-organizados.md)
+
+# Módulo 2 - Investigação computacional I
+
+## Anatomia do hardware
+
+**Missão do módulo**
+```text
+Aprender a investigar computadores utilizando fundamentos de engenharia, evidência e metodologia científica.
+```
+
+### Objetivo do módulo
+
+Ao concluir este módulo o aluno não será apenas capaz de montar um computador. 
+
+Ele será capaz de:
+- levantar hipóteses;
+- interpretar sintomas;
+- escolher ferramentas de diagnóstico;
+- analisar especificações técnicas;
+- identificar marketing enganoso;
+- compreender como cada componente funciona;
+- saber quando um defeito pode ser resolvido por software;
+- reconhecer quando um equipamento exige manutenção especializada;
+
+- [Aula 1 - O método da investigação computacional](modulo-2/aula-1-o-metodo-da-investigacao-computacional.md)
