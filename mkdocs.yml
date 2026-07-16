@@ -34,6 +34,7 @@ nav:
     - Aula 11 - Como os arquivos são organizados?: modulo-1/aula-11-como-os-arquivos-sao-organizados.md
   - Módulo 2 - Investigação Computacional I: 
     - O método da investigação computacional: modulo-2/aula-1-o-metodo-da-investigacao-computacional.md
+    - Aula 2 — Processador. Quem realmente comanda o computador?: modulo-2/aula-2-processador-quem-realmente-comanda-o-computador.md
 markdown_extension:
   - admonition
   - attr_list
