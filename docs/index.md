@@ -67,3 +67,4 @@ Ele será capaz de:
 - [Aula 1 - O método da investigação computacional](modulo-2/aula-1-o-metodo-da-investigacao-computacional.md)
 - [Aula 2 - Processador: Quem realmente comanda o computador?](modulo-2/aula-2-processador-quem-realmente-comanda-o-computador.md)
 - [Aula 3 - Memória RAM: O laboratório de trabalho do processador](modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador.md)
+- [Aula 4 - SSDs e HDs: Para onde os dados vão quando você desliga o computador?](modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado.md)
