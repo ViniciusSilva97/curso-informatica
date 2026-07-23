@@ -1,0 +1,2833 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistema operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://github.com/ViniciusSilva97/curso-informatica/modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/">
+      
+      
+        <link rel="prev" href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram - Curso de informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de informática" class="md-header__button md-logo" aria-label="Curso de informática" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de informática" class="md-nav__button md-logo" aria-label="Curso de informática" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Curso de informática
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, MacOS, Android e IOS. Entendendo as diferenças.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações? (Bits, Bytes e dados)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona? A maior rede do mundo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação Computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação Computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador. Quem realmente comanda o computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM. O laboratório de trabalho do processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pergunta-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta da investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-no-004-o-computador-que-liga-mas-nao-inicia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso nº 004 — O computador que “liga”, mas não inicia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-placa-mae-nao-e-apenas-uma-placa-que-conecta-pecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A placa-mãe não é apenas uma “placa que conecta peças”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-significa-o-computador-ligou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que significa “o computador ligou”?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-o-primeiro-exame-do-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST: o primeiro exame do computador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios-e-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BIOS e UEFI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-bateria-nao-alimenta-o-computador-inteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A bateria não alimenta o computador inteiro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-regioes-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principais regiões da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principais regiões da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket-do-processador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Socket do processador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-de-memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots de memória RAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-pci-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots PCI Express
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectores-de-armazenamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores de armazenamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectores-de-alimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores de alimentação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chipset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chipset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placa-mae-b650" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placa-mãe B650
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placa-mãe B650">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket-am5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Socket AM5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-ddr5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória DDR5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leds-cpu-dram-vga-e-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LEDs CPU, DRAM, VGA e BOOT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-treinamento-da-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O treinamento da memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidade-encaixar-nao-significa-funcionar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibilidade: encaixar não significa funcionar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compatibilidade: encaixar não significa funcionar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-sem-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico sem vídeo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-ferramentas-de-diagnostico-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório: ferramentas de diagnóstico da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório: ferramentas de diagnóstico da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leds-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LEDs de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigos-sonoros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos sonoros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-de-codigos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display de códigos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placa-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placa de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimetro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multímetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osciloscopio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Osciloscópio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecao-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspeção visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpeza-do-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limpeza do CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizacao-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atualização de firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-led-dram-aceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de caso 1 — LED DRAM aceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de caso 1 — LED DRAM aceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigacao-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-led-vga-aceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — LED VGA aceso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-computador-reinicia-sob-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Computador reinicia sob carga
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-as-ventoinhas-giram-a-placa-mae-esta-funcionando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se as ventoinhas giram, a placa-mãe está funcionando”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-dram-significa-obrigatoriamente-memoria-queimada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “LED DRAM significa obrigatoriamente memória queimada”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-a-bios-sempre-melhora-o-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Atualizar a BIOS sempre melhora o computador”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-placa-mae-pode-impedir-o-desempenho-maximo-do-processador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma placa-mãe pode impedir o desempenho máximo do processador”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-manual-da-placa-mae-faz-parte-das-ferramentas-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “O manual da placa-mãe faz parte das ferramentas de diagnóstico”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-guiado-mapa-investigativo-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório guiado — mapa investigativo da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório guiado — mapa investigativo da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Localização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Compatibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Registro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pergunta-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta da investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caso-no-004-o-computador-que-liga-mas-nao-inicia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso nº 004 — O computador que “liga”, mas não inicia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-placa-mae-nao-e-apenas-uma-placa-que-conecta-pecas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A placa-mãe não é apenas uma “placa que conecta peças”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-significa-o-computador-ligou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que significa “o computador ligou”?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-o-primeiro-exame-do-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST: o primeiro exame do computador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios-e-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BIOS e UEFI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-bateria-nao-alimenta-o-computador-inteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A bateria não alimenta o computador inteiro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-regioes-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principais regiões da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principais regiões da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket-do-processador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Socket do processador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-de-memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots de memória RAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-pci-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots PCI Express
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectores-de-armazenamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores de armazenamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectores-de-alimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores de alimentação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chipset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chipset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#placa-mae-b650" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placa-mãe B650
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placa-mãe B650">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket-am5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Socket AM5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-ddr5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória DDR5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leds-cpu-dram-vga-e-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LEDs CPU, DRAM, VGA e BOOT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-treinamento-da-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O treinamento da memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidade-encaixar-nao-significa-funcionar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibilidade: encaixar não significa funcionar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compatibilidade: encaixar não significa funcionar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-sem-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico sem vídeo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-ferramentas-de-diagnostico-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório: ferramentas de diagnóstico da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório: ferramentas de diagnóstico da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leds-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LEDs de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigos-sonoros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos sonoros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-de-codigos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display de códigos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placa-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placa de diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimetro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multímetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osciloscopio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Osciloscópio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecao-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspeção visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração mínima
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limpeza-do-cmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limpeza do CMOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizacao-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atualização de firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-led-dram-aceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de caso 1 — LED DRAM aceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de caso 1 — LED DRAM aceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigacao-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-led-vga-aceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — LED VGA aceso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-computador-reinicia-sob-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Computador reinicia sob carga
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-as-ventoinhas-giram-a-placa-mae-esta-funcionando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se as ventoinhas giram, a placa-mãe está funcionando”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-dram-significa-obrigatoriamente-memoria-queimada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “LED DRAM significa obrigatoriamente memória queimada”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizar-a-bios-sempre-melhora-o-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Atualizar a BIOS sempre melhora o computador”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-placa-mae-pode-impedir-o-desempenho-maximo-do-processador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma placa-mãe pode impedir o desempenho máximo do processador”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-manual-da-placa-mae-faz-parte-das-ferramentas-de-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “O manual da placa-mãe faz parte das ferramentas de diagnóstico”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-guiado-mapa-investigativo-da-placa-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório guiado — mapa investigativo da placa-mãe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório guiado — mapa investigativo da placa-mãe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Localização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Compatibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Registro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram">Aula 5 - Placa-mãe: A cena onde todos os componentes se encontram</h1>
+<h2 id="pergunta-da-investigacao">Pergunta da investigação</h2>
+<pre><code class="language-text">Quando o computador liga, mas não apresenta imagem, como descobrir qual componente está impedindo a inicialização?
+</code></pre>
+<h2 id="dossie-da-investigacao">Dossiê da Investigação</h2>
+<h2 id="caso-no-004-o-computador-que-liga-mas-nao-inicia">Caso nº 004 — O computador que “liga”, mas não inicia</h2>
+<p>Um cliente relata:</p>
+<p><strong>“O computador liga, as ventoinhas giram e os LEDs acendem, mas não aparece nada na tela.”</strong></p>
+<p>Ao pressionar o botão de energia, observamos:</p>
+<ul>
+<li>ventoinhas funcionando;</li>
+<li>iluminação do gabinete acesa;</li>
+<li>nenhum sinal de vídeo;</li>
+<li>teclado aparentemente sem resposta;</li>
+<li>ausência do som de inicialização do sistema;</li>
+<li>LED vermelho aceso na placa-mãe.</li>
+</ul>
+<p>O computador realmente iniciou?<br />
+O problema está no monitor?<br />
+Na memória RAM?<br />
+Na placa de vídeo?<br />
+No processador?  <br />
+Na fonte?<br />
+Ou na própria placa-mãe?<br />
+Hoje aprenderemos a investigar esse tipo de situação.</p>
+<h2 id="objetivos-da-aula">Objetivos da aula</h2>
+<p>Ao final desta aula, você será capaz de:</p>
+<ul>
+<li>compreender o papel da placa-mãe;</li>
+<li>identificar seus principais circuitos e conexões;</li>
+<li>diferenciar alimentação elétrica de inicialização do sistema;</li>
+<li>entender as etapas básicas do POST;</li>
+<li>interpretar LEDs, códigos sonoros e displays de diagnóstico;</li>
+<li>reconhecer problemas de compatibilidade;</li>
+<li>realizar uma investigação inicial de forma controlada;</li>
+<li>compreender os limites dos diagnósticos feitos por software.</li>
+</ul>
+<h2 id="a-placa-mae-nao-e-apenas-uma-placa-que-conecta-pecas">A placa-mãe não é apenas uma “placa que conecta peças”</h2>
+<p>Essa definição é comum:</p>
+<p><strong>“A placa-mãe conecta todos os componentes do computador.”</strong>  </p>
+<p>Ela está correta, mas é incompleta.<br />
+A placa-mãe também participa de funções como:</p>
+<ul>
+<li>distribuição de energia;</li>
+<li>comunicação entre os componentes;</li>
+<li>inicialização do hardware;</li>
+<li>configuração do sistema;</li>
+<li>controle de interfaces;</li>
+<li>armazenamento do firmware;</li>
+<li>leitura de sensores;</li>
+<li>gerenciamento de dispositivos;</li>
+<li>sincronização de sinais;</li>
+<li>proteção elétrica básica.</li>
+</ul>
+<p>Ela funciona como a infraestrutura sobre a qual o computador inteiro opera.</p>
+<p>Podemos compará-la a uma cidade:</p>
+<ul>
+<li>as trilhas são as vias;</li>
+<li>os conectores são os terminais;</li>
+<li>os barramentos transportam dados;</li>
+<li>os reguladores distribuem energia;</li>
+<li>o firmware define regras iniciais;</li>
+<li>os componentes são os edifícios e serviços.</li>
+</ul>
+<p>Se essa infraestrutura falhar, vários sintomas diferentes podem aparecer.</p>
+<h2 id="o-que-significa-o-computador-ligou">O que significa “o computador ligou”?</h2>
+<p>Quando ventoinhas giram e LEDs acendem, sabemos apenas que alguma energia chegou ao sistema. Isso não significa que o computador concluiu sua inicialização.</p>
+<p>Existe uma diferença importante entre:</p>
+<p>Receber energia<br />
+      ↓<br />
+Iniciar os componentes<br />
+      ↓<br />
+Executar o firmware<br />
+      ↓<br />
+Testar o hardware<br />
+      ↓<br />
+Localizar o sistema operacional<br />
+      ↓<br />
+Carregar o sistema  </p>
+<p>Um computador pode parar em qualquer uma dessas etapas. Por isso, dizer que ele “liga” é uma descrição insuficiente. O investigador precisa descobrir até onde a inicialização avançou.</p>
+<h2 id="post-o-primeiro-exame-do-computador">POST: o primeiro exame do computador</h2>
+<p>Ao receber energia e iniciar, o sistema executa uma sequência de verificações conhecida como POST — <strong>Power-On Self-Test</strong>.</p>
+<p>De forma simplificada, o firmware verifica componentes essenciais, como:</p>
+<ul>
+<li>processador;</li>
+<li>memória RAM;</li>
+<li>vídeo;</li>
+<li>dispositivos básicos;</li>
+<li>configurações de inicialização.</li>
+</ul>
+<p>Caso um componente essencial não seja reconhecido, o processo pode ser interrompido antes que qualquer imagem seja apresentada.  </p>
+<p>Uma sequência simplificada seria:</p>
+<p>Energia estabilizada<br />
+        ↓<br />
+Processador inicia<br />
+        ↓<br />
+Firmware é executado<br />
+        ↓<br />
+Memória é identificada e treinada<br />
+        ↓<br />
+Vídeo é inicializado<br />
+        ↓<br />
+Dispositivos são detectados<br />
+        ↓<br />
+Sistema operacional é procurado  </p>
+<p>A ordem exata varia conforme a plataforma.</p>
+<h2 id="bios-e-uefi">BIOS e UEFI</h2>
+<p>A placa-mãe possui um firmware responsável pelas primeiras etapas de inicialização. Historicamente, esse firmware era conhecido como BIOS.<br />
+Computadores modernos normalmente utilizam UEFI, que oferece recursos mais avançados.  </p>
+<p>Entre suas funções estão:</p>
+<ul>
+<li>detectar componentes;</li>
+<li>configurar parâmetros;</li>
+<li>controlar a ordem de inicialização;</li>
+<li>inicializar dispositivos;</li>
+<li>disponibilizar configurações de segurança;</li>
+<li>entregar o controle ao sistema operacional.</li>
+</ul>
+<p>No uso cotidiano, muitas pessoas continuam chamando a interface de “BIOS”, mesmo quando tecnicamente se trata de <strong>UEFI</strong>.</p>
+<h2 id="a-bateria-nao-alimenta-o-computador-inteiro">A bateria não alimenta o computador inteiro</h2>
+<p>A pequena bateria instalada na placa-mãe costuma gerar confusão. Ela não mantém o processador, a memória ou o sistema funcionando.<br />
+Sua função principal é preservar determinadas informações quando o computador está sem energia, como:</p>
+<ul>
+<li>relógio do sistema;</li>
+<li>data;</li>
+<li>algumas configurações do firmware.</li>
+</ul>
+<p>Quando essa bateria fica fraca, podem surgir sintomas como:</p>
+<ul>
+<li>data e hora incorretas;</li>
+<li>configurações que não permanecem salvas;</li>
+<li>mensagens relacionadas ao CMOS;</li>
+<li>necessidade de reconfigurar opções após desligar da tomada.</li>
+</ul>
+<p>Uma bateria fraca normalmente não explica, sozinha, todos os casos em que um computador não apresenta vídeo.</p>
+<h2 id="principais-regioes-da-placa-mae">Principais regiões da placa-mãe</h2>
+<h3 id="socket-do-processador">Socket do processador</h3>
+<p>É a interface física e elétrica entre o processador e a placa-mãe.</p>
+<p>Pode possuir contatos delicados.  </p>
+<p>Danos, sujeira, pressão inadequada ou processador incompatível podem impedir a inicialização.</p>
+<h3 id="slots-de-memoria-ram">Slots de memória RAM</h3>
+<p>Recebem os módulos de memória.
+Problemas podem ocorrer por:</p>
+<ul>
+<li>módulo mal encaixado;</li>
+<li>contatos sujos;</li>
+<li>slot defeituoso;</li>
+<li>configuração incompatível;</li>
+<li>módulo defeituoso;</li>
+<li>controlador de memória;</li>
+<li>perfil de desempenho instável.</li>
+</ul>
+<h3 id="slots-pci-express">Slots PCI Express</h3>
+<p>São utilizados por componentes como:</p>
+<ul>
+<li>placas de vídeo;</li>
+<li>placas de rede;</li>
+<li>controladoras;</li>
+<li>placas de captura;</li>
+<li>unidades de expansão.</li>
+</ul>
+<p>O formato físico não informa sozinho a quantidade de pistas elétricas realmente disponíveis. Um slot com tamanho x16 pode, dependendo do projeto, operar eletricamente com menos pistas.</p>
+<h3 id="conectores-de-armazenamento">Conectores de armazenamento</h3>
+<p>Podem incluir:</p>
+<ul>
+<li>SATA;</li>
+<li>M.2;</li>
+<li>conexões específicas da plataforma.</li>
+</ul>
+<p>Um conector M.2 não garante, por si só, que qualquer SSD M.2 seja compatível. O formato físico pode aceitar diferentes interfaces e protocolos.</p>
+<h3 id="conectores-de-alimentacao">Conectores de alimentação</h3>
+<p>Os principais incluem:</p>
+<ul>
+<li>conector principal da placa-mãe;</li>
+<li>alimentação dedicada ao processador;</li>
+<li>conectores auxiliares em determinadas plataformas.</li>
+</ul>
+<p>Um erro frequente é conectar apenas a alimentação principal e esquecer o conector destinado à CPU. Nesse caso, ventoinhas podem girar, mas o sistema pode não completar a inicialização.</p>
+<h3 id="chipset">Chipset</h3>
+<p>O chipset auxilia no gerenciamento de diversas interfaces e recursos da plataforma.</p>
+<p>Dependendo da arquitetura, participa da comunicação com:</p>
+<ul>
+<li>portas USB;</li>
+<li>armazenamento;</li>
+<li>rede;</li>
+<li>pistas PCI Express adicionais;</li>
+<li>áudio;</li>
+<li>dispositivos integrados.</li>
+</ul>
+<p>Seu papel mudou ao longo das gerações, pois muitas funções antes externas foram incorporadas ao próprio processador.</p>
+<h3 id="vrm">VRM</h3>
+<p>O Voltage Regulator Module, ou módulo regulador de tensão, converte e controla a energia entregue aos componentes, especialmente ao processador. </p>
+<p>O processador não recebe diretamente a tensão bruta fornecida pela fonte. O VRM ajusta essa energia para níveis adequados e estáveis.</p>
+<p>Ele pode incluir:</p>
+<ul>
+<li>controladores;</li>
+<li>MOSFETs;</li>
+<li>indutores;</li>
+<li>capacitores;</li>
+<li>dissipadores.</li>
+</ul>
+<p>Um VRM inadequado, superaquecido ou danificado pode causar:</p>
+<ul>
+<li>instabilidade;</li>
+<li>reinicializações;</li>
+<li>redução de desempenho;</li>
+<li>falhas sob carga;</li>
+<li>ausência de inicialização;</li>
+<li>desligamentos.</li>
+</ul>
+<h2 id="dentro-da-caixa">Dentro da Caixa</h2>
+<p>Vamos analisar uma ficha técnica simplificada:</p>
+<h3 id="placa-mae-b650">Placa-mãe B650</h3>
+<ul>
+<li>Socket................AM5</li>
+<li>Memória...............DDR5</li>
+<li>Slots de memória......4</li>
+<li>Capacidade máxima.....192 GB</li>
+<li>PCI Express principal.4.0 x16</li>
+<li>Armazenamento.........2 × M.2 NVMe
+                       4 × SATA</li>
+<li>Rede..................2,5 GbE</li>
+<li>Firmware..............UEFI</li>
+<li>Diagnóstico...........LEDs CPU, DRAM, VGA e BOOT</li>
+</ul>
+<p>Agora vamos interpretar.</p>
+<h4 id="socket-am5">Socket AM5</h4>
+<p>Define a família física e elétrica de processadores suportados. Porém, compartilhar o mesmo socket não garante automaticamente que qualquer processador funcionará.</p>
+<p>Também precisamos verificar:</p>
+<ul>
+<li>chipset;</li>
+<li>versão do firmware;</li>
+<li>lista de compatibilidade;</li>
+<li>capacidade elétrica;</li>
+<li>suporte fornecido pelo fabricante.</li>
+</ul>
+<h4 id="memoria-ddr5">Memória DDR5</h4>
+<p>A placa foi projetada para DDR5.<br />
+Um módulo DDR4 não deve ser instalado.
+A incompatibilidade não é apenas de configuração. A posição do encaixe e a arquitetura são diferentes.</p>
+<h4 id="leds-cpu-dram-vga-e-boot">LEDs CPU, DRAM, VGA e BOOT</h4>
+<p>Esses indicadores ajudam a identificar a etapa em que o POST encontrou dificuldade.</p>
+<p>De forma geral:</p>
+<ul>
+<li>CPU: problema relacionado à inicialização do processador;</li>
+<li>DRAM: memória não reconhecida ou falha no treinamento;</li>
+<li>VGA: vídeo não inicializado;</li>
+<li>BOOT: dispositivo de inicialização não encontrado.</li>
+</ul>
+<p>Esses LEDs não fornecem um diagnóstico definitivo. Eles indicam uma área prioritária para investigação.</p>
+<h4 id="o-treinamento-da-memoria">O treinamento da memória</h4>
+<p>Em plataformas modernas, especialmente após mudanças de hardware ou configurações, a placa-mãe pode realizar um processo de treinamento da memória.  </p>
+<p>Durante esse procedimento, o sistema ajusta parâmetros para encontrar uma configuração funcional e estável.</p>
+<p>Isso pode fazer com que:</p>
+<ul>
+<li>a primeira inicialização demore;</li>
+<li>o computador reinicie algumas vezes;</li>
+<li>o LED de memória permaneça aceso temporariamente.</li>
+</ul>
+<p>Desligar o computador imediatamente por acreditar que ele travou pode interromper esse processo. Entretanto, uma espera excessivamente longa ou repetitiva exige investigação.</p>
+<h4 id="compatibilidade-encaixar-nao-significa-funcionar">Compatibilidade: encaixar não significa funcionar</h4>
+<p>Um componente pode caber fisicamente e ainda assim não ser compatível.</p>
+<p>Precisamos considerar:</p>
+<ul>
+<li>socket;</li>
+<li>geração;</li>
+<li>chipset;</li>
+<li>firmware;</li>
+<li>tipo de memória;</li>
+<li>capacidade;</li>
+<li>perfil elétrico;</li>
+<li>quantidade de pistas;</li>
+<li>protocolo;</li>
+<li>limites térmicos;</li>
+<li>lista de suporte do fabricante.</li>
+</ul>
+<h5 id="exemplo">Exemplo</h5>
+<p>Um processador novo utiliza o mesmo socket de modelos anteriores. A placa-mãe o aceita fisicamente.  </p>
+<p>No entanto, ela possui um firmware antigo que não reconhece o processador.</p>
+<p>O resultado pode ser:</p>
+<ul>
+<li>ventoinhas girando;</li>
+<li>ausência de vídeo;</li>
+<li>LED de CPU aceso;</li>
+<li>impossibilidade de acessar o firmware.</li>
+</ul>
+<p>A placa pode precisar de atualização compatível. Alguns modelos permitem atualizar o firmware sem processador funcional; outros não.</p>
+<h2 id="diagnostico-sem-video">Diagnóstico sem vídeo</h2>
+<p>Quando o computador não apresenta imagem, ainda não podemos utilizar ferramentas como HWiNFO ou CPU-Z.</p>
+<p>O sistema operacional nem sequer foi carregado.</p>
+<p>Nesse cenário, as evidências vêm de outras fontes:</p>
+<ul>
+<li>LEDs de diagnóstico;</li>
+<li>códigos sonoros;</li>
+<li>display numérico;</li>
+<li>comportamento das ventoinhas;</li>
+<li>ciclos de reinicialização;</li>
+<li>temperatura anormal;</li>
+<li>inspeção visual;</li>
+<li>configuração mínima;</li>
+<li>manual da placa-mãe.</li>
+</ul>
+<p>Isso mostra uma limitação importante:  </p>
+<p><strong>Software só ajuda quando o sistema consegue avançar o suficiente para executá-lo.</strong></p>
+<h2 id="laboratorio-ferramentas-de-diagnostico-da-placa-mae">Laboratório: ferramentas de diagnóstico da placa-mãe</h2>
+<h3 id="leds-de-diagnostico">LEDs de diagnóstico</h3>
+<p>Algumas placas possuem indicadores específicos para CPU, DRAM, VGA e BOOT. São simples, rápidos e úteis para orientar a primeira hipótese.</p>
+<h3 id="codigos-sonoros">Códigos sonoros</h3>
+<p>Quando existe um pequeno alto-falante conectado, a placa pode emitir sequências de sons. O significado depende do firmware e do fabricante. Não existe uma tabela universal válida para todas as placas. O manual deve ser consultado.</p>
+<h3 id="display-de-codigos">Display de códigos</h3>
+<p>Placas mais completas podem exibir códigos numéricos ou alfanuméricos. Esses códigos representam estágios da inicialização ou erros encontrados.
+Novamente, a interpretação depende da documentação do modelo.</p>
+<h3 id="placa-de-diagnostico">Placa de diagnóstico</h3>
+<p>Existem placas que exibem códigos do POST por meio de interfaces de expansão.</p>
+<p>Elas podem ajudar em algumas plataformas, mas não substituem:</p>
+<ul>
+<li>conhecimento técnico;</li>
+<li>documentação;</li>
+<li>medições elétricas;</li>
+<li>análise da sequência de inicialização.</li>
+</ul>
+<h3 id="multimetro">Multímetro</h3>
+<p>Profissionais podem utilizar um multímetro para investigar:</p>
+<ul>
+<li>presença de tensões;</li>
+<li>continuidade;</li>
+<li>curtos;</li>
+<li>alimentação em conectores;</li>
+<li>circuitos específicos.</li>
+</ul>
+<p>O uso inadequado pode causar danos ou choque elétrico. Medições em placas energizadas exigem treinamento, procedimento seguro e conhecimento dos pontos corretos.</p>
+<h3 id="osciloscopio">Osciloscópio</h3>
+<p>Laboratórios de eletrônica podem analisar sinais e comportamento elétrico com maior profundidade.<br />
+Isso permite observar fenômenos que um software ou multímetro comum não demonstra adequadamente. Não é uma ferramenta necessária para o aluno iniciante, mas é importante compreender que diagnósticos avançados podem exigir equipamentos especializados.   </p>
+<h3 id="inspecao-visual">Inspeção visual</h3>
+<p>Antes de substituir componentes, o investigador pode observar:</p>
+<ul>
+<li>conectores parcialmente encaixados;</li>
+<li>sinais de oxidação;</li>
+<li>componentes queimados;</li>
+<li>trilhas danificadas;</li>
+<li>parafusos em locais inadequados;</li>
+<li>objetos metálicos soltos;</li>
+<li>pasta térmica em contatos;</li>
+<li>pinos deformados;</li>
+<li>capacitores danificados;</li>
+<li>marcas de líquido;</li>
+<li>poeira excessiva;</li>
+<li>cabos pressionados.</li>
+</ul>
+<p>A inspeção deve ser feita com o equipamento desligado, desconectado e seguindo cuidados contra eletricidade estática.</p>
+<h3 id="configuracao-minima">Configuração mínima</h3>
+<p>Uma técnica importante consiste em reduzir o sistema ao conjunto mínimo necessário para iniciar.</p>
+<p>Normalmente, isso envolve:</p>
+<ul>
+<li>placa-mãe;</li>
+<li>processador;</li>
+<li>sistema de refrigeração;</li>
+<li>um módulo de memória;</li>
+<li>fonte;</li>
+<li>vídeo integrado ou placa de vídeo, quando necessário.</li>
+</ul>
+<p>Dispositivos não essenciais são removidos temporariamente.
+O objetivo é diminuir o número de variáveis.  </p>
+<p>Sistema completo com falha<br />
+          ↓<br />
+Remoção de componentes não essenciais<br />
+          ↓<br />
+Teste em configuração mínima<br />
+          ↓<br />
+Reintrodução controlada dos componentes   </p>
+<p>Essa técnica não consiste em remover tudo aleatoriamente. Cada alteração deve ser registrada.</p>
+<h3 id="limpeza-do-cmos">Limpeza do CMOS</h3>
+<p>Limpar o CMOS pode restaurar configurações do firmware para valores padrão. Isso pode ajudar quando o problema foi causado por:</p>
+<ul>
+<li>perfil de memória instável;</li>
+<li>overclock;</li>
+<li>configuração incorreta;</li>
+<li>parâmetro incompatível;</li>
+<li>falha após alteração no firmware.</li>
+</ul>
+<p>O procedimento varia entre placas e pode envolver:</p>
+<ul>
+<li>jumper;</li>
+<li>botão dedicado;</li>
+<li>remoção temporária da bateria;</li>
+<li>opção específica no painel traseiro.</li>
+</ul>
+<p>O manual deve orientar o método correto. A limpeza do CMOS não atualiza o firmware e não corrige defeitos físicos.</p>
+<h3 id="atualizacao-de-firmware">Atualização de firmware</h3>
+<p>Atualizar o firmware pode:</p>
+<ul>
+<li>adicionar suporte a processadores;</li>
+<li>corrigir falhas;</li>
+<li>melhorar compatibilidade;</li>
+<li>ajustar treinamento de memória;</li>
+<li>resolver problemas de segurança;</li>
+<li>alterar comportamentos da plataforma.</li>
+</ul>
+<p>Mas também envolve riscos.  </p>
+<p>Uma interrupção durante o processo pode impedir a inicialização, especialmente em placas sem mecanismo de recuperação.</p>
+<p>Antes de atualizar, devemos verificar:</p>
+<ul>
+<li>modelo exato da placa;</li>
+<li>revisão do hardware;</li>
+<li>versão instalada;</li>
+<li>motivo da atualização;</li>
+<li>instruções oficiais;</li>
+<li>estabilidade da energia;</li>
+<li>arquivo correto.</li>
+</ul>
+<p><strong>Atualizar “por atualizar” não é uma metodologia investigativa.</strong></p>
+<h2 id="estudo-de-caso-1-led-dram-aceso">Estudo de caso 1 — LED DRAM aceso</h2>
+<p>Um computador recém-montado apresenta:</p>
+<ul>
+<li>ventoinhas funcionando;</li>
+<li>ausência de vídeo;</li>
+<li>LED DRAM continuamente aceso;</li>
+<li>dois módulos de memória instalados;</li>
+<li>perfil de alto desempenho habilitado.</li>
+</ul>
+<h3 id="hipoteses">Hipóteses</h3>
+<ul>
+<li>módulo mal encaixado;</li>
+<li>slot inadequado;</li>
+<li>perfil instável;</li>
+<li>memória incompatível;</li>
+<li>módulo defeituoso;</li>
+<li>problema no controlador de memória;</li>
+<li>socket com contato inadequado;</li>
+<li>firmware incompatível.</li>
+</ul>
+<h3 id="investigacao-inicial">Investigação inicial</h3>
+<ol>
+<li>desligar e desconectar o equipamento; </li>
+<li>consultar o manual sobre o slot recomendado;</li>
+<li>reinstalar um único módulo;</li>
+<li>restaurar configurações padrão;</li>
+<li>testar individualmente os módulos;</li>
+<li>observar o tempo de treinamento;</li>
+<li>verificar a lista de compatibilidade;</li>
+<li>inspecionar socket e contatos, quando necessário.</li>
+</ol>
+<p>O LED orienta a investigação, mas não prova que o módulo de RAM seja o único responsável.</p>
+<h2 id="estudo-de-caso-2-led-vga-aceso">Estudo de Caso 2 — LED VGA aceso</h2>
+<p>O sistema apresenta:</p>
+<ul>
+<li>LED VGA;</li>
+<li>placa de vídeo dedicada instalada;</li>
+<li>monitor sem imagem;</li>
+<li>cabo conectado à saída da placa-mãe;</li>
+<li>processador sem gráficos integrados.</li>
+</ul>
+<p>Neste caso, a primeira evidência importante é o local em que o monitor foi conectado. Se o processador não possui vídeo integrado, as saídas da placa-mãe não produzirão imagem.<br />
+O cabo deve ser conectado à placa de vídeo dedicada.<br />
+Esse é um exemplo de falha de instalação, não de componente defeituoso.</p>
+<h2 id="estudo-de-caso-3-computador-reinicia-sob-carga">Estudo de Caso 3 — Computador reinicia sob carga</h2>
+<p>Durante tarefas leves, o computador funciona normalmente.Ao executar renderização, ele reinicia. As temperaturas aparentam normais.</p>
+<p>Hipóteses possíveis:</p>
+<ul>
+<li>fonte insuficiente ou defeituosa;</li>
+<li>conexão de alimentação da CPU;</li>
+<li>VRM superaquecendo;</li>
+<li>memória instável;</li>
+<li>firmware;</li>
+<li>overclock;</li>
+<li>curto intermitente;</li>
+<li>placa-mãe defeituosa.</li>
+</ul>
+<p>A reinicialização não autoriza concluir imediatamente que a placa-mãe está com defeito.</p>
+<p>Precisamos correlacionar:</p>
+<ul>
+<li>carga;</li>
+<li>temperatura;</li>
+<li>energia;</li>
+<li>registros;</li>
+<li>configurações;</li>
+<li>comportamento com componentes de referência.</li>
+</ul>
+<h2 id="mito-ou-evidencia">Mito ou Evidência?</h2>
+<h3 id="se-as-ventoinhas-giram-a-placa-mae-esta-funcionando">“Se as ventoinhas giram, a placa-mãe está funcionando”</h3>
+<p>Mito. O recebimento de energia não prova que o POST foi concluído.</p>
+<h3 id="led-dram-significa-obrigatoriamente-memoria-queimada">“LED DRAM significa obrigatoriamente memória queimada”</h3>
+<p>Mito. Ele indica falha na etapa relacionada à memória, mas a causa pode envolver módulos, slots, processador, firmware, socket ou configuração.</p>
+<h3 id="atualizar-a-bios-sempre-melhora-o-computador">“Atualizar a BIOS sempre melhora o computador”</h3>
+<p>Mito. A atualização deve ter objetivo claro e seguir documentação correta.</p>
+<h3 id="uma-placa-mae-pode-impedir-o-desempenho-maximo-do-processador">“Uma placa-mãe pode impedir o desempenho máximo do processador”</h3>
+<p>Evidência. Limitações elétricas, térmicas, de firmware ou configuração podem influenciar o comportamento da CPU.</p>
+<h3 id="o-manual-da-placa-mae-faz-parte-das-ferramentas-de-diagnostico">“O manual da placa-mãe faz parte das ferramentas de diagnóstico”</h3>
+<p>Evidência. Ele contém informações específicas que não podem ser substituídas por tabelas genéricas encontradas na Internet.</p>
+<h2 id="o-que-um-perito-observaria">O que um perito observaria?</h2>
+<ul>
+<li>O sistema recebe energia?</li>
+<li>Qual etapa do POST foi alcançada?</li>
+<li>Existe LED, código sonoro ou display?</li>
+<li>O problema surgiu após alguma alteração?</li>
+<li>O firmware suporta o processador?</li>
+<li>A memória está nos slots recomendados?</li>
+<li>Há sinais de líquido, corrosão ou impacto?</li>
+<li>Existem pinos deformados?</li>
+<li>Os conectores de energia estão corretamente instalados?</li>
+<li>A falha ocorre em configuração mínima?</li>
+<li>O comportamento muda com componentes de referência?</li>
+<li>As alterações foram documentadas?</li>
+<li>Há risco de destruir evidências ao limpar ou atualizar o sistema?</li>
+</ul>
+<h2 id="laboratorio-guiado-mapa-investigativo-da-placa-mae">Laboratório guiado — mapa investigativo da placa-mãe</h2>
+<p>Utilize o manual de uma placa-mãe disponível para consulta.</p>
+<p>Não é necessário desmontar o computador.</p>
+<h3 id="etapa-1-identificacao">Etapa 1 — Identificação</h3>
+<p>Registre:</p>
+<ul>
+<li>fabricante;</li>
+<li>modelo;</li>
+<li>revisão;</li>
+<li>socket;</li>
+<li>chipset;</li>
+<li>tipo de memória;</li>
+<li>versão de firmware, quando disponível.</li>
+</ul>
+<h3 id="etapa-2-localizacao">Etapa 2 — Localização</h3>
+<p>Identifique no diagrama:</p>
+<ul>
+<li>socket;</li>
+<li>slots de RAM;</li>
+<li>conectores de energia;</li>
+<li>slots PCI Express;</li>
+<li>conectores SATA;</li>
+<li>slots M.2;</li>
+<li>bateria;</li>
+<li>jumper de CMOS;</li>
+<li>LEDs de diagnóstico;</li>
+<li>conectores de ventoinhas;</li>
+<li>painel frontal.</li>
+</ul>
+<h3 id="etapa-3-compatibilidade">Etapa 3 — Compatibilidade</h3>
+<p>Escolha um processador e um módulo de memória e verifique:</p>
+<ul>
+<li>suporte oficial;</li>
+<li>versão mínima de firmware;</li>
+<li>capacidade aceita;</li>
+<li>frequência suportada;</li>
+<li>slot recomendado.</li>
+</ul>
+<h3 id="etapa-4-hipotese">Etapa 4 — Hipótese</h3>
+<p>Crie um cenário:</p>
+<pre><code class="language-text">O computador recebe energia, mas o LED de CPU permanece aceso após a troca do processador.
+</code></pre>
+<p>Liste pelo menos quatro hipóteses antes de propor qualquer substituição.</p>
+<h3 id="etapa-5-registro">Etapa 5 — Registro</h3>
+<p>Adicione ao Dossiê:</p>
+<ul>
+<li>evidências;</li>
+<li>hipóteses;</li>
+<li>testes possíveis;</li>
+<li>riscos;</li>
+<li>conclusão provisória.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
