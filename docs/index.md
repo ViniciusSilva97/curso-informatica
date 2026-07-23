@@ -68,3 +68,4 @@ Ele será capaz de:
 - [Aula 2 - Processador: Quem realmente comanda o computador?](modulo-2/aula-2-processador-quem-realmente-comanda-o-computador.md)
 - [Aula 3 - Memória RAM: O laboratório de trabalho do processador](modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador.md)
 - [Aula 4 - SSDs e HDs: Para onde os dados vão quando você desliga o computador?](modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado.md)
+- [Aula 5 - Placa-mãe: A cena onde todos os componentes se encontram](modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram.md)
