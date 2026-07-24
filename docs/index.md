@@ -23,17 +23,7 @@ hide:
     </ul>
   </div>
   <div class="sev-hero__visual" aria-hidden="true">
-    <div class="sev-monitor">
-      <div class="sev-monitor__bar"><i></i><i></i><i></i></div>
-      <div class="sev-monitor__screen">
-        <span class="sev-code sev-code--1"></span>
-        <span class="sev-code sev-code--2"></span>
-        <span class="sev-code sev-code--3"></span>
-        <div class="sev-chip">CPU</div>
-      </div>
-    </div>
-    <div class="sev-tool sev-tool--search">⌕</div>
-    <div class="sev-tool sev-tool--bolt">ϟ</div>
+    <img class="sev-hero__image" src="assets/brand/hero-diagnostico.png" alt="">
   </div>
 </section>
 
@@ -154,4 +144,3 @@ hide:
 </section>
 
 </div>
-
