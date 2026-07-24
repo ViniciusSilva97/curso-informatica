@@ -60,6 +60,35 @@ body {
   box-shadow: 0 2px 0 rgba(255, 201, 0, .85);
 }
 
+.md-banner {
+  background: linear-gradient(90deg, #007f31, #00a83f, #007f31);
+  color: #ffffff;
+}
+
+.md-banner__inner {
+  padding: .35rem .8rem;
+}
+
+.sev-utility-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  font-family: var(--sev-pixel);
+  font-size: .62rem;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.sev-utility-bar span {
+  color: var(--sev-yellow);
+}
+
+.sev-utility-bar i {
+  color: rgba(255, 255, 255, .7);
+  font-style: normal;
+}
+
 .md-header__inner {
   min-height: 4.1rem;
   overflow: visible;
@@ -409,6 +438,17 @@ body {
     linear-gradient(135deg, transparent 58%, rgba(5, 8, 6, .11) 58%);
 }
 
+.sev-hero__image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 112%;
+  max-width: none;
+  height: auto;
+  margin-right: -9%;
+  filter: drop-shadow(1rem 1.15rem 0 rgba(5, 8, 6, .18));
+}
+
 .sev-monitor {
   position: relative;
   z-index: 1;
@@ -557,7 +597,40 @@ body {
 }
 
 .sev-modules {
-  margin-top: 4.5rem;
+  margin: 4.5rem calc(50% - 50vw) 0;
+  padding: 4rem max(1.2rem, calc(50vw - 30.5rem));
+  background:
+    radial-gradient(circle at 15% 15%, rgba(0, 156, 59, .14), transparent 24%),
+    var(--sev-black);
+  color: #ffffff;
+}
+
+.sev-modules .sev-section-heading h2 {
+  color: #ffffff;
+}
+
+.sev-modules .sev-section-heading p {
+  color: #bdc7c0;
+}
+
+.sev-modules .sev-module-card {
+  border-color: #354139;
+  background: #0c120e;
+  color: #ffffff;
+  box-shadow: 5px 5px 0 #354139;
+}
+
+.sev-modules .sev-module-card--available {
+  border-color: var(--sev-green);
+  box-shadow: 5px 5px 0 var(--sev-green);
+}
+
+.sev-modules .sev-module-card h3 {
+  color: #ffffff;
+}
+
+.sev-modules .sev-module-card h3 + p {
+  color: #bdc7c0;
 }
 
 .sev-section-heading {
@@ -692,17 +765,17 @@ body {
   margin: 4.5rem calc(50% - 50vw) 0;
   padding: 4rem max(1.2rem, calc(50vw - 30.5rem));
   background:
-    radial-gradient(circle at 15% 10%, rgba(0, 156, 59, .18), transparent 25%),
-    var(--sev-black);
-  color: #fff;
+    radial-gradient(circle at 15% 10%, rgba(255, 201, 0, .16), transparent 25%),
+    #fff8eb;
+  color: #111713;
 }
 
 .sev-section-heading--dark h2 {
-  color: #fff;
+  color: #111713;
 }
 
 .sev-section-heading--dark p {
-  color: #bac2bc;
+  color: #58625b;
 }
 
 .sev-method-grid {
@@ -713,9 +786,9 @@ body {
 
 .sev-method-grid article {
   padding: 1.5rem 1.25rem;
-  border: 1px solid #263129;
+  border: 1px solid #d8d1c0;
   border-top: 3px solid var(--sev-green);
-  background: #0c120e;
+  background: #ffffff;
 }
 
 .sev-method-grid article > span {
@@ -724,7 +797,7 @@ body {
 
 .sev-method-grid h3 {
   margin: .8rem 0 .45rem;
-  color: #fff;
+  color: #111713;
   font-family: var(--sev-pixel);
   font-size: .95rem;
   text-transform: uppercase;
@@ -732,8 +805,19 @@ body {
 
 .sev-method-grid p {
   margin: 0;
-  color: #bac2bc;
+  color: #58625b;
   font-size: .74rem;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-method,
+[data-md-color-scheme="sev-dark"] .sev-method h2,
+[data-md-color-scheme="sev-dark"] .sev-method h3,
+[data-md-color-scheme="sev-dark"] .sev-method strong {
+  color: #111713;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-method p {
+  color: #58625b;
 }
 
 .sev-lesson-preview {
@@ -943,6 +1027,21 @@ body {
 }
 
 @media screen and (max-width: 44em) {
+  .md-banner__inner {
+    padding: .3rem .45rem;
+  }
+
+  .sev-utility-bar {
+    gap: .3rem;
+    font-size: .46rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .sev-utility-bar i {
+    display: none;
+  }
+
   .md-main,
   .md-main__inner,
   .md-content,
@@ -1061,6 +1160,12 @@ body {
     overflow: hidden;
   }
 
+  .sev-hero__image {
+    width: 104%;
+    margin-right: -4%;
+    filter: drop-shadow(.55rem .65rem 0 rgba(5, 8, 6, .16));
+  }
+
   .sev-monitor {
     width: 78%;
     padding: .4rem;
@@ -1105,7 +1210,8 @@ body {
   }
 
   .sev-modules {
-    margin-top: 3rem;
+    margin: 3rem 0 0;
+    padding: 2.5rem .8rem;
   }
 
   .sev-section-heading {
@@ -1303,6 +1409,10 @@ body {
 }
 
 @media screen and (max-width: 22.5em) {
+  .sev-utility-bar {
+    font-size: .4rem;
+  }
+
   .md-header__button.md-logo {
     width: 6.2rem;
     height: 1.45rem;
@@ -1325,6 +1435,11 @@ body {
 
   .sev-hero__visual {
     min-height: 10.5rem;
+  }
+
+  .sev-hero__image {
+    width: 100%;
+    margin-right: 0;
   }
 
   .sev-monitor {
