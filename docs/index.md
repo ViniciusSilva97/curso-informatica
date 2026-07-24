@@ -104,33 +104,61 @@ hide:
   </div>
 </section>
 
-<section class="sev-lesson-preview">
-  <div class="sev-lesson-preview__copy">
-    <span class="sev-eyebrow sev-eyebrow--dark">AULAS PENSADAS PARA VOCÊ</span>
-    <h2>Leitura confortável e aprendizado guiado</h2>
-    <p>As aulas unem explicação, exemplos, investigação e prática. A navegação mostra onde você está e qual é o próximo passo.</p>
-    <ul>
-      <li>Conteúdo organizado por módulos</li>
-      <li>Caixas especiais e alertas importantes</li>
-      <li>Navegação simples no computador e no celular</li>
-    </ul>
-  </div>
-  <div class="sev-lesson-window" aria-label="Exemplo visual de uma aula">
-    <div class="sev-lesson-window__top"><i></i><i></i><i></i><span>curso-informatica / aula</span></div>
-    <div class="sev-lesson-window__body">
-      <aside>
-        <strong>Módulo 1</strong>
-        <span class="is-active">1.1 O que é informática?</span>
-        <span>1.2 CPU, RAM e SSD</span>
-        <span>1.3 Entrada e saída</span>
-      </aside>
-      <div>
-        <small>MÓDULO 1 · AULA 1</small>
-        <h3>Como um computador realmente funciona?</h3>
-        <p>Todo computador segue um ciclo: entrada, processamento, saída e armazenamento.</p>
-        <div class="sev-callout"><strong>Importante</strong><br>Entenda o papel de cada parte antes de decorar termos.</div>
+<section class="sev-lesson-preview" aria-labelledby="aula-demonstrativa">
+  <header class="sev-section-heading sev-section-heading--dark">
+    <span>VEJA COMO VOCÊ VAI APRENDER</span>
+    <h2 id="aula-demonstrativa">Uma aula por dentro</h2>
+    <p>Conteúdo guiado, exemplos visuais e navegação clara para você sempre saber onde está e qual será o próximo passo.</p>
+  </header>
+
+  <div class="sev-lesson-workspace">
+    <aside class="sev-lesson-sidebar" aria-label="Aulas do módulo demonstrativo">
+      <div class="sev-lesson-sidebar__heading">
+        <small>MÓDULO 1</small>
+        <strong>Fundamentos da informática</strong>
       </div>
-    </div>
+      <ol>
+        <li class="is-active"><span>1.1</span> Como um computador realmente funciona?</li>
+        <li><span>1.2</span> Hardware: as partes físicas</li>
+        <li><span>1.3</span> Software: o lado invisível</li>
+        <li><span>1.4</span> Sistema de entrada e saída</li>
+        <li><span>1.5</span> Armazenamento de dados</li>
+      </ol>
+      <a href="modulo-1/aula-1-o-que-e-informatica/">Ver módulo completo <span aria-hidden="true">▣</span></a>
+    </aside>
+
+    <article class="sev-lesson-content">
+      <div class="sev-lesson-progress">
+        <span>Módulo 1</span>
+        <i aria-hidden="true"></i>
+        <strong>Aula 1 de 11</strong>
+      </div>
+
+      <small class="sev-lesson-content__mobile-label">MÓDULO 1 · AULA 1</small>
+      <h3>Como um computador realmente funciona?</h3>
+      <p>Todo computador segue um ciclo básico: recebe dados, processa as informações, apresenta um resultado e pode armazená-lo para uso futuro.</p>
+
+      <div class="sev-callout">
+        <span aria-hidden="true">!</span>
+        <div><strong>Importante</strong><br>Entenda o papel de cada etapa antes de decorar nomes e especificações.</div>
+      </div>
+
+      <h4>O ciclo básico de funcionamento</h4>
+      <div class="sev-computer-cycle" aria-label="Entrada, processamento, saída e armazenamento">
+        <div><i aria-hidden="true">⌨</i><strong>Entrada</strong><span>Você fornece os dados</span></div>
+        <b aria-hidden="true">›</b>
+        <div><i aria-hidden="true">▣</i><strong>Processamento</strong><span>A CPU interpreta</span></div>
+        <b aria-hidden="true">›</b>
+        <div><i aria-hidden="true">▢</i><strong>Saída</strong><span>O resultado aparece</span></div>
+        <b aria-hidden="true">›</b>
+        <div><i aria-hidden="true">▰</i><strong>Armazenamento</strong><span>Os dados são salvos</span></div>
+      </div>
+
+      <nav class="sev-lesson-navigation" aria-label="Navegação da aula demonstrativa">
+        <span>‹ Aula anterior</span>
+        <a href="modulo-1/aula-1-o-que-e-informatica/">Começar esta aula <span aria-hidden="true">›</span></a>
+      </nav>
+    </article>
   </div>
 </section>
 
