@@ -1,0 +1,3554 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/">
+      
+      
+        <link rel="prev" href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-6-fonte-de-alimentacao-por-que-leituras-de-software-nao-contam-toda-a-historia" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pergunta-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta da investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-fonte-nao-cria-energia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A fonte não “cria energia”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-quatro-conceitos-fundamentais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os quatro conceitos fundamentais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Os quatro conceitos fundamentais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eficiência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-a-linha-de-12-v-e-tao-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que a linha de 12 V é tão importante?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potencia-total-nao-conta-toda-a-historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência total não conta toda a história
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potência total não conta toda a história">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonte-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonte-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte B
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potencia-nominal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência nominal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-100-a-240-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada de 100 a 240 V
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linha-de-12-v-com-54-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linha de 12 V com 54 A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80-plus-gold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        80 PLUS Gold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-protecoes-eletricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são proteções elétricas?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonte-modular-semimodular-e-nao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte modular, semimodular e não modular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonte modular, semimodular e não modular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Não modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semimodular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semimodular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectores-nao-devem-ser-confundidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores não devem ser confundidos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectores não devem ser confundidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atx-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATX principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eps-ou-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EPS ou CPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pci-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCI Express
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SATA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectores-modernos-de-alta-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores modernos de alta potência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-problema-dos-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O problema dos adaptadores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-a-carga-muda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que a carga muda?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-transitorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são transitórios?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-grande-limitacao-das-leituras-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A grande limitação das leituras de software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-software-consegue-detectar-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O software consegue detectar ripple?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="O software consegue detectar ripple?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é ripple?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-multimetro-consegue-medir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um multímetro consegue medir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-osciloscopio-acrescenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um osciloscópio acrescenta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testadores-simples-de-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testadores simples de fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-teste-do-clipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O teste do clipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nunca-abra-uma-fonte-de-alimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nunca abra uma fonte de alimentação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintomas-que-podem-estar-relacionados-a-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas que podem estar relacionados à fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coil-whine-e-defeito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coil whine é defeito?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensionamento-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensionamento da fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculadoras-de-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculadoras de potência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificacao-de-eficiencia-nao-e-selo-absoluto-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificação de eficiência não é selo absoluto de qualidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-investigacao-nao-invasiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório: investigação não invasiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório: investigação não invasiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-analise-da-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Análise da configuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-coleta-de-sintomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Coleta de sintomas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Monitoramento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-fonte-de-500-w-em-computador-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 1 — Fonte de 500 W em computador gamer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 1 — Fonte de 500 W em computador gamer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-leitura-de-114-v-no-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — Leitura de 11,4 V no software
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-computador-reinicia-mas-registra-erro-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Computador reinicia, mas registra erro térmico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-4-ssd-queimado-apos-troca-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 4 — SSD queimado após troca da fonte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-a-ventoinha-da-fonte-gira-ela-esta-boa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se a ventoinha da fonte gira, ela está boa”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-fonte-de-700-w-sempre-e-melhor-que-uma-de-550-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma fonte de 700 W sempre é melhor que uma de 550 W”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-software-mede-diretamente-a-saida-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “O software mede diretamente a saída da fonte”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-fonte-pode-causar-defeitos-intermitentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma fonte pode causar defeitos intermitentes”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cabos-modulares-de-fontes-diferentes-podem-ser-incompativeis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Cabos modulares de fontes diferentes podem ser incompatíveis”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80-plus-garante-todas-as-protecoes-e-a-qualidade-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “80 PLUS garante todas as proteções e a qualidade interna”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-uma-fonte-desconectada-e-sempre-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Abrir uma fonte desconectada é sempre seguro”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-interromper-o-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando interromper o uso
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pergunta-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta da investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-fonte-nao-cria-energia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A fonte não “cria energia”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-quatro-conceitos-fundamentais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os quatro conceitos fundamentais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Os quatro conceitos fundamentais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eficiência
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-a-linha-de-12-v-e-tao-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que a linha de 12 V é tão importante?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potencia-total-nao-conta-toda-a-historia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência total não conta toda a história
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potência total não conta toda a história">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonte-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonte-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte B
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potencia-nominal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência nominal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-100-a-240-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrada de 100 a 240 V
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linha-de-12-v-com-54-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linha de 12 V com 54 A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80-plus-gold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        80 PLUS Gold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-protecoes-eletricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são proteções elétricas?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonte-modular-semimodular-e-nao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonte modular, semimodular e não modular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonte modular, semimodular e não modular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Não modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semimodular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semimodular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectores-nao-devem-ser-confundidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores não devem ser confundidos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conectores não devem ser confundidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atx-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ATX principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eps-ou-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EPS ou CPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pci-express" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCI Express
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SATA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectores-modernos-de-alta-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores modernos de alta potência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-problema-dos-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O problema dos adaptadores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-a-carga-muda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que a carga muda?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-transitorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são transitórios?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-grande-limitacao-das-leituras-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A grande limitação das leituras de software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-software-consegue-detectar-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O software consegue detectar ripple?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="O software consegue detectar ripple?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é ripple?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-multimetro-consegue-medir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um multímetro consegue medir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-osciloscopio-acrescenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um osciloscópio acrescenta?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testadores-simples-de-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testadores simples de fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-teste-do-clipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O teste do clipe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nunca-abra-uma-fonte-de-alimentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nunca abra uma fonte de alimentação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintomas-que-podem-estar-relacionados-a-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas que podem estar relacionados à fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coil-whine-e-defeito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coil whine é defeito?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensionamento-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensionamento da fonte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculadoras-de-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculadoras de potência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificacao-de-eficiencia-nao-e-selo-absoluto-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificação de eficiência não é selo absoluto de qualidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-investigacao-nao-invasiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório: investigação não invasiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório: investigação não invasiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-analise-da-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Análise da configuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-coleta-de-sintomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Coleta de sintomas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Monitoramento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-fonte-de-500-w-em-computador-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 1 — Fonte de 500 W em computador gamer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 1 — Fonte de 500 W em computador gamer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-leitura-de-114-v-no-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — Leitura de 11,4 V no software
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-computador-reinicia-mas-registra-erro-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Computador reinicia, mas registra erro térmico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estudo-de-caso-4-ssd-queimado-apos-troca-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 4 — SSD queimado após troca da fonte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-a-ventoinha-da-fonte-gira-ela-esta-boa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se a ventoinha da fonte gira, ela está boa”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-fonte-de-700-w-sempre-e-melhor-que-uma-de-550-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma fonte de 700 W sempre é melhor que uma de 550 W”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-software-mede-diretamente-a-saida-da-fonte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “O software mede diretamente a saída da fonte”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-fonte-pode-causar-defeitos-intermitentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma fonte pode causar defeitos intermitentes”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cabos-modulares-de-fontes-diferentes-podem-ser-incompativeis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Cabos modulares de fontes diferentes podem ser incompatíveis”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#80-plus-garante-todas-as-protecoes-e-a-qualidade-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “80 PLUS garante todas as proteções e a qualidade interna”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-uma-fonte-desconectada-e-sempre-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Abrir uma fonte desconectada é sempre seguro”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-interromper-o-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando interromper o uso
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="aula-6-fonte-de-alimentacao-por-que-leituras-de-software-nao-contam-toda-a-historia">Aula 6 — Fonte de alimentação: por que leituras de software não contam toda a história?<a class="headerlink" href="#aula-6-fonte-de-alimentacao-por-que-leituras-de-software-nao-contam-toda-a-historia" title="Permanent link">&para;</a></h1>
+<h2 id="pergunta-da-investigacao">Pergunta da investigação<a class="headerlink" href="#pergunta-da-investigacao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Um programa consegue confirmar que a fonte está funcionando corretamente?
+</code></pre></div>
+<h2 id="dossie-da-investigacao">Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h2>
+<p>Caso nº 005 — O computador que desliga apenas durante jogos</p>
+<p>Um cliente relata que o computador funciona normalmente para:</p>
+<ul>
+<li>navegar na Internet;</li>
+<li>editar documentos;</li>
+<li>assistir a vídeos;</li>
+<li>participar de videoconferências.</li>
+</ul>
+<p>Entretanto, poucos minutos após iniciar um jogo, o equipamento desliga repentinamente.</p>
+<ul>
+<li>Não aparece tela azul.</li>
+<li>Não surge mensagem de erro.</li>
+</ul>
+<p>O computador simplesmente perde energia. Depois de alguns segundos, ele pode ser ligado novamente.  </p>
+<p>Ao verificar um programa de monitoramento, o cliente observa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Linha de 12 V: 12,096 V
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Linha de 5 V:   5,040 V
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Linha de 3,3 V: 3,328 V
+</code></pre></div>
+<p>Ele conclui:  </p>
+<p><strong>“As tensões estão corretas. Portanto, a fonte não pode ser o problema.”</strong></p>
+<p>Essa conclusão é válida?   </p>
+<p>As leituras apresentadas pelo software são realmente medidas diretamente na saída da fonte?  </p>
+<p>O defeito pode aparecer apenas quando o computador exige mais energia?  </p>
+<p>Hoje investigaremos essas questões.  </p>
+<h2 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h2>
+<p>Ao final desta aula, você será capaz de:</p>
+<ul>
+<li>compreender a função real da fonte de alimentação;</li>
+<li>diferenciar potência, tensão, corrente e eficiência;</li>
+<li>interpretar especificações sem depender apenas do valor em watts;</li>
+<li>entender por que leituras de software possuem limitações;</li>
+<li>reconhecer sintomas associados a falhas de alimentação;</li>
+<li>compreender o papel das proteções elétricas;</li>
+<li>diferenciar teste superficial de diagnóstico profissional;</li>
+<li>identificar riscos que exigem encaminhamento especializado;</li>
+<li>avaliar uma fonte com base em projeto, aplicação e evidências.</li>
+</ul>
+<h2 id="a-fonte-nao-cria-energia">A fonte não “cria energia”<a class="headerlink" href="#a-fonte-nao-cria-energia" title="Permanent link">&para;</a></h2>
+<p>É comum ouvir que a fonte “fornece energia ao computador”. A frase é útil, mas precisa ser aprofundada.  </p>
+<p><strong>A fonte recebe energia elétrica da rede e a converte para níveis adequados aos componentes internos.</strong>  </p>
+<p>Em uma fonte ATX típica, a energia alternada da tomada é transformada em tensões contínuas utilizadas pelo computador.  </p>
+<p>Rede elétrica em corrente alternada<br />
+                ↓<br />
+Filtragem e conversão<br />
+                ↓<br />
+Tensões contínuas controladas<br />
+                ↓<br />
+Placa-mãe, processador, GPU, SSD e demais componentes  </p>
+<p>A fonte precisa realizar essa conversão com:</p>
+<ul>
+<li>estabilidade;</li>
+<li>segurança;</li>
+<li>eficiência;</li>
+<li>baixo nível de ruído elétrico;</li>
+<li>capacidade para responder às variações de carga.</li>
+</ul>
+<p>Portanto, não basta entregar energia. Ela precisa entregar energia dentro de condições aceitáveis.</p>
+<h2 id="os-quatro-conceitos-fundamentais">Os quatro conceitos fundamentais<a class="headerlink" href="#os-quatro-conceitos-fundamentais" title="Permanent link">&para;</a></h2>
+<p>Antes de investigar uma fonte, precisamos separar quatro grandezas frequentemente confundidas.</p>
+<h3 id="tensao">Tensão<a class="headerlink" href="#tensao" title="Permanent link">&para;</a></h3>
+<p>A tensão elétrica é medida em volts.  </p>
+<p>No computador, encontramos linhas como:</p>
+<ul>
+<li>12 V;</li>
+<li>5 V;</li>
+<li>3,3 V.</li>
+</ul>
+<p>Uma analogia simples é pensar na tensão como a pressão que impulsiona a corrente pelo circuito.  </p>
+<h3 id="corrente">Corrente<a class="headerlink" href="#corrente" title="Permanent link">&para;</a></h3>
+<p>A corrente elétrica é medida em amperes. Ela representa o fluxo de carga elétrica.<br />
+Componentes diferentes exigem correntes distintas de acordo com a carga de trabalho.<br />
+Uma placa de vídeo pode solicitar muito mais corrente durante um jogo do que quando está exibindo apenas a área de trabalho.</p>
+<h3 id="potencia">Potência<a class="headerlink" href="#potencia" title="Permanent link">&para;</a></h3>
+<p>A potência é medida em watts.  </p>
+<p>Em corrente contínua, uma relação simplificada é:  </p>
+<p><strong>Potência = Tensão × Corrente</strong></p>
+<p>Exemplo:  </p>
+<p><strong>12 V × 10 A = 120 W</strong></p>
+<p>Isso não significa que uma fonte de 650 W entrega 650 W permanentemente. Esse valor representa sua capacidade nominal dentro das condições especificadas pelo fabricante.  </p>
+<p><strong>O computador consome apenas o que exige em cada momento.</strong></p>
+<h3 id="eficiencia">Eficiência<a class="headerlink" href="#eficiencia" title="Permanent link">&para;</a></h3>
+<p>Eficiência é a relação entre a energia retirada da tomada e a energia efetivamente entregue ao computador.</p>
+<p>Imagine que uma fonte retire 500 W da rede e entregue 450 W aos componentes.  </p>
+<p>Eficiência = 450 ÷ 500<br />
+Eficiência = <strong>90%</strong>  </p>
+<p>Os 50 W restantes não desaparecem. Grande parte é dissipada como calor durante a conversão.  </p>
+<p>Uma fonte mais eficiente tende a:</p>
+<ul>
+<li>desperdiçar menos energia;</li>
+<li>gerar menos calor para a mesma carga;</li>
+<li>exigir menos esforço de refrigeração.</li>
+</ul>
+<p>Eficiência, porém, não é sinônimo automático de qualidade geral. Uma fonte pode apresentar boa eficiência em determinadas condições e ainda possuir limitações em outros aspectos do projeto.</p>
+<h2 id="por-que-a-linha-de-12-v-e-tao-importante">Por que a linha de 12 V é tão importante?<a class="headerlink" href="#por-que-a-linha-de-12-v-e-tao-importante" title="Permanent link">&para;</a></h2>
+<p>Em computadores modernos, grande parte da potência é utilizada pela linha de 12 V.</p>
+<p>Ela alimenta, direta ou indiretamente:</p>
+<ul>
+<li>processador;</li>
+<li>placa de vídeo;</li>
+<li>ventoinhas;</li>
+<li>bombas de sistemas de refrigeração;</li>
+<li>reguladores da placa-mãe;</li>
+<li>reguladores da GPU.</li>
+</ul>
+<p>A placa-mãe e a placa de vídeo utilizam circuitos reguladores para converter os 12 V em tensões muito menores, adequadas aos chips.  </p>
+<p>Por exemplo:  </p>
+<p>Fonte fornece 12 V<br />
+        ↓<br />
+VRM da placa-mãe<br />
+        ↓
+Tensão adequada ao processador  </p>
+<p>Assim, uma fonte pode apresentar sintomas principalmente quando CPU e GPU aumentam simultaneamente sua demanda.  </p>
+<h2 id="potencia-total-nao-conta-toda-a-historia">Potência total não conta toda a história<a class="headerlink" href="#potencia-total-nao-conta-toda-a-historia" title="Permanent link">&para;</a></h2>
+<p>Duas fontes podem anunciar 600 W e serem completamente diferentes.  </p>
+<h3 id="fonte-a">Fonte A<a class="headerlink" href="#fonte-a" title="Permanent link">&para;</a></h3>
+<ul>
+<li>projeto bem dimensionado;</li>
+<li>componentes de qualidade;</li>
+<li>proteções adequadas;</li>
+<li>boa regulação;</li>
+<li>capacidade real na linha de 12 V;</li>
+<li>documentação clara;</li>
+<li>fabricante identificável.</li>
+</ul>
+<h3 id="fonte-b">Fonte B<a class="headerlink" href="#fonte-b" title="Permanent link">&para;</a></h3>
+<ul>
+<li>potência de pico usada como propaganda;</li>
+<li>capacidade limitada na linha de 12 V;</li>
+<li>componentes inferiores;</li>
+<li>ausência de proteções;</li>
+<li>etiqueta pouco transparente;</li>
+<li>projeto antigo ou inadequado.</li>
+</ul>
+<p>A informação “600 W” sozinha não permite concluir que as duas fontes atendem ao mesmo computador.</p>
+<h2 id="dentro-da-caixa">Dentro da Caixa<a class="headerlink" href="#dentro-da-caixa" title="Permanent link">&para;</a></h2>
+<p>Vamos analisar uma etiqueta simplificada:</p>
+<ul>
+<li>Potência nominal........650 W</li>
+<li>Entrada.................100–240 V</li>
+<li>Linha +12 V.............54 A</li>
+<li>Potência em +12 V.......648 W</li>
+<li>Linha +5 V..............20 A</li>
+<li>Linha +3,3 V............20 A</li>
+<li>Certificação de eficiência..............80 PLUS Gold</li>
+<li>Formato.................ATX</li>
+<li>Proteções declaradas....OCP, OVP, UVP, SCP, OTP e OPP</li>
+</ul>
+<p>Agora vamos interpretar.</p>
+<h3 id="potencia-nominal">Potência nominal<a class="headerlink" href="#potencia-nominal" title="Permanent link">&para;</a></h3>
+<p>É a capacidade declarada para operação nas condições definidas pelo fabricante. Precisamos verificar se esse valor corresponde à potência contínua ou apenas a um pico momentâneo.</p>
+<h3 id="entrada-de-100-a-240-v">Entrada de 100 a 240 V<a class="headerlink" href="#entrada-de-100-a-240-v" title="Permanent link">&para;</a></h3>
+<p>Indica que a fonte foi projetada para trabalhar em uma ampla faixa de tensão da rede. Em muitos modelos modernos, a seleção é automática.  </p>
+<p>Fontes antigas podem possuir chave manual de tensão(saí fora desses modelos kkk). Configurar incorretamente essa chave pode causar danos graves.</p>
+<h3 id="linha-de-12-v-com-54-a">Linha de 12 V com 54 A<a class="headerlink" href="#linha-de-12-v-com-54-a" title="Permanent link">&para;</a></h3>
+<p>Calculando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>12 V × 54 A = 648 W
+</code></pre></div>
+<p>Isso indica que quase toda a potência nominal pode ser entregue pela linha de 12 V.</p>
+<p>Essa característica é importante em sistemas modernos.</p>
+<h3 id="80-plus-gold">80 PLUS Gold<a class="headerlink" href="#80-plus-gold" title="Permanent link">&para;</a></h3>
+<p>A certificação informa níveis mínimos de eficiência em condições de teste definidas pelo programa.  </p>
+<p>Ela não certifica isoladamente:</p>
+<ul>
+<li>qualidade dos capacitores;</li>
+<li>durabilidade;</li>
+<li>nível de ripple;</li>
+<li>todas as proteções;</li>
+<li>comportamento em transitórios;</li>
+<li>silêncio;</li>
+<li>qualidade geral do projeto.</li>
+</ul>
+<p>É uma informação relevante, mas não deve ser utilizada como único critério de compra.</p>
+<h2 id="o-que-sao-protecoes-eletricas">O que são proteções elétricas?<a class="headerlink" href="#o-que-sao-protecoes-eletricas" title="Permanent link">&para;</a></h2>
+<p>Uma fonte bem projetada pode incluir mecanismos de proteção.</p>
+<p>As siglas mais comuns são:</p>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Função geral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCP</td>
+<td>Proteção contra corrente excessiva</td>
+</tr>
+<tr>
+<td>OVP</td>
+<td>Proteção contra tensão excessiva</td>
+</tr>
+<tr>
+<td>UVP</td>
+<td>Proteção contra tensão abaixo do limite</td>
+</tr>
+<tr>
+<td>OPP</td>
+<td>Proteção contra potência excessiva</td>
+</tr>
+<tr>
+<td>SCP</td>
+<td>Proteção contra curto-circuito</td>
+</tr>
+<tr>
+<td>OTP</td>
+<td>Proteção contra temperatura excessiva</td>
+</tr>
+</tbody>
+</table>
+<p>Essas proteções procuram interromper ou limitar o funcionamento quando uma condição perigosa é detectada.</p>
+<p>Elas não tornam a fonte indestrutível.</p>
+<p>Também não substituem:</p>
+<ul>
+<li>aterramento adequado;</li>
+<li>instalação elétrica correta;</li>
+<li>proteção contra surtos;</li>
+<li>manutenção;</li>
+<li>escolha de potência apropriada.</li>
+</ul>
+<h2 id="fonte-modular-semimodular-e-nao-modular">Fonte modular, semimodular e não modular<a class="headerlink" href="#fonte-modular-semimodular-e-nao-modular" title="Permanent link">&para;</a></h2>
+<h3 id="nao-modular">Não modular<a class="headerlink" href="#nao-modular" title="Permanent link">&para;</a></h3>
+<p>Todos os cabos são fixos.  </p>
+<p>Vantagens:</p>
+<ul>
+<li>construção mais simples;</li>
+<li>normalmente menor custo;</li>
+<li>ausência de conectores modulares intermediários.</li>
+</ul>
+<p>Desvantagens:</p>
+<ul>
+<li>maior quantidade de cabos dentro do gabinete;</li>
+<li>organização mais difícil.</li>
+</ul>
+<h3 id="semimodular">Semimodular<a class="headerlink" href="#semimodular" title="Permanent link">&para;</a></h3>
+<p>Alguns cabos essenciais são fixos e os demais removíveis.  </p>
+<h3 id="modular">Modular<a class="headerlink" href="#modular" title="Permanent link">&para;</a></h3>
+<p>Os cabos podem ser conectados conforme a necessidade.  </p>
+<p>Isso facilita:</p>
+<ul>
+<li>organização;</li>
+<li>montagem;</li>
+<li>fluxo de ar;</li>
+<li>substituição de cabos compatíveis.</li>
+</ul>
+<p>Mas existe um risco importante.  </p>
+<p><strong>Cabos modulares não são universalmente intercambiáveis.</strong></p>
+<p>Dois cabos podem possuir conectores fisicamente iguais no lado da fonte e, ainda assim, utilizar pinagens diferentes.  </p>
+<p>Usar o cabo modular de outro modelo pode causar:  </p>
+<ul>
+<li>curto-circuito;</li>
+<li>queima de SSD;</li>
+<li>danos à placa de vídeo;</li>
+<li>danos à placa-mãe;</li>
+<li>perda de dados.</li>
+</ul>
+<p>O cabo deve ser compatível exatamente com a fonte ou oficialmente aprovado pelo fabricante.  </p>
+<h2 id="conectores-nao-devem-ser-confundidos">Conectores não devem ser confundidos<a class="headerlink" href="#conectores-nao-devem-ser-confundidos" title="Permanent link">&para;</a></h2>
+<h3 id="atx-principal">ATX principal<a class="headerlink" href="#atx-principal" title="Permanent link">&para;</a></h3>
+<p>Alimenta a placa-mãe.</p>
+<h3 id="eps-ou-cpu">EPS ou CPU<a class="headerlink" href="#eps-ou-cpu" title="Permanent link">&para;</a></h3>
+<p>Alimenta a região responsável pelo processador.</p>
+<h3 id="pci-express">PCI Express<a class="headerlink" href="#pci-express" title="Permanent link">&para;</a></h3>
+<p>É usado tradicionalmente em placas de vídeo.</p>
+<h3 id="sata">SATA<a class="headerlink" href="#sata" title="Permanent link">&para;</a></h3>
+<p>Alimenta SSDs, HDs e outros dispositivos compatíveis.</p>
+<h2 id="conectores-modernos-de-alta-potencia">Conectores modernos de alta potência<a class="headerlink" href="#conectores-modernos-de-alta-potencia" title="Permanent link">&para;</a></h2>
+<p>Placas de vídeo recentes podem utilizar conectores específicos com maior capacidade.  </p>
+<p>Esses conectores exigem:</p>
+<ul>
+<li>encaixe completo;</li>
+<li>cabo adequado;</li>
+<li>ausência de tensão mecânica excessiva;</li>
+<li>curvatura apropriada;</li>
+<li>compatibilidade com a fonte;</li>
+<li>instalação conforme a documentação.</li>
+</ul>
+<p>Um conector parcialmente inserido pode aumentar a resistência elétrica e provocar aquecimento.</p>
+<h2 id="o-problema-dos-adaptadores">O problema dos adaptadores<a class="headerlink" href="#o-problema-dos-adaptadores" title="Permanent link">&para;</a></h2>
+<p>Adaptadores podem ser úteis em situações específicas, mas também podem introduzir riscos.</p>
+<p>Exemplos problemáticos:</p>
+<ul>
+<li>adaptar conectores SATA para alimentação de GPU;</li>
+<li>utilizar cabos de baixa qualidade;</li>
+<li>dividir corrente excessiva em um único cabo;</li>
+<li>empilhar adaptadores;</li>
+<li>usar conectores danificados;</li>
+<li>empregar extensões sem especificação confiável.</li>
+</ul>
+<p>O fato de um adaptador permitir o encaixe físico não significa que ele suporte a corrente necessária com segurança.</p>
+<h2 id="por-que-a-carga-muda">Por que a carga muda?<a class="headerlink" href="#por-que-a-carga-muda" title="Permanent link">&para;</a></h2>
+<p>O consumo do computador não é constante.</p>
+<p>Em repouso:</p>
+<ul>
+<li>CPU: baixa utilização</li>
+<li>GPU: baixa utilização</li>
+<li>Ventoinhas: rotação reduzida</li>
+<li>Consumo total: menor</li>
+</ul>
+<p>Durante um jogo ou renderização:</p>
+<ul>
+<li>CPU: maior carga</li>
+<li>GPU: maior carga</li>
+<li>VRMs: maior trabalho</li>
+<li>Ventoinhas: maior rotação</li>
+<li>Consumo total: maior</li>
+</ul>
+<p>Alguns componentes podem apresentar picos de consumo muito rápidos.  </p>
+<p>A fonte precisa responder a essas variações sem:</p>
+<ul>
+<li>deixar a tensão cair excessivamente;</li>
+<li>produzir oscilações inadequadas;</li>
+<li>acionar proteções indevidamente;</li>
+<li>perder estabilidade.</li>
+</ul>
+<p>Por isso, uma fonte pode funcionar no uso leve e falhar apenas sob carga.</p>
+<h2 id="o-que-sao-transitorios">O que são transitórios?<a class="headerlink" href="#o-que-sao-transitorios" title="Permanent link">&para;</a></h2>
+<p>Um transiente é uma mudança rápida na demanda elétrica. Imagine uma GPU saindo de um estado de baixo consumo para alta carga em poucos instantes.  </p>
+<p>A fonte precisa adaptar sua entrega rapidamente.  </p>
+<p>Uma unidade inadequada pode:</p>
+<ul>
+<li>desligar;</li>
+<li>apresentar queda momentânea;</li>
+<li>acionar proteção;</li>
+<li>provocar instabilidade.</li>
+</ul>
+<p>Esse tipo de comportamento dificilmente será compreendido apenas observando uma leitura estática na tela. </p>
+<h2 id="a-grande-limitacao-das-leituras-de-software">A grande limitação das leituras de software<a class="headerlink" href="#a-grande-limitacao-das-leituras-de-software" title="Permanent link">&para;</a></h2>
+<p>Programas como HWiNFO e ferramentas da placa-mãe podem apresentar valores de tensão. Porém, esses números geralmente vêm de sensores e circuitos de monitoramento da própria placa-mãe.  </p>
+<p>Eles não são necessariamente uma medição direta e precisa na saída da fonte.  </p>
+<p>O caminho pode ser simplificado assim:<br />
+Fonte<br />
+  ↓<br />
+Placa-mãe<br />
+  ↓<br />
+Circuito sensor<br />
+  ↓<br />
+Controlador de monitoramento<br />
+  ↓<br />
+Firmware ou driver<br />
+  ↓<br />
+Programa<br />
+  ↓<br />
+Valor exibido  </p>
+<p>Cada etapa pode introduzir:</p>
+<ul>
+<li>arredondamento;</li>
+<li>atraso;</li>
+<li>calibração imperfeita;</li>
+<li>baixa taxa de amostragem;</li>
+<li>leitura incorreta;</li>
+<li>identificação errada do sensor.</li>
+</ul>
+<p>Por isso:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Uma leitura aparentemente normal no software não comprova que a fonte esteja saudável.
+</code></pre></div></p>
+<h2 id="o-software-consegue-detectar-ripple">O software consegue detectar ripple?<a class="headerlink" href="#o-software-consegue-detectar-ripple" title="Permanent link">&para;</a></h2>
+<p>Não de forma confiável por meio dos sensores comuns da placa-mãe.  </p>
+<h3 id="o-que-e-ripple">O que é ripple?<a class="headerlink" href="#o-que-e-ripple" title="Permanent link">&para;</a></h3>
+<p>Após a conversão da energia, a tensão contínua não é necessariamente uma linha perfeitamente estável.  </p>
+<p>Pode existir uma pequena ondulação residual.  </p>
+<p>Tensão ideal:
+<strong>───────────────</strong></p>
+<p>Tensão com ondulação:
+<strong>~─~─~─~─~─~─~─</strong></p>
+<p>Ripple excessivo pode afetar:</p>
+<ul>
+<li>estabilidade;</li>
+<li>vida útil dos componentes;</li>
+<li>reguladores;</li>
+<li>armazenamento;</li>
+<li>funcionamento sob carga.</li>
+</ul>
+<p>Para observar adequadamente esse comportamento, laboratórios utilizam instrumentos como <strong>osciloscópio e procedimentos específicos.</strong>  </p>
+<p>O multímetro comum normalmente não mostra toda a forma de onda necessária para essa análise.</p>
+<h2 id="o-que-um-multimetro-consegue-medir">O que um multímetro consegue medir?<a class="headerlink" href="#o-que-um-multimetro-consegue-medir" title="Permanent link">&para;</a></h2>
+<p>Um multímetro pode ajudar a verificar:</p>
+<ul>
+<li>presença de tensão;</li>
+<li>valores aproximados nas linhas;</li>
+<li>continuidade;</li>
+<li>determinadas quedas;</li>
+<li>alguns curtos;</li>
+<li>comportamento básico.</li>
+</ul>
+<p>Ele pode ser muito mais confiável do que a leitura de software para determinadas verificações. Entretanto, ele não mostra tudo.  </p>
+<p>Um multímetro comum pode deixar de revelar:</p>
+<ul>
+<li>oscilações extremamente rápidas;</li>
+<li>ripple detalhado;</li>
+<li>transitórios;</li>
+<li>comportamento dinâmico complexo;</li>
+<li>falhas que ocorrem em milissegundos.</li>
+</ul>
+<h2 id="o-que-um-osciloscopio-acrescenta">O que um osciloscópio acrescenta?<a class="headerlink" href="#o-que-um-osciloscopio-acrescenta" title="Permanent link">&para;</a></h2>
+<p>O osciloscópio permite observar sinais ao longo do tempo.  </p>
+<p>Ele pode revelar:</p>
+<ul>
+<li>ripple;</li>
+<li>ruído;</li>
+<li>quedas momentâneas;</li>
+<li>comportamento durante mudanças de carga;</li>
+<li>instabilidades rápidas.</li>
+</ul>
+<p>Mas usar um osciloscópio corretamente exige:</p>
+<ul>
+<li>conhecimento técnico;</li>
+<li>pontas de prova adequadas;</li>
+<li>configuração correta;</li>
+<li>cuidados com aterramento;</li>
+<li>interpretação da forma de onda.</li>
+</ul>
+<p>Ter o equipamento não significa automaticamente saber realizar o diagnóstico.</p>
+<h2 id="testadores-simples-de-fonte">Testadores simples de fonte<a class="headerlink" href="#testadores-simples-de-fonte" title="Permanent link">&para;</a></h2>
+<p>Existem testadores comerciais que verificam se determinadas linhas estão presentes e dentro de uma faixa aproximada.  </p>
+<p>Eles podem ser úteis como triagem.  </p>
+<p>Porém, apresentam limitações:</p>
+<ul>
+<li>testam com pouca ou nenhuma carga real;</li>
+<li>não reproduzem o comportamento de CPU e GPU;</li>
+<li>não analisam adequadamente ripple;</li>
+<li>podem não revelar falhas intermitentes;</li>
+<li>não avaliam qualidade interna.</li>
+</ul>
+<p>Uma fonte pode passar em um testador simples e falhar quando o computador exige potência elevada.  </p>
+<h2 id="o-teste-do-clipe">O teste do clipe<a class="headerlink" href="#o-teste-do-clipe" title="Permanent link">&para;</a></h2>
+<p>Algumas pessoas fazem uma ponte em pinos específicos do conector para ligar a fonte fora do computador.  </p>
+<p>Esse procedimento é conhecido informalmente como “teste do clipe”.  </p>
+<p>O teste apenas pode mostrar que a fonte iniciou e acionou sua ventoinha ou suas saídas básicas.  </p>
+<p>Ele não comprova:</p>
+<ul>
+<li>estabilidade;</li>
+<li>potência real;</li>
+<li>qualidade;</li>
+<li>funcionamento sob carga;</li>
+<li>ausência de ripple;</li>
+<li>saúde dos componentes internos.</li>
+</ul>
+<p>Além disso, realizar a ponte nos pinos errados pode causar curto-circuito. Neste curso, não trataremos esse procedimento como prova de funcionamento.</p>
+<h2 id="nunca-abra-uma-fonte-de-alimentacao">Nunca abra uma fonte de alimentação<a class="headerlink" href="#nunca-abra-uma-fonte-de-alimentacao" title="Permanent link">&para;</a></h2>
+<p>Mesmo desconectada da tomada, uma fonte pode manter cargas perigosas em capacitores internos.</p>
+<p>Abrir a unidade pode expor o aluno a:</p>
+<ul>
+<li>choque elétrico;</li>
+<li>queimaduras;</li>
+<li>curto-circuito;</li>
+<li>incêndio;</li>
+<li>danos ao equipamento.</li>
+</ul>
+<p><strong>A investigação interna de uma fonte deve ser realizada apenas por profissional qualificado, com conhecimento em eletrônica e procedimentos de segurança.</strong></p>
+<p>Esta aula ensina a compreender a tecnologia e reconhecer seus limites. Ela não autoriza intervenções perigosas.</p>
+<h2 id="sintomas-que-podem-estar-relacionados-a-fonte">Sintomas que podem estar relacionados à fonte<a class="headerlink" href="#sintomas-que-podem-estar-relacionados-a-fonte" title="Permanent link">&para;</a></h2>
+<p>Possíveis sintomas incluem:</p>
+<ul>
+<li>computador não liga;</li>
+<li>desligamento repentino;</li>
+<li>reinicialização sob carga;</li>
+<li>instabilidade em jogos;</li>
+<li>falha ao iniciar a placa de vídeo;</li>
+<li>cheiro de queimado;</li>
+<li>ruído elétrico;</li>
+<li>acionamento frequente de proteções;</li>
+<li>comportamento diferente após instalar um componente mais potente;</li>
+<li>conectores aquecidos;</li>
+<li>cabos ou terminais escurecidos.</li>
+</ul>
+<p>Nenhum desses sintomas prova sozinho que a fonte é a causa.  </p>
+<p>Também podem estar envolvidos:</p>
+<ul>
+<li>placa-mãe;</li>
+<li>VRM;</li>
+<li>memória RAM;</li>
+<li>temperatura;</li>
+<li>GPU;</li>
+<li>driver;</li>
+<li>tomada;</li>
+<li>cabo elétrico;</li>
+<li>filtro de linha;</li>
+<li>instalação elétrica;</li>
+<li>curto no gabinete;</li>
+<li>configuração de firmware.</li>
+</ul>
+<h2 id="coil-whine-e-defeito">Coil whine é defeito?<a class="headerlink" href="#coil-whine-e-defeito" title="Permanent link">&para;</a></h2>
+<p>O chamado coil whine é um ruído agudo produzido pela vibração de componentes magnéticos, como indutores.</p>
+<p>Pode ocorrer em:  </p>
+<ul>
+<li>fontes;</li>
+<li>placas de vídeo;</li>
+<li>placas-mãe;</li>
+<li>outros circuitos de potência.</li>
+</ul>
+<p>Ele pode variar conforme:</p>
+<ul>
+<li>carga;</li>
+<li>taxa de quadros;</li>
+<li>projeto;</li>
+<li>combinação entre componentes;</li>
+<li>frequência de operação.</li>
+</ul>
+<p>Coil whine não significa obrigatoriamente falha elétrica iminente.  </p>
+<p>Porém, ruídos acompanhados de:</p>
+<ul>
+<li>cheiro;</li>
+<li>faísca;</li>
+<li>aquecimento anormal;</li>
+<li>instabilidade;</li>
+<li>estalos;</li>
+</ul>
+<p>exigem interrupção do uso e avaliação técnica.</p>
+<h2 id="dimensionamento-da-fonte">Dimensionamento da fonte<a class="headerlink" href="#dimensionamento-da-fonte" title="Permanent link">&para;</a></h2>
+<p>Escolher uma fonte não consiste apenas em somar o consumo declarado de todos os componentes.</p>
+<p>É necessário considerar:</p>
+<ul>
+<li>PU;</li>
+<li>GPU;</li>
+<li>quantidade de dispositivos;</li>
+<li>picos transitórios;</li>
+<li>eficiência;</li>
+<li>margem operacional;</li>
+<li>envelhecimento;</li>
+<li>futuras expansões;</li>
+<li>qualidade da fonte;</li>
+<li>conectores disponíveis;</li>
+<li>recomendações do fabricante.</li>
+</ul>
+<p>Uma fonte extremamente superdimensionada também não oferece automaticamente benefícios proporcionais. O objetivo é operar em uma faixa adequada, com capacidade e qualidade suficientes.</p>
+<h2 id="calculadoras-de-potencia">Calculadoras de potência<a class="headerlink" href="#calculadoras-de-potencia" title="Permanent link">&para;</a></h2>
+<p>Fabricantes e sites oferecem calculadoras que estimam a potência necessária. Essas ferramentas são úteis como ponto de partida, mas o resultado depende das informações inseridas e das margens adotadas.</p>
+<p>Elas não substituem a análise de:</p>
+<ul>
+<li>modelo exato da GPU;</li>
+<li>consumo real;</li>
+<li>comportamento transitório;</li>
+<li>qualidade da fonte;</li>
+<li>conectores;</li>
+<li>recomendações técnicas.</li>
+</ul>
+<p>Uma calculadora produz uma estimativa.  </p>
+<p>Não um laudo.</p>
+<h2 id="certificacao-de-eficiencia-nao-e-selo-absoluto-de-qualidade">Certificação de eficiência não é selo absoluto de qualidade<a class="headerlink" href="#certificacao-de-eficiencia-nao-e-selo-absoluto-de-qualidade" title="Permanent link">&para;</a></h2>
+<p>Considere duas afirmações:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>“A fonte possui 80 PLUS Gold, portanto é excelente.”
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>“A fonte não possui selo, portanto é necessariamente ruim.”
+</code></pre></div>
+As duas são simplificações. Uma certificação de eficiência avalia um aspecto importante.  </p>
+<p>Mas uma análise completa também deve considerar:</p>
+<ul>
+<li>projeto;</li>
+<li>fabricante real;</li>
+<li>plataforma interna;</li>
+<li>proteções;</li>
+<li>capacitores;</li>
+<li>regulação;</li>
+<li>ripple;</li>
+<li>ventilação;</li>
+<li>ruído;</li>
+<li>garantia;</li>
+<li>testes independentes;</li>
+<li>capacidade em diferentes temperaturas.</li>
+</ul>
+<h2 id="laboratorio-investigacao-nao-invasiva">Laboratório: investigação não invasiva<a class="headerlink" href="#laboratorio-investigacao-nao-invasiva" title="Permanent link">&para;</a></h2>
+<p>Nesta atividade, não abriremos a fonte nem realizaremos medições em circuitos energizados.</p>
+<h3 id="etapa-1-identificacao">Etapa 1 — Identificação<a class="headerlink" href="#etapa-1-identificacao" title="Permanent link">&para;</a></h3>
+<p>Com o computador desligado e sem remover proteções perigosas, consulte a etiqueta ou documentação da fonte e registre:</p>
+<ul>
+<li>fabricante;</li>
+<li>modelo;</li>
+<li>potência;</li>
+<li>corrente na linha de 12 V;</li>
+<li>certificação;</li>
+<li>proteções declaradas;</li>
+<li>quantidade de conectores;</li>
+<li>formato;</li>
+<li>tempo de garantia.</li>
+</ul>
+<h3 id="etapa-2-analise-da-configuracao">Etapa 2 — Análise da configuração<a class="headerlink" href="#etapa-2-analise-da-configuracao" title="Permanent link">&para;</a></h3>
+<p>Registre os principais consumidores:</p>
+<ul>
+<li>processador;</li>
+<li>placa de vídeo;</li>
+<li>quantidade de SSDs e HDs;</li>
+<li>ventoinhas;</li>
+<li>bomba de refrigeração, quando existir;</li>
+<li>placas adicionais.</li>
+</ul>
+<h3 id="etapa-3-coleta-de-sintomas">Etapa 3 — Coleta de sintomas<a class="headerlink" href="#etapa-3-coleta-de-sintomas" title="Permanent link">&para;</a></h3>
+<p>Pergunte:</p>
+<ul>
+<li>O desligamento ocorre em repouso ou apenas sob carga?</li>
+<li>O problema começou após um upgrade?</li>
+<li>Existe cheiro, ruído ou aquecimento?</li>
+<li>O equipamento reinicia ou perde energia completamente?</li>
+<li>Há registro no sistema?</li>
+<li>O problema ocorre em outra tomada?</li>
+<li>Os conectores estão corretamente instalados?</li>
+<li>Foram usados adaptadores?</li>
+</ul>
+<h3 id="etapa-4-monitoramento">Etapa 4 — Monitoramento<a class="headerlink" href="#etapa-4-monitoramento" title="Permanent link">&para;</a></h3>
+<p>Com uma ferramenta como HWiNFO, observe:</p>
+<ul>
+<li>temperatura da CPU;</li>
+<li>temperatura da GPU;</li>
+<li>carga dos componentes;</li>
+<li>momento exato da falha;</li>
+<li>clocks;</li>
+<li>limites de potência;</li>
+<li>sensores de tensão, apenas como referência.</li>
+</ul>
+<p>Registre claramente:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>As leituras de tensão por software são indícios auxiliares e não comprovam a qualidade elétrica da fonte.
+</code></pre></div></p>
+<h3 id="etapa-5-hipoteses">Etapa 5 — Hipóteses<a class="headerlink" href="#etapa-5-hipoteses" title="Permanent link">&para;</a></h3>
+<p>Exemplo:<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>O computador desliga apenas quando CPU e GPU entram em carga simultânea. A fonte é uma hipótese relevante, mas ainda devem ser investigados temperatura, conectores, VRM, curto e estabilidade dos componentes.
+</code></pre></div></p>
+<h2 id="estudo-de-caso-1-fonte-de-500-w-em-computador-gamer">Estudo de Caso 1 — Fonte de 500 W em computador gamer<a class="headerlink" href="#estudo-de-caso-1-fonte-de-500-w-em-computador-gamer" title="Permanent link">&para;</a></h2>
+<p>Configuração:</p>
+<ul>
+<li>Processador........Ryzen 7</li>
+<li>Placa de vídeo.....modelo de alto desempenho</li>
+<li>Memória............32 GB</li>
+<li>Armazenamento......2 SSDs</li>
+<li>Fonte..............500 W sem modelo identificável</li>
+<li>Sintoma............desligamento durante jogos</li>
+</ul>
+<h3 id="evidencias">Evidências<a class="headerlink" href="#evidencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>uso leve funciona normalmente;</li>
+<li>desligamento ocorre sob carga;</li>
+<li>temperaturas estão dentro da faixa esperada;</li>
+<li>fonte possui etiqueta genérica;</li>
+<li>potência na linha de 12 V não está clara;</li>
+<li>placa de vídeo foi instalada recentemente.</li>
+</ul>
+<h3 id="hipoteses">Hipóteses<a class="headerlink" href="#hipoteses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fonte subdimensionada;</li>
+<li>potência anunciada não corresponde à capacidade real;</li>
+<li>cabo inadequado;</li>
+<li>adaptador;</li>
+<li>conector mal encaixado;</li>
+<li>proteção contra sobrecarga;</li>
+<li>falha da GPU;</li>
+<li>instabilidade elétrica.</li>
+</ul>
+<p>A fonte se torna uma hipótese forte, mas o diagnóstico ainda precisa de confirmação controlada.  </p>
+<p>Uma abordagem comum é testar com uma fonte de referência:</p>
+<ul>
+<li>conhecida;</li>
+<li>compatível;</li>
+<li>de potência adequada;</li>
+<li>com cabos corretos.</li>
+</ul>
+<h3 id="estudo-de-caso-2-leitura-de-114-v-no-software">Estudo de Caso 2 — Leitura de 11,4 V no software<a class="headerlink" href="#estudo-de-caso-2-leitura-de-114-v-no-software" title="Permanent link">&para;</a></h3>
+<p>Um programa mostra:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Linha de 12 V: 11,4 V
+</code></pre></div></p>
+<p>O computador funciona normalmente.  </p>
+<p>Devemos concluir imediatamente que a fonte está fora da especificação?</p>
+<p><strong>Não.</strong>  </p>
+<p>Primeiro precisamos considerar:</p>
+<ul>
+<li>sensor incorretamente identificado;</li>
+<li>calibração;</li>
+<li>erro do software;</li>
+<li>placa-mãe;</li>
+<li>valor sem precisão;</li>
+<li>leitura obtida em local diferente da saída da fonte.</li>
+</ul>
+<p>A próxima etapa seria confirmar por meio de método de medição adequado. O software levantou uma hipótese. Não produziu uma conclusão.</p>
+<h3 id="estudo-de-caso-3-computador-reinicia-mas-registra-erro-termico">Estudo de Caso 3 — Computador reinicia, mas registra erro térmico<a class="headerlink" href="#estudo-de-caso-3-computador-reinicia-mas-registra-erro-termico" title="Permanent link">&para;</a></h3>
+<p>Um computador reinicia durante renderização. O usuário culpa a fonte.</p>
+<p>O monitoramento revela:</p>
+<ul>
+<li>CPU atingindo temperatura limite;</li>
+<li>queda de clock;</li>
+<li>ventoinha do cooler sem aumentar rotação;</li>
+<li>registro de superaquecimento;</li>
+<li>fonte com carga estimada moderada.</li>
+</ul>
+<p>Neste caso, as evidências apontam primeiro para o sistema térmico. A semelhança entre sintomas demonstra por que o diagnóstico não pode ser baseado apenas na aparência do problema.</p>
+<h3 id="estudo-de-caso-4-ssd-queimado-apos-troca-da-fonte">Estudo de Caso 4 — SSD queimado após troca da fonte<a class="headerlink" href="#estudo-de-caso-4-ssd-queimado-apos-troca-da-fonte" title="Permanent link">&para;</a></h3>
+<p>O usuário substituiu uma fonte modular e reutilizou os cabos antigos porque “os conectores encaixavam”.  </p>
+<p>Após ligar o computador:</p>
+<ul>
+<li>dois SSDs deixaram de ser reconhecidos;</li>
+<li>surgiu cheiro de queimado;</li>
+<li>outros componentes permaneceram ligados.</li>
+</ul>
+<p>Hipótese principal:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>A pinagem dos cabos modulares pode ser diferente, apesar da aparência física semelhante.
+</code></pre></div>
+Esse caso demonstra uma regra essencial:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Ao trocar uma fonte modular, substitua também os cabos pelos fornecidos com a nova unidade, salvo confirmação oficial de compatibilidade.
+</code></pre></div></p>
+<h2 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h2>
+<h3 id="se-a-ventoinha-da-fonte-gira-ela-esta-boa">“Se a ventoinha da fonte gira, ela está boa”<a class="headerlink" href="#se-a-ventoinha-da-fonte-gira-ela-esta-boa" title="Permanent link">&para;</a></h3>
+<p>Mito.  </p>
+<p>A fonte pode iniciar e falhar sob carga ou apresentar problemas elétricos não visíveis.</p>
+<h3 id="uma-fonte-de-700-w-sempre-e-melhor-que-uma-de-550-w">“Uma fonte de 700 W sempre é melhor que uma de 550 W”<a class="headerlink" href="#uma-fonte-de-700-w-sempre-e-melhor-que-uma-de-550-w" title="Permanent link">&para;</a></h3>
+<p>Mito.  </p>
+<p>Potência é apenas um dos critérios. Projeto e capacidade real também importam.</p>
+<h3 id="o-software-mede-diretamente-a-saida-da-fonte">“O software mede diretamente a saída da fonte”<a class="headerlink" href="#o-software-mede-diretamente-a-saida-da-fonte" title="Permanent link">&para;</a></h3>
+<p>Mito.  </p>
+<p>Normalmente, ele exibe dados obtidos por sensores da placa-mãe.</p>
+<h3 id="uma-fonte-pode-causar-defeitos-intermitentes">“Uma fonte pode causar defeitos intermitentes”<a class="headerlink" href="#uma-fonte-pode-causar-defeitos-intermitentes" title="Permanent link">&para;</a></h3>
+<p>Evidência.  </p>
+<p>Falhas podem aparecer apenas sob carga, temperatura ou determinada condição elétrica.</p>
+<h3 id="cabos-modulares-de-fontes-diferentes-podem-ser-incompativeis">“Cabos modulares de fontes diferentes podem ser incompatíveis”<a class="headerlink" href="#cabos-modulares-de-fontes-diferentes-podem-ser-incompativeis" title="Permanent link">&para;</a></h3>
+<p>Evidência.  </p>
+<p>A pinagem do lado da fonte pode variar entre modelos.</p>
+<h3 id="80-plus-garante-todas-as-protecoes-e-a-qualidade-interna">“80 PLUS garante todas as proteções e a qualidade interna”<a class="headerlink" href="#80-plus-garante-todas-as-protecoes-e-a-qualidade-interna" title="Permanent link">&para;</a></h3>
+<p>Mito.  </p>
+<p>A certificação se concentra em eficiência energética sob condições específicas.</p>
+<h3 id="abrir-uma-fonte-desconectada-e-sempre-seguro">“Abrir uma fonte desconectada é sempre seguro”<a class="headerlink" href="#abrir-uma-fonte-desconectada-e-sempre-seguro" title="Permanent link">&para;</a></h3>
+<p><strong>Mito perigoso.</strong></p>
+<p>Capacitores internos podem manter tensão elevada.</p>
+<h2 id="o-que-um-perito-observaria">O que um perito observaria?<a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Qual é o modelo exato da fonte?</li>
+<li>A potência é contínua ou de pico?</li>
+<li>Quanto ela entrega na linha de 12 V?</li>
+<li>Há proteções documentadas?</li>
+<li>O problema ocorre sob qual carga?</li>
+<li>Houve upgrade recente?</li>
+<li>Os cabos utilizados pertencem ao próprio modelo?</li>
+<li>Existem adaptadores?</li>
+<li>Há conectores aquecidos ou escurecidos?</li>
+<li>O desligamento é instantâneo ou acompanhado de erro?</li>
+<li>Temperaturas foram descartadas?</li>
+<li>A instalação elétrica foi verificada?</li>
+<li>Existe uma fonte de referência para comparação?</li>
+<li>As leituras de software foram tratadas apenas como indícios?</li>
+<li>O equipamento apresenta risco de incêndio ou choque?</li>
+<li>O caso exige interrupção imediata do uso?</li>
+</ul>
+<h2 id="quando-interromper-o-uso">Quando interromper o uso<a class="headerlink" href="#quando-interromper-o-uso" title="Permanent link">&para;</a></h2>
+<p>Desligue e desconecte o equipamento diante de sinais como:</p>
+<ul>
+<li>cheiro de queimado;</li>
+<li>fumaça;</li>
+<li>faíscas;</li>
+<li>estalos;</li>
+<li>cabo derretido;</li>
+<li>conector escurecido;</li>
+<li>aquecimento intenso;</li>
+<li>líquido;</li>
+<li>choque no gabinete;</li>
+<li>ruído elétrico acompanhado de instabilidade.</li>
+</ul>
+<p>Nesses casos, a prioridade não é concluir o teste.</p>
+<p><strong>É preservar a segurança.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 5 - Placa-mãe">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 5 - Placa-mãe
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
