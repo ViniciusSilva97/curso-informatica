@@ -8,6 +8,7 @@ repo_name: ViniciusSilva97/curso-informatica
 theme:
   name: material
   language: pt-BR
+  custom_dir: overrides
   logo: assets/brand/smart-eletro-vini-header.png
   favicon: assets/brand/smart-eletro-vini-logo.png
   font:
