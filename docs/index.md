@@ -5,7 +5,7 @@ hide:
   - path
 ---
 
-<div class="sev-home" markdown>
+<div class="sev-home">
 
 <section class="sev-hero">
   <div class="sev-hero__copy">
