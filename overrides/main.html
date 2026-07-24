@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {% if page and page.is_homepage %}
+    <footer class="sev-course-footer">
+      <div class="sev-course-footer__inner">
+        <div class="sev-course-footer__brand">
+          <img src="{{ 'assets/brand/smart-eletro-vini-header.png' | url }}" alt="Smart Eletro Vini">
+          <p>Educação gratuita em informática para todos que querem aprender, entender e evoluir na prática.</p>
+          <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <nav aria-label="Links do curso">
+          <strong>Curso</strong>
+          <a href="{{ '' | url }}">Início</a>
+          <a href="{{ 'modulo-1/aula-1-o-que-e-informatica/' | url }}">Fundamentos</a>
+          <a href="{{ 'modulo-2/aula-1-o-metodo-da-investigacao-computacional/' | url }}">Investigação</a>
+          <a href="#aula-demonstrativa">Como você aprende</a>
+        </nav>
+
+        <nav aria-label="Links do projeto">
+          <strong>Projeto</strong>
+          <a href="#projeto">Nossa proposta</a>
+          <a href="https://github.com/ViniciusSilva97/curso-informatica" target="_blank" rel="noopener">Código no GitHub</a>
+          <a href="https://www.smarteletrovini.com.br/" target="_blank" rel="noopener">Nossa loja</a>
+        </nav>
+
+        <div class="sev-course-footer__free">
+          <strong>100% gratuito</strong>
+          <span>Sem cadastro</span>
+          <span>Acesso imediato</span>
+          <i class="sev-pixel-heart" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="sev-course-footer__bottom">
+        <span>© 2026 Smart Eletro Vini. Todos os direitos reservados.</span>
+        <span>Desenvolvido com <b aria-label="carinho">♥</b> e tecnologia aberta.</span>
+      </div>
+    </footer>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}

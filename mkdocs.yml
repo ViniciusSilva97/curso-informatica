@@ -1,50 +1,95 @@
-site_name: Curso de informática
-site_description: Curso gratuito de informática, hardware, redes, sistema operacionais e infraestrutura 
+site_name: Curso de Informática
+site_description: Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura
 site_author: Vinícius Silva
-
-site_url: https://github.com/ViniciusSilva97/curso-informatica
+site_url: https://viniciussilva97.github.io/curso-informatica/
+repo_url: https://github.com/ViniciusSilva97/curso-informatica
 repo_name: ViniciusSilva97/curso-informatica
 
 theme:
   name: material
   language: pt-BR
-
+  custom_dir: overrides
+  logo: assets/brand/smart-eletro-vini-header.png
+  favicon: assets/brand/smart-eletro-vini-logo.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: sev-light
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Usar tema escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: sev-dark
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Usar tema claro
   features:
     - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ViniciusSilva97
+      name: GitHub de Vinícius Silva
+  status:
+    new: Nova aula
+    coming_soon: Em breve
+
+copyright: "© 2026 Smart Eletro Vini · Conhecimento gratuito para todos."
 
 nav:
   - Início: index.md
-
   - Módulo 1 - Fundamentos da informática:
     - Aula 1 - O que é informática?: modulo-1/aula-1-o-que-e-informatica.md
     - Aula 2 - CPU, RAM, SSD e Placa-mãe: modulo-1/aula-2-cpu-ram-ssd-e-placa-mae.md
     - Aula 3 - Dispositivos de entrada e saída: modulo-1/aula-3-dispositivos-de-entrada-e-saida.md
-    - Aula 4 - Sistemas operacionais o maestro do computador: modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador.md
-    - Aula 5 - Windows, Linux, MacOS, Android e IOS. Entendendo as diferenças.: modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas.md
+    - Aula 4 - Sistemas operacionais — o maestro do computador: modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador.md
+    - Aula 5 - Windows, Linux, macOS, Android e iOS: modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas.md
     - Aula 6 - Por que um computador fica lento?: modulo-1/aula-6-por-que-um-computador-fica-lento.md
     - Aula 7 - O que acontece quando você liga um computador?: modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador.md
-    - Aula 8 - Como o computador entende as informações? (Bits, Bytes e dados): modulo-1/aula-8-como-o-computador-entende-as-informacoes.md
-    - Aula 9 - Como a internet funciona? A maior rede do mundo: modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo.md
+    - Aula 8 - Como o computador entende as informações?: modulo-1/aula-8-como-o-computador-entende-as-informacoes.md
+    - Aula 9 - Como a internet funciona?: modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo.md
     - Aula 10 - Como um site chega até você?: modulo-1/aula-10-como-um-site-chega-ate-voce.md
     - Aula 11 - Como os arquivos são organizados?: modulo-1/aula-11-como-os-arquivos-sao-organizados.md
-  - Módulo 2 - Investigação Computacional I: 
+  - Módulo 2 - Investigação computacional I:
     - Aula 1 - O método da investigação computacional: modulo-2/aula-1-o-metodo-da-investigacao-computacional.md
-    - Aula 2 - Processador. Quem realmente comanda o computador?: modulo-2/aula-2-processador-quem-realmente-comanda-o-computador.md
-    - Aula 3 - Memória RAM. O laboratório de trabalho do processador: modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador.md
-    - Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador: modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado.md 
-    - Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram: modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram.md
-markdown_extension:
+    - Aula 2 - Processador: modulo-2/aula-2-processador-quem-realmente-comanda-o-computador.md
+    - Aula 3 - Memória RAM: modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador.md
+    - Aula 4 - SSDs e HDs: modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado.md
+    - Aula 5 - Placa-mãe: modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram.md
+
+markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
-  - toc: 
-    permalink: true
+  - toc:
+      permalink: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
-    anchor_linenums: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
