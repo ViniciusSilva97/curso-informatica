@@ -8,7 +8,7 @@ repo_name: ViniciusSilva97/curso-informatica
 theme:
   name: material
   language: pt-BR
-  logo: assets/brand/smart-eletro-vini-logo.png
+  logo: assets/brand/smart-eletro-vini-header.png
   favicon: assets/brand/smart-eletro-vini-logo.png
   font:
     text: Inter
