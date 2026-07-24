@@ -15,6 +15,14 @@ Provavelmente você:
 - Pagou alguma conta usando Pix.
 - Conversou em uma rede social.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-1/informatica-no-cotidiano-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-1/informatica-no-cotidiano.svg" alt="Diagrama que conecta mensagens, vídeos, pesquisas, pagamentos e música ao processamento de informações." loading="lazy">
+  </picture>
+  <figcaption>A informática participa de atividades comuns mesmo quando não percebemos o processamento acontecendo.</figcaption>
+</figure>
+
 Agora pare por alguns segundos e pense:
 
 **O que todas essas atividades têm em comum?**
@@ -70,6 +78,14 @@ A ciência reponsável por armazenar, processar e transmitir informações autom
 Em linguagem simples:
 **Informática é a área que permite que máquinas trabalhem com informações.**
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-1/origem-informatica-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-1/origem-informatica.svg" alt="Informação somada a automática forma informática: máquinas trabalhando com informações." loading="lazy">
+  </picture>
+  <figcaption>A palavra resume a ideia central da área: tratar informações com ajuda de máquinas.</figcaption>
+</figure>
+
 ## Um milagre moderno que parece normal
 Imagina a seguinte situação.
 Você tira uma foto e envia para um amigo.
@@ -84,6 +100,14 @@ Mas o que acontence nos bastidores?
 5. Servidores processam as informações.
 6. Outro celular recebe os dados.
 7. Seu amigo visualizou a foto.
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-1/caminho-da-foto-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-1/caminho-da-foto.svg" alt="Fluxo em oito etapas mostrando uma foto sendo registrada, transformada em dados, enviada pela internet, processada e exibida em outro celular." loading="lazy">
+  </picture>
+  <figcaption>O envio parece instantâneo, mas depende de uma sequência coordenada de dispositivos, programas, redes e servidores.</figcaption>
+</figure>
 
 Tudo isso acontence em poucos segundos.
 Milhões de operações são realizadas.
@@ -121,10 +145,15 @@ Exemplos:
 
 O software representa a inteligência que faz o hardware funcionar.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-1/hardware-e-software-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-1/hardware-e-software.svg" alt="Comparação entre hardware, a parte física que pode ser tocada, e software, os programas e instruções usados pelo computador." loading="lazy">
+  </picture>
+  <figcaption>Hardware e software têm funções diferentes, mas trabalham juntos em todo sistema computacional.</figcaption>
+</figure>
+
 ## Curiosidade
 O smartphone que está no seu bolso possui mais capacidade de processamento do que os computadores utiliziados na missão da Apollo 11 que levou o ser humano à Lua.
 Mesmo assim, a maioria das pessoas utiliza apenas uma pequena parte do potencial da tecnologia que possui.
 Imagine o que acontece quando alguém aprende como essa tecnologia realmente funciona.
-
-
-
