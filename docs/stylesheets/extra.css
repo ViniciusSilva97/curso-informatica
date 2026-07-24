@@ -55,19 +55,21 @@ body {
 }
 
 .md-header__inner {
-  min-height: 5rem;
+  min-height: 4.1rem;
   overflow: visible;
 }
 
 .md-header__button.md-logo {
   display: flex;
-  width: 14rem;
-  height: 4.25rem;
-  flex: 0 0 14rem;
+  width: 10rem;
+  height: 3rem;
+  flex: 0 0 10rem;
   align-items: center;
-  margin: .25rem .75rem .25rem 0;
+  align-self: center;
+  margin: .35rem .75rem .35rem 0;
   padding: 0;
   overflow: visible;
+  line-height: 0;
 }
 
 .md-header__button.md-logo img,
@@ -75,9 +77,14 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 4.25rem;
+  max-width: none;
+  max-height: 2.65rem;
+  margin: 0;
+  border: 0;
   object-fit: contain;
   object-position: center;
+  clip-path: none;
+  transform: none;
 }
 
 .md-header__title {
@@ -865,15 +872,15 @@ body {
 
 @media screen and (max-width: 76.25em) {
   .md-header__button.md-logo {
-    width: 11rem;
-    height: 3.5rem;
-    flex-basis: 11rem;
+    width: 8.5rem;
+    height: 2.65rem;
+    flex-basis: 8.5rem;
   }
 
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
     width: 100%;
-    max-height: 3.5rem;
+    max-height: 2.3rem;
   }
 
   .sev-hero__copy {
@@ -909,20 +916,20 @@ body {
 
 @media screen and (max-width: 44em) {
   .md-header__button.md-logo {
-    width: 8.5rem;
-    height: 2.8rem;
-    flex-basis: 8.5rem;
+    width: 6.8rem;
+    height: 2.25rem;
+    flex-basis: 6.8rem;
   }
 
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
     width: 100%;
     height: auto;
-    max-height: 2.8rem;
+    max-height: 1.9rem;
   }
 
   .md-header__inner {
-    min-height: 3.4rem;
+    min-height: 3.1rem;
   }
 
   .sev-hero {
