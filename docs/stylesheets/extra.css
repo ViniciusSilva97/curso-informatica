@@ -24,11 +24,16 @@
   --md-primary-fg-color: #050806;
   --md-accent-fg-color: #29d463;
   --md-default-bg-color: #090d0a;
-  --md-default-fg-color: #f4f2e8;
+  --md-default-fg-color: #f7f8f4;
+  --md-default-fg-color--light: #d7dfd9;
+  --md-default-fg-color--lighter: #bdc8c0;
+  --md-default-fg-color--lightest: #8f9d93;
+  --md-code-fg-color: #f4f7f4;
+  --md-code-bg-color: #151d17;
   --sev-cream: #101611;
   --sev-white: #151d17;
-  --sev-muted: #a5afa7;
-  --sev-border: #334038;
+  --sev-muted: #c7d0c9;
+  --sev-border: #526159;
 }
 
 html {
@@ -50,19 +55,29 @@ body {
 }
 
 .md-header__inner {
-  min-height: 4rem;
+  min-height: 5rem;
+  overflow: visible;
 }
 
 .md-header__button.md-logo {
-  margin: .25rem .5rem .25rem 0;
+  display: flex;
+  width: 14rem;
+  height: 4.25rem;
+  flex: 0 0 14rem;
+  align-items: center;
+  margin: .25rem .75rem .25rem 0;
   padding: 0;
+  overflow: visible;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  width: 11.5rem;
-  height: 3rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 4.25rem;
   object-fit: contain;
+  object-position: center;
 }
 
 .md-header__title {
@@ -125,6 +140,67 @@ body {
   border-width: 0 0 0 4px;
   border-radius: 0;
   box-shadow: 0 6px 20px rgba(5, 8, 6, .08);
+}
+
+[data-md-color-scheme="sev-dark"] .md-nav,
+[data-md-color-scheme="sev-dark"] .md-nav__link,
+[data-md-color-scheme="sev-dark"] .md-typeset,
+[data-md-color-scheme="sev-dark"] .md-typeset p,
+[data-md-color-scheme="sev-dark"] .md-typeset li,
+[data-md-color-scheme="sev-dark"] .md-typeset td {
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="sev-dark"] .md-nav__link--active,
+[data-md-color-scheme="sev-dark"] .md-nav__link:hover,
+[data-md-color-scheme="sev-dark"] .md-typeset a {
+  color: var(--sev-green-light);
+}
+
+[data-md-color-scheme="sev-dark"] .md-typeset h1,
+[data-md-color-scheme="sev-dark"] .md-typeset h2,
+[data-md-color-scheme="sev-dark"] .md-typeset h3,
+[data-md-color-scheme="sev-dark"] .md-typeset h4,
+[data-md-color-scheme="sev-dark"] .md-typeset strong {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="sev-dark"] .md-typeset .admonition,
+[data-md-color-scheme="sev-dark"] .md-typeset details {
+  background: #151d17;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-hero,
+[data-md-color-scheme="sev-dark"] .sev-hero p,
+[data-md-color-scheme="sev-dark"] .sev-hero li,
+[data-md-color-scheme="sev-dark"] .sev-button--dark {
+  color: var(--sev-black);
+}
+
+[data-md-color-scheme="sev-dark"] .sev-hero h1 strong,
+[data-md-color-scheme="sev-dark"] .sev-brand-banner h2 strong {
+  color: var(--sev-green-light);
+}
+
+[data-md-color-scheme="sev-dark"] .sev-button--dark {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-method,
+[data-md-color-scheme="sev-dark"] .sev-method p,
+[data-md-color-scheme="sev-dark"] .sev-brand-banner,
+[data-md-color-scheme="sev-dark"] .sev-brand-banner p {
+  color: #dce3de;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-module-card h3,
+[data-md-color-scheme="sev-dark"] .sev-lesson-window h3 {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="sev-dark"] .sev-module-card__status,
+[data-md-color-scheme="sev-dark"] .sev-lesson-window small {
+  color: var(--sev-green-light);
 }
 
 .sev-home {
@@ -788,9 +864,16 @@ body {
 }
 
 @media screen and (max-width: 76.25em) {
+  .md-header__button.md-logo {
+    width: 11rem;
+    height: 3.5rem;
+    flex-basis: 11rem;
+  }
+
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
-    width: 9.5rem;
+    width: 100%;
+    max-height: 3.5rem;
   }
 
   .sev-hero__copy {
@@ -825,14 +908,21 @@ body {
 }
 
 @media screen and (max-width: 44em) {
+  .md-header__button.md-logo {
+    width: 8.5rem;
+    height: 2.8rem;
+    flex-basis: 8.5rem;
+  }
+
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
-    width: 7.4rem;
-    height: 2.35rem;
+    width: 100%;
+    height: auto;
+    max-height: 2.8rem;
   }
 
   .md-header__inner {
-    min-height: 3.25rem;
+    min-height: 3.4rem;
   }
 
   .sev-hero {
