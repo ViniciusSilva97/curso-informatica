@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistema operacionais e infraestrutura">
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
       
       
         <meta name="author" content="Vinícius Silva">
       
       
-        <link rel="canonical" href="https://github.com/ViniciusSilva97/curso-informatica/modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/">
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/">
       
       
         <link rel="prev" href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/">
@@ -24,16 +24,19 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador - Curso de informática</title>
+        <title>Aula 4 - SSDs e HDs - Curso de Informática</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,10 +50,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -61,7 +66,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -77,19 +89,32 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
     </div>
     
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="Curso de informática" class="md-header__button md-logo" aria-label="Curso de informática" data-md-component="logo">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,18 +125,44 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Curso de informática
+            Curso de Informática
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador
+              Aula 4 - SSDs e HDs
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -137,6 +188,11 @@
       </label>
       <nav class="md-search__options" aria-label="Pesquisar">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -161,6 +217,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -169,6 +237,80 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -183,17 +325,30 @@
                     
 
 
-
-<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Curso de informática" class="md-nav__button md-logo" aria-label="Curso de informática" data-md-component="logo">
-      
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
 
     </a>
-    Curso de informática
+    Curso de Informática
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -232,22 +387,46 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -374,7 +553,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 4 - Sistemas operacionais o maestro do computador
+    Aula 4 - Sistemas operacionais — o maestro do computador
   
 
     
@@ -402,7 +581,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 5 - Windows, Linux, MacOS, Android e IOS. Entendendo as diferenças.
+    Aula 5 - Windows, Linux, macOS, Android e iOS
   
 
     
@@ -486,7 +665,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 8 - Como o computador entende as informações? (Bits, Bytes e dados)
+    Aula 8 - Como o computador entende as informações?
   
 
     
@@ -514,7 +693,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 9 - Como a internet funciona? A maior rede do mundo
+    Aula 9 - Como a internet funciona?
   
 
     
@@ -601,10 +780,25 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
         
+        
+      
+      
         
       
     
@@ -623,7 +817,7 @@
   <span class="md-ellipsis">
     
   
-    Módulo 2 - Investigação Computacional I
+    Módulo 2 - Investigação computacional I
   
 
     
@@ -639,7 +833,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Módulo 2 - Investigação Computacional I
+    Módulo 2 - Investigação computacional I
   
 
           </label>
@@ -687,7 +881,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 2 - Processador. Quem realmente comanda o computador?
+    Aula 2 - Processador
   
 
     
@@ -715,7 +909,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 3 - Memória RAM. O laboratório de trabalho do processador
+    Aula 3 - Memória RAM
   
 
     
@@ -752,7 +946,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador
+    Aula 4 - SSDs e HDs
   
 
     
@@ -770,7 +964,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 4 - SSD e HDs. Para onde os dados vão quando você desliga o computador
+    Aula 4 - SSDs e HDs
   
 
     
@@ -1460,7 +1654,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram
+    Aula 5 - Placa-mãe
   
 
     
@@ -2165,12 +2359,15 @@
                   
 
 
+  
+  
 
-<h1 id="aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado">Aula 4 — SSDs e HDs: O que realmente acontece quando um arquivo é apagado?</h1>
+
+<h1 id="aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado">Aula 4 — SSDs e HDs: O que realmente acontece quando um arquivo é apagado?<a class="headerlink" href="#aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado" title="Permanent link">&para;</a></h1>
 <p>Pergunta da investigação</p>
-<pre><code class="language-text">Quando você esvazia a Lixeira, os dados desaparecem imediatamente?
-</code></pre>
-<h2 id="dossie-da-investigacao">Dossiê da Investigação</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Quando você esvazia a Lixeira, os dados desaparecem imediatamente?
+</code></pre></div>
+<h2 id="dossie-da-investigacao">Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h2>
 <p>Caso nº 003 — A pasta desaparecida</p>
 <p>Um pequeno escritório armazenava documentos importantes em um computador. Durante uma limpeza, um funcionário apagou uma pasta inteira e, logo depois, esvaziou a Lixeira.<br />
 Minutos depois percebeu o erro. A primeira reação foi instalar vários programas de recuperação no mesmo computador e executar diferentes tentativas de restauração.</p>
@@ -2179,7 +2376,7 @@ O simples ato de apagar os arquivos os destruiu?<br />
 As tentativas de recuperação podem ter piorado a situação?<br />
 O resultado seria diferente se o computador utilizasse um HD em vez de um SSD?<br />
 Hoje investigaremos essas perguntas.</p>
-<h2 id="objetivos-da-aula">Objetivos da aula</h2>
+<h2 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h2>
 <p>Ao final desta aula, você será capaz de:</p>
 <ul>
 <li>diferenciar armazenamento magnético e memória flash;</li>
@@ -2191,7 +2388,7 @@ Hoje investigaremos essas perguntas.</p>
 <li>saber quando interromper tentativas caseiras;</li>
 <li>distinguir recuperação lógica de recuperação física.</li>
 </ul>
-<h2 id="o-armazenamento-nao-e-a-memoria-ram">O armazenamento não é a memória RAM</h2>
+<h2 id="o-armazenamento-nao-e-a-memoria-ram">O armazenamento não é a memória RAM<a class="headerlink" href="#o-armazenamento-nao-e-a-memoria-ram" title="Permanent link">&para;</a></h2>
 <p>Na aula anterior, vimos que a memória RAM funciona como uma área de trabalho temporária.</p>
 <p>O armazenamento tem outra responsabilidade:</p>
 <p><strong>preservar dados mesmo quando o computador é desligado.</strong></p>
@@ -2213,10 +2410,10 @@ Hoje investigaremos essas perguntas.</p>
 <li>SSD, baseado em memória flash.</li>
 </ul>
 <p>Embora ambos guardem arquivos, internamente funcionam de maneiras muito diferentes.</p>
-<h2 id="parte-1-como-funciona-um-hd">Parte 1 — Como funciona um HD</h2>
+<h2 id="parte-1-como-funciona-um-hd">Parte 1 — Como funciona um HD<a class="headerlink" href="#parte-1-como-funciona-um-hd" title="Permanent link">&para;</a></h2>
 <p>O HD, também chamado de disco rígido, possui partes mecânicas.  </p>
 <p>Dentro dele existem pratos revestidos com material magnético, que giram em alta velocidade. Uma cabeça de leitura e gravação se movimenta sobre esses pratos para acessar as informações.  </p>
-<h3 id="uma-representacao-simplificada-seria">Uma representação simplificada seria:</h3>
+<h3 id="uma-representacao-simplificada-seria">Uma representação simplificada seria:<a class="headerlink" href="#uma-representacao-simplificada-seria" title="Permanent link">&para;</a></h3>
 <p>Prato magnético  </p>
 <p>│↑│</p>
 <p>Cabeça de leitura   </p>
@@ -2232,7 +2429,7 @@ Hoje investigaremos essas perguntas.</p>
 <li>ruídos anormais;</li>
 <li>dificuldade de inicialização.</li>
 </ul>
-<h2 id="parte-2-como-funciona-um-ssd">Parte 2 — Como funciona um SSD</h2>
+<h2 id="parte-2-como-funciona-um-ssd">Parte 2 — Como funciona um SSD<a class="headerlink" href="#parte-2-como-funciona-um-ssd" title="Permanent link">&para;</a></h2>
 <p>O SSD não utiliza pratos nem cabeças móveis.
 Ele armazena dados em chips de <strong>memória flash NAND</strong>.</p>
 <p>Sua estrutura inclui, de forma simplificada:</p>
@@ -2277,7 +2474,7 @@ Ele armazena dados em chips de <strong>memória flash NAND</strong>.</p>
 </ul>
 <p>Por isso, um SSD não é apenas um conjunto de chips de memória.</p>
 <p>Ele é um pequeno sistema computacional dedicado ao armazenamento.</p>
-<h2 id="hd-versus-ssd">HD versus SSD</h2>
+<h2 id="hd-versus-ssd">HD versus SSD<a class="headerlink" href="#hd-versus-ssd" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2336,10 +2533,10 @@ Ele armazena dados em chips de <strong>memória flash NAND</strong>.</p>
 <li>idade;</li>
 <li>existência de backup.</li>
 </ul>
-<h2 id="o-que-e-um-arquivo-para-o-sistema-operacional">O que é um arquivo para o sistema operacional?</h2>
+<h2 id="o-que-e-um-arquivo-para-o-sistema-operacional">O que é um arquivo para o sistema operacional?<a class="headerlink" href="#o-que-e-um-arquivo-para-o-sistema-operacional" title="Permanent link">&para;</a></h2>
 <p>Para o usuário, um arquivo é algo como:</p>
-<pre><code class="language-text">contrato_cliente.pdf
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>contrato_cliente.pdf
+</code></pre></div>
 <p>Para o sistema de arquivos, ele envolve diferentes informações:</p>
 <ul>
 <li>nome;</li>
@@ -2363,7 +2560,7 @@ Ele armazena dados em chips de <strong>memória flash NAND</strong>.</p>
 <p>Em dispositivos removíveis, FAT32 e exFAT também aparecem com frequência.</p>
 </li>
 </ul>
-<h2 id="o-que-acontece-quando-um-arquivo-e-apagado">O que acontece quando um arquivo é apagado?</h2>
+<h2 id="o-que-acontece-quando-um-arquivo-e-apagado">O que acontece quando um arquivo é apagado?<a class="headerlink" href="#o-que-acontece-quando-um-arquivo-e-apagado" title="Permanent link">&para;</a></h2>
 <p>Em muitos sistemas, apagar um arquivo não significa sobrescrever imediatamente todo o seu conteúdo. De maneira simplificada, o sistema pode:</p>
 <ol>
 <li>remover ou alterar a referência ao arquivo;</li>
@@ -2372,11 +2569,11 @@ Ele armazena dados em chips de <strong>memória flash NAND</strong>.</p>
 </ol>
 <p>Enquanto os dados antigos não forem sobrescritos, pode existir alguma possibilidade de recuperação. É como retirar uma residência do mapa sem demolir imediatamente o prédio.</p>
 <p>O endereço deixou de aparecer no índice, mas a estrutura pode continuar no local. Entretanto, essa analogia funciona melhor para HDs do que para SSDs modernos.</p>
-<h2 id="a-lixeira-nao-e-destruicao-de-dados">A Lixeira não é destruição de dados</h2>
+<h2 id="a-lixeira-nao-e-destruicao-de-dados">A Lixeira não é destruição de dados<a class="headerlink" href="#a-lixeira-nao-e-destruicao-de-dados" title="Permanent link">&para;</a></h2>
 <p>Quando um arquivo é enviado para a Lixeira, normalmente ele ainda permanece armazenado e pode ser restaurado.   </p>
 <p>Ao esvaziar a Lixeira, o sistema remove as referências usadas para a recuperação comum. Mesmo assim, em determinados dispositivos e condições, parte do conteúdo pode continuar fisicamente presente.  </p>
 <p>Essa é a razão pela qual programas de recuperação conseguem localizar arquivos que já não aparecem normalmente no sistema.</p>
-<h2 id="o-grande-complicador-trim">O grande complicador: TRIM</h2>
+<h2 id="o-grande-complicador-trim">O grande complicador: TRIM<a class="headerlink" href="#o-grande-complicador-trim" title="Permanent link">&para;</a></h2>
 <p>Nos SSDs existe um recurso extremamente importante chamado TRIM.</p>
 <p>Quando o sistema operacional informa ao SSD que determinados blocos não contêm mais dados necessários, o controlador pode prepará-los para futuras gravações.  </p>
 <p>Isso melhora o desempenho e a gestão da memória flash. Porém, também pode reduzir drasticamente a possibilidade de recuperar dados apagados.</p>
@@ -2405,12 +2602,12 @@ Dados podem deixar de estar recuperáveis  </p>
 </ul>
 <p>Por isso, não é correto afirmar que arquivos apagados de SSDs são sempre impossíveis de recuperar. Também não é correto prometer que serão recuperados.</p>
 <p>A resposta tecnicamente responsável é:</p>
-<pre><code class="language-text">a recuperação depende do estado do dispositivo, da forma como os dados foram apagados e do que aconteceu depois.
-</code></pre>
-<h2 id="primeiro-principio-da-recuperacao">Primeiro princípio da recuperação</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>a recuperação depende do estado do dispositivo, da forma como os dados foram apagados e do que aconteceu depois.
+</code></pre></div>
+<h2 id="primeiro-principio-da-recuperacao">Primeiro princípio da recuperação<a class="headerlink" href="#primeiro-principio-da-recuperacao" title="Permanent link">&para;</a></h2>
 <p>Quando dados importantes desaparecem:</p>
-<pre><code class="language-text">pare de usar o dispositivo.
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pare de usar o dispositivo.
+</code></pre></div>
 <p>Cada nova gravação pode ocupar áreas que ainda contêm fragmentos recuperáveis.  </p>
 <p>Algumas ações perigosas incluem:</p>
 <ul>
@@ -2424,8 +2621,8 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>continuar usando o computador normalmente.</li>
 </ul>
 <p>No caso apresentado no início da aula, a instalação de vários programas no próprio disco pode ter sobrescrito parte dos dados que se pretendia recuperar.</p>
-<h2 id="recuperacao-logica-e-recuperacao-fisica">Recuperação lógica e recuperação física</h2>
-<h3 id="recuperacao-logica">Recuperação lógica</h3>
+<h2 id="recuperacao-logica-e-recuperacao-fisica">Recuperação lógica e recuperação física<a class="headerlink" href="#recuperacao-logica-e-recuperacao-fisica" title="Permanent link">&para;</a></h2>
+<h3 id="recuperacao-logica">Recuperação lógica<a class="headerlink" href="#recuperacao-logica" title="Permanent link">&para;</a></h3>
 <p>Acontece quando o dispositivo ainda funciona eletricamente, mas os dados ficaram inacessíveis devido a situações como:</p>
 <ul>
 <li>exclusão acidental;</li>
@@ -2436,9 +2633,9 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>falha de software.</li>
 </ul>
 <p>Nesses casos, programas podem ajudar.</p>
-<h3 id="recuperacao-fisica">Recuperação física</h3>
+<h3 id="recuperacao-fisica">Recuperação física<a class="headerlink" href="#recuperacao-fisica" title="Permanent link">&para;</a></h3>
 <p>É necessária quando existe defeito no próprio dispositivo, por exemplo:</p>
-<h4 id="em-hds">Em HDs</h4>
+<h4 id="em-hds">Em HDs<a class="headerlink" href="#em-hds" title="Permanent link">&para;</a></h4>
 <ul>
 <li>cabeça de leitura danificada;</li>
 <li>motor travado;</li>
@@ -2446,7 +2643,7 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>placa eletrônica defeituosa;</li>
 <li>ruídos mecânicos anormais.</li>
 </ul>
-<h4 id="em-ssds">Em SSDs</h4>
+<h4 id="em-ssds">Em SSDs<a class="headerlink" href="#em-ssds" title="Permanent link">&para;</a></h4>
 <ul>
 <li>controlador defeituoso;</li>
 <li>falha no firmware;</li>
@@ -2456,8 +2653,8 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>dispositivo não reconhecido.</li>
 </ul>
 <p>A recuperação física costuma exigir laboratório, conhecimento especializado e equipamentos próprios.</p>
-<h2 id="laboratorio-ferramentas-gratuitas">Laboratório: ferramentas gratuitas</h2>
-<h3 id="crystaldiskinfo">CrystalDiskInfo</h3>
+<h2 id="laboratorio-ferramentas-gratuitas">Laboratório: ferramentas gratuitas<a class="headerlink" href="#laboratorio-ferramentas-gratuitas" title="Permanent link">&para;</a></h2>
+<h3 id="crystaldiskinfo">CrystalDiskInfo<a class="headerlink" href="#crystaldiskinfo" title="Permanent link">&para;</a></h3>
 <p>O CrystalDiskInfo é usado principalmente para consultar informações de saúde fornecidas pelo próprio dispositivo.</p>
 <p>Pode apresentar dados como:</p>
 <ul>
@@ -2471,7 +2668,7 @@ Dados podem deixar de estar recuperáveis  </p>
 </ul>
 <p>Ele não recupera arquivos.</p>
 <p>Sua função é ajudar no diagnóstico.</p>
-<h3 id="gsmartcontrol">GSmartControl</h3>
+<h3 id="gsmartcontrol">GSmartControl<a class="headerlink" href="#gsmartcontrol" title="Permanent link">&para;</a></h3>
 <p>É uma interface gráfica para consultar informações S.M.A.R.T. e executar testes compatíveis com o dispositivo.</p>
 <p>Pode ser útil para:</p>
 <ul>
@@ -2481,7 +2678,7 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>identificar alertas;</li>
 <li>acompanhar a evolução de falhas.</li>
 </ul>
-<h3 id="testdisk">TestDisk</h3>
+<h3 id="testdisk">TestDisk<a class="headerlink" href="#testdisk" title="Permanent link">&para;</a></h3>
 <p>O TestDisk é voltado principalmente para problemas estruturais, como:</p>
 <ul>
 <li>partições perdidas;</li>
@@ -2491,7 +2688,7 @@ Dados podem deixar de estar recuperáveis  </p>
 </ul>
 <p>Ele exige cuidado.</p>
 <p>Alterar estruturas de disco sem compreender o procedimento pode piorar a situação.</p>
-<h3 id="photorec">PhotoRec</h3>
+<h3 id="photorec">PhotoRec<a class="headerlink" href="#photorec" title="Permanent link">&para;</a></h3>
 <p>O PhotoRec procura arquivos por assinaturas conhecidas.</p>
 <p>Em vez de depender exclusivamente do sistema de arquivos, ele tenta identificar padrões associados a formatos como:</p>
 <ul>
@@ -2510,11 +2707,11 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>datas;</li>
 <li>organização anterior.</li>
 </ul>
-<h3 id="recuva">Recuva</h3>
+<h3 id="recuva">Recuva<a class="headerlink" href="#recuva" title="Permanent link">&para;</a></h3>
 <p>O Recuva oferece uma interface mais simples para recuperação em determinados cenários.</p>
 <p>Pode ser útil em exclusões recentes, especialmente em dispositivos sem danos físicos e quando o espaço ainda não foi sobrescrito.</p>
 <p>No entanto, sua simplicidade não elimina os riscos de trabalhar diretamente sobre o dispositivo original.</p>
-<h2 id="a-regra-profissional-trabalhar-sobre-uma-copia">A regra profissional: trabalhar sobre uma cópia</h2>
+<h2 id="a-regra-profissional-trabalhar-sobre-uma-copia">A regra profissional: trabalhar sobre uma cópia<a class="headerlink" href="#a-regra-profissional-trabalhar-sobre-uma-copia" title="Permanent link">&para;</a></h2>
 <p>Em investigações e recuperações mais cuidadosas, o ideal é não realizar análises destrutivas diretamente sobre o dispositivo original.</p>
 <p>O procedimento costuma envolver:</p>
 <ol>
@@ -2526,7 +2723,7 @@ Dados podem deixar de estar recuperáveis  </p>
 </ol>
 <p>Uma imagem de disco é uma cópia setor a setor ou bloco a bloco do dispositivo, dependendo do método usado.</p>
 <p>Isso permite repetir análises sem modificar continuamente a fonte original.</p>
-<h2 id="ferramentas-especializadas">Ferramentas especializadas</h2>
+<h2 id="ferramentas-especializadas">Ferramentas especializadas<a class="headerlink" href="#ferramentas-especializadas" title="Permanent link">&para;</a></h2>
 <p>Laboratórios podem utilizar equipamentos e softwares que não fazem parte da realidade da maioria dos estudantes.</p>
 <p>Entre as capacidades profissionais estão:</p>
 <ul>
@@ -2546,7 +2743,7 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>quais são seus limites;</li>
 <li>quando encaminhar o equipamento.</li>
 </ul>
-<h2 id="nao-abra-um-hd-comum">Não abra um HD comum</h2>
+<h2 id="nao-abra-um-hd-comum">Não abra um HD comum<a class="headerlink" href="#nao-abra-um-hd-comum" title="Permanent link">&para;</a></h2>
 <p>Um erro recorrente é abrir um HD em casa para “ver o que aconteceu”.</p>
 <p>Isso pode contaminar os pratos com:</p>
 <ul>
@@ -2558,7 +2755,7 @@ Dados podem deixar de estar recuperáveis  </p>
 </ul>
 <p>A distância entre a cabeça e a superfície é extremamente pequena. Uma partícula invisível a olho nu pode causar danos graves.  </p>
 <p>Laboratórios especializados utilizam ambientes controlados para determinadas intervenções.</p>
-<h2 id="nao-faca-o-chamado-truque-do-congelador">Não faça o chamado “truque do congelador”</h2>
+<h2 id="nao-faca-o-chamado-truque-do-congelador">Não faça o chamado “truque do congelador”<a class="headerlink" href="#nao-faca-o-chamado-truque-do-congelador" title="Permanent link">&para;</a></h2>
 <p>Existe um mito antigo de colocar o HD no congelador para fazê-lo voltar a funcionar.</p>
 <p>Além de não ser um procedimento técnico confiável, a condensação pode causar:</p>
 <ul>
@@ -2568,7 +2765,7 @@ Dados podem deixar de estar recuperáveis  </p>
 <li>dano adicional.</li>
 </ul>
 <p>Uma recuperação improvisada pode transformar uma falha parcialmente recuperável em perda definitiva.</p>
-<h2 id="smart-o-dispositivo-fala-sobre-sua-propria-saude">S.M.A.R.T.: o dispositivo fala sobre sua própria saúde</h2>
+<h2 id="smart-o-dispositivo-fala-sobre-sua-propria-saude">S.M.A.R.T.: o dispositivo fala sobre sua própria saúde<a class="headerlink" href="#smart-o-dispositivo-fala-sobre-sua-propria-saude" title="Permanent link">&para;</a></h2>
 <p>Muitos discos oferecem dados por meio do sistema S.M.A.R.T.
 Esse conjunto de informações pode incluir indicadores como:</p>
 <ul>
@@ -2584,7 +2781,7 @@ Esse conjunto de informações pode incluir indicadores como:</p>
 <p>Entretanto, S.M.A.R.T. não é uma profecia.<br />
 Um dispositivo pode falhar sem aviso. Outro pode apresentar alertas e continuar funcionando por algum tempo.  </p>
 <p>Devemos interpretar esses dados como evidências, não como garantia absoluta.</p>
-<h2 id="exemplo-investigativo-hd-com-setores-realocados">Exemplo investigativo: HD com setores realocados</h2>
+<h2 id="exemplo-investigativo-hd-com-setores-realocados">Exemplo investigativo: HD com setores realocados<a class="headerlink" href="#exemplo-investigativo-hd-com-setores-realocados" title="Permanent link">&para;</a></h2>
 <p>Um computador apresenta:</p>
 <ul>
 <li>travamentos ao abrir arquivos;</li>
@@ -2594,8 +2791,8 @@ Um dispositivo pode falhar sem aviso. Outro pode apresentar alertas e continuar 
 <li>aumento no número de setores realocados.</li>
 </ul>
 <p>Hipótese inicial:</p>
-<pre><code class="language-text">O HD pode estar desenvolvendo falha física e substituindo setores problemáticos por áreas de reserva.
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>O HD pode estar desenvolvendo falha física e substituindo setores problemáticos por áreas de reserva.
+</code></pre></div>
 <p>A conduta correta não é continuar submetendo o disco a testes agressivos indefinidamente.</p>
 <p>A prioridade pode ser:</p>
 <ol>
@@ -2604,7 +2801,7 @@ Um dispositivo pode falhar sem aviso. Outro pode apresentar alertas e continuar 
 <li>substituir o disco;</li>
 <li>analisar posteriormente a causa.</li>
 </ol>
-<h2 id="exemplo-investigativo-ssd-lento">Exemplo investigativo: SSD lento</h2>
+<h2 id="exemplo-investigativo-ssd-lento">Exemplo investigativo: SSD lento<a class="headerlink" href="#exemplo-investigativo-ssd-lento" title="Permanent link">&para;</a></h2>
 <p>Um SSD apresenta queda de desempenho.</p>
 <p>Isso não significa automaticamente que está defeituoso.</p>
 <p>Hipóteses possíveis:</p>
@@ -2624,7 +2821,7 @@ Um dispositivo pode falhar sem aviso. Outro pode apresentar alertas e continuar 
 <li>benchmark inadequado.</li>
 </ul>
 <p>Novamente, o sintoma não é o diagnóstico.</p>
-<h2 id="dentro-da-caixa">Dentro da Caixa</h2>
+<h2 id="dentro-da-caixa">Dentro da Caixa<a class="headerlink" href="#dentro-da-caixa" title="Permanent link">&para;</a></h2>
 <p>Vamos analisar uma ficha técnica:</p>
 <p>SSD NVMe</p>
 <p>Capacidade.............1 TB
@@ -2635,17 +2832,17 @@ Gravação sequencial....5.000 MB/s
 NAND...................TLC
 TBW....................600 TB
 Garantia...............5 anos</p>
-<h3 id="capacidade">Capacidade</h3>
+<h3 id="capacidade">Capacidade<a class="headerlink" href="#capacidade" title="Permanent link">&para;</a></h3>
 <p>Representa o espaço disponível para armazenamento.</p>
 <p>O sistema operacional pode mostrar um valor menor devido à diferença entre formas de cálculo e ao espaço reservado.</p>
-<h3 id="interface">Interface</h3>
+<h3 id="interface">Interface<a class="headerlink" href="#interface" title="Permanent link">&para;</a></h3>
 <p>Indica o meio de comunicação.</p>
 <p>Um SSD PCIe 4.0 pode funcionar em uma plataforma mais antiga, mas com limitações, desde que exista compatibilidade física e lógica.</p>
-<h3 id="nvme">NVMe</h3>
+<h3 id="nvme">NVMe<a class="headerlink" href="#nvme" title="Permanent link">&para;</a></h3>
 <p>É um protocolo desenvolvido para armazenamento rápido conectado por PCI Express.</p>
 <p>Não é sinônimo de formato físico.</p>
 <p>Existem SSDs NVMe em diferentes formatos.</p>
-<h3 id="leitura-e-gravacao-sequenciais">Leitura e gravação sequenciais</h3>
+<h3 id="leitura-e-gravacao-sequenciais">Leitura e gravação sequenciais<a class="headerlink" href="#leitura-e-gravacao-sequenciais" title="Permanent link">&para;</a></h3>
 <p>Representam desempenho em transferências de grandes blocos contínuos.</p>
 <p>Não descrevem sozinhas a experiência completa.</p>
 <p>Tarefas reais também dependem de:</p>
@@ -2658,7 +2855,7 @@ Garantia...............5 anos</p>
 <li>temperatura;</li>
 <li>controlador.</li>
 </ul>
-<h3 id="tlc">TLC</h3>
+<h3 id="tlc">TLC<a class="headerlink" href="#tlc" title="Permanent link">&para;</a></h3>
 <p>Indica uma forma de armazenar múltiplos bits por célula.</p>
 <p>Tipos diferentes de NAND envolvem compromissos entre:</p>
 <ul>
@@ -2667,27 +2864,27 @@ Garantia...............5 anos</p>
 <li>velocidade;</li>
 <li>durabilidade.</li>
 </ul>
-<h3 id="tbw">TBW</h3>
+<h3 id="tbw">TBW<a class="headerlink" href="#tbw" title="Permanent link">&para;</a></h3>
 <p>Significa uma quantidade estimada de terabytes gravados dentro das condições de garantia.</p>
 <p>Não representa uma data exata de falha.</p>
-<h2 id="mito-ou-evidencia">Mito ou Evidência?</h2>
-<h3 id="formatar-destroi-todos-os-dados">“Formatar destrói todos os dados”</h3>
+<h2 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h2>
+<h3 id="formatar-destroi-todos-os-dados">“Formatar destrói todos os dados”<a class="headerlink" href="#formatar-destroi-todos-os-dados" title="Permanent link">&para;</a></h3>
 <p><strong>Mito.</strong></p>
 <p>Uma formatação rápida normalmente reconstrói estruturas do sistema de arquivos sem necessariamente sobrescrever cada área do dispositivo.</p>
 <p>Em SSDs, TRIM e criptografia podem alterar bastante o cenário.</p>
-<h3 id="se-o-crystaldiskinfo-mostrar-bom-o-disco-esta-perfeito">“Se o CrystalDiskInfo mostrar bom, o disco está perfeito”</h3>
+<h3 id="se-o-crystaldiskinfo-mostrar-bom-o-disco-esta-perfeito">“Se o CrystalDiskInfo mostrar bom, o disco está perfeito”<a class="headerlink" href="#se-o-crystaldiskinfo-mostrar-bom-o-disco-esta-perfeito" title="Permanent link">&para;</a></h3>
 <p><strong>Mito.</strong></p>
 <p>Os dados S.M.A.R.T. são úteis, mas não detectam todas as falhas.</p>
-<h3 id="instalar-o-programa-de-recuperacao-no-mesmo-disco-e-arriscado">“Instalar o programa de recuperação no mesmo disco é arriscado”</h3>
+<h3 id="instalar-o-programa-de-recuperacao-no-mesmo-disco-e-arriscado">“Instalar o programa de recuperação no mesmo disco é arriscado”<a class="headerlink" href="#instalar-o-programa-de-recuperacao-no-mesmo-disco-e-arriscado" title="Permanent link">&para;</a></h3>
 <p><strong>Evidência.</strong></p>
 <p>A instalação pode sobrescrever áreas que ainda continham dados recuperáveis.</p>
-<h3 id="um-arquivo-apagado-de-ssd-nunca-pode-ser-recuperado">“Um arquivo apagado de SSD nunca pode ser recuperado”</h3>
+<h3 id="um-arquivo-apagado-de-ssd-nunca-pode-ser-recuperado">“Um arquivo apagado de SSD nunca pode ser recuperado”<a class="headerlink" href="#um-arquivo-apagado-de-ssd-nunca-pode-ser-recuperado" title="Permanent link">&para;</a></h3>
 <p><strong>Mito.</strong></p>
 <p>Pode ser muito mais difícil, especialmente após TRIM, mas o resultado depende do cenário.</p>
-<h3 id="backup-e-mais-importante-que-recuperacao">“Backup é mais importante que recuperação”</h3>
+<h3 id="backup-e-mais-importante-que-recuperacao">“Backup é mais importante que recuperação”<a class="headerlink" href="#backup-e-mais-importante-que-recuperacao" title="Permanent link">&para;</a></h3>
 <p><strong>Evidência.</strong></p>
 <p>Recuperação é incerta. Backup é planejamento.</p>
-<h2 id="o-que-um-perito-observaria">O que um perito observaria?</h2>
+<h2 id="o-que-um-perito-observaria">O que um perito observaria?<a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h2>
 <p>Em uma análise profissional, perguntas importantes seriam:</p>
 <ul>
 <li>O dispositivo é HD ou SSD?</li>
@@ -2707,9 +2904,9 @@ Garantia...............5 anos</p>
 <p>A última pergunta é essencial.</p>
 <p>Investigação não significa acesso irrestrito.</p>
 <p><strong>Dados só devem ser analisados com autorização legítima.</strong></p>
-<h2 id="laboratorio-guiado-diagnostico-seguro">Laboratório guiado — diagnóstico seguro</h2>
+<h2 id="laboratorio-guiado-diagnostico-seguro">Laboratório guiado — diagnóstico seguro<a class="headerlink" href="#laboratorio-guiado-diagnostico-seguro" title="Permanent link">&para;</a></h2>
 <p>Esta atividade não envolve apagar nem recuperar arquivos importantes.</p>
-<h3 id="etapa-1-identificacao">Etapa 1 — Identificação</h3>
+<h3 id="etapa-1-identificacao">Etapa 1 — Identificação<a class="headerlink" href="#etapa-1-identificacao" title="Permanent link">&para;</a></h3>
 <p>Abra uma ferramenta como CrystalDiskInfo e registre:</p>
 <ul>
 <li>fabricante;</li>
@@ -2721,7 +2918,7 @@ Garantia...............5 anos</p>
 <li>saúde apresentada;</li>
 <li>total de gravações, quando disponível.</li>
 </ul>
-<h3 id="etapa-2-observacao">Etapa 2 — Observação</h3>
+<h3 id="etapa-2-observacao">Etapa 2 — Observação<a class="headerlink" href="#etapa-2-observacao" title="Permanent link">&para;</a></h3>
 <p>Analise se existem:</p>
 <ul>
 <li>alertas;</li>
@@ -2730,12 +2927,12 @@ Garantia...............5 anos</p>
 <li>comportamento incomum;</li>
 <li>diferenças entre os dispositivos instalados.</li>
 </ul>
-<h3 id="etapa-3-hipotese">Etapa 3 — Hipótese</h3>
+<h3 id="etapa-3-hipotese">Etapa 3 — Hipótese<a class="headerlink" href="#etapa-3-hipotese" title="Permanent link">&para;</a></h3>
 <p>Exemplo:</p>
 <p>O SSD apresenta temperatura elevada durante cargas prolongadas, o que pode estar causando redução temporária de desempenho.</p>
-<h3 id="etapa-4-teste-controlado">Etapa 4 — Teste controlado</h3>
+<h3 id="etapa-4-teste-controlado">Etapa 4 — Teste controlado<a class="headerlink" href="#etapa-4-teste-controlado" title="Permanent link">&para;</a></h3>
 <p>Observe a temperatura em repouso e durante uma tarefa moderada. Não execute testes agressivos em um dispositivo que já apresenta sinais de falha.</p>
-<h3 id="etapa-5-registro">Etapa 5 — Registro</h3>
+<h3 id="etapa-5-registro">Etapa 5 — Registro<a class="headerlink" href="#etapa-5-registro" title="Permanent link">&para;</a></h3>
 <p>Documente:</p>
 <ul>
 <li>ferramenta utilizada;</li>
@@ -2746,7 +2943,7 @@ Garantia...............5 anos</p>
 <li>conclusão provisória.</li>
 </ul>
 <p>Esse registro fará parte do Dossiê da Investigação.</p>
-<h2 id="estudo-de-caso">Estudo de caso</h2>
+<h2 id="estudo-de-caso">Estudo de caso<a class="headerlink" href="#estudo-de-caso" title="Permanent link">&para;</a></h2>
 <p>Um usuário apagou uma pasta de fotografias em um computador com SSD.  </p>
 <p>Depois disso:</p>
 <ul>
@@ -2757,7 +2954,7 @@ Garantia...............5 anos</p>
 <li>executou uma atualização do sistema.</li>
 </ul>
 <p>Ao buscar ajuda, pergunta se existe garantia de recuperação.</p>
-<h3 id="analise">Análise</h3>
+<h3 id="analise">Análise<a class="headerlink" href="#analise" title="Permanent link">&para;</a></h3>
 <p>Não existe garantia.</p>
 <p>As atividades posteriores podem ter:</p>
 <ul>
@@ -2768,7 +2965,7 @@ Garantia...............5 anos</p>
 <li>reduzido as chances de recuperação.</li>
 </ul>
 <p>A conduta mais adequada teria sido interromper o uso imediatamente e avaliar a criação de uma cópia do dispositivo.</p>
-<h2 id="curiosidade-tecnica-pesquisas-em-memoria-flash">Curiosidade técnica — pesquisas em memória flash</h2>
+<h2 id="curiosidade-tecnica-pesquisas-em-memoria-flash">Curiosidade técnica — pesquisas em memória flash<a class="headerlink" href="#curiosidade-tecnica-pesquisas-em-memoria-flash" title="Permanent link">&para;</a></h2>
 <p>Pesquisadores e laboratórios podem estudar a recuperação de dados em memória flash analisando:</p>
 <ul>
 <li>organização física das células;</li>
@@ -2783,7 +2980,7 @@ Garantia...............5 anos</p>
 </ul>
 <p>Em certos casos, o acesso direto aos chips produz dados brutos que ainda precisam ser reconstruídos. Não basta simplesmente “ler o chip”, é necessário compreender como o controlador distribuiu, codificou, corrigiu e reorganizou as informações.  </p>
 <p>Essa complexidade explica por que uma recuperação profissional de SSD pode ser muito mais difícil do que parece.  </p>
-<h2 id="o-principio-mais-importante-desta-aula">O princípio mais importante desta aula</h2>
+<h2 id="o-principio-mais-importante-desta-aula">O princípio mais importante desta aula<a class="headerlink" href="#o-principio-mais-importante-desta-aula" title="Permanent link">&para;</a></h2>
 <p><strong>A melhor recuperação de dados é aquela que não precisa acontecer.</strong></p>
 <p>A principal proteção contra perda continua sendo uma estratégia adequada de backup.  </p>
 <p>Uma prática conhecida é a regra 3-2-1:</p>
@@ -2821,6 +3018,8 @@ Garantia...............5 anos</p>
         
       </main>
       
+  
+    
         <footer class="md-footer">
   
     
@@ -2828,7 +3027,7 @@ Garantia...............5 anos</p>
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 3 - Memória RAM. O laboratório de trabalho do processador">
+          <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 3 - Memória RAM">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2838,20 +3037,20 @@ Garantia...............5 anos</p>
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Aula 3 - Memória RAM. O laboratório de trabalho do processador
+                Aula 3 - Memória RAM
               </div>
             </div>
           </a>
         
         
           
-          <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram">
+          <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Aula 5 - Placa-mãe">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Aula 5 - Placa-mãe. A cena onde todos os componentes se encontram
+                Aula 5 - Placa-mãe
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2867,10 +3066,22 @@ Garantia...............5 anos</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -2879,6 +3090,8 @@ Garantia...............5 anos</p>
   </div>
 </footer>
       
+  
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -2888,10 +3101,12 @@ Garantia...............5 anos</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
       
     
   </body>
