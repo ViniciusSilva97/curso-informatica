@@ -40,6 +40,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   background:
     linear-gradient(90deg, rgba(0, 156, 59, .025) 1px, transparent 1px),
@@ -937,10 +943,35 @@ body {
 }
 
 @media screen and (max-width: 44em) {
+  .md-main,
+  .md-main__inner,
+  .md-content,
+  .md-content__inner,
+  .sev-home,
+  .sev-hero,
+  .sev-modules,
+  .sev-method,
+  .sev-lesson-preview,
+  .sev-brand-banner {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .md-main__inner {
+    margin-top: .8rem;
+  }
+
+  .md-content__inner {
+    margin: 0;
+    padding: 0 .6rem 1.5rem;
+  }
+
   .md-header__button.md-logo {
-    width: 7.5rem;
-    height: 1.75rem;
-    flex-basis: 7.5rem;
+    width: 7rem;
+    height: 1.65rem;
+    flex-basis: 7rem;
+    margin-right: .25rem;
   }
 
   .md-header__button.md-logo img,
@@ -952,70 +983,342 @@ body {
 
   .md-header__inner {
     min-height: 3.1rem;
+    padding: 0 .15rem;
+  }
+
+  .md-header__button {
+    margin: .1rem;
+    padding: .3rem;
+  }
+
+  .sev-home h1,
+  .sev-home h2,
+  .sev-home h3,
+  .sev-home p,
+  .sev-home li,
+  .sev-home a,
+  .sev-home span {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .sev-hero {
     min-height: auto;
-    box-shadow: 5px 5px 0 var(--sev-green);
+    border-width: 1px;
+    box-shadow: 3px 3px 0 var(--sev-green);
   }
 
   .sev-hero__copy {
-    padding: 2.4rem 1.15rem 1rem;
+    min-width: 0;
+    padding: 1.6rem .85rem 1rem;
+  }
+
+  .sev-eyebrow {
+    margin-bottom: .65rem;
+    padding: .3rem .45rem;
+    font-size: .56rem;
+    letter-spacing: .05em;
+    white-space: normal;
   }
 
   .sev-hero h1 {
-    font-size: 2.45rem;
+    font-size: clamp(1.65rem, 10.5vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+  }
+
+  .sev-hero__copy > p {
+    margin: 1rem 0 1.2rem;
+    font-size: .84rem;
+    line-height: 1.5;
+  }
+
+  .sev-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .md-typeset .sev-actions .sev-button {
+    width: 100%;
+    min-height: 2.65rem;
+    padding: .55rem .65rem;
+    font-size: .65rem;
+    box-shadow: 3px 3px 0 var(--sev-black);
+  }
+
+  .sev-hero__facts {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .35rem;
+    margin-top: 1.15rem;
+    font-size: .62rem;
   }
 
   .sev-hero__visual {
-    min-height: 19rem;
+    min-height: 12.5rem;
+    overflow: hidden;
+  }
+
+  .sev-monitor {
+    width: 78%;
+    padding: .4rem;
+    border-width: .4rem;
+    border-bottom-width: .65rem;
+    box-shadow: .55rem .65rem 0 rgba(5, 8, 6, .2);
+  }
+
+  .sev-monitor::after {
+    bottom: -2.35rem;
+    height: 1.75rem;
+    border-bottom-width: .45rem;
   }
 
   .sev-monitor__screen {
-    min-height: 12rem;
+    min-height: 7.5rem;
+  }
+
+  .sev-chip {
+    width: 4rem;
+    height: 4rem;
+    border-width: .35rem;
+    font-size: .82rem;
   }
 
   .sev-tool {
-    width: 3.2rem;
-    height: 3.2rem;
-    font-size: 1.8rem;
+    width: 2.45rem;
+    height: 2.45rem;
+    border-width: .22rem;
+    font-size: 1.35rem;
+    box-shadow: .28rem .28rem 0 rgba(5, 8, 6, .24);
+  }
+
+  .sev-tool--search {
+    right: 6%;
+    bottom: 10%;
+  }
+
+  .sev-tool--bolt {
+    top: 9%;
+    left: 6%;
+  }
+
+  .sev-modules {
+    margin-top: 3rem;
+  }
+
+  .sev-section-heading {
+    margin-bottom: 1.4rem;
+    padding: 0 .25rem;
+  }
+
+  .sev-section-heading > span {
+    font-size: .62rem;
+  }
+
+  .sev-section-heading h2,
+  .sev-lesson-preview__copy h2 {
+    font-size: clamp(1.35rem, 8vw, 1.8rem);
+    line-height: 1.18;
+  }
+
+  .sev-section-heading p {
+    font-size: .78rem;
+    line-height: 1.5;
   }
 
   .sev-module-grid,
   .sev-method-grid {
     grid-template-columns: 1fr;
+    gap: .8rem;
   }
 
   .sev-module-card {
-    min-height: 21rem;
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 1rem;
+    box-shadow: 3px 3px 0 var(--sev-border);
+  }
+
+  .sev-module-card--available {
+    box-shadow: 3px 3px 0 var(--sev-green);
+  }
+
+  .sev-module-card__number {
+    font-size: 1.5rem;
+  }
+
+  .sev-module-card__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: .4rem 0 1rem;
+    font-size: 1.55rem;
+  }
+
+  .sev-module-card h3 {
+    font-size: .94rem;
+    line-height: 1.25;
+  }
+
+  .sev-module-card h3 + p {
+    font-size: .76rem;
+  }
+
+  .md-typeset .sev-module-card > a,
+  .sev-module-card__disabled {
+    padding: .58rem .65rem;
+    font-size: .64rem;
   }
 
   .sev-method {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin: 3rem 0 0;
+    padding: 2.5rem .8rem;
+  }
+
+  .sev-method-grid article {
+    padding: 1rem;
+  }
+
+  .sev-method-grid h3 {
+    font-size: .82rem;
   }
 
   .sev-lesson-preview {
-    gap: 2rem;
-    padding: 3.5rem 0;
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .sev-lesson-preview__copy {
+    min-width: 0;
+  }
+
+  .sev-lesson-preview__copy > p,
+  .sev-lesson-preview__copy li {
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+  .sev-lesson-window {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 var(--sev-yellow);
+  }
+
+  .sev-lesson-window__top {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .sev-lesson-window__top span {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .sev-lesson-window__body {
     grid-template-columns: 1fr;
+    min-width: 0;
+    min-height: auto;
   }
 
   .sev-lesson-window__body aside {
     display: none;
   }
 
+  .sev-lesson-window__body > div {
+    min-width: 0;
+    padding: 1rem .8rem;
+  }
+
+  .sev-lesson-window__body h3 {
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+
+  .sev-lesson-window__body p,
+  .sev-callout {
+    font-size: .7rem;
+    line-height: 1.45;
+  }
+
+  .sev-callout {
+    margin-top: .85rem;
+    padding: .65rem;
+  }
+
   .sev-brand-banner {
     align-items: flex-start;
     flex-direction: column;
-    padding: 1.5rem;
+    gap: 1.25rem;
+    padding: 1.2rem;
+    box-shadow: 4px 4px 0 var(--sev-green);
+  }
+
+  .sev-brand-banner h2 {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+
+  .sev-brand-banner p {
+    font-size: .72rem;
+    line-height: 1.5;
   }
 
   .sev-brand-banner .sev-button {
     width: 100%;
+    font-size: .64rem;
+  }
+
+  .md-top {
+    right: .45rem;
+    bottom: .45rem;
+    max-width: calc(100% - .9rem);
+    padding: .45rem .55rem;
+    font-size: .64rem;
+  }
+}
+
+@media screen and (max-width: 22.5em) {
+  .md-header__button.md-logo {
+    width: 6.2rem;
+    height: 1.45rem;
+    flex-basis: 6.2rem;
+  }
+
+  .md-content__inner {
+    padding-right: .45rem;
+    padding-left: .45rem;
+  }
+
+  .sev-hero__copy {
+    padding-right: .7rem;
+    padding-left: .7rem;
+  }
+
+  .sev-hero h1 {
+    font-size: clamp(1.45rem, 10vw, 1.8rem);
+  }
+
+  .sev-hero__visual {
+    min-height: 10.5rem;
+  }
+
+  .sev-monitor {
+    width: 74%;
+  }
+
+  .sev-section-heading h2,
+  .sev-lesson-preview__copy h2 {
+    font-size: 1.25rem;
+  }
+
+  .sev-module-card,
+  .sev-method-grid article,
+  .sev-brand-banner {
+    padding: .8rem;
   }
 }
 
