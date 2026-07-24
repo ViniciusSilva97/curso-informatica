@@ -164,6 +164,27 @@ body {
   color: var(--sev-green-light);
 }
 
+[data-md-color-scheme="sev-dark"] .md-nav__item--active > .md-nav__link,
+[data-md-color-scheme="sev-dark"] .md-nav__link--active,
+[data-md-color-scheme="sev-dark"] .md-nav__link[aria-current="page"] {
+  color: #66f58e !important;
+  font-weight: 700;
+}
+
+[data-md-color-scheme="sev-dark"] .md-nav__link--active,
+[data-md-color-scheme="sev-dark"] .md-nav__link[aria-current="page"] {
+  padding: .35rem .55rem;
+  border-radius: 2px;
+  background: rgba(41, 212, 99, .12);
+  box-shadow: inset 3px 0 0 #29d463;
+}
+
+[data-md-color-scheme="sev-dark"] .md-nav__link--active:hover,
+[data-md-color-scheme="sev-dark"] .md-nav__link[aria-current="page"]:hover {
+  color: #ffffff !important;
+  background: rgba(41, 212, 99, .2);
+}
+
 [data-md-color-scheme="sev-dark"] .md-typeset h1,
 [data-md-color-scheme="sev-dark"] .md-typeset h2,
 [data-md-color-scheme="sev-dark"] .md-typeset h3,
