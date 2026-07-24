@@ -23,7 +23,7 @@ hide:
     </ul>
   </div>
   <div class="sev-hero__visual" aria-hidden="true">
-    <img class="sev-hero__image" src="assets/brand/hero-diagnostico.png" alt="">
+    <img class="sev-hero__image" src="assets/brand/hero-diagnostico.webp" alt="">
   </div>
 </section>
 
