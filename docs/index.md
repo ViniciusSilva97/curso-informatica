@@ -162,11 +162,17 @@ hide:
   </div>
 </section>
 
-<section class="sev-brand-banner">
-  <div>
-    <span>UM PROJETO EDUCACIONAL</span>
-    <h2>Smart <strong>Eletro</strong> Vini</h2>
-    <p>Compartilhamos conhecimento técnico para transformar curiosidade em habilidade e abrir caminhos para o futuro.</p>
+<section class="sev-brand-banner" id="projeto">
+  <div class="sev-brand-banner__identity">
+    <span class="sev-pixel-heart" aria-hidden="true"></span>
+    <div>
+      <span>UM PROJETO EDUCACIONAL</span>
+      <h2>Smart <strong>Eletro</strong> Vini</h2>
+    </div>
+  </div>
+  <div class="sev-brand-banner__message">
+    <p>Nosso objetivo é compartilhar conhecimento técnico de qualidade, de forma gratuita, prática e confiável, para transformar curiosidade em habilidade e abrir caminhos para o futuro.</p>
+    <small>A loja apoia o projeto e ajuda a manter novos conteúdos gratuitos.</small>
   </div>
   <a class="sev-button sev-button--primary" href="https://www.smarteletrovini.com.br/" target="_blank" rel="noopener">Conheça nossa loja <span aria-hidden="true">↗</span></a>
 </section>
