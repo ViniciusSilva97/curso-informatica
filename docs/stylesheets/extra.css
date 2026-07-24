@@ -1097,18 +1097,52 @@ body {
 }
 
 .sev-brand-banner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2rem;
-  padding: 2.2rem 2.6rem;
+  margin: 0 calc(50% - 50vw);
+  padding: 2.4rem max(1.2rem, calc(50vw - 30.5rem));
   border: 2px solid var(--sev-green);
+  border-right: 0;
+  border-left: 0;
   background:
-    linear-gradient(100deg, transparent 65%, rgba(0, 156, 59, .23)),
+    linear-gradient(100deg, transparent 62%, rgba(0, 156, 59, .22)),
     var(--sev-black);
   color: #fff;
-  box-shadow: 7px 7px 0 var(--sev-green);
+  box-shadow: inset 0 5px 0 rgba(0, 156, 59, .18);
+}
+
+.sev-brand-banner__identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.sev-pixel-heart {
+  display: block;
+  width: 4.5rem;
+  height: 4rem;
+  flex: 0 0 4.5rem;
+  background: var(--sev-yellow);
+  clip-path: polygon(
+    14% 0, 43% 0, 43% 14%, 57% 14%, 57% 0, 86% 0,
+    86% 14%, 100% 14%, 100% 57%, 86% 57%, 86% 71%,
+    71% 71%, 71% 86%, 57% 86%, 57% 100%, 43% 100%,
+    43% 86%, 29% 86%, 29% 71%, 14% 71%, 14% 57%, 0 57%,
+    0 14%, 14% 14%
+  );
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, .65));
+}
+
+.sev-brand-banner__identity > div > span {
+  display: block;
+  margin-bottom: .35rem;
+  color: #fff;
+  font-family: var(--sev-pixel);
+  font-size: .62rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 .sev-brand-banner h2 {
@@ -1122,11 +1156,150 @@ body {
   color: var(--sev-green-light);
 }
 
-.sev-brand-banner p {
-  max-width: 39rem;
-  margin-bottom: 0;
+.sev-brand-banner__message p {
+  max-width: 35rem;
+  margin: 0;
   color: #c4cbc6;
   font-size: .78rem;
+}
+
+.sev-brand-banner__message small {
+  display: block;
+  margin-top: .65rem;
+  color: var(--sev-yellow);
+  font-size: .62rem;
+}
+
+.sev-course-footer {
+  position: relative;
+  border-top: 4px solid var(--sev-green);
+  background:
+    linear-gradient(90deg, rgba(0, 156, 59, .035) 1px, transparent 1px),
+    linear-gradient(rgba(0, 156, 59, .035) 1px, transparent 1px),
+    #030604;
+  background-size: 2rem 2rem;
+  color: #fff;
+}
+
+.sev-course-footer::before,
+.sev-course-footer::after {
+  position: absolute;
+  top: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background:
+    linear-gradient(90deg, var(--sev-green) 25%, transparent 25% 50%, var(--sev-green) 50% 75%, transparent 75%) 0 0 / 1.5rem 1.5rem,
+    linear-gradient(var(--sev-green) 25%, transparent 25% 50%, var(--sev-green) 50% 75%, transparent 75%) 0 0 / 1.5rem 1.5rem;
+  content: "";
+  opacity: .55;
+}
+
+.sev-course-footer::before {
+  left: 0;
+}
+
+.sev-course-footer::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.sev-course-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1.5fr) repeat(2, minmax(8rem, .7fr)) minmax(11rem, .8fr);
+  gap: 2.5rem;
+  width: min(100% - 2.4rem, 61rem);
+  margin: 0 auto;
+  padding: 3.2rem 0 2.4rem;
+}
+
+.sev-course-footer__brand img {
+  display: block;
+  width: 13rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.sev-course-footer__brand p {
+  max-width: 19rem;
+  margin: 0 0 1rem;
+  color: #aeb8b1;
+  font-size: .72rem;
+  line-height: 1.55;
+}
+
+.sev-course-footer a {
+  color: #cbd3cd;
+  text-decoration: none;
+}
+
+.sev-course-footer a:hover {
+  color: var(--sev-green-light);
+}
+
+.sev-course-footer__brand > a {
+  color: var(--sev-green-light);
+  font-family: var(--sev-pixel);
+  font-size: .62rem;
+  text-transform: uppercase;
+}
+
+.sev-course-footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.sev-course-footer nav strong,
+.sev-course-footer__free > strong {
+  margin-bottom: .35rem;
+  color: var(--sev-yellow);
+  font-family: var(--sev-pixel);
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+
+.sev-course-footer nav a,
+.sev-course-footer__free > span {
+  font-size: .7rem;
+}
+
+.sev-course-footer__free {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.15rem;
+  border: 1px solid #4d5a51;
+  background: rgba(5, 8, 6, .82);
+  text-align: center;
+}
+
+.sev-course-footer__free > span {
+  margin: .12rem 0;
+  color: #cbd3cd;
+}
+
+.sev-course-footer__free .sev-pixel-heart {
+  width: 2.5rem;
+  height: 2.2rem;
+  flex-basis: 2.2rem;
+  margin-top: .8rem;
+  filter: none;
+}
+
+.sev-course-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: min(100% - 2.4rem, 61rem);
+  margin: 0 auto;
+  padding: 1rem 0 1.2rem;
+  border-top: 1px solid #283029;
+  color: #7e8a81;
+  font-size: .6rem;
+}
+
+.sev-course-footer__bottom b {
+  color: #ff4d56;
 }
 
 .md-footer {
@@ -1158,6 +1331,35 @@ body {
 
   .sev-module-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sev-brand-banner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sev-brand-banner .sev-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .sev-course-footer__inner {
+    grid-template-columns: 1.4fr repeat(2, 1fr);
+  }
+
+  .sev-course-footer__free {
+    grid-column: 1 / -1;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: .7rem;
+  }
+
+  .sev-course-footer__free > strong {
+    margin: 0 .5rem 0 0;
+  }
+
+  .sev-course-footer__free .sev-pixel-heart {
+    margin: 0 0 0 .5rem;
   }
 }
 
@@ -1202,6 +1404,22 @@ body {
 
   .sev-computer-cycle > b {
     display: none;
+  }
+
+  .sev-brand-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .sev-brand-banner .sev-button {
+    grid-column: auto;
+  }
+
+  .sev-course-footer__inner {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .sev-course-footer__brand {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1581,10 +1799,21 @@ body {
 
   .sev-brand-banner {
     align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 1.25rem;
-    padding: 1.2rem;
-    box-shadow: 4px 4px 0 var(--sev-green);
+    margin: 0;
+    padding: 1.5rem 1rem;
+    box-shadow: none;
+  }
+
+  .sev-brand-banner__identity {
+    gap: .8rem;
+  }
+
+  .sev-brand-banner__identity .sev-pixel-heart {
+    width: 3rem;
+    height: 2.65rem;
+    flex-basis: 3rem;
   }
 
   .sev-brand-banner h2 {
@@ -1597,9 +1826,71 @@ body {
     line-height: 1.5;
   }
 
+  .sev-brand-banner__message small {
+    font-size: .58rem;
+    line-height: 1.45;
+  }
+
   .sev-brand-banner .sev-button {
     width: 100%;
     font-size: .64rem;
+  }
+
+  .sev-course-footer::before,
+  .sev-course-footer::after {
+    width: 2rem;
+    height: 2rem;
+    background-size: 1rem 1rem;
+  }
+
+  .sev-course-footer__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.7rem 1rem;
+    width: calc(100% - 1.5rem);
+    padding: 2.5rem 0 1.8rem;
+  }
+
+  .sev-course-footer__brand,
+  .sev-course-footer__free {
+    grid-column: 1 / -1;
+  }
+
+  .sev-course-footer__brand img {
+    width: min(12rem, 80%);
+  }
+
+  .sev-course-footer__brand p {
+    font-size: .68rem;
+  }
+
+  .sev-course-footer nav strong,
+  .sev-course-footer__free > strong {
+    font-size: .62rem;
+  }
+
+  .sev-course-footer nav a,
+  .sev-course-footer__free > span {
+    font-size: .66rem;
+  }
+
+  .sev-course-footer__free {
+    align-items: center;
+    flex-direction: column;
+    gap: .2rem;
+  }
+
+  .sev-course-footer__free > strong,
+  .sev-course-footer__free .sev-pixel-heart {
+    margin: 0 0 .45rem;
+  }
+
+  .sev-course-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .4rem;
+    width: calc(100% - 1.5rem);
+    font-size: .54rem;
+    line-height: 1.4;
   }
 
   .md-top {
