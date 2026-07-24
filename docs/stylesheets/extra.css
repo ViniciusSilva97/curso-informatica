@@ -1023,7 +1023,7 @@ body {
   }
 
   .sev-hero h1 {
-    font-size: clamp(1.65rem, 10.5vw, 2.25rem);
+    font-size: clamp(1.4rem, 8.5vw, 1.85rem);
     line-height: 1.12;
     letter-spacing: -.02em;
   }
@@ -1119,7 +1119,7 @@ body {
 
   .sev-section-heading h2,
   .sev-lesson-preview__copy h2 {
-    font-size: clamp(1.35rem, 8vw, 1.8rem);
+    font-size: clamp(1.1rem, 6.5vw, 1.45rem);
     line-height: 1.18;
   }
 
@@ -1158,7 +1158,7 @@ body {
   }
 
   .sev-module-card h3 {
-    font-size: .94rem;
+    font-size: .8rem;
     line-height: 1.25;
   }
 
@@ -1182,7 +1182,7 @@ body {
   }
 
   .sev-method-grid h3 {
-    font-size: .82rem;
+    font-size: .74rem;
   }
 
   .sev-lesson-preview {
@@ -1234,7 +1234,7 @@ body {
   }
 
   .sev-lesson-window__body h3 {
-    font-size: .9rem;
+    font-size: .78rem;
     line-height: 1.35;
   }
 
@@ -1258,7 +1258,7 @@ body {
   }
 
   .sev-brand-banner h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.25;
   }
 
@@ -1273,11 +1273,32 @@ body {
   }
 
   .md-top {
-    right: .45rem;
-    bottom: .45rem;
-    max-width: calc(100% - .9rem);
-    padding: .45rem .55rem;
-    font-size: .64rem;
+    top: auto !important;
+    right: .55rem;
+    bottom: .55rem;
+    left: auto;
+    display: grid;
+    width: 2.35rem;
+    height: 2.35rem;
+    max-width: none;
+    margin: 0;
+    padding: .55rem;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 1;
+    transform: none;
+  }
+
+  .md-top[hidden] {
+    transform: translateY(.2rem);
+  }
+
+  .md-top svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0;
+    vertical-align: middle;
   }
 }
 
@@ -1299,7 +1320,7 @@ body {
   }
 
   .sev-hero h1 {
-    font-size: clamp(1.45rem, 10vw, 1.8rem);
+    font-size: clamp(1.2rem, 8.5vw, 1.5rem);
   }
 
   .sev-hero__visual {
@@ -1312,7 +1333,7 @@ body {
 
   .sev-section-heading h2,
   .sev-lesson-preview__copy h2 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 
   .sev-module-card,
