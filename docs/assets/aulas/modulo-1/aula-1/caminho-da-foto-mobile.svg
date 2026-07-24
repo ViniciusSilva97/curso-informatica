@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1420" role="img" aria-labelledby="title desc">
+  <title id="title">O caminho de uma foto pela internet</title>
+  <desc id="desc">Oito etapas verticais mostram uma foto sendo registrada, transformada, enviada, processada e visualizada.</desc>
+  <defs><style>.pixel{font-family:"Courier New",monospace;font-weight:700}.body{font-family:Arial,sans-serif}.node{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="600" height="1420" rx="22" fill="#050806"/>
+  <text x="300" y="58" fill="#fff" font-size="27" text-anchor="middle" class="pixel">O CAMINHO DE UMA FOTO</text>
+  <text x="300" y="92" fill="#bfc9c1" font-size="17" text-anchor="middle" class="body">Várias etapas acontecem em poucos segundos.</text>
+  <path d="M300 225V255M300 385V415M300 545V575M300 705V735M300 865V895M300 1025V1055M300 1185V1215" stroke="#ffc900" stroke-width="7"/>
+  <g fill="#ffc900"><path d="M300 255l-14-24h28zM300 415l-14-24h28zM300 575l-14-24h28zM300 735l-14-24h28zM300 895l-14-24h28zM300 1055l-14-24h28zM300 1215l-14-24h28z"/></g>
+  <g class="node">
+    <rect x="85" y="120" width="430" height="105" rx="10"/><rect x="85" y="280" width="430" height="105" rx="10"/>
+    <rect x="85" y="440" width="430" height="105" rx="10"/><rect x="85" y="600" width="430" height="105" rx="10"/>
+    <rect x="85" y="760" width="430" height="105" rx="10"/><rect x="85" y="920" width="430" height="105" rx="10"/>
+    <rect x="85" y="1080" width="430" height="105" rx="10"/><rect x="85" y="1240" width="430" height="105" rx="10"/>
+  </g>
+  <g font-size="20" class="body">
+    <g fill="#ffc900" text-anchor="middle" class="pixel"><text x="130" y="179">01</text><text x="130" y="339">02</text><text x="130" y="499">03</text><text x="130" y="659">04</text><text x="130" y="819">05</text><text x="130" y="979">06</text><text x="130" y="1139">07</text><text x="130" y="1299">✓</text></g>
+    <g fill="#fff"><text x="180" y="166">Câmera registra a imagem</text><text x="180" y="326">Celular transforma em dados</text><text x="180" y="486">Aplicativo prepara os dados</text><text x="180" y="646">Internet transporta</text><text x="180" y="806">Servidores processam</text><text x="180" y="966">Outro celular recebe</text><text x="180" y="1126">Aplicativo reconstrói a foto</text><text x="180" y="1286">Seu amigo visualiza</text></g>
+    <g fill="#bfc9c1" font-size="17"><text x="180" y="196">A luz vira informação digital</text><text x="180" y="356">A imagem passa a ser bits</text><text x="180" y="516">O envio é organizado</text><text x="180" y="676">Os dados atravessam redes</text><text x="180" y="836">Máquinas coordenam o envio</text><text x="180" y="996">Os dados chegam ao destino</text><text x="180" y="1156">Os bits voltam a formar imagem</text><text x="180" y="1316">A foto aparece na tela</text></g>
+  </g>
+  <rect x="75" y="1365" width="450" height="34" fill="#009c3b"/>
+  <text x="300" y="1388" fill="#fff" font-size="16" text-anchor="middle" class="pixel">INFORMÁTICA FUNCIONANDO</text>
+</svg>
