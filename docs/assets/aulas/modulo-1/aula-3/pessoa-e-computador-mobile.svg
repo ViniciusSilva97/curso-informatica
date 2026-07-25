@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 980" role="img">
+  <title>Pessoa e computador recebem e transmitem informações</title>
+  <desc>Comparação vertical entre os sentidos e expressões de uma pessoa e os dispositivos de entrada e saída de um computador.</desc>
+  <rect width="600" height="980" rx="24" fill="#07110c"/>
+  <text x="300" y="54" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-weight="800" font-size="25">UMA CONVERSA COM O MUNDO</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="40" y="86" width="520" height="360" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4"/>
+    <text x="300" y="130" text-anchor="middle" fill="#fff" font-size="27" font-weight="800">PESSOA</text>
+    <circle cx="300" cy="221" r="56" fill="#ffd21a"/><circle cx="280" cy="210" r="6"/><circle cx="320" cy="210" r="6"/>
+    <path d="M278 240q22 20 44 0" fill="none" stroke="#07110c" stroke-width="7"/>
+    <path d="M235 305q65-54 130 0v47H235z" fill="#079b43"/>
+    <rect x="67" y="371" width="218" height="48" rx="8" fill="#07110c" stroke="#16c65b" stroke-width="3"/>
+    <rect x="315" y="371" width="218" height="48" rx="8" fill="#07110c" stroke="#ffd21a" stroke-width="3"/>
+    <text x="176" y="401" text-anchor="middle" fill="#16c65b" font-size="16" font-weight="700">RECEBE: olhos e ouvidos</text>
+    <text x="424" y="401" text-anchor="middle" fill="#ffd21a" font-size="16" font-weight="700">TRANSMITE: fala e gestos</text>
+    <path d="M300 458v55M283 494l17 20 17-20" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="40" y="530" width="520" height="390" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4"/>
+    <text x="300" y="575" text-anchor="middle" fill="#fff" font-size="27" font-weight="800">COMPUTADOR</text>
+    <rect x="177" y="612" width="246" height="165" rx="10" fill="#050806" stroke="#16c65b" stroke-width="7"/>
+    <rect x="198" y="633" width="204" height="123" fill="#0d2719"/>
+    <path d="M218 725l40-37 34 24 43-55 47 38" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <path d="M275 778v27h50v-27M245 807h110" fill="none" stroke="#16c65b" stroke-width="8"/>
+    <rect x="67" y="836" width="218" height="55" rx="8" fill="#07110c" stroke="#16c65b" stroke-width="3"/>
+    <rect x="315" y="836" width="218" height="55" rx="8" fill="#07110c" stroke="#ffd21a" stroke-width="3"/>
+    <text x="176" y="859" text-anchor="middle" fill="#16c65b" font-size="16" font-weight="700">ENTRADA</text><text x="176" y="880" text-anchor="middle" fill="#fff" font-size="14">teclado e microfone</text>
+    <text x="424" y="859" text-anchor="middle" fill="#ffd21a" font-size="16" font-weight="700">SAÍDA</text><text x="424" y="880" text-anchor="middle" fill="#fff" font-size="14">monitor e som</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 570" role="img">
+  <title>Jornada de uma mensagem no computador</title>
+  <desc>Uma mensagem digitada entra pelo teclado, é processada pela CPU e pelo sistema e aparece na tela como saída.</desc>
+  <rect width="1200" height="570" rx="28" fill="#07110c"/>
+  <text x="600" y="65" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="31" font-weight="800">A JORNADA DA INFORMAÇÃO</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="57" y="124" width="300" height="333" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4"/>
+    <rect x="100" y="196" width="214" height="96" rx="12" fill="#050806" stroke="#16c65b" stroke-width="5"/>
+    <g fill="#253229"><rect x="121" y="217" width="48" height="27" rx="4"/><rect x="177" y="217" width="48" height="27" rx="4"/><rect x="233" y="217" width="48" height="27" rx="4"/><rect x="140" y="255" width="132" height="21" rx="4"/></g>
+    <text x="207" y="342" text-anchor="middle" fill="#16c65b" font-size="25" font-weight="800">ENTRADA</text><text x="207" y="378" text-anchor="middle" fill="#fff" font-size="18">você digita a mensagem</text><text x="207" y="414" text-anchor="middle" fill="#ffd21a" font-size="26" font-weight="800">“Olá!”</text>
+    <path d="M375 287h78" stroke="#ffd21a" stroke-width="8"/><path d="M433 267l24 20-24 20" fill="none" stroke="#ffd21a" stroke-width="8"/>
+    <rect x="450" y="124" width="300" height="333" rx="18" fill="#101b14" stroke="#ffd21a" stroke-width="4"/>
+    <rect x="540" y="192" width="120" height="120" rx="13" fill="#07110c" stroke="#ffd21a" stroke-width="7"/>
+    <g stroke="#16c65b" stroke-width="6"><path d="M565 178v-25m35 25v-25m35 25v-25M565 326v25m35-25v25m35-25v25M526 218h-25m25 35h-25m25 35h-25M674 218h25m-25 35h25m-25 35h25"/></g>
+    <text x="600" y="244" text-anchor="middle" fill="#ffd21a" font-size="20" font-weight="800">CPU</text><text x="600" y="274" text-anchor="middle" fill="#16c65b" font-size="16">+ SISTEMA</text>
+    <text x="600" y="386" text-anchor="middle" fill="#ffd21a" font-size="25" font-weight="800">PROCESSAMENTO</text><text x="600" y="420" text-anchor="middle" fill="#fff" font-size="18">os dados são interpretados</text>
+    <path d="M767 287h78" stroke="#ffd21a" stroke-width="8"/><path d="M825 267l24 20-24 20" fill="none" stroke="#ffd21a" stroke-width="8"/>
+    <rect x="843" y="124" width="300" height="333" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4"/>
+    <rect x="891" y="186" width="204" height="137" rx="9" fill="#050806" stroke="#16c65b" stroke-width="6"/><rect x="910" y="205" width="166" height="99" fill="#0d2719"/>
+    <text x="993" y="266" text-anchor="middle" fill="#fff" font-size="32" font-weight="800">Olá!</text><path d="M965 325v25h56v-25M938 352h110" stroke="#16c65b" stroke-width="7"/>
+    <text x="993" y="397" text-anchor="middle" fill="#16c65b" font-size="25" font-weight="800">SAÍDA</text><text x="993" y="431" text-anchor="middle" fill="#fff" font-size="18">a mensagem aparece</text>
+    <rect x="360" y="493" width="480" height="44" rx="22" fill="#ffd21a"/><text x="600" y="522" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">ENTRADA → PROCESSAMENTO → SAÍDA</text>
+  </g>
+</svg>
