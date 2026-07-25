@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1110" role="img" aria-labelledby="title desc">
+  <title id="title">RAM e SSD: mesa e estante</title><desc id="desc">RAM trabalha temporariamente; SSD armazena permanentemente.</desc>
+  <defs><style>.p{font-family:"Courier New",monospace;font-weight:700}.b{font-family:Arial,sans-serif}</style></defs>
+  <rect width="600" height="1110" rx="22" fill="#fff8eb"/><rect x="16" y="16" width="568" height="1078" rx="14" fill="none" stroke="#050806" stroke-width="5"/>
+  <text x="300" y="58" fill="#050806" font-size="26" text-anchor="middle" class="p">RAM E SSD</text><text x="300" y="90" fill="#050806" font-size="23" text-anchor="middle" class="p">FUNÇÕES DIFERENTES</text>
+  <rect x="55" y="125" width="490" height="405" rx="12" fill="#050806" stroke="#009c3b" stroke-width="5"/>
+  <text x="300" y="180" fill="#19c65b" font-size="29" text-anchor="middle" class="p">RAM = MESA</text><text x="300" y="217" fill="#fff" font-size="18" text-anchor="middle" class="b">Rápida, temporária e usada agora</text>
+  <path d="M145 385h310M180 385v75m240-75v75" stroke="#ffc900" stroke-width="17"/><rect x="185" y="280" width="75" height="80" fill="#fff"/><rect x="280" y="255" width="90" height="105" fill="#ffc900"/><rect x="390" y="295" width="40" height="65" fill="#009c3b"/>
+  <text x="300" y="493" fill="#bdc7c0" font-size="16" text-anchor="middle" class="b">O conteúdo desaparece ao desligar.</text>
+  <rect x="55" y="580" width="490" height="405" rx="12" fill="#ffc900" stroke="#050806" stroke-width="5"/>
+  <text x="300" y="635" fill="#050806" font-size="29" text-anchor="middle" class="p">SSD = ESTANTE</text><text x="300" y="672" fill="#050806" font-size="18" text-anchor="middle" class="b">Permanente e de maior capacidade</text>
+  <path d="M145 720h310v190H145zM145 783h310M145 846h310" fill="#050806" stroke="#050806" stroke-width="7"/>
+  <g fill="#19c65b"><rect x="165" y="740" width="105" height="25"/><rect x="290" y="740" width="140" height="25"/><rect x="165" y="803" width="140" height="25"/><rect x="325" y="803" width="105" height="25"/><rect x="165" y="866" width="120" height="25"/><rect x="305" y="866" width="125" height="25"/></g>
+  <text x="300" y="950" fill="#050806" font-size="16" text-anchor="middle" class="b">Os arquivos permanecem após desligar.</text>
+  <rect x="105" y="1025" width="390" height="42" fill="#009c3b"/><text x="300" y="1053" fill="#fff" font-size="17" text-anchor="middle" class="p">RAM TRABALHA · SSD ARMAZENA</text>
+</svg>

@@ -32,6 +32,14 @@ Nessa cidade existem:
 
 Essa cidade é o seu computador.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-2/computador-como-cidade-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-2/computador-como-cidade.svg" alt="Comparação do computador com uma cidade: CPU como prefeito, RAM como mesa, SSD como depósito e placa-mãe como ruas." loading="lazy">
+  </picture>
+  <figcaption>A metáfora da cidade ajuda a separar a função de cada componente sem perder a visão do conjunto.</figcaption>
+</figure>
+
 ## A CPU - O Cérebro da operação
 A CPU(Processador) é o Cérebro do computador.
 
@@ -66,6 +74,14 @@ Ele possui:
 
 A estante representa o SSD.
 A mesa representa a RAM.
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-2/ram-e-ssd-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-2/ram-e-ssd.svg" alt="Comparação entre RAM como mesa de trabalho temporária e SSD como estante de armazenamento permanente." loading="lazy">
+  </picture>
+  <figcaption>A RAM mantém o que está sendo usado agora; o SSD conserva programas e arquivos mesmo depois que o computador é desligado.</figcaption>
+</figure>
 
 ### O que a RAM faz?
 A RAM guarda temporariamente tudo aquilo que está sendo usado naquele momento.
@@ -140,6 +156,14 @@ Ela permite a comunicação entre:
 
 Tudo passa pela placa-mãe.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-2/placa-mae-conexoes-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-2/placa-mae-conexoes.svg" alt="Diagrama da placa-mãe conectada à CPU, RAM, SSD, placa de vídeo, energia, rede e periféricos." loading="lazy">
+  </picture>
+  <figcaption>A placa-mãe cria os caminhos físicos e eletrônicos usados pelos componentes para trocar dados e receber energia.</figcaption>
+</figure>
+
 ## O que acontence quando você abre um programa?
 Vamos seguir o caminho:
 
@@ -160,6 +184,14 @@ A placa-mãe conecta toda a comunicação.
 
 ### Passo 6
 O programa aparece na tela.
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-2/abrindo-um-programa-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-2/abrindo-um-programa.svg" alt="Fluxo de abertura do Chrome: clique, leitura no SSD, envio para RAM, processamento pela CPU, comunicação pela placa-mãe e exibição na tela." loading="lazy">
+  </picture>
+  <figcaption>A abertura de um programa é rápida porque os componentes dividem o trabalho e se comunicam em uma sequência coordenada.</figcaption>
+</figure>
 
 Tudo isso acontence em frações de segundos.
 
