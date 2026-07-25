@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img">
+  <title>Sistemas operacionais e seus principais ambientes</title>
+  <desc>Windows aparece em computadores pessoais, Linux em servidores e nuvem, Android em smartphones de várias marcas e iOS nos dispositivos móveis da Apple.</desc>
+  <rect width="1200" height="600" rx="28" fill="#07110c"/>
+  <text x="600" y="64" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">ONDE CADA SISTEMA APARECE?</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="108" width="260" height="390" rx="18"/><rect x="328" y="108" width="260" height="390" rx="18"/><rect x="611" y="108" width="260" height="390" rx="18"/><rect x="894" y="108" width="260" height="390" rx="18"/></g>
+    <g fill="#ffd21a"><rect x="115" y="165" width="120" height="92" rx="8"/><rect x="398" y="165" width="120" height="92" rx="8"/><rect x="681" y="155" width="120" height="122" rx="20"/><rect x="964" y="155" width="120" height="122" rx="20"/></g>
+    <g fill="#07110c"><path d="M130 182h40v28h-40zm50 0h40v28h-40zm-50 36h40v28h-40zm50 0h40v28h-40z"/><path d="M420 193h76v17h-76zm0 28h76v17h-76z"/><circle cx="741" cy="195" r="25"/><rect x="710" y="224" width="62" height="31" rx="12"/><circle cx="1024" cy="215" r="34"/></g>
+    <g text-anchor="middle"><text x="175" y="317" fill="#fff" font-size="26" font-weight="800">WINDOWS</text><text x="458" y="317" fill="#fff" font-size="26" font-weight="800">LINUX</text><text x="741" y="317" fill="#fff" font-size="26" font-weight="800">ANDROID</text><text x="1024" y="317" fill="#fff" font-size="26" font-weight="800">iOS</text>
+      <text x="175" y="359" fill="#16c65b" font-size="18" font-weight="700">COMPUTADORES</text><text x="458" y="359" fill="#16c65b" font-size="18" font-weight="700">SERVIDORES</text><text x="741" y="359" fill="#16c65b" font-size="18" font-weight="700">SMARTPHONES</text><text x="1024" y="359" fill="#16c65b" font-size="18" font-weight="700">APPLE</text>
+      <text x="175" y="401" fill="#fff" font-size="16">uso pessoal</text><text x="175" y="428" fill="#fff" font-size="16">e empresas</text><text x="458" y="401" fill="#fff" font-size="16">empresas</text><text x="458" y="428" fill="#fff" font-size="16">e nuvem</text><text x="741" y="401" fill="#fff" font-size="16">diversas</text><text x="741" y="428" fill="#fff" font-size="16">marcas</text><text x="1024" y="401" fill="#fff" font-size="16">integração</text><text x="1024" y="428" fill="#fff" font-size="16">e experiência</text></g>
+    <rect x="308" y="530" width="584" height="42" rx="21" fill="#16c65b"/><text x="600" y="558" text-anchor="middle" fill="#07110c" font-size="18" font-weight="800">DISPOSITIVOS DIFERENTES, A MESMA MISSÃO</text>
+  </g>
+</svg>
