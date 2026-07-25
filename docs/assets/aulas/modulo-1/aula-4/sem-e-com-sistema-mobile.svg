@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1010" role="img">
+  <title>Computador sem sistema e com sistema operacional</title>
+  <desc>Comparação vertical entre hardware sem coordenação e computador organizado pelo sistema operacional.</desc>
+  <rect width="600" height="1010" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="23" font-weight="800">O HARDWARE SOZINHO NÃO BASTA</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="45" y="80" width="510" height="375" rx="18" fill="#101b14" stroke="#606a63" stroke-width="4"/>
+    <text x="300" y="125" text-anchor="middle" fill="#aeb7b0" font-size="22" font-weight="800">SEM SISTEMA OPERACIONAL</text>
+    <rect x="170" y="160" width="260" height="155" rx="11" fill="#050806" stroke="#5f6861" stroke-width="7"/>
+    <text x="300" y="225" text-anchor="middle" fill="#aeb7b0" font-size="20">HARDWARE</text><text x="300" y="260" text-anchor="middle" fill="#ef5b5b" font-size="21" font-weight="800">SEM COORDENAÇÃO</text>
+    <path d="M215 340l170 62M385 340l-170 62" stroke="#ef5b5b" stroke-width="9"/>
+    <text x="300" y="430" text-anchor="middle" fill="#aeb7b0" font-size="16">componentes presentes, uso limitado</text>
+    <path d="M300 466v50m-18-19 18 20 18-20" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="45" y="532" width="510" height="420" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="5"/>
+    <text x="300" y="578" text-anchor="middle" fill="#16c65b" font-size="22" font-weight="800">COM SISTEMA OPERACIONAL</text>
+    <rect x="170" y="615" width="260" height="165" rx="11" fill="#050806" stroke="#16c65b" stroke-width="7"/>
+    <rect x="194" y="639" width="212" height="117" fill="#0d2719"/>
+    <g fill="#ffd21a"><rect x="214" y="660" width="48" height="42" rx="5"/><rect x="276" y="660" width="48" height="42" rx="5"/><rect x="338" y="660" width="48" height="42" rx="5"/></g><rect x="214" y="719" width="172" height="13" rx="6" fill="#16c65b"/>
+    <g fill="#fff" font-size="16" text-anchor="middle"><text x="150" y="832">PROGRAMAS</text><text x="300" y="832">ARQUIVOS</text><text x="450" y="832">USUÁRIOS</text></g>
+    <text x="300" y="910" text-anchor="middle" fill="#fff" font-size="16">recursos organizados</text><text x="300" y="935" text-anchor="middle" fill="#fff" font-size="16">e prontos para uso</text>
+  </g>
+</svg>

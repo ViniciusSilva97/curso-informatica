@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img">
+  <title>Sistemas operacionais e seus principais ambientes</title>
+  <desc>Windows aparece em computadores pessoais, Linux em servidores e nuvem, Android em smartphones de várias marcas e iOS nos dispositivos móveis da Apple.</desc>
+  <rect width="1200" height="600" rx="28" fill="#07110c"/>
+  <text x="600" y="64" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">ONDE CADA SISTEMA APARECE?</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="108" width="260" height="390" rx="18"/><rect x="328" y="108" width="260" height="390" rx="18"/><rect x="611" y="108" width="260" height="390" rx="18"/><rect x="894" y="108" width="260" height="390" rx="18"/></g>
+    <g fill="#ffd21a"><rect x="115" y="165" width="120" height="92" rx="8"/><rect x="398" y="165" width="120" height="92" rx="8"/><rect x="681" y="155" width="120" height="122" rx="20"/><rect x="964" y="155" width="120" height="122" rx="20"/></g>
+    <g fill="#07110c">
+      <path d="M130 182h40v28h-40zm50 0h40v28h-40zm-50 36h40v28h-40zm50 0h40v28h-40z"/>
+      <g aria-label="Pinguim estilizado do Linux">
+        <ellipse cx="458" cy="215" rx="35" ry="43"/>
+        <ellipse cx="458" cy="219" rx="23" ry="31" fill="#ffd21a"/>
+        <circle cx="447" cy="197" r="8" fill="#fff"/><circle cx="469" cy="197" r="8" fill="#fff"/>
+        <circle cx="449" cy="199" r="3"/><circle cx="467" cy="199" r="3"/>
+        <path d="M450 209h16l-8 10z" fill="#f28c18"/>
+        <path d="M426 216l-15 25 24-9M490 216l15 25-24-9" fill="#07110c"/>
+        <ellipse cx="442" cy="254" rx="18" ry="7" fill="#f28c18"/><ellipse cx="474" cy="254" rx="18" ry="7" fill="#f28c18"/>
+      </g>
+      <g aria-label="Símbolo estilizado do Android">
+        <path d="M715 194q26-27 52 0v8h-52z"/>
+        <path d="M719 207h44v38q0 10-10 10h-24q-10 0-10-10z"/>
+        <path d="M709 209h7v31h-7zm57 0h7v31h-7zM727 250h8v17h-8zm20 0h8v17h-8z"/>
+        <path d="M724 184l-8-13M758 184l8-13" fill="none" stroke="#07110c" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="729" cy="194" r="3" fill="#ffd21a"/><circle cx="753" cy="194" r="3" fill="#ffd21a"/>
+      </g>
+      <g aria-label="Símbolo estilizado da Apple">
+        <path d="M1025 187c-8-10-21-12-31-5-12 8-17 25-11 42 7 20 19 36 31 36 7 0 10-5 18-5 8 0 10 5 18 5 12 0 24-17 29-31-17-7-20-29-5-39-9-11-25-13-37-5-5 3-8 4-12 2z"/>
+        <path d="M1033 176c1-12 10-22 22-24 1 12-7 23-22 24z"/>
+        <path d="M1067 196q-12 8-3 22l17-8v-14z" fill="#ffd21a"/>
+      </g>
+    </g>
+    <g text-anchor="middle"><text x="175" y="317" fill="#fff" font-size="26" font-weight="800">WINDOWS</text><text x="458" y="317" fill="#fff" font-size="26" font-weight="800">LINUX</text><text x="741" y="317" fill="#fff" font-size="26" font-weight="800">ANDROID</text><text x="1024" y="317" fill="#fff" font-size="26" font-weight="800">iOS</text>
+      <text x="175" y="359" fill="#16c65b" font-size="18" font-weight="700">COMPUTADORES</text><text x="458" y="359" fill="#16c65b" font-size="18" font-weight="700">SERVIDORES</text><text x="741" y="359" fill="#16c65b" font-size="18" font-weight="700">SMARTPHONES</text><text x="1024" y="359" fill="#16c65b" font-size="18" font-weight="700">APPLE</text>
+      <text x="175" y="401" fill="#fff" font-size="16">uso pessoal</text><text x="175" y="428" fill="#fff" font-size="16">e empresas</text><text x="458" y="401" fill="#fff" font-size="16">empresas</text><text x="458" y="428" fill="#fff" font-size="16">e nuvem</text><text x="741" y="401" fill="#fff" font-size="16">diversas</text><text x="741" y="428" fill="#fff" font-size="16">marcas</text><text x="1024" y="401" fill="#fff" font-size="16">integração</text><text x="1024" y="428" fill="#fff" font-size="16">e experiência</text></g>
+    <rect x="308" y="530" width="584" height="42" rx="21" fill="#16c65b"/><text x="600" y="558" text-anchor="middle" fill="#07110c" font-size="18" font-weight="800">DISPOSITIVOS DIFERENTES, A MESMA MISSÃO</text>
+  </g>
+</svg>

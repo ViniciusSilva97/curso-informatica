@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1080" role="img">
+  <title>O sistema operacional como maestro do computador</title>
+  <desc>O sistema operacional ocupa o centro e coordena programas, processador, memória, armazenamento e dispositivos.</desc>
+  <rect width="600" height="1080" rx="24" fill="#07110c"/>
+  <text x="300" y="50" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="24" font-weight="800">QUEM COORDENA TUDO?</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="90" y="85" width="420" height="185" rx="20" fill="#101b14" stroke="#ffd21a" stroke-width="6"/>
+    <circle cx="300" cy="145" r="38" fill="#ffd21a"/><path d="M279 145h42M300 124v42" stroke="#07110c" stroke-width="10"/>
+    <text x="300" y="207" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">SISTEMA</text>
+    <text x="300" y="238" text-anchor="middle" fill="#16c65b" font-size="23" font-weight="800">OPERACIONAL</text>
+    <path d="M300 280v53" stroke="#ffd21a" stroke-width="7"/><path d="M280 314l20 21 20-21" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="55" y="350" width="230" height="170" rx="15"/><rect x="315" y="350" width="230" height="170" rx="15"/>
+      <rect x="55" y="550" width="230" height="170" rx="15"/><rect x="315" y="550" width="230" height="170" rx="15"/>
+    </g>
+    <g text-anchor="middle"><text x="170" y="408" fill="#16c65b" font-size="21" font-weight="800">PROGRAMAS</text><text x="170" y="447" fill="#fff" font-size="16">Chrome</text><text x="170" y="475" fill="#fff" font-size="16">WhatsApp</text>
+      <text x="430" y="408" fill="#16c65b" font-size="21" font-weight="800">CPU + RAM</text><text x="430" y="447" fill="#fff" font-size="16">processar</text><text x="430" y="475" fill="#fff" font-size="16">e trabalhar</text>
+      <text x="170" y="608" fill="#16c65b" font-size="21" font-weight="800">ARQUIVOS</text><text x="170" y="647" fill="#fff" font-size="16">SSD • pastas</text><text x="170" y="675" fill="#fff" font-size="16">fotos • vídeos</text>
+      <text x="430" y="608" fill="#16c65b" font-size="21" font-weight="800">DISPOSITIVOS</text><text x="430" y="647" fill="#fff" font-size="16">teclado</text><text x="430" y="675" fill="#fff" font-size="16">monitor</text></g>
+    <path d="M300 735v70" stroke="#ffd21a" stroke-width="7"/><path d="M280 786l20 21 20-21" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="65" y="825" width="470" height="170" rx="20" fill="#16c65b"/>
+    <text x="300" y="892" text-anchor="middle" fill="#07110c" font-size="23" font-weight="800">UM MAESTRO</text><text x="300" y="931" text-anchor="middle" fill="#07110c" font-size="23" font-weight="800">PARA TODAS AS PARTES</text>
+  </g>
+</svg>
