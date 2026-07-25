@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1300" role="img">
+  <title>Dispositivos de entrada, saída e entrada e saída</title>
+  <desc>Quadro vertical classifica os principais dispositivos conforme o sentido em que as informações circulam.</desc>
+  <rect width="600" height="1300" rx="24" fill="#07110c"/>
+  <text x="300" y="50" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="25" font-weight="800">ENTRADA, SAÍDA OU OS DOIS?</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="40" y="82" width="520" height="370" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4"/>
+    <text x="300" y="130" text-anchor="middle" fill="#16c65b" font-size="27" font-weight="800">ENTRADA →</text><text x="300" y="160" text-anchor="middle" fill="#fff" font-size="17">envia dados ao computador</text>
+    <g fill="#07110c" stroke="#16c65b" stroke-width="2"><rect x="72" y="195" width="215" height="58" rx="8"/><rect x="313" y="195" width="215" height="58" rx="8"/><rect x="72" y="273" width="215" height="58" rx="8"/><rect x="313" y="273" width="215" height="58" rx="8"/><rect x="192" y="351" width="215" height="58" rx="8"/></g>
+    <g fill="#fff" font-size="18" text-anchor="middle"><text x="180" y="231">TECLADO</text><text x="420" y="231">MOUSE</text><text x="180" y="309">MICROFONE</text><text x="420" y="309">WEBCAM</text><text x="300" y="387">SCANNER</text></g>
+    <rect x="40" y="475" width="520" height="340" rx="18" fill="#101b14" stroke="#ffd21a" stroke-width="4"/>
+    <text x="300" y="523" text-anchor="middle" fill="#ffd21a" font-size="27" font-weight="800">← SAÍDA</text><text x="300" y="553" text-anchor="middle" fill="#fff" font-size="17">apresenta o resultado</text>
+    <g fill="#07110c" stroke="#ffd21a" stroke-width="2"><rect x="72" y="596" width="215" height="64" rx="8"/><rect x="313" y="596" width="215" height="64" rx="8"/><rect x="72" y="683" width="215" height="64" rx="8"/><rect x="313" y="683" width="215" height="64" rx="8"/></g>
+    <g fill="#fff" font-size="18" text-anchor="middle"><text x="180" y="635">MONITOR</text><text x="420" y="635">IMPRESSORA</text><text x="180" y="722">CAIXA DE SOM</text><text x="420" y="722">FONES</text></g>
+    <rect x="40" y="838" width="520" height="405" rx="18" fill="#101b14" stroke="#16c65b" stroke-width="4" stroke-dasharray="14 8"/>
+    <text x="300" y="890" text-anchor="middle" fill="#fff" font-size="27" font-weight="800">↔ ENTRADA + SAÍDA</text><text x="300" y="922" text-anchor="middle" fill="#fff" font-size="17">recebe e também apresenta</text>
+    <rect x="76" y="967" width="448" height="92" rx="9" fill="#07110c" stroke="#16c65b" stroke-width="3"/><rect x="76" y="1085" width="448" height="92" rx="9" fill="#07110c" stroke="#16c65b" stroke-width="3"/>
+    <g text-anchor="middle"><text x="300" y="1004" fill="#16c65b" font-size="20" font-weight="800">SMARTPHONE</text><text x="300" y="1035" fill="#fff" font-size="16">toque, voz, som e imagem</text><text x="300" y="1122" fill="#16c65b" font-size="20" font-weight="800">TELA TOUCH</text><text x="300" y="1153" fill="#fff" font-size="16">recebe toques e exibe textos</text></g>
+  </g>
+</svg>
