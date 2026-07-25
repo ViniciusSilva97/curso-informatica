@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1160" role="img">
+  <title>Sistemas operacionais e seus principais ambientes</title>
+  <desc>Windows aparece em computadores pessoais, Linux em servidores e nuvem, Android em smartphones de várias marcas e iOS nos dispositivos móveis da Apple.</desc>
+  <rect width="600" height="1160" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="23" font-weight="800">ONDE CADA SISTEMA APARECE?</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="42" y="80" width="516" height="225" rx="17"/><rect x="42" y="325" width="516" height="225" rx="17"/><rect x="42" y="570" width="516" height="225" rx="17"/><rect x="42" y="815" width="516" height="225" rx="17"/></g>
+    <g fill="#ffd21a"><rect x="75" y="125" width="120" height="92" rx="8"/><rect x="75" y="370" width="120" height="92" rx="8"/><rect x="83" y="605" width="104" height="142" rx="20"/><rect x="83" y="850" width="104" height="142" rx="20"/></g>
+    <g fill="#07110c">
+      <path d="M91 141h40v28H91zm49 0h40v28h-40zm-49 36h40v28H91zm49 0h40v28h-40z"/>
+      <g aria-label="Pinguim estilizado do Linux">
+        <ellipse cx="135" cy="416" rx="38" ry="48"/>
+        <ellipse cx="135" cy="421" rx="25" ry="34" fill="#ffd21a"/>
+        <circle cx="123" cy="396" r="9" fill="#fff"/><circle cx="147" cy="396" r="9" fill="#fff"/>
+        <circle cx="125" cy="398" r="3.5"/><circle cx="145" cy="398" r="3.5"/>
+        <path d="M126 409h18l-9 11z" fill="#f28c18"/>
+        <path d="M100 417l-16 28 26-10M170 417l16 28-26-10" fill="#07110c"/>
+        <ellipse cx="117" cy="458" rx="20" ry="8" fill="#f28c18"/><ellipse cx="153" cy="458" rx="20" ry="8" fill="#f28c18"/>
+      </g>
+      <g aria-label="Símbolo estilizado do Android">
+        <path d="M106 646q29-31 58 0v9h-58z"/>
+        <path d="M110 661h50v45q0 11-11 11h-28q-11 0-11-11z"/>
+        <path d="M99 663h8v36h-8zm64 0h8v36h-8zM119 712h9v20h-9zm23 0h9v20h-9z"/>
+        <path d="M116 634l-9-15M154 634l9-15" fill="none" stroke="#07110c" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="122" cy="646" r="3.5" fill="#ffd21a"/><circle cx="148" cy="646" r="3.5" fill="#ffd21a"/>
+      </g>
+      <g aria-label="Símbolo estilizado da Apple">
+        <path d="M134 891c-7-9-18-10-27-5-11 7-15 22-10 37 6 18 17 32 28 32 6 0 9-4 16-4s9 4 16 4c10 0 21-15 25-28-15-6-18-25-5-34-8-9-22-11-32-4-4 3-7 3-11 2z"/>
+        <path d="M141 881c1-11 9-20 20-22 1 11-6 21-20 22z"/>
+        <path d="M172 897q-10 7-3 19l15-7v-12z" fill="#ffd21a"/>
+      </g>
+    </g>
+    <g text-anchor="start"><text x="235" y="145" fill="#fff" font-size="26" font-weight="800">WINDOWS</text><text x="235" y="185" fill="#16c65b" font-size="18" font-weight="700">COMPUTADORES</text><text x="235" y="225" fill="#fff" font-size="16">uso pessoal e empresas</text>
+      <text x="235" y="390" fill="#fff" font-size="26" font-weight="800">LINUX</text><text x="235" y="430" fill="#16c65b" font-size="18" font-weight="700">SERVIDORES</text><text x="235" y="470" fill="#fff" font-size="16">empresas e nuvem</text>
+      <text x="235" y="635" fill="#fff" font-size="26" font-weight="800">ANDROID</text><text x="235" y="675" fill="#16c65b" font-size="18" font-weight="700">SMARTPHONES</text><text x="235" y="715" fill="#fff" font-size="16">dispositivos de várias marcas</text>
+      <text x="235" y="880" fill="#fff" font-size="26" font-weight="800">iOS</text><text x="235" y="920" fill="#16c65b" font-size="18" font-weight="700">APPLE</text><text x="235" y="960" fill="#fff" font-size="16">integração e experiência</text></g>
+    <rect x="70" y="1070" width="460" height="55" rx="27" fill="#16c65b"/><text x="300" y="1104" text-anchor="middle" fill="#07110c" font-size="15" font-weight="800">DIFERENTES, COM A MESMA MISSÃO</text>
+  </g>
+</svg>

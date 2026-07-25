@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img">
+  <title>Computador sem sistema e com sistema operacional</title>
+  <desc>Sem sistema operacional o hardware existe, mas não está organizado para o usuário; com o sistema, recursos, arquivos e programas tornam-se utilizáveis.</desc>
+  <rect width="1200" height="610" rx="28" fill="#07110c"/>
+  <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">O HARDWARE SOZINHO NÃO BASTA</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="60" y="105" width="490" height="420" rx="20" fill="#101b14" stroke="#606a63" stroke-width="4"/>
+    <text x="305" y="157" text-anchor="middle" fill="#aeb7b0" font-size="26" font-weight="800">SEM SISTEMA OPERACIONAL</text>
+    <rect x="168" y="201" width="274" height="175" rx="12" fill="#050806" stroke="#5f6861" stroke-width="7"/>
+    <text x="305" y="278" text-anchor="middle" fill="#aeb7b0" font-size="21">HARDWARE</text><text x="305" y="313" text-anchor="middle" fill="#ef5b5b" font-size="22" font-weight="800">SEM COORDENAÇÃO</text>
+    <path d="M210 411l190 65M400 411l-190 65" stroke="#ef5b5b" stroke-width="10"/>
+    <text x="305" y="505" text-anchor="middle" fill="#aeb7b0" font-size="17">componentes presentes, uso limitado</text>
+    <path d="M570 310h60" stroke="#ffd21a" stroke-width="8"/><path d="M610 290l24 20-24 20" fill="none" stroke="#ffd21a" stroke-width="8"/>
+    <rect x="650" y="105" width="490" height="420" rx="20" fill="#101b14" stroke="#16c65b" stroke-width="5"/>
+    <text x="895" y="157" text-anchor="middle" fill="#16c65b" font-size="26" font-weight="800">COM SISTEMA OPERACIONAL</text>
+    <rect x="758" y="201" width="274" height="175" rx="12" fill="#050806" stroke="#16c65b" stroke-width="7"/>
+    <rect x="785" y="228" width="220" height="120" fill="#0d2719"/>
+    <g fill="#ffd21a"><rect x="807" y="251" width="48" height="42" rx="5"/><rect x="871" y="251" width="48" height="42" rx="5"/><rect x="935" y="251" width="48" height="42" rx="5"/></g>
+    <g fill="#16c65b"><rect x="807" y="310" width="176" height="13" rx="6"/></g>
+    <g fill="#fff" font-size="18" text-anchor="middle"><text x="760" y="421">PROGRAMAS</text><text x="895" y="421">ARQUIVOS</text><text x="1030" y="421">USUÁRIOS</text></g>
+    <g stroke="#16c65b" stroke-width="5"><path d="M760 433v38"/><path d="M895 433v38"/><path d="M1030 433v38"/></g>
+    <text x="895" y="505" text-anchor="middle" fill="#fff" font-size="17">recursos organizados e prontos para uso</text>
+  </g>
+</svg>
