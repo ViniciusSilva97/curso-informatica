@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1160" role="img">
+  <title>As quatro funções principais do sistema operacional</title>
+  <desc>O sistema operacional gerencia hardware, programas, arquivos e usuários.</desc>
+  <rect width="600" height="1160" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="23" font-weight="800">O QUE O SISTEMA FAZ?</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="80" width="510" height="225" rx="17"/><rect x="45" y="325" width="510" height="225" rx="17"/><rect x="45" y="570" width="510" height="225" rx="17"/><rect x="45" y="815" width="510" height="225" rx="17"/></g>
+    <g fill="#ffd21a"><circle cx="110" cy="145" r="35"/><circle cx="110" cy="390" r="35"/><circle cx="110" cy="635" r="35"/><circle cx="110" cy="880" r="35"/></g>
+    <g fill="#07110c" font-size="27" font-weight="800" text-anchor="middle"><text x="110" y="155">1</text><text x="110" y="400">2</text><text x="110" y="645">3</text><text x="110" y="890">4</text></g>
+    <g fill="#fff" font-size="23" font-weight="800"><text x="165" y="140">HARDWARE</text><text x="165" y="385">PROGRAMAS</text><text x="165" y="630">ARQUIVOS</text><text x="165" y="875">USUÁRIOS</text></g>
+    <g fill="#16c65b" font-size="18"><text x="165" y="175">CPU • RAM • SSD</text><text x="165" y="420">abrir • executar • organizar</text><text x="165" y="665">fotos • vídeos • documentos</text><text x="165" y="910">entrar • alterar • instalar</text></g>
+    <g fill="#fff" font-size="17"><text x="80" y="235">Controla os recursos físicos</text><text x="80" y="263">do computador.</text><text x="80" y="480">Distribui recursos entre</text><text x="80" y="508">os aplicativos.</text><text x="80" y="725">Mantém pastas e dados</text><text x="80" y="753">organizados.</text><text x="80" y="970">Define quem pode fazer</text><text x="80" y="998">cada ação.</text></g>
+    <rect x="75" y="1070" width="450" height="52" rx="26" fill="#ffd21a"/><text x="300" y="1103" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">ORGANIZAR • CONTROLAR • PROTEGER</text>
+  </g>
+</svg>
