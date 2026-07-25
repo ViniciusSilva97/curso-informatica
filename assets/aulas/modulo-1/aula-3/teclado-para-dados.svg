@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img">
+  <title>Do toque no teclado aos dados digitais</title>
+  <desc>A palavra Olá é digitada, convertida em sinais elétricos e recebida pelo computador como dados.</desc>
+  <rect width="1200" height="560" rx="28" fill="#07110c"/>
+  <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">O QUE ACONTECE QUANDO VOCÊ DIGITA “OLÁ”?</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="58" y="122" width="300" height="328" rx="18" fill="#111b15" stroke="#16c65b" stroke-width="4"/>
+    <text x="208" y="165" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">1. VOCÊ DIGITA</text>
+    <rect x="91" y="224" width="234" height="116" rx="14" fill="#050806" stroke="#ffd21a" stroke-width="5"/>
+    <g fill="#243128"><rect x="112" y="246" width="49" height="34" rx="5"/><rect x="170" y="246" width="49" height="34" rx="5"/><rect x="228" y="246" width="49" height="34" rx="5"/><rect x="132" y="290" width="153" height="29" rx="5"/></g>
+    <text x="208" y="395" text-anchor="middle" fill="#ffd21a" font-size="39" font-weight="800">OLÁ</text>
+    <path d="M375 286h92" stroke="#16c65b" stroke-width="8"/><path d="M447 266l24 20-24 20" fill="none" stroke="#16c65b" stroke-width="8"/>
+    <rect x="450" y="122" width="300" height="328" rx="18" fill="#111b15" stroke="#16c65b" stroke-width="4"/>
+    <text x="600" y="165" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">2. VIRA SINAL</text>
+    <path d="M493 292h34l18-62 32 126 31-156 29 118 22-66 18 40h50" fill="none" stroke="#ffd21a" stroke-width="8" stroke-linejoin="round"/>
+    <text x="600" y="395" text-anchor="middle" fill="#16c65b" font-family="monospace" font-size="30" font-weight="800">01001111...</text>
+    <path d="M767 286h92" stroke="#16c65b" stroke-width="8"/><path d="M839 266l24 20-24 20" fill="none" stroke="#16c65b" stroke-width="8"/>
+    <rect x="842" y="122" width="300" height="328" rx="18" fill="#111b15" stroke="#16c65b" stroke-width="4"/>
+    <text x="992" y="165" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">3. VIRA DADO</text>
+    <rect x="906" y="210" width="172" height="130" rx="10" fill="#050806" stroke="#ffd21a" stroke-width="6"/>
+    <text x="992" y="289" text-anchor="middle" fill="#fff" font-size="38" font-weight="800">Olá</text>
+    <text x="992" y="395" text-anchor="middle" fill="#16c65b" font-size="18" font-weight="700">ENTRADA RECEBIDA</text>
+  </g>
+</svg>
