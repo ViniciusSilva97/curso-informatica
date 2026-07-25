@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">O caminho de uma foto pela internet</title>
+  <desc id="desc">A câmera registra, o celular transforma, o aplicativo prepara, a internet transporta, servidores processam e o outro celular apresenta a foto.</desc>
+  <defs><style>.pixel{font-family:"Courier New",monospace;font-weight:700}.body{font-family:Arial,sans-serif}.node{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="1200" height="650" rx="22" fill="#050806"/>
+  <text x="600" y="62" fill="#fff" font-size="32" text-anchor="middle" class="pixel">O CAMINHO DE UMA FOTO</text>
+  <text x="600" y="98" fill="#bfc9c1" font-size="20" text-anchor="middle" class="body">Uma ação de segundos envolve várias etapas invisíveis.</text>
+  <g fill="none" stroke="#ffc900" stroke-width="7">
+    <path d="M250 210H360"/><path d="M550 210H660"/><path d="M850 210H960"/>
+    <path d="M1050 275V375"/><path d="M960 455H850"/><path d="M660 455H550"/><path d="M360 455H250"/>
+  </g>
+  <g fill="#ffc900">
+    <path d="M360 210l-24-14v28zM660 210l-24-14v28zM960 210l-24-14v28zM1050 375l-14-24h28zM850 455l24-14v28zM550 455l24-14v28zM250 455l24-14v28z"/>
+  </g>
+  <g class="node">
+    <rect x="60" y="140" width="190" height="140" rx="10"/><rect x="360" y="140" width="190" height="140" rx="10"/>
+    <rect x="660" y="140" width="190" height="140" rx="10"/><rect x="960" y="140" width="180" height="140" rx="10"/>
+    <rect x="960" y="375" width="180" height="160" rx="10"/><rect x="660" y="375" width="190" height="160" rx="10"/>
+    <rect x="360" y="375" width="190" height="160" rx="10"/><rect x="60" y="375" width="190" height="160" rx="10"/>
+  </g>
+  <g fill="#ffc900" font-size="30" text-anchor="middle" class="pixel">
+    <text x="155" y="182">01</text><text x="455" y="182">02</text><text x="755" y="182">03</text><text x="1050" y="182">04</text>
+    <text x="1050" y="417">05</text><text x="755" y="417">06</text><text x="455" y="417">07</text><text x="155" y="417">✓</text>
+  </g>
+  <g fill="#fff" font-size="18" text-anchor="middle" class="body">
+    <text x="155" y="218">Câmera registra</text><text x="155" y="246" fill="#bfc9c1">a imagem</text>
+    <text x="455" y="218">Celular transforma</text><text x="455" y="246" fill="#bfc9c1">imagem em dados</text>
+    <text x="755" y="218">Aplicativo prepara</text><text x="755" y="246" fill="#bfc9c1">os dados</text>
+    <text x="1050" y="218">Internet</text><text x="1050" y="246" fill="#bfc9c1">transporta</text>
+    <text x="1050" y="458">Servidores</text><text x="1050" y="486" fill="#bfc9c1">processam</text>
+    <text x="755" y="458">Outro celular</text><text x="755" y="486" fill="#bfc9c1">recebe os dados</text>
+    <text x="455" y="458">Aplicativo</text><text x="455" y="486" fill="#bfc9c1">reconstrói a foto</text>
+    <text x="155" y="458">Seu amigo</text><text x="155" y="486" fill="#bfc9c1">visualiza a imagem</text>
+  </g>
+  <rect x="220" y="575" width="760" height="42" fill="#009c3b"/>
+  <text x="600" y="603" fill="#fff" font-size="19" text-anchor="middle" class="pixel">ISSO É INFORMÁTICA FUNCIONANDO</text>
+</svg>

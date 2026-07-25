@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">A informática está presente no cotidiano</title>
+  <desc id="desc">Mensagens, vídeos, pesquisas, pagamentos e música dependem do processamento de informações.</desc>
+  <defs><style>.pixel{font-family:"Courier New",monospace;font-weight:700}.body{font-family:Arial,sans-serif}.card{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="600" height="1040" rx="22" fill="#050806"/>
+  <path d="M0 0h70v20H38v18H20v36H0zM600 1040h-70v-20h32v-18h18v-36h20z" fill="#ffc900"/>
+  <text x="300" y="62" fill="#fff" font-size="28" text-anchor="middle" class="pixel">INFORMÁTICA</text>
+  <text x="300" y="96" fill="#fff" font-size="28" text-anchor="middle" class="pixel">NO DIA A DIA</text>
+  <text x="300" y="132" fill="#bfc9c1" font-size="18" text-anchor="middle" class="body">A tecnologia trabalha sem você perceber.</text>
+  <g class="card">
+    <rect x="70" y="180" width="200" height="120" rx="10"/><rect x="330" y="180" width="200" height="120" rx="10"/>
+    <rect x="70" y="680" width="200" height="120" rx="10"/><rect x="330" y="680" width="200" height="120" rx="10"/>
+    <rect x="200" y="850" width="200" height="120" rx="10"/>
+  </g>
+  <g fill="#fff" font-size="20" text-anchor="middle" class="body">
+    <text x="170" y="230">Mensagens</text><text x="170" y="264" fill="#bfc9c1">WhatsApp e redes</text>
+    <text x="430" y="230">Vídeos</text><text x="430" y="264" fill="#bfc9c1">TikTok e YouTube</text>
+    <text x="170" y="730">Pesquisas</text><text x="170" y="764" fill="#bfc9c1">Google e web</text>
+    <text x="430" y="730">Pagamentos</text><text x="430" y="764" fill="#bfc9c1">Pix e bancos</text>
+    <text x="300" y="900">Música</text><text x="300" y="934" fill="#bfc9c1">Áudio digital</text>
+  </g>
+  <g stroke="#19c65b" stroke-width="5" stroke-dasharray="10 10">
+    <path d="M170 300L260 395M430 300L340 395M260 585L170 680M340 585L430 680M300 585V850"/>
+  </g>
+  <rect x="185" y="365" width="230" height="250" rx="14" fill="#ffc900" stroke="#fff" stroke-width="5"/>
+  <rect x="240" y="420" width="120" height="120" fill="#050806"/>
+  <path d="M220 440h20m-20 40h20m-20 40h20m120-80h20m-20 40h20m-20 40h20M260 400v20m40-20v20m40-20v20m-80 120v20m40-20v20m40-20v20" stroke="#009c3b" stroke-width="11"/>
+  <text x="300" y="580" fill="#050806" font-size="22" text-anchor="middle" class="pixel">PROCESSAR</text>
+</svg>

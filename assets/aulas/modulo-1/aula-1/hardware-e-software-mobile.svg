@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Hardware e software trabalham juntos</title>
+  <desc id="desc">Hardware é a parte física; software são programas e instruções. Um precisa do outro.</desc>
+  <defs><style>.pixel{font-family:"Courier New",monospace;font-weight:700}.body{font-family:Arial,sans-serif}</style></defs>
+  <rect width="600" height="1080" rx="22" fill="#fff8eb"/>
+  <rect x="16" y="16" width="568" height="1048" rx="14" fill="none" stroke="#050806" stroke-width="5"/>
+  <text x="300" y="68" fill="#050806" font-size="28" text-anchor="middle" class="pixel">HARDWARE + SOFTWARE</text>
+  <rect x="60" y="115" width="480" height="390" rx="12" fill="#050806" stroke="#009c3b" stroke-width="5"/>
+  <text x="300" y="170" fill="#19c65b" font-size="30" text-anchor="middle" class="pixel">HARDWARE</text>
+  <text x="300" y="207" fill="#fff" font-size="19" text-anchor="middle" class="body">A parte física: você pode tocar</text>
+  <rect x="145" y="245" width="310" height="150" rx="8" fill="#111a14" stroke="#19c65b" stroke-width="4"/>
+  <rect x="185" y="280" width="105" height="80" fill="#ffc900"/><rect x="325" y="272" width="85" height="96" fill="#17231a" stroke="#19c65b" stroke-width="5"/>
+  <text x="300" y="445" fill="#bfc9c1" font-size="18" text-anchor="middle" class="body">CPU · RAM · SSD · monitor · teclado</text>
+  <text x="300" y="565" fill="#009c3b" font-size="50" text-anchor="middle" class="pixel">+</text>
+  <rect x="60" y="620" width="480" height="330" rx="12" fill="#ffc900" stroke="#050806" stroke-width="5"/>
+  <text x="300" y="675" fill="#050806" font-size="30" text-anchor="middle" class="pixel">SOFTWARE</text>
+  <text x="300" y="712" fill="#050806" font-size="19" text-anchor="middle" class="body">Programas e instruções: você utiliza</text>
+  <rect x="145" y="750" width="310" height="115" rx="8" fill="#050806" stroke="#009c3b" stroke-width="4"/>
+  <rect x="180" y="780" width="48" height="48" fill="#009c3b"/><rect x="248" y="780" width="48" height="48" fill="#ffc900"/>
+  <rect x="320" y="780" width="100" height="17" fill="#19c65b"/><rect x="320" y="815" width="75" height="17" fill="#fff"/>
+  <text x="300" y="910" fill="#050806" font-size="18" text-anchor="middle" class="body">Windows · Linux · apps · jogos</text>
+  <rect x="75" y="995" width="450" height="45" fill="#009c3b"/>
+  <text x="300" y="1024" fill="#fff" font-size="17" text-anchor="middle" class="pixel">UM PRECISA DO OUTRO</text>
+</svg>
