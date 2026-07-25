@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1160" role="img">
+  <title>Sistemas operacionais e seus principais ambientes</title>
+  <desc>Windows aparece em computadores pessoais, Linux em servidores e nuvem, Android em smartphones de várias marcas e iOS nos dispositivos móveis da Apple.</desc>
+  <rect width="600" height="1160" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="23" font-weight="800">ONDE CADA SISTEMA APARECE?</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="42" y="80" width="516" height="225" rx="17"/><rect x="42" y="325" width="516" height="225" rx="17"/><rect x="42" y="570" width="516" height="225" rx="17"/><rect x="42" y="815" width="516" height="225" rx="17"/></g>
+    <g fill="#ffd21a"><rect x="75" y="125" width="120" height="92" rx="8"/><rect x="75" y="370" width="120" height="92" rx="8"/><rect x="83" y="605" width="104" height="142" rx="20"/><rect x="83" y="850" width="104" height="142" rx="20"/></g>
+    <g text-anchor="start"><text x="235" y="145" fill="#fff" font-size="26" font-weight="800">WINDOWS</text><text x="235" y="185" fill="#16c65b" font-size="18" font-weight="700">COMPUTADORES</text><text x="235" y="225" fill="#fff" font-size="16">uso pessoal e empresas</text>
+      <text x="235" y="390" fill="#fff" font-size="26" font-weight="800">LINUX</text><text x="235" y="430" fill="#16c65b" font-size="18" font-weight="700">SERVIDORES</text><text x="235" y="470" fill="#fff" font-size="16">empresas e nuvem</text>
+      <text x="235" y="635" fill="#fff" font-size="26" font-weight="800">ANDROID</text><text x="235" y="675" fill="#16c65b" font-size="18" font-weight="700">SMARTPHONES</text><text x="235" y="715" fill="#fff" font-size="16">dispositivos de várias marcas</text>
+      <text x="235" y="880" fill="#fff" font-size="26" font-weight="800">iOS</text><text x="235" y="920" fill="#16c65b" font-size="18" font-weight="700">APPLE</text><text x="235" y="960" fill="#fff" font-size="16">integração e experiência</text></g>
+    <rect x="70" y="1070" width="460" height="55" rx="27" fill="#16c65b"/><text x="300" y="1104" text-anchor="middle" fill="#07110c" font-size="15" font-weight="800">DIFERENTES, COM A MESMA MISSÃO</text>
+  </g>
+</svg>
