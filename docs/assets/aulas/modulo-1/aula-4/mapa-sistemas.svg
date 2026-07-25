@@ -8,7 +8,15 @@
     <g fill="#ffd21a"><rect x="115" y="165" width="120" height="92" rx="8"/><rect x="398" y="165" width="120" height="92" rx="8"/><rect x="681" y="155" width="120" height="122" rx="20"/><rect x="964" y="155" width="120" height="122" rx="20"/></g>
     <g fill="#07110c">
       <path d="M130 182h40v28h-40zm50 0h40v28h-40zm-50 36h40v28h-40zm50 0h40v28h-40z"/>
-      <path d="M420 193h76v17h-76zm0 28h76v17h-76z"/>
+      <g aria-label="Pinguim estilizado do Linux">
+        <ellipse cx="458" cy="215" rx="35" ry="43"/>
+        <ellipse cx="458" cy="219" rx="23" ry="31" fill="#ffd21a"/>
+        <circle cx="447" cy="197" r="8" fill="#fff"/><circle cx="469" cy="197" r="8" fill="#fff"/>
+        <circle cx="449" cy="199" r="3"/><circle cx="467" cy="199" r="3"/>
+        <path d="M450 209h16l-8 10z" fill="#f28c18"/>
+        <path d="M426 216l-15 25 24-9M490 216l15 25-24-9" fill="#07110c"/>
+        <ellipse cx="442" cy="254" rx="18" ry="7" fill="#f28c18"/><ellipse cx="474" cy="254" rx="18" ry="7" fill="#f28c18"/>
+      </g>
       <g aria-label="Símbolo estilizado do Android">
         <path d="M715 194q26-27 52 0v8h-52z"/>
         <path d="M719 207h44v38q0 10-10 10h-24q-10 0-10-10z"/>
