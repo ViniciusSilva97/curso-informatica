@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">O que acontece ao abrir um programa</title>
+  <desc id="desc">Clique, SSD, RAM, CPU, placa-mãe e tela participam da abertura de um programa.</desc>
+  <defs><style>.p{font-family:"Courier New",monospace;font-weight:700}.b{font-family:Arial,sans-serif}.n{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="1200" height="600" rx="22" fill="#050806"/><text x="600" y="62" fill="#fff" font-size="31" text-anchor="middle" class="p">O QUE ACONTECE AO ABRIR O CHROME?</text><text x="600" y="98" fill="#bdc7c0" font-size="19" text-anchor="middle" class="b">Em frações de segundo, os componentes executam uma sequência.</text>
+  <g stroke="#ffc900" stroke-width="7"><path d="M235 285h55M435 285h55M635 285h55M835 285h55M1035 285h45"/></g>
+  <g fill="#ffc900"><path d="M290 285l-20-12v24zM490 285l-20-12v24zM690 285l-20-12v24zM890 285l-20-12v24zM1080 285l-20-12v24z"/></g>
+  <g class="n"><rect x="55" y="190" width="180" height="190" rx="10"/><rect x="290" y="190" width="145" height="190" rx="10"/><rect x="490" y="190" width="145" height="190" rx="10"/><rect x="690" y="190" width="145" height="190" rx="10"/><rect x="890" y="190" width="145" height="190" rx="10"/><rect x="1080" y="190" width="80" height="190" rx="10"/></g>
+  <g fill="#ffc900" font-size="24" text-anchor="middle" class="p"><text x="145" y="238">01</text><text x="362" y="238">02</text><text x="562" y="238">03</text><text x="762" y="238">04</text><text x="962" y="238">05</text><text x="1120" y="238">06</text></g>
+  <g fill="#fff" font-size="18" text-anchor="middle" class="p"><text x="145" y="285">CLIQUE</text><text x="362" y="285">SSD</text><text x="562" y="285">RAM</text><text x="762" y="285">CPU</text><text x="962" y="285">PLACA</text><text x="1120" y="285">TELA</text></g>
+  <g fill="#bdc7c0" font-size="16" text-anchor="middle" class="b"><text x="145" y="325">Você solicita</text><text x="362" y="325">localiza arquivos</text><text x="562" y="325">recebe arquivos</text><text x="762" y="325">processa</text><text x="962" y="325">conecta tudo</text><text x="1120" y="325">exibe</text></g>
+  <rect x="170" y="455" width="860" height="72" rx="8" fill="#ffc900"/><text x="600" y="486" fill="#050806" font-size="18" text-anchor="middle" class="b">A placa-mãe conecta a comunicação durante todo o processo.</text><text x="600" y="512" fill="#009c3b" font-size="18" text-anchor="middle" class="p">UM PROGRAMA É RESULTADO DO TRABALHO CONJUNTO</text>
+</svg>

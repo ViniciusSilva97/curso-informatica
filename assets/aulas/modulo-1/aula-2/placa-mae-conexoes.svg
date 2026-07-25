@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">A placa-mãe conecta os componentes</title>
+  <desc id="desc">CPU, RAM, SSD, placa de vídeo, periféricos, energia e rede se comunicam por meio da placa-mãe.</desc>
+  <defs><style>.p{font-family:"Courier New",monospace;font-weight:700}.b{font-family:Arial,sans-serif}.n{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="1200" height="650" rx="22" fill="#050806"/><text x="600" y="62" fill="#fff" font-size="31" text-anchor="middle" class="p">PLACA-MÃE: AS RUAS DO COMPUTADOR</text>
+  <g stroke="#ffc900" stroke-width="7" fill="none"><path d="M465 245L280 180M735 245l185-65M465 330H280M735 330h185M465 415l-185 65M735 415l185 65"/></g>
+  <rect x="465" y="145" width="270" height="380" rx="14" fill="#17231a" stroke="#19c65b" stroke-width="6"/>
+  <rect x="525" y="210" width="150" height="130" fill="#050806" stroke="#ffc900" stroke-width="5"/><rect x="520" y="380" width="160" height="28" fill="#009c3b"/><rect x="520" y="430" width="160" height="28" fill="#009c3b"/>
+  <path d="M490 175h220v320H490zM600 175v35M490 365h230" fill="none" stroke="#0a7733" stroke-width="5"/>
+  <text x="600" y="282" fill="#ffc900" font-size="22" text-anchor="middle" class="p">PLACA-MÃE</text>
+  <g class="n"><rect x="55" y="120" width="225" height="120" rx="10"/><rect x="920" y="120" width="225" height="120" rx="10"/><rect x="55" y="270" width="225" height="120" rx="10"/><rect x="920" y="270" width="225" height="120" rx="10"/><rect x="55" y="420" width="225" height="120" rx="10"/><rect x="920" y="420" width="225" height="120" rx="10"/></g>
+  <g fill="#fff" font-size="21" text-anchor="middle" class="p"><text x="167" y="175">CPU</text><text x="1032" y="175">RAM</text><text x="167" y="325">SSD</text><text x="1032" y="325">VÍDEO</text><text x="167" y="475">ENERGIA</text><text x="1032" y="475">REDE + USB</text></g>
+  <g fill="#bdc7c0" font-size="17" text-anchor="middle" class="b"><text x="167" y="207">processamento</text><text x="1032" y="207">trabalho atual</text><text x="167" y="357">armazenamento</text><text x="1032" y="357">imagem</text><text x="167" y="507">fonte</text><text x="1032" y="507">periféricos</text></g>
+  <rect x="300" y="585" width="600" height="38" fill="#009c3b"/><text x="600" y="611" fill="#fff" font-size="17" text-anchor="middle" class="p">ELA PERMITE QUE TODOS SE COMUNIQUEM</text>
+</svg>

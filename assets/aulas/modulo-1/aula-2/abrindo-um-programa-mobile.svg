@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1130" role="img" aria-labelledby="title desc">
+  <title id="title">O que acontece ao abrir o Chrome</title><desc id="desc">Seis etapas verticais mostram a abertura de um programa.</desc>
+  <defs><style>.p{font-family:"Courier New",monospace;font-weight:700}.b{font-family:Arial,sans-serif}.n{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="600" height="1130" rx="22" fill="#050806"/><text x="300" y="58" fill="#fff" font-size="25" text-anchor="middle" class="p">AO ABRIR O CHROME</text><text x="300" y="91" fill="#bdc7c0" font-size="17" text-anchor="middle" class="b">Uma sequência ocorre em frações de segundo.</text>
+  <path d="M300 220v35M300 365v35M300 510v35M300 655v35M300 800v35" stroke="#ffc900" stroke-width="7"/>
+  <g class="n"><rect x="70" y="125" width="460" height="95" rx="10"/><rect x="70" y="270" width="460" height="95" rx="10"/><rect x="70" y="415" width="460" height="95" rx="10"/><rect x="70" y="560" width="460" height="95" rx="10"/><rect x="70" y="705" width="460" height="95" rx="10"/><rect x="70" y="850" width="460" height="95" rx="10"/></g>
+  <g fill="#ffc900" font-size="20" class="p"><text x="105" y="180">01</text><text x="105" y="325">02</text><text x="105" y="470">03</text><text x="105" y="615">04</text><text x="105" y="760">05</text><text x="105" y="905">06</text></g>
+  <g fill="#fff" font-size="20" class="p"><text x="170" y="166">CLIQUE</text><text x="170" y="311">SSD</text><text x="170" y="456">RAM</text><text x="170" y="601">CPU</text><text x="170" y="746">PLACA-MÃE</text><text x="170" y="891">TELA</text></g>
+  <g fill="#bdc7c0" font-size="16" class="b"><text x="170" y="195">Você solicita a abertura</text><text x="170" y="340">Localiza os arquivos</text><text x="170" y="485">Recebe os arquivos temporariamente</text><text x="170" y="630">Processa as instruções</text><text x="170" y="775">Conecta toda a comunicação</text><text x="170" y="920">Exibe o programa</text></g>
+  <rect x="65" y="1000" width="470" height="85" rx="8" fill="#ffc900"/><text x="300" y="1033" fill="#050806" font-size="16" text-anchor="middle" class="b">Tudo acontece em equipe.</text><text x="300" y="1062" fill="#009c3b" font-size="17" text-anchor="middle" class="p">SSD → RAM → CPU → TELA</text>
+</svg>

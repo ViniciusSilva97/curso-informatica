@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1160" role="img" aria-labelledby="title desc">
+  <title id="title">A placa-mãe conecta os componentes</title><desc id="desc">Seis grupos de componentes se conectam à placa-mãe.</desc>
+  <defs><style>.p{font-family:"Courier New",monospace;font-weight:700}.b{font-family:Arial,sans-serif}.n{fill:#101712;stroke:#19c65b;stroke-width:4}</style></defs>
+  <rect width="600" height="1160" rx="22" fill="#050806"/><text x="300" y="58" fill="#fff" font-size="26" text-anchor="middle" class="p">PLACA-MÃE</text><text x="300" y="91" fill="#fff" font-size="23" text-anchor="middle" class="p">AS RUAS DO COMPUTADOR</text>
+  <rect x="165" y="140" width="270" height="300" rx="14" fill="#17231a" stroke="#19c65b" stroke-width="6"/><rect x="220" y="200" width="160" height="120" fill="#050806" stroke="#ffc900" stroke-width="5"/><rect x="215" y="355" width="170" height="25" fill="#009c3b"/>
+  <text x="300" y="265" fill="#ffc900" font-size="22" text-anchor="middle" class="p">PLACA-MÃE</text>
+  <g stroke="#ffc900" stroke-width="7"><path d="M300 440v60M300 600v45M300 745v45M300 890v45"/></g>
+  <g class="n"><rect x="55" y="500" width="220" height="100" rx="10"/><rect x="325" y="500" width="220" height="100" rx="10"/><rect x="55" y="645" width="220" height="100" rx="10"/><rect x="325" y="645" width="220" height="100" rx="10"/><rect x="55" y="790" width="220" height="100" rx="10"/><rect x="325" y="790" width="220" height="100" rx="10"/></g>
+  <g fill="#fff" font-size="20" text-anchor="middle" class="p"><text x="165" y="547">CPU</text><text x="435" y="547">RAM</text><text x="165" y="692">SSD</text><text x="435" y="692">VÍDEO</text><text x="165" y="837">ENERGIA</text><text x="435" y="837">REDE + USB</text></g>
+  <g fill="#bdc7c0" font-size="16" text-anchor="middle" class="b"><text x="165" y="576">processamento</text><text x="435" y="576">trabalho atual</text><text x="165" y="721">armazenamento</text><text x="435" y="721">imagem</text><text x="165" y="866">fonte</text><text x="435" y="866">periféricos</text></g>
+  <rect x="80" y="975" width="440" height="110" rx="10" fill="#ffc900"/><text x="300" y="1020" fill="#050806" font-size="20" text-anchor="middle" class="p">TODOS OS CAMINHOS</text><text x="300" y="1053" fill="#009c3b" font-size="20" text-anchor="middle" class="p">PASSAM POR ELA</text>
+</svg>
