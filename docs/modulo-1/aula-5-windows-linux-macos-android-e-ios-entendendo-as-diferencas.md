@@ -20,6 +20,14 @@ Com os sistemas operacionais acontece exatamente a mesma coisa.
 Não existe o melhor sistema operacional.  
 Existe o mais adequado para cada situação.  
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-5/escolha-pela-necessidade-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-5/escolha-pela-necessidade.svg" alt="Exemplos de escolha do sistema operacional conforme a necessidade: Windows para jogos, Linux para servidores, macOS para desenvolver aplicativos Apple e Android ou iOS para smartphones." loading="lazy">
+  </picture>
+  <figcaption>Não existe um vencedor universal: existe o sistema mais adequado para cada tarefa.</figcaption>
+</figure>
+
 ## O que é um sistema operacional? 
 Na aula anterior aprendemos que o sistema operacional é o maestro do computador.  
 Agora vamos conhecer os principais “maestros” do mundo da tecnologia.  
@@ -96,6 +104,14 @@ Seu foco principal é oferecer uma experiência integrada entre hardware e softw
 - Funciona oficialmente apenas em computadores Apple;
 - Equipamentos costuma ter custo elevado.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-5/comparativo-computadores-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-5/comparativo-computadores.svg" alt="Comparação entre Windows, Linux e macOS, destacando compatibilidade, personalização, estabilidade, integração e os principais pontos de atenção." loading="lazy">
+  </picture>
+  <figcaption>Windows, Linux e macOS possuem prioridades diferentes; conhecer os pontos fortes e as limitações ajuda a escolher.</figcaption>
+</figure>
+
 ### Android
 O Android é o sistema operacional mais utilizado em smartphones. 
 Ele é baseado no Linux.  
@@ -112,6 +128,14 @@ Está presente em aparelhos de diversos fabricantes.
 ### iOS
 O IOS é utilizado nos smartphones da Apple.  
 Seu principal diferencial é a integração entre hardware e software, além do forte foco em segurança e experiência do usuário. 
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-5/android-e-ios-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-5/android-e-ios.svg" alt="Comparação entre Android, presente em dispositivos de vários fabricantes, e iOS, integrado ao hardware e ao ecossistema da Apple." loading="lazy">
+  </picture>
+  <figcaption>Android destaca a diversidade de aparelhos; iOS destaca a integração do ecossistema Apple.</figcaption>
+</figure>
 
 ## Existe um sistema melhor?
 Não.  
@@ -142,5 +166,13 @@ Você provavelmente utiliza mais de um sistema operacional todos os dias.
 - Caixa eletrônico com Linux;
 - SmarTV baseada no Android;
 - Servidores Linux quando acessa um site.
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-5/sistemas-no-cotidiano-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-5/sistemas-no-cotidiano.svg" alt="Linha do tempo de um dia com notebook Windows, celular Android, caixa eletrônico Linux, Smart TV Android e servidores Linux acessados pela internet." loading="lazy">
+  </picture>
+  <figcaption>Em um único dia, diferentes sistemas podem participar de tarefas pessoais, profissionais e serviços conectados.</figcaption>
+</figure>
 
 Mesmo sem perceber, você interage com diferentes sistemas ao longo do dia.
