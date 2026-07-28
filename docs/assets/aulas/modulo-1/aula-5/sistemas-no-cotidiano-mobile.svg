@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1170" role="img">
+  <title>Vários sistemas operacionais em um único dia</title>
+  <desc>Uma pessoa usa Windows no notebook, Android no celular, Linux no caixa eletrônico e nos servidores, e Android em uma Smart TV.</desc>
+  <rect width="600" height="1170" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="22" font-weight="800">QUANTOS SISTEMAS EM UM DIA?</text>
+  <g font-family="Arial,sans-serif">
+    <path d="M95 105v910" stroke="#16c65b" stroke-width="8"/>
+    <g fill="#ffd21a"><circle cx="95" cy="160" r="25"/><circle cx="95" cy="350" r="25"/><circle cx="95" cy="540" r="25"/><circle cx="95" cy="730" r="25"/><circle cx="95" cy="920" r="25"/></g>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="145" y="105" width="400" height="112" rx="14"/><rect x="145" y="295" width="400" height="112" rx="14"/><rect x="145" y="485" width="400" height="112" rx="14"/><rect x="145" y="675" width="400" height="112" rx="14"/><rect x="145" y="865" width="400" height="112" rx="14"/></g>
+    <g><text x="180" y="151" fill="#ffd21a" font-size="20" font-weight="800">NOTEBOOK</text><text x="180" y="187" fill="#fff" font-size="18">Windows</text><text x="180" y="341" fill="#ffd21a" font-size="20" font-weight="800">CELULAR</text><text x="180" y="377" fill="#fff" font-size="18">Android</text><text x="180" y="531" fill="#ffd21a" font-size="20" font-weight="800">CAIXA ELETRÔNICO</text><text x="180" y="567" fill="#fff" font-size="18">Linux</text><text x="180" y="721" fill="#ffd21a" font-size="20" font-weight="800">SMART TV</text><text x="180" y="757" fill="#fff" font-size="18">Android</text><text x="180" y="911" fill="#ffd21a" font-size="20" font-weight="800">INTERNET</text><text x="180" y="947" fill="#fff" font-size="18">servidores Linux</text></g>
+    <rect x="60" y="1045" width="480" height="75" rx="28" fill="#16c65b"/><text x="300" y="1078" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">DIFERENTES SISTEMAS</text><text x="300" y="1104" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">MUITAS TAREFAS CONECTADAS</text>
+  </g>
+</svg>
