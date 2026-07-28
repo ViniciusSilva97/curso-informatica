@@ -80,6 +80,7 @@ nav:
     - Aula 4 - SSDs e HDs: modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado.md
     - Aula 5 - Placa-mãe: modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram.md
     - Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história: modulo-2/aula-6-fonte-de-alimentacao-por-que-leituras-de-software-não-contam-toda-a-historia.md
+    - Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?: modulo-2/aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto.md
 
 markdown_extensions:
   - admonition
