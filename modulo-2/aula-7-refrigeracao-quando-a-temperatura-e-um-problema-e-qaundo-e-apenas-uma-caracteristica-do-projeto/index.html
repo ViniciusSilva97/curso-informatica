@@ -1,0 +1,5512 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/">
+      
+      
+        <link rel="prev" href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto? - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-quando-e-apenas-uma-caracteristica-do-projeto" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-computador-converte-energia-em-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo computador converte energia em calor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-nao-e-a-mesma-coisa-que-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura não é a mesma coisa que calor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperatura não é a mesma coisa que calor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energia térmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potencia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potência térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uma-analogia-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uma analogia importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-caminho-do-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O caminho do calor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-tres-mecanismos-de-transferencia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os três mecanismos de transferência térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Os três mecanismos de transferência térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conveccao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convecção
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiacao-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radiação térmica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-processador-nao-tenta-permanecer-sempre-frio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O processador não tenta permanecer sempre frio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uma-temperatura-alta-e-necessariamente-perigosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uma temperatura alta é necessariamente perigosa?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-thermal-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é thermal throttling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-identificar-thermal-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como identificar thermal throttling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite-termico-e-limite-de-potencia-nao-sao-a-mesma-coisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite térmico e limite de potência não são a mesma coisa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limite térmico e limite de potência não são a mesma coisa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limite-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite térmico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de potência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-eletrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite elétrico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-papel-do-dissipador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O papel do dissipador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heatpipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatpipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camara-de-vapor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Câmara de vapor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-serve-a-pasta-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para que serve a pasta térmica?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-pasta-termica-melhora-a-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mais pasta térmica melhora a refrigeração?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasta-termica-nao-corrige-pressao-inadequada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasta térmica não corrige pressão inadequada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-pelicula-esquecida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A película esquecida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventoinhas-mais-rotacao-nao-e-o-unico-fator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoinhas: mais rotação não é o único fator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-ar-e-pressao-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de ar e pressão estática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo de ar e pressão estática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de ar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão estática
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwm-e-controle-por-tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM e controle por tensão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PWM e controle por tensão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controle-por-tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controle por tensão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooler-a-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cooler a ar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cooler a ar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vantagens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-cooler-do-tipo-aio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water cooler do tipo AIO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Water cooler do tipo AIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#water-cooler-nao-elimina-a-necessidade-de-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water cooler não elimina a necessidade de ar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-falha-de-um-aio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de falha de um AIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-posicao-do-radiador-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A posição do radiador importa?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A posição do radiador importa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-posicao-ideal-depende" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A posição ideal depende:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-gabinete-participa-da-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O gabinete participa da refrigeração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pressao-positiva-e-negativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão positiva e negativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pressão positiva e negativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pressao-positiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão positiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-negativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão negativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-equilibrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão equilibrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direcao-correta-das-ventoinhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direção correta das ventoinhas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#um-gabinete-cheio-de-ventoinhas-pode-ser-pior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Um gabinete cheio de ventoinhas pode ser pior?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura ambiente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-absoluta-e-diferenca-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura absoluta e diferença térmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#altura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatpipes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatpipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventoinha-de-140-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoinha de 140 mm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacidade-termica-declarada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidade térmica declarada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ferramentas-gratuitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ferramentas gratuitas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ferramentas gratuitas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hwinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWiNFO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hwmonitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWMonitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-temp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Temp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU-Z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fan Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bios-ou-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BIOS ou UEFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testes-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#um-benchmark-pode-ajudar-a-comparar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Um benchmark pode ajudar a comparar:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-realizar-um-teste-comparavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como realizar um teste comparável
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como realizar um teste comparável">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-registrar-o-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Registrar o ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-estabilizar-o-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Estabilizar o sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-registrar-valores-iniciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Registrar valores iniciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-aplicar-a-mesma-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Aplicar a mesma carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-observar-o-comportamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Observar o comportamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-6-alterar-apenas-uma-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 6 — Alterar apenas uma variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-7-repetir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 7 — Repetir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-com-o-painel-frontal-removido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico com o painel frontal removido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-com-a-lateral-aberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico com a lateral aberta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagnóstico com a lateral aberta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-a-temperatura-cair-muito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se a temperatura cair muito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-a-temperatura-aumentar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se a temperatura aumentar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-cpu-chega-rapidamente-ao-limite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 1 — CPU chega rapidamente ao limite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 1 — CPU chega rapidamente ao limite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-temperatura-alta-apenas-apos-20-minutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — Temperatura alta apenas após 20 minutos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 2 — Temperatura alta apenas após 20 minutos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-water-cooler-novo-reduz-apenas-3-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Water cooler novo reduz apenas 3 °C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 3 — Water cooler novo reduz apenas 3 °C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-provavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão provável:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-4-computador-desliga-apos-trocar-a-pasta-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 4 — Computador desliga após trocar a pasta térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 4 — Computador desliga após trocar a pasta térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-5-gpu-quente-e-cpu-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 5 — GPU quente e CPU normal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 5 — GPU quente e CPU normal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-da-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotspot da GPU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssd-tambem-pode-sofrer-throttling-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSD também pode sofrer throttling térmico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSD também pode sofrer throttling térmico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memorias-e-vrm-tambem-precisam-de-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memórias e VRM também precisam de refrigeração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memórias e VRM também precisam de refrigeração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória RAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-da-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória da GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chipset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chipset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poeira-nao-e-apenas-uma-questao-estetica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Poeira não é apenas uma questão estética
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ar-comprimido-inadequado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ar comprimido inadequado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quanto-menor-a-temperatura-melhor-em-qualquer-situacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Quanto menor a temperatura, melhor em qualquer situação”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Quanto menor a temperatura, melhor em qualquer situação”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#um-water-cooler-sempre-e-superior-a-um-cooler-a-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Um water cooler sempre é superior a um cooler a ar”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Um water cooler sempre é superior a um cooler a ar”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-mais-pasta-termica-sempre-melhora-a-transferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Aplicar mais pasta térmica sempre melhora a transferência”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Aplicar mais pasta térmica sempre melhora a transferência”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-a-lateral-sempre-melhora-a-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Abrir a lateral sempre melhora a refrigeração”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Abrir a lateral sempre melhora a refrigeração”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-temperatura-ambiente-influencia-as-medicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “A temperatura ambiente influencia as medições”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“A temperatura ambiente influencia as medições”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidência.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-cpu-pode-manter-a-mesma-temperatura-com-cooler-melhor-e-entregar-mais-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma CPU pode manter a mesma temperatura com cooler melhor e entregar mais desempenho”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Uma CPU pode manter a mesma temperatura com cooler melhor e entregar mais desempenho”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidência.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-a-bomba-aparece-com-rpm-o-water-cooler-esta-necessariamente-funcionando-corretamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se a bomba aparece com RPM, o water cooler está necessariamente funcionando corretamente”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Se a bomba aparece com RPM, o water cooler está necessariamente funcionando corretamente”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-interromper-o-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando interromper o teste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-guiado-mapa-termico-do-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório guiado — mapa térmico do computador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório guiado — mapa térmico do computador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-repouso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Repouso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-carga-moderada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Carga moderada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-observe-a-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Observe a curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-alteracao-controlada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Alteração controlada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-6-repeticao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 6 — Repetição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-7-conclusao-provisoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 7 — Conclusão provisória
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dossie-da-investigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dossiê da Investigação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos da aula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-computador-converte-energia-em-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo computador converte energia em calor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-nao-e-a-mesma-coisa-que-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura não é a mesma coisa que calor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperatura não é a mesma coisa que calor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energia térmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potencia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Potência térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Potência térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uma-analogia-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uma analogia importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-caminho-do-calor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O caminho do calor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-tres-mecanismos-de-transferencia-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os três mecanismos de transferência térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Os três mecanismos de transferência térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conveccao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convecção
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiacao-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radiação térmica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-processador-nao-tenta-permanecer-sempre-frio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O processador não tenta permanecer sempre frio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uma-temperatura-alta-e-necessariamente-perigosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uma temperatura alta é necessariamente perigosa?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-thermal-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é thermal throttling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-identificar-thermal-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como identificar thermal throttling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limite-termico-e-limite-de-potencia-nao-sao-a-mesma-coisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite térmico e limite de potência não são a mesma coisa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limite térmico e limite de potência não são a mesma coisa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limite-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite térmico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-potencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de potência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-eletrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite elétrico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limite de carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-papel-do-dissipador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O papel do dissipador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heatpipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatpipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camara-de-vapor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Câmara de vapor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-serve-a-pasta-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para que serve a pasta térmica?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-pasta-termica-melhora-a-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mais pasta térmica melhora a refrigeração?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasta-termica-nao-corrige-pressao-inadequada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasta térmica não corrige pressão inadequada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-pelicula-esquecida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A película esquecida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventoinhas-mais-rotacao-nao-e-o-unico-fator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoinhas: mais rotação não é o único fator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-ar-e-pressao-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de ar e pressão estática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo de ar e pressão estática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de ar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-estatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão estática
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwm-e-controle-por-tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM e controle por tensão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PWM e controle por tensão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controle-por-tensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controle por tensão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooler-a-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cooler a ar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cooler a ar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vantagens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-cooler-do-tipo-aio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water cooler do tipo AIO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Water cooler do tipo AIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#water-cooler-nao-elimina-a-necessidade-de-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water cooler não elimina a necessidade de ar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-falha-de-um-aio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de falha de um AIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-posicao-do-radiador-importa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A posição do radiador importa?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A posição do radiador importa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-posicao-ideal-depende" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A posição ideal depende:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-gabinete-participa-da-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O gabinete participa da refrigeração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pressao-positiva-e-negativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão positiva e negativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pressão positiva e negativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pressao-positiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão positiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-negativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão negativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressao-equilibrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressão equilibrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direcao-correta-das-ventoinhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direção correta das ventoinhas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#um-gabinete-cheio-de-ventoinhas-pode-ser-pior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Um gabinete cheio de ventoinhas pode ser pior?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura ambiente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperatura-absoluta-e-diferenca-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura absoluta e diferença térmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dentro-da-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dentro da Caixa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dentro da Caixa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#altura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatpipes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatpipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventoinha-de-140-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoinha de 140 mm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacidade-termica-declarada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidade térmica declarada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ferramentas-gratuitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ferramentas gratuitas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ferramentas gratuitas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hwinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWiNFO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hwmonitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWMonitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-temp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Temp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU-Z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fan Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bios-ou-uefi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BIOS ou UEFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testes-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#um-benchmark-pode-ajudar-a-comparar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Um benchmark pode ajudar a comparar:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-realizar-um-teste-comparavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como realizar um teste comparável
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como realizar um teste comparável">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-registrar-o-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Registrar o ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-estabilizar-o-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Estabilizar o sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-registrar-valores-iniciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Registrar valores iniciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-aplicar-a-mesma-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Aplicar a mesma carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-observar-o-comportamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Observar o comportamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-6-alterar-apenas-uma-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 6 — Alterar apenas uma variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-7-repetir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 7 — Repetir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-com-o-painel-frontal-removido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico com o painel frontal removido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostico-com-a-lateral-aberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico com a lateral aberta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagnóstico com a lateral aberta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-a-temperatura-cair-muito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se a temperatura cair muito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-a-temperatura-aumentar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se a temperatura aumentar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-1-cpu-chega-rapidamente-ao-limite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 1 — CPU chega rapidamente ao limite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 1 — CPU chega rapidamente ao limite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-2-temperatura-alta-apenas-apos-20-minutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 2 — Temperatura alta apenas após 20 minutos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 2 — Temperatura alta apenas após 20 minutos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-3-water-cooler-novo-reduz-apenas-3-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 3 — Water cooler novo reduz apenas 3 °C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 3 — Water cooler novo reduz apenas 3 °C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-provavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão provável:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-4-computador-desliga-apos-trocar-a-pasta-termica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 4 — Computador desliga após trocar a pasta térmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 4 — Computador desliga após trocar a pasta térmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso-5-gpu-quente-e-cpu-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estudo de Caso 5 — GPU quente e CPU normal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estudo de Caso 5 — GPU quente e CPU normal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipoteses_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipóteses:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-da-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotspot da GPU
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssd-tambem-pode-sofrer-throttling-termico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSD também pode sofrer throttling térmico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSD também pode sofrer throttling térmico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintomas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintomas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memorias-e-vrm-tambem-precisam-de-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memórias e VRM também precisam de refrigeração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memórias e VRM também precisam de refrigeração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória RAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoria-da-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memória da GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chipset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chipset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poeira-nao-e-apenas-uma-questao-estetica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Poeira não é apenas uma questão estética
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ar-comprimido-inadequado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ar comprimido inadequado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mito-ou-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito ou Evidência?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mito ou Evidência?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quanto-menor-a-temperatura-melhor-em-qualquer-situacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Quanto menor a temperatura, melhor em qualquer situação”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Quanto menor a temperatura, melhor em qualquer situação”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#um-water-cooler-sempre-e-superior-a-um-cooler-a-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Um water cooler sempre é superior a um cooler a ar”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Um water cooler sempre é superior a um cooler a ar”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-mais-pasta-termica-sempre-melhora-a-transferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Aplicar mais pasta térmica sempre melhora a transferência”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Aplicar mais pasta térmica sempre melhora a transferência”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-a-lateral-sempre-melhora-a-refrigeracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Abrir a lateral sempre melhora a refrigeração”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Abrir a lateral sempre melhora a refrigeração”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-temperatura-ambiente-influencia-as-medicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “A temperatura ambiente influencia as medições”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“A temperatura ambiente influencia as medições”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidência.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uma-cpu-pode-manter-a-mesma-temperatura-com-cooler-melhor-e-entregar-mais-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Uma CPU pode manter a mesma temperatura com cooler melhor e entregar mais desempenho”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Uma CPU pode manter a mesma temperatura com cooler melhor e entregar mais desempenho”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidência.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-a-bomba-aparece-com-rpm-o-water-cooler-esta-necessariamente-funcionando-corretamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Se a bomba aparece com RPM, o water cooler está necessariamente funcionando corretamente”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“Se a bomba aparece com RPM, o water cooler está necessariamente funcionando corretamente”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mito_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mito.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-um-perito-observaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que um perito observaria?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-interromper-o-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando interromper o teste
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-guiado-mapa-termico-do-computador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratório guiado — mapa térmico do computador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Laboratório guiado — mapa térmico do computador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-1-identificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 1 — Identificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-2-repouso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 2 — Repouso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-3-carga-moderada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 3 — Carga moderada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-4-observe-a-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 4 — Observe a curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-5-alteracao-controlada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 5 — Alteração controlada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-6-repeticao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 6 — Repetição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-7-conclusao-provisoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapa 7 — Conclusão provisória
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-quando-e-apenas-uma-caracteristica-do-projeto">Aula 7 — Refrigeração: quando a temperatura é um problema e quando é apenas uma característica do projeto?<a class="headerlink" href="#aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-quando-e-apenas-uma-caracteristica-do-projeto" title="Permanent link">&para;</a></h1>
+<p>Pergunta da investigação
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Uma CPU operando a 90 °C está necessariamente superaquecendo?
+</code></pre></div></p>
+<h2 id="dossie-da-investigacao">Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h2>
+<p>Caso nº 006 — O water cooler que quase não mudou a temperatura.  </p>
+<p>Um usuário percebeu que seu processador atingia temperaturas elevadas durante renderizações.  </p>
+<p>O computador utilizava:</p>
+<ul>
+<li>processador de alto desempenho;</li>
+<li>cooler a ar intermediário;</li>
+<li>gabinete com painel frontal fechado;</li>
+<li>duas ventoinhas;</li>
+<li>pasta térmica aplicada havia poucos meses.</li>
+</ul>
+<p>Preocupado, ele comprou um water cooler caro. Após a instalação, repetiu o teste. A diferença máxima foi de apenas 3 °C.</p>
+<p>O usuário concluiu:  </p>
+<p><strong>“O water cooler está com defeito.”</strong></p>
+<p>Essa conclusão é válida?</p>
+<ul>
+<li>Talvez o processador esteja usando a margem térmica disponível para alcançar clocks maiores. </li>
+<li>Talvez o gabinete esteja limitando a entrada de ar.</li>
+<li>Talvez a bomba esteja configurada incorretamente.</li>
+<li>Talvez o teste anterior e o posterior tenham ocorrido em condições diferentes.</li>
+<li>Ou talvez uma redução pequena seja exatamente o resultado esperado naquele cenário.</li>
+</ul>
+<p>Hoje investigaremos como o computador produz, transfere e remove calor.</p>
+<h2 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h2>
+<p>Ao final desta aula, você será capaz de:</p>
+<ul>
+<li>compreender por que componentes eletrônicos produzem calor;</li>
+<li>diferenciar temperatura, potência térmica e capacidade de refrigeração;</li>
+<li>interpretar temperaturas dentro do contexto do componente;</li>
+<li>entender condução, convecção e radiação térmica;</li>
+<li>reconhecer o papel do dissipador, da pasta térmica e das ventoinhas;</li>
+<li>comparar coolers a ar e sistemas líquidos;</li>
+<li>identificar sinais de thermal throttling;</li>
+<li>investigar problemas de fluxo de ar;</li>
+<li>utilizar softwares gratuitos para coletar evidências;</li>
+<li>reconhecer diagnósticos que exigem inspeção física;</li>
+<li>evitar práticas que podem danificar componentes.</li>
+</ul>
+<h2 id="todo-computador-converte-energia-em-calor">Todo computador converte energia em calor<a class="headerlink" href="#todo-computador-converte-energia-em-calor" title="Permanent link">&para;</a></h2>
+<p>Quando um componente eletrônico funciona, parte da energia elétrica utilizada transforma-se em calor.  </p>
+<p>Isso ocorre em:</p>
+<ul>
+<li>processadores;</li>
+<li>placas de vídeo;</li>
+<li>reguladores de tensão;</li>
+<li>SSDs;</li>
+<li>memórias;</li>
+<li>fontes;</li>
+<li>chipsets;</li>
+<li>controladores;</li>
+<li>motores e bombas.</li>
+</ul>
+<p>Quanto maior a atividade elétrica, maior tende a ser a geração térmica.</p>
+<p>Em termos simplificados:  </p>
+<p>Energia elétrica<br />
+       ↓<br />
+Trabalho computacional<br />
+       +<br />
+Calor  </p>
+<p>O problema não é o componente produzir calor. Isso é esperado!<br />
+O problema surge quando o calor não consegue ser transferido para fora com velocidade suficiente.  </p>
+<h2 id="temperatura-nao-e-a-mesma-coisa-que-calor">Temperatura não é a mesma coisa que calor<a class="headerlink" href="#temperatura-nao-e-a-mesma-coisa-que-calor" title="Permanent link">&para;</a></h2>
+<p>Esses conceitos são frequentemente tratados como sinônimos, mas não são.</p>
+<h3 id="temperatura">Temperatura<a class="headerlink" href="#temperatura" title="Permanent link">&para;</a></h3>
+<p>Indica o estado térmico de um corpo. Pode ser medida em graus Celsius.</p>
+<h2 id="energia-termica">Energia térmica<a class="headerlink" href="#energia-termica" title="Permanent link">&para;</a></h2>
+<p>Representa a quantidade de energia associada ao movimento e à interação das partículas. Um componente pequeno pode atingir temperatura muito alta mesmo contendo menos energia térmica total que um objeto muito maior.</p>
+<h2 id="potencia-termica">Potência térmica<a class="headerlink" href="#potencia-termica" title="Permanent link">&para;</a></h2>
+<p>Indica a taxa com que o calor é gerado ou removido.</p>
+<p>Pode ser relacionada a <strong>watts</strong>. Um processador que dissipa mais energia exige um sistema capaz de transferir essa potência térmica continuamente.</p>
+<h3 id="uma-analogia-importante">Uma analogia importante<a class="headerlink" href="#uma-analogia-importante" title="Permanent link">&para;</a></h3>
+<p>Imagine duas panelas.</p>
+<p>A primeira contém pouca água e recebe uma chama forte, a segunda contém muita água e recebe uma chama fraca.<br />
+A primeira pode atingir uma temperatura alta rapidamente, embora possua menos água. Nos computadores, ocorre algo semelhante!</p>
+<p>Um pequeno chip pode concentrar grande quantidade de potência em uma área reduzida. Essa concentração dificulta a transferência de calor.</p>
+<h2 id="o-caminho-do-calor">O caminho do calor<a class="headerlink" href="#o-caminho-do-calor" title="Permanent link">&para;</a></h2>
+<p>O calor produzido dentro do processador precisa atravessar várias camadas antes de chegar ao ambiente.</p>
+<p>Transistores do processador<br />
+           ↓<br />
+Silício<br />
+           ↓<br />
+Material de interface interno<br />
+           ↓<br />
+Espalhador metálico<br />
+           ↓<br />
+Pasta térmica<br />
+           ↓<br />
+Base do cooler<br />
+           ↓<br />
+Heatpipes ou bloco líquido<br />
+           ↓<br />
+Dissipador ou radiador<br />
+           ↓<br />
+Ar do gabinete<br />
+           ↓<br />
+Ambiente  </p>
+<p>Cada etapa oferece alguma resistência à passagem do calor.Se uma delas estiver inadequada, a temperatura pode aumentar.  </p>
+<h2 id="os-tres-mecanismos-de-transferencia-termica">Os três mecanismos de transferência térmica<a class="headerlink" href="#os-tres-mecanismos-de-transferencia-termica" title="Permanent link">&para;</a></h2>
+<h3 id="conducao">Condução<a class="headerlink" href="#conducao" title="Permanent link">&para;</a></h3>
+<p>É a transferência de calor através do contato entre materiais.</p>
+<p>Exemplos:</p>
+<ul>
+<li>chip para o espalhador metálico;</li>
+<li>espalhador para a pasta térmica;</li>
+<li>pasta térmica para o cooler;</li>
+<li>base do cooler para os heatpipes.</li>
+</ul>
+<p>A qualidade do contato influencia diretamente essa transferência.</p>
+<h3 id="conveccao">Convecção<a class="headerlink" href="#conveccao" title="Permanent link">&para;</a></h3>
+<p>É a transferência de calor pelo movimento de um fluido. Nos computadores, normalmente esse fluido é o ar.
+Também ocorre em sistemas líquidos, onde o fluido circula entre o bloco e o radiador.</p>
+<p>Exemplos:</p>
+<ul>
+<li>ventoinha movimentando ar pelo dissipador;</li>
+<li>ar quente saindo do gabinete;</li>
+<li>líquido transportando calor até o radiador.</li>
+</ul>
+<h3 id="radiacao-termica">Radiação térmica<a class="headerlink" href="#radiacao-termica" title="Permanent link">&para;</a></h3>
+<p>É a emissão de energia em forma de radiação eletromagnética. Ela existe, mas em computadores convencionais costuma ter importância menor que condução e convecção no sistema principal de refrigeração.</p>
+<h2 id="o-processador-nao-tenta-permanecer-sempre-frio">O processador não tenta permanecer sempre frio<a class="headerlink" href="#o-processador-nao-tenta-permanecer-sempre-frio" title="Permanent link">&para;</a></h2>
+<p>Processadores modernos controlam dinamicamente:</p>
+<ul>
+<li>frequência;</li>
+<li>tensão;</li>
+<li>consumo;</li>
+<li>limites de potência;</li>
+<li>temperatura;</li>
+<li>número de núcleos ativos.</li>
+</ul>
+<p>Quando existe margem elétrica e térmica, o processador pode aumentar seu desempenho. Isso significa que a instalação de um cooler melhor nem sempre produz grande redução de temperatura.  </p>
+<p>O processador pode utilizar a capacidade adicional para:</p>
+<ul>
+<li>manter clocks mais altos;</li>
+<li>sustentar o boost por mais tempo;</li>
+<li>entregar mais desempenho;</li>
+<li>consumir mais energia dentro dos limites configurados.</li>
+</ul>
+<p>Assim, duas situações podem apresentar a mesma temperatura, mas desempenhos diferentes.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Cooler inferior
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>90 °C
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Clock reduzido
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Cooler superior
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>90 °C
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Clock mais alto e sustentado
+</code></pre></div>
+Observar apenas a temperatura pode esconder o ganho real.</p>
+<h2 id="uma-temperatura-alta-e-necessariamente-perigosa">Uma temperatura alta é necessariamente perigosa?<a class="headerlink" href="#uma-temperatura-alta-e-necessariamente-perigosa" title="Permanent link">&para;</a></h2>
+<p>Não podemos responder sem contexto.</p>
+<p>Precisamos saber:</p>
+<ul>
+<li>qual é o componente;</li>
+<li>qual é o modelo;</li>
+<li>qual sensor está sendo lido;</li>
+<li>qual é o limite definido pelo fabricante;</li>
+<li>qual é a carga;</li>
+<li>por quanto tempo a temperatura permanece elevada;</li>
+<li>se existe redução de clock;</li>
+<li>qual é a temperatura ambiente;</li>
+<li>como o sistema está configurado;</li>
+<li>se a medição está correta.</li>
+</ul>
+<p>Um processador pode ser projetado para operar próximo de seu limite térmico durante cargas intensas. Por outro lado, uma temperatura menor pode ser problemática se estiver acompanhada de:</p>
+<ul>
+<li>instabilidade;</li>
+<li>falha de sensor;</li>
+<li>desligamentos;</li>
+<li>componentes periféricos superaquecidos;</li>
+<li>bomba parada;</li>
+<li>falta de contato;</li>
+<li>degradação de desempenho.</li>
+</ul>
+<p>A temperatura isolada é apenas uma evidência.</p>
+<h2 id="o-que-e-thermal-throttling">O que é thermal throttling?<a class="headerlink" href="#o-que-e-thermal-throttling" title="Permanent link">&para;</a></h2>
+<p><strong><em>Thermal throttling</em></strong> é a redução automática de desempenho causada por uma condição térmica. Quando o componente se aproxima de determinado limite, ele pode diminuir:</p>
+<ul>
+<li>frequência;</li>
+<li>tensão;</li>
+<li>potência;</li>
+<li>desempenho.</li>
+</ul>
+<p>O objetivo é evitar que a temperatura continue subindo de forma descontrolada. </p>
+<p>Carga elevada<br />
+     ↓<br />
+Temperatura aumenta<br />
+     ↓<br />
+Limite térmico alcançado<br />
+     ↓<br />
+Clock é reduzido<br />
+     ↓<br />
+Geração de calor diminui  </p>
+<p>Essa proteção não significa que seja desejável operar continuamente no limite em qualquer situação. Ela é uma camada de segurança e controle.</p>
+<h2 id="como-identificar-thermal-throttling">Como identificar thermal throttling?<a class="headerlink" href="#como-identificar-thermal-throttling" title="Permanent link">&para;</a></h2>
+<p>Possíveis evidências:</p>
+<ul>
+<li>queda de clock durante carga contínua;</li>
+<li>temperatura próxima do limite;</li>
+<li>indicador térmico ativado no software;</li>
+<li>redução de potência;</li>
+<li>desempenho inferior ao esperado;</li>
+<li>pontuação de benchmark diminuindo ao longo das repetições;</li>
+<li>recuperação do clock após queda de temperatura.</li>
+</ul>
+<p>Ferramentas como HWiNFO podem mostrar indicadores relacionados a limites térmicos e de potência. Porém, a interpretação depende do processador e da plataforma.</p>
+<h2 id="limite-termico-e-limite-de-potencia-nao-sao-a-mesma-coisa">Limite térmico e limite de potência não são a mesma coisa<a class="headerlink" href="#limite-termico-e-limite-de-potencia-nao-sao-a-mesma-coisa" title="Permanent link">&para;</a></h2>
+<p>Um processador pode reduzir seu desempenho por diferentes motivos.</p>
+<h3 id="limite-termico">Limite térmico<a class="headerlink" href="#limite-termico" title="Permanent link">&para;</a></h3>
+<p>A temperatura atingiu o limite definido.</p>
+<h3 id="limite-de-potencia">Limite de potência<a class="headerlink" href="#limite-de-potencia" title="Permanent link">&para;</a></h3>
+<p>O processador atingiu a potência máxima permitida pela configuração.</p>
+<h3 id="limite-eletrico">Limite elétrico<a class="headerlink" href="#limite-eletrico" title="Permanent link">&para;</a></h3>
+<p>O sistema atingiu alguma restrição de corrente ou tensão.</p>
+<h3 id="limite-de-firmware">Limite de firmware<a class="headerlink" href="#limite-de-firmware" title="Permanent link">&para;</a></h3>
+<p>A placa-mãe ou o fabricante definiu parâmetros específicos.</p>
+<h3 id="limite-de-carga">Limite de carga<a class="headerlink" href="#limite-de-carga" title="Permanent link">&para;</a></h3>
+<p>O programa não consegue utilizar mais recursos, assim observar redução de clock não prova automaticamente que o cooler seja insuficiente.</p>
+<h2 id="o-papel-do-dissipador">O papel do dissipador<a class="headerlink" href="#o-papel-do-dissipador" title="Permanent link">&para;</a></h2>
+<p>O dissipador aumenta a área disponível para transferir calor ao ar. Uma peça metálica lisa teria área limitada.  </p>
+<p>Ao adicionar aletas, a superfície cresce significativamente.  </p>
+<p>Bloco simples:<br />
+████████  </p>
+<p>Dissipador com aletas:<br />
+||||||||||||||||||||  </p>
+<p>Quanto maior a área útil e melhor o fluxo de ar, maior tende a ser a capacidade de remover calor.</p>
+<p>Os materiais mais comuns incluem:</p>
+<ul>
+<li>alumínio;</li>
+<li>cobre;</li>
+<li>combinações dos dois.</li>
+</ul>
+<p>O cobre possui boa condutividade térmica, mas é mais pesado e caro. O alumínio é leve, econômico e amplamente utilizado.</p>
+<h2 id="heatpipes">Heatpipes<a class="headerlink" href="#heatpipes" title="Permanent link">&para;</a></h2>
+<p>Muitos coolers a ar utilizam tubos de calor, conhecidos como heatpipes. Eles contêm uma pequena quantidade de fluido em ambiente selado.</p>
+<p>O processo simplificado é:</p>
+<ol>
+<li>o fluido absorve calor na região quente;</li>
+<li>evapora;</li>
+<li>desloca-se para a região mais fria;</li>
+<li>condensa;</li>
+<li>retorna pela estrutura interna do tubo.</li>
+</ol>
+<p>Esse ciclo transporta calor da base para as aletas do dissipador. O heatpipe não é apenas um tubo sólido de metal.  </p>
+<p>Ele utiliza mudança de fase para melhorar a transferência térmica.</p>
+<h2 id="camara-de-vapor">Câmara de vapor<a class="headerlink" href="#camara-de-vapor" title="Permanent link">&para;</a></h2>
+<p>Uma câmara de vapor utiliza princípio semelhante ao heatpipe, mas distribui o calor em uma área mais ampla.</p>
+<p>Pode ser encontrada em:</p>
+<ul>
+<li>placas de vídeo;</li>
+<li>notebooks;</li>
+<li>dispositivos compactos;</li>
+<li>coolers de alto desempenho.</li>
+</ul>
+<p>Ela ajuda a espalhar o calor de uma pequena área para uma superfície maior.</p>
+<h2 id="para-que-serve-a-pasta-termica">Para que serve a pasta térmica?<a class="headerlink" href="#para-que-serve-a-pasta-termica" title="Permanent link">&para;</a></h2>
+<p>Mesmo superfícies metálicas aparentemente lisas possuem irregularidades. Quando o cooler encosta no processador, pequenos espaços podem permanecer preenchidos por ar.  </p>
+<p>O ar conduz calor de maneira muito inferior aos materiais usados na interface térmica. A pasta térmica preenche essas irregularidades.  </p>
+<p>Sem pasta:  </p>
+<p>Metal   ar   Metal<br />
+████   ░░░   ████  </p>
+<p>Com pasta:  </p>
+<p>Metal  pasta  Metal<br />
+██████████████████  </p>
+<p>A função da pasta não é criar uma camada grossa é substituir o ar nos pequenos espaços.</p>
+<h2 id="mais-pasta-termica-melhora-a-refrigeracao">Mais pasta térmica melhora a refrigeração?<a class="headerlink" href="#mais-pasta-termica-melhora-a-refrigeracao" title="Permanent link">&para;</a></h2>
+<p>Não necessariamente. Aplicar pouca pasta pode deixar regiões sem cobertura adequada.  </p>
+<p>Aplicar quantidade excessiva pode:</p>
+<ul>
+<li>criar uma camada desnecessariamente espessa;</li>
+<li>dificultar o contato;</li>
+<li>espalhar material para áreas externas;</li>
+<li>causar problemas se o composto for eletricamente condutivo;</li>
+<li>produzir sujeira e dificultar manutenção.</li>
+</ul>
+<p>O objetivo é obter cobertura adequada com uma camada fina e uniforme após a pressão do cooler. Não existe um único método universal para todos os formatos de processador e compostos.</p>
+<p>Podem ser usados métodos como:</p>
+<ul>
+<li>pequeno ponto central;</li>
+<li>linha;</li>
+<li>padrão específico;</li>
+<li>espalhamento manual;</li>
+<li>aplicação recomendada pelo fabricante.</li>
+</ul>
+<p>A melhor orientação é considerar:</p>
+<ul>
+<li>formato do processador;</li>
+<li>viscosidade da pasta;</li>
+<li>tamanho da base;</li>
+<li>instruções do cooler;</li>
+<li>recomendações do fabricante.</li>
+</ul>
+<h2 id="pasta-termica-nao-corrige-pressao-inadequada">Pasta térmica não corrige pressão inadequada<a class="headerlink" href="#pasta-termica-nao-corrige-pressao-inadequada" title="Permanent link">&para;</a></h2>
+<p>Mesmo uma pasta excelente não compensa:</p>
+<ul>
+<li>suporte frouxo;</li>
+<li>montagem incorreta;</li>
+<li>película protetora esquecida;</li>
+<li>base desalinhada;</li>
+<li>parafusos apertados de forma desigual;</li>
+<li>cooler incompatível;</li>
+<li>suporte deformado.</li>
+</ul>
+<p>O contato mecânico é fundamental.</p>
+<h2 id="a-pelicula-esquecida">A película esquecida<a class="headerlink" href="#a-pelicula-esquecida" title="Permanent link">&para;</a></h2>
+<p>Alguns coolers vêm com uma película de proteção sobre a base. Ela deve ser removida antes da instalação.</p>
+<p>Se permanecer, pode causar:</p>
+<ul>
+<li>temperatura elevada;</li>
+<li>subida rápida de temperatura;</li>
+<li>throttling;</li>
+<li>desligamento;</li>
+<li>desempenho reduzido.</li>
+</ul>
+<p>Esse é um exemplo de problema simples que pode produzir sintomas semelhantes aos de um cooler defeituoso.</p>
+<h2 id="ventoinhas-mais-rotacao-nao-e-o-unico-fator">Ventoinhas: mais rotação não é o único fator<a class="headerlink" href="#ventoinhas-mais-rotacao-nao-e-o-unico-fator" title="Permanent link">&para;</a></h2>
+<p>A capacidade de uma ventoinha não depende apenas das rotações por minuto.</p>
+<p>Outros fatores incluem:</p>
+<ul>
+<li>diâmetro;</li>
+<li>desenho das pás;</li>
+<li>pressão estática;</li>
+<li>fluxo de ar;</li>
+<li>ruído;</li>
+<li>distância;</li>
+<li>obstruções;</li>
+<li>rolamento;</li>
+<li>controle por PWM ou tensão.</li>
+</ul>
+<h2 id="fluxo-de-ar-e-pressao-estatica">Fluxo de ar e pressão estática<a class="headerlink" href="#fluxo-de-ar-e-pressao-estatica" title="Permanent link">&para;</a></h2>
+<h3 id="fluxo-de-ar">Fluxo de ar<a class="headerlink" href="#fluxo-de-ar" title="Permanent link">&para;</a></h3>
+<p>Indica a quantidade de ar movimentada.</p>
+<p>É importante em áreas mais abertas, como entrada e exaustão do gabinete.</p>
+<h3 id="pressao-estatica">Pressão estática<a class="headerlink" href="#pressao-estatica" title="Permanent link">&para;</a></h3>
+<p>Indica a capacidade de empurrar o ar através de resistência.</p>
+<p>É especialmente relevante em:</p>
+<ul>
+<li>radiadores;</li>
+<li>dissipadores densos;</li>
+<li>filtros;</li>
+<li>painéis restritivos.</li>
+</ul>
+<p>Uma ventoinha com alto fluxo em ambiente aberto pode ter desempenho limitado ao enfrentar um radiador muito denso.</p>
+<h2 id="pwm-e-controle-por-tensao">PWM e controle por tensão<a class="headerlink" href="#pwm-e-controle-por-tensao" title="Permanent link">&para;</a></h2>
+<h3 id="controle-por-tensao">Controle por tensão<a class="headerlink" href="#controle-por-tensao" title="Permanent link">&para;</a></h3>
+<p>A velocidade é alterada modificando a tensão aplicada.</p>
+<p>É comum em ventoinhas de três pinos.</p>
+<h3 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">&para;</a></h3>
+<p>Utiliza um sinal de controle para regular a velocidade. É comum em modelos de quatro pinos.</p>
+<p>O sistema pode ajustar a rotação de acordo com:</p>
+<ul>
+<li>temperatura da CPU;</li>
+<li>temperatura da placa-mãe;</li>
+<li>sensor externo;</li>
+<li>curva personalizada.</li>
+</ul>
+<p>Uma ventoinha pode estar fisicamente funcional, mas configurada com uma curva inadequada.</p>
+<h2 id="cooler-a-ar">Cooler a ar<a class="headerlink" href="#cooler-a-ar" title="Permanent link">&para;</a></h2>
+<p>Um cooler a ar normalmente utiliza:</p>
+<ul>
+<li>base;</li>
+<li>heatpipes;</li>
+<li>torre de aletas;</li>
+<li>uma ou mais ventoinhas.</li>
+</ul>
+<h3 id="vantagens">Vantagens<a class="headerlink" href="#vantagens" title="Permanent link">&para;</a></h3>
+<ul>
+<li>construção relativamente simples;</li>
+<li>menor número de pontos de falha;</li>
+<li>manutenção reduzida;</li>
+<li>bom desempenho em muitos cenários;</li>
+<li>funcionamento mesmo sem bomba;</li>
+<li>fácil inspeção visual.</li>
+</ul>
+<h3 id="limitacoes">Limitações<a class="headerlink" href="#limitacoes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>tamanho;</li>
+<li>peso;</li>
+<li>possível interferência com memória;</li>
+<li>dependência do fluxo de ar do gabinete;</li>
+<li>distribuição térmica condicionada ao projeto.</li>
+</ul>
+<h2 id="water-cooler-do-tipo-aio">Water cooler do tipo AIO<a class="headerlink" href="#water-cooler-do-tipo-aio" title="Permanent link">&para;</a></h2>
+<p>Um sistema líquido fechado normalmente possui:</p>
+<ul>
+<li>bloco sobre o processador;</li>
+<li>bomba;</li>
+<li>mangueiras;</li>
+<li>radiador;</li>
+<li>ventoinhas;</li>
+<li>líquido interno.</li>
+</ul>
+<p>O líquido transporta o calor do bloco até o radiador. No radiador, o calor é transferido para o ar.</p>
+<p>Processador<br />
+    ↓<br />
+Bloco<br />
+    ↓<br />
+Líquido aquecido<br />
+    ↓<br />
+Radiador<br />
+    ↓<br />
+Ar movimentado pelas ventoinhas  </p>
+<h3 id="water-cooler-nao-elimina-a-necessidade-de-ar">Water cooler não elimina a necessidade de ar<a class="headerlink" href="#water-cooler-nao-elimina-a-necessidade-de-ar" title="Permanent link">&para;</a></h3>
+<p>Esse é um erro comum. O sistema líquido apenas transporta o calor até o radiador. O calor ainda precisa ser entregue ao ambiente por meio do ar.</p>
+<p>Portanto, um water cooler depende de:</p>
+<ul>
+<li>radiador adequado;</li>
+<li>ventoinhas;</li>
+<li>fluxo de ar;</li>
+<li>bomba funcional;</li>
+<li>montagem correta.</li>
+</ul>
+<p>Ele não “faz o calor desaparecer”.</p>
+<h3 id="pontos-de-falha-de-um-aio">Pontos de falha de um AIO<a class="headerlink" href="#pontos-de-falha-de-um-aio" title="Permanent link">&para;</a></h3>
+<p>Possíveis falhas incluem:</p>
+<ul>
+<li>bomba parada;</li>
+<li>bomba com rotação incorreta;</li>
+<li>bolhas em posição inadequada;</li>
+<li>perda gradual de líquido;</li>
+<li>obstrução interna;</li>
+<li>desgaste;</li>
+<li>ruído;</li>
+<li>ventoinhas paradas;</li>
+<li>radiador coberto por poeira;</li>
+<li>montagem incorreta;</li>
+<li>conector elétrico inadequado;</li>
+<li>curva de rotação mal configurada.</li>
+</ul>
+<p>Nem toda falha é visível externamente.</p>
+<h3 id="a-posicao-do-radiador-importa">A posição do radiador importa?<a class="headerlink" href="#a-posicao-do-radiador-importa" title="Permanent link">&para;</a></h3>
+<p>Sim, porque existe ar dentro de muitos sistemas fechados.O objetivo geral é evitar que a bomba permaneça como o ponto mais alto do circuito, onde bolhas podem se acumular.</p>
+<h4 id="a-posicao-ideal-depende">A posição ideal depende:<a class="headerlink" href="#a-posicao-ideal-depende" title="Permanent link">&para;</a></h4>
+<ul>
+<li>do projeto;</li>
+<li>do gabinete;</li>
+<li>da orientação;</li>
+<li>do comprimento das mangueiras;</li>
+<li>da localização da bomba.</li>
+</ul>
+<p>Não existe uma única orientação válida para todos os sistemas, mas o princípio físico deve ser respeitado.</p>
+<h2 id="o-gabinete-participa-da-refrigeracao">O gabinete participa da refrigeração<a class="headerlink" href="#o-gabinete-participa-da-refrigeracao" title="Permanent link">&para;</a></h2>
+<p>Um cooler poderoso pode ter desempenho limitado em um gabinete com entrada de ar restrita.</p>
+<p>Possíveis obstáculos:</p>
+<ul>
+<li>painel frontal fechado;</li>
+<li>filtro muito restritivo;</li>
+<li>cabos bloqueando o fluxo;</li>
+<li>poucas entradas de ar;</li>
+<li>exaustão insuficiente;</li>
+<li>ventoinhas invertidas;</li>
+<li>radiador aquecendo o interior;</li>
+<li>gabinete encostado na parede;</li>
+<li>poeira acumulada.</li>
+</ul>
+<p>O cooler não trabalha isoladamente, ele faz parte de um sistema térmico.</p>
+<h2 id="pressao-positiva-e-negativa">Pressão positiva e negativa<a class="headerlink" href="#pressao-positiva-e-negativa" title="Permanent link">&para;</a></h2>
+<h3 id="pressao-positiva">Pressão positiva<a class="headerlink" href="#pressao-positiva" title="Permanent link">&para;</a></h3>
+<p>Entra mais ar do que sai por meio das ventoinhas. O excesso tende a escapar pelas aberturas.<br />
+Pode ajudar a reduzir entrada de poeira por frestas quando as entradas possuem filtros.</p>
+<h3 id="pressao-negativa">Pressão negativa<a class="headerlink" href="#pressao-negativa" title="Permanent link">&para;</a></h3>
+<p>Sai mais ar do que entra. O gabinete puxa ar por diversas aberturas. Isso pode aumentar a entrada de poeira em locais sem filtragem.</p>
+<h3 id="pressao-equilibrada">Pressão equilibrada<a class="headerlink" href="#pressao-equilibrada" title="Permanent link">&para;</a></h3>
+<p>Entrada e saída permanecem próximas. Na prática, o comportamento depende da resistência dos filtros, do gabinete e das ventoinhas, não basta contar quantas ventoinhas existem.</p>
+<h2 id="direcao-correta-das-ventoinhas">Direção correta das ventoinhas<a class="headerlink" href="#direcao-correta-das-ventoinhas" title="Permanent link">&para;</a></h2>
+<p>A maioria das ventoinhas movimenta o ar da face mais aberta para o lado onde ficam as hastes estruturais e a etiqueta traseira.</p>
+<p>Entretanto, existem modelos de fluxo reverso.</p>
+<p>A confirmação deve ser feita por:</p>
+<ul>
+<li>setas no corpo;</li>
+<li>documentação;</li>
+<li>teste de fluxo;</li>
+<li>identificação do modelo.</li>
+</ul>
+<p>Uma ventoinha invertida pode quebrar completamente a estratégia de circulação.</p>
+<h2 id="um-gabinete-cheio-de-ventoinhas-pode-ser-pior">Um gabinete cheio de ventoinhas pode ser pior?<a class="headerlink" href="#um-gabinete-cheio-de-ventoinhas-pode-ser-pior" title="Permanent link">&para;</a></h2>
+<p><strong>Sim.</strong> Mais ventoinhas sem planejamento podem criar:</p>
+<ul>
+<li>turbulência;</li>
+<li>recirculação de ar quente;</li>
+<li>ruído excessivo;</li>
+<li>competição entre fluxos;</li>
+<li>pressão inadequada;</li>
+<li>entrada de poeira;</li>
+<li>benefício mínimo.</li>
+</ul>
+<p>O objetivo não é instalar a maior quantidade possível.  </p>
+<p>É criar um caminho eficiente:  </p>
+<p>Ar fresco entra <br />
+       ↓<br />
+Passa pelos componentes<br />
+       ↓<br />
+Absorve calor<br />
+       ↓<br />
+Ar quente sai  </p>
+<h2 id="temperatura-ambiente">Temperatura ambiente<a class="headerlink" href="#temperatura-ambiente" title="Permanent link">&para;</a></h2>
+<p>Nenhum sistema convencional consegue resfriar o componente abaixo da temperatura do ar de entrada sem utilizar técnicas específicas. Se o ambiente está mais quente, a temperatura dos componentes tende a subir.</p>
+<p>Por isso, comparar dois testes exige registrar:</p>
+<ul>
+<li>temperatura ambiente;</li>
+<li>local;</li>
+<li>horário;</li>
+<li>ventilação;</li>
+<li>carga;</li>
+<li>duração;</li>
+<li>configuração.</li>
+</ul>
+<p>Uma diferença de 5 °C no ambiente pode alterar significativamente o resultado.</p>
+<h2 id="temperatura-absoluta-e-diferenca-termica">Temperatura absoluta e diferença térmica<a class="headerlink" href="#temperatura-absoluta-e-diferenca-termica" title="Permanent link">&para;</a></h2>
+<p>Uma forma útil de comparar é observar a diferença entre a temperatura do componente e a temperatura ambiente.</p>
+<p>Exemplo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Teste A
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>CPU: 80 °C
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Ambiente: 20 °C
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Diferença: 60 °C
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Teste B
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>CPU: 83 °C
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Ambiente: 28 °C
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Diferença: 55 °C
+</code></pre></div>
+Embora a CPU do teste B esteja mais quente em valor absoluto, o sistema de refrigeração pode estar funcionando melhor em relação ao ambiente.</p>
+<h2 id="dentro-da-caixa">Dentro da Caixa<a class="headerlink" href="#dentro-da-caixa" title="Permanent link">&para;</a></h2>
+<p>Vamos analisar um cooler:</p>
+<ul>
+<li>Tipo..................Cooler a ar</li>
+<li>Altura................158 mm</li>
+<li>Heatpipes.............6</li>
+<li>Ventoinha.............140 mm</li>
+<li>Controle..............PWM</li>
+<li>Rotação máxima........1.500 RPM</li>
+<li>Compatibilidade.......AM5, AM4 e LGA1700</li>
+<li>Altura para memória...variável conforme a posição</li>
+<li>Capacidade declarada..não padronizada entre fabricantes</li>
+</ul>
+<h3 id="altura">Altura<a class="headerlink" href="#altura" title="Permanent link">&para;</a></h3>
+<p>Deve ser compatível com a largura disponível no gabinete.</p>
+<p>Um cooler de 158 mm pode não caber em gabinetes que aceitam apenas 155 mm.</p>
+<h3 id="heatpipes_1">Heatpipes<a class="headerlink" href="#heatpipes_1" title="Permanent link">&para;</a></h3>
+<p>A quantidade ajuda a descrever o projeto, mas não determina sozinha o desempenho.</p>
+<p>Importam também:</p>
+<ul>
+<li>diâmetro;</li>
+<li>contato;</li>
+<li>distribuição;</li>
+<li>qualidade;</li>
+<li>área do dissipador;</li>
+<li>ventoinha.</li>
+</ul>
+<h3 id="ventoinha-de-140-mm">Ventoinha de 140 mm<a class="headerlink" href="#ventoinha-de-140-mm" title="Permanent link">&para;</a></h3>
+<p>Pode movimentar bastante ar com rotação menor, mas depende do projeto.</p>
+<h3 id="compatibilidade">Compatibilidade<a class="headerlink" href="#compatibilidade" title="Permanent link">&para;</a></h3>
+<p>O socket precisa ser suportado, mas também devem ser verificados:</p>
+<ul>
+<li>kit de montagem;</li>
+<li>revisão;</li>
+<li>espaço;</li>
+<li>memória;</li>
+<li>placa de vídeo;</li>
+<li>orientação.</li>
+</ul>
+<h3 id="capacidade-termica-declarada">Capacidade térmica declarada<a class="headerlink" href="#capacidade-termica-declarada" title="Permanent link">&para;</a></h3>
+<p>Não existe um método universal usado por todos os fabricantes para declarar capacidade térmica. Comparações diretas exigem testes independentes em condições semelhantes.</p>
+<h2 id="ferramentas-gratuitas">Ferramentas gratuitas<a class="headerlink" href="#ferramentas-gratuitas" title="Permanent link">&para;</a></h2>
+<h3 id="hwinfo">HWiNFO<a class="headerlink" href="#hwinfo" title="Permanent link">&para;</a></h3>
+<p>Pode apresentar:</p>
+<ul>
+<li>temperatura por núcleo;</li>
+<li>temperatura do pacote;</li>
+<li>clocks;</li>
+<li>potência;</li>
+<li>consumo;</li>
+<li>limites térmicos;</li>
+<li>rotação de ventoinhas;</li>
+<li>velocidade da bomba;</li>
+<li>sinais de throttling.</li>
+</ul>
+<h3 id="hwmonitor">HWMonitor<a class="headerlink" href="#hwmonitor" title="Permanent link">&para;</a></h3>
+<p>Oferece uma visualização mais simples de vários sensores.É útil para observação inicial, mas deve ser interpretado com cautela quando algum sensor parecer incorreto.</p>
+<h3 id="core-temp">Core Temp<a class="headerlink" href="#core-temp" title="Permanent link">&para;</a></h3>
+<p>Focado principalmente em informações térmicas da CPU.</p>
+<h3 id="gpu-z">GPU-Z<a class="headerlink" href="#gpu-z" title="Permanent link">&para;</a></h3>
+<p>Pode monitorar:</p>
+<ul>
+<li>temperatura da GPU;</li>
+<li>temperatura de memória em modelos compatíveis;</li>
+<li>hotspot;</li>
+<li>carga;</li>
+<li>clocks;</li>
+<li>rotação das ventoinhas;</li>
+<li>limites de desempenho.</li>
+</ul>
+<h3 id="fan-control">Fan Control<a class="headerlink" href="#fan-control" title="Permanent link">&para;</a></h3>
+<p>Permite criar curvas de ventoinhas em sistemas compatíveis.</p>
+<p>É útil para:</p>
+<ul>
+<li>reduzir ruído;</li>
+<li>reagir a diferentes sensores;</li>
+<li>ajustar entrada e exaustão;</li>
+<li>controlar ventoinhas conforme CPU ou GPU.</li>
+</ul>
+<p>Configurações incorretas podem reduzir a refrigeração.</p>
+<h3 id="bios-ou-uefi">BIOS ou UEFI<a class="headerlink" href="#bios-ou-uefi" title="Permanent link">&para;</a></h3>
+<p>Pode permitir:</p>
+<ul>
+<li>monitoramento;</li>
+<li>curvas de ventoinha;</li>
+<li>modos PWM e tensão;</li>
+<li>alertas;</li>
+<li>controle da bomba;</li>
+<li>limites térmicos;</li>
+<li>configuração de potência.</li>
+</ul>
+<h3 id="testes-de-carga">Testes de carga<a class="headerlink" href="#testes-de-carga" title="Permanent link">&para;</a></h3>
+<p>Para investigar refrigeração, podemos utilizar cargas controladas. Exemplos conhecidos incluem ferramentas que exercitam CPU ou GPU. Porém, testes intensos exigem cautela.</p>
+<p>Antes de executá-los, verifique:</p>
+<ul>
+<li>estabilidade inicial;</li>
+<li>funcionamento das ventoinhas;</li>
+<li>temperatura em repouso;</li>
+<li>ausência de cheiro ou ruído anormal;</li>
+<li>cooler corretamente instalado;</li>
+<li>capacidade da fonte;</li>
+<li>possibilidade de encerrar o teste;</li>
+<li>importância dos dados abertos.</li>
+</ul>
+<p>Um dispositivo que já apresenta sinais de falha não deve ser submetido automaticamente a testes extremos.</p>
+<p>Benchmark não é diagnóstico completo</p>
+<h3 id="um-benchmark-pode-ajudar-a-comparar">Um benchmark pode ajudar a comparar:<a class="headerlink" href="#um-benchmark-pode-ajudar-a-comparar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>desempenho;</li>
+<li>temperatura;</li>
+<li>estabilidade;</li>
+<li>clocks;</li>
+<li>repetibilidade.</li>
+</ul>
+<p>Mas o resultado depende de:</p>
+<ul>
+<li>versão do programa;</li>
+<li>configuração;</li>
+<li>temperatura ambiente;</li>
+<li>processos em segundo plano;</li>
+<li>firmware;</li>
+<li>memória;</li>
+<li>limites de potência;</li>
+<li>sistema operacional.</li>
+</ul>
+<p>Um número isolado não constitui diagnóstico.</p>
+<h2 id="como-realizar-um-teste-comparavel">Como realizar um teste comparável<a class="headerlink" href="#como-realizar-um-teste-comparavel" title="Permanent link">&para;</a></h2>
+<h3 id="etapa-1-registrar-o-ambiente">Etapa 1 — Registrar o ambiente<a class="headerlink" href="#etapa-1-registrar-o-ambiente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>temperatura ambiente;</li>
+<li>gabinete fechado ou aberto;</li>
+<li>posição;</li>
+<li>quantidade de ventoinhas;</li>
+<li>perfil de energia.</li>
+</ul>
+<h3 id="etapa-2-estabilizar-o-sistema">Etapa 2 — Estabilizar o sistema<a class="headerlink" href="#etapa-2-estabilizar-o-sistema" title="Permanent link">&para;</a></h3>
+<p>Aguardar alguns minutos em repouso.</p>
+<h3 id="etapa-3-registrar-valores-iniciais">Etapa 3 — Registrar valores iniciais<a class="headerlink" href="#etapa-3-registrar-valores-iniciais" title="Permanent link">&para;</a></h3>
+<ul>
+<li>temperatura;</li>
+<li>clocks;</li>
+<li>rotação;</li>
+<li>potência;</li>
+<li>ruído.</li>
+</ul>
+<h3 id="etapa-4-aplicar-a-mesma-carga">Etapa 4 — Aplicar a mesma carga<a class="headerlink" href="#etapa-4-aplicar-a-mesma-carga" title="Permanent link">&para;</a></h3>
+<p>Utilizar o mesmo programa, versão, duração e configuração.</p>
+<h3 id="etapa-5-observar-o-comportamento">Etapa 5 — Observar o comportamento<a class="headerlink" href="#etapa-5-observar-o-comportamento" title="Permanent link">&para;</a></h3>
+<ul>
+<li>temperatura máxima;</li>
+<li>temperatura estabilizada;</li>
+<li>clocks;</li>
+<li>throttling;</li>
+<li>potência;</li>
+<li>rotação;</li>
+<li>estabilidade.</li>
+</ul>
+<h3 id="etapa-6-alterar-apenas-uma-variavel">Etapa 6 — Alterar apenas uma variável<a class="headerlink" href="#etapa-6-alterar-apenas-uma-variavel" title="Permanent link">&para;</a></h3>
+<p>Por exemplo:</p>
+<ul>
+<li>trocar a curva;</li>
+<li>remover temporariamente o painel frontal;</li>
+<li>reposicionar uma ventoinha;</li>
+<li>reinstalar o cooler.</li>
+</ul>
+<h3 id="etapa-7-repetir">Etapa 7 — Repetir<a class="headerlink" href="#etapa-7-repetir" title="Permanent link">&para;</a></h3>
+<p>Sem controlar as variáveis, não existe comparação confiável.</p>
+<h2 id="diagnostico-com-o-painel-frontal-removido">Diagnóstico com o painel frontal removido<a class="headerlink" href="#diagnostico-com-o-painel-frontal-removido" title="Permanent link">&para;</a></h2>
+<p>Uma técnica simples para investigar restrição de entrada de ar é comparar o sistema:</p>
+<ul>
+<li>com o painel frontal instalado;</li>
+<li>com o painel frontal removido temporariamente.</li>
+</ul>
+<p>Se a temperatura cair significativamente, isso sugere que a entrada de ar pode estar limitada. Essa técnica não prova que o gabinete seja defeituoso, ela mostra que o fluxo de entrada está influenciando o resultado.</p>
+<h2 id="diagnostico-com-a-lateral-aberta">Diagnóstico com a lateral aberta<a class="headerlink" href="#diagnostico-com-a-lateral-aberta" title="Permanent link">&para;</a></h2>
+<p>Abrir a lateral pode ajudar a investigar o fluxo interno. </p>
+<h3 id="se-a-temperatura-cair-muito">Se a temperatura cair muito.<a class="headerlink" href="#se-a-temperatura-cair-muito" title="Permanent link">&para;</a></h3>
+<p>Pode existir:</p>
+<ul>
+<li>entrada insuficiente;</li>
+<li>exaustão inadequada;</li>
+<li>recirculação;</li>
+<li>ventoinhas mal posicionadas;</li>
+<li>painel restritivo.</li>
+</ul>
+<h3 id="se-a-temperatura-aumentar">Se a temperatura aumentar<a class="headerlink" href="#se-a-temperatura-aumentar" title="Permanent link">&para;</a></h3>
+<p>A abertura pode ter interrompido um fluxo interno eficiente.</p>
+<p>Novamente, a evidência precisa ser interpretada.</p>
+<h2 id="estudo-de-caso-1-cpu-chega-rapidamente-ao-limite">Estudo de Caso 1 — CPU chega rapidamente ao limite<a class="headerlink" href="#estudo-de-caso-1-cpu-chega-rapidamente-ao-limite" title="Permanent link">&para;</a></h2>
+<h3 id="sintomas">Sintomas:<a class="headerlink" href="#sintomas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>temperatura sobe em segundos;</li>
+<li>clock cai;</li>
+<li>ventoinha está girando;</li>
+<li>cooler foi instalado recentemente;</li>
+<li>temperatura em repouso também está alta.</li>
+</ul>
+<h3 id="hipoteses">Hipóteses:<a class="headerlink" href="#hipoteses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>película protetora não removida;</li>
+<li>pressão inadequada;</li>
+<li>pasta térmica ausente;</li>
+<li>suporte incorreto;</li>
+<li>bomba parada;</li>
+<li>conector errado;</li>
+<li>leitura incorreta do sensor;</li>
+<li>limite de potência elevado.</li>
+</ul>
+<p>A velocidade da subida térmica é uma evidência importante.</p>
+<h2 id="estudo-de-caso-2-temperatura-alta-apenas-apos-20-minutos">Estudo de Caso 2 — Temperatura alta apenas após 20 minutos<a class="headerlink" href="#estudo-de-caso-2-temperatura-alta-apenas-apos-20-minutos" title="Permanent link">&para;</a></h2>
+<h3 id="sintomas_1">Sintomas:<a class="headerlink" href="#sintomas_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>temperatura inicial normal;</li>
+<li>aumento progressivo;</li>
+<li>gabinete aquece;</li>
+<li>ar quente permanece no interior;</li>
+<li>exaustão fraca.</li>
+</ul>
+<h3 id="hipoteses_1">Hipóteses:<a class="headerlink" href="#hipoteses_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>saturação térmica do gabinete;</li>
+<li>fluxo insuficiente;</li>
+<li>radiador recebendo ar quente;</li>
+<li>filtro obstruído;</li>
+<li>baixa rotação das ventoinhas;</li>
+<li>ambiente quente.</li>
+</ul>
+<p>Nesse caso, o cooler pode estar transferindo calor corretamente, mas o gabinete não consegue removê-lo.</p>
+<h2 id="estudo-de-caso-3-water-cooler-novo-reduz-apenas-3-c">Estudo de Caso 3 — Water cooler novo reduz apenas 3 °C<a class="headerlink" href="#estudo-de-caso-3-water-cooler-novo-reduz-apenas-3-c" title="Permanent link">&para;</a></h2>
+<h3 id="evidencias">Evidências:<a class="headerlink" href="#evidencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>clock médio aumentou;</li>
+<li>consumo aumentou;</li>
+<li>processador manteve boost por mais tempo;</li>
+<li>temperatura final permaneceu próxima;</li>
+<li>ambiente estava 2 °C mais quente no segundo teste.</li>
+</ul>
+<h3 id="conclusao-provavel">Conclusão provável:<a class="headerlink" href="#conclusao-provavel" title="Permanent link">&para;</a></h3>
+<p>O novo sistema pode estar oferecendo mais capacidade térmica, utilizada pelo processador para sustentar maior desempenho, sem produzir grande queda na temperatura máxima.  </p>
+<p>A análise correta deve comparar desempenho, potência, clocks e ambiente.</p>
+<h2 id="estudo-de-caso-4-computador-desliga-apos-trocar-a-pasta-termica">Estudo de Caso 4 — Computador desliga após trocar a pasta térmica<a class="headerlink" href="#estudo-de-caso-4-computador-desliga-apos-trocar-a-pasta-termica" title="Permanent link">&para;</a></h2>
+<h3 id="sintomas_2">Sintomas:<a class="headerlink" href="#sintomas_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sistema funcionava antes;</li>
+<li>cooler foi removido;</li>
+<li>após a manutenção, a CPU aquece rapidamente;</li>
+<li>o computador desliga.</li>
+</ul>
+<h3 id="hipoteses_2">Hipóteses:<a class="headerlink" href="#hipoteses_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cooler mal fixado;</li>
+<li>cabo da ventoinha desconectado;</li>
+<li>bomba desconectada;</li>
+<li>suporte instalado incorretamente;</li>
+<li>película mantida;</li>
+<li>pasta insuficiente;</li>
+<li>excesso de força;</li>
+<li>componente deslocado durante a manutenção.</li>
+</ul>
+<p>O fato de o problema surgir imediatamente após uma intervenção aumenta a relevância dessa alteração na investigação.</p>
+<h2 id="estudo-de-caso-5-gpu-quente-e-cpu-normal">Estudo de Caso 5 — GPU quente e CPU normal<a class="headerlink" href="#estudo-de-caso-5-gpu-quente-e-cpu-normal" title="Permanent link">&para;</a></h2>
+<h3 id="configuracao">Configuração:<a class="headerlink" href="#configuracao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>gabinete compacto;</li>
+<li>placa de vídeo de alta potência;</li>
+<li>CPU com cooler adequado;</li>
+<li>poucas entradas inferiores;</li>
+<li>GPU próxima do painel.</li>
+</ul>
+<h3 id="evidencias_1">Evidências:<a class="headerlink" href="#evidencias_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CPU: temperatura normal;</li>
+<li>GPU: temperatura elevada;</li>
+<li>hotspot muito acima da temperatura média;</li>
+<li>ventoinhas da GPU em alta rotação;</li>
+<li>melhora significativa com a lateral aberta.</li>
+</ul>
+<h3 id="hipoteses_3">Hipóteses:<a class="headerlink" href="#hipoteses_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>entrada de ar insuficiente para a GPU;</li>
+<li>recirculação do ar quente;</li>
+<li>pasta térmica ou pads;</li>
+<li>dissipador sujo;</li>
+<li>contato inadequado;</li>
+<li>curva de ventoinha;</li>
+<li>gabinete restritivo.</li>
+</ul>
+<p>Cada componente pode enfrentar um problema térmico diferente.</p>
+<h2 id="hotspot-da-gpu">Hotspot da GPU<a class="headerlink" href="#hotspot-da-gpu" title="Permanent link">&para;</a></h2>
+<p>Algumas GPUs apresentam:</p>
+<ul>
+<li>temperatura média do chip;</li>
+<li>temperatura do ponto mais quente, chamada hotspot.</li>
+</ul>
+<p>A diferença entre essas leituras pode ajudar a investigar:</p>
+<ul>
+<li>distribuição térmica;</li>
+<li>contato do dissipador;</li>
+<li>aplicação da interface térmica;</li>
+<li>variação interna do chip.</li>
+</ul>
+<p>Uma diferença elevada não produz, sozinha, diagnóstico definitivo é necessário considerar o projeto e os limites do modelo.</p>
+<h2 id="ssd-tambem-pode-sofrer-throttling-termico">SSD também pode sofrer throttling térmico<a class="headerlink" href="#ssd-tambem-pode-sofrer-throttling-termico" title="Permanent link">&para;</a></h2>
+<p>SSDs NVMe podem atingir temperaturas elevadas durante cargas intensas. Quando isso ocorre, o controlador pode reduzir o desempenho.</p>
+<p>Possíveis fatores:</p>
+<ul>
+<li>ausência de dissipador;</li>
+<li>dissipador com película não removida;</li>
+<li>posição abaixo da GPU;</li>
+<li>pouco fluxo de ar;</li>
+<li>carga prolongada;</li>
+<li>controlador de alto desempenho;</li>
+<li>ambiente quente.</li>
+</ul>
+<h3 id="sintomas_3">Sintomas:<a class="headerlink" href="#sintomas_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>transferência começa rápida;</li>
+<li>velocidade cai após algum tempo;</li>
+<li>temperatura aumenta;</li>
+<li>desempenho retorna após resfriamento.</li>
+</ul>
+<h2 id="memorias-e-vrm-tambem-precisam-de-refrigeracao">Memórias e VRM também precisam de refrigeração<a class="headerlink" href="#memorias-e-vrm-tambem-precisam-de-refrigeracao" title="Permanent link">&para;</a></h2>
+<p>O foco costuma permanecer na CPU e GPU, mas outros componentes podem aquecer.</p>
+<h3 id="vrm">VRM<a class="headerlink" href="#vrm" title="Permanent link">&para;</a></h3>
+<p>Pode limitar a CPU ou causar instabilidade quando opera acima da capacidade térmica.</p>
+<h3 id="memoria-ram">Memória RAM<a class="headerlink" href="#memoria-ram" title="Permanent link">&para;</a></h3>
+<p>Perfis elevados de tensão e frequência podem aumentar a temperatura.</p>
+<h3 id="memoria-da-gpu">Memória da GPU<a class="headerlink" href="#memoria-da-gpu" title="Permanent link">&para;</a></h3>
+<p>Pode exigir contato adequado com pads térmicos e dissipador.</p>
+<h3 id="chipset">Chipset<a class="headerlink" href="#chipset" title="Permanent link">&para;</a></h3>
+<p>Pode utilizar dissipador ativo ou passivo.</p>
+<p>Um sistema aparentemente bem refrigerado na CPU ainda pode ter problemas em outra região.</p>
+<h2 id="poeira-nao-e-apenas-uma-questao-estetica">Poeira não é apenas uma questão estética<a class="headerlink" href="#poeira-nao-e-apenas-uma-questao-estetica" title="Permanent link">&para;</a></h2>
+<p>A poeira pode:</p>
+<ul>
+<li>obstruir filtros;</li>
+<li>reduzir passagem de ar;</li>
+<li>cobrir aletas;</li>
+<li>desequilibrar ventoinhas;</li>
+<li>aumentar ruído;</li>
+<li>elevar temperaturas;</li>
+<li>reter umidade;</li>
+<li>contribuir para contaminação.</li>
+</ul>
+<p>A limpeza deve ser feita com:</p>
+<ul>
+<li>equipamento desligado;</li>
+<li>cabo removido;</li>
+<li>cuidado contra estática;</li>
+<li>ventoinhas imobilizadas ao usar ar;</li>
+<li>métodos adequados.</li>
+</ul>
+<p>Não se deve deixar uma ventoinha girar descontroladamente com jatos de ar. Além de risco mecânico, ela pode gerar tensão no circuito.</p>
+<h2 id="ar-comprimido-inadequado">Ar comprimido inadequado<a class="headerlink" href="#ar-comprimido-inadequado" title="Permanent link">&para;</a></h2>
+<p>Alguns recipientes podem liberar:</p>
+<ul>
+<li>líquido;</li>
+<li>propelente;</li>
+<li>umidade;</li>
+<li>resíduos.</li>
+</ul>
+<p>Compressores também podem lançar água ou óleo se não possuírem filtragem adequada. A limpeza precisa considerar o equipamento utilizado.</p>
+<h2 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h2>
+<h3 id="quanto-menor-a-temperatura-melhor-em-qualquer-situacao">“Quanto menor a temperatura, melhor em qualquer situação”<a class="headerlink" href="#quanto-menor-a-temperatura-melhor-em-qualquer-situacao" title="Permanent link">&para;</a></h3>
+<h4 id="mito">Mito.<a class="headerlink" href="#mito" title="Permanent link">&para;</a></h4>
+<p>Temperatura deve ser avaliada junto com desempenho, ruído, potência e limites do componente.</p>
+<h3 id="um-water-cooler-sempre-e-superior-a-um-cooler-a-ar">“Um water cooler sempre é superior a um cooler a ar”<a class="headerlink" href="#um-water-cooler-sempre-e-superior-a-um-cooler-a-ar" title="Permanent link">&para;</a></h3>
+<h4 id="mito_1">Mito.<a class="headerlink" href="#mito_1" title="Permanent link">&para;</a></h4>
+<p>O desempenho depende do projeto, radiador, bomba, ventoinhas, gabinete, carga e instalação.</p>
+<h3 id="aplicar-mais-pasta-termica-sempre-melhora-a-transferencia">“Aplicar mais pasta térmica sempre melhora a transferência”<a class="headerlink" href="#aplicar-mais-pasta-termica-sempre-melhora-a-transferencia" title="Permanent link">&para;</a></h3>
+<h4 id="mito_2">Mito.<a class="headerlink" href="#mito_2" title="Permanent link">&para;</a></h4>
+<p>O excesso pode prejudicar o contato e criar uma camada desnecessária.</p>
+<h3 id="abrir-a-lateral-sempre-melhora-a-refrigeracao">“Abrir a lateral sempre melhora a refrigeração”<a class="headerlink" href="#abrir-a-lateral-sempre-melhora-a-refrigeracao" title="Permanent link">&para;</a></h3>
+<h4 id="mito_3">Mito.<a class="headerlink" href="#mito_3" title="Permanent link">&para;</a></h4>
+<p>Pode melhorar sistemas com fluxo ruim ou piorar sistemas bem organizados.</p>
+<h3 id="a-temperatura-ambiente-influencia-as-medicoes">“A temperatura ambiente influencia as medições”<a class="headerlink" href="#a-temperatura-ambiente-influencia-as-medicoes" title="Permanent link">&para;</a></h3>
+<h4 id="evidencia">Evidência.<a class="headerlink" href="#evidencia" title="Permanent link">&para;</a></h4>
+<p>Comparações devem considerar o ar de entrada.</p>
+<h3 id="uma-cpu-pode-manter-a-mesma-temperatura-com-cooler-melhor-e-entregar-mais-desempenho">“Uma CPU pode manter a mesma temperatura com cooler melhor e entregar mais desempenho”<a class="headerlink" href="#uma-cpu-pode-manter-a-mesma-temperatura-com-cooler-melhor-e-entregar-mais-desempenho" title="Permanent link">&para;</a></h3>
+<h4 id="evidencia_1">Evidência.<a class="headerlink" href="#evidencia_1" title="Permanent link">&para;</a></h4>
+<p>O processador pode utilizar a margem disponível para elevar clocks e potência.</p>
+<h3 id="se-a-bomba-aparece-com-rpm-o-water-cooler-esta-necessariamente-funcionando-corretamente">“Se a bomba aparece com RPM, o water cooler está necessariamente funcionando corretamente”<a class="headerlink" href="#se-a-bomba-aparece-com-rpm-o-water-cooler-esta-necessariamente-funcionando-corretamente" title="Permanent link">&para;</a></h3>
+<h4 id="mito_4">Mito.<a class="headerlink" href="#mito_4" title="Permanent link">&para;</a></h4>
+<p>A leitura confirma apenas um sinal informado pelo sistema. Ainda podem existir falhas de circulação, obstrução, bolhas, desgaste ou leitura incorreta.</p>
+<h2 id="o-que-um-perito-observaria">O que um perito observaria?<a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Qual sensor está sendo analisado?</li>
+<li>Qual é o modelo exato do componente?</li>
+<li>Qual é a temperatura ambiente?</li>
+<li>A carga é reproduzível?</li>
+<li>O problema ocorre em repouso ou sob carga?</li>
+<li>A temperatura sobe instantaneamente ou gradualmente?</li>
+<li>Existe throttling?</li>
+<li>Os clocks caem?</li>
+<li>A potência muda?</li>
+<li>As ventoinhas respondem à temperatura?</li>
+<li>A bomba está conectada ao cabeçalho correto?</li>
+<li>O cooler está pressionado adequadamente?</li>
+<li>A película foi removida?</li>
+<li>O fluxo do gabinete está correto?</li>
+<li>O problema surgiu após alguma intervenção?</li>
+<li>O painel frontal restringe o ar?</li>
+<li>Existe poeira?</li>
+<li>CPU, GPU, SSD, VRM e memória foram analisados separadamente?</li>
+<li>A comparação foi feita nas mesmas condições?</li>
+<li>Existe risco de continuar o teste?</li>
+</ul>
+<h2 id="quando-interromper-o-teste">Quando interromper o teste<a class="headerlink" href="#quando-interromper-o-teste" title="Permanent link">&para;</a></h2>
+<p>Pare imediatamente diante de sinais como:</p>
+<ul>
+<li>cheiro de queimado;</li>
+<li>fumaça;</li>
+<li>bomba emitindo ruído anormal intenso;</li>
+<li>vazamento;</li>
+<li>líquido sobre componentes;</li>
+<li>temperatura subindo sem estabilizar;</li>
+<li>ventoinha travada;</li>
+<li>desligamentos repetidos;</li>
+<li>deformação de conectores;</li>
+<li>estalos;</li>
+<li>falha elétrica.</li>
+</ul>
+<p>A prioridade é preservar pessoas, dados e equipamentos.</p>
+<h2 id="laboratorio-guiado-mapa-termico-do-computador">Laboratório guiado — mapa térmico do computador<a class="headerlink" href="#laboratorio-guiado-mapa-termico-do-computador" title="Permanent link">&para;</a></h2>
+<p>Esta atividade utilizará apenas monitoramento e observação.</p>
+<h3 id="etapa-1-identificacao">Etapa 1 — Identificação<a class="headerlink" href="#etapa-1-identificacao" title="Permanent link">&para;</a></h3>
+<p>Registre:</p>
+<ul>
+<li>processador;</li>
+<li>cooler;</li>
+<li>placa de vídeo;</li>
+<li>gabinete;</li>
+<li>quantidade e posição das ventoinhas;</li>
+<li>temperatura ambiente aproximada;</li>
+<li>software utilizado.</li>
+</ul>
+<h3 id="etapa-2-repouso">Etapa 2 — Repouso<a class="headerlink" href="#etapa-2-repouso" title="Permanent link">&para;</a></h3>
+<p>Após alguns minutos sem carga intensa, registre:</p>
+<ul>
+<li>temperatura da CPU;</li>
+<li>temperatura da GPU;</li>
+<li>temperatura do SSD;</li>
+<li>rotação das ventoinhas;</li>
+<li>clock;</li>
+<li>potência, quando disponível.</li>
+</ul>
+<h3 id="etapa-3-carga-moderada">Etapa 3 — Carga moderada<a class="headerlink" href="#etapa-3-carga-moderada" title="Permanent link">&para;</a></h3>
+<p>Execute uma tarefa real, como:</p>
+<ul>
+<li>compactar arquivos;</li>
+<li>exportar vídeo curto;</li>
+<li>executar jogo;</li>
+<li>realizar benchmark moderado.</li>
+</ul>
+<p>Registre os valores ao longo do tempo.</p>
+<h3 id="etapa-4-observe-a-curva">Etapa 4 — Observe a curva<a class="headerlink" href="#etapa-4-observe-a-curva" title="Permanent link">&para;</a></h3>
+<p>Pergunte:</p>
+<ul>
+<li>a temperatura sobe rapidamente?</li>
+<li>estabiliza?</li>
+<li>continua crescendo?</li>
+<li>as ventoinhas aceleram?</li>
+<li>o clock é mantido?</li>
+<li>existe throttling?</li>
+<li>o gabinete expulsa ar quente?</li>
+</ul>
+<h3 id="etapa-5-alteracao-controlada">Etapa 5 — Alteração controlada<a class="headerlink" href="#etapa-5-alteracao-controlada" title="Permanent link">&para;</a></h3>
+<p>Mude apenas uma variável segura.</p>
+<p>Exemplos:</p>
+<ul>
+<li>remover temporariamente o painel frontal;</li>
+<li>aumentar a rotação das ventoinhas;</li>
+<li>fechar programas em segundo plano;</li>
+<li>ajustar uma curva segura.</li>
+</ul>
+<h3 id="etapa-6-repeticao">Etapa 6 — Repetição<a class="headerlink" href="#etapa-6-repeticao" title="Permanent link">&para;</a></h3>
+<p>Repita a mesma carga e compare.</p>
+<h3 id="etapa-7-conclusao-provisoria">Etapa 7 — Conclusão provisória<a class="headerlink" href="#etapa-7-conclusao-provisoria" title="Permanent link">&para;</a></h3>
+<p>Exemplo:</p>
+<p>A remoção temporária do painel frontal reduziu a temperatura da GPU e do processador, indicando que a entrada de ar do gabinete participa da limitação térmica.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
