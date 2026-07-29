@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img">
+  <title>Comparação entre Windows, Linux e macOS</title>
+  <desc>Windows prioriza compatibilidade, Linux personalização e servidores, e macOS integração com o hardware Apple.</desc>
+  <rect width="1200" height="690" rx="28" fill="#07110c"/>
+  <text x="600" y="63" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">SISTEMAS PARA COMPUTADORES</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="42" y="105" width="350" height="520" rx="20"/><rect x="425" y="105" width="350" height="520" rx="20"/><rect x="808" y="105" width="350" height="520" rx="20"/></g>
+    <g fill="#ffd21a"><rect x="157" y="143" width="120" height="93" rx="10"/><rect x="540" y="143" width="120" height="93" rx="10"/><rect x="923" y="143" width="120" height="93" rx="10"/></g>
+    <g fill="#07110c"><path d="M172 160h40v27h-40zm50 0h40v27h-40zm-50 35h40v27h-40zm50 0h40v27h-40z"/>
+      <g><ellipse cx="600" cy="187" rx="33" ry="39"/><ellipse cx="600" cy="190" rx="21" ry="29" fill="#ffd21a"/><circle cx="590" cy="172" r="7" fill="#fff"/><circle cx="610" cy="172" r="7" fill="#fff"/><path d="M593 184h14l-7 9z" fill="#f28c18"/></g>
+      <path d="M983 164c-8-10-21-12-31-5-12 8-17 25-11 42 7 20 19 31 31 31 7 0 10-5 18-5 8 0 10 5 18 5 12 0 23-14 28-28-16-7-19-27-5-37-9-10-24-12-36-5-5 3-8 4-12 2z"/><path d="M991 153c1-11 10-20 21-22 1 11-7 21-21 22z"/></g>
+    <g text-anchor="middle"><text x="217" y="282" fill="#fff" font-size="28" font-weight="800">WINDOWS</text><text x="600" y="282" fill="#fff" font-size="28" font-weight="800">LINUX</text><text x="983" y="282" fill="#fff" font-size="28" font-weight="800">macOS</text></g>
+    <g fill="#16c65b" font-size="18" font-weight="800"><text x="78" y="332">PONTOS FORTES</text><text x="461" y="332">PONTOS FORTES</text><text x="844" y="332">PONTOS FORTES</text></g>
+    <g fill="#fff" font-size="17"><text x="78" y="369">• Fácil de aprender</text><text x="78" y="401">• Muitos programas e jogos</text><text x="78" y="433">• Presente no mercado</text>
+      <text x="461" y="369">• Gratuito e personalizável</text><text x="461" y="401">• Estável e seguro</text><text x="461" y="433">• Forte em servidores</text>
+      <text x="844" y="369">• Hardware e software integrados</text><text x="844" y="401">• Estável e consistente</text><text x="844" y="433">• Ecossistema Apple</text></g>
+    <g fill="#ffd21a" font-size="18" font-weight="800"><text x="78" y="484">ATENÇÃO</text><text x="461" y="484">ATENÇÃO</text><text x="844" y="484">ATENÇÃO</text></g>
+    <g fill="#fff" font-size="16"><text x="78" y="520">Licença e requisitos recentes</text><text x="78" y="550">podem elevar o custo.</text>
+      <text x="461" y="520">Algumas distribuições exigem</text><text x="461" y="550">mais aprendizado.</text>
+      <text x="844" y="520">Uso oficial restrito aos</text><text x="844" y="550">computadores Apple.</text></g>
+    <rect x="355" y="647" width="490" height="28" rx="14" fill="#16c65b"/><text x="600" y="667" text-anchor="middle" fill="#07110c" font-size="14" font-weight="800">COMPATIBILIDADE • CONTROLE • INTEGRAÇÃO</text>
+  </g>
+</svg>
