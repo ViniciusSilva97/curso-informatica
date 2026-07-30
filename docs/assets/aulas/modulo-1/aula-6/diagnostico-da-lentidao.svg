@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img">
+  <title>Sequência inicial para investigar um computador lento</title>
+  <desc>Antes de trocar o computador, confira o espaço livre, observe a memória RAM, identifique se há SSD ou HD, revise os programas de inicialização e mantenha o sistema atualizado.</desc>
+  <rect width="1200" height="690" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">ANTES DE COMPRAR OUTRO COMPUTADOR</text>
+    <text x="600" y="98" text-anchor="middle" fill="#fff" font-size="18">investigue do mais simples para o mais caro</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="50" y="150" width="200" height="300" rx="20"/><rect x="275" y="150" width="200" height="300" rx="20"/><rect x="500" y="150" width="200" height="300" rx="20"/><rect x="725" y="150" width="200" height="300" rx="20"/><rect x="950" y="150" width="200" height="300" rx="20"/>
+    </g>
+    <g text-anchor="middle">
+      <g fill="#ffd21a"><circle cx="150" cy="207" r="33"/><circle cx="375" cy="207" r="33"/><circle cx="600" cy="207" r="33"/><circle cx="825" cy="207" r="33"/><circle cx="1050" cy="207" r="33"/></g>
+      <g fill="#07110c" font-size="25" font-weight="800"><text x="150" y="216">1</text><text x="375" y="216">2</text><text x="600" y="216">3</text><text x="825" y="216">4</text><text x="1050" y="216">5</text></g>
+      <g fill="#fff" font-size="20" font-weight="800"><text x="150" y="278">ESPAÇO LIVRE</text><text x="375" y="278">MEMÓRIA RAM</text><text x="600" y="278">SSD OU HD</text><text x="825" y="278">INICIALIZAÇÃO</text><text x="1050" y="278">ATUALIZAÇÕES</text></g>
+      <g fill="#16c65b" font-size="16"><text x="150" y="323">o disco está cheio?</text><text x="375" y="323">ela chega ao limite?</text><text x="600" y="323">qual tecnologia usa?</text><text x="825" y="323">o que abre sozinho?</text><text x="1050" y="323">sistema e drivers</text></g>
+      <g fill="#cbd3cd" font-size="15"><text x="150" y="366">libere espaço</text><text x="375" y="366">feche e compare</text><text x="600" y="366">SSD é mais ágil</text><text x="825" y="366">desative excessos</text><text x="1050" y="366">conclua instalações</text></g>
+    </g>
+    <path d="M150 450v45h900v-45" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="260" y="495" width="680" height="115" rx="22" fill="#ffd21a"/>
+    <text x="600" y="542" text-anchor="middle" fill="#07110c" font-size="25" font-weight="800">SÓ DEPOIS DECIDA O UPGRADE</text>
+    <text x="600" y="580" text-anchor="middle" fill="#07110c" font-size="18">RAM, SSD ou outro componente — conforme o diagnóstico.</text>
+    <text x="600" y="652" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">DIAGNOSTICAR EVITA GASTOS DESNECESSÁRIOS</text>
+  </g>
+</svg>
