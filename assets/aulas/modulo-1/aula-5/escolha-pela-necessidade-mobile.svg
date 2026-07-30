@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1130" role="img">
+  <title>O melhor sistema depende da necessidade</title>
+  <desc>Jogos apontam para Windows, servidores para Linux, desenvolvimento Apple para macOS e smartphones para Android ou iOS.</desc>
+  <rect width="600" height="1130" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="25" font-weight="800">QUAL É O MELHOR SISTEMA?</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="65" y="80" width="470" height="170" rx="24" fill="#ffd21a"/>
+    <text x="300" y="139" text-anchor="middle" fill="#07110c" font-size="24" font-weight="800">DEPENDE DA</text><text x="300" y="183" text-anchor="middle" fill="#07110c" font-size="35" font-weight="800">NECESSIDADE</text><text x="300" y="220" text-anchor="middle" fill="#07110c" font-size="16">a ferramenta certa para cada tarefa</text>
+    <path d="M300 260v45m-18-17 18 19 18-19" fill="none" stroke="#16c65b" stroke-width="7"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="323" width="500" height="165" rx="17"/><rect x="50" y="505" width="500" height="165" rx="17"/><rect x="50" y="687" width="500" height="165" rx="17"/><rect x="50" y="869" width="500" height="165" rx="17"/></g>
+    <g text-anchor="middle"><text x="300" y="365" fill="#ffd21a" font-size="20" font-weight="800">JOGOS</text><text x="300" y="411" fill="#fff" font-size="28" font-weight="800">WINDOWS</text><text x="300" y="452" fill="#16c65b" font-size="17">maior compatibilidade</text>
+      <text x="300" y="547" fill="#ffd21a" font-size="20" font-weight="800">SERVIDORES</text><text x="300" y="593" fill="#fff" font-size="28" font-weight="800">LINUX</text><text x="300" y="634" fill="#16c65b" font-size="17">estabilidade e flexibilidade</text>
+      <text x="300" y="729" fill="#ffd21a" font-size="20" font-weight="800">DESENVOLVER APPS APPLE</text><text x="300" y="775" fill="#fff" font-size="28" font-weight="800">macOS</text><text x="300" y="816" fill="#16c65b" font-size="17">ambiente oficial</text>
+      <text x="300" y="911" fill="#ffd21a" font-size="20" font-weight="800">SMARTPHONES</text><text x="300" y="957" fill="#fff" font-size="28" font-weight="800">ANDROID + iOS</text><text x="300" y="998" fill="#16c65b" font-size="17">os dois dominam o mercado</text></g>
+    <rect x="105" y="1065" width="390" height="40" rx="20" fill="#16c65b"/><text x="300" y="1091" text-anchor="middle" fill="#07110c" font-size="15" font-weight="800">NÃO EXISTE UMA ÚNICA RESPOSTA</text>
+  </g>
+</svg>

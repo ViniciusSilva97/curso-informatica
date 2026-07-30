@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1460" role="img">
+  <title>Comparação entre Windows, Linux e macOS</title>
+  <desc>Windows prioriza compatibilidade, Linux personalização e servidores, e macOS integração com o hardware Apple.</desc>
+  <rect width="600" height="1460" rx="24" fill="#07110c"/>
+  <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="24" font-weight="800">SISTEMAS PARA COMPUTADORES</text>
+  <g font-family="Arial,sans-serif">
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="42" y="80" width="516" height="415" rx="18"/><rect x="42" y="515" width="516" height="415" rx="18"/><rect x="42" y="950" width="516" height="415" rx="18"/></g>
+    <g text-anchor="middle"><text x="300" y="132" fill="#fff" font-size="28" font-weight="800">WINDOWS</text><text x="300" y="567" fill="#fff" font-size="28" font-weight="800">LINUX</text><text x="300" y="1002" fill="#fff" font-size="28" font-weight="800">macOS</text></g>
+    <g fill="#16c65b" font-size="18" font-weight="800"><text x="75" y="185">PONTOS FORTES</text><text x="75" y="620">PONTOS FORTES</text><text x="75" y="1055">PONTOS FORTES</text></g>
+    <g fill="#fff" font-size="17"><text x="75" y="226">• Fácil de aprender</text><text x="75" y="260">• Muitos programas e jogos</text><text x="75" y="294">• Presente no mercado de trabalho</text>
+      <text x="75" y="661">• Gratuito e personalizável</text><text x="75" y="695">• Estável e seguro</text><text x="75" y="729">• Forte em servidores e nuvem</text>
+      <text x="75" y="1096">• Hardware e software integrados</text><text x="75" y="1130">• Estável e consistente</text><text x="75" y="1164">• Ecossistema Apple</text></g>
+    <g fill="#ffd21a" font-size="18" font-weight="800"><text x="75" y="351">ATENÇÃO</text><text x="75" y="786">ATENÇÃO</text><text x="75" y="1221">ATENÇÃO</text></g>
+    <g fill="#fff" font-size="16"><text x="75" y="391">Licença e requisitos recentes</text><text x="75" y="420">podem elevar o custo.</text>
+      <text x="75" y="826">Algumas distribuições exigem</text><text x="75" y="855">mais aprendizado.</text>
+      <text x="75" y="1261">Uso oficial restrito aos</text><text x="75" y="1290">computadores Apple.</text></g>
+    <rect x="82" y="1395" width="436" height="38" rx="19" fill="#16c65b"/><text x="300" y="1420" text-anchor="middle" fill="#07110c" font-size="14" font-weight="800">COMPATIBILIDADE • CONTROLE • INTEGRAÇÃO</text>
+  </g>
+</svg>

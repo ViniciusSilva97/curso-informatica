@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img">
+  <title>Android e iOS comparados sem disputa</title>
+  <desc>Android aparece em aparelhos de vários fabricantes e formatos, enquanto iOS funciona nos smartphones Apple com forte integração entre hardware e software.</desc>
+  <rect width="1200" height="620" rx="28" fill="#07110c"/>
+  <text x="600" y="64" text-anchor="middle" fill="#ffd21a" font-family="Arial,sans-serif" font-size="30" font-weight="800">DOIS CAMINHOS PARA O MUNDO MÓVEL</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="60" y="105" width="500" height="445" rx="22" fill="#101b14" stroke="#16c65b" stroke-width="5"/>
+    <rect x="640" y="105" width="500" height="445" rx="22" fill="#101b14" stroke="#16c65b" stroke-width="5"/>
+    <rect x="245" y="142" width="130" height="132" rx="25" fill="#ffd21a"/><rect x="825" y="142" width="130" height="132" rx="25" fill="#ffd21a"/>
+    <g fill="#07110c"><path d="M277 181q33-35 66 0v9h-66z"/><path d="M282 196h56v48q0 11-11 11h-34q-11 0-11-11z"/><path d="M270 198h8v38h-8zm72 0h8v38h-8zM293 249h9v18h-9zm25 0h9v18h-9z"/><path d="M289 167l-10-15M331 167l10-15" fill="none" stroke="#07110c" stroke-width="6"/>
+      <path d="M890 174c-8-10-21-12-31-5-12 8-17 25-11 42 7 20 19 36 31 36 7 0 10-5 18-5 8 0 10 5 18 5 12 0 24-17 29-31-17-7-20-29-5-39-9-11-25-13-37-5-5 3-8 4-12 2z"/><path d="M898 163c1-12 10-22 22-24 1 12-7 23-22 24z"/></g>
+    <g text-anchor="middle"><text x="310" y="316" fill="#fff" font-size="31" font-weight="800">ANDROID</text><text x="890" y="316" fill="#fff" font-size="31" font-weight="800">iOS</text>
+      <text x="310" y="360" fill="#16c65b" font-size="19" font-weight="800">DIVERSIDADE</text><text x="890" y="360" fill="#16c65b" font-size="19" font-weight="800">INTEGRAÇÃO</text></g>
+    <g fill="#fff" font-size="18"><text x="112" y="405">• Vários fabricantes</text><text x="112" y="442">• Smartphones, TVs e relógios</text><text x="112" y="479">• Baseado em Linux</text>
+      <text x="692" y="405">• Hardware e software Apple</text><text x="692" y="442">• Foco em segurança e experiência</text><text x="692" y="479">• Ecossistema integrado</text></g>
+    <rect x="360" y="578" width="480" height="28" rx="14" fill="#ffd21a"/><text x="600" y="598" text-anchor="middle" fill="#07110c" font-size="14" font-weight="800">A ESCOLHA DEPENDE DO APARELHO E DO USUÁRIO</text>
+  </g>
+</svg>
