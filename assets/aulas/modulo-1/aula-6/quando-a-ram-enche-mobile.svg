@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1190" role="img">
+  <title>O que acontece quando a memória RAM enche</title>
+  <desc>Programas ocupam a memória RAM. Quando ela fica cheia, o sistema usa o SSD ou HD como memória de apoio, que é mais lenta, e o usuário percebe demora e travamentos.</desc>
+  <rect width="600" height="1190" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="48" text-anchor="middle" fill="#ffd21a" font-size="24" font-weight="800">QUANDO A RAM ENCHE</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="55" y="82" width="490" height="265" rx="20"/><rect x="55" y="410" width="490" height="265" rx="20"/><rect x="55" y="738" width="490" height="265" rx="20"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="300" y="129" fill="#fff" font-size="24" font-weight="800">1. PROGRAMAS ABERTOS</text>
+      <rect x="105" y="164" width="390" height="42" rx="8" fill="#16c65b"/><rect x="105" y="218" width="390" height="42" rx="8" fill="#16c65b"/><rect x="105" y="272" width="390" height="42" rx="8" fill="#ffd21a"/>
+      <text x="300" y="192" fill="#07110c" font-size="16" font-weight="700">NAVEGADOR</text><text x="300" y="246" fill="#07110c" font-size="16" font-weight="700">EDITOR</text><text x="300" y="300" fill="#07110c" font-size="16" font-weight="700">JOGO</text>
+      <text x="300" y="457" fill="#fff" font-size="24" font-weight="800">2. RAM LOTADA</text>
+      <rect x="190" y="489" width="220" height="130" rx="12" fill="none" stroke="#ffd21a" stroke-width="8"/>
+      <rect x="208" y="507" width="184" height="26" fill="#16c65b"/><rect x="208" y="541" width="184" height="26" fill="#16c65b"/><rect x="208" y="575" width="184" height="26" fill="#ffd21a"/>
+      <text x="300" y="647" fill="#ffd21a" font-size="20" font-weight="800">100% EM USO</text>
+      <text x="300" y="785" fill="#fff" font-size="24" font-weight="800">3. SSD OU HD AJUDA</text>
+      <rect x="220" y="817" width="160" height="108" rx="12" fill="#ffd21a"/><circle cx="300" cy="871" r="31" fill="none" stroke="#07110c" stroke-width="8"/>
+      <text x="300" y="962" fill="#16c65b" font-size="17">memória de apoio mais lenta</text>
+    </g>
+    <g fill="none" stroke="#ffd21a" stroke-width="7"><path d="M300 352v43m-18-17 18 19 18-19"/><path d="M300 680v43m-18-17 18 19 18-19"/></g>
+    <rect x="55" y="1050" width="490" height="91" rx="20" fill="#ffd21a"/>
+    <text x="300" y="1088" text-anchor="middle" fill="#07110c" font-size="21" font-weight="800">RESULTADO</text><text x="300" y="1121" text-anchor="middle" fill="#07110c" font-size="18" font-weight="700">DEMORA, ENGASGOS E TRAVAMENTOS</text>
+  </g>
+</svg>

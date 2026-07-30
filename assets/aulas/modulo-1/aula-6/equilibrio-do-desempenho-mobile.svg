@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1130" role="img">
+  <title>O desempenho depende do equilíbrio entre os componentes</title>
+  <desc>CPU, memória RAM, armazenamento e sistema operacional trabalham em conjunto. Um único componente no limite pode reduzir o desempenho de todo o computador.</desc>
+  <rect width="600" height="1130" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="46" text-anchor="middle" fill="#ffd21a" font-size="25" font-weight="800">DESEMPENHO É EQUIPE</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="45" y="78" width="510" height="175" rx="18"/><rect x="45" y="270" width="510" height="175" rx="18"/>
+      <rect x="45" y="462" width="510" height="175" rx="18"/><rect x="45" y="654" width="510" height="175" rx="18"/>
+    </g>
+    <g>
+      <circle cx="130" cy="165" r="43" fill="#ffd21a"/><text x="130" y="176" text-anchor="middle" fill="#07110c" font-size="26" font-weight="800">CPU</text>
+      <text x="210" y="151" fill="#fff" font-size="25" font-weight="800">PROCESSA</text><text x="210" y="188" fill="#16c65b" font-size="17">cálculos e instruções</text>
+      <rect x="84" y="319" width="92" height="72" rx="8" fill="#ffd21a"/><path d="M100 332v46m20-46v46m20-46v46m20-46v46" stroke="#07110c" stroke-width="6"/>
+      <text x="210" y="343" fill="#fff" font-size="25" font-weight="800">MEMÓRIA RAM</text><text x="210" y="380" fill="#16c65b" font-size="17">mantém tarefas abertas</text>
+      <rect x="83" y="514" width="94" height="68" rx="10" fill="#ffd21a"/><circle cx="130" cy="548" r="21" fill="none" stroke="#07110c" stroke-width="6"/>
+      <text x="210" y="535" fill="#fff" font-size="25" font-weight="800">SSD OU HD</text><text x="210" y="572" fill="#16c65b" font-size="17">entrega os arquivos</text>
+      <rect x="83" y="704" width="94" height="72" rx="7" fill="#ffd21a"/><path d="M96 721h68M96 739h45M96 757h57" stroke="#07110c" stroke-width="6"/>
+      <text x="210" y="727" fill="#fff" font-size="25" font-weight="800">SISTEMA</text><text x="210" y="764" fill="#16c65b" font-size="17">organiza os recursos</text>
+    </g>
+    <path d="M300 834v46m-17-18 17 19 17-19" fill="none" stroke="#16c65b" stroke-width="7"/>
+    <rect x="45" y="895" width="510" height="170" rx="22" fill="#ffd21a"/>
+    <text x="300" y="947" text-anchor="middle" fill="#07110c" font-size="24" font-weight="800">UM NO LIMITE?</text>
+    <text x="300" y="988" text-anchor="middle" fill="#07110c" font-size="24" font-weight="800">TODOS ESPERAM.</text>
+    <text x="300" y="1028" text-anchor="middle" fill="#07110c" font-size="17">Esse componente vira o gargalo.</text>
+    <text x="300" y="1102" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">NÃO CULPE APENAS A CPU</text>
+  </g>
+</svg>

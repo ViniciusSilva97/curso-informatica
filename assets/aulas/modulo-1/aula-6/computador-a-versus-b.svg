@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img">
+  <title>Comparação entre um computador equilibrado e outro desequilibrado</title>
+  <desc>O computador A tem CPU intermediária, 16 GB de RAM, SSD e sistema organizado. O computador B tem CPU potente, 4 GB de RAM, HD antigo e muitos programas na inicialização.</desc>
+  <rect width="1200" height="680" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">QUAL PARECE MAIS RÁPIDO NO DIA A DIA?</text>
+    <rect x="55" y="110" width="510" height="480" rx="24" fill="#101b14" stroke="#16c65b" stroke-width="5"/>
+    <rect x="635" y="110" width="510" height="480" rx="24" fill="#101b14" stroke="#5d685f" stroke-width="5"/>
+    <text x="310" y="163" text-anchor="middle" fill="#16c65b" font-size="30" font-weight="800">COMPUTADOR A</text>
+    <text x="890" y="163" text-anchor="middle" fill="#ffd21a" font-size="30" font-weight="800">COMPUTADOR B</text>
+    <g font-size="21">
+      <text x="110" y="227" fill="#fff" font-weight="800">CPU INTERMEDIÁRIA</text><text x="110" y="263" fill="#16c65b">adequada às tarefas</text>
+      <text x="110" y="327" fill="#fff" font-weight="800">16 GB DE RAM</text><text x="110" y="363" fill="#16c65b">espaço para várias tarefas</text>
+      <text x="110" y="427" fill="#fff" font-weight="800">SSD</text><text x="110" y="463" fill="#16c65b">arquivos entregues rapidamente</text>
+      <text x="110" y="527" fill="#fff" font-weight="800">SISTEMA ORGANIZADO</text><text x="110" y="563" fill="#16c65b">menos carga desnecessária</text>
+      <text x="690" y="227" fill="#fff" font-weight="800">CPU MUITO POTENTE</text><text x="690" y="263" fill="#9ba49d">sozinha não resolve tudo</text>
+      <text x="690" y="327" fill="#fff" font-weight="800">4 GB DE RAM</text><text x="690" y="363" fill="#ffd21a">pouco espaço de trabalho</text>
+      <text x="690" y="427" fill="#fff" font-weight="800">HD ANTIGO</text><text x="690" y="463" fill="#ffd21a">entrega dados lentamente</text>
+      <text x="690" y="527" fill="#fff" font-weight="800">INICIALIZAÇÃO CHEIA</text><text x="690" y="563" fill="#ffd21a">programas disputam recursos</text>
+    </g>
+    <rect x="190" y="610" width="820" height="47" rx="20" fill="#ffd21a"/>
+    <text x="600" y="641" text-anchor="middle" fill="#07110c" font-size="20" font-weight="800">EQUILÍBRIO COSTUMA VENCER UMA ÚNICA PEÇA POTENTE</text>
+  </g>
+</svg>
