@@ -1,0 +1,3010 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/">
+      
+      
+        <link rel="prev" href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada"><strong>Aula 8 - Placa de Vídeo: nem todo artefato significa GPU queimada</strong><a class="headerlink" href="#aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada" title="Permanent link">&para;</a></h1>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Quando surgem linhas, pontos coloridos, travamentos ou telas pretas, como descobrir se o problema está na GPU, na memória de vídeo, no driver, na alimentação, no cabo ou no monitor?</p>
+<h1 id="dossie-da-investigacao">** Dossiê da investigação**<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-007-os-artefatos-que-apareciam-somente-durante-jogos"><strong>Caso nº 007 - Os artefatos que apareciam somente durante jogos</strong><a class="headerlink" href="#caso-no-007-os-artefatos-que-apareciam-somente-durante-jogos" title="Permanent link">&para;</a></h2>
+<p>Um computador usado para jogos começou a apresentar os seguintes sintomas:</p>
+<ul>
+<li>pequenos quadrados coloridos em algumas texturas;</li>
+<li>sombras piscando;</li>
+<li>travamento após aproximadamente vinte minutos;</li>
+<li>tela preta por alguns segundos;</li>
+<li>retorno do vídeo acompanhado de uma mensagem relacionada ao driver;</li>
+<li>reinicializações ocasionais em jogos mais pesados.</li>
+</ul>
+<p>Durante atividades comuns, como navegar na internet e editar documentos, o computador funcionava aparentemente bem.</p>
+<p>O proprietário pesquisou o problema e encontrou diagnósticos diferentes:</p>
+<p>"A GPU queimou."</p>
+<p>"É defeito na memória de vídeo."</p>
+<p>"É só reinstalar o driver."</p>
+<p>"Precisa fazer reballing."</p>
+<p>"A fonte não está aguentando."</p>
+<p>Todas essas hipóteses são possíveis em determinados cenários.</p>
+<p>Nenhuma delas, porém, pode ser considerada correta sem evidências.</p>
+<p>Nosso objetivo não será adivinhar qual componente falhou. Será descobrir:</p>
+<ol>
+<li>em quais condições o defeito aparece;</li>
+<li>em qual etapa do processamento gráfico ocorre a corrupção;</li>
+<li>quais hipóteses são compatíveis com os sintomas;</li>
+<li>quais testes eliminam possibilidades;</li>
+<li>quando interromper os testes e encaminhar a placa a um laboratório.</li>
+</ol>
+<h1 id="objetivos-da-aula"><strong>Objetivos da aula</strong><a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta aula, você será capaz de:</p>
+<ul>
+<li>compreender a arquitetura funcional de uma placa de vídeo;</li>
+<li>diferenciar GPU, VRAM, VRM, VBIOS e sistema de exibição;</li>
+<li>entender o caminho percorrido até a imagem aparecer no monitor;</li>
+<li>classificar diferentes tipos de artefatos;</li>
+<li>distinguir falhas de renderização de falhas na transmissão do sinal;</li>
+<li>reconhecer problemas térmicos, elétricos e de software;</li>
+<li>investigar travamentos e reinicializações do driver;</li>
+<li>utilizar ferramentas gratuitas de monitoramento e diagnóstico;</li>
+<li>compreender as limitações dos testes de estresse;</li>
+<li>avaliar criticamente procedimentos como reflow e reballing;</li>
+<li>documentar uma investigação reproduzível e baseada em evidências.</li>
+</ul>
+<h1 id="uma-placa-de-video-e-um-sistema-computacional-completo"><strong>Uma placa de vídeo é um sistema computacional completo</strong><a class="headerlink" href="#uma-placa-de-video-e-um-sistema-computacional-completo" title="Permanent link">&para;</a></h1>
+<p>A expressão "placa de vídeo" pode transmitir a ideia de que existe apenas um chip responsável por criar imagens.</p>
+<p>Na realidade, uma placa de vídeo dedicada reúne vários subsistemas.</p>
+<p>┌────────────────┐</p>
+<p>│ PLACA DE VÍDEO │</p>
+<p>├────────────────┤</p>
+<p>│ GPU │</p>
+<p>│ Memória de vídeo - VRAM │</p>
+<p>│ Controladores de memória │</p>
+<p>│ VRM e circuitos de alimentação │</p>
+<p>│ Firmware - VBIOS │</p>
+<p>│ Interface PCI Express │</p>
+<p>│ Mecanismo de exibição │</p>
+<p>│ Codificadores e decodificadores de vídeo │</p>
+<p>│ Sensores │</p>
+<p>│ Sistema de refrigeração │</p>
+<p>│ Portas HDMI e DisplayPort │</p>
+<p>└───────────────────────────┘</p>
+<p>Cada uma dessas regiões pode produzir sintomas diferentes.</p>
+<p>Por isso, a frase "a placa de vídeo está com defeito" ainda é muito genérica.</p>
+<p>Um diagnóstico mais preciso deve procurar responder:</p>
+<ul>
+<li>Qual subsistema está falhando?</li>
+<li>A falha é permanente ou intermitente?</li>
+<li>O problema depende de temperatura, carga ou frequência?</li>
+<li>Existe corrupção de dados ou apenas perda de sinal?</li>
+<li>O sistema operacional continua funcionando?</li>
+<li>O defeito aparece antes do carregamento dos drivers?</li>
+</ul>
+<h1 id="uma-gpu"><strong>Uma GPU</strong><a class="headerlink" href="#uma-gpu" title="Permanent link">&para;</a></h1>
+<p>A <strong>GPU - Graphics Processing Unit</strong> é o principal processador da placa.</p>
+<p>Ela foi projetada para executar grandes quantidades de operações paralelas, especialmente aquelas relacionadas a:</p>
+<ul>
+<li>geometria;</li>
+<li>iluminação;</li>
+<li>texturas;</li>
+<li>sombras;</li>
+<li>rasterização;</li>
+<li>computação;</li>
+<li>processamento de imagens;</li>
+<li>inteligência artificial;</li>
+<li>codificação e decodificação de vídeo.</li>
+</ul>
+<p>A GPU não produz a imagem final completamente sozinha.</p>
+<p>Ela depende da memória, dos drivers, do processador principal, do sistema operacional, da alimentação e do mecanismo de exibição.</p>
+<h1 id="a-memoria-de-video-vram"><strong>A memória de vídeo - VRAM</strong><a class="headerlink" href="#a-memoria-de-video-vram" title="Permanent link">&para;</a></h1>
+<p>A VRAM é uma memória dedicada ao trabalho gráfico.</p>
+<p>Ela pode armazenar:</p>
+<ul>
+<li>texturas;</li>
+<li>modelos tridimensionais;</li>
+<li>mapas de sombras;</li>
+<li>buffers de profundidade;</li>
+<li>quadros já renderizados;</li>
+<li>informações intermediárias;</li>
+<li>dados utilizados em cálculos;</li>
+<li>recursos de programas profissionais;</li>
+<li>estruturas usadas em inteligência artificial.</li>
+</ul>
+<p>Uma representação simplificada seria:</p>
+<p>Jogo ou programa</p>
+<p>↓</p>
+<p>Driver gráfico</p>
+<p>↓</p>
+<p>Comandos enviados à GPU</p>
+<p>↓</p>
+<p>GPU processa a cena</p>
+<p>↕</p>
+<p>VRAM armazena dados temporários</p>
+<p>↓</p>
+<p>Quadro final</p>
+<p>↓</p>
+<p>Mecanismo de exibição</p>
+<p>↓</p>
+<p>Monitor</p>
+<p>Uma falha na VRAM pode corromper informações antes ou durante o processamento.</p>
+<p>Isso pode produzir:</p>
+<ul>
+<li>texturas incorretas;</li>
+<li>blocos coloridos;</li>
+<li>padrões repetidos;</li>
+<li>objetos deformados;</li>
+<li>travamentos;</li>
+<li>erros que surgem apenas quando determinada quantidade de memória é utilizada.</li>
+</ul>
+<p>Entretanto, um artefato visual não prova automaticamente que a VRAM esteja defeituosa.</p>
+<h1 id="o-controlador-de-memoria"><strong>O controlador de memória</strong><a class="headerlink" href="#o-controlador-de-memoria" title="Permanent link">&para;</a></h1>
+<p>Entre a GPU e a VRAM existe um sistema responsável por organizar a comunicação.</p>
+<p>Problemas nessa região podem envolver:</p>
+<ul>
+<li>controlador interno da GPU;</li>
+<li>chips de memória;</li>
+<li>trilhas da placa;</li>
+<li>alimentação da memória;</li>
+<li>soldagem;</li>
+<li>frequência instável;</li>
+<li>temperatura;</li>
+<li>configuração de firmware.</li>
+</ul>
+<p>Por isso, mesmo quando um teste aponta erros relacionados à memória gráfica, ainda pode ser necessário investigar mais de uma região física.</p>
+<h1 id="o-vrm-da-placa-de-video"><strong>O VRM da placa de vídeo</strong><a class="headerlink" href="#o-vrm-da-placa-de-video" title="Permanent link">&para;</a></h1>
+<p>O <strong>VRM - Voltage Regulator Module</strong> converte a energia recebida da fonte em tensões adequadas para:</p>
+<ul>
+<li>núcleo gráfico;</li>
+<li>memória;</li>
+<li>controladores;</li>
+<li>circuitos auxiliares.</li>
+</ul>
+<p>A placa pode receber 12 V da fonte, mas a GPU trabalha com tensões muito mais baixas e cuidadosamente controladas.</p>
+<p>Fonte fornece 12 V</p>
+<p>↓</p>
+<p>VRM da placa de vídeo</p>
+<p>↓</p>
+<p>Tensão do núcleo gráfico</p>
+<p>Tensão da memória</p>
+<p>Tensões auxiliares</p>
+<p>Um problema no VRM pode causar:</p>
+<ul>
+<li>instabilidade sob carga;</li>
+<li>tela preta;</li>
+<li>desligamento;</li>
+<li>redução de frequência;</li>
+<li>superaquecimento;</li>
+<li>falha de inicialização;</li>
+<li>danos em outros componentes da placa.</li>
+</ul>
+<p>O VRM também possui componentes que aquecem e dependem do sistema de refrigeração.</p>
+<h1 id="vbios"><strong>VBIOS</strong><a class="headerlink" href="#vbios" title="Permanent link">&para;</a></h1>
+<p>A placa de vídeo possui um firmware frequentemente chamado de <strong>VBIOS</strong>.</p>
+<p>Ele contém parâmetros relacionados a:</p>
+<ul>
+<li>inicialização;</li>
+<li>frequências;</li>
+<li>tensões;</li>
+<li>limites de potência;</li>
+<li>comportamento das ventoinhas;</li>
+<li>identificação do dispositivo;</li>
+<li>compatibilidade;</li>
+<li>configuração da memória.</li>
+</ul>
+<p>Problemas podem surgir após:</p>
+<ul>
+<li>modificação inadequada;</li>
+<li>atualização incorreta;</li>
+<li>uso de firmware incompatível;</li>
+<li>interrupção durante gravação;</li>
+<li>tentativa de aplicar VBIOS de outro modelo.</li>
+</ul>
+<p>A atualização ou modificação do VBIOS não deve ser tratada como procedimento comum de diagnóstico.</p>
+<h1 id="interface-pci-express"><strong>Interface PCI Express</strong><a class="headerlink" href="#interface-pci-express" title="Permanent link">&para;</a></h1>
+<p>A comunicação principal entre a placa de vídeo e o computador ocorre pelo PCI Express.</p>
+<p>Precisamos considerar:</p>
+<ul>
+<li>geração da interface;</li>
+<li>número de faixas;</li>
+<li>contato físico;</li>
+<li>estado do slot;</li>
+<li>configuração do firmware;</li>
+<li>compatibilidade;</li>
+<li>integridade das trilhas;</li>
+<li>alimentação fornecida pelo slot.</li>
+</ul>
+<p>Uma placa pode utilizar fisicamente um conector x16, mas operar eletricamente com menos pistas, dependendo:</p>
+<ul>
+<li>do modelo da placa;</li>
+<li>do processador;</li>
+<li>da placa-mãe;</li>
+<li>de outros dispositivos instalados;</li>
+<li>da organização da plataforma.</li>
+</ul>
+<p>Também é normal que algumas placas reduzam temporariamente a velocidade do link em repouso para economizar energia. A velocidade máxima pode aparecer somente durante uma carga gráfica.</p>
+<p>Portanto, observar uma geração reduzida no GPU-Z enquanto a placa está ociosa não comprova defeito.</p>
+<h1 id="o-mecanismo-de-exibicao"><strong>O mecanismo de exibição</strong><a class="headerlink" href="#o-mecanismo-de-exibicao" title="Permanent link">&para;</a></h1>
+<p>Mesmo depois que a GPU conclui o quadro, ele ainda precisa ser enviado ao monitor.</p>
+<p>Essa etapa envolve:</p>
+<ul>
+<li>framebuffer;</li>
+<li>mecanismo de exibição;</li>
+<li>sincronização;</li>
+<li>porta de saída;</li>
+<li>cabo;</li>
+<li>entrada do monitor;</li>
+<li>processamento interno da tela;</li>
+<li>painel.</li>
+</ul>
+<p>Consequentemente, o problema pode estar depois da renderização.</p>
+<p>Aplicativo</p>
+<p>↓</p>
+<p>GPU renderiza</p>
+<p>↓</p>
+<p>Quadro armazenado</p>
+<p>↓</p>
+<p>Mecanismo de exibição</p>
+<p>↓</p>
+<p>Porta HDMI ou DisplayPort</p>
+<p>↓</p>
+<p>Cabo</p>
+<p>↓</p>
+<p>Monitor</p>
+<p>↓</p>
+<p>Imagem observada</p>
+<p>Essa separação é essencial para investigar artefatos.</p>
+<h1 id="o-que-e-um-artefato-grafico"><strong>O que é um artefato gráfico?</strong><a class="headerlink" href="#o-que-e-um-artefato-grafico" title="Permanent link">&para;</a></h1>
+<p>Artefato é qualquer alteração visual inesperada que não deveria fazer parte da imagem original.</p>
+<p>Exemplos:</p>
+<ul>
+<li>pontos brilhantes;</li>
+<li>pixels coloridos;</li>
+<li>linhas;</li>
+<li>blocos;</li>
+<li>padrões quadriculados;</li>
+<li>texturas incorretas;</li>
+<li>polígonos esticados;</li>
+<li>sombras piscando;</li>
+<li>imagens duplicadas;</li>
+<li>cores alteradas;</li>
+<li>partes da tela corrompidas;</li>
+<li>quadros incompletos.</li>
+</ul>
+<p>A aparência do artefato pode fornecer pistas, mas raramente determina sozinha a causa.</p>
+<h1 id="classificacao-dos-sintomas"><strong>Classificação dos sintomas</strong><a class="headerlink" href="#classificacao-dos-sintomas" title="Permanent link">&para;</a></h1>
+<h2 id="1-pontos-brilhantes-ou-estrelas"><strong>1. Pontos brilhantes ou "estrelas"</strong><a class="headerlink" href="#1-pontos-brilhantes-ou-estrelas" title="Permanent link">&para;</a></h2>
+<p>Pequenos pontos podem aparecer principalmente em resoluções ou frequências elevadas.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>cabo inadequado;</li>
+<li>cabo danificado;</li>
+<li>conexão incompleta;</li>
+<li>largura de banda insuficiente;</li>
+<li>problema à porta;</li>
+<li>interferência;</li>
+<li>monitor;</li>
+<li>instabilidade gráfica.</li>
+</ul>
+<p>Se os pontos desaparecem ao reduzir temporariamente a resolução ou a taxa de atualização, o caminho de transmissão merece atenção especial.</p>
+<h2 id="2-blocos-ou-padroes-repetidos"><strong>2. Blocos ou padrões repetidos</strong><a class="headerlink" href="#2-blocos-ou-padroes-repetidos" title="Permanent link">&para;</a></h2>
+<p>Padrões geométricos repetidos podem sugerir corrupção de dados.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>VRAM;</li>
+<li>controlador de memória;</li>
+<li>overclock de memória;</li>
+<li>temperatura;</li>
+<li>motorista;</li>
+<li>aplicação;</li>
+<li>alimentação da memória;</li>
+<li>defeito físico.</li>
+</ul>
+<p>A repetição pode ocorrer porque estruturas semelhantes da memória estão sendo lidas incorretamente.</p>
+<p>Ainda assim, não é possível condenar um chip específico apenas observando a imagem.</p>
+<h2 id="3-texturas-erradas"><strong>3. Texturas erradas</strong><a class="headerlink" href="#3-texturas-erradas" title="Permanent link">&para;</a></h2>
+<p>Exemplos:</p>
+<ul>
+<li>paredes com cores incorretas;</li>
+<li>objetos cobertos por padrões estranhos;</li>
+<li>texturas piscando;</li>
+<li>partes do cenário sem definição.</li>
+</ul>
+<p>Hipóteses:</p>
+<ul>
+<li>bug do jogo;</li>
+<li>arquivos corrompidos;</li>
+<li>motorista;</li>
+<li>VRAM;</li>
+<li>falta de memória gráfica;</li>
+<li>overclock;</li>
+<li>configuração gráfica;</li>
+<li>compilação de shaders.</li>
+</ul>
+<p>Quando o problema ocorre apenas em um jogo, a possibilidade de falha específica do software aumenta.</p>
+<h2 id="4-poligonos-esticados"><strong>4. Polígonos esticados</strong><a class="headerlink" href="#4-poligonos-esticados" title="Permanent link">&para;</a></h2>
+<p>Objetos podem parecer deformados, com triângulos ou linhas atravessando a tela.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>processamento geométrico;</li>
+<li>motorista;</li>
+<li>shader;</li>
+<li>dados corrompidos;</li>
+<li>instabilidade da GPU;</li>
+<li>VRAM;</li>
+<li>falha da aplicação.</li>
+</ul>
+<p>Esse sintoma pode ser causado tanto por software quanto por hardware.</p>
+<h2 id="5-tela-preta"><strong>5. Tela preta</strong><a class="headerlink" href="#5-tela-preta" title="Permanent link">&para;</a></h2>
+<p>Uma tela preta possui várias interpretações possíveis.</p>
+<h3 id="tela-preta-mas-o-audio-continua"><strong>Tela preta, mas o áudio continua</strong><a class="headerlink" href="#tela-preta-mas-o-audio-continua" title="Permanent link">&para;</a></h3>
+<p>O sistema pode continuar executando enquanto o sinal de vídeo é perdido.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>driver reiniciado;</li>
+<li>traz;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>mecanismo de exibição;</li>
+<li>instabilidade da GPU;</li>
+<li>alimentação;</li>
+<li>mudança de modo de vídeo.</li>
+</ul>
+<h3 id="tela-preta-e-computador-reinicia"><strong>Tela preta e computador reinicia</strong><a class="headerlink" href="#tela-preta-e-computador-reinicia" title="Permanent link">&para;</a></h3>
+<p>Hipóteses:</p>
+<ul>
+<li>fonte;</li>
+<li>proteção elétrica;</li>
+<li>GPU;</li>
+<li>temperatura;</li>
+<li>placa-mãe;</li>
+<li>Motorista crítico;</li>
+<li>memória RAM;</li>
+<li>instabilidade geral.</li>
+</ul>
+<h3 id="tela-preta-desde-o-acionamento"><strong>Tela preta desde o acionamento</strong><a class="headerlink" href="#tela-preta-desde-o-acionamento" title="Permanent link">&para;</a></h3>
+<p>Hipóteses:</p>
+<ul>
+<li>GPU não inicializada;</li>
+<li>conector de alimentação;</li>
+<li>slot;</li>
+<li>firmware;</li>
+<li>processador sem vídeo integrado;</li>
+<li>cabo conectado à saída errada;</li>
+<li>monitor;</li>
+<li>placa defeituosa.</li>
+</ul>
+<p>"Tela preta" é um sintoma, não um diagnóstico.</p>
+<h2 id="6-travamento-com-imagem-congelada"><strong>6. Travamento com imagem congelada</strong><a class="headerlink" href="#6-travamento-com-imagem-congelada" title="Permanent link">&para;</a></h2>
+<p>Hipóteses:</p>
+<ul>
+<li>motorista;</li>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>CPU;</li>
+<li>memória RAM;</li>
+<li>armazenamento;</li>
+<li>jogo;</li>
+<li>fonte;</li>
+<li>temperatura;</li>
+<li>sistema operacional.</li>
+</ul>
+<p>Se o áudio continua, o sistema pode estar parcialmente ativo.</p>
+<p>Se todo o computador deixa de responder, a investigação precisa considerar componentes além da placa de vídeo.</p>
+<h2 id="7-reinicializacao-do-driver"><strong>7. Reinicialização do driver</strong><a class="headerlink" href="#7-reinicializacao-do-driver" title="Permanent link">&para;</a></h2>
+<p>Sistemas operacionais modernos podem detectar que a GPU deixou de responder e tentar reinicializar o subsistema gráfico.</p>
+<p>No Windows, esse mecanismo é relacionado ao conceito de <strong>TDR - Timeout Detection and Recovery</strong>.</p>
+<p>Em termos simplificados:</p>
+<p>Sistema envia trabalho para a GPU</p>
+<p>↓</p>
+<p>GPU demora ou deixa de responder</p>
+<p>↓</p>
+<p>Sistema detecta o atraso</p>
+<p>↓</p>
+<p>Driver gráfico é reinicializado</p>
+<p>↓</p>
+<p>Imagem pode apagar e retornar</p>
+<p>Esse evento pode ocorrer devido a:</p>
+<ul>
+<li>motorista;</li>
+<li>aplicação;</li>
+<li>GPU instável;</li>
+<li>VRAM;</li>
+<li>overclock;</li>
+<li>temperatura;</li>
+<li>falta momentânea de alimentação;</li>
+<li>falha do sistema;</li>
+<li>carga computacional problemática.</li>
+</ul>
+<p>A reinicialização do driver não prova, sozinha, que o problema é exclusivamente de software.</p>
+<h1 id="em-qual-momento-o-artefato-aparece"><strong>Em qual momento o artefato aparece?</strong><a class="headerlink" href="#em-qual-momento-o-artefato-aparece" title="Permanent link">&para;</a></h1>
+<p>Essa é uma das perguntas mais importantes da investigação.</p>
+<h2 id="artefato-aparece-antes-do-sistema-operacional"><strong>Artefato aparece antes do sistema operacional</strong><a class="headerlink" href="#artefato-aparece-antes-do-sistema-operacional" title="Permanent link">&para;</a></h2>
+<p>Exemplos:</p>
+<ul>
+<li>logotipo da placa-mãe;</li>
+<li>tela de firmware;</li>
+<li>menu de inicialização;</li>
+<li>instalação do sistema.</li>
+</ul>
+<p>Nesse caso, o driver principal do sistema operacional ainda não está atuando.</p>
+<p>Hipóteses mais relevantes:</p>
+<ul>
+<li>placa de vídeo;</li>
+<li>VRAM;</li>
+<li>VBIOS;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>traz;</li>
+<li>slot;</li>
+<li>alimentação.</li>
+</ul>
+<p>Isso reduz bastante a probabilidade de o problema ser causado apenas pelo driver instalado no sistema.</p>
+<h2 id="artefato-aparece-somente-depois-de-carregar-o-sistema"><strong>Artefato aparece somente depois de carregar o sistema</strong><a class="headerlink" href="#artefato-aparece-somente-depois-de-carregar-o-sistema" title="Permanent link">&para;</a></h2>
+<p>Hipóteses:</p>
+<ul>
+<li>motorista;</li>
+<li>resolução;</li>
+<li>taxa de atualização;</li>
+<li>aceleração gráfica;</li>
+<li>configuração;</li>
+<li>aplicação;</li>
+<li>gerenciamento de energia;</li>
+<li>hardware ativado apenas em estados de maior desempenho.</li>
+</ul>
+<p>O hardware não está automaticamente inocentado.</p>
+<p>Ao carregar o driver, a placa pode passar a usar:</p>
+<ul>
+<li>frequências mais altas;</li>
+<li>recursos avançados;</li>
+<li>aceleração 3D;</li>
+<li>modos de energia diferentes;</li>
+<li>mais VRAM.</li>
+</ul>
+<p>Uma falha física pode aparecer somente nessa etapa.</p>
+<h2 id="artefato-aparece-somente-sob-carga"><strong>Artefato aparece somente sob carga</strong><a class="headerlink" href="#artefato-aparece-somente-sob-carga" title="Permanent link">&para;</a></h2>
+<p>Hipóteses:</p>
+<ul>
+<li>temperatura;</li>
+<li>potência;</li>
+<li>VRM;</li>
+<li>fonte;</li>
+<li>instabilidade de clock;</li>
+<li>VRAM;</li>
+<li>controlador;</li>
+<li>fluxo de ar.</li>
+</ul>
+<p>O comportamento dependente de carga é uma evidência muito importante.</p>
+<h2 id="artefato-aparece-somente-apos-alguns-minutos"><strong>Artefato aparece somente após alguns minutos</strong><a class="headerlink" href="#artefato-aparece-somente-apos-alguns-minutos" title="Permanent link">&para;</a></h2>
+<p>Isso sugere uma variável que se modifica com o tempo.</p>
+<p>Possibilidades:</p>
+<ul>
+<li>aquecimento;</li>
+<li>saturação térmica;</li>
+<li>VRAM atingindo temperatura elevada;</li>
+<li>VRM aquecendo;</li>
+<li>fonte entrando em condição instável;</li>
+<li>memória sendo progressivamente ocupada;</li>
+<li>vazamento de memória do programa;</li>
+<li>degradação após carga contínua.</li>
+</ul>
+<h1 id="o-teste-da-captura-de-tela"><strong>O teste da captura de tela</strong><a class="headerlink" href="#o-teste-da-captura-de-tela" title="Permanent link">&para;</a></h1>
+<p>Uma técnica simples consiste em produzir uma captura de tela enquanto o artefato está visível.</p>
+<h2 id="se-o-artefato-aparece-na-captura"><strong>Se o artefato aparece na captura</strong><a class="headerlink" href="#se-o-artefato-aparece-na-captura" title="Permanent link">&para;</a></h2>
+<p>Isso sugere que a corrupção já estava presente no quadro produzido ou armazenado pelo sistema.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>aplicação;</li>
+<li>motorista;</li>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>composição gráfica;</li>
+<li>framebuffer.</li>
+</ul>
+<h2 id="se-o-artefato-nao-aparece-na-captura"><strong>Se o artefato não aparece na captura</strong><a class="headerlink" href="#se-o-artefato-nao-aparece-na-captura" title="Permanent link">&para;</a></h2>
+<p>A falha pode estar em uma etapa posterior à captura.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>traz;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>processamento da tela;</li>
+<li>caminho de exibição.</li>
+</ul>
+<p>Entretanto, essa técnica possui limitações.</p>
+<p>Alguns problemas de:</p>
+<ul>
+<li>sobreposição de vídeo;</li>
+<li>digitalização;</li>
+<li>sincronização;</li>
+<li>composição;</li>
+<li>caminho de exibição;</li>
+</ul>
+<p>podem não ser registrados corretamente pela captura.</p>
+<p>Portanto:</p>
+<p>A captura de tela ajuda a localizar a etapa da falha, mas não constitui prova definitiva.</p>
+<p>Uma fotografia ou gravação externa do monitor também deve ser preservada como evidência.</p>
+<h1 id="a-importancia-de-reproduzir-o-defeito"><strong>A importância de reproduzir o defeito</strong><a class="headerlink" href="#a-importancia-de-reproduzir-o-defeito" title="Permanent link">&para;</a></h1>
+<p>Antes de testar qualquer hipótese, precisamos conseguir reproduzir o problema de maneira relativamente controlada.</p>
+<p>Inscreva-se:</p>
+<ul>
+<li>programa utilizado;</li>
+<li>versão;</li>
+<li>resolução;</li>
+<li>configurações gráficas;</li>
+<li>duração até a falha;</li>
+<li>temperatura ambiente;</li>
+<li>driver instalado;</li>
+<li>frequência da GPU;</li>
+<li>frequência da memória;</li>
+<li>consumo;</li>
+<li>temperatura;</li>
+<li>uso de VRAM;</li>
+<li>comportamento do sistema.</li>
+</ul>
+<p>Exemplo:</p>
+<p>Jogo.........................Aplicação A</p>
+<p>Resolução....................2560 × 1440</p>
+<p>Qualidade....................Alta</p>
+<p>Driver.......................Versão registrada</p>
+<p>Tempo até o defeito..........18 a 22 minutos</p>
+<p>Temperatura da GPU...........78 °C</p>
+<p>Hotspot......................102 °C</p>
+<p>Uso da GPU...................99%</p>
+<p>Uso de VRAM..................10,8 GB</p>
+<p>Clock da memória.............valor registrado</p>
+<p>Sintoma......................Blocos coloridos e tela preta</p>
+<p>Sem esse registro, torna-se difícil comparar antes e depois de cada alteração.</p>
+<h1 id="o-principio-da-alteracao-unica"><strong>O princípio da alteração única</strong><a class="headerlink" href="#o-principio-da-alteracao-unica" title="Permanent link">&para;</a></h1>
+<p>Durante o diagnóstico, devemos modificar apenas uma variável por vez.</p>
+<p>Exemplo inadequado:</p>
+<ul>
+<li>atualizar o driver;</li>
+<li>trocar o cabo;</li>
+<li>reduzir o clock;</li>
+<li>abrir o gabinete;</li>
+<li>trocar a fonte;</li>
+<li>reinstalar o jogo;</li>
+</ul>
+<p>tudo ao mesmo tempo.</p>
+<p>Mesmo que o problema desapareça, não saberemos qual mudança foi responsável.</p>
+<p>Exemplo adequado:</p>
+<ol>
+<li>reproduzir e registrar;</li>
+<li>trocar apenas o cabo;</li>
+<li>repetir o teste;</li>
+<li>registrar;</li>
+<li>restaurar ou manter a alteração;</li>
+<li>modificar a próxima variável.</li>
+</ol>
+<p>Esse método transforma tentativas em investigação.</p>
+<h1 id="primeira-etapa-confirmar-a-cadeia-de-video"><strong>Primeira etapa - Confirmar a cadeia de vídeo</strong><a class="headerlink" href="#primeira-etapa-confirmar-a-cadeia-de-video" title="Permanent link">&para;</a></h1>
+<p>Antes de testar a placa sob carga, elimine problemas simples.</p>
+<p>Verifique:</p>
+<ul>
+<li>cabo completamente encaixado;</li>
+<li>porta correta;</li>
+<li>monitor configurado para a entrada adequada;</li>
+<li>presença de adaptadores;</li>
+<li>danos no conector;</li>
+<li>outra porta disponível;</li>
+<li>outro cabo conhecido;</li>
+<li>outro monitor;</li>
+<li>taxa de atualização;</li>
+<li>resolução;</li>
+<li>HDR ou recursos avançados.</li>
+</ul>
+<p>Esses testes são:</p>
+<ul>
+<li>rápidos;</li>
+<li>pouco invasivos;</li>
+<li>de baixo risco;</li>
+<li>úteis para reduzir hipóteses.</li>
+</ul>
+<h1 id="segunda-etapa-determinar-se-o-problema-e-especifico-de-uma-aplicacao"><strong>Segunda etapa - Determinar se o problema é específico de uma aplicação</strong><a class="headerlink" href="#segunda-etapa-determinar-se-o-problema-e-especifico-de-uma-aplicacao" title="Permanent link">&para;</a></h1>
+<p>Pergunte:</p>
+<ul>
+<li>O defeito ocorre em todos os jogos?</li>
+<li>Ocorre em programas profissionais?</li>
+<li>Ocorre ao reproduzir vídeos?</li>
+<li>Ocorre na área de trabalho?</li>
+<li>Ocorre em uma instalação limpa?</li>
+<li>Ocorre em APIs gráficas diferentes?</li>
+<li>Ocorre em outra versão do programa?</li>
+</ul>
+<p>Se o problema aparece apenas em uma aplicação, investigue:</p>
+<ul>
+<li>integridade dos arquivos;</li>
+<li>atualizações;</li>
+<li>shaders;</li>
+<li>modificações;</li>
+<li>configurações;</li>
+<li>incompatibilidade;</li>
+<li>bug conhecido;</li>
+<li>consumo de VRAM;</li>
+<li>recursos específicos.</li>
+</ul>
+<p>Não devemos submeter imediatamente a placa a procedimentos físicos por causa de um defeito isolado em um único programa.</p>
+<h1 id="terceira-etapa-retornar-as-configuracoes-padrao"><strong>Terceira etapa - Retornar às configurações padrão</strong><a class="headerlink" href="#terceira-etapa-retornar-as-configuracoes-padrao" title="Permanent link">&para;</a></h1>
+<p>Overclock e undervolt alteram as condições de operação.</p>
+<p>Antes de concluir que existe defeito, registre e restaure temporariamente:</p>
+<ul>
+<li>relógio da GPU;</li>
+<li>clock da memória;</li>
+<li>limite de potência;</li>
+<li>curva de tensão;</li>
+<li>curva de ventoinha;</li>
+<li>parâmetros do processador;</li>
+<li>perfil da memória RAM.</li>
+</ul>
+<p>Até mesmo um ajuste que funcionou durante meses pode se tornar instável devido a:</p>
+<ul>
+<li>temperatura ambiente;</li>
+<li>envelhecimento;</li>
+<li>atualização de driver;</li>
+<li>mudança de carga;</li>
+<li>alteração de firmware;</li>
+<li>novo programa mais exigente.</li>
+</ul>
+<p>A estabilidade não é garantida para sempre.</p>
+<h1 id="quarta-etapa-analisar-o-driver"><strong>Quarta etapa - Analisar o driver</strong><a class="headerlink" href="#quarta-etapa-analisar-o-driver" title="Permanent link">&para;</a></h1>
+<h2 id="atualizacao-nao-significa-automaticamente-melhoria"><strong>Atualização não significa automaticamente melhoria</strong><a class="headerlink" href="#atualizacao-nao-significa-automaticamente-melhoria" title="Permanent link">&para;</a></h2>
+<p>Um driver novo pode:</p>
+<ul>
+<li>corrigir falhas;</li>
+<li>adicionar compatibilidade;</li>
+<li>melhorar desempenho;</li>
+<li>introduzir regressões;</li>
+<li>alterar gerenciamento de energia;</li>
+<li>mudar a compilação de shaders.</li>
+</ul>
+<p>A investigação pode exigir comparar:</p>
+<ul>
+<li>versão atual;</li>
+<li>versão anterior estável;</li>
+<li>instalação limpa;</li>
+<li>driver fornecido pelo fabricante do notebook;</li>
+<li>driver genérico do fabricante da GPU.</li>
+</ul>
+<p>Em notebooks, o fabricante do equipamento pode aplicar personalizações específicas.</p>
+<h2 id="instalacao-limpa"><strong>Instalação limpa</strong><a class="headerlink" href="#instalacao-limpa" title="Permanent link">&para;</a></h2>
+<p>Uma instalação limpa procura reduzir resíduos de versões anteriores.</p>
+<p>O procedimento deve ser feito com:</p>
+<ul>
+<li>driver correto;</li>
+<li>modelo confirmado;</li>
+<li>sistema compatível;</li>
+<li>ponto de restauração ou backup quando necessário;</li>
+<li>documentação do que foi removido e instalado.</li>
+</ul>
+<p>Ferramentas de remoção profunda, como utilitários especializados, devem ser usadas com cuidado. Elas não são a primeira resposta para todo problema.</p>
+<h2 id="monitor-de-confiabilidade-e-visualizador-de-eventos"><strong>Monitor de Confiabilidade e Visualizador de Eventos</strong><a class="headerlink" href="#monitor-de-confiabilidade-e-visualizador-de-eventos" title="Permanent link">&para;</a></h2>
+<p>No Windows, essas ferramentas podem ajudar a encontrar:</p>
+<ul>
+<li>falhas do driver;</li>
+<li>travamentos do aplicativo;</li>
+<li>desligamentos inesperados;</li>
+<li>erros de hardware;</li>
+<li>horários exatos dos eventos;</li>
+<li>padrões de repetição.</li>
+</ul>
+<p>O registro não deve ser interpretado isoladamente.</p>
+<p>Uma reinicialização inesperada indica que o sistema não foi encerrado corretamente, mas não determina automaticamente se a causa foi fonte, GPU, temperatura ou outra falha.</p>
+<h1 id="quinta-etapa-monitoramento"><strong>Quinta etapa - Monitoramento</strong><a class="headerlink" href="#quinta-etapa-monitoramento" title="Permanent link">&para;</a></h1>
+<h2 id="gpu-z"><strong>GPU-Z</strong><a class="headerlink" href="#gpu-z" title="Permanent link">&para;</a></h2>
+<p>Pode apresentar:</p>
+<ul>
+<li>modelo identificado;</li>
+<li>revisão;</li>
+<li>tipo e quantidade de VRAM;</li>
+<li>largura do barramento;</li>
+<li>versão do VBIOS;</li>
+<li>Interface PCI Express;</li>
+<li>relógios;</li>
+<li>sensores;</li>
+<li>limite de desempenho;</li>
+<li>carga;</li>
+<li>temperatura.</li>
+</ul>
+<p>Uma aplicação importante é observar o estado da interface PCI Express durante carga, não apenas em repouso.</p>
+<h2 id="hwinfo"><strong>HWiNFO</strong><a class="headerlink" href="#hwinfo" title="Permanent link">&para;</a></h2>
+<p>Pode registrar:</p>
+<ul>
+<li>Temperatura da GPU;</li>
+<li>ponto de acesso;</li>
+<li>temperatura da memória, quando suportada;</li>
+<li>consumo;</li>
+<li>tensão informada;</li>
+<li>velocidade das ventoinhas;</li>
+<li>relógio central;</li>
+<li>clock da memória;</li>
+<li>utilização;</li>
+<li>limites térmicos;</li>
+<li>limites de potência;</li>
+<li>erros ou contadores disponíveis.</li>
+</ul>
+<p>É recomendável usar a função de registro para criar um histórico.</p>
+<p>O valor máximo sozinho pode esconder a sequência do problema.</p>
+<h2 id="msi-afterburner"><strong>MSI Afterburner</strong><a class="headerlink" href="#msi-afterburner" title="Permanent link">&para;</a></h2>
+<p>Pode ser usado para monitoramento e exibição de métricas durante jogos.</p>
+<p>Entretanto, alterações de clock e tensão devem ser evitadas até que exista uma hipótese clara.</p>
+<p>No contexto inicial do curso, sua função principal será observar:</p>
+<ul>
+<li>carga;</li>
+<li>temperatura;</li>
+<li>relógio;</li>
+<li>consumo;</li>
+<li>VRAM;</li>
+<li>taxa de quadros;</li>
+<li>tempo de quadro.</li>
+</ul>
+<h2 id="gerenciador-de-tarefas"><strong>Gerenciador de Tarefas</strong><a class="headerlink" href="#gerenciador-de-tarefas" title="Permanent link">&para;</a></h2>
+<p>Pode mostrar:</p>
+<ul>
+<li>Interface de GPU;</li>
+<li>mecanismo utilizado;</li>
+<li>memória dedicada;</li>
+<li>memória compartilhada;</li>
+<li>processos consumidores;</li>
+<li>atividade de codificação e decodificação.</li>
+</ul>
+<p>Ele é útil para triagem, mas oferece menos profundidade que ferramentas especializadas.</p>
+<h1 id="frametime-e-percepcao-de-travamento"><strong>Frametime e percepção de travamento</strong><a class="headerlink" href="#frametime-e-percepcao-de-travamento" title="Permanent link">&para;</a></h1>
+<p>A taxa de quadros média não conta toda a história.</p>
+<p>Um jogo pode apresentar 90 quadros por segundo e ainda parecer travado se os quadros forem entregues de forma irregular.</p>
+<p>O <strong>frametime</strong> representa o tempo entre os quadros.</p>
+<p>Exemplo:</p>
+<p>Quadros regulares:</p>
+<p>11 ms - 11 ms - 12 ms - 11 ms</p>
+<p>Quadros irregulares:</p>
+<p>9 ms - 10 ms - 65 ms - 8 ms</p>
+<p>Picos de frametime podem ser causados por:</p>
+<ul>
+<li>compilação de shaders;</li>
+<li>carregamento de dados;</li>
+<li>falta de VRAM;</li>
+<li>CPU;</li>
+<li>armazenamento;</li>
+<li>motorista;</li>
+<li>processo em segundo plano;</li>
+<li>temperatura;</li>
+<li>paginação;</li>
+<li>instabilidade.</li>
+</ul>
+<p>Nem toda "travada da GPU" é defeito físico na placa.</p>
+<h1 id="falta-de-vram-nao-e-o-mesmo-que-vram-defeituosa"><strong>Falta de VRAM não é o mesmo que VRAM defeituosa</strong><a class="headerlink" href="#falta-de-vram-nao-e-o-mesmo-que-vram-defeituosa" title="Permanent link">&para;</a></h1>
+<p>Quando a aplicação exige mais memória do que está disponível, podem ocorrer:</p>
+<ul>
+<li>quedas de desempenho;</li>
+<li>texturas carregando lentamente;</li>
+<li>uso de memória compartilhada;</li>
+<li>travamentos;</li>
+<li>gaguejar;</li>
+<li>redução automática de qualidade;</li>
+<li>fechamento do programa.</li>
+</ul>
+<p>Isso não significa necessariamente que a VRAM esteja danificada.</p>
+<p>Precisamos diferenciar:</p>
+<p>VRAM insuficiente</p>
+<p>≠</p>
+<p>VRAM fisicamente defeituosa</p>
+<h2 id="vram-insuficiente"><strong>VRAM insuficiente</strong><a class="headerlink" href="#vram-insuficiente" title="Permanent link">&para;</a></h2>
+<p>A capacidade não atende à carga.</p>
+<h2 id="vram-defeituosa"><strong>VRAM defeituosa</strong><a class="headerlink" href="#vram-defeituosa" title="Permanent link">&para;</a></h2>
+<p>Os dados armazenados ou transferidos podem sofrer corrupção.</p>
+<p>As duas situações podem provocar sintomas gráficos, mas exigem soluções completamente diferentes.</p>
+<h1 id="testes-de-memoria-grafica"><strong>Testes de memória gráfica</strong><a class="headerlink" href="#testes-de-memoria-grafica" title="Permanent link">&para;</a></h1>
+<p>Existem ferramentas capazes de exercitar a memória da placa.</p>
+<p>Elas podem ajudar a identificar:</p>
+<ul>
+<li>erros durante gravação e leitura;</li>
+<li>instabilidade com determinada ocupação;</li>
+<li>falha dependente de temperatura;</li>
+<li>problema relacionado ao clock.</li>
+</ul>
+<p>Porém, um teste que não encontra erros não garante perfeição.</p>
+<p>A falha pode:</p>
+<ul>
+<li>ocorrer somente em determinada temperatura;</li>
+<li>depender de um padrão específico;</li>
+<li>aparecer em outro nível de tensão;</li>
+<li>envolver o controlador;</li>
+<li>ser intermitente;</li>
+<li>acontecer apenas em uma aplicação.</li>
+</ul>
+<p>Da mesma forma, um erro detectado não identifica automaticamente qual chip físico está com defeito.</p>
+<h1 id="testes-de-estresse"><strong>Testes de estresse</strong><a class="headerlink" href="#testes-de-estresse" title="Permanent link">&para;</a></h1>
+<p>Ferramentas como OCCT e outros programas de carga podem exercitar:</p>
+<ul>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>consumo;</li>
+<li>temperatura;</li>
+<li>fonte;</li>
+<li>estabilidade geral.</li>
+</ul>
+<p>Entretanto, testes intensos não devem ser executados indiscriminadamente.</p>
+<p>Antes de começar:</p>
+<ul>
+<li>confirme que as ventoinhas funcionam;</li>
+<li>verifique a temperatura inicial;</li>
+<li>encerre trabalhos importantes;</li>
+<li>mantenha o monitoramento visível;</li>
+<li>defina critérios de interrupção;</li>
+<li>evite testar hardware com cheiro, fumaça ou danos;</li>
+<li>não utilize carga extrema em uma placa já instável sem necessidade.</li>
+</ul>
+<p>O objetivo é reproduzir o problema de forma controlada, não "forçar até quebrar".</p>
+<h1 id="quando-interromper-um-teste"><strong>Quando interromper um teste</strong><a class="headerlink" href="#quando-interromper-um-teste" title="Permanent link">&para;</a></h1>
+<p>Pare imediatamente diante de:</p>
+<ul>
+<li>cheiro de queimado;</li>
+<li>fumaça;</li>
+<li>faísca;</li>
+<li>conector aquecido;</li>
+<li>cabo escurecido;</li>
+<li>ventoinha parada;</li>
+<li>temperatura aumentando sem controle;</li>
+<li>ruído elétrico anormal;</li>
+<li>vazamento;</li>
+<li>repetidos desligamentos;</li>
+<li>perda de vídeo acompanhada de sinais elétricos;</li>
+<li>deformação física.</li>
+</ul>
+<p>Segurança é mais importante que concluir o benchmark.</p>
+<h1 id="temperatura-da-gpu"><strong>temperatura da GPU</strong><a class="headerlink" href="#temperatura-da-gpu" title="Permanent link">&para;</a></h1>
+<p>A leitura principal representa uma região ou estimativa térmica do chip.</p>
+<p>Seu significado depende do modelo.</p>
+<p>Não existe um único valor universal que determine falha em todas as GPUs.</p>
+<p>Precisamos verificar:</p>
+<ul>
+<li>limite do fabricante;</li>
+<li>comportamento de frequência;</li>
+<li>estabilidade;</li>
+<li>carga;</li>
+<li>temperatura ambiente;</li>
+<li>projeto do cooler.</li>
+</ul>
+<h1 id="ponto-de-acesso"><strong>Ponto de acesso</strong><a class="headerlink" href="#ponto-de-acesso" title="Permanent link">&para;</a></h1>
+<p>O hotspot representa uma leitura relacionada à região mais quente observada pelos sensores internos.</p>
+<p>A diferença entre a temperatura principal e o hotspot pode ajudar a investigar:</p>
+<ul>
+<li>distribuição térmica;</li>
+<li>contato;</li>
+<li>pressão;</li>
+<li>pasta térmica;</li>
+<li>superfície;</li>
+<li>concentração de carga.</li>
+</ul>
+<p>Entretanto, a interpretação depende do projeto específico.</p>
+<p>Uma diferença alta é uma evidência a ser investigada, não uma autorização automática para desmontar a placa.</p>
+<h1 id="temperatura-da-memoria"><strong>Temperatura da memória</strong><a class="headerlink" href="#temperatura-da-memoria" title="Permanent link">&para;</a></h1>
+<p>Algumas placas fornecem leitura da memória; outras não.</p>
+<p>Temperaturas elevadas podem estar associadas a:</p>
+<ul>
+<li>carga pesada;</li>
+<li>pads inadequados;</li>
+<li>dissipador sem contato;</li>
+<li>fluxo de ar;</li>
+<li>mineração anterior;</li>
+<li>montagem incorreta;</li>
+<li>projeto da placa;</li>
+<li>ambiente.</li>
+</ul>
+<p>A substituição de thermal pads exige conhecer:</p>
+<ul>
+<li>espessura;</li>
+<li>compressibilidade;</li>
+<li>posição;</li>
+<li>condutividade;</li>
+<li>pressão final.</li>
+</ul>
+<p>Um pad com espessura errada pode melhorar o contato da memória e piorar o contato da GPU, ou vice-versa.</p>
+<p>Portanto, não deve ser substituído por tentativa.</p>
+<h1 id="sistema-de-refrigeracao-da-gpu"><strong>Sistema de refrigeração da GPU</strong><a class="headerlink" href="#sistema-de-refrigeracao-da-gpu" title="Permanent link">&para;</a></h1>
+<p>A refrigeração pode envolver:</p>
+<ul>
+<li>base de metal;</li>
+<li>tubos de calor;</li>
+<li>câmara de vapor;</li>
+<li>dissipador;</li>
+<li>ventoinhas;</li>
+<li>pasta térmica;</li>
+<li>almofadas térmicas;</li>
+<li>placa traseira;</li>
+<li>fluxo de ar do gabinete.</li>
+</ul>
+<p>Problemas possíveis:</p>
+<ul>
+<li>dissipador sujo;</li>
+<li>ventoinha defeituosa;</li>
+<li>curva inadequada;</li>
+<li>pasta degradada;</li>
+<li>pads danificados;</li>
+<li>pressão desigual;</li>
+<li>Tubo de calor comprometido;</li>
+<li>gabinete restritivo;</li>
+<li>recirculação de ar quente.</li>
+</ul>
+<p>A temperatura da GPU deve ser analisada juntamente com:</p>
+<ul>
+<li>rotação das ventoinhas;</li>
+<li>ponto de acesso;</li>
+<li>relógio;</li>
+<li>consumo;</li>
+<li>temperatura ambiente;</li>
+<li>desempenho;</li>
+<li>tempo até a falha.</li>
+</ul>
+<h1 id="alimentacao-da-placa-de-video"><strong>Alimentação da placa de vídeo</strong><a class="headerlink" href="#alimentacao-da-placa-de-video" title="Permanent link">&para;</a></h1>
+<p>A energia pode vir:</p>
+<ul>
+<li>slot PCI Express;</li>
+<li>de conectores auxiliares;</li>
+<li>de ambos.</li>
+</ul>
+<p>Problemas de alimentação podem envolver:</p>
+<ul>
+<li>fonte inadequada;</li>
+<li>cabo incorreto;</li>
+<li>adaptador;</li>
+<li>conector parcialmente encaixado;</li>
+<li>terminal danificado;</li>
+<li>cabo modular incompatível;</li>
+<li>divisão inadequada da carga;</li>
+<li>queda durante transitórios;</li>
+<li>VRM da própria placa.</li>
+</ul>
+<p>Uma leitura normal por software não comprova a integridade da alimentação durante eventos rápidos.</p>
+<h1 id="um-cabo-ou-dois-cabos-de-alimentacao"><strong>Um cabo ou dois cabos de alimentação?</strong><a class="headerlink" href="#um-cabo-ou-dois-cabos-de-alimentacao" title="Permanent link">&para;</a></h1>
+<p>Determinadas placas possuem mais de um conector auxiliar.</p>
+<p>Dependendo da potência, da fonte e das orientações do fabricante, pode ser preferível utilizar cabos separados em vez de um único cabo com duas derivações.</p>
+<p>A decisão deve considerar:</p>
+<ul>
+<li>manual da placa;</li>
+<li>documentação da fonte;</li>
+<li>corrente;</li>
+<li>conectores;</li>
+<li>projeto do cabo;</li>
+<li>consumo.</li>
+</ul>
+<p>Não existe uma regra simplificada aplicável a todas as fontes e placas.</p>
+<h1 id="instabilidade-da-fonte-ou-defeito-da-gpu"><strong>Instabilidade da fonte ou defeito da GPU?</strong><a class="headerlink" href="#instabilidade-da-fonte-ou-defeito-da-gpu" title="Permanent link">&para;</a></h1>
+<p>Considere este cenário:</p>
+<ul>
+<li>a imagem desaparece durante carga;</li>
+<li>os ventiladores continuam girando;</li>
+<li>o computador reinicia;</li>
+<li>o problema começou após instalar uma GPU mais potente;</li>
+<li>a fonte é antiga;</li>
+<li>foi utilizado adaptador;</li>
+<li>temperaturas estão normais.</li>
+</ul>
+<p>A fonte se torna uma hipótese importante.</p>
+<p>Mas precisamos considerar também:</p>
+<ul>
+<li>GPU defeituosa;</li>
+<li>cabo de alimentação;</li>
+<li>slot;</li>
+<li>placa-mãe;</li>
+<li>motorista;</li>
+<li>memória;</li>
+<li>curto;</li>
+<li>limite de potência;</li>
+<li>instalação elétrica.</li>
+</ul>
+<p>O teste com uma fonte de referência adequada pode ajudar a isolar a variável.</p>
+<h1 id="pci-express-e-mau-contato"><strong>PCI Express e mau contato</strong><a class="headerlink" href="#pci-express-e-mau-contato" title="Permanent link">&para;</a></h1>
+<p>Problemas no encaixe podem produzir:</p>
+<ul>
+<li>ausência de vídeo;</li>
+<li>detecção intermitente;</li>
+<li>funcionamento em modo reduzido;</li>
+<li>travamentos;</li>
+<li>erros sob movimentação;</li>
+<li>falha após transporte.</li>
+</ul>
+<p>A investigação pode incluir, com o equipamento desligado e desconectado:</p>
+<ul>
+<li>inspeção do slot;</li>
+<li>confirmação do travamento físico;</li>
+<li>verificação de apoio da placa;</li>
+<li>observação de empenamento;</li>
+<li>inspeção dos contatos;</li>
+<li>teste em outro slot compatível;</li>
+<li>remoção de extensores ou risers.</li>
+</ul>
+<p>Risers e extensores podem introduzir:</p>
+<ul>
+<li>perda de sinal;</li>
+<li>incompatibilidade de geração;</li>
+<li>instabilidade;</li>
+<li>limitações;</li>
+<li>mau contato.</li>
+</ul>
+<p>Um teste direto no slot principal pode ser útil.</p>
+<h1 id="o-peso-da-placa"><strong>O peso da placa</strong><a class="headerlink" href="#o-peso-da-placa" title="Permanent link">&para;</a></h1>
+<p>Placas grandes podem exercer força sobre o slot.</p>
+<p>Isso pode causar:</p>
+<ul>
+<li>inclinação;</li>
+<li>mau contato;</li>
+<li>tensão mecânica;</li>
+<li>deformação;</li>
+<li>danos após transporte.</li>
+</ul>
+<p>Um suporte pode ajudar, mas precisa ser instalado sem empurrar excessivamente a placa para cima.</p>
+<p>O objetivo é sustentar, não deformar.</p>
+<h1 id="teste-com-video-integrado"><strong>Teste com vídeo integrado</strong><a class="headerlink" href="#teste-com-video-integrado" title="Permanent link">&para;</a></h1>
+<p>Quando o processador possui gráficos integrados, podemos remover temporariamente a placa dedicada e testar o sistema com a saída da placa-mãe.</p>
+<p>Esse teste ajuda a responder:</p>
+<ul>
+<li>o computador ainda está estável sem a GPU dedicada?</li>
+<li>o problema visual desaparece?</li>
+<li>o sistema operacional funciona?</li>
+<li>outros componentes permanecem normais?</li>
+</ul>
+<p>Entretanto, o desaparecimento do problema não prova imediatamente que o núcleo da GPU esteja defeituoso.</p>
+<p>Também foram removidos:</p>
+<ul>
+<li>cabos de alimentação da GPU;</li>
+<li>carga adicional sobre a fonte;</li>
+<li>driver específico;</li>
+<li>Vaga ocupada;</li>
+<li>calor produzido pela placa.</li>
+</ul>
+<p>O resultado reduz hipóteses, mas precisa ser interpretado corretamente.</p>
+<h1 id="teste-da-placa-em-outro-computador"><strong>Teste da placa em outro computador</strong><a class="headerlink" href="#teste-da-placa-em-outro-computador" title="Permanent link">&para;</a></h1>
+<p>Instalar a GPU em outro sistema compatível pode ser um teste muito útil.</p>
+<p>Porém, o segundo computador deve possuir:</p>
+<ul>
+<li>fonte adequada;</li>
+<li>slot compatível;</li>
+<li>espaço físico;</li>
+<li>cabos corretos;</li>
+<li>sistema estável;</li>
+<li>drivers apropriados.</li>
+</ul>
+<h2 id="se-o-defeito-acompanha-a-placa"><strong>Se o defeito acompanha a placa</strong><a class="headerlink" href="#se-o-defeito-acompanha-a-placa" title="Permanent link">&para;</a></h2>
+<p>A suspeita sobre a própria placa aumenta.</p>
+<h2 id="se-o-defeito-desaparece"><strong>Se o defeito desaparece</strong><a class="headerlink" href="#se-o-defeito-desaparece" title="Permanent link">&para;</a></h2>
+<p>Pode existir interação com:</p>
+<ul>
+<li>fonte;</li>
+<li>placa-mãe;</li>
+<li>motorista;</li>
+<li>firmware;</li>
+<li>sistema operacional;</li>
+<li>cabo;</li>
+<li>gabinete;</li>
+<li>temperatura.</li>
+</ul>
+<p>Mesmo um teste cruzado precisa ser documentado.</p>
+<h1 id="teste-de-outra-gpu-no-computador-original"><strong>Teste de outra GPU no computador original</strong><a class="headerlink" href="#teste-de-outra-gpu-no-computador-original" title="Permanent link">&para;</a></h1>
+<p>Esse teste também pode ajudar.</p>
+<p>Se uma placa conhecida funciona normalmente no mesmo sistema, a suspeita sobre a primeira GPU aumenta.</p>
+<p>Mas é necessário comparar:</p>
+<ul>
+<li>consumo;</li>
+<li>conectores;</li>
+<li>geração;</li>
+<li>motorista;</li>
+<li>tamanho;</li>
+<li>carga.</li>
+</ul>
+<p>Uma GPU de baixo consumo funcionando normalmente não prova que a fonte suporta uma GPU de alto desempenho.</p>
+<h1 id="artefato-na-bios-o-que-isso-elimina"><strong>Artefato na BIOS: o que isso elimina?</strong><a class="headerlink" href="#artefato-na-bios-o-que-isso-elimina" title="Permanent link">&para;</a></h1>
+<p>Quando o artefato aparece no firmware, podemos reduzir a prioridade de hipóteses como:</p>
+<ul>
+<li>driver gráfico do Windows;</li>
+<li>configuração de um jogo;</li>
+<li>arquivos de uma aplicação;</li>
+<li>aceleração específica do navegador.</li>
+</ul>
+<p>Continuam relevantes:</p>
+<ul>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>VBIOS;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>traz;</li>
+<li>slot;</li>
+<li>alimentação.</li>
+</ul>
+<p>A palavra correta é "reduzir", não "eliminar absolutamente", pois ainda podem existir interações de firmware e modos de vídeo.</p>
+<h1 id="artefato-apenas-em-videos"><strong>Artefato apenas em vídeos</strong><a class="headerlink" href="#artefato-apenas-em-videos" title="Permanent link">&para;</a></h1>
+<p>Se o problema surge ao reproduzir vídeos, investigue:</p>
+<ul>
+<li>aceleração de hardware;</li>
+<li>decodificador;</li>
+<li>motorista;</li>
+<li>navegador;</li>
+<li>codec;</li>
+<li>mecanismo de vídeo da GPU;</li>
+<li>HDR;</li>
+<li>proteção de conteúdo;</li>
+<li>cabo;</li>
+<li>monitor.</li>
+</ul>
+<p>A GPU possui blocos especializados para vídeo. Uma falha nesse cenário não significa necessariamente que os núcleos gráficos usados em jogos estejam defeituosos.</p>
+<h1 id="artefato-apenas-no-navegador"><strong>Artefato apenas no navegador</strong><a class="headerlink" href="#artefato-apenas-no-navegador" title="Permanent link">&para;</a></h1>
+<p>Possíveis hipóteses:</p>
+<ul>
+<li>aceleração de hardware;</li>
+<li>motorista;</li>
+<li>navegador;</li>
+<li>extensão;</li>
+<li>composição da área de trabalho;</li>
+<li>codec;</li>
+<li>atualização recente.</li>
+</ul>
+<p>Um teste controlado pode comparar o navegador:</p>
+<ul>
+<li>com aceleração ativada;</li>
+<li>com aceleração desativada;</li>
+<li>sem extensões;</li>
+<li>em outro perfil;</li>
+<li>em outro navegador.</li>
+</ul>
+<p>A alteração deve ser registrada.</p>
+<h1 id="artefato-apenas-em-um-monitor"><strong>Artefato apenas em um monitor</strong><a class="headerlink" href="#artefato-apenas-em-um-monitor" title="Permanent link">&para;</a></h1>
+<p>Se o computador utiliza dois monitores e apenas um apresenta falhas, investigue:</p>
+<ul>
+<li>cabo;</li>
+<li>traz;</li>
+<li>taxa de atualização;</li>
+<li>resolução;</li>
+<li>monitor;</li>
+<li>HDR;</li>
+<li>sincronização adaptativa;</li>
+<li>adaptador;</li>
+<li>largura de banda.</li>
+</ul>
+<p>Também é útil inverter os cabos e as portas.</p>
+<p>Pergunta central:</p>
+<p>O problema acompanha o monitor, o cabo ou a saída da placa?</p>
+<h1 id="resolucao-e-taxa-de-atualizacao"><strong>Resolução e taxa de atualização</strong><a class="headerlink" href="#resolucao-e-taxa-de-atualizacao" title="Permanent link">&para;</a></h1>
+<p>Quanto maior a resolução e a taxa de atualização, maior pode ser a quantidade de dados transmitida.</p>
+<p>Problemas podem surgir quando:</p>
+<ul>
+<li>o cabo não atende à largura de banda;</li>
+<li>o adaptador possui limitação;</li>
+<li>a porta trabalha em uma versão inferior;</li>
+<li>a profundidade de cor foi aumentada;</li>
+<li>o HDR está ativo;</li>
+<li>existe compressão ou negociação inadequada.</li>
+</ul>
+<p>Se o problema desaparece ao reduzir temporariamente a taxa de atualização, isso não condena automaticamente a GPU.</p>
+<p>A cadeia de transmissão deve ser investigada.</p>
+<h1 id="drivers-firmware-e-sistema-operacional"><strong>Drivers, firmware e sistema operacional</strong><a class="headerlink" href="#drivers-firmware-e-sistema-operacional" title="Permanent link">&para;</a></h1>
+<p>A camada de software inclui:</p>
+<ul>
+<li>Driver de GPU;</li>
+<li>núcleo;</li>
+<li>sistema operacional;</li>
+<li>bibliotecas gráficas;</li>
+<li>APIs;</li>
+<li>jogo ou programa;</li>
+<li>compiladores de shaders;</li>
+<li>serviços em segundo plano;</li>
+<li>sobreposições;</li>
+<li>ferramentas de monitoramento.</li>
+</ul>
+<p>Sobreposições podem ser fornecidas por:</p>
+<ul>
+<li>plataformas de jogos;</li>
+<li>gravadores;</li>
+<li>aplicativos de comunicação;</li>
+<li>monitoramento;</li>
+<li>Software e GPU.</li>
+</ul>
+<p>Conflitos podem provocar:</p>
+<ul>
+<li>travamentos;</li>
+<li>imagem preta;</li>
+<li>falhas na captura;</li>
+<li>queda de desempenho.</li>
+</ul>
+<p>Desabilitar temporariamente overlays é um teste válido quando o problema aparece somente em determinadas aplicações.</p>
+<h1 id="malware-tambem-pode-afetar-desempenho"><strong>Malware também pode afetar desempenho?</strong><a class="headerlink" href="#malware-tambem-pode-afetar-desempenho" title="Permanent link">&para;</a></h1>
+<p>Sim, embora não seja a primeira hipótese em todo caso.</p>
+<p>Programas maliciosos podem:</p>
+<ul>
+<li>usar uma GPU;</li>
+<li>realizar mineração;</li>
+<li>consumir memória;</li>
+<li>alterar drivers;</li>
+<li>causar instabilidade;</li>
+<li>interferir no sistema.</li>
+</ul>
+<p>A investigação deve considerar:</p>
+<ul>
+<li>processos desconhecidos;</li>
+<li>uso da GPU em repouso;</li>
+<li>inicialização automática;</li>
+<li>alterações recentes;</li>
+<li>integridade do sistema.</li>
+</ul>
+<p>Esse ponto conecta a aula ao futuro módulo de Segurança da Informação.</p>
+<h1 id="linux-e-investigacao-grafica"><strong>Linux e investigação gráfica</strong><a class="headerlink" href="#linux-e-investigacao-grafica" title="Permanent link">&para;</a></h1>
+<p>Em sistemas Linux, algumas evidências podem ser encontradas em:</p>
+<ul>
+<li>registros do kernel;</li>
+<li>mensagens do driver;</li>
+<li>registros da sessão gráfica;</li>
+<li>ferramentas específicas do fabricante;</li>
+<li>informações do PCI Express.</li>
+</ul>
+<p>Dependendo da GPU e do driver, podem ser usados recursos como:</p>
+<ul>
+<li>journalctl;</li>
+<li>dmesg;</li>
+<li>ferramentas do driver;</li>
+<li>utilitários de monitoramento;</li>
+<li>informações do sistema.</li>
+</ul>
+<p>A interpretação exige considerar:</p>
+<ul>
+<li>driver proprietário ou aberto;</li>
+<li>servidor gráfico;</li>
+<li>núcleo;</li>
+<li>distribuição;</li>
+<li>firmware.</li>
+</ul>
+<p>A ausência de um erro explícito no registro não garante ausência de falha física.</p>
+<h1 id="erros-de-hardware-registrados-pelo-sistema"><strong>Erros de hardware registrados pelo sistema</strong><a class="headerlink" href="#erros-de-hardware-registrados-pelo-sistema" title="Permanent link">&para;</a></h1>
+<p>Algumas plataformas conseguem registrar eventos relacionados a:</p>
+<ul>
+<li>barramento PCI Express;</li>
+<li>memória;</li>
+<li>comunicação;</li>
+<li>correções;</li>
+<li>falhas de dispositivo.</li>
+</ul>
+<p>Esses registros ajudam a correlacionar o horário do problema com a atividade da GPU.</p>
+<p>Entretanto, um erro no barramento pode ser causado por:</p>
+<ul>
+<li>placa de vídeo;</li>
+<li>slot;</li>
+<li>placa-mãe;</li>
+<li>riser;</li>
+<li>alimentação;</li>
+<li>firmware;</li>
+<li>sinalização.</li>
+</ul>
+<p>O registro indica a região do problema, não necessariamente a peça exata.</p>
+<h1 id="reflow-e-reballing-nao-sao-sinonimos"><strong>Reflow e reballing não são sinônimos</strong><a class="headerlink" href="#reflow-e-reballing-nao-sao-sinonimos" title="Permanent link">&para;</a></h1>
+<p>Esses termos são frequentemente usados incorretamente.</p>
+<h2 id="refluxo"><strong>Refluxo</strong><a class="headerlink" href="#refluxo" title="Permanent link">&para;</a></h2>
+<p>Consiste em aquecer uma soldagem existente para que o material passe por um novo ciclo térmico.</p>
+<p>Procedimentos improvisados com:</p>
+<ul>
+<li>forno doméstico;</li>
+<li>soprador;</li>
+<li>secador;</li>
+<li>festa;</li>
+<li>aquecimento sem controle;</li>
+</ul>
+<p>não constituem diagnóstico profissional.</p>
+<p>Podem:</p>
+<ul>
+<li>deformar a placa;</li>
+<li>deslocar componentes;</li>
+<li>danificar conectores;</li>
+<li>degradar capacitores;</li>
+<li>liberar vapores;</li>
+<li>produzir curto;</li>
+<li>mascarar temporariamente o defeito;</li>
+<li>destruir evidências.</li>
+</ul>
+<p>Uma melhora temporária após aquecimento não prova qual componente estava com defeito.</p>
+<p>A temperatura pode modificar temporariamente:</p>
+<ul>
+<li>contato;</li>
+<li>resistência;</li>
+<li>expansão de materiais;</li>
+<li>comportamento de semicondutores.</li>
+</ul>
+<h2 id="reballing"><strong>Reballing</strong><a class="headerlink" href="#reballing" title="Permanent link">&para;</a></h2>
+<p>O reballing envolve remover um componente BGA, limpar as conexões e refazer suas esferas de solda antes da reinstalação.</p>
+<p>É um procedimento especializado que exige:</p>
+<ul>
+<li>estação adequada;</li>
+<li>controle térmico;</li>
+<li>alinhamento;</li>
+<li>perfil de temperatura;</li>
+<li>experiência;</li>
+<li>inspeção;</li>
+<li>conhecimento da placa.</li>
+</ul>
+<p>Mesmo um reballing tecnicamente perfeito não corrige:</p>
+<ul>
+<li>núcleo gráfico danificado;</li>
+<li>VRAM defeituosa;</li>
+<li>controlador interno falho;</li>
+<li>trilha rompida;</li>
+<li>VRM defeituoso;</li>
+<li>firmware corrompido.</li>
+</ul>
+<p>Reballing só faz sentido quando existem evidências de que a falha está relacionada às conexões BGA.</p>
+<p>Usá-lo como solução universal é substituir diagnóstico por tentativa.</p>
+<h1 id="por-que-algumas-placas-voltam-depois-de-aquecidas"><strong>Por que algumas placas "voltam" depois de aquecidas?</strong><a class="headerlink" href="#por-que-algumas-placas-voltam-depois-de-aquecidas" title="Permanent link">&para;</a></h1>
+<p>Uma melhora temporária pode ocorrer porque o calor modifica momentaneamente:</p>
+<ul>
+<li>expansão dos materiais;</li>
+<li>contato elétrico;</li>
+<li>microfissuras;</li>
+<li>propriedades de componentes;</li>
+<li>umidade;</li>
+<li>resistência.</li>
+</ul>
+<p>Isso não significa que a placa foi reparada.</p>
+<p>Se a causa não foi identificada e corrigida, o problema pode retornar.</p>
+<p>Além disso, sucessivos ciclos térmicos improvisados podem agravar o dano.</p>
+<h1 id="como-um-laboratorio-profissional-investigaria"><strong>Como um laboratório profissional investigaria?</strong><a class="headerlink" href="#como-um-laboratorio-profissional-investigaria" title="Permanent link">&para;</a></h1>
+<p>Dependendo do sintoma e do valor do equipamento, um laboratório pode utilizar:</p>
+<ul>
+<li>fonte de bancada;</li>
+<li>multímetro;</li>
+<li>osciloscópio;</li>
+<li>câmera térmica;</li>
+<li>microscópio;</li>
+<li>estação de retrabalho;</li>
+<li>planos;</li>
+<li>vistas do conselho;</li>
+<li>análise de sinais;</li>
+<li>teste de tensões;</li>
+<li>inspeção de curtos;</li>
+<li>comparação com placa funcional;</li>
+<li>diagnóstico da VRAM;</li>
+<li>análise de firmware.</li>
+</ul>
+<p>Uma investigação eletrônica pode procurar:</p>
+<ul>
+<li>tensões ausentes;</li>
+<li>curto em determinada linha;</li>
+<li>componente aquecendo anormalmente;</li>
+<li>sequência incorreta de inicialização;</li>
+<li>falha de alimentação;</li>
+<li>comunicação interrompida;</li>
+<li>chip de memória com erros.</li>
+</ul>
+<p>O estudante não precisa possuir esses equipamentos para compreender o raciocínio.</p>
+<p>O objetivo é reconhecer que um diagnóstico avançado depende de medições, e não apenas da aparência do defeito.</p>
+<h1 id="fluxo-profissional-de-diagnostico"><strong>Fluxo profissional de diagnóstico</strong><a class="headerlink" href="#fluxo-profissional-de-diagnostico" title="Permanent link">&para;</a></h1>
+<p>1. Confirmar e documentar o sintoma</p>
+<p>↓</p>
+<p>2. Determinar quando ele aparece</p>
+<p>↓</p>
+<p>3. Verificar cabo, monitor e portas</p>
+<p>↓</p>
+<p>4. Restaurar configurações padrão</p>
+<p>↓</p>
+<p>5. Analisar aplicação e driver</p>
+<p>↓</p>
+<p>6. Monitorar temperatura, clock e potência</p>
+<p>↓</p>
+<p>7. Avaliar alimentação e PCI Express</p>
+<p>↓</p>
+<p>8. Realizar testes controlados</p>
+<p>↓</p>
+<p>9. Fazer testes cruzados</p>
+<p>↓</p>
+<p>10. Encaminhar para diagnóstico eletrônico</p>
+<p>Não é obrigatório executar todas as etapas em todos os casos.</p>
+<p>A sequência deve ser adaptada às evidências e aos riscos.</p>
+<h1 id="matriz-investigativa"><strong>Matriz investigativa</strong><a class="headerlink" href="#matriz-investigativa" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th><strong>Sintoma</strong></th>
+<th><strong>Evidência importante</strong></th>
+<th><strong>Hipóteses prioritárias</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artefatos na UEFI</td>
+<td>O sistema operacional ainda não carregou</td>
+<td>GPU, VRAM, cabo, monitor, VBIOS</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Falha em um único jogo</td>
+<td>Outros programas funcionam</td>
+<td>Aplicação, arquivos, driver, configuração</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Tela preta com áudio</td>
+<td>Sistema continua parcialmente ativo</td>
+<td>Driver, cabo, porta, sinal, GPU</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Reinicialização completa sob carga</td>
+<td>Sistema perde estabilidade geral</td>
+<td>Fonte, GPU, temperatura, placa-mãe</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Erros após aquecimento</td>
+<td>O tempo e a temperatura influenciam</td>
+<td>Refrigeração, VRAM, VRM, GPU</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Problema em apenas um monitor</td>
+<td>Outro monitor funciona</td>
+<td>Cabo, porta, monitor, configuração</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Artefato aparece na captura</td>
+<td>Corrupção existe antes da tela</td>
+<td>Aplicação, driver, GPU, VRAM</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Artefato não aparece na captura</td>
+<td>Pode estar após o framebuffer</td>
+<td>Cabo, porta, monitor, scanout</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Queda de desempenho sem artefatos</td>
+<td>Clock ou potência diminuem</td>
+<td>Temperatura, limite de potência, CPU</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Erro apenas com alta ocupação de VRAM</td>
+<td>Problema depende da capacidade usada</td>
+<td>VRAM insuficiente, chip defeituoso, aplicação</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+<p>A tabela orienta a investigação, mas não substitui os testes.</p>
+<h1 id="laboratorio-guiado-investigacao-nao-invasiva"><strong>Laboratório guiado - investigação não invasiva</strong><a class="headerlink" href="#laboratorio-guiado-investigacao-nao-invasiva" title="Permanent link">&para;</a></h1>
+<p>Esta atividade não exige desmontar a placa.</p>
+<h2 id="etapa-1-identificacao"><strong>Etapa 1 - Identificação</strong><a class="headerlink" href="#etapa-1-identificacao" title="Permanent link">&para;</a></h2>
+<p>Inscreva-se:</p>
+<ul>
+<li>fabricante;</li>
+<li>modelo;</li>
+<li>quantidade e tipo de VRAM;</li>
+<li>versão do driver;</li>
+<li>versão do VBIOS;</li>
+<li>Interface PCI Express;</li>
+<li>fonte utilizada;</li>
+<li>conectores de alimentação;</li>
+<li>monitor;</li>
+<li>cabo;</li>
+<li>resolução;</li>
+<li>taxa de atualização.</li>
+</ul>
+<h2 id="estagio-2-estado-inicial"><strong>Estágio 2 - Estado inicial</strong><a class="headerlink" href="#estagio-2-estado-inicial" title="Permanent link">&para;</a></h2>
+<p>Sem executar carga intensa, registre:</p>
+<ul>
+<li>Temperatura da GPU;</li>
+<li>ponto de acesso;</li>
+<li>temperatura da memória, quando disponível;</li>
+<li>relógio;</li>
+<li>Interface de GPU;</li>
+<li>uso da VRAM;</li>
+<li>velocidade das ventoinhas;</li>
+<li>consumo.</li>
+</ul>
+<p>Observe também:</p>
+<ul>
+<li>uso inesperado em repouso;</li>
+<li>ventoinhas paradas;</li>
+<li>ruído;</li>
+<li>oscilação;</li>
+<li>processos utilizando a GPU.</li>
+</ul>
+<h2 id="etapa-3-reproducao"><strong>Etapa 3 - Reprodução</strong><a class="headerlink" href="#etapa-3-reproducao" title="Permanent link">&para;</a></h2>
+<p>Utilize a aplicação em que o defeito costuma ocorrer.</p>
+<p>Inscreva-se:</p>
+<ul>
+<li>horário de início;</li>
+<li>tempo até a falha;</li>
+<li>temperaturas;</li>
+<li>relógios;</li>
+<li>consumo;</li>
+<li>uso de VRAM;</li>
+<li>limite de desempenho;</li>
+<li>comportamento das ventoinhas;</li>
+<li>descrição exata do sintoma.</li>
+</ul>
+<h2 id="etapa-4-evidencia-visual"><strong>Etapa 4 - Evidência visual</strong><a class="headerlink" href="#etapa-4-evidencia-visual" title="Permanent link">&para;</a></h2>
+<p>Faça:</p>
+<ul>
+<li>captura de tela;</li>
+<li>fotografia externa;</li>
+<li>gravação;</li>
+<li>anotação do momento;</li>
+<li>registro dos sensores.</li>
+</ul>
+<p>Compare a captura com a fotografia.</p>
+<h2 id="etapa-5-testes-da-cadeia-de-exibicao"><strong>Etapa 5 - Testes da cadeia de exibição</strong><a class="headerlink" href="#etapa-5-testes-da-cadeia-de-exibicao" title="Permanent link">&para;</a></h2>
+<p>Altere uma variável por vez:</p>
+<ol>
+<li>outro cabo;</li>
+<li>outra porta;</li>
+<li>outra entrada do monitor;</li>
+<li>outro monitor;</li>
+<li>resolução temporariamente menor;</li>
+<li>taxa de atualização temporariamente menor.</li>
+</ol>
+<p>Registre cada resultado.</p>
+<h2 id="etapa-6-configuracoes-padrao"><strong>Etapa 6 - Configurações padrão</strong><a class="headerlink" href="#etapa-6-configuracoes-padrao" title="Permanent link">&para;</a></h2>
+<p>Desative temporariamente:</p>
+<ul>
+<li>overclock;</li>
+<li>subtensão;</li>
+<li>perfil personalizado;</li>
+<li>limite de potência alterado;</li>
+<li>curva extrema;</li>
+<li>overlays desnecessários.</li>
+</ul>
+<p>Repita o teste.</p>
+<h2 id="etapa-7-software"><strong>Etapa 7 - Software</strong><a class="headerlink" href="#etapa-7-software" title="Permanent link">&para;</a></h2>
+<p>Avalie:</p>
+<ul>
+<li>integridade da aplicação;</li>
+<li>versão do driver;</li>
+<li>instalação limpa, quando justificada;</li>
+<li>outra aplicação;</li>
+<li>registros do sistema;</li>
+<li>Monitor de Confiabilidade;</li>
+<li>processos em segundo plano.</li>
+</ul>
+<h2 id="etapa-8-conclusao-provisoria"><strong>Etapa 8 - Conclusão provisória</strong><a class="headerlink" href="#etapa-8-conclusao-provisoria" title="Permanent link">&para;</a></h2>
+<p>Exemplo:</p>
+<p>Os artefatos aparecem somente após alta ocupação da VRAM, continuam presentes em duas aplicações diferentes, são registrados na captura de tela e permanecem após a restauração das configurações padrão. Cabo e monitor foram descartados. As evidências aumentam a suspeita sobre o subsistema de memória gráfica, mas ainda não identificam se a origem está nos chips, no controlador, na alimentação ou na placa.</p>
+<p>Essa é uma conclusão técnica.</p>
+<p>Ela reconhece o que foi demonstrado e o que ainda não foi confirmado.</p>
+<h1 id="estudo-de-caso-1-artefatos-na-uefi"><strong>Estudo de Caso 1 - Artefatos na UEFI</strong><a class="headerlink" href="#estudo-de-caso-1-artefatos-na-uefi" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>blocos coloridos desde a inicialização;</li>
+<li>problema visível no menu do firmware;</li>
+<li>mesmo comportamento em dois monitores;</li>
+<li>dois cabos testados;</li>
+<li>placa utiliza configurações padrão;</li>
+<li>artefato acompanha a GPU para outro computador.</li>
+</ul>
+<h2 id="analise"><strong>Análise</strong><a class="headerlink" href="#analise" title="Permanent link">&para;</a></h2>
+<p>As evidências reduzem significativamente a probabilidade de:</p>
+<ul>
+<li>jogo;</li>
+<li>driver principal do sistema;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>sistema operacional.</li>
+</ul>
+<p>A suspeita sobre o hardware da placa aumenta.</p>
+<p>Ainda pode ser necessário investigar:</p>
+<ul>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>VBIOS;</li>
+<li>alimentação;</li>
+<li>trilhas;</li>
+<li>soldagem.</li>
+</ul>
+<h1 id="estudo-de-caso-2-pontos-brilhantes-em-alta-frequencia"><strong>Estudo de Caso 2 - Pontos brilhantes em alta frequência</strong><a class="headerlink" href="#estudo-de-caso-2-pontos-brilhantes-em-alta-frequencia" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>imagem normal em 60 Hz;</li>
+<li>pontos aparecem em 144 Hz;</li>
+<li>problema ocorre apenas em um monitor;</li>
+<li>desaparece com outro cabo;</li>
+<li>capturas de tela permanecem normais.</li>
+</ul>
+<h2 id="conclusao-provisoria"><strong>Conclusão provisória</strong><a class="headerlink" href="#conclusao-provisoria" title="Permanent link">&para;</a></h2>
+<p>As evidências apontam primeiro para a cadeia de transmissão, especialmente o cabo anterior.</p>
+<p>Não há base para concluir que a GPU está queimada.</p>
+<h1 id="estudo-de-caso-3-tela-preta-e-reinicializacao-do-driver"><strong>Estudo de Caso 3 - Tela preta e reinicialização do driver</strong><a class="headerlink" href="#estudo-de-caso-3-tela-preta-e-reinicializacao-do-driver" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>tela apaga por três segundos;</li>
+<li>áudio continua;</li>
+<li>imagem retorna;</li>
+<li>sistema registra reinicialização do driver;</li>
+<li>problema surgiu após atualização;</li>
+<li>temperaturas normais;</li>
+<li>configurações padrão;</li>
+<li>versão anterior do driver não apresentava o defeito.</li>
+</ul>
+<h2 id="conclusao-provisoria_1"><strong>Conclusão provisória</strong><a class="headerlink" href="#conclusao-provisoria_1" title="Permanent link">&para;</a></h2>
+<p>Existe forte relação temporal com a atualização.</p>
+<p>Uma regressão de driver é hipótese prioritária.</p>
+<p>O hardware não pode ser considerado absolutamente descartado, mas a evidência favorece primeiro a investigação da camada de software.</p>
+<h1 id="estudo-de-caso-4-travamento-apos-aquecimento"><strong>Estudo de Caso 4 - Travamento após aquecimento</strong><a class="headerlink" href="#estudo-de-caso-4-travamento-apos-aquecimento" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>placa funciona por aproximadamente vinte minutos;</li>
+<li>hotspot sobe continuamente;</li>
+<li>clock começa a cair;</li>
+<li>ventoinhas atingem rotação máxima;</li>
+<li>artefatos surgem pouco antes do travamento;</li>
+<li>temperatura cai significativamente com o painel frontal removido.</li>
+</ul>
+<h2 id="conclusao-provisoria_2"><strong>Conclusão provisória</strong><a class="headerlink" href="#conclusao-provisoria_2" title="Permanent link">&para;</a></h2>
+<p>O problema apresenta forte dependência térmica.</p>
+<p>Devem ser investigados:</p>
+<ul>
+<li>fluxo de ar;</li>
+<li>dissipador;</li>
+<li>ventoinhas;</li>
+<li>contato;</li>
+<li>pasta térmica;</li>
+<li>almofadas;</li>
+<li>temperatura da memória;</li>
+<li>VRM.</li>
+</ul>
+<p>Ainda não existe fundamento para afirmar que o chip gráfico esteja permanentemente danificado.</p>
+<h1 id="estudo-de-caso-5-reinicializacao-apos-upgrade"><strong>Estudo de Caso 5 - Reinicialização após upgrade</strong><a class="headerlink" href="#estudo-de-caso-5-reinicializacao-apos-upgrade" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>computador era estável com GPU anterior;</li>
+<li>nova placa possui consumo muito maior;</li>
+<li>fonte antiga;</li>
+<li>adaptador utilizado;</li>
+<li>sistema reinicia sob carga simultânea de CPU e GPU;</li>
+<li>teste leve da GPU isolada nem sempre reproduz a falha.</li>
+</ul>
+<h2 id="conclusao-provisoria_3"><strong>Conclusão provisória</strong><a class="headerlink" href="#conclusao-provisoria_3" title="Permanent link">&para;</a></h2>
+<p>A alimentação se torna uma hipótese central.</p>
+<p>O teste precisa considerar:</p>
+<ul>
+<li>fonte;</li>
+<li>adaptador;</li>
+<li>conectores;</li>
+<li>carga combinada;</li>
+<li>transitórios;</li>
+<li>cabos;</li>
+<li>recomendações do fabricante.</li>
+</ul>
+<p>A GPU nova não deve ser condenada antes de testar uma alimentação adequada.</p>
+<h1 id="mito-ou-evidencia"><strong>Mito ou Evidência?</strong><a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h1>
+<h2 id="artefatos-sempre-significam-que-a-gpu-queimou"><strong>"Artefatos sempre significam que a GPU queimou"</strong><a class="headerlink" href="#artefatos-sempre-significam-que-a-gpu-queimou" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Podem envolver VRAM, driver, cabo, monitor, temperatura, alimentação, software e outros subsistemas.</p>
+<h2 id="se-o-artefato-aparece-na-uefi-o-driver-do-windows-e-a-causa"><strong>"Se o artefato aparece na UEFI, o driver do Windows é a causa"</strong><a class="headerlink" href="#se-o-artefato-aparece-na-uefi-o-driver-do-windows-e-a-causa" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>O driver principal do Windows ainda não está operando nessa etapa.</p>
+<h2 id="se-o-problema-aparece-apenas-em-um-jogo-a-placa-esta-inocentada"><strong>"Se o problema aparece apenas em um jogo, a placa está inocentada"</strong><a class="headerlink" href="#se-o-problema-aparece-apenas-em-um-jogo-a-placa-esta-inocentada" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>O jogo pode ativar uma carga ou recurso que expõe uma instabilidade física.</p>
+<h2 id="captura-de-tela-e-fotografia-externa-podem-ajudar-a-localizar-a-falha"><strong>"Captura de tela e fotografia externa podem ajudar a localizar a falha"</strong><a class="headerlink" href="#captura-de-tela-e-fotografia-externa-podem-ajudar-a-localizar-a-falha" title="Permanent link">&para;</a></h2>
+<p><strong>Evidência.</strong></p>
+<p>A comparação pode indicar se a corrupção ocorre antes ou depois do caminho de exibição.</p>
+<h2 id="uma-placa-pode-passar-em-um-teste-e-falhar-em-outro"><strong>"Uma placa pode passar em um teste e falhar em outro"</strong><a class="headerlink" href="#uma-placa-pode-passar-em-um-teste-e-falhar-em-outro" title="Permanent link">&para;</a></h2>
+<p><strong>Evidência.</strong></p>
+<p>Diferentes testes utilizam unidades, padrões, memória e níveis de potência distintos.</p>
+<h2 id="reballing-corrige-qualquer-placa-que-apresenta-artefatos"><strong>"Reballing corrige qualquer placa que apresenta artefatos"</strong><a class="headerlink" href="#reballing-corrige-qualquer-placa-que-apresenta-artefatos" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Ele não corrige chip danificado, VRAM defeituosa, VRM, firmware ou diversas outras falhas.</p>
+<h2 id="uma-reducao-de-clock-pode-ser-protecao-termica-ou-limite-de-potencia"><strong>"Uma redução de clock pode ser proteção térmica ou limite de potência"</strong><a class="headerlink" href="#uma-reducao-de-clock-pode-ser-protecao-termica-ou-limite-de-potencia" title="Permanent link">&para;</a></h2>
+<p><strong>Evidência.</strong></p>
+<p>É necessário verificar qual limite está ativo.</p>
+<h2 id="o-desaparecimento-do-problema-com-outra-gpu-prova-que-a-fonte-esta-perfeita"><strong>"O desaparecimento do problema com outra GPU prova que a fonte está perfeita"</strong><a class="headerlink" href="#o-desaparecimento-do-problema-com-outra-gpu-prova-que-a-fonte-esta-perfeita" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>A segunda GPU pode exigir muito menos energia.</p>
+<h1 id="o-que-um-perito-observaria"><strong>O que um perito observaria?</strong><a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h1>
+<ul>
+<li>O defeito aparece antes do sistema operacional?</li>
+<li>O artefato é registrado em captura de tela?</li>
+<li>A falha acompanha a placa em outro computador?</li>
+<li>O problema ocorre em todos os programas?</li>
+<li>Existe relação com temperatura?</li>
+<li>A ocupação da VRAM influencia o sintoma?</li>
+<li>O clock da memória está padrão?</li>
+<li>O driver foi alterado recentemente?</li>
+<li>Existem erros no sistema?</li>
+<li>A interface PCI Express está estável?</li>
+<li>Há riser ou extensor?</li>
+<li>A fonte é adequada?</li>
+<li>Os cabos pertencem ao modelo da fonte?</li>
+<li>Os conectores estão totalmente inseridos?</li>
+<li>Há sinais de aquecimento nos terminais?</li>
+<li>O hotspot apresenta comportamento anormal?</li>
+<li>As ventoinhas respondem corretamente?</li>
+<li>A placa sofreu queda, transporte ou manutenção?</li>
+<li>O VBIOS foi modificado?</li>
+<li>Existem indícios de mineração ou uso intenso anterior?</li>
+<li>As tentativas realizadas foram documentadas?</li>
+<li>Um teste de estresse é realmente necessário e seguro?</li>
+<li>O caso já exige diagnóstico eletrônico?</li>
+</ul>
+<h1 id="desafio-do-dossie"><strong>Desafio do Dossiê</strong><a class="headerlink" href="#desafio-do-dossie" title="Permanent link">&para;</a></h1>
+<p>Uma placa de vídeo apresenta:</p>
+<ul>
+<li>funcionamento normal na área de trabalho;</li>
+<li>artefatos em dois jogos diferentes;</li>
+<li>erros apenas após 8 GB de VRAM ocupados;</li>
+<li>captura de tela registra a corrupção;</li>
+<li>outro cabo não altera o comportamento;</li>
+<li>outro monitor não altera o comportamento;</li>
+<li>clocks estão em padrão;</li>
+<li>temperaturas da GPU e hotspot permanecem dentro do comportamento esperado;</li>
+<li>instalação limpa do driver não resolve;</li>
+<li>a placa apresenta o mesmo defeito em outro computador.</li>
+</ul>
+<p>Elabore uma investigação contendo:</p>
+<ol>
+<li>evidências já coletadas;</li>
+<li>hipóteses que perderam força;</li>
+<li>subsistemas que permanecem sob suspeita;</li>
+<li>por que a ocupação da memória é relevante;</li>
+<li>limitações de um teste de VRAM;</li>
+<li>por que ainda não é possível identificar um chip específico;</li>
+<li>qual seria o próximo nível de diagnóstico;</li>
+<li>qual conclusão provisória poderia ser apresentada ao cliente.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
