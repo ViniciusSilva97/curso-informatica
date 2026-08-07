@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img">
+  <title>Passagem de controle até o carregamento do sistema operacional</title>
+  <desc>A BIOS ou UEFI escolhe um dispositivo inicializável, encontra o bootloader, que localiza o sistema operacional e carrega seus componentes na memória RAM.</desc>
+  <rect width="1200" height="650" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="64" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">QUEM ENTREGA O CONTROLE PARA QUEM?</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="155" width="240" height="285" rx="20"/><rect x="335" y="155" width="240" height="285" rx="20"/><rect x="625" y="155" width="240" height="285" rx="20"/><rect x="915" y="155" width="240" height="285" rx="20"/></g>
+    <g text-anchor="middle"><g fill="#ffd21a" font-size="25" font-weight="800"><text x="165" y="220">BIOS / UEFI</text><text x="455" y="220">SSD, HD OU USB</text><text x="745" y="220">BOOTLOADER</text><text x="1035" y="220">SISTEMA</text></g>
+      <g fill="#fff" font-size="18"><text x="165" y="280">procura onde</text><text x="165" y="309">inicializar</text><text x="455" y="280">contém os arquivos</text><text x="455" y="309">de partida</text><text x="745" y="280">localiza e inicia</text><text x="745" y="309">o sistema</text><text x="1035" y="280">vai para a RAM</text><text x="1035" y="309">e assume o controle</text></g>
+      <g fill="#16c65b" font-size="16" font-weight="700"><text x="165" y="380">ESCOLHE</text><text x="455" y="380">OFERECE</text><text x="745" y="380">CARREGA</text><text x="1035" y="380">EXECUTA</text></g></g>
+    <g fill="none" stroke="#ffd21a" stroke-width="8"><path d="M285 300h50m-20-20 20 20-20 20"/><path d="M575 300h50m-20-20 20 20-20 20"/><path d="M865 300h50m-20-20 20 20-20 20"/></g>
+    <rect x="235" y="495" width="730" height="85" rx="22" fill="#ffd21a"/>
+    <text x="600" y="532" text-anchor="middle" fill="#07110c" font-size="23" font-weight="800">O WINDOWS OU LINUX NÃO COMEÇA SOZINHO</text><text x="600" y="562" text-anchor="middle" fill="#07110c" font-size="17">Firmware e bootloader preparam o caminho.</text>
+  </g>
+</svg>
