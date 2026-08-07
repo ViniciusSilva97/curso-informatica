@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1210" role="img">
+  <title>Verificação inicial feita pela BIOS ou UEFI</title>
+  <desc>A BIOS ou UEFI, armazenada em um chip da placa-mãe, verifica processador, memória RAM, vídeo e armazenamento antes de procurar um sistema inicializável.</desc>
+  <rect width="600" height="1210" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="45" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">BIOS / UEFI TESTA PRIMEIRO</text>
+    <rect x="105" y="78" width="390" height="180" rx="22" fill="#ffd21a"/>
+    <rect x="220" y="111" width="160" height="94" rx="10" fill="#07110c"/><path d="M240 130h120M240 152h80M240 174h100" stroke="#16c65b" stroke-width="7"/>
+    <text x="300" y="231" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">FIRMWARE DA PLACA-MÃE</text>
+    <path d="M300 258v45" stroke="#ffd21a" stroke-width="7"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="300" width="500" height="170" rx="18"/><rect x="50" y="488" width="500" height="170" rx="18"/><rect x="50" y="676" width="500" height="170" rx="18"/><rect x="50" y="864" width="500" height="170" rx="18"/></g>
+    <g fill="#ffd21a" font-size="25" font-weight="800"><text x="95" y="355">CPU</text><text x="95" y="543">MEMÓRIA RAM</text><text x="95" y="731">VÍDEO</text><text x="95" y="919">ARMAZENAMENTO</text></g>
+    <g fill="#fff" font-size="18"><text x="95" y="397">o processador foi detectado?</text><text x="95" y="585">a memória está disponível?</text><text x="95" y="773">existe saída de imagem?</text><text x="95" y="961">há SSD, HD ou USB?</text></g>
+    <g fill="#16c65b" font-size="16" font-weight="700"><text x="95" y="433">VERIFICAR</text><text x="95" y="621">VERIFICAR</text><text x="95" y="809">VERIFICAR</text><text x="95" y="997">VERIFICAR</text></g>
+    <rect x="50" y="1080" width="500" height="82" rx="20" fill="#ffd21a"/><text x="300" y="1114" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">FALHA? BIPE, MENSAGEM</text><text x="300" y="1142" text-anchor="middle" fill="#07110c" font-size="18" font-weight="700">OU NENHUMA INICIALIZAÇÃO</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1390" role="img">
+  <title>Sequência de inicialização do computador</title>
+  <desc>Ao pressionar o botão, a energia é distribuída, BIOS ou UEFI testa o hardware, encontra o dispositivo de inicialização, aciona o bootloader, carrega o sistema e exibe o login.</desc>
+  <rect width="600" height="1390" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="45" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">DO BOTÃO AO LOGIN</text>
+    <path d="M120 115v1020" stroke="#ffd21a" stroke-width="8"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="70" y="82" width="480" height="165" rx="18"/><rect x="70" y="265" width="480" height="165" rx="18"/><rect x="70" y="448" width="480" height="165" rx="18"/>
+      <rect x="70" y="631" width="480" height="165" rx="18"/><rect x="70" y="814" width="480" height="165" rx="18"/><rect x="70" y="997" width="480" height="165" rx="18"/>
+    </g>
+    <g fill="#ffd21a"><circle cx="120" cy="164" r="36"/><circle cx="120" cy="347" r="36"/><circle cx="120" cy="530" r="36"/><circle cx="120" cy="713" r="36"/><circle cx="120" cy="896" r="36"/><circle cx="120" cy="1079" r="36"/></g>
+    <g fill="#07110c" text-anchor="middle" font-size="24" font-weight="800"><text x="120" y="173">1</text><text x="120" y="356">2</text><text x="120" y="539">3</text><text x="120" y="722">4</text><text x="120" y="905">5</text><text x="120" y="1088">6</text></g>
+    <g fill="#fff" font-size="23" font-weight="800"><text x="180" y="145">ENERGIA</text><text x="180" y="328">BIOS / UEFI</text><text x="180" y="511">DISPOSITIVO</text><text x="180" y="694">BOOTLOADER</text><text x="180" y="877">SISTEMA</text><text x="180" y="1060">LOGIN</text></g>
+    <g fill="#16c65b" font-size="17"><text x="180" y="181">fonte alimenta as peças</text><text x="180" y="364">testa o hardware</text><text x="180" y="547">encontra SSD, HD ou USB</text><text x="180" y="730">começa a inicialização</text><text x="180" y="913">carrega drivers e serviços</text><text x="180" y="1096">abre o perfil do usuário</text></g>
+    <rect x="50" y="1215" width="500" height="120" rx="22" fill="#ffd21a"/>
+    <text x="300" y="1260" text-anchor="middle" fill="#07110c" font-size="21" font-weight="800">POUCOS SEGUNDOS,</text><text x="300" y="1292" text-anchor="middle" fill="#07110c" font-size="21" font-weight="800">VÁRIAS ETAPAS</text>
+  </g>
+</svg>

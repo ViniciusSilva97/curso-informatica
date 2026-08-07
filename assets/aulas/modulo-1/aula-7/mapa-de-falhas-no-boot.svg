@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img">
+  <title>Mapa inicial de falhas durante a inicialização</title>
+  <desc>Sem sinais de energia sugere verificar fonte e alimentação; bipes ou ausência de vídeo apontam para o teste de hardware; mensagem de dispositivo ausente aponta para armazenamento ou ordem de boot; travamento no logotipo aponta para sistema ou disco; lentidão após login aponta para programas de inicialização.</desc>
+  <rect width="1200" height="690" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">O SINTOMA INDICA ONDE INVESTIGAR</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="115" width="350" height="150" rx="18"/><rect x="425" y="115" width="350" height="150" rx="18"/><rect x="805" y="115" width="350" height="150" rx="18"/><rect x="235" y="305" width="350" height="150" rx="18"/><rect x="615" y="305" width="350" height="150" rx="18"/></g>
+    <g font-size="19" font-weight="800" fill="#fff"><text x="75" y="160">NENHUM SINAL</text><text x="455" y="160">BIPES / SEM VÍDEO</text><text x="835" y="160">DISCO NÃO ENCONTRADO</text><text x="265" y="350">PARA NO LOGOTIPO</text><text x="645" y="350">LENTO APÓS LOGIN</text></g>
+    <g font-size="16" fill="#16c65b"><text x="75" y="202">energia, cabos e fonte</text><text x="455" y="202">RAM, vídeo ou hardware</text><text x="835" y="202">SSD, HD ou ordem de boot</text><text x="265" y="392">sistema ou armazenamento</text><text x="645" y="392">programas e serviços</text></g>
+    <g font-size="15" fill="#cbd3cd"><text x="75" y="232">ETAPA: ALIMENTAÇÃO</text><text x="455" y="232">ETAPA: POST</text><text x="835" y="232">ETAPA: BUSCA</text><text x="265" y="422">ETAPA: CARGA</text><text x="645" y="422">ETAPA: PERFIL</text></g>
+    <path d="M600 455v48" stroke="#ffd21a" stroke-width="8"/><rect x="205" y="503" width="790" height="120" rx="22" fill="#ffd21a"/>
+    <text x="600" y="550" text-anchor="middle" fill="#07110c" font-size="24" font-weight="800">OBSERVE EM QUAL ETAPA O PROCESSO PAROU</text><text x="600" y="588" text-anchor="middle" fill="#07110c" font-size="18">Isso reduz hipóteses e orienta o próximo teste.</text>
+    <text x="600" y="660" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">DIAGNÓSTICO COMEÇA PELA SEQUÊNCIA, NÃO PELO PALPITE</text>
+  </g>
+</svg>

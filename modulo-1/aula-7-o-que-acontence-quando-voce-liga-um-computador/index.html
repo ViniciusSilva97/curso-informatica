@@ -1376,6 +1376,14 @@ A maioria das pessoas responde:<br />
 <p>Mas essa resposta está incompleta.<br />
 Na verdade, antes mesmo do Windows aparecer, várias etapas acontecem em poucos segundos.<br />
 Hoje você descobrirá essa sequência.  </p>
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-7/sequencia-da-inicializacao-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-7/sequencia-da-inicializacao.svg" alt="Sequência de inicialização: energia, teste da BIOS ou UEFI, busca por um dispositivo inicializável, execução do bootloader, carregamento do sistema operacional e login." loading="lazy">
+  </picture>
+  <figcaption>O sistema operacional aparece no final de uma sequência que começa com energia e verificação do hardware.</figcaption>
+</figure>
+
 <h2 id="imagine-um-teatro">Imagine um teatro<a class="headerlink" href="#imagine-um-teatro" title="Permanent link">&para;</a></h2>
 <p>Pense em um grande teatro.<br />
 Antes da peça começar:  </p>
@@ -1414,6 +1422,14 @@ Ela faz perguntas como:</p>
 <li>Existe placa de vídeo?</li>
 </ul>
 <p>Se algum componente essencial apresentar falhas, o computador pode emitir bipes, exibir mensagens de erro ou nem iniciar.  </p>
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-7/post-bios-uefi-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-7/post-bios-uefi.svg" alt="BIOS ou UEFI verificando processador, memória RAM, saída de vídeo e armazenamento antes que o sistema operacional seja iniciado." loading="lazy">
+  </picture>
+  <figcaption>O teste inicial confirma se os componentes essenciais estão presentes e respondendo.</figcaption>
+</figure>
+
 <h2 id="curiosidade">Curiosidade<a class="headerlink" href="#curiosidade" title="Permanent link">&para;</a></h2>
 <p>A BIOS é um tipo de firmware: um software gravado diretamente em um chip da placa-mãe.<br />
 Por isso, ela continua disponível mesmo quando o computador está desligado.  </p>
@@ -1427,6 +1443,14 @@ Pode ser:</p>
 <li>DVD nem sei se existe ainda.</li>
 </ul>
 <p>Quando encontra um dispositivo válido, ela entrega o controle para o carregador de inicialização (bootloader), responsável por iniciar o sistema operacional.</p>
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-7/passagem-de-controle-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-7/passagem-de-controle.svg" alt="BIOS ou UEFI escolhendo um SSD, HD ou USB; o dispositivo oferece o bootloader, que localiza o sistema operacional e inicia seu carregamento na memória RAM." loading="lazy">
+  </picture>
+  <figcaption>Firmware, dispositivo de inicialização e bootloader preparam o caminho para o sistema assumir o controle.</figcaption>
+</figure>
+
 <h2 id="carregando-o-sistema-operacional">Carregando o sistema operacional<a class="headerlink" href="#carregando-o-sistema-operacional" title="Permanent link">&para;</a></h2>
 <p>Agora o Windows, Linux ou outros sistemas operacionais começam a ser carregados na memória RAM.<br />
 Nesse momento:</p>
@@ -1456,6 +1480,14 @@ Após informar sua senha ou utilizar outro método de autenticação, o sistema:
 <li>Fonte de alimentação com problemas(acontece bastante com fonte de qualidades ruins).</li>
 </ul>
 <p>Perceba como conhecer a sequência de inicialização ajuda no diagnóstico.</p>
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-7/mapa-de-falhas-no-boot-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-7/mapa-de-falhas-no-boot.svg" alt="Mapa relacionando sintomas às etapas da inicialização: ausência de energia, bipes ou falta de vídeo, disco não encontrado, travamento no logotipo e lentidão depois do login." loading="lazy">
+  </picture>
+  <figcaption>Observar em qual etapa a inicialização parou ajuda a reduzir hipóteses antes de testar componentes.</figcaption>
+</figure>
+
 <h2 id="curiosidade_1">Curiosidade<a class="headerlink" href="#curiosidade_1" title="Permanent link">&para;</a></h2>
 <p>Você já percebeu que alguns computadores exibem o logotipo do fabricante antes do Windows?<br />
 Esse logotipo é exibido pela BIOS/UEFI, antes do sistema operacional assumir o controle.</p>

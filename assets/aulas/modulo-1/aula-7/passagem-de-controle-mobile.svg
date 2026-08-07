@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1120" role="img">
+  <title>Passagem de controle até o carregamento do sistema operacional</title>
+  <desc>A BIOS ou UEFI escolhe um dispositivo inicializável, encontra o bootloader, que localiza o sistema operacional e carrega seus componentes na memória RAM.</desc>
+  <rect width="600" height="1120" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="45" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">PASSAGEM DE CONTROLE</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="80" width="500" height="185" rx="18"/><rect x="50" y="300" width="500" height="185" rx="18"/><rect x="50" y="520" width="500" height="185" rx="18"/><rect x="50" y="740" width="500" height="185" rx="18"/></g>
+    <g fill="#ffd21a" font-size="25" font-weight="800"><text x="95" y="135">BIOS / UEFI</text><text x="95" y="355">SSD, HD OU USB</text><text x="95" y="575">BOOTLOADER</text><text x="95" y="795">SISTEMA OPERACIONAL</text></g>
+    <g fill="#fff" font-size="18"><text x="95" y="178">procura onde inicializar</text><text x="95" y="398">oferece os arquivos de partida</text><text x="95" y="618">localiza e inicia o sistema</text><text x="95" y="838">vai para a RAM e assume o controle</text></g>
+    <g fill="#16c65b" font-size="16" font-weight="700"><text x="95" y="220">ESCOLHE</text><text x="95" y="440">OFERECE</text><text x="95" y="660">CARREGA</text><text x="95" y="880">EXECUTA</text></g>
+    <g fill="none" stroke="#ffd21a" stroke-width="7"><path d="M300 265v35m-16-15 16 17 16-17"/><path d="M300 485v35m-16-15 16 17 16-17"/><path d="M300 705v35m-16-15 16 17 16-17"/></g>
+    <rect x="50" y="975" width="500" height="98" rx="20" fill="#ffd21a"/><text x="300" y="1014" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">O SISTEMA NÃO COMEÇA SOZINHO</text><text x="300" y="1045" text-anchor="middle" fill="#07110c" font-size="16">firmware e bootloader abrem o caminho</text>
+  </g>
+</svg>
