@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1360" role="img">
+  <title>Escala didática das unidades de armazenamento</title>
+  <desc>Oito bits formam um byte. Na escala apresentada na aula, 1.024 bytes formam um kilobyte, 1.024 kilobytes formam um megabyte, 1.024 megabytes formam um gigabyte e 1.024 gigabytes formam um terabyte.</desc>
+  <rect width="600" height="1360" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="44" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">ESCALA DE ARMAZENAMENTO</text>
+    <path d="M112 120v1010" stroke="#ffd21a" stroke-width="8"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="60" y="80" width="490" height="190" rx="18"/><rect x="60" y="290" width="490" height="190" rx="18"/><rect x="60" y="500" width="490" height="190" rx="18"/><rect x="60" y="710" width="490" height="190" rx="18"/><rect x="60" y="920" width="490" height="190" rx="18"/></g>
+    <g fill="#ffd21a"><circle cx="112" cy="175" r="37"/><circle cx="112" cy="385" r="37"/><circle cx="112" cy="595" r="37"/><circle cx="112" cy="805" r="37"/><circle cx="112" cy="1015" r="37"/></g>
+    <g fill="#07110c" text-anchor="middle" font-size="22" font-weight="800"><text x="112" y="183">B</text><text x="112" y="393">KB</text><text x="112" y="603">MB</text><text x="112" y="813">GB</text><text x="112" y="1023">TB</text></g>
+    <g fill="#fff" font-size="23" font-weight="800"><text x="175" y="145">BYTE</text><text x="175" y="355">KILOBYTE</text><text x="175" y="565">MEGABYTE</text><text x="175" y="775">GIGABYTE</text><text x="175" y="985">TERABYTE</text></g>
+    <g fill="#16c65b" font-size="18"><text x="175" y="187">8 bits</text><text x="175" y="397">1.024 bytes</text><text x="175" y="607">1.024 KB</text><text x="175" y="817">1.024 MB</text><text x="175" y="1027">1.024 GB</text></g>
+    <g fill="#aeb8b1" font-size="15"><text x="175" y="225">unidade básica</text><text x="175" y="435">milhares de bytes</text><text x="175" y="645">milhões de bytes</text><text x="175" y="855">bilhões de bytes</text><text x="175" y="1065">grande capacidade</text></g>
+    <rect x="50" y="1170" width="500" height="130" rx="20" fill="#ffd21a"/><text x="300" y="1214" text-anchor="middle" fill="#07110c" font-size="20" font-weight="800">CADA DEGRAU AGRUPA</text><text x="300" y="1246" text-anchor="middle" fill="#07110c" font-size="20" font-weight="800">MUITAS UNIDADES ANTERIORES</text><text x="300" y="1277" text-anchor="middle" fill="#07110c" font-size="14">escala aproximada usada na aula</text>
+  </g>
+</svg>
