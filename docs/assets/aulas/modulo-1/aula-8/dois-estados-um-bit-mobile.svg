@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1080" role="img">
+  <title>Um bit representa um entre dois estados</title>
+  <desc>Um interruptor desligado é associado ao valor zero e um interruptor ligado ao valor um. Cada escolha entre esses dois valores corresponde a um bit.</desc>
+  <rect width="600" height="1080" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="45" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">UM BIT, DOIS ESTADOS</text>
+    <g fill="#101b14" stroke-width="4"><rect x="50" y="80" width="500" height="360" rx="20" stroke="#657069"/><rect x="50" y="465" width="500" height="360" rx="20" stroke="#16c65b"/></g>
+    <g text-anchor="middle">
+      <text x="300" y="137" fill="#fff" font-size="24" font-weight="800">DESLIGADO</text><rect x="175" y="180" width="250" height="100" rx="50" fill="#29322c"/><circle cx="230" cy="230" r="41" fill="#7b857e"/>
+      <text x="300" y="374" fill="#ffd21a" font-size="68" font-weight="800">0</text><text x="300" y="414" fill="#aeb8b1" font-size="17">um dos valores possíveis</text>
+      <text x="300" y="522" fill="#fff" font-size="24" font-weight="800">LIGADO</text><rect x="175" y="565" width="250" height="100" rx="50" fill="#0b7432"/><circle cx="370" cy="615" r="41" fill="#29d463"/>
+      <text x="300" y="759" fill="#ffd21a" font-size="68" font-weight="800">1</text><text x="300" y="799" fill="#16c65b" font-size="17">o outro valor possível</text>
+    </g>
+    <path d="M300 830v48m-17-17 17 19 17-19" fill="none" stroke="#16c65b" stroke-width="7"/>
+    <rect x="50" y="900" width="500" height="120" rx="20" fill="#ffd21a"/><text x="300" y="946" text-anchor="middle" fill="#07110c" font-size="21" font-weight="800">0 OU 1 = 1 BIT</text><text x="300" y="983" text-anchor="middle" fill="#07110c" font-size="17">Binary Digit → Dígito Binário</text>
+  </g>
+</svg>
