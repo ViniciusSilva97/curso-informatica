@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1330" role="img">
+  <title>Mapa inicial de falhas durante a inicialização</title>
+  <desc>Sem sinais de energia sugere verificar fonte e alimentação; bipes ou ausência de vídeo apontam para o teste de hardware; mensagem de dispositivo ausente aponta para armazenamento ou ordem de boot; travamento no logotipo aponta para sistema ou disco; lentidão após login aponta para programas de inicialização.</desc>
+  <rect width="600" height="1330" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="44" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">ONDE A INICIALIZAÇÃO PAROU?</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="78" width="500" height="190" rx="18"/><rect x="50" y="288" width="500" height="190" rx="18"/><rect x="50" y="498" width="500" height="190" rx="18"/><rect x="50" y="708" width="500" height="190" rx="18"/><rect x="50" y="918" width="500" height="190" rx="18"/></g>
+    <g fill="#fff" font-size="22" font-weight="800"><text x="90" y="130">NENHUM SINAL</text><text x="90" y="340">BIPES OU SEM VÍDEO</text><text x="90" y="550">DISCO NÃO ENCONTRADO</text><text x="90" y="760">PARA NO LOGOTIPO</text><text x="90" y="970">LENTO APÓS O LOGIN</text></g>
+    <g fill="#16c65b" font-size="17"><text x="90" y="174">energia, cabos e fonte</text><text x="90" y="384">RAM, vídeo ou outro hardware</text><text x="90" y="594">SSD, HD ou ordem de boot</text><text x="90" y="804">sistema ou armazenamento</text><text x="90" y="1014">programas e serviços</text></g>
+    <g fill="#cbd3cd" font-size="15" font-weight="700"><text x="90" y="218">ETAPA: ALIMENTAÇÃO</text><text x="90" y="428">ETAPA: POST</text><text x="90" y="638">ETAPA: BUSCA</text><text x="90" y="848">ETAPA: CARGA</text><text x="90" y="1058">ETAPA: PERFIL</text></g>
+    <path d="M300 1110v48m-17-17 17 19 17-19" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="50" y="1175" width="500" height="110" rx="20" fill="#ffd21a"/><text x="300" y="1215" text-anchor="middle" fill="#07110c" font-size="20" font-weight="800">IDENTIFIQUE A ETAPA</text><text x="300" y="1248" text-anchor="middle" fill="#07110c" font-size="17">depois escolha o próximo teste</text>
+    <text x="300" y="1310" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">SEQUÊNCIA ANTES DO PALPITE</text>
+  </g>
+</svg>
