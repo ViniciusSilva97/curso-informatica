@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img">
+  <title>Escala didática das unidades de armazenamento</title>
+  <desc>Oito bits formam um byte. Na escala apresentada na aula, 1.024 bytes formam um kilobyte, 1.024 kilobytes formam um megabyte, 1.024 megabytes formam um gigabyte e 1.024 gigabytes formam um terabyte.</desc>
+  <rect width="1200" height="680" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">COMO AS UNIDADES CRESCEM</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="40" y="150" width="185" height="300" rx="18"/><rect x="275" y="150" width="185" height="300" rx="18"/><rect x="510" y="150" width="185" height="300" rx="18"/><rect x="745" y="150" width="185" height="300" rx="18"/><rect x="980" y="150" width="185" height="300" rx="18"/></g>
+    <g text-anchor="middle"><g fill="#ffd21a" font-size="35" font-weight="800"><text x="132" y="220">B</text><text x="367" y="220">KB</text><text x="602" y="220">MB</text><text x="837" y="220">GB</text><text x="1072" y="220">TB</text></g>
+      <g fill="#fff" font-size="18" font-weight="800"><text x="132" y="267">BYTE</text><text x="367" y="267">KILOBYTE</text><text x="602" y="267">MEGABYTE</text><text x="837" y="267">GIGABYTE</text><text x="1072" y="267">TERABYTE</text></g>
+      <g fill="#16c65b" font-size="17"><text x="132" y="330">8 bits</text><text x="367" y="330">1.024 B</text><text x="602" y="330">1.024 KB</text><text x="837" y="330">1.024 MB</text><text x="1072" y="330">1.024 GB</text></g>
+      <g fill="#aeb8b1" font-size="15"><text x="132" y="395">unidade básica</text><text x="367" y="395">milhares de bytes</text><text x="602" y="395">milhões de bytes</text><text x="837" y="395">bilhões de bytes</text><text x="1072" y="395">grande capacidade</text></g></g>
+    <g fill="none" stroke="#ffd21a" stroke-width="7"><path d="M225 300h50m-19-19 19 19-19 19"/><path d="M460 300h50m-19-19 19 19-19 19"/><path d="M695 300h50m-19-19 19 19-19 19"/><path d="M930 300h50m-19-19 19 19-19 19"/></g>
+    <rect x="210" y="510" width="780" height="105" rx="22" fill="#ffd21a"/><text x="600" y="552" text-anchor="middle" fill="#07110c" font-size="23" font-weight="800">CADA DEGRAU AGRUPA MUITAS UNIDADES ANTERIORES</text><text x="600" y="587" text-anchor="middle" fill="#07110c" font-size="16">Escala aproximada adotada no conteúdo desta aula.</text>
+  </g>
+</svg>
