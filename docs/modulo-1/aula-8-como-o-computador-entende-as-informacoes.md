@@ -32,6 +32,14 @@ Um bit pode assumir apenas dois valores.
 Imagine um interruptor.  
 Ligado ou Desligado, não existe meio termo. Da mesma forma Bit = 0 ou 1.  
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-8/dois-estados-um-bit-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-8/dois-estados-um-bit.svg" alt="Comparação entre um interruptor desligado, associado ao valor zero, e um interruptor ligado, associado ao valor um; cada escolha entre os dois estados representa um bit." loading="lazy">
+  </picture>
+  <figcaption>Um bit registra uma escolha entre dois valores possíveis: 0 ou 1.</figcaption>
+</figure>
+
 ### Então como surge uma foto?
 Pense em um quebra-cabeça.  
 Cada peça isolada possui pouco significado.   
@@ -49,6 +57,14 @@ Milhões de bits formam:
 
 Tudo é formado por bilhões de pequenos 0 e 1.  
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-8/bits-representam-dados-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-8/bits-representam-dados.svg" alt="Uma sequência de bits sendo interpretada, conforme diferentes regras de codificação, como caracteres de texto, valores de pixels, amostras de áudio e instruções ou arquivos de software." loading="lazy">
+  </picture>
+  <figcaption>Zeros e uns ganham significado quando uma regra de codificação define como eles devem ser interpretados.</figcaption>
+</figure>
+
 ## O que é um byte?
 Agora imagine uma palavra.  
 Uma única letra diz pouca coisa.  
@@ -57,6 +73,14 @@ Com os bits acontece o mesmo.
 8 bits juntos formam:
 **1 Byte**   
 **O byte é a unidade básica utilizada para armazenar informações.**
+
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-8/oito-bits-um-byte-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-8/oito-bits-um-byte.svg" alt="Oito posições binárias, cada uma contendo zero ou um, reunidas em um único grupo chamado byte." loading="lazy">
+  </picture>
+  <figcaption>Cada posição continua aceitando somente 0 ou 1; o agrupamento de oito posições forma um byte.</figcaption>
+</figure>
 
 ## Como crescem os arquivos?
 
@@ -70,7 +94,13 @@ Com os bits acontece o mesmo.
 |Gigabyte (GB)|1.024 MB|
 |Terabyte (TB)|1.024 GB|
 
-
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-8/escala-das-unidades-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-8/escala-das-unidades.svg" alt="Escala didática das unidades: oito bits formam um byte; 1.024 bytes formam um kilobyte; 1.024 kilobytes formam um megabyte; 1.024 megabytes formam um gigabyte; e 1.024 gigabytes formam um terabyte." loading="lazy">
+  </picture>
+  <figcaption>Usamos unidades maiores para evitar expressar arquivos e dispositivos como quantidades enormes de bytes.</figcaption>
+</figure>
 
 ## Exemplo do mundo real
 Imagine três arquivos.  
@@ -94,9 +124,15 @@ Quando você grava um vídeo, O mesmo acontece.
 Quando você envia um áudio, também.
 Para o computador, tudo são dados.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-8/quantidade-de-dados-mobile.svg">
+    <img src="../../assets/aulas/modulo-1/aula-8/quantidade-de-dados.svg" alt="Comparação didática entre uma mensagem com poucos caracteres, uma fotografia com milhões de pixels e um vídeo 4K com muitos quadros e áudio, mostrando o crescimento da quantidade de dados." loading="lazy">
+  </picture>
+  <figcaption>O tamanho real varia, mas conteúdo, qualidade e duração ajudam a explicar por que alguns arquivos exigem muito mais bytes.</figcaption>
+</figure>
+
 ## Curiosidade 
 Um filme em qualidade 4k pode ocupar dezenas de Gigabytes.  
 Já uma simples mensagem de texto ocupa apenas alguns Bytes.  
 A diferença está na quantidade de informações armazenadas.
-
-
