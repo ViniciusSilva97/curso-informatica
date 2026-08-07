@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img">
+  <title>Caminho simplificado de uma mensagem pela internet</title>
+  <desc>Uma mensagem sai do celular do remetente, passa pelo roteador e pelo provedor, atravessa redes e roteadores da internet, chega ao servidor do serviço e depois percorre redes até o celular do destinatário.</desc>
+  <rect width="1200" height="700" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="30" font-weight="800">O CAMINHO DE “BOM DIA”</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="40" y="140" width="180" height="360" rx="20"/><rect x="980" y="140" width="180" height="360" rx="20"/></g>
+    <g text-anchor="middle"><text x="130" y="185" fill="#ffd21a" font-size="20" font-weight="800">REMETENTE</text><text x="1070" y="185" fill="#ffd21a" font-size="20" font-weight="800">DESTINATÁRIO</text>
+      <rect x="85" y="225" width="90" height="155" rx="16" fill="#fff"/><rect x="96" y="245" width="68" height="100" rx="5" fill="#07110c"/><text x="130" y="305" fill="#16c65b" font-size="15" font-weight="800">ENVIAR</text>
+      <rect x="1025" y="225" width="90" height="155" rx="16" fill="#fff"/><rect x="1036" y="245" width="68" height="100" rx="5" fill="#07110c"/><text x="1070" y="305" fill="#16c65b" font-size="14" font-weight="800">RECEBER</text>
+      <text x="130" y="445" fill="#fff" font-size="16">celular + Wi-Fi</text><text x="1070" y="445" fill="#fff" font-size="16">Wi-Fi + celular</text></g>
+    <g fill="#101b14" stroke="#ffd21a" stroke-width="4"><circle cx="300" cy="310" r="70"/><circle cx="465" cy="310" r="70"/><circle cx="735" cy="310" r="70"/><circle cx="900" cy="310" r="70"/></g>
+    <g text-anchor="middle" fill="#fff" font-size="16" font-weight="800"><text x="300" y="302">ROTEADOR</text><text x="300" y="326">DA CASA</text><text x="465" y="302">PROVEDOR</text><text x="465" y="326">A</text><text x="735" y="302">PROVEDOR</text><text x="735" y="326">B</text><text x="900" y="302">ROTEADOR</text><text x="900" y="326">DA CASA</text></g>
+    <rect x="530" y="185" width="140" height="250" rx="20" fill="#ffd21a"/><rect x="552" y="220" width="96" height="140" rx="8" fill="#07110c"/><g stroke="#16c65b" stroke-width="7"><path d="M570 245h60M570 275h60M570 305h60M570 335h60"/></g><text x="600" y="402" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">SERVIDOR DO SERVIÇO</text>
+    <g fill="none" stroke="#16c65b" stroke-width="7"><path d="M175 310h55m-20-20 20 20-20 20"/><path d="M370 310h25m-18-18 18 18-18 18"/><path d="M535 310h-1"/><path d="M670 310h-1"/><path d="M805 310h25m-18-18 18 18-18 18"/><path d="M970 310h10m-18-18 18 18-18 18"/></g>
+    <rect x="275" y="535" width="650" height="85" rx="20" fill="#ffd21a"/><text x="600" y="570" text-anchor="middle" fill="#07110c" font-size="22" font-weight="800">O SERVIDOR RECEBE E ENCAMINHA A MENSAGEM</text><text x="600" y="598" text-anchor="middle" fill="#07110c" font-size="16">O desenho resume vários equipamentos e caminhos possíveis.</text>
+  </g>
+</svg>

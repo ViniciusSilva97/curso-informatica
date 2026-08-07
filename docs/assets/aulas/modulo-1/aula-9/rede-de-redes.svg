@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img">
+  <title>A internet conecta várias redes diferentes</title>
+  <desc>Uma rede doméstica se conecta à rede de acesso do provedor, que alcança outras redes e roteadores da internet até chegar à rede de um serviço ou de outra pessoa.</desc>
+  <rect width="1200" height="700" rx="28" fill="#07110c"/>
+  <path d="M30 105V30h75M1095 30h75v75M30 595v75h75M1095 670h75v-75" fill="none" stroke="#16c65b" stroke-width="8"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="64" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">INTERNET = UMA REDE DE REDES</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="135" width="285" height="400" rx="22"/><rect x="870" y="135" width="285" height="400" rx="22"/></g>
+    <text x="187" y="183" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">REDE DA SUA CASA</text><text x="1012" y="183" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">OUTRA REDE</text>
+    <g fill="#fff"><rect x="80" y="230" width="90" height="62" rx="8"/><rect x="205" y="230" width="90" height="62" rx="8"/><rect x="80" y="350" width="90" height="62" rx="8"/></g>
+    <g fill="#07110c" font-size="15" font-weight="800" text-anchor="middle"><text x="125" y="267">CELULAR</text><text x="250" y="267">NOTEBOOK</text><text x="125" y="387">TV</text></g>
+    <circle cx="250" cy="382" r="48" fill="#ffd21a"/><text x="250" y="389" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">ROTEADOR</text>
+    <rect x="905" y="230" width="215" height="110" rx="12" fill="#ffd21a"/><path d="M930 255h165v60H930z" fill="#07110c"/><text x="1012" y="296" text-anchor="middle" fill="#16c65b" font-size="19" font-weight="800">SERVIDOR</text>
+    <g fill="#fff"><rect x="915" y="395" width="85" height="58" rx="8"/><rect x="1025" y="395" width="85" height="58" rx="8"/></g><g fill="#07110c" font-size="14" font-weight="800" text-anchor="middle"><text x="957" y="430">CELULAR</text><text x="1067" y="430">COMPUT.</text></g>
+    <g fill="#101b14" stroke="#ffd21a" stroke-width="5"><circle cx="455" cy="260" r="65"/><circle cx="600" cy="190" r="65"/><circle cx="745" cy="260" r="65"/><circle cx="520" cy="410" r="65"/><circle cx="680" cy="410" r="65"/></g>
+    <g text-anchor="middle" fill="#fff" font-size="16" font-weight="800"><text x="455" y="266">ROTEADOR</text><text x="600" y="196">REDE B</text><text x="745" y="266">ROTEADOR</text><text x="520" y="416">REDE C</text><text x="680" y="416">REDE D</text></g>
+    <g fill="none" stroke="#16c65b" stroke-width="7"><path d="M298 382 405 296"/><path d="M505 232 550 215"/><path d="M650 215 695 232"/><path d="M795 296 905 285"/><path d="M476 322 499 350"/><path d="M585 400h30"/><path d="M701 350 724 322"/></g>
+    <rect x="300" y="570" width="600" height="75" rx="20" fill="#ffd21a"/><text x="600" y="601" text-anchor="middle" fill="#07110c" font-size="22" font-weight="800">NÃO EXISTE UMA ÚNICA “MÁQUINA INTERNET”</text><text x="600" y="629" text-anchor="middle" fill="#07110c" font-size="16">Existem redes que trocam dados entre si.</text>
+  </g>
+</svg>

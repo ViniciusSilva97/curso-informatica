@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1250" role="img">
+  <title>Diferença entre o roteador doméstico e o provedor de internet</title>
+  <desc>O roteador conecta e distribui a rede entre dispositivos da casa. Um enlace de acesso liga o roteador à rede do provedor, e o provedor conecta essa rede ao restante da internet.</desc>
+  <rect width="600" height="1250" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="44" text-anchor="middle" fill="#ffd21a" font-size="21" font-weight="800">ROTEADOR ≠ PROVEDOR</text>
+    <rect x="50" y="80" width="500" height="480" rx="20" fill="#101b14" stroke="#16c65b" stroke-width="4"/><text x="300" y="130" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">DENTRO DA CASA</text>
+    <g fill="#fff"><rect x="85" y="180" width="125" height="70" rx="8"/><rect x="237" y="180" width="125" height="70" rx="8"/><rect x="390" y="180" width="125" height="70" rx="8"/></g><g fill="#07110c" font-size="14" font-weight="800" text-anchor="middle"><text x="147" y="222">CELULAR</text><text x="299" y="222">NOTEBOOK</text><text x="452" y="222">TV</text></g>
+    <circle cx="300" cy="390" r="80" fill="#ffd21a"/><text x="300" y="382" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">ROTEADOR</text><text x="300" y="411" text-anchor="middle" fill="#07110c" font-size="15">organiza a rede local</text>
+    <g stroke="#16c65b" stroke-width="6"><path d="M147 250 255 330"/><path d="M299 250v60"/><path d="M452 250 345 330"/></g>
+    <path d="M300 560v65" stroke="#ffd21a" stroke-width="9"/><text x="330" y="600" fill="#fff" font-size="14">enlace de acesso</text>
+    <rect x="50" y="625" width="500" height="420" rx="20" fill="#101b14" stroke="#ffd21a" stroke-width="4"/><text x="300" y="677" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">FORA DA CASA</text>
+    <rect x="110" y="730" width="380" height="135" rx="20" fill="#ffd21a"/><text x="300" y="782" text-anchor="middle" fill="#07110c" font-size="24" font-weight="800">PROVEDOR</text><text x="300" y="820" text-anchor="middle" fill="#07110c" font-size="16">conecta sua rede a outras redes</text>
+    <path d="M300 865v55" stroke="#16c65b" stroke-width="8"/><rect x="110" y="920" width="380" height="75" rx="18" fill="#07110c" stroke="#16c65b" stroke-width="4"/><text x="300" y="967" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">RESTANTE DA INTERNET</text>
+    <rect x="50" y="1100" width="500" height="105" rx="20" fill="#16c65b"/><text x="300" y="1138" text-anchor="middle" fill="#07110c" font-size="18" font-weight="800">ROTEADOR: REDE LOCAL</text><text x="300" y="1170" text-anchor="middle" fill="#07110c" font-size="18" font-weight="800">PROVEDOR: ACESSO EXTERNO</text>
+  </g>
+</svg>
