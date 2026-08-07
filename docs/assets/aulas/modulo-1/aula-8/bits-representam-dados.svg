@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img">
+  <title>Bits representam diferentes tipos de dados conforme uma regra de codificação</title>
+  <desc>A mesma base de zeros e uns pode representar texto, pixels de uma imagem, amostras de áudio ou instruções de software quando organizada e interpretada segundo regras adequadas.</desc>
+  <rect width="1200" height="700" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="30" font-weight="800">ZEROS E UNS PRECISAM DE ORGANIZAÇÃO</text>
+    <rect x="330" y="105" width="540" height="100" rx="22" fill="#ffd21a"/>
+    <text x="600" y="151" text-anchor="middle" fill="#07110c" font-size="27" font-weight="800">01001000 01101001 00110101</text><text x="600" y="181" text-anchor="middle" fill="#07110c" font-size="16">sequência de bits armazenada ou transmitida</text>
+    <path d="M600 205v55M600 260H165v45M600 260H455v45M600 260H745v45M600 260H1035v45" fill="none" stroke="#16c65b" stroke-width="7"/>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="45" y="305" width="240" height="260" rx="20"/><rect x="335" y="305" width="240" height="260" rx="20"/><rect x="625" y="305" width="240" height="260" rx="20"/><rect x="915" y="305" width="240" height="260" rx="20"/></g>
+    <g text-anchor="middle"><g fill="#ffd21a" font-size="23" font-weight="800"><text x="165" y="357">TEXTO</text><text x="455" y="357">IMAGEM</text><text x="745" y="357">ÁUDIO</text><text x="1035" y="357">SOFTWARE</text></g>
+      <text x="165" y="442" fill="#fff" font-size="58" font-weight="800">A</text>
+      <g><rect x="403" y="400" width="34" height="34" fill="#16c65b"/><rect x="439" y="400" width="34" height="34" fill="#ffd21a"/><rect x="475" y="400" width="34" height="34" fill="#fff"/><rect x="403" y="436" width="34" height="34" fill="#ffd21a"/><rect x="439" y="436" width="34" height="34" fill="#16c65b"/><rect x="475" y="436" width="34" height="34" fill="#0b7432"/></g>
+      <path d="M680 445c25-75 55 75 80 0s55 75 80 0" fill="none" stroke="#ffd21a" stroke-width="8"/>
+      <path d="M975 400h120v90H975zM994 423h82M994 446h55M994 469h70" fill="none" stroke="#16c65b" stroke-width="7"/>
+      <g fill="#aeb8b1" font-size="15"><text x="165" y="522">códigos para caracteres</text><text x="455" y="522">valores para pixels</text><text x="745" y="522">amostras do som</text><text x="1035" y="522">instruções e arquivos</text></g></g>
+    <rect x="250" y="605" width="700" height="58" rx="20" fill="#16c65b"/><text x="600" y="642" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">A REGRA DE CODIFICAÇÃO DIZ O QUE OS BITS REPRESENTAM</text>
+  </g>
+</svg>
