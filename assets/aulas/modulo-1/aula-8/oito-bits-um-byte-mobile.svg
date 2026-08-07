@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1030" role="img">
+  <title>Oito bits formam um byte</title>
+  <desc>Oito posições binárias, cada uma contendo zero ou um, são agrupadas para formar um byte.</desc>
+  <rect width="600" height="1030" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="45" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">8 BITS FORMAM 1 BYTE</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4">
+      <rect x="55" y="85" width="110" height="165" rx="15"/><rect x="180" y="85" width="110" height="165" rx="15"/><rect x="310" y="85" width="110" height="165" rx="15"/><rect x="435" y="85" width="110" height="165" rx="15"/>
+      <rect x="55" y="280" width="110" height="165" rx="15"/><rect x="180" y="280" width="110" height="165" rx="15"/><rect x="310" y="280" width="110" height="165" rx="15"/><rect x="435" y="280" width="110" height="165" rx="15"/>
+    </g>
+    <g text-anchor="middle" font-weight="800"><g fill="#ffd21a" font-size="54"><text x="110" y="183">0</text><text x="235" y="183">1</text><text x="365" y="183">0</text><text x="490" y="183">0</text><text x="110" y="378">0</text><text x="235" y="378">0</text><text x="365" y="378">0</text><text x="490" y="378">1</text></g>
+      <g fill="#16c65b" font-size="14"><text x="110" y="226">BIT 1</text><text x="235" y="226">BIT 2</text><text x="365" y="226">BIT 3</text><text x="490" y="226">BIT 4</text><text x="110" y="421">BIT 5</text><text x="235" y="421">BIT 6</text><text x="365" y="421">BIT 7</text><text x="490" y="421">BIT 8</text></g></g>
+    <path d="M110 460v50h380v-50M300 510v48m-17-17 17 19 17-19" fill="none" stroke="#ffd21a" stroke-width="7"/>
+    <rect x="70" y="585" width="460" height="180" rx="22" fill="#ffd21a"/>
+    <text x="300" y="657" text-anchor="middle" fill="#07110c" font-size="35" font-weight="800">1 BYTE</text><text x="300" y="702" text-anchor="middle" fill="#07110c" font-size="17">unidade básica usada</text><text x="300" y="731" text-anchor="middle" fill="#07110c" font-size="17">para armazenar informações</text>
+    <rect x="70" y="825" width="460" height="125" rx="20" fill="#101b14" stroke="#16c65b" stroke-width="4"/><text x="300" y="875" text-anchor="middle" fill="#fff" font-size="19" font-weight="800">CADA POSIÇÃO AINDA É</text><text x="300" y="913" text-anchor="middle" fill="#ffd21a" font-size="25" font-weight="800">0 OU 1</text>
+  </g>
+</svg>

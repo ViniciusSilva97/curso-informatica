@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1370" role="img">
+  <title>Mais informações exigem mais bytes</title>
+  <desc>Uma mensagem curta contém poucos dados, uma fotografia reúne muitos pixels e um vídeo 4K reúne muitos quadros com milhões de pixels, além de áudio, por isso seus arquivos tendem a ocupar espaços muito diferentes.</desc>
+  <rect width="600" height="1370" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="44" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">MAIS INFORMAÇÃO, MAIS BYTES</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="80" width="500" height="350" rx="20"/><rect x="50" y="450" width="500" height="350" rx="20"/><rect x="50" y="820" width="500" height="350" rx="20"/></g>
+    <g fill="#ffd21a" font-size="24" font-weight="800"><text x="90" y="135">MENSAGEM</text><text x="90" y="505">FOTOGRAFIA</text><text x="90" y="875">VÍDEO 4K</text></g>
+    <rect x="330" y="120" width="160" height="100" rx="14" fill="#fff"/><path d="M350 148h120M350 173h85M350 198h100" stroke="#07110c" stroke-width="7"/>
+    <rect x="315" y="492" width="175" height="115" rx="12" fill="#ffd21a"/><circle cx="355" cy="530" r="18" fill="#07110c"/><path d="M328 590l48-48 30 28 27-22 43 42" fill="#16c65b" stroke="#07110c" stroke-width="5"/>
+    <rect x="300" y="862" width="190" height="115" rx="12" fill="#ffd21a"/><path d="M325 884h140v70H325z" fill="#07110c"/><text x="395" y="932" text-anchor="middle" fill="#16c65b" font-size="31" font-weight="800">4K</text>
+    <g fill="#fff" font-size="18"><text x="90" y="270">alguns caracteres</text><text x="90" y="640">milhões de pixels</text><text x="90" y="1010">muitos quadros + áudio</text></g>
+    <g fill="#16c65b"><rect x="90" y="310" width="400" height="28" rx="14"/><rect x="90" y="680" width="400" height="28" rx="14"/><rect x="90" y="1050" width="400" height="28" rx="14"/></g>
+    <g fill="#ffd21a"><rect x="90" y="310" width="55" height="28" rx="14"/><rect x="90" y="680" width="250" height="28" rx="14"/><rect x="90" y="1050" width="400" height="28" rx="14"/></g>
+    <g fill="#aeb8b1" font-size="16"><text x="90" y="375">poucos dados</text><text x="90" y="745">muitos dados</text><text x="90" y="1115">enorme quantidade de dados</text></g>
+    <rect x="50" y="1215" width="500" height="105" rx="20" fill="#ffd21a"/><text x="300" y="1255" text-anchor="middle" fill="#07110c" font-size="19" font-weight="800">TAMANHO DEPENDE DO CONTEÚDO,</text><text x="300" y="1287" text-anchor="middle" fill="#07110c" font-size="18" font-weight="700">QUALIDADE E DURAÇÃO</text>
+  </g>
+</svg>
