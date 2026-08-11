@@ -82,6 +82,7 @@ nav:
     - Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história: modulo-2/aula-6-fonte-de-alimentacao-por-que-leituras-de-software-não-contam-toda-a-historia.md
     - Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?: modulo-2/aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto.md
     - Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada: modulo-2/aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada.md
+    - Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?: modulo-2/aula-09-monitores-e-cabos.md
 markdown_extensions:
   - admonition
   - attr_list
