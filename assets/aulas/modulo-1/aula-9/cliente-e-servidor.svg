@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img">
+  <title>Cliente solicita dados e servidor responde</title>
+  <desc>O navegador no dispositivo do usuário envia uma solicitação por uma página. A solicitação atravessa a internet até o servidor, que localiza os arquivos e envia uma resposta ao navegador.</desc>
+  <rect width="1200" height="680" rx="28" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="600" y="62" text-anchor="middle" fill="#ffd21a" font-size="31" font-weight="800">QUANDO VOCÊ ACESSA UM SITE</text>
+    <rect x="60" y="130" width="360" height="380" rx="22" fill="#101b14" stroke="#16c65b" stroke-width="4"/><text x="240" y="180" text-anchor="middle" fill="#ffd21a" font-size="24" font-weight="800">CLIENTE</text>
+    <rect x="115" y="225" width="250" height="175" rx="14" fill="#fff"/><rect x="130" y="245" width="220" height="120" rx="6" fill="#07110c"/><circle cx="148" cy="264" r="6" fill="#ffd21a"/><circle cx="167" cy="264" r="6" fill="#16c65b"/><path d="M150 295h180M150 320h120M150 345h155" stroke="#16c65b" stroke-width="7"/><text x="240" y="445" text-anchor="middle" fill="#fff" font-size="17">seu navegador</text>
+    <rect x="780" y="130" width="360" height="380" rx="22" fill="#101b14" stroke="#ffd21a" stroke-width="4"/><text x="960" y="180" text-anchor="middle" fill="#ffd21a" font-size="24" font-weight="800">SERVIDOR</text>
+    <rect x="855" y="225" width="210" height="190" rx="14" fill="#ffd21a"/><rect x="880" y="248" width="160" height="130" rx="8" fill="#07110c"/><path d="M905 275h110M905 307h110M905 339h110" stroke="#16c65b" stroke-width="8"/><text x="960" y="445" text-anchor="middle" fill="#fff" font-size="17">guarda e entrega dados</text>
+    <path d="M420 250h360m-30-25 30 25-30 25" fill="none" stroke="#16c65b" stroke-width="8"/><text x="600" y="222" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">1. SOLICITAÇÃO: “ENVIE A PÁGINA”</text>
+    <path d="M780 390H420m30-25-30 25 30 25" fill="none" stroke="#ffd21a" stroke-width="8"/><text x="600" y="438" text-anchor="middle" fill="#fff" font-size="17" font-weight="800">2. RESPOSTA: ARQUIVOS DA PÁGINA</text>
+    <rect x="240" y="560" width="720" height="72" rx="20" fill="#16c65b"/><text x="600" y="590" text-anchor="middle" fill="#07110c" font-size="21" font-weight="800">A INTERNET TRANSPORTA A SOLICITAÇÃO E A RESPOSTA</text><text x="600" y="616" text-anchor="middle" fill="#07110c" font-size="15">Navegador e servidor possuem funções diferentes.</text>
+  </g>
+</svg>

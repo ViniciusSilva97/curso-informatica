@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1390" role="img">
+  <title>A internet conecta várias redes diferentes</title>
+  <desc>Uma rede doméstica se conecta à rede de acesso do provedor, que alcança outras redes e roteadores da internet até chegar à rede de um serviço ou de outra pessoa.</desc>
+  <rect width="600" height="1390" rx="24" fill="#07110c"/>
+  <g font-family="Arial,sans-serif">
+    <text x="300" y="44" text-anchor="middle" fill="#ffd21a" font-size="22" font-weight="800">INTERNET = REDE DE REDES</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><rect x="50" y="80" width="500" height="330" rx="20"/><rect x="50" y="905" width="500" height="300" rx="20"/></g>
+    <text x="300" y="130" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">REDE DA SUA CASA</text>
+    <g fill="#fff"><rect x="90" y="180" width="120" height="70" rx="8"/><rect x="240" y="180" width="120" height="70" rx="8"/><rect x="390" y="180" width="120" height="70" rx="8"/></g><g fill="#07110c" font-size="14" font-weight="800" text-anchor="middle"><text x="150" y="221">CELULAR</text><text x="300" y="221">NOTEBOOK</text><text x="450" y="221">TV</text></g>
+    <circle cx="300" cy="335" r="48" fill="#ffd21a"/><text x="300" y="342" text-anchor="middle" fill="#07110c" font-size="16" font-weight="800">ROTEADOR</text>
+    <path d="M300 410v60" stroke="#16c65b" stroke-width="7"/>
+    <rect x="50" y="470" width="500" height="375" rx="20" fill="#07110c" stroke="#ffd21a" stroke-width="4"/>
+    <text x="300" y="520" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">VÁRIAS REDES INTERLIGADAS</text>
+    <g fill="#101b14" stroke="#16c65b" stroke-width="4"><circle cx="170" cy="625" r="62"/><circle cx="300" cy="575" r="62"/><circle cx="430" cy="625" r="62"/><circle cx="235" cy="750" r="62"/><circle cx="365" cy="750" r="62"/></g>
+    <g text-anchor="middle" fill="#fff" font-size="15" font-weight="800"><text x="170" y="631">REDE A</text><text x="300" y="581">ROTEADOR</text><text x="430" y="631">REDE B</text><text x="235" y="756">REDE C</text><text x="365" y="756">REDE D</text></g>
+    <g fill="none" stroke="#ffd21a" stroke-width="6"><path d="M228 604 246 594"/><path d="M354 594 372 604"/><path d="M195 680 214 696"/><path d="M297 750h6"/><path d="M386 696 405 680"/></g>
+    <path d="M300 845v60" stroke="#16c65b" stroke-width="7"/>
+    <text x="300" y="955" text-anchor="middle" fill="#ffd21a" font-size="23" font-weight="800">REDE DE DESTINO</text><rect x="130" y="995" width="340" height="115" rx="14" fill="#ffd21a"/><path d="M165 1025h270v55H165z" fill="#07110c"/><text x="300" y="1062" text-anchor="middle" fill="#16c65b" font-size="20" font-weight="800">SERVIDOR OU DISPOSITIVO</text>
+    <rect x="50" y="1250" width="500" height="95" rx="20" fill="#ffd21a"/><text x="300" y="1287" text-anchor="middle" fill="#07110c" font-size="18" font-weight="800">NÃO HÁ UMA ÚNICA MÁQUINA</text><text x="300" y="1317" text-anchor="middle" fill="#07110c" font-size="17">redes trocam dados entre si</text>
+  </g>
+</svg>

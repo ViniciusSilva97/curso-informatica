@@ -1,0 +1,2315 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-09-monitores-e-cabos/">
+      
+      
+        <link rel="prev" href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador? - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-investigacao-computacional-i" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-2-investigacao-computacional-i">Módulo 2 — Investigação Computacional I<a class="headerlink" href="#modulo-2-investigacao-computacional-i" title="Permanent link">&para;</a></h1>
+<h2 id="anatomia-do-hardware">Anatomia do Hardware<a class="headerlink" href="#anatomia-do-hardware" title="Permanent link">&para;</a></h2>
+<h1 id="aula-9-monitores-e-cabos-quando-o-defeito-da-imagem-esta-fora-do-computador">Aula 9 — Monitores e Cabos: Quando o Defeito da Imagem Está Fora do Computador?<a class="headerlink" href="#aula-9-monitores-e-cabos-quando-o-defeito-da-imagem-esta-fora-do-computador" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Se a GPU está produzindo a imagem corretamente, por que ainda podem surgir piscadas, perda de sinal, cores estranhas, resolução incorreta ou falhas apenas em altas taxas de atualização?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-008-funciona-em-60-hz-mas-falha-em-165-hz">Caso nº 008 — Funciona em 60 Hz, mas falha em 165 Hz<a class="headerlink" href="#caso-no-008-funciona-em-60-hz-mas-falha-em-165-hz" title="Permanent link">&para;</a></h2>
+<p>Um usuário possui:</p>
+<ul>
+<li>GPU moderna;</li>
+<li>monitor de 2560 × 1440;</li>
+<li>suporte anunciado para 165 Hz;</li>
+<li>conexão DisplayPort.</li>
+</ul>
+<p>Em 60 Hz, tudo funciona normalmente.</p>
+<p>Ao selecionar 165 Hz:</p>
+<ul>
+<li>surgem pontos brilhantes;</li>
+<li>a tela pisca;</li>
+<li>ocasionalmente aparece “Sem sinal”;</li>
+<li>alguns jogos fazem o monitor apagar por alguns segundos.</li>
+</ul>
+<p>O usuário reduz para 144 Hz.</p>
+<p>Os sintomas diminuem.</p>
+<p>Em 120 Hz, desaparecem completamente.</p>
+<p>A primeira conclusão foi:</p>
+<blockquote>
+<p>“A placa de vídeo não está aguentando 165 Hz.”</p>
+</blockquote>
+<p>Mas será?</p>
+<p>A GPU continua renderizando normalmente.</p>
+<p>Uma captura de tela realizada durante as piscadas não contém os defeitos visíveis no monitor.</p>
+<p>Depois de substituir o cabo DisplayPort, 165 Hz passa a funcionar perfeitamente.</p>
+<p>O que aconteceu?</p>
+<p>Nesta aula investigaremos a parte do computador que normalmente recebe pouca atenção:</p>
+<blockquote>
+<p><strong>o caminho existente entre a imagem pronta e nossos olhos.</strong></p>
+</blockquote>
+<hr />
+<h1 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>compreender como a imagem sai da GPU e chega ao painel;</li>
+<li>diferenciar resolução, taxa de atualização e FPS;</li>
+<li>compreender largura de banda de vídeo;</li>
+<li>entender o papel de HDMI e DisplayPort;</li>
+<li>reconhecer limitações de cabos, portas e adaptadores;</li>
+<li>compreender EDID e negociação de capacidades;</li>
+<li>diferenciar RGB de YCbCr e compreender <em>chroma subsampling</em>;</li>
+<li>interpretar profundidade de cor e HDR;</li>
+<li>compreender sincronização adaptativa;</li>
+<li>diferenciar taxa de atualização de tempo de resposta;</li>
+<li>investigar piscadas, perda de sinal e pontos brilhantes;</li>
+<li>distinguir defeitos da GPU, cabo e monitor;</li>
+<li>compreender pixels mortos, vazamento de luz, retenção e burn-in;</li>
+<li>construir uma investigação não invasiva do sistema de vídeo.</li>
+</ul>
+<hr />
+<h1 id="a-imagem-nao-termina-na-gpu">A imagem não termina na GPU<a class="headerlink" href="#a-imagem-nao-termina-na-gpu" title="Permanent link">&para;</a></h1>
+<p>Na aula anterior, vimos o processamento gráfico.</p>
+<p>Mas a renderização é apenas parte da história.</p>
+<p>Depois que o quadro está pronto, ainda existe uma cadeia de transmissão:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Aplicação
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Driver
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>GPU
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Framebuffer
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   ↓
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Controlador de exibição
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   ↓
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>HDMI / DisplayPort
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>   ↓
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Cabo
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   ↓
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Entrada do monitor
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   ↓
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Controlador interno
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   ↓
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Painel
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   ↓
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Imagem percebida pelo usuário
+</code></pre></div>
+<p>Portanto, quando alguma coisa aparece errada na tela, não podemos começar dizendo:</p>
+<blockquote>
+<p>“É a placa de vídeo.”</p>
+</blockquote>
+<p>Primeiro precisamos determinar:</p>
+<blockquote>
+<p><strong>Em qual ponto dessa cadeia a informação foi alterada ou interrompida?</strong></p>
+</blockquote>
+<hr />
+<h1 id="a-diferenca-entre-renderizar-e-exibir">A diferença entre renderizar e exibir<a class="headerlink" href="#a-diferenca-entre-renderizar-e-exibir" title="Permanent link">&para;</a></h1>
+<p>Imagine um jogo rodando a 120 FPS.</p>
+<p>A GPU está produzindo aproximadamente 120 quadros por segundo.</p>
+<p>Mas isso não significa necessariamente que o monitor esteja exibindo 120 atualizações por segundo.</p>
+<p>Esses são conceitos diferentes.</p>
+<h2 id="fps">FPS<a class="headerlink" href="#fps" title="Permanent link">&para;</a></h2>
+<p><strong>Frames Per Second</strong></p>
+<p>Representa quantos quadros a aplicação e o computador estão produzindo por segundo.</p>
+<h2 id="hz">Hz<a class="headerlink" href="#hz" title="Permanent link">&para;</a></h2>
+<p><strong>Hertz</strong></p>
+<p>Representa quantas vezes por segundo o monitor pode atualizar sua imagem.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GPU renderizando: 200 FPS
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Monitor:           60 Hz
+</code></pre></div>
+<p>Outro cenário:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GPU renderizando: 45 FPS
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Monitor:          144 Hz
+</code></pre></div>
+<p>Portanto:</p>
+<blockquote>
+<p><strong>FPS e Hz estão relacionados, mas não são a mesma coisa.</strong></p>
+</blockquote>
+<hr />
+<h1 id="o-que-significa-60-hz">O que significa 60 Hz?<a class="headerlink" href="#o-que-significa-60-hz" title="Permanent link">&para;</a></h1>
+<p>Um monitor de 60 Hz realiza aproximadamente 60 ciclos de atualização por segundo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1 segundo ÷ 60 ≈ 16,67 ms
+</code></pre></div>
+<p>Em 120 Hz:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1 segundo ÷ 120 ≈ 8,33 ms
+</code></pre></div>
+<p>Em 144 Hz:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>≈ 6,94 ms
+</code></pre></div>
+<p>Em 240 Hz:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>≈ 4,17 ms
+</code></pre></div>
+<p>Quanto maior a taxa de atualização, menor o intervalo entre atualizações do painel.</p>
+<p>Isso pode produzir percepção de:</p>
+<ul>
+<li>maior fluidez;</li>
+<li>movimentos mais suaves;</li>
+<li>menor atraso visual;</li>
+<li>melhor rastreamento de objetos em movimento.</li>
+</ul>
+<p>Mas taxa de atualização não determina sozinha toda a resposta do monitor.</p>
+<hr />
+<h1 id="taxa-de-atualizacao-nao-e-tempo-de-resposta">Taxa de atualização não é tempo de resposta<a class="headerlink" href="#taxa-de-atualizacao-nao-e-tempo-de-resposta" title="Permanent link">&para;</a></h1>
+<p>Um monitor pode ser anunciado como:</p>
+<blockquote>
+<p>165 Hz e 1 ms.</p>
+</blockquote>
+<p>São especificações diferentes.</p>
+<h2 id="taxa-de-atualizacao">Taxa de atualização<a class="headerlink" href="#taxa-de-atualizacao" title="Permanent link">&para;</a></h2>
+<p>Indica quantas vezes o painel pode atualizar a imagem.</p>
+<h2 id="tempo-de-resposta">Tempo de resposta<a class="headerlink" href="#tempo-de-resposta" title="Permanent link">&para;</a></h2>
+<p>Refere-se ao tempo necessário para os pixels mudarem de um estado para outro.</p>
+<p>Fabricantes podem apresentar números baseados em:</p>
+<ul>
+<li>GtG — Gray to Gray;</li>
+<li>MPRT — Moving Picture Response Time;</li>
+<li>cenários específicos de overdrive.</li>
+</ul>
+<p>Assim:</p>
+<blockquote>
+<p><strong>“1 ms” não significa obrigatoriamente que todas as transições do painel ocorrem em exatamente 1 milissegundo.</strong></p>
+</blockquote>
+<hr />
+<h1 id="ghosting">Ghosting<a class="headerlink" href="#ghosting" title="Permanent link">&para;</a></h1>
+<p>Quando os pixels não conseguem realizar determinadas transições suficientemente rápido, objetos em movimento podem deixar uma espécie de rastro.</p>
+<p>Esse fenômeno é conhecido como <strong>ghosting</strong>.</p>
+<p>Possíveis influências:</p>
+<ul>
+<li>tecnologia do painel;</li>
+<li>tempo de resposta;</li>
+<li>configuração de overdrive;</li>
+<li>taxa de atualização;</li>
+<li>temperatura;</li>
+<li>transição específica de cor.</li>
+</ul>
+<p>Ghosting não significa que a GPU esteja defeituosa.</p>
+<hr />
+<h1 id="overdrive">Overdrive<a class="headerlink" href="#overdrive" title="Permanent link">&para;</a></h1>
+<p>Muitos monitores possuem opções como:</p>
+<ul>
+<li>Normal;</li>
+<li>Fast;</li>
+<li>Faster;</li>
+<li>Extreme;</li>
+<li>Response Time;</li>
+<li>Overdrive.</li>
+</ul>
+<p>Overdrive excessivo pode gerar <strong>overshoot</strong>, resultando em <em>inverse ghosting</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Overdrive baixo
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>→ transições lentas
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>→ mais ghosting
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Overdrive adequado
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>→ melhor equilíbrio
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Overdrive excessivo
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>→ overshoot
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>→ inverse ghosting
+</code></pre></div>
+<p>A opção “mais rápida” nem sempre produz a melhor imagem.</p>
+<hr />
+<h1 id="resolucao">Resolução<a class="headerlink" href="#resolucao" title="Permanent link">&para;</a></h1>
+<p>A resolução indica a quantidade de pixels utilizados na imagem.</p>
+<p>Exemplos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>1920 × 1080
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2560 × 1440
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>3840 × 2160
+</code></pre></div>
+<p>Em 1920 × 1080:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>1920 × 1080 = 2.073.600 pixels
+</code></pre></div>
+<p>Em 3840 × 2160:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>3840 × 2160 = 8.294.400 pixels
+</code></pre></div>
+<p>Uma imagem 4K possui aproximadamente quatro vezes a quantidade de pixels de 1080p.</p>
+<hr />
+<h1 id="aqui-nasce-um-conceito-fundamental-largura-de-banda">Aqui nasce um conceito fundamental: largura de banda<a class="headerlink" href="#aqui-nasce-um-conceito-fundamental-largura-de-banda" title="Permanent link">&para;</a></h1>
+<p>Considere:</p>
+<h3 id="configuracao-a">Configuração A<a class="headerlink" href="#configuracao-a" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>1920 × 1080
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>60 Hz
+</code></pre></div>
+<h3 id="configuracao-b">Configuração B<a class="headerlink" href="#configuracao-b" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>3840 × 2160
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>144 Hz
+</code></pre></div>
+<p>A segunda precisa transportar muito mais informação.</p>
+<p>Também precisamos considerar:</p>
+<ul>
+<li>profundidade de cor;</li>
+<li>formato de cor;</li>
+<li>HDR;</li>
+<li>sincronização;</li>
+<li>informações auxiliares;</li>
+<li>overhead do protocolo.</li>
+</ul>
+<blockquote>
+<p><strong>Não basta o cabo conseguir transmitir imagem. Ele precisa suportar a quantidade de dados exigida pelo modo escolhido.</strong></p>
+</blockquote>
+<hr />
+<h1 id="por-que-um-cabo-funciona-em-60-hz-e-falha-em-144-hz">Por que um cabo funciona em 60 Hz e falha em 144 Hz?<a class="headerlink" href="#por-que-um-cabo-funciona-em-60-hz-e-falha-em-144-hz" title="Permanent link">&para;</a></h1>
+<p>Porque o sinal pode estar operando próximo ou acima da capacidade confiável daquele conjunto.</p>
+<p>Isso envolve:</p>
+<ul>
+<li>padrão da porta;</li>
+<li>implementação da GPU;</li>
+<li>monitor;</li>
+<li>cabo;</li>
+<li>comprimento;</li>
+<li>qualidade do cabo;</li>
+<li>conectores;</li>
+<li>adaptadores;</li>
+<li>interferência;</li>
+<li>resolução;</li>
+<li>taxa de atualização;</li>
+<li>profundidade de cor.</li>
+</ul>
+<p>Um cabo marginal pode funcionar perfeitamente em 1440p 60 Hz e apresentar erros em 1440p 165 Hz.</p>
+<hr />
+<h1 id="o-comportamento-de-um-sinal-digital">O comportamento de um sinal digital<a class="headerlink" href="#o-comportamento-de-um-sinal-digital" title="Permanent link">&para;</a></h1>
+<p>Existe um mito importante:</p>
+<blockquote>
+<p>“Digital funciona ou não funciona. Não existe perda de qualidade.”</p>
+</blockquote>
+<p>Quando a integridade do sinal começa a ficar marginal, podem ocorrer:</p>
+<ul>
+<li>pontos brilhantes;</li>
+<li>piscadas;</li>
+<li>perda temporária de sinal;</li>
+<li>tela preta;</li>
+<li>renegociação da conexão;</li>
+<li>redução de recursos;</li>
+<li>instabilidade.</li>
+</ul>
+<p>Não costuma ocorrer uma degradação progressiva semelhante ao ruído típico de sinais analógicos antigos. Em vez disso, aparecem erros digitais.</p>
+<hr />
+<h1 id="o-famoso-cabo-hdmi-que-melhora-a-imagem">O famoso “cabo HDMI que melhora a imagem”<a class="headerlink" href="#o-famoso-cabo-hdmi-que-melhora-a-imagem" title="Permanent link">&para;</a></h1>
+<p>Se dois cabos compatíveis transmitem corretamente o mesmo sinal digital nas mesmas condições, o cabo mais caro não cria:</p>
+<ul>
+<li>cores melhores;</li>
+<li>mais nitidez;</li>
+<li>pixels mais bonitos;</li>
+<li>detalhes inexistentes.</li>
+</ul>
+<p>A diferença pode estar em:</p>
+<ul>
+<li>qualidade física;</li>
+<li>durabilidade;</li>
+<li>certificação;</li>
+<li>blindagem;</li>
+<li>capacidade de transmissão;</li>
+<li>comprimento;</li>
+<li>construção;</li>
+<li>tolerância em frequências maiores.</li>
+</ul>
+<blockquote>
+<p>O cabo pode determinar <strong>se determinado modo funciona de maneira confiável</strong>, mas não deveria modificar artisticamente os pixels de uma transmissão digital correta.</p>
+</blockquote>
+<hr />
+<h1 id="hdmi">HDMI<a class="headerlink" href="#hdmi" title="Permanent link">&para;</a></h1>
+<p>HDMI significa <strong>High-Definition Multimedia Interface</strong>.</p>
+<p>Ele pode transportar:</p>
+<ul>
+<li>vídeo;</li>
+<li>áudio;</li>
+<li>dados auxiliares;</li>
+<li>informações de controle.</li>
+</ul>
+<p>Duas portas HDMI visualmente iguais podem possuir capacidades diferentes.</p>
+<hr />
+<h1 id="displayport">DisplayPort<a class="headerlink" href="#displayport" title="Permanent link">&para;</a></h1>
+<p>DisplayPort é bastante utilizado para:</p>
+<ul>
+<li>altas taxas de atualização;</li>
+<li>monitores de alta resolução;</li>
+<li>sincronização adaptativa;</li>
+<li>configurações com múltiplos monitores.</li>
+</ul>
+<p>Uma porta DisplayPort não garante automaticamente suporte a todas as combinações possíveis de resolução, Hz, HDR e profundidade de cor.</p>
+<hr />
+<h1 id="hdmi-versus-displayport-qual-tem-melhor-imagem">HDMI versus DisplayPort: qual tem melhor imagem?<a class="headerlink" href="#hdmi-versus-displayport-qual-tem-melhor-imagem" title="Permanent link">&para;</a></h1>
+<p>Se ambos transmitem:</p>
+<ul>
+<li>mesma resolução;</li>
+<li>mesma taxa de atualização;</li>
+<li>mesma profundidade de cor;</li>
+<li>mesmo formato de cor;</li>
+<li>mesmo intervalo dinâmico;</li>
+</ul>
+<p>e a transmissão está correta, a qualidade essencial dos pixels não melhora simplesmente porque o protocolo mudou.</p>
+<p>A pergunta mais útil é:</p>
+<blockquote>
+<p><strong>Qual interface suporta corretamente os recursos de que preciso?</strong></p>
+</blockquote>
+<hr />
+<h1 id="o-problema-dos-adaptadores">O problema dos adaptadores<a class="headerlink" href="#o-problema-dos-adaptadores" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>GPU
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>DisplayPort
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>   ↓
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Adaptador
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>   ↓
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>HDMI
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>   ↓
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>Monitor
+</code></pre></div>
+<p>Adaptadores podem ser:</p>
+<ul>
+<li>passivos;</li>
+<li>ativos;</li>
+<li>unidirecionais;</li>
+<li>limitados em resolução;</li>
+<li>limitados em frequência;</li>
+<li>incompatíveis com HDR;</li>
+<li>incompatíveis com determinados recursos.</li>
+</ul>
+<p>Um adaptador que funciona em 1080p 60 Hz pode falhar em 4K 120 Hz.</p>
+<p>O encaixe físico não prova capacidade de transmissão.</p>
+<hr />
+<h1 id="edid-quando-o-monitor-diz-ao-computador-quem-ele-e">EDID — quando o monitor diz ao computador quem ele é<a class="headerlink" href="#edid-quando-o-monitor-diz-ao-computador-quem-ele-e" title="Permanent link">&para;</a></h1>
+<p>O monitor disponibiliza informações conhecidas como <strong>EDID — Extended Display Identification Data</strong>.</p>
+<p>Esses dados podem incluir:</p>
+<ul>
+<li>fabricante;</li>
+<li>modelo;</li>
+<li>resolução nativa;</li>
+<li>modos suportados;</li>
+<li>frequências;</li>
+<li>características de cor;</li>
+<li>recursos do equipamento.</li>
+</ul>
+<p>Problemas nessa negociação podem produzir:</p>
+<ul>
+<li>resolução incorreta;</li>
+<li>monitor identificado genericamente;</li>
+<li>frequência ausente;</li>
+<li>HDR indisponível;</li>
+<li>modo esperado não listado.</li>
+</ul>
+<hr />
+<h1 id="hot-plug-detection">Hot Plug Detection<a class="headerlink" href="#hot-plug-detection" title="Permanent link">&para;</a></h1>
+<p>HDMI e DisplayPort possuem mecanismos para identificar conexão e desconexão.</p>
+<p>Problemas nessa comunicação podem causar:</p>
+<ul>
+<li>monitor desaparecendo;</li>
+<li>janelas sendo reposicionadas;</li>
+<li>tela piscando;</li>
+<li>renegociação da conexão.</li>
+</ul>
+<p>Novamente, nem toda tela preta é defeito na GPU.</p>
+<hr />
+<h1 id="rgb-e-ycbcr">RGB e YCbCr<a class="headerlink" href="#rgb-e-ycbcr" title="Permanent link">&para;</a></h1>
+<p>Computadores geralmente representam cores utilizando vermelho, verde e azul.</p>
+<p>Vídeo também pode utilizar representações baseadas em luminância e crominância, como:</p>
+<ul>
+<li>YCbCr 4:4:4;</li>
+<li>YCbCr 4:2:2;</li>
+<li>YCbCr 4:2:0.</li>
+</ul>
+<h2 id="444">4:4:4<a class="headerlink" href="#444" title="Permanent link">&para;</a></h2>
+<p>Preserva resolução completa de crominância.</p>
+<p>É especialmente desejável para:</p>
+<ul>
+<li>textos;</li>
+<li>área de trabalho;</li>
+<li>interfaces;</li>
+<li>produtividade.</li>
+</ul>
+<h2 id="422-e-420">4:2:2 e 4:2:0<a class="headerlink" href="#422-e-420" title="Permanent link">&para;</a></h2>
+<p>Reduzem parte da informação cromática.</p>
+<p>Em filmes, isso pode ser pouco perceptível. Em texto pequeno de computador, diferenças podem ficar visíveis.</p>
+<hr />
+<h1 id="por-que-um-computador-pode-alterar-para-422">Por que um computador pode alterar para 4:2:2?<a class="headerlink" href="#por-que-um-computador-pode-alterar-para-422" title="Permanent link">&para;</a></h1>
+<p>Uma configuração como:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>4K
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>120 Hz
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>HDR
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>10 bits
+</code></pre></div>
+<p>exige bastante largura de banda.</p>
+<p>Em determinadas configurações, reduzir a informação cromática pode diminuir a quantidade de dados transmitidos.</p>
+<p>Por isso, avaliar apenas “4K” é insuficiente.</p>
+<p>Precisamos perguntar:</p>
+<blockquote>
+<p>4K em qual taxa de atualização, profundidade de cor e formato?</p>
+</blockquote>
+<hr />
+<h1 id="profundidade-de-cor">Profundidade de cor<a class="headerlink" href="#profundidade-de-cor" title="Permanent link">&para;</a></h1>
+<p>Em 8 bits por canal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2⁸ = 256 níveis
+</code></pre></div>
+<p>Com três canais RGB:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>256 × 256 × 256
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>≈ 16,7 milhões de combinações
+</code></pre></div>
+<p>Em 10 bits:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2¹⁰ = 1024 níveis por canal
+</code></pre></div>
+<p>Isso permite gradientes mais finos e pode ajudar a reduzir <strong>banding</strong>, dependendo de toda a cadeia.</p>
+<hr />
+<h1 id="banding">Banding<a class="headerlink" href="#banding" title="Permanent link">&para;</a></h1>
+<p>Banding acontece quando um gradiente apresenta faixas perceptíveis em vez de uma transição suave.</p>
+<p>Pode estar relacionado a:</p>
+<ul>
+<li>profundidade de cor;</li>
+<li>conteúdo;</li>
+<li>compressão;</li>
+<li>processamento;</li>
+<li>configuração do monitor;</li>
+<li>pipeline gráfico.</li>
+</ul>
+<p>Não devemos concluir imediatamente que o painel está danificado.</p>
+<hr />
+<h1 id="hdr">HDR<a class="headerlink" href="#hdr" title="Permanent link">&para;</a></h1>
+<p>HDR significa <strong>High Dynamic Range</strong>.</p>
+<p>O resultado depende de:</p>
+<ul>
+<li>brilho;</li>
+<li>contraste;</li>
+<li>capacidade do painel;</li>
+<li>controle da iluminação;</li>
+<li>profundidade de cor;</li>
+<li>gamut;</li>
+<li>processamento;</li>
+<li>conteúdo;</li>
+<li>sistema operacional;</li>
+<li>aplicativo.</li>
+</ul>
+<p>HDR não é apenas “aumentar o brilho”.</p>
+<hr />
+<h1 id="lcd-nao-produz-luz-sozinho">LCD não produz luz sozinho<a class="headerlink" href="#lcd-nao-produz-luz-sozinho" title="Permanent link">&para;</a></h1>
+<p>Em monitores LCD, os pixels modulam luz fornecida por um sistema de iluminação traseira.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Backlight
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>   ↓
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Camadas ópticas
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>   ↓
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>LCD
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>   ↓
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>Filtros de cor
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>   ↓
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>Imagem
+</code></pre></div>
+<p>Isso ajuda a explicar:</p>
+<ul>
+<li>vazamento de luz;</li>
+<li>brilho desigual;</li>
+<li>contraste limitado;</li>
+<li>blooming em determinados sistemas.</li>
+</ul>
+<hr />
+<h1 id="ips-va-e-tn">IPS, VA e TN<a class="headerlink" href="#ips-va-e-tn" title="Permanent link">&para;</a></h1>
+<h2 id="ips">IPS<a class="headerlink" href="#ips" title="Permanent link">&para;</a></h2>
+<p>Pode oferecer:</p>
+<ul>
+<li>bons ângulos de visão;</li>
+<li>boa reprodução de cores;</li>
+<li>boa consistência.</li>
+</ul>
+<h2 id="va">VA<a class="headerlink" href="#va" title="Permanent link">&para;</a></h2>
+<p>Frequentemente oferece:</p>
+<ul>
+<li>contraste estático elevado;</li>
+<li>pretos mais profundos que muitos IPS.</li>
+</ul>
+<p>Alguns modelos podem apresentar transições escuras mais lentas.</p>
+<h2 id="tn">TN<a class="headerlink" href="#tn" title="Permanent link">&para;</a></h2>
+<p>Historicamente conhecido por:</p>
+<ul>
+<li>respostas rápidas;</li>
+<li>baixo custo.</li>
+</ul>
+<p>Pode apresentar limitações em ângulos de visão e reprodução de cores.</p>
+<p>Não existe uma tecnologia universalmente superior para todos os usos.</p>
+<hr />
+<h1 id="oled">OLED<a class="headerlink" href="#oled" title="Permanent link">&para;</a></h1>
+<p>Em OLED, os pixels produzem sua própria luz.</p>
+<p>Vantagens potenciais:</p>
+<ul>
+<li>excelente contraste;</li>
+<li>resposta muito rápida;</li>
+<li>preto profundo;</li>
+<li>ausência de backlight convencional.</li>
+</ul>
+<p>Particularidades:</p>
+<ul>
+<li>retenção temporária;</li>
+<li>risco de desgaste diferencial;</li>
+<li>burn-in;</li>
+<li>mecanismos de proteção;</li>
+<li>comportamento de brilho.</li>
+</ul>
+<hr />
+<h1 id="retencao-de-imagem-e-burn-in">Retenção de imagem e burn-in<a class="headerlink" href="#retencao-de-imagem-e-burn-in" title="Permanent link">&para;</a></h1>
+<h2 id="retencao-temporaria">Retenção temporária<a class="headerlink" href="#retencao-temporaria" title="Permanent link">&para;</a></h2>
+<p>Uma imagem pode permanecer perceptível por algum tempo e depois desaparecer.</p>
+<h2 id="burn-in">Burn-in<a class="headerlink" href="#burn-in" title="Permanent link">&para;</a></h2>
+<p>Representa desgaste diferencial persistente.</p>
+<p>Monitores OLED modernos podem empregar mecanismos como:</p>
+<ul>
+<li>deslocamento de pixels;</li>
+<li>redução de brilho em elementos;</li>
+<li>ciclos de compensação;</li>
+<li>proteção de logotipos;</li>
+<li>atualização do painel.</li>
+</ul>
+<hr />
+<h1 id="pixel-morto">Pixel morto<a class="headerlink" href="#pixel-morto" title="Permanent link">&para;</a></h1>
+<p>Um pixel ou subpixel pode:</p>
+<ul>
+<li>permanecer apagado;</li>
+<li>permanecer aceso;</li>
+<li>ficar preso em determinada cor.</li>
+</ul>
+<p>Um teste com fundos sólidos em vermelho, verde, azul, branco e preto pode ajudar.</p>
+<p>Se o ponto permanece na mesma posição física e não aparece em capturas de tela, a suspeita sobre o painel aumenta.</p>
+<p>Não pressione a região defeituosa.</p>
+<hr />
+<h1 id="vazamento-de-luz-e-ips-glow">Vazamento de luz e IPS Glow<a class="headerlink" href="#vazamento-de-luz-e-ips-glow" title="Permanent link">&para;</a></h1>
+<p><em>Backlight bleed</em> pode aparecer principalmente nas bordas de painéis com iluminação traseira.</p>
+<p>O chamado <strong>IPS glow</strong> pode produzir aparência luminosa em determinadas regiões e varia bastante com:</p>
+<ul>
+<li>posição do observador;</li>
+<li>distância;</li>
+<li>ângulo.</li>
+</ul>
+<p>Eles não são exatamente o mesmo fenômeno.</p>
+<p>Fotografias em ambiente escuro podem exagerar bastante ambos.</p>
+<hr />
+<h1 id="uniformidade-calibracao-e-perfil">Uniformidade, calibração e perfil<a class="headerlink" href="#uniformidade-calibracao-e-perfil" title="Permanent link">&para;</a></h1>
+<p>Mesmo um monitor funcional pode não ter brilho e cor perfeitamente uniformes.</p>
+<p>Em fluxos profissionais podem ser utilizados:</p>
+<ul>
+<li>colorímetros;</li>
+<li>espectrofotômetros;</li>
+<li>perfis ICC;</li>
+<li>softwares especializados.</li>
+</ul>
+<h2 id="calibracao">Calibração<a class="headerlink" href="#calibracao" title="Permanent link">&para;</a></h2>
+<p>Ajusta o comportamento do dispositivo em direção a determinado objetivo.</p>
+<h2 id="perfil">Perfil<a class="headerlink" href="#perfil" title="Permanent link">&para;</a></h2>
+<p>Descreve características do dispositivo para sistemas com gerenciamento de cor.</p>
+<p>Ajustar “no olho” não equivale a uma calibração instrumental.</p>
+<hr />
+<h1 id="monitor-amarelado-nao-significa-defeito-automaticamente">Monitor “amarelado” não significa defeito automaticamente<a class="headerlink" href="#monitor-amarelado-nao-significa-defeito-automaticamente" title="Permanent link">&para;</a></h1>
+<p>Podem estar ativados:</p>
+<ul>
+<li>modo de leitura;</li>
+<li>filtro de luz azul;</li>
+<li>luz noturna;</li>
+<li>temperatura quente;</li>
+<li>perfil ICC;</li>
+<li>HDR;</li>
+<li>configuração personalizada.</li>
+</ul>
+<hr />
+<h1 id="vrr-taxa-de-atualizacao-variavel">VRR — taxa de atualização variável<a class="headerlink" href="#vrr-taxa-de-atualizacao-variavel" title="Permanent link">&para;</a></h1>
+<p>Tecnologias de taxa de atualização variável permitem que o monitor ajuste dinamicamente seu ritmo dentro de determinada faixa.</p>
+<p>Exemplos incluem:</p>
+<ul>
+<li>Adaptive-Sync;</li>
+<li>FreeSync;</li>
+<li>G-SYNC.</li>
+</ul>
+<p>O objetivo é melhorar a apresentação quando a taxa de quadros varia.</p>
+<hr />
+<h1 id="tearing">Tearing<a class="headerlink" href="#tearing" title="Permanent link">&para;</a></h1>
+<p>Sem sincronização adequada, partes de quadros diferentes podem aparecer simultaneamente.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Parte superior → quadro A
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Parte inferior → quadro B
+</code></pre></div>
+<p>Esse fenômeno é chamado de <strong>screen tearing</strong>.</p>
+<p>Ele não é artefato de VRAM.</p>
+<hr />
+<h1 id="v-sync-e-flickering-com-vrr">V-Sync e flickering com VRR<a class="headerlink" href="#v-sync-e-flickering-com-vrr" title="Permanent link">&para;</a></h1>
+<p>V-Sync procura alinhar a apresentação dos quadros ao ciclo do monitor.</p>
+<p>VRR procura ajustar dinamicamente a taxa do monitor.</p>
+<p>Algumas configurações podem apresentar flickering relacionado a:</p>
+<ul>
+<li>variações abruptas de FPS;</li>
+<li>faixa de operação;</li>
+<li>comportamento do painel;</li>
+<li>compensação em baixas taxas;</li>
+<li>driver;</li>
+<li>firmware.</li>
+</ul>
+<p>Um teste controlado é comparar o comportamento com VRR ligado e desligado, alterando apenas essa variável.</p>
+<hr />
+<h1 id="dsc-display-stream-compression">DSC — Display Stream Compression<a class="headerlink" href="#dsc-display-stream-compression" title="Permanent link">&para;</a></h1>
+<p>Em algumas combinações modernas de alta resolução, taxa de atualização e profundidade de cor, pode ser utilizada <strong>DSC</strong>.</p>
+<p>Seu uso depende de:</p>
+<ul>
+<li>GPU;</li>
+<li>monitor;</li>
+<li>protocolo;</li>
+<li>implementação.</li>
+</ul>
+<p>Não devemos assumir suporte apenas pela presença de HDMI ou DisplayPort.</p>
+<hr />
+<h1 id="o-monitor-tambem-possui-firmware">O monitor também possui firmware<a class="headerlink" href="#o-monitor-tambem-possui-firmware" title="Permanent link">&para;</a></h1>
+<p>Monitores modernos podem possuir:</p>
+<ul>
+<li>processador interno;</li>
+<li>firmware;</li>
+<li>scaler;</li>
+<li>controladores;</li>
+<li>USB;</li>
+<li>hubs;</li>
+<li>KVM;</li>
+<li>recursos de rede em alguns modelos.</li>
+</ul>
+<p>Consequentemente, também podem existir:</p>
+<ul>
+<li>bugs;</li>
+<li>atualizações;</li>
+<li>incompatibilidades;</li>
+<li>falhas de suspensão;</li>
+<li>problemas de negociação.</li>
+</ul>
+<hr />
+<h1 id="scaler-e-overscan">Scaler e overscan<a class="headerlink" href="#scaler-e-overscan" title="Permanent link">&para;</a></h1>
+<p>Quando a resolução enviada não corresponde à resolução física do painel, o monitor pode precisar redimensionar a imagem.</p>
+<p>Em televisores, também pode existir <strong>overscan</strong>, cortando ligeiramente as bordas.</p>
+<p>Isso pode produzir:</p>
+<ul>
+<li>barra de tarefas cortada;</li>
+<li>texto fora da tela;</li>
+<li>perda das bordas.</li>
+</ul>
+<p>Não é necessariamente defeito da GPU.</p>
+<hr />
+<h1 id="o-monitor-apaga-por-dois-segundos-e-volta">O monitor apaga por dois segundos e volta<a class="headerlink" href="#o-monitor-apaga-por-dois-segundos-e-volta" title="Permanent link">&para;</a></h1>
+<p>Possíveis hipóteses:</p>
+<ul>
+<li>renegociação do sinal;</li>
+<li>cabo marginal;</li>
+<li>HDR ativando;</li>
+<li>troca de frequência;</li>
+<li>driver reiniciando;</li>
+<li>VRR;</li>
+<li>monitor mudando de modo;</li>
+<li>porta;</li>
+<li>adaptador;</li>
+<li>GPU;</li>
+<li>alimentação do monitor.</li>
+</ul>
+<p>A sequência temporal é uma evidência importante.</p>
+<hr />
+<h1 id="o-teste-da-captura-de-tela">O teste da captura de tela<a class="headerlink" href="#o-teste-da-captura-de-tela" title="Permanent link">&para;</a></h1>
+<p>Faça:</p>
+<ol>
+<li>captura do sistema;</li>
+<li>fotografia externa do monitor.</li>
+</ol>
+<h3 id="captura-contem-o-defeito">Captura contém o defeito<a class="headerlink" href="#captura-contem-o-defeito" title="Permanent link">&para;</a></h3>
+<p>Investigue:</p>
+<ul>
+<li>aplicativo;</li>
+<li>driver;</li>
+<li>GPU;</li>
+<li>VRAM;</li>
+<li>composição.</li>
+</ul>
+<h3 id="captura-normal-fotografia-mostra-o-defeito">Captura normal, fotografia mostra o defeito<a class="headerlink" href="#captura-normal-fotografia-mostra-o-defeito" title="Permanent link">&para;</a></h3>
+<p>A suspeita aumenta sobre:</p>
+<ul>
+<li>saída;</li>
+<li>porta;</li>
+<li>cabo;</li>
+<li>monitor;</li>
+<li>painel.</li>
+</ul>
+<p>Não é prova absoluta, mas é uma técnica investigativa poderosa.</p>
+<hr />
+<h1 id="outro-teste-excelente-menu-interno-do-monitor">Outro teste excelente: menu interno do monitor<a class="headerlink" href="#outro-teste-excelente-menu-interno-do-monitor" title="Permanent link">&para;</a></h1>
+<p>Abra o menu OSD quando o defeito estiver acontecendo.</p>
+<p>Se o OSD permanece perfeito enquanto a imagem recebida apresenta falhas, a falha pode estar no sinal ou em outra etapa anterior.</p>
+<p>Se o defeito também afeta o próprio OSD, a suspeita sobre o monitor aumenta.</p>
+<hr />
+<h1 id="teste-sem-computador">Teste sem computador<a class="headerlink" href="#teste-sem-computador" title="Permanent link">&para;</a></h1>
+<p>Se a falha continua aparecendo no logotipo, OSD ou tela “Sem sinal” do próprio monitor:</p>
+<blockquote>
+<p>A GPU não está sequer participando.</p>
+</blockquote>
+<p>Isso transforma radicalmente a investigação.</p>
+<hr />
+<h1 id="monitor-piscando-teste-de-alimentacao">Monitor piscando: teste de alimentação<a class="headerlink" href="#monitor-piscando-teste-de-alimentacao" title="Permanent link">&para;</a></h1>
+<p>O monitor também possui alimentação própria.</p>
+<p>Falhas podem causar:</p>
+<ul>
+<li>desligamento;</li>
+<li>brilho instável;</li>
+<li>demora para ligar;</li>
+<li>reinicializações;</li>
+<li>piscadas;</li>
+<li>ruídos.</li>
+</ul>
+<p>Verifique:</p>
+<ul>
+<li>tomada;</li>
+<li>cabo de força;</li>
+<li>adaptador;</li>
+<li>conector;</li>
+<li>tensão adequada;</li>
+<li>fonte original.</li>
+</ul>
+<p>Não abra fontes internas sem qualificação.</p>
+<hr />
+<h1 id="cuidado-com-usb-c">Cuidado com USB-C<a class="headerlink" href="#cuidado-com-usb-c" title="Permanent link">&para;</a></h1>
+<p>USB-C descreve o conector físico.</p>
+<p>Ele não garante sozinho:</p>
+<ul>
+<li>vídeo;</li>
+<li>carregamento;</li>
+<li>determinada potência;</li>
+<li>determinada velocidade;</li>
+<li>Thunderbolt;</li>
+<li>DisplayPort Alternate Mode.</li>
+</ul>
+<blockquote>
+<p><strong>USB-C é formato físico, não uma garantia universal de funcionalidades.</strong></p>
+</blockquote>
+<hr />
+<h1 id="dock-stations">Dock stations<a class="headerlink" href="#dock-stations" title="Permanent link">&para;</a></h1>
+<p>Em notebooks, uma cadeia pode ser:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Notebook
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  ↓
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>USB-C / Thunderbolt
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  ↓
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Dock
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>  ↓
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Controlador interno
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>  ↓
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>DisplayPort ou HDMI
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>  ↓
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>Cabo
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>  ↓
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>Monitor
+</code></pre></div>
+<p>Se a tela apresenta problemas, investigue também:</p>
+<ul>
+<li>firmware da dock;</li>
+<li>driver;</li>
+<li>capacidade da porta;</li>
+<li>quantidade de monitores;</li>
+<li>resolução;</li>
+<li>largura de banda compartilhada;</li>
+<li>alimentação.</li>
+</ul>
+<hr />
+<h1 id="laboratorio-investigacao-de-uma-cadeia-de-video">🔬 Laboratório — investigação de uma cadeia de vídeo<a class="headerlink" href="#laboratorio-investigacao-de-uma-cadeia-de-video" title="Permanent link">&para;</a></h1>
+<h2 id="etapa-1-documentar-o-sistema">Etapa 1 — Documentar o sistema<a class="headerlink" href="#etapa-1-documentar-o-sistema" title="Permanent link">&para;</a></h2>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>GPU:
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Monitor:
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Resolução nativa:
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Taxa máxima:
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>Conexão:
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Porta utilizada:
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Cabo:
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>Adaptadores:
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Driver:
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>HDR:
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>VRR:
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>Profundidade de cor:
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>Formato de cor:
+</code></pre></div>
+<h2 id="etapa-2-estabelecer-uma-configuracao-basica">Etapa 2 — Estabelecer uma configuração básica<a class="headerlink" href="#etapa-2-estabelecer-uma-configuracao-basica" title="Permanent link">&para;</a></h2>
+<p>Utilize temporariamente uma configuração conservadora:</p>
+<ul>
+<li>resolução nativa;</li>
+<li>60 Hz;</li>
+<li>HDR desligado;</li>
+<li>VRR desligado;</li>
+<li>sem adaptadores desnecessários.</li>
+</ul>
+<p>Observe a estabilidade.</p>
+<h2 id="etapa-3-aumentar-uma-variavel">Etapa 3 — Aumentar uma variável<a class="headerlink" href="#etapa-3-aumentar-uma-variavel" title="Permanent link">&para;</a></h2>
+<p>Por exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>60 Hz → 120 Hz
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>120 Hz → 144 Hz
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>144 Hz → 165 Hz
+</code></pre></div>
+<p>Teste cada etapa.</p>
+<h2 id="etapa-4-testar-o-cabo">Etapa 4 — Testar o cabo<a class="headerlink" href="#etapa-4-testar-o-cabo" title="Permanent link">&para;</a></h2>
+<p>Substitua por outro cabo conhecido e adequado.</p>
+<p>Não altere outras variáveis.</p>
+<h2 id="etapa-5-testar-portas">Etapa 5 — Testar portas<a class="headerlink" href="#etapa-5-testar-portas" title="Permanent link">&para;</a></h2>
+<p>Experimente outra porta compatível, mantendo os demais parâmetros sempre que possível.</p>
+<h2 id="etapa-6-registrar-o-defeito">Etapa 6 — Registrar o defeito<a class="headerlink" href="#etapa-6-registrar-o-defeito" title="Permanent link">&para;</a></h2>
+<p>Faça:</p>
+<ul>
+<li>fotografia;</li>
+<li>vídeo;</li>
+<li>captura de tela;</li>
+<li>anotação do horário.</li>
+</ul>
+<p>Determine se:</p>
+<ul>
+<li>aparece na captura;</li>
+<li>aparece no OSD;</li>
+<li>aparece sem computador;</li>
+<li>acompanha o cabo;</li>
+<li>acompanha a porta;</li>
+<li>acompanha o monitor.</li>
+</ul>
+<h2 id="etapa-7-construir-a-matriz">Etapa 7 — Construir a matriz<a class="headerlink" href="#etapa-7-construir-a-matriz" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Teste</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1440p 60 Hz</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>1440p 120 Hz</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>1440p 144 Hz</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>1440p 165 Hz</td>
+<td>Piscadas</td>
+</tr>
+<tr>
+<td>Outro cabo em 165 Hz</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Captura de tela</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>OSD</td>
+<td>Normal</td>
+</tr>
+</tbody>
+</table>
+<p>Conclusão provisória:</p>
+<blockquote>
+<p>As evidências apontam fortemente para instabilidade na cadeia de transmissão associada ao cabo original quando submetido à maior largura de banda.</p>
+</blockquote>
+<hr />
+<h1 id="estudos-de-caso">Estudos de caso<a class="headerlink" href="#estudos-de-caso" title="Permanent link">&para;</a></h1>
+<h2 id="caso-1-pontos-brancos-em-4k">Caso 1 — Pontos brancos em 4K<a class="headerlink" href="#caso-1-pontos-brancos-em-4k" title="Permanent link">&para;</a></h2>
+<p>Em 4K, alta taxa de atualização, HDR e cabo longo, surgem pequenos pontos brancos.</p>
+<p>Eles desaparecem ao reduzir a taxa de atualização e também após a troca do cabo.</p>
+<p><strong>Conclusão:</strong> fortes evidências de problema de integridade do sinal na transmissão original.</p>
+<h2 id="caso-2-texto-colorido-e-pouco-nitido-na-tv">Caso 2 — Texto colorido e pouco nítido na TV<a class="headerlink" href="#caso-2-texto-colorido-e-pouco-nitido-na-tv" title="Permanent link">&para;</a></h2>
+<p>Vídeos parecem bons, mas letras pequenas apresentam bordas estranhas.</p>
+<p>A configuração mostra crominância reduzida.</p>
+<p><strong>Hipótese:</strong> o sinal pode estar usando 4:2:2 ou 4:2:0.</p>
+<h2 id="caso-3-tela-dividida-horizontalmente-durante-jogos">Caso 3 — Tela dividida horizontalmente durante jogos<a class="headerlink" href="#caso-3-tela-dividida-horizontalmente-durante-jogos" title="Permanent link">&para;</a></h2>
+<p>A imagem parece formada por duas partes de quadros diferentes, não aparece na captura e ocorre com FPS variável e V-Sync desativado.</p>
+<p><strong>Hipótese prioritária:</strong> screen tearing.</p>
+<h2 id="caso-4-monitor-apresenta-defeito-sem-computador-conectado">Caso 4 — Monitor apresenta defeito sem computador conectado<a class="headerlink" href="#caso-4-monitor-apresenta-defeito-sem-computador-conectado" title="Permanent link">&para;</a></h2>
+<p>A tela “Sem sinal” e o próprio OSD apresentam uma faixa vertical permanente.</p>
+<p><strong>Conclusão provisória:</strong> a suspeita sobre painel, controlador interno ou conexão interna aumenta significativamente.</p>
+<h2 id="caso-5-144-hz-desapareceu-apos-trocar-a-dock">Caso 5 — 144 Hz desapareceu após trocar a dock<a class="headerlink" href="#caso-5-144-hz-desapareceu-apos-trocar-a-dock" title="Permanent link">&para;</a></h2>
+<p>O monitor suportava 144 Hz diretamente ou com uma dock anterior, mas uma nova cadeia limita a 60 Hz.</p>
+<p><strong>Investigue:</strong> capacidade da dock, modo alternativo, versão da interface, largura de banda, resolução e outros monitores conectados.</p>
+<h2 id="caso-6-tela-preta-ao-ativar-hdr">Caso 6 — Tela preta ao ativar HDR<a class="headerlink" href="#caso-6-tela-preta-ao-ativar-hdr" title="Permanent link">&para;</a></h2>
+<p>Sem HDR funciona normalmente. Ao ativá-lo, a tela apaga ou perde sinal.</p>
+<p><strong>Possíveis explicações:</strong> aumento da profundidade de cor, mudança de formato, maior largura de banda, cabo marginal, porta limitada, driver, monitor ou negociação.</p>
+<hr />
+<h1 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h1>
+<h3 id="hdmi-sempre-tem-imagem-pior-que-displayport">“HDMI sempre tem imagem pior que DisplayPort.”<a class="headerlink" href="#hdmi-sempre-tem-imagem-pior-que-displayport" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<h3 id="se-o-cabo-digital-funciona-ele-sempre-funcionara-em-qualquer-resolucao">“Se o cabo digital funciona, ele sempre funcionará em qualquer resolução.”<a class="headerlink" href="#se-o-cabo-digital-funciona-ele-sempre-funcionara-em-qualquer-resolucao" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<h3 id="um-cabo-muito-caro-produz-cores-melhores">“Um cabo muito caro produz cores melhores.”<a class="headerlink" href="#um-cabo-muito-caro-produz-cores-melhores" title="Permanent link">&para;</a></h3>
+<p><strong>Mito</strong>, se um cabo mais simples já transmite integralmente o mesmo sinal sem erros.</p>
+<h3 id="um-problema-pode-aparecer-apenas-em-165-hz">“Um problema pode aparecer apenas em 165 Hz.”<a class="headerlink" href="#um-problema-pode-aparecer-apenas-em-165-hz" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<h3 id="60-fps-e-60-hz-significam-exatamente-a-mesma-coisa">“60 FPS e 60 Hz significam exatamente a mesma coisa.”<a class="headerlink" href="#60-fps-e-60-hz-significam-exatamente-a-mesma-coisa" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<h3 id="1-ms-e-uma-medida-completamente-padronizada-entre-todos-os-fabricantes">“1 ms é uma medida completamente padronizada entre todos os fabricantes.”<a class="headerlink" href="#1-ms-e-uma-medida-completamente-padronizada-entre-todos-os-fabricantes" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<h3 id="artefato-que-nao-aparece-em-captura-pode-estar-depois-da-renderizacao">“Artefato que não aparece em captura pode estar depois da renderização.”<a class="headerlink" href="#artefato-que-nao-aparece-em-captura-pode-estar-depois-da-renderizacao" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<h3 id="se-o-menu-do-monitor-apresenta-a-falha-sem-computador-conectado-a-gpu-e-uma-hipotese-muito-fraca">“Se o menu do monitor apresenta a falha sem computador conectado, a GPU é uma hipótese muito fraca.”<a class="headerlink" href="#se-o-menu-do-monitor-apresenta-a-falha-sem-computador-conectado-a-gpu-e-uma-hipotese-muito-fraca" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<h3 id="usb-c-sempre-transmite-video">“USB-C sempre transmite vídeo.”<a class="headerlink" href="#usb-c-sempre-transmite-video" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<h3 id="4k-nao-define-sozinho-a-quantidade-total-de-dados-transmitida">“4K não define sozinho a quantidade total de dados transmitida.”<a class="headerlink" href="#4k-nao-define-sozinho-a-quantidade-total-de-dados-transmitida" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<hr />
+<h1 id="como-um-laboratorio-profissional-investigaria">Como um laboratório profissional investigaria?<a class="headerlink" href="#como-um-laboratorio-profissional-investigaria" title="Permanent link">&para;</a></h1>
+<p>Um diagnóstico de monitor pode envolver:</p>
+<ul>
+<li>padrões de teste;</li>
+<li>colorímetro;</li>
+<li>osciloscópio;</li>
+<li>análise de alimentação;</li>
+<li>gerador de sinais;</li>
+<li>câmera de alta velocidade;</li>
+<li>instrumentos de luminância;</li>
+<li>teste de uniformidade;</li>
+<li>medição de resposta;</li>
+<li>inspeção eletrônica.</li>
+</ul>
+<p>Para cabos e interfaces, laboratórios especializados podem analisar:</p>
+<ul>
+<li>integridade do sinal;</li>
+<li>qualidade do olho digital;</li>
+<li>erros;</li>
+<li>jitter;</li>
+<li>atenuação;</li>
+<li>interferência.</li>
+</ul>
+<blockquote>
+<p>Quanto maior a velocidade de transmissão, mais importante se torna a integridade elétrica do caminho.</p>
+</blockquote>
+<hr />
+<h1 id="o-que-um-perito-observaria">O que um perito observaria?<a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Qual é a resolução?</li>
+<li>Qual taxa de atualização?</li>
+<li>O problema aparece em 60 Hz?</li>
+<li>Aparece somente em HDR?</li>
+<li>Qual profundidade de cor?</li>
+<li>RGB ou YCbCr?</li>
+<li>Existe adaptador?</li>
+<li>Existe dock?</li>
+<li>Qual porta está sendo utilizada?</li>
+<li>Outro cabo foi testado?</li>
+<li>O defeito aparece na captura?</li>
+<li>O defeito aparece no OSD?</li>
+<li>Aparece sem computador conectado?</li>
+<li>Outro monitor apresenta o mesmo comportamento?</li>
+<li>O problema acompanha o monitor?</li>
+<li>A entrada utilizada suporta aquele modo?</li>
+<li>O cabo é adequado ao requisito?</li>
+<li>Existe VRR?</li>
+<li>O defeito desaparece sem VRR?</li>
+<li>O monitor possui firmware atualizado?</li>
+<li>O problema ocorre somente após suspensão?</li>
+<li>O sistema está detectando corretamente o EDID?</li>
+<li>Há alguma alteração recente?</li>
+</ul>
+<blockquote>
+<p><strong>Sintoma → evidência → hipótese → teste → conclusão.</strong></p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
