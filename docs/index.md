@@ -56,10 +56,10 @@ hide:
     <article class="sev-module-card sev-module-card--available">
       <span class="sev-module-card__number">03</span>
       <div class="sev-module-card__icon" aria-hidden="true">⌘</div>
-      <p class="sev-module-card__status">Novo · Módulo aberto</p>
+      <p class="sev-module-card__status">1 aula disponível · Novo módulo</p>
       <h3>Sistemas operacionais</h3>
       <p>Investigue como o sistema operacional gerencia processos, memória, arquivos, permissões, serviços, inicialização e logs.</p>
-      <span class="sev-module-card__disabled">Primeira aula em preparação</span>
+      <a href="modulo-3/aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/">Acessar módulo <span aria-hidden="true">›</span></a>
     </article>
 
     <article class="sev-module-card sev-module-card--soon">
