@@ -1,0 +1,3350 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/">
+      
+      
+        <link rel="prev" href="../aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-investigacao-computacional-i" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-09-monitores-e-cabos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-2-investigacao-computacional-i">Módulo 2 — Investigação Computacional I<a class="headerlink" href="#modulo-2-investigacao-computacional-i" title="Permanent link">&para;</a></h1>
+<h2 id="anatomia-do-hardware">Anatomia do Hardware<a class="headerlink" href="#anatomia-do-hardware" title="Permanent link">&para;</a></h2>
+<h1 id="aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido">Aula 11 — Da Bancada ao Diagnóstico: Como Investigar um Computador Desconhecido<a class="headerlink" href="#aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Quando um computador chega até você apenas com a descrição “não está funcionando direito”, como transformar um relato vago em um diagnóstico técnico, reproduzível e defensável?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-010-o-computador-que-tem-varios-problemas">Caso nº 010 — O computador que “tem vários problemas”<a class="headerlink" href="#caso-no-010-o-computador-que-tem-varios-problemas" title="Permanent link">&para;</a></h2>
+<p>Uma pequena empresa entrega um computador para análise.</p>
+<p>O relato inicial é curto:</p>
+<blockquote>
+<p>“Ele está lento, às vezes reinicia, ontem ficou sem vídeo e hoje demorou para ligar.”</p>
+</blockquote>
+<p>Nenhum componente foi identificado como defeituoso.</p>
+<p>Não sabemos:</p>
+<ul>
+<li>quando o problema começou;</li>
+<li>se houve queda de energia;</li>
+<li>se alguém abriu o computador;</li>
+<li>se alguma peça foi trocada;</li>
+<li>se o problema ocorre em repouso ou sob carga;</li>
+<li>se existem dados importantes sem backup;</li>
+<li>se o sistema foi atualizado;</li>
+<li>se há superaquecimento;</li>
+<li>se a fonte é adequada;</li>
+<li>se o armazenamento está saudável;</li>
+<li>se a memória apresenta erros;</li>
+<li>se o problema está no hardware ou no sistema operacional.</li>
+</ul>
+<p>Esse é um cenário muito mais próximo da realidade do que receber uma máquina com a causa já conhecida.</p>
+<p>Um técnico inexperiente pode começar imediatamente a:</p>
+<ul>
+<li>trocar memória;</li>
+<li>reinstalar o Windows;</li>
+<li>atualizar BIOS;</li>
+<li>limpar o gabinete;</li>
+<li>trocar pasta térmica;</li>
+<li>testar outra fonte;</li>
+<li>formatar o SSD.</li>
+</ul>
+<p>Mas existe um problema.</p>
+<p>Cada alteração modifica a cena original.</p>
+<p>Depois de várias intervenções, talvez o defeito desapareça.</p>
+<p>Mas não saberemos por quê.</p>
+<p>Pior: podemos destruir evidências, introduzir novos problemas ou colocar dados importantes em risco.</p>
+<p>A partir desta aula, todas as peças que estudamos separadamente passam a fazer parte de um único procedimento.</p>
+<blockquote>
+<p><strong>O objetivo de um diagnóstico profissional não é adivinhar rapidamente. É reduzir a incerteza de maneira controlada.</strong></p>
+</blockquote>
+<hr />
+<h1 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>transformar um relato genérico em sintomas observáveis;</li>
+<li>organizar uma investigação antes de abrir o equipamento;</li>
+<li>separar informação do cliente, observação técnica e conclusão;</li>
+<li>definir prioridades de segurança e preservação de dados;</li>
+<li>realizar inspeção inicial sem alterar desnecessariamente a máquina;</li>
+<li>estabelecer uma configuração de referência;</li>
+<li>escolher a ordem adequada dos testes;</li>
+<li>utilizar configuração mínima quando necessário;</li>
+<li>aplicar testes cruzados sem criar falsas conclusões;</li>
+<li>diferenciar hipótese, evidência e diagnóstico confirmado;</li>
+<li>reconhecer quando parar a investigação;</li>
+<li>documentar alterações realizadas durante o processo;</li>
+<li>validar se a correção realmente resolveu a causa original;</li>
+<li>produzir um registro técnico compreensível para outro profissional.</li>
+</ul>
+<hr />
+<h1 id="diagnostico-comeca-antes-de-ligar-o-computador">Diagnóstico começa antes de ligar o computador<a class="headerlink" href="#diagnostico-comeca-antes-de-ligar-o-computador" title="Permanent link">&para;</a></h1>
+<p>Um erro frequente é pensar que o diagnóstico começa quando pressionamos o botão de energia.</p>
+<p>Na realidade, ele começa no primeiro contato com o equipamento.</p>
+<p>Antes de qualquer teste, precisamos descobrir:</p>
+<ul>
+<li>quem utiliza a máquina;</li>
+<li>para qual finalidade;</li>
+<li>qual é o sintoma percebido;</li>
+<li>quando começou;</li>
+<li>o que mudou antes do problema;</li>
+<li>com que frequência ocorre;</li>
+<li>se existem dados importantes;</li>
+<li>se alguém já tentou corrigir;</li>
+<li>quais alterações foram realizadas.</li>
+</ul>
+<p>A entrevista não é burocracia.</p>
+<p>Ela reduz o espaço de busca.</p>
+<hr />
+<h1 id="o-relato-do-usuario-nao-e-o-diagnostico">O relato do usuário não é o diagnóstico<a class="headerlink" href="#o-relato-do-usuario-nao-e-o-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Considere:</p>
+<blockquote>
+<p>“Meu SSD está ruim.”</p>
+</blockquote>
+<p>Isso parece uma conclusão técnica.</p>
+<p>Mas talvez o usuário queira dizer:</p>
+<ul>
+<li>o computador demora para iniciar;</li>
+<li>arquivos demoram para abrir;</li>
+<li>o sistema congela;</li>
+<li>ouviu alguém dizer que era o SSD.</li>
+</ul>
+<p>O investigador deve converter a conclusão do cliente em um sintoma observável.</p>
+<p>Em vez de registrar:</p>
+<blockquote>
+<p>SSD com defeito.</p>
+</blockquote>
+<p>Registre:</p>
+<blockquote>
+<p>Usuário relata demora de aproximadamente três minutos entre o acionamento e a área de trabalho, além de congelamentos ao abrir arquivos.</p>
+</blockquote>
+<p>Agora temos algo testável.</p>
+<hr />
+<h1 id="sintoma-relatado-e-sintoma-reproduzido">Sintoma relatado e sintoma reproduzido<a class="headerlink" href="#sintoma-relatado-e-sintoma-reproduzido" title="Permanent link">&para;</a></h1>
+<p>Esses dois conceitos devem permanecer separados.</p>
+<h2 id="sintoma-relatado">Sintoma relatado<a class="headerlink" href="#sintoma-relatado" title="Permanent link">&para;</a></h2>
+<p>É aquilo que o usuário afirma ter observado.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>“O computador reinicia durante jogos.”</p>
+</blockquote>
+<h2 id="sintoma-reproduzido">Sintoma reproduzido<a class="headerlink" href="#sintoma-reproduzido" title="Permanent link">&para;</a></h2>
+<p>É aquilo que o técnico conseguiu observar em condições documentadas.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>Durante 18 minutos de carga gráfica, o equipamento reiniciou sem tela azul quando GPU e CPU estavam sob carga simultânea.</p>
+</blockquote>
+<p>A diferença é importante.</p>
+<p>Um relato pode estar correto, incompleto ou impreciso.</p>
+<p>O diagnóstico precisa se apoiar em evidências que possam ser verificadas.</p>
+<hr />
+<h1 id="primeiro-principio-preservar-antes-de-modificar">Primeiro princípio: preservar antes de modificar<a class="headerlink" href="#primeiro-principio-preservar-antes-de-modificar" title="Permanent link">&para;</a></h1>
+<p>Antes de limpar, atualizar, formatar ou desmontar, pergunte:</p>
+<blockquote>
+<p><strong>Existe alguma informação que podemos perder?</strong></p>
+</blockquote>
+<p>Isso inclui:</p>
+<ul>
+<li>arquivos do cliente;</li>
+<li>registros do sistema;</li>
+<li>logs;</li>
+<li>configurações;</li>
+<li>histórico do defeito;</li>
+<li>estado físico da máquina;</li>
+<li>posição dos cabos;</li>
+<li>códigos de erro;</li>
+<li>mensagens na tela.</li>
+</ul>
+<p>Se o problema envolve armazenamento, corrupção de dados ou possível falha física, a prioridade pode ser a preservação dos dados, e não a continuidade do teste.</p>
+<p>A Aula 4 já mostrou um princípio que agora se torna parte do nosso protocolo:</p>
+<blockquote>
+<p><strong>quanto mais importante o dado, menor deve ser a tolerância a testes destrutivos ou desnecessários.</strong></p>
+</blockquote>
+<hr />
+<h1 id="segundo-principio-risco-vem-antes-da-curiosidade">Segundo princípio: risco vem antes da curiosidade<a class="headerlink" href="#segundo-principio-risco-vem-antes-da-curiosidade" title="Permanent link">&para;</a></h1>
+<p>Nem todo computador deve ser ligado imediatamente.</p>
+<p>Interrompa a investigação normal se existirem sinais como:</p>
+<ul>
+<li>cheiro de queimado;</li>
+<li>fumaça;</li>
+<li>líquido;</li>
+<li>cabo derretido;</li>
+<li>conector escurecido;</li>
+<li>faísca;</li>
+<li>estalo elétrico forte;</li>
+<li>fonte visivelmente danificada;</li>
+<li>componente solto em região energizada;</li>
+<li>marcas de carbonização;</li>
+<li>choque ao tocar o gabinete;</li>
+<li>bateria de notebook deformada;</li>
+<li>dispositivo de armazenamento com ruído mecânico grave e dados importantes.</li>
+</ul>
+<p>Nesses casos, “ver se ainda liga” pode aumentar o dano.</p>
+<hr />
+<h1 id="a-ordem-geral-de-uma-investigacao">A ordem geral de uma investigação<a class="headerlink" href="#a-ordem-geral-de-uma-investigacao" title="Permanent link">&para;</a></h1>
+<p>Podemos organizar o diagnóstico em etapas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. Recepção e entrevista
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Preservação e segurança
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>3. Inspeção externa
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>4. Documentação do estado inicial
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        ↓
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>5. Reprodução do sintoma
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        ↓
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>6. Coleta de evidências
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        ↓
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>7. Formulação de hipóteses
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        ↓
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>8. Testes de baixo risco
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        ↓
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>9. Isolamento de subsistemas
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        ↓
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>10. Testes cruzados
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        ↓
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>11. Correção
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        ↓
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>12. Validação
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        ↓
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>13. Registro final
+</code></pre></div>
+<p>Essa sequência não é rígida.</p>
+<p>Um computador que não liga exige um caminho diferente de um computador que funciona, mas apresenta lentidão.</p>
+<p>O método permanece o mesmo:</p>
+<blockquote>
+<p><strong>observar antes de concluir.</strong></p>
+</blockquote>
+<hr />
+<h1 id="etapa-1-recepcao-e-entrevista">Etapa 1 — Recepção e entrevista<a class="headerlink" href="#etapa-1-recepcao-e-entrevista" title="Permanent link">&para;</a></h1>
+<p>Uma boa entrevista procura transformar palavras vagas em condições específicas.</p>
+<p>Perguntas úteis incluem:</p>
+<ul>
+<li>Quando o problema começou?</li>
+<li>O computador funcionava normalmente antes?</li>
+<li>Houve queda de energia?</li>
+<li>Houve transporte?</li>
+<li>Alguma peça foi instalada?</li>
+<li>Algum cabo foi trocado?</li>
+<li>O sistema foi atualizado?</li>
+<li>O problema ocorre todos os dias?</li>
+<li>Ocorre em algum programa específico?</li>
+<li>O computador reinicia ou apenas perde vídeo?</li>
+<li>Acontece logo ao ligar ou depois de algum tempo?</li>
+<li>Existe algum ruído novo?</li>
+<li>O equipamento ficou molhado?</li>
+<li>Alguém abriu o gabinete?</li>
+<li>Alguma tentativa de reparo já foi realizada?</li>
+<li>Existem arquivos importantes sem backup?</li>
+</ul>
+<p>A entrevista também deve registrar o contexto de uso.</p>
+<p>Um computador usado para:</p>
+<ul>
+<li>escritório;</li>
+<li>jogos;</li>
+<li>edição;</li>
+<li>servidor;</li>
+<li>automação comercial;</li>
+<li>desenvolvimento;</li>
+</ul>
+<p>enfrenta cargas e prioridades diferentes.</p>
+<hr />
+<h1 id="linha-do-tempo-do-defeito">Linha do tempo do defeito<a class="headerlink" href="#linha-do-tempo-do-defeito" title="Permanent link">&para;</a></h1>
+<p>Uma técnica extremamente útil é reconstruir a sequência temporal.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Segunda-feira:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>GPU nova instalada.
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Terça-feira:
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>primeiro jogo executado.
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Quarta-feira:
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>primeira reinicialização.
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Sexta-feira:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>novo driver instalado.
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Sábado:
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>reinicializações ficaram mais frequentes.
+</code></pre></div>
+<p>Isso não prova causalidade.</p>
+<p>Mas destaca alterações relevantes.</p>
+<p>A pergunta passa a ser:</p>
+<blockquote>
+<p>O defeito começou depois de qual mudança?</p>
+</blockquote>
+<hr />
+<h1 id="etapa-2-preservacao">Etapa 2 — Preservação<a class="headerlink" href="#etapa-2-preservacao" title="Permanent link">&para;</a></h1>
+<p>Antes de modificar o sistema, podemos registrar:</p>
+<ul>
+<li>fotografias;</li>
+<li>vídeos;</li>
+<li>posição dos cabos;</li>
+<li>mensagens de erro;</li>
+<li>tela do firmware;</li>
+<li>versão do sistema;</li>
+<li>logs;</li>
+<li>configuração;</li>
+<li>etiquetas;</li>
+<li>números de modelo.</li>
+</ul>
+<p>Se a máquina ainda funciona, também podemos registrar:</p>
+<ul>
+<li>temperaturas;</li>
+<li>clocks;</li>
+<li>consumo;</li>
+<li>saúde do armazenamento;</li>
+<li>utilização de memória;</li>
+<li>erros do sistema;</li>
+<li>eventos próximos ao horário da falha.</li>
+</ul>
+<p>Esse registro cria uma referência.</p>
+<hr />
+<h1 id="etapa-3-inspecao-externa">Etapa 3 — Inspeção externa<a class="headerlink" href="#etapa-3-inspecao-externa" title="Permanent link">&para;</a></h1>
+<p>Antes de abrir o gabinete, observe:</p>
+<ul>
+<li>estado do cabo de energia;</li>
+<li>monitor e cabo de vídeo;</li>
+<li>posição do seletor da fonte, se existir;</li>
+<li>periféricos conectados;</li>
+<li>portas danificadas;</li>
+<li>USB quebrado;</li>
+<li>cheiro;</li>
+<li>ruído;</li>
+<li>acúmulo extremo de poeira;</li>
+<li>sinais de líquido;</li>
+<li>parafusos ausentes;</li>
+<li>deformações;</li>
+<li>impactos;</li>
+<li>etiquetas de garantia ou manutenção.</li>
+</ul>
+<p>Também registre o ambiente.</p>
+<p>Alguns problemas dependem de:</p>
+<ul>
+<li>tomada;</li>
+<li>estabilizador inadequado;</li>
+<li>extensão;</li>
+<li>temperatura;</li>
+<li>poeira;</li>
+<li>umidade;</li>
+<li>posição do gabinete.</li>
+</ul>
+<hr />
+<h1 id="o-ambiente-tambem-pode-causar-sintomas">O ambiente também pode causar sintomas<a class="headerlink" href="#o-ambiente-tambem-pode-causar-sintomas" title="Permanent link">&para;</a></h1>
+<p>Imagine que o computador funcione perfeitamente na bancada, mas apresente falhas no escritório.</p>
+<p>Isso pode ocorrer devido a:</p>
+<ul>
+<li>alimentação elétrica;</li>
+<li>periférico específico;</li>
+<li>cabo;</li>
+<li>rede;</li>
+<li>temperatura do ambiente;</li>
+<li>tomada;</li>
+<li>monitor;</li>
+<li>dispositivo USB;</li>
+<li>posição física;</li>
+<li>vibração.</li>
+</ul>
+<p>Por isso, “não reproduziu na bancada” não significa automaticamente que o usuário esteja enganado.</p>
+<p>Pode significar que removemos justamente a variável responsável.</p>
+<hr />
+<h1 id="etapa-4-inventario-do-equipamento">Etapa 4 — Inventário do equipamento<a class="headerlink" href="#etapa-4-inventario-do-equipamento" title="Permanent link">&para;</a></h1>
+<p>Antes dos testes, registre a configuração.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CPU.............Ryzen 5 5600
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Placa-mãe.......B550
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>RAM.............2 × 8 GB DDR4
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>GPU.............Radeon RX 6600
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>SSD.............NVMe 1 TB
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Fonte...........550 W
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Sistema.........Windows 11
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Monitor.........1080p 144 Hz
+</code></pre></div>
+<p>Quando possível, registre também:</p>
+<ul>
+<li>fabricante;</li>
+<li>modelo;</li>
+<li>revisão;</li>
+<li>BIOS/UEFI;</li>
+<li>versão de driver;</li>
+<li>capacidade;</li>
+<li>idade aproximada.</li>
+</ul>
+<p>Esse inventário é essencial para verificar compatibilidade.</p>
+<hr />
+<h1 id="nao-confie-apenas-no-nome-comercial">Não confie apenas no nome comercial<a class="headerlink" href="#nao-confie-apenas-no-nome-comercial" title="Permanent link">&para;</a></h1>
+<p>“Fonte de 600 W” é informação insuficiente.</p>
+<p>“SSD de 1 TB” também.</p>
+<p>“16 GB de RAM” também.</p>
+<p>Para diagnóstico, precisamos de mais contexto.</p>
+<p>Uma fonte pode ser:</p>
+<ul>
+<li>antiga;</li>
+<li>de projeto inadequado;</li>
+<li>sem conectores apropriados;</li>
+<li>incapaz de entregar a potência de forma estável.</li>
+</ul>
+<p>Dois módulos de 8 GB podem possuir:</p>
+<ul>
+<li>frequências diferentes;</li>
+<li>timings diferentes;</li>
+<li>fabricantes diferentes;</li>
+<li>chips diferentes.</li>
+</ul>
+<p>Um inventário técnico precisa ir além do número principal da embalagem.</p>
+<hr />
+<h1 id="etapa-5-estado-inicial">Etapa 5 — Estado inicial<a class="headerlink" href="#etapa-5-estado-inicial" title="Permanent link">&para;</a></h1>
+<p>Quando for seguro ligar o equipamento, não comece imediatamente com um teste pesado.</p>
+<p>Primeiro observe.</p>
+<p>Durante a inicialização:</p>
+<ul>
+<li>ventoinhas iniciam?</li>
+<li>existem LEDs de diagnóstico?</li>
+<li>há beeps?</li>
+<li>aparece imagem?</li>
+<li>o POST demora?</li>
+<li>o firmware exibe algum aviso?</li>
+<li>armazenamento é reconhecido?</li>
+<li>data e hora estão corretas?</li>
+<li>o sistema inicia?</li>
+<li>há reinicializações?</li>
+</ul>
+<p>Depois do sistema operacional:</p>
+<ul>
+<li>demora para ficar responsivo?</li>
+<li>aparecem mensagens?</li>
+<li>existe atividade anormal?</li>
+<li>temperaturas sobem rapidamente?</li>
+<li>ventoinhas aceleram?</li>
+<li>disco permanece em 100%?</li>
+<li>RAM está quase cheia?</li>
+<li>CPU permanece ocupada sem razão aparente?</li>
+</ul>
+<hr />
+<h1 id="o-valor-da-observacao-passiva">O valor da observação passiva<a class="headerlink" href="#o-valor-da-observacao-passiva" title="Permanent link">&para;</a></h1>
+<p>Muitas informações podem ser coletadas sem alterar nada.</p>
+<p>Exemplos:</p>
+<ul>
+<li>HWiNFO;</li>
+<li>Gerenciador de Tarefas;</li>
+<li>Monitor de Confiabilidade;</li>
+<li>Visualizador de Eventos;</li>
+<li>CrystalDiskInfo;</li>
+<li>GPU-Z;</li>
+<li>CPU-Z;</li>
+<li>firmware;</li>
+<li>informações do sistema.</li>
+</ul>
+<p>Mas mesmo a coleta precisa ser proporcional ao problema.</p>
+<p>Se um HDD está falhando mecanicamente, instalar várias ferramentas no próprio disco pode ser inadequado.</p>
+<hr />
+<h1 id="etapa-6-reproduzir-o-sintoma">Etapa 6 — Reproduzir o sintoma<a class="headerlink" href="#etapa-6-reproduzir-o-sintoma" title="Permanent link">&para;</a></h1>
+<p>Um defeito reproduzível é muito mais fácil de investigar.</p>
+<p>Se o cliente diz:</p>
+<blockquote>
+<p>“Reinicia em jogos.”</p>
+</blockquote>
+<p>Precisamos saber:</p>
+<ul>
+<li>qual jogo;</li>
+<li>depois de quanto tempo;</li>
+<li>em qual resolução;</li>
+<li>em qual qualidade;</li>
+<li>com qual temperatura;</li>
+<li>se ocorre em todos os jogos;</li>
+<li>se ocorre em carga de CPU;</li>
+<li>se ocorre em carga de GPU;</li>
+<li>se ocorre em carga combinada.</li>
+</ul>
+<p>Se o cliente diz:</p>
+<blockquote>
+<p>“Fica lento.”</p>
+</blockquote>
+<p>Precisamos definir o que significa lento:</p>
+<ul>
+<li>inicialização?</li>
+<li>abrir programas?</li>
+<li>copiar arquivos?</li>
+<li>navegar?</li>
+<li>renderizar?</li>
+<li>iniciar jogo?</li>
+<li>trocar de janela?</li>
+</ul>
+<hr />
+<h1 id="nao-transforme-todo-diagnostico-em-benchmark">Não transforme todo diagnóstico em benchmark<a class="headerlink" href="#nao-transforme-todo-diagnostico-em-benchmark" title="Permanent link">&para;</a></h1>
+<p>Benchmarks são ferramentas.</p>
+<p>Não são o diagnóstico.</p>
+<p>Se a falha ocorre ao copiar arquivos, talvez um teste gráfico seja irrelevante.</p>
+<p>Se ocorre ao acordar da suspensão, um stress test de CPU pode não reproduzir nada.</p>
+<p>O teste deve representar a hipótese.</p>
+<blockquote>
+<p><strong>Escolha o teste que responde a uma pergunta.</strong></p>
+</blockquote>
+<hr />
+<h1 id="um-teste-precisa-ter-uma-pergunta">Um teste precisa ter uma pergunta<a class="headerlink" href="#um-teste-precisa-ter-uma-pergunta" title="Permanent link">&para;</a></h1>
+<p>Exemplo ruim:</p>
+<blockquote>
+<p>“Vou rodar vários programas para ver se dá erro.”</p>
+</blockquote>
+<p>Exemplo melhor:</p>
+<blockquote>
+<p>“Quero descobrir se a reinicialização está relacionada à carga simultânea da CPU e GPU.”</p>
+</blockquote>
+<p>Agora podemos definir um teste apropriado.</p>
+<p>Outro exemplo:</p>
+<blockquote>
+<p>“Quero saber se o problema acompanha este módulo de memória.”</p>
+</blockquote>
+<p>Então podemos alterar a posição ou testar outro módulo de referência, controlando as demais variáveis.</p>
+<hr />
+<h1 id="etapa-7-criar-hipoteses">Etapa 7 — Criar hipóteses<a class="headerlink" href="#etapa-7-criar-hipoteses" title="Permanent link">&para;</a></h1>
+<p>Depois da coleta inicial, criamos hipóteses.</p>
+<p>Imagine:</p>
+<ul>
+<li>reinicialização sem tela azul;</li>
+<li>somente sob carga;</li>
+<li>temperaturas normais;</li>
+<li>problema começou após instalar GPU nova;</li>
+<li>fonte antiga;</li>
+<li>adaptador de energia presente.</li>
+</ul>
+<p>Hipóteses:</p>
+<ol>
+<li>fonte inadequada ou instável;</li>
+<li>adaptador ou conector;</li>
+<li>GPU defeituosa;</li>
+<li>placa-mãe;</li>
+<li>driver;</li>
+<li>memória;</li>
+<li>instalação elétrica.</li>
+</ol>
+<p>Não devemos escolher uma única hipótese cedo demais.</p>
+<hr />
+<h1 id="hipotese-nao-e-diagnostico">Hipótese não é diagnóstico<a class="headerlink" href="#hipotese-nao-e-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Esta distinção precisa acompanhar todo o curso.</p>
+<h2 id="hipotese">Hipótese<a class="headerlink" href="#hipotese" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>A fonte pode estar causando a reinicialização.</p>
+</blockquote>
+<h2 id="evidencia">Evidência<a class="headerlink" href="#evidencia" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>A falha ocorre somente sob carga combinada e começou após a instalação de uma GPU de maior consumo.</p>
+</blockquote>
+<h2 id="teste">Teste<a class="headerlink" href="#teste" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Reproduzir a mesma carga com fonte de referência compatível e cabos corretos.</p>
+</blockquote>
+<h2 id="resultado">Resultado<a class="headerlink" href="#resultado" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>A falha desaparece com a fonte de referência e retorna com a fonte original.</p>
+</blockquote>
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
+<p>Agora existe evidência muito mais forte relacionando o defeito à alimentação original.</p>
+<hr />
+<h1 id="a-arvore-de-hipoteses">A árvore de hipóteses<a class="headerlink" href="#a-arvore-de-hipoteses" title="Permanent link">&para;</a></h1>
+<p>Uma maneira profissional de raciocinar é organizar hipóteses por subsistema.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Sintoma: reinicialização sob carga
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        │
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        ├── Energia
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        │     ├── fonte
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        │     ├── cabo
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        │     └── tomada
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        │
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        ├── Temperatura
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        │     ├── CPU
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        │     ├── GPU
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        │     └── VRM
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        │
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        ├── Memória
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        │     ├── RAM
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        │     └── controlador
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        │
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        ├── Software
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        │     ├── driver
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        │     └── sistema
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        │
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        └── Placa
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>              ├── GPU
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>              └── placa-mãe
+</code></pre></div>
+<p>Cada teste deve eliminar ou fortalecer partes dessa árvore.</p>
+<hr />
+<h1 id="priorize-testes-de-alto-valor-e-baixo-risco">Priorize testes de alto valor e baixo risco<a class="headerlink" href="#priorize-testes-de-alto-valor-e-baixo-risco" title="Permanent link">&para;</a></h1>
+<p>Nem todos os testes têm o mesmo custo.</p>
+<p>Um bom primeiro teste tende a ser:</p>
+<ul>
+<li>rápido;</li>
+<li>reversível;</li>
+<li>seguro;</li>
+<li>informativo;</li>
+<li>pouco invasivo.</li>
+</ul>
+<p>Exemplo:</p>
+<p>Se um computador apresenta perda de vídeo, testar outro cabo é muito mais simples do que desmontar a GPU.</p>
+<p>Se o problema começou depois de habilitar um perfil de memória, restaurar parâmetros padrão pode ser mais informativo do que trocar imediatamente os módulos.</p>
+<hr />
+<h1 id="o-principio-da-menor-intervencao">O princípio da menor intervenção<a class="headerlink" href="#o-principio-da-menor-intervencao" title="Permanent link">&para;</a></h1>
+<p>Sempre que possível:</p>
+<blockquote>
+<p><strong>mude o mínimo necessário para responder à próxima pergunta.</strong></p>
+</blockquote>
+<p>Isso melhora a rastreabilidade.</p>
+<p>Se você:</p>
+<ul>
+<li>limpa;</li>
+<li>desmonta;</li>
+<li>troca pasta;</li>
+<li>muda BIOS;</li>
+<li>reinstala driver;</li>
+<li>troca RAM;</li>
+</ul>
+<p>tudo ao mesmo tempo, você perde a capacidade de saber qual ação teve efeito.</p>
+<hr />
+<h1 id="etapa-8-inspecao-interna">Etapa 8 — Inspeção interna<a class="headerlink" href="#etapa-8-inspecao-interna" title="Permanent link">&para;</a></h1>
+<p>Quando a abertura do gabinete é justificada e segura, registre o estado antes de alterar.</p>
+<p>Observe:</p>
+<ul>
+<li>cabos soltos;</li>
+<li>conectores parcialmente inseridos;</li>
+<li>memória mal encaixada;</li>
+<li>GPU inclinada;</li>
+<li>poeira;</li>
+<li>ventoinhas bloqueadas;</li>
+<li>sinais de líquido;</li>
+<li>corrosão;</li>
+<li>parafusos soltos;</li>
+<li>marcas de calor;</li>
+<li>conectores escurecidos;</li>
+<li>cabos pressionados;</li>
+<li>peças não compatíveis;</li>
+<li>adaptadores;</li>
+<li>montagem do cooler;</li>
+<li>objetos metálicos.</li>
+</ul>
+<p>Não comece limpando antes de observar.</p>
+<p>A sujeira também pode ser evidência.</p>
+<hr />
+<h1 id="fotografe-antes-de-desmontar">Fotografe antes de desmontar<a class="headerlink" href="#fotografe-antes-de-desmontar" title="Permanent link">&para;</a></h1>
+<p>Fotografias podem registrar:</p>
+<ul>
+<li>posição dos cabos;</li>
+<li>conectores;</li>
+<li>montagem;</li>
+<li>orientação;</li>
+<li>sinais de líquido;</li>
+<li>marcas;</li>
+<li>etiqueta da fonte;</li>
+<li>posição das memórias;</li>
+<li>conexões do painel frontal.</li>
+</ul>
+<p>Isso ajuda tanto na investigação quanto na remontagem.</p>
+<hr />
+<h1 id="configuracao-minima">Configuração mínima<a class="headerlink" href="#configuracao-minima" title="Permanent link">&para;</a></h1>
+<p>Quando o computador não realiza POST ou apresenta falha de inicialização, pode ser útil reduzir o sistema ao mínimo necessário.</p>
+<p>Uma configuração típica pode incluir:</p>
+<ul>
+<li>placa-mãe;</li>
+<li>CPU;</li>
+<li>cooler;</li>
+<li>um módulo de RAM;</li>
+<li>fonte;</li>
+<li>vídeo integrado ou GPU necessária.</li>
+</ul>
+<p>Dispositivos não essenciais podem ser removidos temporariamente:</p>
+<ul>
+<li>discos adicionais;</li>
+<li>placas de expansão;</li>
+<li>USBs;</li>
+<li>RGB;</li>
+<li>acessórios;</li>
+<li>periféricos secundários.</li>
+</ul>
+<p>O objetivo é reduzir variáveis.</p>
+<hr />
+<h1 id="configuracao-minima-nao-significa-desmontar-sem-criterio">Configuração mínima não significa desmontar sem critério<a class="headerlink" href="#configuracao-minima-nao-significa-desmontar-sem-criterio" title="Permanent link">&para;</a></h1>
+<p>Cada remoção precisa ter uma razão.</p>
+<p>Antes:</p>
+<blockquote>
+<p>Sistema não completa POST.</p>
+</blockquote>
+<p>Depois:</p>
+<blockquote>
+<p>Sistema completa POST após remover dispositivo X.</p>
+</blockquote>
+<p>Agora o dispositivo X, sua alimentação ou sua interação com o sistema ganha relevância.</p>
+<p>Mas ainda precisamos confirmar.</p>
+<hr />
+<h1 id="um-modulo-de-ram-por-vez">Um módulo de RAM por vez<a class="headerlink" href="#um-modulo-de-ram-por-vez" title="Permanent link">&para;</a></h1>
+<p>Se o sistema apresenta falhas relacionadas à memória, podemos comparar:</p>
+<ul>
+<li>módulo A;</li>
+<li>módulo B;</li>
+<li>slot 1;</li>
+<li>slot 2;</li>
+<li>parâmetros padrão.</li>
+</ul>
+<p>Isso ajuda a separar:</p>
+<ul>
+<li>módulo;</li>
+<li>slot;</li>
+<li>controlador;</li>
+<li>configuração.</li>
+</ul>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Módulo A no slot 2 → funciona
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Módulo B no slot 2 → falha
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Módulo B no slot 4 → falha
+</code></pre></div>
+<p>A suspeita sobre o módulo B aumenta.</p>
+<p>Outro padrão:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Módulo A no slot 2 → falha
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Módulo B no slot 2 → falha
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Módulo A no slot 4 → funciona
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Módulo B no slot 4 → funciona
+</code></pre></div>
+<p>Agora o slot ou sua cadeia de comunicação ganha relevância.</p>
+<hr />
+<h1 id="testes-cruzados">Testes cruzados<a class="headerlink" href="#testes-cruzados" title="Permanent link">&para;</a></h1>
+<p>Um teste cruzado utiliza uma peça conhecida para comparar comportamentos.</p>
+<p>Exemplos:</p>
+<ul>
+<li>outra fonte;</li>
+<li>outro módulo de RAM;</li>
+<li>outra GPU;</li>
+<li>outro cabo;</li>
+<li>outro monitor;</li>
+<li>outro SSD;</li>
+<li>outro computador.</li>
+</ul>
+<p>O valor do teste vem da comparação controlada.</p>
+<hr />
+<h1 id="peca-de-referencia-precisa-ser-realmente-confiavel">Peça de referência precisa ser realmente confiável<a class="headerlink" href="#peca-de-referencia-precisa-ser-realmente-confiavel" title="Permanent link">&para;</a></h1>
+<p>Uma peça “que estava guardada” não é automaticamente uma boa referência.</p>
+<p>Uma fonte antiga desconhecida pode introduzir outro defeito.</p>
+<p>Um módulo de memória sem histórico pode ser instável.</p>
+<p>Uma GPU muito menos potente pode não reproduzir a mesma carga elétrica.</p>
+<p>Por isso, uma referência ideal deve ser:</p>
+<ul>
+<li>compatível;</li>
+<li>conhecida;</li>
+<li>estável;</li>
+<li>adequada ao teste.</li>
+</ul>
+<hr />
+<h1 id="cuidado-com-conclusoes-falsas-em-testes-cruzados">Cuidado com conclusões falsas em testes cruzados<a class="headerlink" href="#cuidado-com-conclusoes-falsas-em-testes-cruzados" title="Permanent link">&para;</a></h1>
+<p>Exemplo:</p>
+<p>GPU A consome 250 W e causa reinicialização.</p>
+<p>GPU B consome 75 W e funciona.</p>
+<p>Conclusão errada:</p>
+<blockquote>
+<p>GPU A está defeituosa.</p>
+</blockquote>
+<p>Outra hipótese continua forte:</p>
+<blockquote>
+<p>A fonte pode não suportar a carga da GPU A.</p>
+</blockquote>
+<p>O teste eliminou algumas possibilidades, mas não todas.</p>
+<hr />
+<h1 id="trocar-pecas-nao-e-o-mesmo-que-diagnosticar">Trocar peças não é o mesmo que diagnosticar<a class="headerlink" href="#trocar-pecas-nao-e-o-mesmo-que-diagnosticar" title="Permanent link">&para;</a></h1>
+<p>Substituir componentes até o problema desaparecer é uma técnica de isolamento rudimentar.</p>
+<p>Ela pode funcionar em alguns casos.</p>
+<p>Mas apresenta limitações:</p>
+<ul>
+<li>custo;</li>
+<li>risco;</li>
+<li>tempo;</li>
+<li>possibilidade de danificar peças boas;</li>
+<li>conclusões equivocadas;</li>
+<li>ausência de documentação.</li>
+</ul>
+<p>O objetivo do curso é transformar troca de peças em <strong>teste controlado</strong>, não em tentativa aleatória.</p>
+<hr />
+<h1 id="etapa-9-diagnostico-de-energia">Etapa 9 — Diagnóstico de energia<a class="headerlink" href="#etapa-9-diagnostico-de-energia" title="Permanent link">&para;</a></h1>
+<p>Quando suspeitamos de alimentação, revisamos o que aprendemos na Aula 6.</p>
+<p>Observe:</p>
+<ul>
+<li>modelo da fonte;</li>
+<li>idade;</li>
+<li>conectores;</li>
+<li>capacidade;</li>
+<li>cabos originais;</li>
+<li>adaptadores;</li>
+<li>sinais de aquecimento;</li>
+<li>comportamento sob carga;</li>
+<li>histórico de upgrades.</li>
+</ul>
+<p>Lembre-se:</p>
+<blockquote>
+<p>uma leitura de 12 V em software não prova que a fonte esteja saudável.</p>
+</blockquote>
+<p>Testes profissionais podem exigir instrumentos e cargas apropriadas.</p>
+<hr />
+<h1 id="etapa-10-diagnostico-termico">Etapa 10 — Diagnóstico térmico<a class="headerlink" href="#etapa-10-diagnostico-termico" title="Permanent link">&para;</a></h1>
+<p>Quando o defeito depende do tempo ou da carga, temperatura torna-se variável importante.</p>
+<p>Observe:</p>
+<ul>
+<li>CPU;</li>
+<li>GPU;</li>
+<li>hotspot;</li>
+<li>SSD;</li>
+<li>VRM, quando disponível;</li>
+<li>rotação das ventoinhas;</li>
+<li>bomba;</li>
+<li>clock;</li>
+<li>potência.</li>
+</ul>
+<p>Pergunte:</p>
+<ul>
+<li>o sintoma aparece sempre na mesma faixa térmica?</li>
+<li>o clock reduz?</li>
+<li>o gabinete satura depois de alguns minutos?</li>
+<li>abrir temporariamente o painel altera o comportamento?</li>
+</ul>
+<p>A correlação temporal é essencial.</p>
+<hr />
+<h1 id="etapa-11-diagnostico-de-armazenamento">Etapa 11 — Diagnóstico de armazenamento<a class="headerlink" href="#etapa-11-diagnostico-de-armazenamento" title="Permanent link">&para;</a></h1>
+<p>Sintomas que podem envolver armazenamento:</p>
+<ul>
+<li>inicialização lenta;</li>
+<li>travamentos durante acesso;</li>
+<li>arquivos corrompidos;</li>
+<li>erros de leitura;</li>
+<li>desaparecimento do disco;</li>
+<li>I/O elevado;</li>
+<li>ruídos em HDD.</li>
+</ul>
+<p>Mas cuidado:</p>
+<p>Um computador lento não implica automaticamente SSD ruim.</p>
+<p>Pode existir:</p>
+<ul>
+<li>RAM insuficiente;</li>
+<li>CPU ocupada;</li>
+<li>antivírus;</li>
+<li>atualização;</li>
+<li>aplicação;</li>
+<li>sistema corrompido;</li>
+<li>paginação.</li>
+</ul>
+<p>A saúde do armazenamento é uma parte da investigação.</p>
+<hr />
+<h1 id="etapa-12-diagnostico-de-memoria">Etapa 12 — Diagnóstico de memória<a class="headerlink" href="#etapa-12-diagnostico-de-memoria" title="Permanent link">&para;</a></h1>
+<p>Possíveis sintomas:</p>
+<ul>
+<li>tela azul;</li>
+<li>travamentos aleatórios;</li>
+<li>erros de aplicação;</li>
+<li>corrupção;</li>
+<li>falha de POST;</li>
+<li>reinicialização.</li>
+</ul>
+<p>Mas erros de memória podem ter origem em:</p>
+<ul>
+<li>módulo;</li>
+<li>slot;</li>
+<li>controlador;</li>
+<li>CPU;</li>
+<li>tensão;</li>
+<li>perfil XMP/EXPO;</li>
+<li>firmware;</li>
+<li>placa-mãe.</li>
+</ul>
+<p>Por isso, “teste de memória falhou” ainda precisa de interpretação.</p>
+<hr />
+<h1 id="etapa-13-diagnostico-grafico">Etapa 13 — Diagnóstico gráfico<a class="headerlink" href="#etapa-13-diagnostico-grafico" title="Permanent link">&para;</a></h1>
+<p>Retomamos a Aula 8.</p>
+<p>Pergunte:</p>
+<ul>
+<li>artefato aparece antes do sistema?</li>
+<li>aparece na captura?</li>
+<li>ocorre apenas em uma aplicação?</li>
+<li>acompanha a GPU para outro computador?</li>
+<li>depende da VRAM?</li>
+<li>depende da temperatura?</li>
+<li>ocorre somente com alta taxa de atualização?</li>
+</ul>
+<p>O caminho da imagem deve ser dividido entre:</p>
+<ul>
+<li>renderização;</li>
+<li>transmissão;</li>
+<li>exibição.</li>
+</ul>
+<hr />
+<h1 id="etapa-14-diagnostico-de-monitor-e-cabo">Etapa 14 — Diagnóstico de monitor e cabo<a class="headerlink" href="#etapa-14-diagnostico-de-monitor-e-cabo" title="Permanent link">&para;</a></h1>
+<p>Retomamos a Aula 9.</p>
+<p>Um problema visual pode estar em:</p>
+<ul>
+<li>GPU;</li>
+<li>porta;</li>
+<li>cabo;</li>
+<li>adaptador;</li>
+<li>dock;</li>
+<li>monitor;</li>
+<li>painel.</li>
+</ul>
+<p>Testes como:</p>
+<ul>
+<li>outro cabo;</li>
+<li>outra porta;</li>
+<li>outro monitor;</li>
+<li>OSD;</li>
+<li>captura de tela;</li>
+</ul>
+<p>podem reduzir drasticamente as hipóteses.</p>
+<hr />
+<h1 id="etapa-15-ruidos-como-evidencia">Etapa 15 — Ruídos como evidência<a class="headerlink" href="#etapa-15-ruidos-como-evidencia" title="Permanent link">&para;</a></h1>
+<p>Retomamos a Aula 10.</p>
+<p>Pergunte:</p>
+<ul>
+<li>o som acompanha RPM?</li>
+<li>acompanha FPS?</li>
+<li>acompanha acesso ao HDD?</li>
+<li>começou após transporte?</li>
+<li>é mecânico?</li>
+<li>é elétrico?</li>
+<li>existe cheiro ou aquecimento?</li>
+<li>muda com a posição?</li>
+</ul>
+<p>O ruído deve ser correlacionado com outras variáveis.</p>
+<hr />
+<h1 id="software-ou-hardware">Software ou hardware?<a class="headerlink" href="#software-ou-hardware" title="Permanent link">&para;</a></h1>
+<p>Essa divisão parece simples, mas muitas falhas atravessam as duas camadas.</p>
+<p>Exemplo:</p>
+<p>Um driver pode fazer a GPU entrar em um estado de carga que revela instabilidade elétrica.</p>
+<p>Um firmware pode configurar a memória de maneira incompatível.</p>
+<p>Um sistema corrompido pode produzir sintomas semelhantes a falha de armazenamento.</p>
+<p>A pergunta mais útil não é:</p>
+<blockquote>
+<p>“É hardware ou software?”</p>
+</blockquote>
+<p>Mas:</p>
+<blockquote>
+<p><strong>Qual camada contém a evidência mais forte neste momento?</strong></p>
+</blockquote>
+<hr />
+<h1 id="boot-por-ambiente-alternativo">Boot por ambiente alternativo<a class="headerlink" href="#boot-por-ambiente-alternativo" title="Permanent link">&para;</a></h1>
+<p>Em alguns casos, iniciar o computador por outro ambiente pode ajudar a separar hipóteses.</p>
+<p>Por exemplo:</p>
+<ul>
+<li>sistema live;</li>
+<li>instalação de teste;</li>
+<li>outro SSD conhecido.</li>
+</ul>
+<p>Se o defeito persiste fora do sistema original, algumas hipóteses de software perdem força.</p>
+<p>Mas isso precisa ser feito com cuidado, especialmente quando há dados importantes.</p>
+<hr />
+<h1 id="nao-formate-para-diagnosticar-cedo-demais">Não formate para diagnosticar cedo demais<a class="headerlink" href="#nao-formate-para-diagnosticar-cedo-demais" title="Permanent link">&para;</a></h1>
+<p>Formatação é uma alteração enorme.</p>
+<p>Ela apaga ou substitui:</p>
+<ul>
+<li>sistema;</li>
+<li>drivers;</li>
+<li>logs;</li>
+<li>configurações;</li>
+<li>evidências.</li>
+</ul>
+<p>Se o defeito desaparece após formatar, ainda podemos não saber qual era a causa.</p>
+<p>Por isso, “formatar para ver se resolve” deve ser uma etapa tardia e justificada.</p>
+<hr />
+<h1 id="logs-testemunhas-digitais">Logs: testemunhas digitais<a class="headerlink" href="#logs-testemunhas-digitais" title="Permanent link">&para;</a></h1>
+<p>Sistemas operacionais registram eventos úteis.</p>
+<p>No Windows, podemos consultar:</p>
+<ul>
+<li>Monitor de Confiabilidade;</li>
+<li>Visualizador de Eventos;</li>
+<li>histórico de atualizações;</li>
+<li>Gerenciador de Dispositivos.</li>
+</ul>
+<p>No Linux, podemos utilizar recursos como:</p>
+<ul>
+<li><code>journalctl</code>;</li>
+<li><code>dmesg</code>;</li>
+<li>logs de serviços;</li>
+<li>logs do kernel.</li>
+</ul>
+<p>Um log não deve ser tratado como sentença.</p>
+<p>Ele mostra o que o sistema percebeu.</p>
+<hr />
+<h1 id="o-horario-importa">O horário importa<a class="headerlink" href="#o-horario-importa" title="Permanent link">&para;</a></h1>
+<p>Se o computador reiniciou às 15:42, procure eventos próximos desse horário.</p>
+<p>Podemos correlacionar:</p>
+<ul>
+<li>falha de driver;</li>
+<li>erro de armazenamento;</li>
+<li>perda de energia;</li>
+<li>serviço encerrado;</li>
+<li>problema de barramento.</li>
+</ul>
+<p>A correlação temporal ajuda a reconstruir a sequência.</p>
+<hr />
+<h1 id="erro-consequente-e-erro-causador">Erro consequente e erro causador<a class="headerlink" href="#erro-consequente-e-erro-causador" title="Permanent link">&para;</a></h1>
+<p>Um dos conceitos mais importantes do diagnóstico é diferenciar causa e consequência.</p>
+<p>Imagine:</p>
+<ol>
+<li>a fonte perde estabilidade;</li>
+<li>a GPU para de responder;</li>
+<li>o driver registra erro;</li>
+<li>o sistema reinicia.</li>
+</ol>
+<p>O log do driver pode ser verdadeiro.</p>
+<p>Mas ele pode registrar uma consequência, não a causa primária.</p>
+<p>Da mesma forma:</p>
+<ol>
+<li>SSD trava;</li>
+<li>sistema deixa de responder;</li>
+<li>aplicação gera erro;</li>
+<li>usuário culpa o programa.</li>
+</ol>
+<p>O erro visível nem sempre nasceu onde apareceu.</p>
+<hr />
+<h1 id="cadeia-causal">Cadeia causal<a class="headerlink" href="#cadeia-causal" title="Permanent link">&para;</a></h1>
+<p>Uma forma de pensar é:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Evento inicial
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>     ↓
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Componente afetado
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>     ↓
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Sintoma intermediário
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>     ↓
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Erro registrado
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>     ↓
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Sintoma percebido pelo usuário
+</code></pre></div>
+<p>Nosso trabalho é tentar voltar pela cadeia.</p>
+<hr />
+<h1 id="correlacao-nao-e-causalidade">Correlação não é causalidade<a class="headerlink" href="#correlacao-nao-e-causalidade" title="Permanent link">&para;</a></h1>
+<p>Se um erro aparece ao mesmo tempo que o defeito, isso aumenta sua relevância.</p>
+<p>Mas ainda precisamos testar.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>toda vez que o computador trava, o SSD está em 100%.</p>
+</blockquote>
+<p>Isso pode significar:</p>
+<ul>
+<li>SSD é a causa;</li>
+<li>SSD está apenas respondendo a paginação causada por falta de RAM;</li>
+<li>antivírus está lendo muitos arquivos;</li>
+<li>aplicação está fazendo I/O intenso.</li>
+</ul>
+<p>Precisamos observar o sistema inteiro.</p>
+<hr />
+<h1 id="testes-sob-controle">Testes sob controle<a class="headerlink" href="#testes-sob-controle" title="Permanent link">&para;</a></h1>
+<p>Antes de cada teste, registre:</p>
+<ul>
+<li>objetivo;</li>
+<li>variável alterada;</li>
+<li>condição inicial;</li>
+<li>duração;</li>
+<li>resultado esperado;</li>
+<li>critério de interrupção.</li>
+</ul>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Objetivo:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>verificar se o problema depende da taxa de atualização.
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Variável:
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>165 Hz → 120 Hz.
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Mantido:
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>mesmo cabo, porta, resolução, driver e monitor.
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Resultado:
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>falha não ocorreu em 30 minutos.
+</code></pre></div>
+<p>Agora temos informação útil.</p>
+<hr />
+<h1 id="o-conceito-de-baseline">O conceito de baseline<a class="headerlink" href="#o-conceito-de-baseline" title="Permanent link">&para;</a></h1>
+<p>Baseline é uma referência de funcionamento.</p>
+<p>Pode ser:</p>
+<ul>
+<li>configuração padrão;</li>
+<li>sistema estável;</li>
+<li>comportamento em repouso;</li>
+<li>temperatura ambiente;</li>
+<li>resultado antes de uma alteração.</li>
+</ul>
+<p>Sem baseline, comparar “melhorou” ou “piorou” fica subjetivo.</p>
+<p>Exemplo:</p>
+<p>Antes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Boot: 75 s
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Boot: 28 s
+</code></pre></div>
+<p>Isso é mais útil que:</p>
+<blockquote>
+<p>“Agora parece rápido.”</p>
+</blockquote>
+<hr />
+<h1 id="repetibilidade">Repetibilidade<a class="headerlink" href="#repetibilidade" title="Permanent link">&para;</a></h1>
+<p>Um resultado único pode ser coincidência.</p>
+<p>Sempre que seguro, tente verificar se o comportamento se repete.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Teste 1 → reiniciou em 12 min
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Teste 2 → reiniciou em 11 min
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Teste 3 → reiniciou em 13 min
+</code></pre></div>
+<p>Isso sugere um padrão forte.</p>
+<p>Depois de uma alteração:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Teste 1 → 30 min estável
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Teste 2 → 30 min estável
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Teste 3 → 30 min estável
+</code></pre></div>
+<p>A evidência da correção fica muito mais forte.</p>
+<hr />
+<h1 id="defeitos-intermitentes">Defeitos intermitentes<a class="headerlink" href="#defeitos-intermitentes" title="Permanent link">&para;</a></h1>
+<p>São alguns dos casos mais difíceis.</p>
+<p>O computador pode funcionar:</p>
+<ul>
+<li>horas;</li>
+<li>dias;</li>
+<li>apenas frio;</li>
+<li>apenas quente;</li>
+<li>apenas depois de suspensão;</li>
+<li>apenas em determinada carga.</li>
+</ul>
+<p>Nesses casos, documentar condições é fundamental.</p>
+<p>Registre:</p>
+<ul>
+<li>temperatura ambiente;</li>
+<li>tempo ligado;</li>
+<li>aplicação;</li>
+<li>carga;</li>
+<li>posição;</li>
+<li>periféricos;</li>
+<li>horário;</li>
+<li>ruídos;</li>
+<li>logs.</li>
+</ul>
+<hr />
+<h1 id="nao-tente-forcar-o-defeito-de-maneira-perigosa">Não tente “forçar” o defeito de maneira perigosa<a class="headerlink" href="#nao-tente-forcar-o-defeito-de-maneira-perigosa" title="Permanent link">&para;</a></h1>
+<p>É aceitável reproduzir uma carga de forma controlada.</p>
+<p>Não é aceitável:</p>
+<ul>
+<li>bloquear ventoinhas;</li>
+<li>aquecer componentes artificialmente com ferramentas improvisadas;</li>
+<li>causar curto;</li>
+<li>abrir fonte;</li>
+<li>exceder limites de tensão;</li>
+<li>retirar proteções.</li>
+</ul>
+<p>O laboratório profissional utiliza procedimentos e instrumentos apropriados.</p>
+<p>O curso ensina raciocínio, não improvisação perigosa.</p>
+<hr />
+<h1 id="quando-atualizar-biosuefi">Quando atualizar BIOS/UEFI?<a class="headerlink" href="#quando-atualizar-biosuefi" title="Permanent link">&para;</a></h1>
+<p>Atualização de firmware pode ser relevante quando existem evidências de:</p>
+<ul>
+<li>incompatibilidade de CPU;</li>
+<li>correções conhecidas;</li>
+<li>problemas de memória;</li>
+<li>vulnerabilidade;</li>
+<li>bug documentado.</li>
+</ul>
+<p>Mas atualização de BIOS não deve ser usada como tentativa genérica.</p>
+<p>Antes de atualizar:</p>
+<ul>
+<li>confirme modelo;</li>
+<li>revisão;</li>
+<li>versão atual;</li>
+<li>motivo;</li>
+<li>arquivo correto;</li>
+<li>procedimento oficial;</li>
+<li>estabilidade elétrica.</li>
+</ul>
+<p>Se o computador é instável, uma atualização mal interrompida pode criar outro problema.</p>
+<hr />
+<h1 id="quando-reinstalar-driver">Quando reinstalar driver?<a class="headerlink" href="#quando-reinstalar-driver" title="Permanent link">&para;</a></h1>
+<p>A reinstalação pode ser justificada quando:</p>
+<ul>
+<li>problema começou após atualização;</li>
+<li>instalação está corrompida;</li>
+<li>dispositivo apresenta erro;</li>
+<li>existe regressão conhecida;</li>
+<li>teste com outra versão faz sentido.</li>
+</ul>
+<p>Mas antes registre a versão atual.</p>
+<p>Caso contrário, perdemos a referência.</p>
+<hr />
+<h1 id="quando-limpar-o-computador">Quando limpar o computador?<a class="headerlink" href="#quando-limpar-o-computador" title="Permanent link">&para;</a></h1>
+<p>Limpeza pode ser necessária.</p>
+<p>Mas em uma investigação, observe primeiro.</p>
+<p>Fotografe:</p>
+<ul>
+<li>poeira;</li>
+<li>obstrução;</li>
+<li>filtros;</li>
+<li>ventoinhas;</li>
+<li>vazamento;</li>
+<li>corrosão.</li>
+</ul>
+<p>Depois da limpeza, se o defeito desaparecer, essas evidências ajudam a explicar a causa.</p>
+<hr />
+<h1 id="quando-trocar-pasta-termica">Quando trocar pasta térmica?<a class="headerlink" href="#quando-trocar-pasta-termica" title="Permanent link">&para;</a></h1>
+<p>Não por calendário automático.</p>
+<p>Ela deve ser considerada quando existem evidências como:</p>
+<ul>
+<li>contato inadequado;</li>
+<li>manutenção anterior;</li>
+<li>comportamento térmico anormal;</li>
+<li>cooler removido;</li>
+<li>material degradado.</li>
+</ul>
+<p>Se a temperatura está normal, trocar pasta apenas por tentativa adiciona uma variável desnecessária.</p>
+<hr />
+<h1 id="diagnostico-por-exclusao">Diagnóstico por exclusão<a class="headerlink" href="#diagnostico-por-exclusao" title="Permanent link">&para;</a></h1>
+<p>Às vezes não conseguimos observar diretamente a causa.</p>
+<p>Mas podemos eliminar alternativas.</p>
+<p>Exemplo:</p>
+<ul>
+<li>monitor trocado → falha continua;</li>
+<li>cabo trocado → continua;</li>
+<li>driver limpo → continua;</li>
+<li>outra fonte → continua;</li>
+<li>GPU em outro PC → falha acompanha.</li>
+</ul>
+<p>A hipótese sobre a própria GPU fica mais forte.</p>
+<p>Isso é diagnóstico por exclusão.</p>
+<p>Mas a exclusão só é válida se os testes forem adequados.</p>
+<hr />
+<h1 id="o-conceito-de-evidencia-convergente">O conceito de evidência convergente<a class="headerlink" href="#o-conceito-de-evidencia-convergente" title="Permanent link">&para;</a></h1>
+<p>Uma conclusão forte raramente depende de um único sinal.</p>
+<p>Imagine:</p>
+<ul>
+<li>SSD relata erros S.M.A.R.T.;</li>
+<li>sistema registra erros de I/O;</li>
+<li>arquivos apresentam falha;</li>
+<li>o problema acompanha o SSD para outro computador;</li>
+<li>outro SSD funciona no sistema original.</li>
+</ul>
+<p>Essas evidências convergem.</p>
+<p>Isso é muito mais convincente que:</p>
+<blockquote>
+<p>“O CrystalDiskInfo ficou amarelo.”</p>
+</blockquote>
+<hr />
+<h1 id="tres-niveis-de-conclusao">Três níveis de conclusão<a class="headerlink" href="#tres-niveis-de-conclusao" title="Permanent link">&para;</a></h1>
+<p>Vamos adotar uma classificação simples.</p>
+<h2 id="nivel-1-suspeita">Nível 1 — Suspeita<a class="headerlink" href="#nivel-1-suspeita" title="Permanent link">&para;</a></h2>
+<p>Existem indícios, mas poucos testes.</p>
+<blockquote>
+<p>Possível falha na alimentação.</p>
+</blockquote>
+<h2 id="nivel-2-hipotese-forte">Nível 2 — Hipótese forte<a class="headerlink" href="#nivel-2-hipotese-forte" title="Permanent link">&para;</a></h2>
+<p>Várias evidências convergem.</p>
+<blockquote>
+<p>A falha ocorre sob carga e desaparece com fonte de referência.</p>
+</blockquote>
+<h2 id="nivel-3-diagnostico-confirmado-dentro-do-escopo-do-teste">Nível 3 — Diagnóstico confirmado dentro do escopo do teste<a class="headerlink" href="#nivel-3-diagnostico-confirmado-dentro-do-escopo-do-teste" title="Permanent link">&para;</a></h2>
+<p>A causa foi isolada de maneira reproduzível.</p>
+<blockquote>
+<p>A fonte original reproduz a falha em condições controladas; a fonte de referência não reproduz, mantendo os demais elementos constantes.</p>
+</blockquote>
+<p>Mesmo assim, um relatório profissional deve declarar limites.</p>
+<hr />
+<h1 id="limites-do-diagnostico">Limites do diagnóstico<a class="headerlink" href="#limites-do-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Nem sempre conseguimos afirmar:</p>
+<blockquote>
+<p>“Este componente interno exato falhou.”</p>
+</blockquote>
+<p>Podemos chegar a:</p>
+<blockquote>
+<p>“A placa de vídeo apresenta falha interna reproduzível.”</p>
+</blockquote>
+<p>Isso pode ser suficiente para decidir:</p>
+<ul>
+<li>reparar;</li>
+<li>substituir;</li>
+<li>encaminhar a laboratório.</li>
+</ul>
+<p>Não invente precisão que os testes não fornecem.</p>
+<hr />
+<h1 id="quando-encaminhar">Quando encaminhar<a class="headerlink" href="#quando-encaminhar" title="Permanent link">&para;</a></h1>
+<p>Encaminhar não é fracasso.</p>
+<p>É reconhecer o limite do equipamento e da competência disponível.</p>
+<p>Considere encaminhamento quando houver:</p>
+<ul>
+<li>reparo BGA;</li>
+<li>análise de VRM;</li>
+<li>curto interno;</li>
+<li>recuperação de dados;</li>
+<li>firmware especializado;</li>
+<li>fonte aberta;</li>
+<li>placa com líquido;</li>
+<li>microsoldagem;</li>
+<li>diagnóstico eletrônico avançado.</li>
+</ul>
+<p>O bom profissional sabe onde termina sua bancada.</p>
+<hr />
+<h1 id="o-estado-conhecido-bom">O estado conhecido bom<a class="headerlink" href="#o-estado-conhecido-bom" title="Permanent link">&para;</a></h1>
+<p>Uma das ferramentas mais poderosas do laboratório é possuir referências conhecidas.</p>
+<p>Exemplos:</p>
+<ul>
+<li>fonte testada;</li>
+<li>módulo de RAM confiável;</li>
+<li>cabo de vídeo certificado;</li>
+<li>monitor de referência;</li>
+<li>SSD de teste;</li>
+<li>teclado simples;</li>
+<li>pendrive bootável;</li>
+<li>pasta de drivers oficiais.</li>
+</ul>
+<p>Esses itens reduzem o número de variáveis.</p>
+<hr />
+<h1 id="etiquetagem-de-pecas">Etiquetagem de peças<a class="headerlink" href="#etiquetagem-de-pecas" title="Permanent link">&para;</a></h1>
+<p>Em um ambiente profissional, peças de referência devem ser identificadas.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>FONTE-REF-01
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Testada em: 2026-09
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Estado: OK
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Uso: diagnóstico
+</code></pre></div>
+<p>Isso evita utilizar acidentalmente uma peça defeituosa como referência.</p>
+<hr />
+<h1 id="organizando-a-bancada">Organizando a bancada<a class="headerlink" href="#organizando-a-bancada" title="Permanent link">&para;</a></h1>
+<p>Uma bancada de diagnóstico precisa facilitar controle.</p>
+<p>Itens úteis incluem:</p>
+<ul>
+<li>iluminação adequada;</li>
+<li>bandejas para parafusos;</li>
+<li>etiquetas;</li>
+<li>pulseira/medidas ESD adequadas;</li>
+<li>cabos conhecidos;</li>
+<li>documentação;</li>
+<li>ferramentas manuais corretas;</li>
+<li>espaço limpo;</li>
+<li>área para peças removidas.</li>
+</ul>
+<p>A organização também reduz defeitos criados pelo próprio técnico.</p>
+<hr />
+<h1 id="esd-descarga-eletrostatica">ESD — descarga eletrostática<a class="headerlink" href="#esd-descarga-eletrostatica" title="Permanent link">&para;</a></h1>
+<p>Componentes eletrônicos podem ser sensíveis a descarga eletrostática.</p>
+<p>Boas práticas incluem:</p>
+<ul>
+<li>ambiente adequado;</li>
+<li>aterramento apropriado;</li>
+<li>evitar superfícies altamente eletrostáticas;</li>
+<li>manipular placas pelas bordas;</li>
+<li>utilizar proteção ESD quando aplicável.</li>
+</ul>
+<p>Não devemos apoiar componentes diretamente sobre:</p>
+<ul>
+<li>carpetes;</li>
+<li>tecidos sintéticos;</li>
+<li>superfícies inadequadas.</li>
+</ul>
+<hr />
+<h1 id="parafusos-tambem-sao-evidencia">Parafusos também são evidência<a class="headerlink" href="#parafusos-tambem-sao-evidencia" title="Permanent link">&para;</a></h1>
+<p>Parafuso errado pode:</p>
+<ul>
+<li>encostar em trilha;</li>
+<li>perfurar região inadequada;</li>
+<li>causar curto;</li>
+<li>deformar placa;</li>
+<li>impedir contato correto.</li>
+</ul>
+<p>Durante desmontagem:</p>
+<ul>
+<li>separe;</li>
+<li>identifique;</li>
+<li>registre.</li>
+</ul>
+<p>Especialmente em notebooks, tamanhos semelhantes podem possuir comprimentos diferentes.</p>
+<hr />
+<h1 id="cabos-e-conectores">Cabos e conectores<a class="headerlink" href="#cabos-e-conectores" title="Permanent link">&para;</a></h1>
+<p>Não force conectores.</p>
+<p>Antes de remover, identifique:</p>
+<ul>
+<li>trava;</li>
+<li>orientação;</li>
+<li>tipo;</li>
+<li>função.</li>
+</ul>
+<p>Conectores de:</p>
+<ul>
+<li>ventoinhas;</li>
+<li>RGB;</li>
+<li>USB interno;</li>
+<li>painel frontal;</li>
+<li>antenas;</li>
+<li>flat cables;</li>
+</ul>
+<p>podem ser frágeis.</p>
+<p>Criar um defeito durante o diagnóstico é uma das piores situações possíveis.</p>
+<hr />
+<h1 id="ferramentas-de-software-por-objetivo">Ferramentas de software por objetivo<a class="headerlink" href="#ferramentas-de-software-por-objetivo" title="Permanent link">&para;</a></h1>
+<p>Em vez de decorar programas, organize-os pela pergunta.</p>
+<h2 id="identificacao">Identificação<a class="headerlink" href="#identificacao" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CPU-Z;</li>
+<li>GPU-Z;</li>
+<li>informações do sistema.</li>
+</ul>
+<h2 id="sensores">Sensores<a class="headerlink" href="#sensores" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HWiNFO;</li>
+<li>ferramentas do fabricante.</li>
+</ul>
+<h2 id="armazenamento">Armazenamento<a class="headerlink" href="#armazenamento" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CrystalDiskInfo;</li>
+<li>GSmartControl;</li>
+<li>ferramentas oficiais.</li>
+</ul>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Monitor de Confiabilidade;</li>
+<li>Visualizador de Eventos;</li>
+<li>journalctl;</li>
+<li>dmesg.</li>
+</ul>
+<h2 id="memoria">Memória<a class="headerlink" href="#memoria" title="Permanent link">&para;</a></h2>
+<ul>
+<li>diagnóstico apropriado de RAM;</li>
+<li>ferramentas bootáveis quando necessário.</li>
+</ul>
+<h2 id="desempenho">Desempenho<a class="headerlink" href="#desempenho" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Gerenciador de Tarefas;</li>
+<li>monitores de recursos;</li>
+<li>benchmarks específicos.</li>
+</ul>
+<p>A ferramenta vem depois da pergunta.</p>
+<hr />
+<h1 id="cuidado-com-programas-milagrosos">Cuidado com programas “milagrosos”<a class="headerlink" href="#cuidado-com-programas-milagrosos" title="Permanent link">&para;</a></h1>
+<p>Evite depender de ferramentas que prometem:</p>
+<ul>
+<li>corrigir todos os drivers;</li>
+<li>reparar qualquer erro;</li>
+<li>aumentar desempenho automaticamente;</li>
+<li>limpar registro;</li>
+<li>recuperar tudo com um clique.</li>
+</ul>
+<p>Durante diagnóstico, essas ferramentas podem:</p>
+<ul>
+<li>alterar o sistema;</li>
+<li>instalar software;</li>
+<li>remover evidências;</li>
+<li>criar novos problemas.</li>
+</ul>
+<p>Prefira ferramentas conhecidas e procedimentos transparentes.</p>
+<hr />
+<h1 id="documentacao-durante-o-diagnostico">Documentação durante o diagnóstico<a class="headerlink" href="#documentacao-durante-o-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Não espere terminar para escrever.</p>
+<p>Registre conforme avança.</p>
+<p>Uma tabela simples ajuda:</p>
+<table>
+<thead>
+<tr>
+<th>Horário</th>
+<th>Ação</th>
+<th>Evidência</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14:10</td>
+<td>Ligado equipamento</td>
+<td>POST normal</td>
+<td>Sistema iniciou</td>
+</tr>
+<tr>
+<td>14:18</td>
+<td>Carga gráfica</td>
+<td>GPU 99%</td>
+<td>Reiniciou</td>
+</tr>
+<tr>
+<td>14:30</td>
+<td>Fonte de referência</td>
+<td>Mesma carga</td>
+<td>Estável</td>
+</tr>
+<tr>
+<td>15:05</td>
+<td>Fonte original</td>
+<td>Mesma carga</td>
+<td>Reiniciou</td>
+</tr>
+</tbody>
+</table>
+<p>Essa sequência permite que outra pessoa compreenda o raciocínio.</p>
+<hr />
+<h1 id="o-que-mudou">O que mudou?<a class="headerlink" href="#o-que-mudou" title="Permanent link">&para;</a></h1>
+<p>Após cada intervenção, registre explicitamente.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>Única alteração: cabo DisplayPort substituído.</p>
+</blockquote>
+<p>Ou:</p>
+<blockquote>
+<p>Perfil EXPO desativado; demais parâmetros mantidos.</p>
+</blockquote>
+<p>Isso protege o diagnóstico contra confusão.</p>
+<hr />
+<h1 id="validacao-da-correcao">Validação da correção<a class="headerlink" href="#validacao-da-correcao" title="Permanent link">&para;</a></h1>
+<p>Um erro comum é parar assim que o computador “volta a funcionar”.</p>
+<p>Correção não é apenas desaparecer o sintoma uma vez.</p>
+<p>Precisamos perguntar:</p>
+<ul>
+<li>o defeito foi reproduzido antes?</li>
+<li>a mesma condição foi repetida depois?</li>
+<li>houve tempo suficiente de teste?</li>
+<li>todos os sintomas desapareceram?</li>
+<li>surgiu algum efeito colateral?</li>
+<li>temperaturas permanecem adequadas?</li>
+<li>desempenho está normal?</li>
+<li>logs permanecem limpos?</li>
+</ul>
+<hr />
+<h1 id="corrigir-nao-significa-apenas-substituir">Corrigir não significa apenas substituir<a class="headerlink" href="#corrigir-nao-significa-apenas-substituir" title="Permanent link">&para;</a></h1>
+<p>Uma correção pode ser:</p>
+<ul>
+<li>reconectar;</li>
+<li>atualizar;</li>
+<li>restaurar configuração;</li>
+<li>melhorar fluxo de ar;</li>
+<li>substituir cabo;</li>
+<li>substituir peça;</li>
+<li>reparar;</li>
+<li>remover software;</li>
+<li>corrigir firmware;</li>
+<li>orientar o usuário.</li>
+</ul>
+<p>O importante é tratar a causa identificada.</p>
+<hr />
+<h1 id="validacao-negativa">Validação negativa<a class="headerlink" href="#validacao-negativa" title="Permanent link">&para;</a></h1>
+<p>Também precisamos comprovar que a correção não criou outro problema.</p>
+<p>Exemplo:</p>
+<p>Depois de reduzir uma frequência de memória, os travamentos desapareceram.</p>
+<p>Mas:</p>
+<ul>
+<li>desempenho caiu?</li>
+<li>a memória está configurada corretamente?</li>
+<li>a redução apenas mascarou um módulo defeituoso?</li>
+</ul>
+<p>A validação precisa considerar o sistema como um todo.</p>
+<hr />
+<h1 id="caso-integrado-1-o-computador-que-reinicia-durante-jogos">Caso integrado 1 — O computador que reinicia durante jogos<a class="headerlink" href="#caso-integrado-1-o-computador-que-reinicia-durante-jogos" title="Permanent link">&para;</a></h1>
+<p>Relato:</p>
+<blockquote>
+<p>“Reinicia quando jogo.”</p>
+</blockquote>
+<p>Inventário:</p>
+<ul>
+<li>CPU intermediária;</li>
+<li>GPU recente;</li>
+<li>fonte antiga;</li>
+<li>16 GB RAM;</li>
+<li>SSD saudável.</li>
+</ul>
+<p>Observação:</p>
+<ul>
+<li>repouso normal;</li>
+<li>CPU em carga isolada normal;</li>
+<li>GPU em carga isolada normal;</li>
+<li>carga combinada provoca reinicialização;</li>
+<li>temperaturas adequadas;</li>
+<li>sem tela azul.</li>
+</ul>
+<p>Histórico:</p>
+<ul>
+<li>problema começou após upgrade da GPU.</li>
+</ul>
+<p>Hipóteses prioritárias:</p>
+<ul>
+<li>fonte;</li>
+<li>conectores;</li>
+<li>cabo de alimentação;</li>
+<li>GPU;</li>
+<li>placa-mãe.</li>
+</ul>
+<p>Teste cruzado:</p>
+<ul>
+<li>fonte de referência adequada;</li>
+<li>mesmos componentes;</li>
+<li>mesmos cabos apropriados;</li>
+<li>mesma carga.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>sistema estável.</li>
+</ul>
+<p>Retorno à fonte original:</p>
+<ul>
+<li>falha reproduzida.</li>
+</ul>
+<p>Conclusão técnica:</p>
+<blockquote>
+<p>Existe forte evidência de falha ou inadequação do sistema de alimentação original sob carga combinada.</p>
+</blockquote>
+<p>Observe que não foi necessário abrir a fonte.</p>
+<hr />
+<h1 id="caso-integrado-2-o-computador-muito-lento">Caso integrado 2 — O computador “muito lento”<a class="headerlink" href="#caso-integrado-2-o-computador-muito-lento" title="Permanent link">&para;</a></h1>
+<p>Relato:</p>
+<blockquote>
+<p>“O SSD está estragado.”</p>
+</blockquote>
+<p>Estado inicial:</p>
+<ul>
+<li>CPU 18%;</li>
+<li>RAM 97%;</li>
+<li>SSD com atividade frequente;</li>
+<li>vários aplicativos abertos;</li>
+<li>paginação intensa;</li>
+<li>saúde do SSD sem alertas relevantes.</li>
+</ul>
+<p>Teste:</p>
+<ul>
+<li>fechar aplicações não essenciais;</li>
+<li>consumo de RAM cai;</li>
+<li>paginação reduz;</li>
+<li>responsividade melhora.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>A lentidão está fortemente associada à pressão de memória e paginação, não existindo evidência suficiente para condenar o SSD.</p>
+</blockquote>
+<p>O relato do cliente continha uma conclusão.</p>
+<p>O diagnóstico revelou outra causa.</p>
+<hr />
+<h1 id="caso-integrado-3-sem-video-depois-da-limpeza">Caso integrado 3 — Sem vídeo depois da limpeza<a class="headerlink" href="#caso-integrado-3-sem-video-depois-da-limpeza" title="Permanent link">&para;</a></h1>
+<p>Relato:</p>
+<blockquote>
+<p>“Depois que limpei, parou de dar imagem.”</p>
+</blockquote>
+<p>Inspeção:</p>
+<ul>
+<li>ventoinhas giram;</li>
+<li>LED DRAM permanece aceso;</li>
+<li>memória foi removida durante a limpeza.</li>
+</ul>
+<p>Hipóteses:</p>
+<ul>
+<li>módulo mal encaixado;</li>
+<li>slot;</li>
+<li>contato;</li>
+<li>dano;</li>
+<li>configuração.</li>
+</ul>
+<p>Teste:</p>
+<ul>
+<li>equipamento desligado;</li>
+<li>inspeção;</li>
+<li>reinstalação correta de um módulo;</li>
+<li>configuração mínima.</li>
+</ul>
+<p>Resultado:</p>
+<ul>
+<li>POST normal.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>O problema foi introduzido durante a manutenção e estava relacionado ao encaixe da memória.</p>
+</blockquote>
+<p>A linha do tempo foi decisiva.</p>
+<hr />
+<h1 id="caso-integrado-4-tela-preta-apos-20-minutos">Caso integrado 4 — Tela preta após 20 minutos<a class="headerlink" href="#caso-integrado-4-tela-preta-apos-20-minutos" title="Permanent link">&para;</a></h1>
+<p>Relato:</p>
+<blockquote>
+<p>“A placa de vídeo morreu.”</p>
+</blockquote>
+<p>Observações:</p>
+<ul>
+<li>sistema inicia;</li>
+<li>jogos funcionam inicialmente;</li>
+<li>hotspot sobe progressivamente;</li>
+<li>ventoinhas atingem alta rotação;</li>
+<li>tela preta após aproximadamente 20 minutos;</li>
+<li>áudio continua;</li>
+<li>gabinete muito restritivo.</li>
+</ul>
+<p>Teste:</p>
+<ul>
+<li>fluxo de ar melhorado temporariamente;</li>
+<li>mesma carga;</li>
+<li>temperaturas menores;</li>
+<li>falha deixa de ocorrer.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>Existe forte relação entre condição térmica e perda de vídeo; a GPU não pode ser considerada “queimada” apenas pelo sintoma inicial.</p>
+</blockquote>
+<hr />
+<h1 id="caso-integrado-5-arquivos-somem-e-sistema-congela">Caso integrado 5 — Arquivos somem e sistema congela<a class="headerlink" href="#caso-integrado-5-arquivos-somem-e-sistema-congela" title="Permanent link">&para;</a></h1>
+<p>Relato:</p>
+<blockquote>
+<p>“Windows está corrompido.”</p>
+</blockquote>
+<p>Evidências:</p>
+<ul>
+<li>erros de leitura;</li>
+<li>SSD desaparece ocasionalmente;</li>
+<li>logs de armazenamento;</li>
+<li>falhas de arquivo;</li>
+<li>problema acompanha o SSD em outro sistema.</li>
+</ul>
+<p>Prioridade:</p>
+<ul>
+<li>preservar dados.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>O armazenamento torna-se a principal hipótese. Reinstalar o sistema antes de proteger os dados seria inadequado.</p>
+</blockquote>
+<hr />
+<h1 id="caso-integrado-6-falha-apenas-no-escritorio">Caso integrado 6 — Falha apenas no escritório<a class="headerlink" href="#caso-integrado-6-falha-apenas-no-escritorio" title="Permanent link">&para;</a></h1>
+<p>Na bancada:</p>
+<ul>
+<li>computador passa horas estável.</li>
+</ul>
+<p>No cliente:</p>
+<ul>
+<li>reinicia duas vezes ao dia.</li>
+</ul>
+<p>Diferenças:</p>
+<ul>
+<li>nobreak antigo;</li>
+<li>impressora USB específica;</li>
+<li>monitor diferente;</li>
+<li>temperatura ambiente maior.</li>
+</ul>
+<p>O próximo passo não é declarar:</p>
+<blockquote>
+<p>“Não há defeito.”</p>
+</blockquote>
+<p>É investigar as variáveis ambientais.</p>
+<p>O local de uso faz parte do sistema.</p>
+<hr />
+<h1 id="uma-metodologia-para-defeitos-que-nao-reproduzem">Uma metodologia para defeitos que não reproduzem<a class="headerlink" href="#uma-metodologia-para-defeitos-que-nao-reproduzem" title="Permanent link">&para;</a></h1>
+<p>Quando o defeito não aparece na bancada:</p>
+<ol>
+<li>refine o relato;</li>
+<li>descubra frequência;</li>
+<li>identifique condições;</li>
+<li>examine logs;</li>
+<li>compare ambiente;</li>
+<li>peça registro em vídeo, se apropriado;</li>
+<li>procure alterações recentes;</li>
+<li>evite trocar peças sem evidência.</li>
+</ol>
+<p>Defeito intermitente exige paciência e documentação.</p>
+<hr />
+<h1 id="o-conceito-de-nao-encontrado">O conceito de “não encontrado”<a class="headerlink" href="#o-conceito-de-nao-encontrado" title="Permanent link">&para;</a></h1>
+<p>Às vezes o resultado correto é:</p>
+<blockquote>
+<p>Falha não reproduzida nas condições de teste.</p>
+</blockquote>
+<p>Isso é melhor que inventar uma causa.</p>
+<p>O relatório pode registrar:</p>
+<ul>
+<li>quais testes foram feitos;</li>
+<li>por quanto tempo;</li>
+<li>em quais condições;</li>
+<li>o que foi observado;</li>
+<li>quais limitações permaneceram.</li>
+</ul>
+<p>Um profissional pode concluir que não existem evidências suficientes naquele momento.</p>
+<hr />
+<h1 id="o-que-nao-fazer">O que não fazer<a class="headerlink" href="#o-que-nao-fazer" title="Permanent link">&para;</a></h1>
+<p>Durante uma investigação, evite:</p>
+<ul>
+<li>atualizar tudo ao mesmo tempo;</li>
+<li>formatar antes de coletar evidências;</li>
+<li>abrir fonte;</li>
+<li>usar cabos modulares de outra fonte sem compatibilidade confirmada;</li>
+<li>forçar conectores;</li>
+<li>testar hardware com sinais de queimado;</li>
+<li>executar stress test sem monitoramento;</li>
+<li>utilizar forno ou soprador para “reviver” GPU;</li>
+<li>repetir testes agressivos em HDD degradado;</li>
+<li>misturar peças sem registrar;</li>
+<li>alterar BIOS sem saber a configuração original;</li>
+<li>declarar peça defeituosa por um único software.</li>
+</ul>
+<hr />
+<h1 id="o-que-um-tecnico-experiente-faz-diferente">O que um técnico experiente faz diferente?<a class="headerlink" href="#o-que-um-tecnico-experiente-faz-diferente" title="Permanent link">&para;</a></h1>
+<p>Ele não necessariamente conhece todos os defeitos de memória.</p>
+<p>A diferença está no processo.</p>
+<p>Ele tende a:</p>
+<ul>
+<li>observar primeiro;</li>
+<li>perguntar melhor;</li>
+<li>reduzir variáveis;</li>
+<li>usar referências confiáveis;</li>
+<li>alterar uma coisa por vez;</li>
+<li>comparar resultados;</li>
+<li>registrar;</li>
+<li>reconhecer limites;</li>
+<li>validar depois da correção.</li>
+</ul>
+<p>Esse comportamento é mais valioso que decorar centenas de sintomas.</p>
+<hr />
+<h1 id="laboratorio-guiado-protocolo-de-diagnostico-completo">🔬 Laboratório guiado — protocolo de diagnóstico completo<a class="headerlink" href="#laboratorio-guiado-protocolo-de-diagnostico-completo" title="Permanent link">&para;</a></h1>
+<p>Nesta atividade, o objetivo não é encontrar um defeito específico.</p>
+<p>É praticar o processo.</p>
+<p>Escolha um computador funcional.</p>
+<p>Não provoque falhas.</p>
+<h2 id="fase-1-identificacao">Fase 1 — Identificação<a class="headerlink" href="#fase-1-identificacao" title="Permanent link">&para;</a></h2>
+<p>Registre:</p>
+<ul>
+<li>fabricante/modelo;</li>
+<li>CPU;</li>
+<li>placa-mãe;</li>
+<li>memória;</li>
+<li>armazenamento;</li>
+<li>GPU;</li>
+<li>fonte;</li>
+<li>monitor;</li>
+<li>sistema operacional.</li>
+</ul>
+<h2 id="fase-2-inspecao">Fase 2 — Inspeção<a class="headerlink" href="#fase-2-inspecao" title="Permanent link">&para;</a></h2>
+<p>Sem desmontar desnecessariamente, observe:</p>
+<ul>
+<li>cabos;</li>
+<li>poeira;</li>
+<li>ruídos;</li>
+<li>posição;</li>
+<li>conectores externos;</li>
+<li>fluxo de ar.</li>
+</ul>
+<h2 id="fase-3-estado-de-repouso">Fase 3 — Estado de repouso<a class="headerlink" href="#fase-3-estado-de-repouso" title="Permanent link">&para;</a></h2>
+<p>Registre:</p>
+<ul>
+<li>CPU;</li>
+<li>RAM;</li>
+<li>armazenamento;</li>
+<li>GPU;</li>
+<li>temperaturas;</li>
+<li>ventoinhas.</li>
+</ul>
+<h2 id="fase-4-carga-real">Fase 4 — Carga real<a class="headerlink" href="#fase-4-carga-real" title="Permanent link">&para;</a></h2>
+<p>Execute uma tarefa normal do usuário.</p>
+<p>Pode ser:</p>
+<ul>
+<li>navegação;</li>
+<li>jogo;</li>
+<li>compactação;</li>
+<li>edição;</li>
+<li>vídeo.</li>
+</ul>
+<p>Registre como o sistema reage.</p>
+<h2 id="fase-5-logs">Fase 5 — Logs<a class="headerlink" href="#fase-5-logs" title="Permanent link">&para;</a></h2>
+<p>Observe se existem eventos relevantes no mesmo período.</p>
+<h2 id="fase-6-baseline">Fase 6 — Baseline<a class="headerlink" href="#fase-6-baseline" title="Permanent link">&para;</a></h2>
+<p>Crie uma pequena ficha do comportamento saudável da máquina.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Boot.....................32 s
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>CPU em repouso...........3–7%
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>RAM......................5,2 GB
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>CPU carga moderada.......68 °C
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>GPU jogo.................72 °C
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>Hotspot..................86 °C
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>SSD......................42 °C
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>Ruído....................normal
+</code></pre></div>
+<p>Esse baseline pode ser utilizado em investigações futuras.</p>
+<hr />
+<h1 id="ficha-de-diagnostico">Ficha de diagnóstico<a class="headerlink" href="#ficha-de-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Um modelo simples pode possuir:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>EQUIPAMENTO
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Modelo:
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Data:
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Responsável:
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>RELATO DO USUÁRIO
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Sintoma:
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>HISTÓRICO
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>Quando começou:
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Alterações recentes:
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>Tentativas anteriores:
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>SEGURANÇA
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>Dados importantes:
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>Sinais elétricos:
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>Sinais mecânicos:
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>CONFIGURAÇÃO
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>CPU:
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>RAM:
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>Placa-mãe:
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>GPU:
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>Armazenamento:
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>Fonte:
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>Sistema:
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>SINTOMA REPRODUZIDO
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>Condição:
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>Tempo:
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>Resultado:
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>EVIDÊNCIAS
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>1.
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>2.
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>3.
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>HIPÓTESES
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>1.
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>2.
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>3.
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>TESTES
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>Teste:
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>Variável:
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>Resultado:
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>
+<a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>CONCLUSÃO
+<a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a>Estado:
+<a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a>
+<a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>CORREÇÃO
+<a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a>Procedimento:
+<a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a>
+<a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a>VALIDAÇÃO
+<a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a>Condição:
+<a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>Resultado:
+<a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a>
+<a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a>LIMITAÇÕES
+<a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a>Observações:
+</code></pre></div>
+<p>Esse documento será a base da próxima aula.</p>
+<hr />
+<h1 id="como-um-laboratorio-profissional-trabalharia">Como um laboratório profissional trabalharia?<a class="headerlink" href="#como-um-laboratorio-profissional-trabalharia" title="Permanent link">&para;</a></h1>
+<p>Um laboratório bem organizado tenta manter:</p>
+<ul>
+<li>cadeia de registro;</li>
+<li>peças de referência;</li>
+<li>instrumentos calibrados quando necessário;</li>
+<li>procedimentos;</li>
+<li>histórico;</li>
+<li>identificação de equipamentos;</li>
+<li>controle de alterações.</li>
+</ul>
+<p>Em ambientes especializados, podem existir:</p>
+<ul>
+<li>multímetros;</li>
+<li>osciloscópios;</li>
+<li>fontes de bancada;</li>
+<li>câmeras térmicas;</li>
+<li>analisadores;</li>
+<li>microscópios;</li>
+<li>estações de retrabalho;</li>
+<li>duplicadores de armazenamento;</li>
+<li>ferramentas forenses.</li>
+</ul>
+<p>Mas nenhum instrumento substitui a pergunta correta.</p>
+<p>Um osciloscópio usado sem hipótese produz apenas formas de onda.</p>
+<hr />
+<h1 id="do-diagnostico-ao-laudo">Do diagnóstico ao laudo<a class="headerlink" href="#do-diagnostico-ao-laudo" title="Permanent link">&para;</a></h1>
+<p>A próxima etapa da formação será transformar todo esse processo em um documento técnico.</p>
+<p>Não basta saber:</p>
+<blockquote>
+<p>“Era a fonte.”</p>
+</blockquote>
+<p>Precisamos ser capazes de explicar:</p>
+<ul>
+<li>qual era o sintoma;</li>
+<li>como ele foi reproduzido;</li>
+<li>quais evidências foram coletadas;</li>
+<li>quais hipóteses foram descartadas;</li>
+<li>qual teste isolou a causa;</li>
+<li>qual correção foi realizada;</li>
+<li>como a correção foi validada;</li>
+<li>quais limitações permaneceram.</li>
+</ul>
+<p>Isso transforma conhecimento técnico em trabalho profissional.</p>
+<hr />
+<h1 id="conexao-com-a-proxima-investigacao">Conexão com a próxima investigação<a class="headerlink" href="#conexao-com-a-proxima-investigacao" title="Permanent link">&para;</a></h1>
+<p>Até aqui, estudamos componentes individualmente e depois reunimos todos em um protocolo de diagnóstico.</p>
+<p>Na próxima aula, o aluno não receberá o defeito pronto.</p>
+<p>Ele receberá um caso completo.</p>
+<p>Haverá:</p>
+<ul>
+<li>relato do cliente;</li>
+<li>configuração da máquina;</li>
+<li>fotografias descritas;</li>
+<li>temperaturas;</li>
+<li>logs;</li>
+<li>dados de armazenamento;</li>
+<li>comportamento da memória;</li>
+<li>resultados de testes;</li>
+<li>algumas pistas relevantes;</li>
+<li>outras pistas que parecem importantes, mas não são.</li>
+</ul>
+<p>O objetivo será construir uma investigação do início ao fim e produzir o primeiro relatório técnico do curso.</p>
+<h1 id="proxima-aula-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico">Próxima aula — Laboratório Final: Resolva o Caso e Construa o Primeiro Laudo Técnico<a class="headerlink" href="#proxima-aula-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

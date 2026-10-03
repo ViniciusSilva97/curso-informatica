@@ -1,0 +1,2745 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/">
+      
+      
+        <link rel="prev" href="../aula-09-monitores-e-cabos/">
+      
+      
+        <link rel="next" href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar? - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-investigacao-computacional-i" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-09-monitores-e-cabos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-2-investigacao-computacional-i">Módulo 2 — Investigação Computacional I<a class="headerlink" href="#modulo-2-investigacao-computacional-i" title="Permanent link">&para;</a></h1>
+<h2 id="anatomia-do-hardware">Anatomia do Hardware<a class="headerlink" href="#anatomia-do-hardware" title="Permanent link">&para;</a></h2>
+<h1 id="aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar">Aula 10 — Ruídos do Computador: O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?<a class="headerlink" href="#aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Quando um computador começa a emitir sons diferentes, como descobrir se estamos diante de um comportamento normal, de uma pista diagnóstica ou de um sinal para interromper imediatamente o uso?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-009-o-computador-que-cantava-durante-os-jogos">Caso nº 009 — O computador que “cantava” durante os jogos<a class="headerlink" href="#caso-no-009-o-computador-que-cantava-durante-os-jogos" title="Permanent link">&para;</a></h2>
+<p>Um computador funciona normalmente em tarefas leves.</p>
+<p>Ao iniciar um jogo, porém, um ruído agudo aparece quase imediatamente.</p>
+<p>Quando a taxa de quadros aumenta, o som também muda.</p>
+<p>Ao limitar o jogo para 60 FPS, o ruído diminui.</p>
+<p>Ao sair do jogo, desaparece quase por completo.</p>
+<p>O usuário conclui:</p>
+<blockquote>
+<p>“A fonte está queimando.”</p>
+</blockquote>
+<p>Outro técnico afirma:</p>
+<blockquote>
+<p>“É a placa de vídeo.”</p>
+</blockquote>
+<p>Um terceiro sugere trocar todas as ventoinhas.</p>
+<p>Mas nenhuma dessas conclusões foi demonstrada.</p>
+<p>O som pode estar associado a componentes magnéticos da fonte, da placa de vídeo ou da placa-mãe. Pode ser uma ressonância mecânica. Pode vir de uma ventoinha. Pode variar com a carga sem representar falha iminente.</p>
+<p>Agora imagine outro cenário.</p>
+<p>O computador produz um estalo forte, surge cheiro de queimado e o vídeo desaparece.</p>
+<p>Os dois casos envolvem ruído.</p>
+<p>Mas exigem respostas completamente diferentes.</p>
+<p>Nesta aula aprenderemos a tratar sons como <strong>evidências</strong>, e não como diagnósticos automáticos.</p>
+<hr />
+<h1 id="objetivos-da-aula">Objetivos da aula<a class="headerlink" href="#objetivos-da-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta aula, você deverá ser capaz de:</p>
+<ul>
+<li>compreender por que computadores produzem sons diferentes;</li>
+<li>classificar ruídos mecânicos, aerodinâmicos, hidráulicos e elétricos;</li>
+<li>interpretar códigos sonoros de inicialização sem tratá-los como universais;</li>
+<li>reconhecer ruídos típicos de ventoinhas, rolamentos, HDs e bombas;</li>
+<li>compreender o fenômeno conhecido como <em>coil whine</em>;</li>
+<li>diferenciar coil whine de sinais elétricos potencialmente perigosos;</li>
+<li>correlacionar ruído com carga, temperatura, rotação e consumo;</li>
+<li>utilizar gravações e monitoramento para documentar defeitos intermitentes;</li>
+<li>entender quando um ruído exige apenas observação e quando exige interrupção imediata do uso;</li>
+<li>construir uma investigação acústica sem recorrer a desmontagens perigosas.</li>
+</ul>
+<hr />
+<h1 id="o-som-tambem-e-uma-evidencia">O som também é uma evidência<a class="headerlink" href="#o-som-tambem-e-uma-evidencia" title="Permanent link">&para;</a></h1>
+<p>Durante um diagnóstico, normalmente observamos:</p>
+<ul>
+<li>imagem;</li>
+<li>temperatura;</li>
+<li>desempenho;</li>
+<li>logs;</li>
+<li>tensões informadas pelos sensores;</li>
+<li>comportamento do sistema operacional.</li>
+</ul>
+<p>Mas nossos ouvidos também recebem informações.</p>
+<p>Um computador pode produzir sons devido a:</p>
+<ul>
+<li>movimento de ar;</li>
+<li>vibração mecânica;</li>
+<li>motores;</li>
+<li>rolamentos;</li>
+<li>cabeças de leitura de discos rígidos;</li>
+<li>bombas;</li>
+<li>componentes magnéticos;</li>
+<li>expansão térmica;</li>
+<li>contato entre peças;</li>
+<li>falhas elétricas.</li>
+</ul>
+<p>Isso significa que o som pode indicar <strong>qual subsistema está se comportando de maneira diferente</strong>.</p>
+<p>Mas existe uma regra fundamental:</p>
+<blockquote>
+<p><strong>O som ajuda a localizar e caracterizar o problema, mas raramente identifica sozinho a causa definitiva.</strong></p>
+</blockquote>
+<hr />
+<h1 id="antes-de-investigar-descreva-o-som-corretamente">Antes de investigar: descreva o som corretamente<a class="headerlink" href="#antes-de-investigar-descreva-o-som-corretamente" title="Permanent link">&para;</a></h1>
+<p>Expressões como:</p>
+<ul>
+<li>“está fazendo barulho”;</li>
+<li>“está estranho”;</li>
+<li>“parece que vai explodir”;</li>
+</ul>
+<p>são compreensíveis para um usuário, mas são pouco precisas tecnicamente.</p>
+<p>O investigador tenta registrar características mais objetivas.</p>
+<h2 id="tipo-de-som">Tipo de som<a class="headerlink" href="#tipo-de-som" title="Permanent link">&para;</a></h2>
+<p>Exemplos:</p>
+<ul>
+<li>agudo;</li>
+<li>grave;</li>
+<li>metálico;</li>
+<li>vibratório;</li>
+<li>repetitivo;</li>
+<li>pulsante;</li>
+<li>contínuo;</li>
+<li>intermitente;</li>
+<li>clique;</li>
+<li>estalo;</li>
+<li>raspagem;</li>
+<li>assobio;</li>
+<li>zumbido;</li>
+<li>chiado;</li>
+<li>gorgolejo.</li>
+</ul>
+<h2 id="momento-em-que-aparece">Momento em que aparece<a class="headerlink" href="#momento-em-que-aparece" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ao pressionar o botão de energia;</li>
+<li>durante o POST;</li>
+<li>ao iniciar o sistema operacional;</li>
+<li>em repouso;</li>
+<li>durante jogos;</li>
+<li>durante renderização;</li>
+<li>ao copiar arquivos;</li>
+<li>depois de alguns minutos;</li>
+<li>ao suspender ou despertar o computador.</li>
+</ul>
+<h2 id="comportamento">Comportamento<a class="headerlink" href="#comportamento" title="Permanent link">&para;</a></h2>
+<ul>
+<li>aumenta com a carga;</li>
+<li>acompanha a rotação das ventoinhas;</li>
+<li>acompanha o FPS;</li>
+<li>aparece somente com o gabinete fechado;</li>
+<li>muda quando a temperatura aumenta;</li>
+<li>ocorre apenas na primeira inicialização;</li>
+<li>surge depois de movimentar o equipamento.</li>
+</ul>
+<p>Essas relações são mais importantes que tentar imitar o som com palavras.</p>
+<hr />
+<h1 id="uma-classificacao-util-dos-ruidos">Uma classificação útil dos ruídos<a class="headerlink" href="#uma-classificacao-util-dos-ruidos" title="Permanent link">&para;</a></h1>
+<p>Podemos organizar boa parte dos sons de um computador em cinco grupos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Ruídos do computador
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        ├── Sonoros programados
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        │      └── beeps / alertas
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        ├── Mecânicos
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        │      ├── ventoinhas
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        │      ├── rolamentos
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        │      └── discos rígidos
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        ├── Aerodinâmicos
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        │      └── movimento de ar
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        ├── Hidráulicos
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        │      └── bombas e líquido de AIO
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        └── Elétricos / eletromecânicos
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>               ├── coil whine
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>               ├── transformadores / indutores
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>               └── falhas elétricas
+</code></pre></div>
+<p>A classificação não é perfeita, mas ajuda a construir hipóteses.</p>
+<hr />
+<h1 id="beeps-de-inicializacao">Beeps de inicialização<a class="headerlink" href="#beeps-de-inicializacao" title="Permanent link">&para;</a></h1>
+<p>Antes de existir vídeo na tela, algumas placas-mãe conseguem comunicar problemas por meio de sinais sonoros.</p>
+<p>Esses sinais podem ser emitidos por:</p>
+<ul>
+<li>speaker interno;</li>
+<li>buzzer integrado;</li>
+<li>dispositivo conectado ao cabeçalho da placa-mãe.</li>
+</ul>
+<p>Em alguns sistemas, a sequência pode representar uma falha detectada durante o POST.</p>
+<p>Exemplos de categorias que podem ser indicadas incluem:</p>
+<ul>
+<li>memória;</li>
+<li>processador;</li>
+<li>vídeo;</li>
+<li>inicialização;</li>
+<li>alimentação;</li>
+<li>ausência de determinado componente.</li>
+</ul>
+<p>Mas existe um detalhe extremamente importante:</p>
+<blockquote>
+<p><strong>Não existe um código de beeps universal válido para todas as placas-mãe.</strong></p>
+</blockquote>
+<p>A interpretação depende de fatores como:</p>
+<ul>
+<li>fabricante;</li>
+<li>firmware;</li>
+<li>plataforma;</li>
+<li>geração;</li>
+<li>implementação específica.</li>
+</ul>
+<p>Portanto, ouvir três beeps não autoriza concluir automaticamente:</p>
+<blockquote>
+<p>“Memória RAM queimada.”</p>
+</blockquote>
+<p>Primeiro devemos consultar:</p>
+<ul>
+<li>manual da placa-mãe;</li>
+<li>documentação oficial;</li>
+<li>código correspondente ao modelo e firmware utilizados.</li>
+</ul>
+<hr />
+<h1 id="beep-code-indica-etapa-nao-necessariamente-peca-queimada">Beep code indica etapa, não necessariamente peça queimada<a class="headerlink" href="#beep-code-indica-etapa-nao-necessariamente-peca-queimada" title="Permanent link">&para;</a></h1>
+<p>Imagine que a documentação relacione determinado código à memória.</p>
+<p>Ainda existem diferentes possibilidades:</p>
+<ul>
+<li>módulo mal encaixado;</li>
+<li>slot com problema;</li>
+<li>incompatibilidade;</li>
+<li>perfil de memória instável;</li>
+<li>contato inadequado do processador;</li>
+<li>controlador de memória;</li>
+<li>firmware;</li>
+<li>módulo realmente defeituoso.</li>
+</ul>
+<p>O código informa onde o processo encontrou dificuldade.</p>
+<p>Ele não substitui a investigação.</p>
+<p>Esse princípio é o mesmo que aprendemos com os LEDs CPU, DRAM, VGA e BOOT da placa-mãe.</p>
+<hr />
+<h1 id="nem-todo-computador-possui-speaker">Nem todo computador possui speaker<a class="headerlink" href="#nem-todo-computador-possui-speaker" title="Permanent link">&para;</a></h1>
+<p>Um computador pode falhar no POST e permanecer completamente silencioso.</p>
+<p>Isso não significa que a placa-mãe não detectou o problema.</p>
+<p>Ela pode utilizar:</p>
+<ul>
+<li>LEDs de diagnóstico;</li>
+<li>display de códigos;</li>
+<li>indicadores visuais;</li>
+<li>mensagens na tela;</li>
+<li>registros de firmware.</li>
+</ul>
+<p>Em algumas máquinas, simplesmente não existe um dispositivo sonoro instalado.</p>
+<hr />
+<h1 id="ventoinhas-o-som-mais-comum-do-computador">Ventoinhas: o som mais comum do computador<a class="headerlink" href="#ventoinhas-o-som-mais-comum-do-computador" title="Permanent link">&para;</a></h1>
+<p>Ventoinhas possuem partes móveis.</p>
+<p>Consequentemente, são uma das fontes mais frequentes de ruído.</p>
+<p>Elas podem estar presentes em:</p>
+<ul>
+<li>gabinete;</li>
+<li>processador;</li>
+<li>placa de vídeo;</li>
+<li>radiador;</li>
+<li>fonte;</li>
+<li>chipset em alguns projetos.</li>
+</ul>
+<p>O som produzido pode vir de diferentes mecanismos.</p>
+<hr />
+<h1 id="ruido-do-movimento-de-ar">Ruído do movimento de ar<a class="headerlink" href="#ruido-do-movimento-de-ar" title="Permanent link">&para;</a></h1>
+<p>Uma ventoinha saudável ainda produz som.</p>
+<p>Parte dele vem simplesmente do ar atravessando:</p>
+<ul>
+<li>grades;</li>
+<li>filtros;</li>
+<li>dissipadores;</li>
+<li>radiadores;</li>
+<li>cabos;</li>
+<li>painéis restritivos.</li>
+</ul>
+<p>Quanto maior a rotação, maior tende a ser o ruído aerodinâmico.</p>
+<p>Isso pode produzir um som semelhante a:</p>
+<blockquote>
+<p>“whoosh”</p>
+</blockquote>
+<p>ou a um fluxo contínuo de ar.</p>
+<p>Não é necessariamente defeito.</p>
+<hr />
+<h1 id="turbulencia">Turbulência<a class="headerlink" href="#turbulencia" title="Permanent link">&para;</a></h1>
+<p>Quando o ar encontra obstáculos muito próximos das pás, podem surgir sons diferentes.</p>
+<p>Exemplos:</p>
+<ul>
+<li>grade muito próxima;</li>
+<li>filtro restritivo;</li>
+<li>painel frontal fechado;</li>
+<li>cabos posicionados diante da ventoinha;</li>
+<li>duas ventoinhas interferindo entre si.</li>
+</ul>
+<p>O problema pode estar na geometria do fluxo, e não na ventoinha em si.</p>
+<hr />
+<h1 id="rolamentos">Rolamentos<a class="headerlink" href="#rolamentos" title="Permanent link">&para;</a></h1>
+<p>A ventoinha precisa girar em torno de um eixo.</p>
+<p>Para isso utiliza algum sistema de rolamento.</p>
+<p>Com desgaste, contaminação ou dano mecânico, podem aparecer:</p>
+<ul>
+<li>ronco;</li>
+<li>raspagem;</li>
+<li>vibração;</li>
+<li>ruído irregular;</li>
+<li>dificuldade para iniciar;</li>
+<li>mudança do som conforme a posição do gabinete.</li>
+</ul>
+<p>Uma ventoinha que passa a produzir ruído mecânico diferente do comportamento histórico merece inspeção.</p>
+<hr />
+<h1 id="ventoinha-tocando-em-cabo">Ventoinha tocando em cabo<a class="headerlink" href="#ventoinha-tocando-em-cabo" title="Permanent link">&para;</a></h1>
+<p>Um dos problemas mais simples pode produzir um som bastante alarmante.</p>
+<p>Uma ponta de cabo pode encostar nas pás.</p>
+<p>O resultado pode ser:</p>
+<ul>
+<li>batidas rápidas;</li>
+<li>estalos repetitivos;</li>
+<li>vibração;</li>
+<li>redução de rotação.</li>
+</ul>
+<p>A inspeção deve ser feita com segurança.</p>
+<p>Não coloque dedos ou objetos em uma ventoinha girando para tentar descobrir a origem do som.</p>
+<p>Com o equipamento desligado e desconectado, podemos verificar visualmente:</p>
+<ul>
+<li>posição dos cabos;</li>
+<li>folgas;</li>
+<li>parafusos;</li>
+<li>filtros;</li>
+<li>presença de objetos soltos.</li>
+</ul>
+<hr />
+<h1 id="parafusos-e-ressonancia">Parafusos e ressonância<a class="headerlink" href="#parafusos-e-ressonancia" title="Permanent link">&para;</a></h1>
+<p>Às vezes a ventoinha está perfeitamente saudável, mas transmite vibração para o gabinete.</p>
+<p>O gabinete pode funcionar como uma caixa de ressonância.</p>
+<p>O resultado é um ruído muito maior que aquele produzido diretamente pela ventoinha.</p>
+<p>Possíveis fatores:</p>
+<ul>
+<li>parafusos frouxos;</li>
+<li>painel lateral vibrando;</li>
+<li>filtro encostando no gabinete;</li>
+<li>suporte metálico;</li>
+<li>HD transmitindo vibração;</li>
+<li>ventoinha desalinhada.</li>
+</ul>
+<p>Uma pista importante é o som aparecer apenas em determinada faixa de RPM.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>900 RPM  → silencioso
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>1100 RPM → vibração forte
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>1300 RPM → vibração diminui
+</code></pre></div>
+<p>Isso sugere uma frequência de ressonância estrutural.</p>
+<hr />
+<h1 id="a-rotacao-pode-ser-uma-variavel-investigativa">A rotação pode ser uma variável investigativa<a class="headerlink" href="#a-rotacao-pode-ser-uma-variavel-investigativa" title="Permanent link">&para;</a></h1>
+<p>Ferramentas como HWiNFO e o próprio firmware podem mostrar RPM de ventoinhas compatíveis.</p>
+<p>Se o ruído aparece exatamente quando uma ventoinha passa de 1.000 para 1.200 RPM, encontramos uma correlação importante.</p>
+<p>Em sistemas compatíveis, uma curva de ventoinha pode ser ajustada temporariamente para observar a relação entre:</p>
+<ul>
+<li>RPM;</li>
+<li>temperatura;</li>
+<li>ruído.</li>
+</ul>
+<p>A alteração deve ser conservadora e monitorada.</p>
+<p>Não devemos reduzir a refrigeração a níveis inseguros apenas para “ver se o barulho some”.</p>
+<hr />
+<h1 id="modo-zero-rpm">Modo Zero RPM<a class="headerlink" href="#modo-zero-rpm" title="Permanent link">&para;</a></h1>
+<p>Algumas placas de vídeo e fontes podem parar suas ventoinhas quando a carga é baixa.</p>
+<p>Então o comportamento pode ser:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Repouso
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>→ ventoinhas paradas
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>→ praticamente sem ruído de ar
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Carga
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>→ temperatura aumenta
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>→ ventoinhas iniciam
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>→ ruído aparece
+</code></pre></div>
+<p>Esse início repentino pode assustar quem não conhece o recurso.</p>
+<p>Por isso é importante entender o projeto antes de classificar um comportamento como falha.</p>
+<hr />
+<h1 id="discos-rigidos-maquinas-eletromecanicas">Discos rígidos: máquinas eletromecânicas<a class="headerlink" href="#discos-rigidos-maquinas-eletromecanicas" title="Permanent link">&para;</a></h1>
+<p>Ao contrário de um SSD, o HDD possui componentes móveis.</p>
+<p>Entre eles:</p>
+<ul>
+<li>motor dos pratos;</li>
+<li>conjunto de cabeças;</li>
+<li>atuador;</li>
+<li>mecanismos de posicionamento.</li>
+</ul>
+<p>Por isso, um disco rígido normalmente produz algum som durante funcionamento.</p>
+<hr />
+<h1 id="sons-normais-de-um-hdd">Sons normais de um HDD<a class="headerlink" href="#sons-normais-de-um-hdd" title="Permanent link">&para;</a></h1>
+<p>Dependendo do modelo, podem existir:</p>
+<ul>
+<li>som de rotação;</li>
+<li>pequenos movimentos durante leitura;</li>
+<li>atividade mais perceptível durante acesso intenso;</li>
+<li>som relacionado ao estacionamento das cabeças.</li>
+</ul>
+<p>Um HDD completamente silencioso não é uma referência universal.</p>
+<p>O que importa é comparar:</p>
+<ul>
+<li>comportamento atual;</li>
+<li>comportamento histórico;</li>
+<li>desempenho;</li>
+<li>erros;</li>
+<li>dados S.M.A.R.T.;</li>
+<li>capacidade de leitura.</li>
+</ul>
+<hr />
+<h1 id="cliques-repetitivos-em-hdd">Cliques repetitivos em HDD<a class="headerlink" href="#cliques-repetitivos-em-hdd" title="Permanent link">&para;</a></h1>
+<p>Cliques fortes, repetitivos e acompanhados de dificuldade de leitura podem indicar um problema sério.</p>
+<p>Possíveis causas envolvem:</p>
+<ul>
+<li>tentativa repetida de posicionamento;</li>
+<li>falha de leitura;</li>
+<li>problema no conjunto de cabeças;</li>
+<li>dano de superfície;</li>
+<li>alimentação inadequada;</li>
+<li>firmware;</li>
+<li>falha eletrônica ou mecânica.</li>
+</ul>
+<p>A expressão popular <strong>click of death</strong> é usada para descrever alguns desses comportamentos, mas não deve ser tratada como diagnóstico técnico específico.</p>
+<p>Dois discos diferentes podem clicar por motivos diferentes.</p>
+<hr />
+<h1 id="quando-um-hdd-comeca-a-fazer-ruido-anormal">Quando um HDD começa a fazer ruído anormal<a class="headerlink" href="#quando-um-hdd-comeca-a-fazer-ruido-anormal" title="Permanent link">&para;</a></h1>
+<p>Se existem dados importantes, a prioridade muda.</p>
+<p>O objetivo deixa de ser:</p>
+<blockquote>
+<p>“Vamos testar até descobrir exatamente o defeito.”</p>
+</blockquote>
+<p>E passa a ser:</p>
+<blockquote>
+<p><strong>“Vamos reduzir o risco de perder os dados.”</strong></p>
+</blockquote>
+<p>Repetir dezenas de testes em um disco mecanicamente degradado pode piorar a situação.</p>
+<p>Se houver:</p>
+<ul>
+<li>ruído novo e forte;</li>
+<li>lentidão extrema;</li>
+<li>erros de leitura;</li>
+<li>desaparecimento do disco;</li>
+<li>travamentos de I/O;</li>
+<li>dados importantes sem backup;</li>
+</ul>
+<p>uma abordagem profissional pode exigir interrupção do uso e avaliação de recuperação de dados.</p>
+<p>Isso se conecta diretamente à Aula 4 deste módulo.</p>
+<hr />
+<h1 id="crystaldiskinfo-e-smart">CrystalDiskInfo e S.M.A.R.T.<a class="headerlink" href="#crystaldiskinfo-e-smart" title="Permanent link">&para;</a></h1>
+<p>Em um HDD ainda detectado e estável o suficiente para análise lógica, ferramentas como CrystalDiskInfo podem fornecer informações como:</p>
+<ul>
+<li>horas de funcionamento;</li>
+<li>temperatura;</li>
+<li>setores realocados;</li>
+<li>erros registrados;</li>
+<li>indicadores de saúde;</li>
+<li>contadores específicos do fabricante.</li>
+</ul>
+<p>Entretanto:</p>
+<blockquote>
+<p><strong>S.M.A.R.T. não ouve o disco e não garante que um componente mecânico esteja saudável.</strong></p>
+</blockquote>
+<p>Um HDD pode apresentar comportamento anormal antes que um indicador simplificado fique vermelho.</p>
+<p>Da mesma forma, um atributo alterado precisa ser interpretado dentro do contexto do dispositivo.</p>
+<hr />
+<h1 id="e-o-ssd">E o SSD?<a class="headerlink" href="#e-o-ssd" title="Permanent link">&para;</a></h1>
+<p>SSDs não possuem:</p>
+<ul>
+<li>pratos;</li>
+<li>cabeças;</li>
+<li>motor de rotação.</li>
+</ul>
+<p>Portanto, eles não deveriam produzir cliques mecânicos de leitura como um HDD.</p>
+<p>Se um usuário afirma:</p>
+<blockquote>
+<p>“Meu SSD está clicando.”</p>
+</blockquote>
+<p>precisamos localizar melhor o som.</p>
+<p>Ele pode vir de:</p>
+<ul>
+<li>ventoinha próxima;</li>
+<li>placa-mãe;</li>
+<li>placa de vídeo;</li>
+<li>fonte;</li>
+<li>componente eletrônico vibrando;</li>
+<li>gabinete.</li>
+</ul>
+<p>Componentes eletrônicos próximos podem emitir ruído, mas não devemos atribuir automaticamente um clique ao armazenamento apenas porque o som parece vir daquela região.</p>
+<hr />
+<h1 id="bombas-de-water-cooler-aio">Bombas de water cooler AIO<a class="headerlink" href="#bombas-de-water-cooler-aio" title="Permanent link">&para;</a></h1>
+<p>Sistemas líquidos adicionam outra fonte possível de ruído: a bomba.</p>
+<p>Dependendo do projeto, podemos ouvir:</p>
+<ul>
+<li>leve vibração;</li>
+<li>som contínuo de funcionamento;</li>
+<li>breve presença de bolhas após movimentação;</li>
+<li>mudanças de som com a rotação.</li>
+</ul>
+<p>Mas sons anormais também podem indicar problemas.</p>
+<hr />
+<h1 id="gorgolejo-e-bolhas">Gorgolejo e bolhas<a class="headerlink" href="#gorgolejo-e-bolhas" title="Permanent link">&para;</a></h1>
+<p>Como aprendemos na aula de refrigeração, sistemas fechados podem conter alguma quantidade de ar.</p>
+<p>Após transporte ou alteração de posição, pequenas bolhas podem se deslocar.</p>
+<p>Isso pode produzir temporariamente:</p>
+<ul>
+<li>gorgolejo;</li>
+<li>pequenos ruídos de circulação.</li>
+</ul>
+<p>Mas ruído persistente acompanhado de:</p>
+<ul>
+<li>temperatura elevada;</li>
+<li>bomba com rotação irregular;</li>
+<li>perda de desempenho térmico;</li>
+</ul>
+<p>merece investigação.</p>
+<p>A orientação física do radiador e da bomba também pode influenciar onde o ar se acumula.</p>
+<hr />
+<h1 id="bomba-nao-deve-trabalhar-sem-liquido">Bomba não deve trabalhar sem líquido<a class="headerlink" href="#bomba-nao-deve-trabalhar-sem-liquido" title="Permanent link">&para;</a></h1>
+<p>Uma bomba depende do fluido para operar conforme o projeto.</p>
+<p>Não devemos testar um sistema líquido desmontado fazendo a bomba funcionar “seca” apenas para verificar se gira.</p>
+<p>Isso pode danificá-la.</p>
+<p>A investigação deve respeitar as orientações do fabricante e utilizar monitoramento seguro.</p>
+<hr />
+<h1 id="hwinfo-e-velocidade-da-bomba">HWiNFO e velocidade da bomba<a class="headerlink" href="#hwinfo-e-velocidade-da-bomba" title="Permanent link">&para;</a></h1>
+<p>Em sistemas compatíveis, o firmware ou softwares de monitoramento podem informar a rotação da bomba.</p>
+<p>Isso permite correlacionar:</p>
+<ul>
+<li>ruído;</li>
+<li>RPM;</li>
+<li>temperatura da CPU;</li>
+<li>carga.</li>
+</ul>
+<p>Mas uma leitura de RPM existente não prova que a circulação esteja perfeita.</p>
+<p>Assim como em outros sensores:</p>
+<blockquote>
+<p><strong>é uma evidência, não uma garantia.</strong></p>
+</blockquote>
+<hr />
+<h1 id="coil-whine">Coil whine<a class="headerlink" href="#coil-whine" title="Permanent link">&para;</a></h1>
+<p>Agora chegamos a um dos ruídos mais confundidos com defeito elétrico.</p>
+<p><em>Coil whine</em> é o nome popular dado a um som agudo associado à vibração de componentes magnéticos submetidos a correntes variáveis.</p>
+<p>Pode ocorrer em:</p>
+<ul>
+<li>placa de vídeo;</li>
+<li>fonte;</li>
+<li>placa-mãe;</li>
+<li>outros circuitos de alimentação.</li>
+</ul>
+<p>Os componentes envolvidos podem incluir:</p>
+<ul>
+<li>indutores;</li>
+<li>bobinas;</li>
+<li>transformadores.</li>
+</ul>
+<hr />
+<h1 id="por-que-uma-bobina-pode-produzir-som">Por que uma bobina pode produzir som?<a class="headerlink" href="#por-que-uma-bobina-pode-produzir-som" title="Permanent link">&para;</a></h1>
+<p>Circuitos de alimentação trabalham com chaveamento em frequências elevadas.</p>
+<p>As forças eletromagnéticas podem produzir pequenas vibrações mecânicas nos componentes e em seus materiais.</p>
+<p>Quando parte dessa vibração ou de suas modulações cai dentro da faixa audível, ouvimos um som.</p>
+<p>O resultado pode ser:</p>
+<ul>
+<li>assobio;</li>
+<li>chiado agudo;</li>
+<li>zumbido;</li>
+<li>mudança de tonalidade conforme a carga.</li>
+</ul>
+<hr />
+<h1 id="por-que-coil-whine-pode-acompanhar-o-fps">Por que coil whine pode acompanhar o FPS?<a class="headerlink" href="#por-que-coil-whine-pode-acompanhar-o-fps" title="Permanent link">&para;</a></h1>
+<p>Uma GPU pode alterar rapidamente sua carga elétrica conforme a quantidade e o tipo de trabalho executado.</p>
+<p>Em determinadas cenas, especialmente quando a taxa de quadros é muito alta, o comportamento elétrico do VRM também muda.</p>
+<p>Assim, pode ocorrer uma relação como:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Menu do jogo
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>500 FPS
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>→ ruído agudo forte
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Jogo limitado
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>60 FPS
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>→ ruído bem menor
+</code></pre></div>
+<p>Isso não significa que “os quadros por segundo produzem som”.</p>
+<p>O que muda é o padrão de carga elétrica do sistema.</p>
+<hr />
+<h1 id="coil-whine-significa-que-o-componente-vai-queimar">Coil whine significa que o componente vai queimar?<a class="headerlink" href="#coil-whine-significa-que-o-componente-vai-queimar" title="Permanent link">&para;</a></h1>
+<p>Não necessariamente.</p>
+<p>Um equipamento pode apresentar coil whine e continuar funcionando normalmente por anos.</p>
+<p>A presença do som, isoladamente, não comprova:</p>
+<ul>
+<li>curto;</li>
+<li>sobrecarga;</li>
+<li>falha iminente;</li>
+<li>alimentação inadequada.</li>
+</ul>
+<p>Entretanto, o nível de ruído pode ser considerado um problema de qualidade ou conforto acústico.</p>
+<p>Também precisamos investigar sinais adicionais.</p>
+<hr />
+<h1 id="coil-whine-pode-mudar-ao-trocar-a-fonte">Coil whine pode mudar ao trocar a fonte?<a class="headerlink" href="#coil-whine-pode-mudar-ao-trocar-a-fonte" title="Permanent link">&para;</a></h1>
+<p>Sim.</p>
+<p>O comportamento acústico de um circuito pode depender da interação entre:</p>
+<ul>
+<li>placa de vídeo;</li>
+<li>fonte;</li>
+<li>carga;</li>
+<li>tensão;</li>
+<li>frequência de chaveamento;</li>
+<li>projeto dos reguladores.</li>
+</ul>
+<p>Por isso uma GPU pode produzir determinado ruído em uma máquina e comportamento diferente em outra.</p>
+<p>Isso não significa automaticamente que uma das fontes esteja defeituosa.</p>
+<hr />
+<h1 id="limitar-fps-pode-reduzir-coil-whine">Limitar FPS pode reduzir coil whine<a class="headerlink" href="#limitar-fps-pode-reduzir-coil-whine" title="Permanent link">&para;</a></h1>
+<p>Se o ruído é claramente associado a cenas com centenas de quadros por segundo, limitar a taxa de quadros pode modificar a carga e reduzir o som.</p>
+<p>Esse teste é interessante porque é:</p>
+<ul>
+<li>reversível;</li>
+<li>não invasivo;</li>
+<li>fácil de documentar.</li>
+</ul>
+<p>Se o som muda imediatamente junto com o FPS, encontramos uma forte correlação com a carga gráfica.</p>
+<p>Mas ainda precisamos localizar qual componente está emitindo o ruído.</p>
+<hr />
+<h1 id="coil-whine-nao-e-a-mesma-coisa-que-arco-eletrico">Coil whine não é a mesma coisa que arco elétrico<a class="headerlink" href="#coil-whine-nao-e-a-mesma-coisa-que-arco-eletrico" title="Permanent link">&para;</a></h1>
+<p>Essa distinção é fundamental.</p>
+<p>Um som agudo estável que acompanha a carga pode ser coil whine.</p>
+<p>Já sinais como:</p>
+<ul>
+<li>estalos elétricos;</li>
+<li>faíscas;</li>
+<li>cheiro de material queimando;</li>
+<li>fumaça;</li>
+<li>conector derretido;</li>
+<li>falha imediata;</li>
+</ul>
+<p>exigem outra resposta.</p>
+<blockquote>
+<p><strong>Pare de utilizar o equipamento e interrompa a alimentação com segurança.</strong></p>
+</blockquote>
+<p>Não continue executando benchmarks para “ver se acontece de novo”.</p>
+<hr />
+<h1 id="estalo-unico-ao-ligar-ou-desligar">Estalo único ao ligar ou desligar<a class="headerlink" href="#estalo-unico-ao-ligar-ou-desligar" title="Permanent link">&para;</a></h1>
+<p>Um pequeno som pode ter diferentes origens, incluindo:</p>
+<ul>
+<li>relé;</li>
+<li>expansão ou contração de materiais;</li>
+<li>mecanismo interno de algum dispositivo;</li>
+<li>sistema de áudio;</li>
+<li>alimentação.</li>
+</ul>
+<p>Por isso, o contexto é essencial.</p>
+<p>Um clique previsível e documentado pelo projeto pode ser normal.</p>
+<p>Um estalo novo acompanhado de cheiro, fumaça ou falha não deve ser normalizado.</p>
+<hr />
+<h1 id="zumbido-em-50-ou-60-hz">Zumbido em 50 ou 60 Hz<a class="headerlink" href="#zumbido-em-50-ou-60-hz" title="Permanent link">&para;</a></h1>
+<p>Alguns equipamentos elétricos podem produzir um zumbido grave relacionado à frequência da rede elétrica ou a seus harmônicos.</p>
+<p>Entretanto, localizar e diagnosticar esse tipo de ruído dentro de fontes e circuitos ligados à rede exige conhecimento e instrumentos adequados.</p>
+<p>Não abrimos uma fonte para investigar o som.</p>
+<p>Como vimos na Aula 6:</p>
+<blockquote>
+<p><strong>capacitores internos podem manter energia perigosa mesmo depois de o equipamento ser desconectado.</strong></p>
+</blockquote>
+<p>A análise interna de fontes deve ser realizada por profissional qualificado.</p>
+<hr />
+<h1 id="a-fonte-de-alimentacao-pode-produzir-varios-sons-diferentes">A fonte de alimentação pode produzir vários sons diferentes<a class="headerlink" href="#a-fonte-de-alimentacao-pode-produzir-varios-sons-diferentes" title="Permanent link">&para;</a></h1>
+<p>Possíveis fontes acústicas incluem:</p>
+<ul>
+<li>ventoinha;</li>
+<li>rolamento;</li>
+<li>fluxo de ar;</li>
+<li>coil whine;</li>
+<li>relé em determinados projetos;</li>
+<li>vibração mecânica.</li>
+</ul>
+<p>Então a frase:</p>
+<blockquote>
+<p>“Está vindo da fonte.”</p>
+</blockquote>
+<p>não encerra a investigação.</p>
+<p>Ainda precisamos caracterizar o tipo de som e verificar se existem sinais de risco.</p>
+<hr />
+<h1 id="nunca-abra-a-fonte-para-localizar-o-ruido">Nunca abra a fonte para localizar o ruído<a class="headerlink" href="#nunca-abra-a-fonte-para-localizar-o-ruido" title="Permanent link">&para;</a></h1>
+<p>Essa regra merece ser repetida.</p>
+<p>Não devemos:</p>
+<ul>
+<li>remover a tampa;</li>
+<li>tocar componentes internos;</li>
+<li>medir diretamente o lado da rede sem treinamento;</li>
+<li>improvisar descargas de capacitores;</li>
+<li>introduzir ferramentas em uma fonte energizada.</li>
+</ul>
+<p>Podemos investigar externamente:</p>
+<ul>
+<li>quando o som aparece;</li>
+<li>se acompanha carga;</li>
+<li>se acompanha a ventoinha;</li>
+<li>se há cheiro;</li>
+<li>se existem desligamentos;</li>
+<li>se há sinais visíveis nos conectores externos;</li>
+<li>se outra fonte conhecida e adequada altera o comportamento.</li>
+</ul>
+<hr />
+<h1 id="ruido-e-temperatura-devem-ser-analisados-juntos">Ruído e temperatura devem ser analisados juntos<a class="headerlink" href="#ruido-e-temperatura-devem-ser-analisados-juntos" title="Permanent link">&para;</a></h1>
+<p>Considere duas máquinas.</p>
+<h2 id="maquina-a">Máquina A<a class="headerlink" href="#maquina-a" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ventoinhas muito audíveis;</li>
+<li>temperaturas normais;</li>
+<li>clocks estáveis;</li>
+<li>sem travamentos.</li>
+</ul>
+<p>Hipótese inicial:</p>
+<ul>
+<li>curva de ventoinha agressiva;</li>
+<li>gabinete restritivo;</li>
+<li>projeto acústico.</li>
+</ul>
+<h2 id="maquina-b">Máquina B<a class="headerlink" href="#maquina-b" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ventoinhas praticamente silenciosas;</li>
+<li>CPU atingindo limite térmico;</li>
+<li>clocks caindo;</li>
+<li>ventoinha reportando 0 RPM.</li>
+</ul>
+<p>Aqui o silêncio não é uma qualidade.</p>
+<p>Ele pode ser evidência de que a refrigeração não está funcionando.</p>
+<blockquote>
+<p><strong>Silencioso não significa saudável. Barulhento não significa defeituoso.</strong></p>
+</blockquote>
+<hr />
+<h1 id="mudanca-de-ruido-apos-limpeza">Mudança de ruído após limpeza<a class="headerlink" href="#mudanca-de-ruido-apos-limpeza" title="Permanent link">&para;</a></h1>
+<p>Depois de uma manutenção, o computador passa a vibrar.</p>
+<p>Isso pode ocorrer se:</p>
+<ul>
+<li>uma ventoinha ficou mal fixada;</li>
+<li>um cabo foi reposicionado perto das pás;</li>
+<li>um filtro não foi encaixado;</li>
+<li>um painel lateral ficou frouxo;</li>
+<li>a máquina foi movimentada e um HDD passou a transmitir mais vibração.</li>
+</ul>
+<p>A relação temporal com a intervenção é uma evidência importante.</p>
+<p>Sempre que um defeito surge após manutenção, devemos revisar primeiro aquilo que foi alterado.</p>
+<hr />
+<h1 id="mudanca-de-ruido-apos-upgrade">Mudança de ruído após upgrade<a class="headerlink" href="#mudanca-de-ruido-apos-upgrade" title="Permanent link">&para;</a></h1>
+<p>Depois de instalar uma GPU mais potente, o computador fica muito mais barulhento.</p>
+<p>Isso pode acontecer mesmo sem defeito.</p>
+<p>A nova placa pode:</p>
+<ul>
+<li>consumir mais energia;</li>
+<li>produzir mais calor;</li>
+<li>aquecer o interior do gabinete;</li>
+<li>fazer as ventoinhas da CPU e gabinete acelerarem;</li>
+<li>modificar a carga da fonte;</li>
+<li>introduzir coil whine.</li>
+</ul>
+<p>Portanto, o ruído pode ser uma consequência sistêmica do upgrade.</p>
+<hr />
+<h1 id="como-localizar-um-ruido-sem-desmontar-o-equipamento-energizado">Como localizar um ruído sem desmontar o equipamento energizado<a class="headerlink" href="#como-localizar-um-ruido-sem-desmontar-o-equipamento-energizado" title="Permanent link">&para;</a></h1>
+<p>O som pode se refletir no gabinete e enganar nossa percepção.</p>
+<p>Uma fonte instalada na parte inferior pode parecer estar emitindo um ruído que realmente vem da GPU.</p>
+<p>Um método seguro começa com observação externa.</p>
+<p>Registre:</p>
+<ul>
+<li>posição aparente do som;</li>
+<li>momento em que surge;</li>
+<li>relação com carga;</li>
+<li>relação com RPM;</li>
+<li>relação com FPS;</li>
+<li>temperatura;</li>
+<li>consumo informado;</li>
+<li>alterações recentes.</li>
+</ul>
+<p>Depois, altere uma variável segura por vez.</p>
+<hr />
+<h1 id="o-principio-da-correlacao">O princípio da correlação<a class="headerlink" href="#o-principio-da-correlacao" title="Permanent link">&para;</a></h1>
+<p>Imagine que o ruído aparece durante um jogo.</p>
+<p>Você observa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GPU em 20%  → ruído quase ausente
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>GPU em 60%  → ruído moderado
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>GPU em 99%  → ruído forte
+</code></pre></div>
+<p>Essa correlação sugere relação com a carga gráfica.</p>
+<p>Mas ainda não sabemos se a origem é:</p>
+<ul>
+<li>GPU;</li>
+<li>fonte;</li>
+<li>ventoinha da GPU;</li>
+<li>ventoinhas do gabinete reagindo ao calor.</li>
+</ul>
+<p>Agora registramos também RPM:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GPU 99%
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Ventoinha GPU 30% → ruído agudo permanece
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Ventoinha GPU 70% → ruído agudo permanece + fluxo de ar aumenta
+</code></pre></div>
+<p>Isso pode reduzir a suspeita de que o som agudo venha exclusivamente das pás.</p>
+<p>O diagnóstico avança por eliminação de hipóteses.</p>
+<hr />
+<h1 id="nao-segure-ventoinhas-com-os-dedos">Não segure ventoinhas com os dedos<a class="headerlink" href="#nao-segure-ventoinhas-com-os-dedos" title="Permanent link">&para;</a></h1>
+<p>Uma prática inadequada é tocar nas pás para descobrir qual ventoinha está fazendo ruído.</p>
+<p>Isso pode:</p>
+<ul>
+<li>machucar;</li>
+<li>quebrar pás;</li>
+<li>danificar o motor;</li>
+<li>introduzir objetos no equipamento energizado.</li>
+</ul>
+<p>Se precisamos correlacionar uma ventoinha com o som, utilizamos métodos seguros, como:</p>
+<ul>
+<li>controle por software quando suportado;</li>
+<li>curva temporária no firmware;</li>
+<li>inspeção com o equipamento desligado;</li>
+<li>teste isolado realizado de forma apropriada fora da situação de risco.</li>
+</ul>
+<hr />
+<h1 id="o-smartphone-como-instrumento-de-documentacao">O smartphone como instrumento de documentação<a class="headerlink" href="#o-smartphone-como-instrumento-de-documentacao" title="Permanent link">&para;</a></h1>
+<p>Um telefone pode ser extremamente útil durante uma investigação.</p>
+<p>Podemos registrar:</p>
+<ul>
+<li>áudio;</li>
+<li>vídeo;</li>
+<li>horário;</li>
+<li>comportamento visual;</li>
+<li>posição aproximada do ruído.</li>
+</ul>
+<p>Uma gravação permite comparar:</p>
+<ul>
+<li>antes e depois;</li>
+<li>máquina fria e quente;</li>
+<li>repouso e carga;</li>
+<li>FPS livre e limitado;</li>
+<li>gabinete aberto e fechado, quando seguro e pertinente.</li>
+</ul>
+<p>Isso é muito melhor do que depender da memória:</p>
+<blockquote>
+<p>“Acho que ontem fazia um barulho diferente.”</p>
+</blockquote>
+<hr />
+<h1 id="limitacoes-da-gravacao-do-celular">Limitações da gravação do celular<a class="headerlink" href="#limitacoes-da-gravacao-do-celular" title="Permanent link">&para;</a></h1>
+<p>O microfone de um smartphone possui:</p>
+<ul>
+<li>processamento automático;</li>
+<li>redução de ruído;</li>
+<li>controle de ganho;</li>
+<li>resposta de frequência limitada;</li>
+<li>compressão.</li>
+</ul>
+<p>Portanto, ele não é instrumento de metrologia acústica.</p>
+<p>Uma gravação serve principalmente para:</p>
+<ul>
+<li>documentação;</li>
+<li>comparação;</li>
+<li>identificação de padrões.</li>
+</ul>
+<p>Não devemos interpretar a intensidade registrada como medição profissional de decibéis.</p>
+<hr />
+<h1 id="espectrograma">Espectrograma<a class="headerlink" href="#espectrograma" title="Permanent link">&para;</a></h1>
+<p>Softwares de áudio, como Audacity, podem representar um som em função de:</p>
+<ul>
+<li>tempo;</li>
+<li>frequência;</li>
+<li>intensidade relativa.</li>
+</ul>
+<p>Um espectrograma pode ajudar a observar se determinado ruído possui:</p>
+<ul>
+<li>frequência relativamente estável;</li>
+<li>múltiplos harmônicos;</li>
+<li>mudanças associadas à carga;</li>
+<li>pulsos repetitivos.</li>
+</ul>
+<p>Isso pode ser interessante pedagogicamente para comparar:</p>
+<ul>
+<li>ventoinha;</li>
+<li>coil whine;</li>
+<li>clique;</li>
+<li>ruído de HDD.</li>
+</ul>
+<p>Mas um pico em determinada frequência não identifica automaticamente qual componente o produziu.</p>
+<hr />
+<h1 id="ventoinha-e-frequencia-do-som">Ventoinha e frequência do som<a class="headerlink" href="#ventoinha-e-frequencia-do-som" title="Permanent link">&para;</a></h1>
+<p>Uma ventoinha girando possui uma frequência mecânica relacionada à rotação.</p>
+<p>Porém o som percebido não depende apenas do número de rotações.</p>
+<p>Também influenciam:</p>
+<ul>
+<li>quantidade de pás;</li>
+<li>geometria;</li>
+<li>turbulência;</li>
+<li>rolamentos;</li>
+<li>ressonância;</li>
+<li>estrutura do gabinete.</li>
+</ul>
+<p>Assim, transformar RPM diretamente em “frequência do ruído” seria uma simplificação inadequada.</p>
+<hr />
+<h1 id="vibracao-do-gabinete">Vibração do gabinete<a class="headerlink" href="#vibracao-do-gabinete" title="Permanent link">&para;</a></h1>
+<p>Uma vibração pode ser transmitida por:</p>
+<ul>
+<li>ventoinha;</li>
+<li>HDD;</li>
+<li>bomba;</li>
+<li>transformador;</li>
+<li>painel solto.</li>
+</ul>
+<p>O gabinete pode amplificá-la.</p>
+<p>Isso explica por que um componente parece silencioso quando testado em outra estrutura, mas produz ruído em determinada montagem.</p>
+<p>Materiais, pressão dos parafusos e pontos de contato modificam a resposta mecânica.</p>
+<hr />
+<h1 id="ruido-de-expansao-termica">Ruído de expansão térmica<a class="headerlink" href="#ruido-de-expansao-termica" title="Permanent link">&para;</a></h1>
+<p>Materiais aquecem e se expandem.</p>
+<p>Ao esfriar, contraem.</p>
+<p>Em alguns equipamentos podem ocorrer pequenos estalos devido a mudanças dimensionais em:</p>
+<ul>
+<li>plástico;</li>
+<li>metal;</li>
+<li>dissipadores;</li>
+<li>carcaças.</li>
+</ul>
+<p>Esse comportamento pode aparecer após:</p>
+<ul>
+<li>carga intensa;</li>
+<li>desligamento;</li>
+<li>resfriamento.</li>
+</ul>
+<p>Mais uma vez, o contexto diferencia um pequeno estalo estrutural de um evento elétrico acompanhado por cheiro ou falha.</p>
+<hr />
+<h1 id="alto-falantes-tambem-podem-confundir-o-diagnostico">Alto-falantes também podem confundir o diagnóstico<a class="headerlink" href="#alto-falantes-tambem-podem-confundir-o-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Ruídos percebidos “no computador” podem vir do sistema de áudio.</p>
+<p>Exemplos:</p>
+<ul>
+<li>interferência;</li>
+<li>aterramento;</li>
+<li>cabo de áudio;</li>
+<li>amplificador;</li>
+<li>caixa de som;</li>
+<li>entrada analógica;</li>
+<li>dispositivo USB.</li>
+</ul>
+<p>Um chiado que desaparece ao mutar ou desconectar o sistema de áudio externo pode não ter relação com ventoinhas ou VRM.</p>
+<p>A cadeia precisa ser isolada.</p>
+<hr />
+<h1 id="sons-do-sistema-operacional-nao-sao-beeps-de-post">Sons do sistema operacional não são beeps de POST<a class="headerlink" href="#sons-do-sistema-operacional-nao-sao-beeps-de-post" title="Permanent link">&para;</a></h1>
+<p>Windows, Linux e outros sistemas podem reproduzir alertas por meio dos alto-falantes.</p>
+<p>Esses sons são diferentes de códigos emitidos pelo firmware durante a inicialização.</p>
+<p>Pergunta investigativa importante:</p>
+<blockquote>
+<p>O som existe antes mesmo de o sistema operacional carregar?</p>
+</blockquote>
+<p>Essa diferença ajuda a localizar a camada responsável.</p>
+<hr />
+<h1 id="logs-e-som-podem-ser-correlacionados">Logs e som podem ser correlacionados<a class="headerlink" href="#logs-e-som-podem-ser-correlacionados" title="Permanent link">&para;</a></h1>
+<p>Imagine que um estalo ou perda momentânea de vídeo ocorre às 19:42.</p>
+<p>Se registrarmos o horário, podemos procurar no sistema eventos próximos, como:</p>
+<ul>
+<li>reinicialização de driver;</li>
+<li>desligamento inesperado;</li>
+<li>erro de armazenamento;</li>
+<li>falha de aplicativo;</li>
+<li>evento de energia.</li>
+</ul>
+<p>A ausência de log não elimina uma falha física.</p>
+<p>Mas a correlação temporal pode ser extremamente valiosa.</p>
+<hr />
+<h1 id="estudo-de-caso-1-ruido-agudo-somente-em-menus-de-jogo">Estudo de Caso 1 — Ruído agudo somente em menus de jogo<a class="headerlink" href="#estudo-de-caso-1-ruido-agudo-somente-em-menus-de-jogo" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>jogo normal durante partidas;</li>
+<li>menu chega a centenas de FPS;</li>
+<li>ruído agudo aparece no menu;</li>
+<li>limitar para 120 FPS reduz o som imediatamente;</li>
+<li>temperaturas normais;</li>
+<li>nenhum travamento.</li>
+</ul>
+<p>A relação entre o som e a carga elétrica variável torna coil whine uma hipótese forte.</p>
+<p>Ainda precisamos localizar se o ruído vem da placa de vídeo ou da fonte.</p>
+<p>Não há evidência suficiente para afirmar que qualquer uma delas esteja prestes a falhar.</p>
+<hr />
+<h1 id="estudo-de-caso-2-vibracao-em-determinada-rotacao">Estudo de Caso 2 — Vibração em determinada rotação<a class="headerlink" href="#estudo-de-caso-2-vibracao-em-determinada-rotacao" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>computador silencioso em repouso;</li>
+<li>entre 1.050 e 1.150 RPM surge vibração grave;</li>
+<li>acima de 1.300 RPM o ruído diminui;</li>
+<li>temperaturas normais.</li>
+</ul>
+<p>Hipótese importante:</p>
+<ul>
+<li>ressonância mecânica do gabinete ou de algum painel.</li>
+</ul>
+<p>A ventoinha pode estar saudável e apenas excitar uma frequência estrutural específica.</p>
+<hr />
+<h1 id="estudo-de-caso-3-cliques-e-arquivos-demorando-para-abrir">Estudo de Caso 3 — Cliques e arquivos demorando para abrir<a class="headerlink" href="#estudo-de-caso-3-cliques-e-arquivos-demorando-para-abrir" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>HDD antigo;</li>
+<li>cliques repetitivos;</li>
+<li>sistema congela ao acessar determinadas pastas;</li>
+<li>cópias apresentam erros;</li>
+<li>não existe backup atualizado.</li>
+</ul>
+<p>Aqui a prioridade não é executar testes agressivos.</p>
+<p>A prioridade é preservar os dados e reduzir a atividade desnecessária do disco.</p>
+<p>O ruído, combinado com erros de I/O, muda completamente o nível de risco.</p>
+<hr />
+<h1 id="estudo-de-caso-4-gorgolejo-apos-transportar-o-computador">Estudo de Caso 4 — Gorgolejo após transportar o computador<a class="headerlink" href="#estudo-de-caso-4-gorgolejo-apos-transportar-o-computador" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>computador com AIO;</li>
+<li>ruído de líquido começou após transporte;</li>
+<li>temperaturas continuam normais;</li>
+<li>bomba reporta rotação consistente;</li>
+<li>som diminui após algum tempo de funcionamento.</li>
+</ul>
+<p>É possível que o transporte tenha deslocado pequenas bolhas.</p>
+<p>Isso não comprova defeito da bomba.</p>
+<p>Mas se o ruído persistir e vier acompanhado de piora térmica, o sistema deve ser investigado com mais profundidade.</p>
+<hr />
+<h1 id="estudo-de-caso-5-estalo-cheiro-e-desligamento">Estudo de Caso 5 — Estalo, cheiro e desligamento<a class="headerlink" href="#estudo-de-caso-5-estalo-cheiro-e-desligamento" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>estalo forte;</li>
+<li>computador desliga;</li>
+<li>cheiro de material queimado;</li>
+<li>não inicializa novamente.</li>
+</ul>
+<p>A resposta correta não é:</p>
+<blockquote>
+<p>“Vamos ligar outra vez para reproduzir.”</p>
+</blockquote>
+<p>Esse cenário possui sinais de possível falha elétrica.</p>
+<p>O equipamento deve permanecer desligado até avaliação segura.</p>
+<hr />
+<h1 id="estudo-de-caso-6-ventoinha-raspando-somente-com-gabinete-em-pe">Estudo de Caso 6 — Ventoinha raspando somente com gabinete em pé<a class="headerlink" href="#estudo-de-caso-6-ventoinha-raspando-somente-com-gabinete-em-pe" title="Permanent link">&para;</a></h1>
+<p>Sintomas:</p>
+<ul>
+<li>gabinete deitado: ruído praticamente desaparece;</li>
+<li>gabinete em posição normal: raspagem retorna;</li>
+<li>rotação oscila;</li>
+<li>ventoinha é antiga.</li>
+</ul>
+<p>A mudança com a orientação sugere um problema mecânico relacionado ao eixo ou rolamento.</p>
+<p>Essa é uma evidência muito mais específica do que simplesmente dizer que “o computador faz barulho”.</p>
+<hr />
+<h1 id="estudo-de-caso-7-som-apos-troca-da-gpu">Estudo de Caso 7 — Som após troca da GPU<a class="headerlink" href="#estudo-de-caso-7-som-apos-troca-da-gpu" title="Permanent link">&para;</a></h1>
+<p>Antes do upgrade:</p>
+<ul>
+<li>computador relativamente silencioso.</li>
+</ul>
+<p>Depois:</p>
+<ul>
+<li>maior fluxo de ar;</li>
+<li>ventoinhas do gabinete aceleram;</li>
+<li>fonte também aumenta a ventilação;</li>
+<li>surge leve coil whine em FPS elevado.</li>
+</ul>
+<p>Não existe um único ruído novo.</p>
+<p>Todo o perfil acústico da máquina mudou porque:</p>
+<ul>
+<li>consumo aumentou;</li>
+<li>calor aumentou;</li>
+<li>ventilação aumentou;</li>
+<li>comportamento elétrico mudou.</li>
+</ul>
+<p>O computador deve ser analisado como sistema.</p>
+<hr />
+<h1 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h1>
+<h3 id="todo-coil-whine-indica-defeito-grave">“Todo coil whine indica defeito grave.”<a class="headerlink" href="#todo-coil-whine-indica-defeito-grave" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<p>Pode ser um comportamento acústico do circuito sem falha funcional.</p>
+<hr />
+<h3 id="tres-beeps-sempre-significam-defeito-na-memoria-ram">“Três beeps sempre significam defeito na memória RAM.”<a class="headerlink" href="#tres-beeps-sempre-significam-defeito-na-memoria-ram" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<p>Os códigos dependem da implementação do firmware e da placa-mãe.</p>
+<hr />
+<h3 id="um-hdd-pode-produzir-sons-durante-funcionamento-normal">“Um HDD pode produzir sons durante funcionamento normal.”<a class="headerlink" href="#um-hdd-pode-produzir-sons-durante-funcionamento-normal" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<p>Ele possui componentes eletromecânicos.</p>
+<hr />
+<h3 id="cliques-novos-acompanhados-de-erros-de-leitura-merecem-atencao-imediata">“Cliques novos acompanhados de erros de leitura merecem atenção imediata.”<a class="headerlink" href="#cliques-novos-acompanhados-de-erros-de-leitura-merecem-atencao-imediata" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<p>Especialmente quando existem dados importantes sem backup.</p>
+<hr />
+<h3 id="se-a-ventoinha-faz-barulho-ela-necessariamente-esta-quebrada">“Se a ventoinha faz barulho, ela necessariamente está quebrada.”<a class="headerlink" href="#se-a-ventoinha-faz-barulho-ela-necessariamente-esta-quebrada" title="Permanent link">&para;</a></h3>
+<p><strong>Mito.</strong></p>
+<p>O som pode vir do próprio fluxo de ar ou de ressonância estrutural.</p>
+<hr />
+<h3 id="um-ruido-que-muda-junto-com-o-fps-pode-fornecer-uma-pista-sobre-a-carga-eletrica-da-gpu">“Um ruído que muda junto com o FPS pode fornecer uma pista sobre a carga elétrica da GPU.”<a class="headerlink" href="#um-ruido-que-muda-junto-com-o-fps-pode-fornecer-uma-pista-sobre-a-carga-eletrica-da-gpu" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<p>Essa correlação é típica em alguns casos de coil whine.</p>
+<hr />
+<h3 id="se-a-fonte-esta-fazendo-ruido-podemos-abri-la-para-localizar-a-peca">“Se a fonte está fazendo ruído, podemos abri-la para localizar a peça.”<a class="headerlink" href="#se-a-fonte-esta-fazendo-ruido-podemos-abri-la-para-localizar-a-peca" title="Permanent link">&para;</a></h3>
+<p><strong>Mito perigoso.</strong></p>
+<p>A investigação interna de fontes exige profissional qualificado.</p>
+<hr />
+<h3 id="cheiro-de-queimado-fumaca-ou-faiscas-mudam-imediatamente-a-prioridade-da-investigacao">“Cheiro de queimado, fumaça ou faíscas mudam imediatamente a prioridade da investigação.”<a class="headerlink" href="#cheiro-de-queimado-fumaca-ou-faiscas-mudam-imediatamente-a-prioridade-da-investigacao" title="Permanent link">&para;</a></h3>
+<p><strong>Evidência.</strong></p>
+<p>A segurança passa a ser prioridade absoluta.</p>
+<hr />
+<h1 id="como-um-laboratorio-profissional-investigaria-um-ruido">Como um laboratório profissional investigaria um ruído?<a class="headerlink" href="#como-um-laboratorio-profissional-investigaria-um-ruido" title="Permanent link">&para;</a></h1>
+<p>Dependendo do problema, um laboratório pode utilizar:</p>
+<ul>
+<li>microfones de medição;</li>
+<li>analisadores de espectro;</li>
+<li>acelerômetros;</li>
+<li>câmera térmica;</li>
+<li>osciloscópio;</li>
+<li>fontes de bancada em circuitos apropriados;</li>
+<li>instrumentos de vibração;</li>
+<li>inspeção microscópica;</li>
+<li>equipamentos para teste de rolamentos e motores.</li>
+</ul>
+<p>Em eletrônica de potência, a investigação pode correlacionar:</p>
+<ul>
+<li>frequência de chaveamento;</li>
+<li>carga;</li>
+<li>corrente;</li>
+<li>vibração;</li>
+<li>temperatura.</li>
+</ul>
+<p>Em um HDD, laboratórios de recuperação podem avaliar:</p>
+<ul>
+<li>comportamento mecânico;</li>
+<li>capacidade de leitura;</li>
+<li>erros;</li>
+<li>estabilidade do conjunto;</li>
+</ul>
+<p>sem submeter o dispositivo a tentativas desnecessárias de inicialização.</p>
+<p>O aluno não precisa possuir esses instrumentos para compreender o método.</p>
+<hr />
+<h1 id="laboratorio-guiado-construindo-um-mapa-acustico-do-computador">🔬 Laboratório guiado — construindo um mapa acústico do computador<a class="headerlink" href="#laboratorio-guiado-construindo-um-mapa-acustico-do-computador" title="Permanent link">&para;</a></h1>
+<p>Esta atividade é não invasiva e deve ser realizada apenas em um computador que não apresente sinais de risco elétrico ou mecânico grave.</p>
+<h2 id="etapa-1-estado-de-referencia">Etapa 1 — Estado de referência<a class="headerlink" href="#etapa-1-estado-de-referencia" title="Permanent link">&para;</a></h2>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Computador:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>CPU:
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>GPU:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Fonte:
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Armazenamento:
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Cooler:
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Quantidade de ventoinhas:
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Temperatura ambiente aproximada:
+</code></pre></div>
+<p>Observe o computador em repouso.</p>
+<p>Registre:</p>
+<ul>
+<li>sons presentes;</li>
+<li>rotação das ventoinhas;</li>
+<li>temperatura;</li>
+<li>uso de CPU;</li>
+<li>uso de GPU;</li>
+<li>atividade de armazenamento.</li>
+</ul>
+<hr />
+<h2 id="etapa-2-identificar-quando-o-ruido-aparece">Etapa 2 — Identificar quando o ruído aparece<a class="headerlink" href="#etapa-2-identificar-quando-o-ruido-aparece" title="Permanent link">&para;</a></h2>
+<p>Utilize uma tarefa conhecida e segura.</p>
+<p>Pode ser:</p>
+<ul>
+<li>abrir aplicações;</li>
+<li>copiar um arquivo não crítico;</li>
+<li>executar um jogo;</li>
+<li>reproduzir vídeo;</li>
+<li>realizar uma tarefa de CPU moderada.</li>
+</ul>
+<p>O objetivo não é levar o computador ao limite.</p>
+<p>O objetivo é descobrir se o som depende da carga.</p>
+<hr />
+<h2 id="etapa-3-registrar-sensores">Etapa 3 — Registrar sensores<a class="headerlink" href="#etapa-3-registrar-sensores" title="Permanent link">&para;</a></h2>
+<p>Com HWiNFO ou ferramenta equivalente, acompanhe quando disponível:</p>
+<ul>
+<li>CPU;</li>
+<li>GPU;</li>
+<li>temperaturas;</li>
+<li>RPM;</li>
+<li>consumo;</li>
+<li>uso de armazenamento.</li>
+</ul>
+<p>Anote o instante em que o ruído começa.</p>
+<hr />
+<h2 id="etapa-4-registrar-audio-e-video">Etapa 4 — Registrar áudio e vídeo<a class="headerlink" href="#etapa-4-registrar-audio-e-video" title="Permanent link">&para;</a></h2>
+<p>Utilize o smartphone para documentar:</p>
+<ul>
+<li>som em repouso;</li>
+<li>som durante a condição que reproduz o defeito;</li>
+<li>posição aproximada do ruído;</li>
+<li>comportamento do computador no mesmo momento.</li>
+</ul>
+<p>Mantenha distância segura das partes móveis.</p>
+<hr />
+<h2 id="etapa-5-alterar-uma-variavel-segura">Etapa 5 — Alterar uma variável segura<a class="headerlink" href="#etapa-5-alterar-uma-variavel-segura" title="Permanent link">&para;</a></h2>
+<p>Exemplos:</p>
+<ul>
+<li>limitar FPS;</li>
+<li>mudar temporariamente uma curva de ventoinha dentro de limites seguros;</li>
+<li>executar a mesma tarefa com carga gráfica menor;</li>
+<li>comparar gabinete aberto e fechado quando isso puder ser feito com segurança.</li>
+</ul>
+<p>Não altere várias variáveis ao mesmo tempo.</p>
+<hr />
+<h2 id="etapa-6-construir-uma-tabela-de-correlacao">Etapa 6 — Construir uma tabela de correlação<a class="headerlink" href="#etapa-6-construir-uma-tabela-de-correlacao" title="Permanent link">&para;</a></h2>
+<p>Exemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Condição</th>
+<th style="text-align: right;">GPU</th>
+<th style="text-align: right;">Ventoinha GPU</th>
+<th style="text-align: right;">FPS</th>
+<th>Ruído</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Área de trabalho</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">0 RPM</td>
+<td style="text-align: right;">—</td>
+<td>Quase ausente</td>
+</tr>
+<tr>
+<td>Jogo limitado</td>
+<td style="text-align: right;">70%</td>
+<td style="text-align: right;">1.200 RPM</td>
+<td style="text-align: right;">60</td>
+<td>Leve</td>
+</tr>
+<tr>
+<td>Jogo sem limite</td>
+<td style="text-align: right;">98%</td>
+<td style="text-align: right;">1.250 RPM</td>
+<td style="text-align: right;">350</td>
+<td>Agudo forte</td>
+</tr>
+</tbody>
+</table>
+<p>Observe que a rotação praticamente não mudou entre os dois últimos testes, mas o FPS e a carga elétrica mudaram muito.</p>
+<p>Isso fortalece a hipótese de um ruído eletromecânico, como coil whine, em vez de simples ruído aerodinâmico das ventoinhas.</p>
+<hr />
+<h1 id="registro-para-o-dossie-da-investigacao">Registro para o Dossiê da Investigação<a class="headerlink" href="#registro-para-o-dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<p>Ao documentar um caso acústico, registre pelo menos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Sintoma relatado:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Som observado:
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Momento em que aparece:
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Duração:
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Carga associada:
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Temperaturas:
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>RPM:
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Alterações recentes:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Sinais de risco presentes ou ausentes:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Testes não invasivos realizados:
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Variável alterada em cada teste:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>Resultado observado:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>Hipótese principal:
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>Hipóteses ainda possíveis:
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>Ação recomendada:
+</code></pre></div>
+<p>Esse registro prepara o aluno para a próxima etapa do módulo: transformar observações dispersas em um procedimento técnico completo.</p>
+<hr />
+<h1 id="quando-interromper-imediatamente-o-uso">Quando interromper imediatamente o uso<a class="headerlink" href="#quando-interromper-imediatamente-o-uso" title="Permanent link">&para;</a></h1>
+<p>Alguns sinais alteram completamente a prioridade do diagnóstico.</p>
+<p>Pare o equipamento e evite novas tentativas de carga quando houver:</p>
+<ul>
+<li>fumaça;</li>
+<li>cheiro de queimado;</li>
+<li>faíscas;</li>
+<li>estalos elétricos fortes;</li>
+<li>cabo ou conector derretido;</li>
+<li>ruído mecânico violento;</li>
+<li>ventoinha quebrada atingindo outros componentes;</li>
+<li>vazamento de líquido;</li>
+<li>choque ou sensação elétrica no gabinete;</li>
+<li>HDD com ruído anormal associado a dados críticos e erros graves de leitura.</li>
+</ul>
+<p>O objetivo deixa de ser reproduzir o sintoma.</p>
+<p>Passa a ser preservar:</p>
+<ul>
+<li>pessoas;</li>
+<li>equipamento;</li>
+<li>dados;</li>
+<li>evidências.</li>
+</ul>
+<hr />
+<h1 id="quando-o-ruido-pode-ser-apenas-uma-caracteristica-do-projeto">Quando o ruído pode ser apenas uma característica do projeto<a class="headerlink" href="#quando-o-ruido-pode-ser-apenas-uma-caracteristica-do-projeto" title="Permanent link">&para;</a></h1>
+<p>Alguns comportamentos podem ser normais dentro de determinado equipamento:</p>
+<ul>
+<li>fluxo de ar em alta carga;</li>
+<li>ventoinhas acelerando;</li>
+<li>leve funcionamento de bomba;</li>
+<li>atividade mecânica típica de HDD;</li>
+<li>clique de relé previsto pelo projeto;</li>
+<li>coil whine sem instabilidade funcional.</li>
+</ul>
+<p>Isso não significa que todo ruído deva ser ignorado.</p>
+<p>O investigador compara:</p>
+<ul>
+<li>documentação;</li>
+<li>histórico;</li>
+<li>intensidade;</li>
+<li>mudança recente;</li>
+<li>sintomas associados.</li>
+</ul>
+<p>A palavra-chave é <strong>contexto</strong>.</p>
+<hr />
+<h1 id="o-que-um-perito-observaria">O que um perito observaria?<a class="headerlink" href="#o-que-um-perito-observaria" title="Permanent link">&para;</a></h1>
+<p>Um investigador experiente não perguntaria apenas:</p>
+<blockquote>
+<p>“De onde vem o barulho?”</p>
+</blockquote>
+<p>Ele procuraria estabelecer relações:</p>
+<ul>
+<li>O som aparece antes do sistema operacional?</li>
+<li>Existe código sonoro documentado pelo fabricante?</li>
+<li>O ruído acompanha RPM?</li>
+<li>Acompanha FPS?</li>
+<li>Acompanha atividade do HDD?</li>
+<li>Muda com temperatura?</li>
+<li>Surgiu depois de manutenção?</li>
+<li>Surgiu após transporte?</li>
+<li>Surgiu após upgrade?</li>
+<li>Existe cheiro?</li>
+<li>Há perda de desempenho?</li>
+<li>Existem travamentos?</li>
+<li>Há registros no sistema no mesmo horário?</li>
+<li>O som é mecânico, aerodinâmico, hidráulico ou elétrico?</li>
+<li>O equipamento pode continuar operando com segurança?</li>
+<li>Existem dados que precisam ser preservados antes de novos testes?</li>
+</ul>
+<p>A investigação acústica segue exatamente o mesmo método das demais aulas:</p>
+<blockquote>
+<p><strong>Sintoma → observação → evidência → hipótese → teste controlado → conclusão provisória → validação.</strong></p>
+</blockquote>
+<hr />
+<h1 id="conexao-com-a-proxima-investigacao">Conexão com a próxima investigação<a class="headerlink" href="#conexao-com-a-proxima-investigacao" title="Permanent link">&para;</a></h1>
+<p>Até agora investigamos componentes individuais:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>CPU
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>RAM
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Armazenamento
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Placa-mãe
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Fonte
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Refrigeração
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>GPU
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Monitor
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Cabos
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Ruídos
+</code></pre></div>
+<p>Mas um computador real não chega à bancada dizendo:</p>
+<blockquote>
+<p>“Meu problema está exatamente no subsistema de memória.”</p>
+</blockquote>
+<p>O cliente normalmente diz algo como:</p>
+<blockquote>
+<p>“Ele não liga.”</p>
+<p>“Está lento.”</p>
+<p>“Reinicia sozinho.”</p>
+<p>“Às vezes dá tela preta.”</p>
+<p>“Ontem fez um barulho estranho.”</p>
+</blockquote>
+<p>Na próxima aula deixaremos de investigar componentes isoladamente.</p>
+<p>Vamos receber uma máquina desconhecida e construir uma sequência profissional para decidir:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>O que observar primeiro?
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>        ↓
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>O que preservar?
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        ↓
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Qual teste vem antes?
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        ↓
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Quando desmontar?
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        ↓
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>Quando testar software?
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        ↓
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>Quando trocar uma peça de referência?
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        ↓
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>Como separar hipótese de diagnóstico?
+</code></pre></div>
+<h1 id="proxima-aula-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido">Próxima aula — Da Bancada ao Diagnóstico: Como Investigar um Computador Desconhecido<a class="headerlink" href="#proxima-aula-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido" title="Permanent link">&para;</a></h1>
+<p>Essa será a aula em que todo o conhecimento do módulo começará a funcionar como um único método de trabalho.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-09-monitores-e-cabos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
