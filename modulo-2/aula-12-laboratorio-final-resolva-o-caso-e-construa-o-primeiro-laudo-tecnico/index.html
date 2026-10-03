@@ -1,0 +1,2729 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-2/aula-12-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico/">
+      
+      
+        <link rel="prev" href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-investigacao-computacional-i" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-09-monitores-e-cabos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-do-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia do Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-2-investigacao-computacional-i">Módulo 2 — Investigação Computacional I<a class="headerlink" href="#modulo-2-investigacao-computacional-i" title="Permanent link">&para;</a></h1>
+<h2 id="anatomia-do-hardware">Anatomia do Hardware<a class="headerlink" href="#anatomia-do-hardware" title="Permanent link">&para;</a></h2>
+<h1 id="aula-12-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico">Aula 12 — Laboratório Final: Resolva o Caso e Construa o Primeiro Laudo Técnico<a class="headerlink" href="#aula-12-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Diante de um computador com sintomas mistos, informações incompletas e algumas pistas enganosas, você consegue organizar as evidências, testar hipóteses e chegar a uma conclusão técnica defensável?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-final-o-computador-que-reinicia-fica-lento-e-as-vezes-perde-video">Caso final — O computador que reinicia, fica lento e às vezes perde vídeo<a class="headerlink" href="#caso-final-o-computador-que-reinicia-fica-lento-e-as-vezes-perde-video" title="Permanent link">&para;</a></h2>
+<p>Chegamos ao encerramento do Módulo 2.</p>
+<p>Até aqui, investigamos separadamente:</p>
+<ul>
+<li>processador;</li>
+<li>memória RAM;</li>
+<li>armazenamento;</li>
+<li>placa-mãe;</li>
+<li>fonte de alimentação;</li>
+<li>refrigeração;</li>
+<li>placa de vídeo;</li>
+<li>monitor e cabos;</li>
+<li>ruídos;</li>
+<li>metodologia de diagnóstico.</li>
+</ul>
+<p>Agora essas áreas deixam de aparecer isoladamente.</p>
+<p>Você receberá um computador como ele chegaria a uma bancada real:</p>
+<blockquote>
+<p><strong>com sintomas misturados, informações incompletas e mais de uma hipótese plausível.</strong></p>
+</blockquote>
+<p>O objetivo não é adivinhar rapidamente qual peça está com defeito.</p>
+<p>O objetivo é construir uma investigação.</p>
+<hr />
+<h1 id="o-desafio">O desafio<a class="headerlink" href="#o-desafio" title="Permanent link">&para;</a></h1>
+<p>Uma pequena empresa utiliza um computador para:</p>
+<ul>
+<li>navegação;</li>
+<li>planilhas;</li>
+<li>videoconferências;</li>
+<li>edição leve de imagens;</li>
+<li>treinamento interno;</li>
+<li>ocasionalmente jogos após o expediente.</li>
+</ul>
+<p>O responsável relata:</p>
+<blockquote>
+<p>“O computador ficou estranho nas últimas semanas. Às vezes está muito lento, duas vezes reiniciou durante uma reunião e ontem a tela ficou preta. Hoje demorou para ligar. Acho que a placa de vídeo está queimando.”</p>
+</blockquote>
+<p>A máquina chega à bancada.</p>
+<p>Você ainda não deve aceitar nenhuma conclusão.</p>
+<p>Temos apenas um relato.</p>
+<hr />
+<h1 id="objetivos-do-laboratorio">Objetivos do laboratório<a class="headerlink" href="#objetivos-do-laboratorio" title="Permanent link">&para;</a></h1>
+<p>Neste laboratório você deverá praticar:</p>
+<ul>
+<li>recepção do equipamento;</li>
+<li>separação entre relato e evidência;</li>
+<li>avaliação de risco;</li>
+<li>construção de linha do tempo;</li>
+<li>inventário de hardware;</li>
+<li>observação inicial;</li>
+<li>interpretação de sensores;</li>
+<li>análise de logs;</li>
+<li>avaliação de armazenamento;</li>
+<li>análise de memória;</li>
+<li>investigação gráfica;</li>
+<li>avaliação de alimentação;</li>
+<li>testes cruzados;</li>
+<li>eliminação de hipóteses;</li>
+<li>validação da correção;</li>
+<li>produção de um laudo técnico.</li>
+</ul>
+<p>Não existe uma única ferramenta capaz de resolver todo o caso.</p>
+<p>Você precisará raciocinar sobre o conjunto.</p>
+<hr />
+<h1 id="regras-do-laboratorio">Regras do laboratório<a class="headerlink" href="#regras-do-laboratorio" title="Permanent link">&para;</a></h1>
+<p>Antes de começar, siga quatro regras.</p>
+<h2 id="regra-1-nao-altere-tudo-ao-mesmo-tempo">Regra 1 — Não altere tudo ao mesmo tempo<a class="headerlink" href="#regra-1-nao-altere-tudo-ao-mesmo-tempo" title="Permanent link">&para;</a></h2>
+<p>Cada teste deve responder a uma pergunta.</p>
+<h2 id="regra-2-diferencie-fato-de-interpretacao">Regra 2 — Diferencie fato de interpretação<a class="headerlink" href="#regra-2-diferencie-fato-de-interpretacao" title="Permanent link">&para;</a></h2>
+<p>Exemplo:</p>
+<p><strong>Fato</strong></p>
+<blockquote>
+<p>O computador reiniciou durante carga combinada.</p>
+</blockquote>
+<p><strong>Interpretação</strong></p>
+<blockquote>
+<p>A fonte pode estar relacionada.</p>
+</blockquote>
+<h2 id="regra-3-nao-condene-componentes-cedo-demais">Regra 3 — Não condene componentes cedo demais<a class="headerlink" href="#regra-3-nao-condene-componentes-cedo-demais" title="Permanent link">&para;</a></h2>
+<p>Um sintoma pode possuir várias causas.</p>
+<h2 id="regra-4-registre-o-que-mudou">Regra 4 — Registre o que mudou<a class="headerlink" href="#regra-4-registre-o-que-mudou" title="Permanent link">&para;</a></h2>
+<p>Se uma alteração modifica o comportamento, ela se torna evidência.</p>
+<hr />
+<h1 id="fase-1-recepcao">Fase 1 — Recepção<a class="headerlink" href="#fase-1-recepcao" title="Permanent link">&para;</a></h1>
+<p>O cliente entrega o equipamento e informa:</p>
+<ul>
+<li>o problema começou há aproximadamente três semanas;</li>
+<li>o computador já funcionava normalmente antes;</li>
+<li>nenhuma peça foi trocada recentemente;</li>
+<li>o Windows recebeu atualizações automáticas;</li>
+<li>o gabinete foi transportado de um cômodo para outro;</li>
+<li>o computador reiniciou duas vezes em videoconferência;</li>
+<li>uma vez ficou com tela preta, mas o áudio continuou;</li>
+<li>algumas vezes demora para abrir arquivos;</li>
+<li>em certos momentos as ventoinhas ficam mais barulhentas;</li>
+<li>existem arquivos importantes no SSD;</li>
+<li>não existe backup recente.</li>
+</ul>
+<p>Nesse momento, ainda não há diagnóstico.</p>
+<hr />
+<h1 id="registro-inicial">Registro inicial<a class="headerlink" href="#registro-inicial" title="Permanent link">&para;</a></h1>
+<p>Um técnico profissional poderia registrar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Equipamento recebido:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Desktop de uso misto.
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Sintomas relatados:
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>- lentidão intermitente;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>- duas reinicializações;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>- uma ocorrência de tela preta;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>- aumento ocasional de ruído das ventoinhas;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>- inicialização lenta em alguns momentos.
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Dados importantes:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Sim.
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Backup recente:
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Não confirmado.
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Alterações recentes:
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>- atualizações automáticas do sistema;
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>- transporte físico do gabinete.
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Intervenções anteriores:
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>Não informadas.
+</code></pre></div>
+<hr />
+<h1 id="primeira-decisao-profissional">Primeira decisão profissional<a class="headerlink" href="#primeira-decisao-profissional" title="Permanent link">&para;</a></h1>
+<p>Como existem dados importantes sem backup confirmado, qualquer teste que possa aumentar o risco do armazenamento precisa ser avaliado com cuidado.</p>
+<p>Ainda não há indicação de falha mecânica grave no dispositivo.</p>
+<p>Mesmo assim, a preservação dos dados deve permanecer no planejamento.</p>
+<hr />
+<h1 id="fase-2-inspecao-externa">Fase 2 — Inspeção externa<a class="headerlink" href="#fase-2-inspecao-externa" title="Permanent link">&para;</a></h1>
+<p>Antes de ligar o equipamento, observamos:</p>
+<ul>
+<li>gabinete íntegro;</li>
+<li>nenhum cheiro de queimado;</li>
+<li>nenhum sinal de líquido;</li>
+<li>cabo de energia sem dano aparente;</li>
+<li>cabo DisplayPort conectado;</li>
+<li>monitor externo do laboratório ainda não foi conectado;</li>
+<li>filtro frontal bastante empoeirado;</li>
+<li>gabinete posicionado anteriormente próximo a uma parede;</li>
+<li>nenhuma porta externa quebrada.</li>
+</ul>
+<p>Nada exige interrupção imediata.</p>
+<hr />
+<h1 id="fase-3-inventario">Fase 3 — Inventário<a class="headerlink" href="#fase-3-inventario" title="Permanent link">&para;</a></h1>
+<p>O computador possui:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CPU.............Ryzen 5 5600
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Placa-mãe.......B550
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>RAM.............16 GB DDR4
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                 2 × 8 GB
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>GPU.............Radeon RX 6600
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>SSD.............NVMe 1 TB
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Fonte...........550 W
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Monitor.........2560 × 1440 / 165 Hz
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Sistema.........Windows 11
+</code></pre></div>
+<p>A fonte possui potência nominal compatível em princípio com o conjunto.</p>
+<p>Mas potência declarada não encerra a investigação.</p>
+<hr />
+<h1 id="fase-4-estado-fisico-interno">Fase 4 — Estado físico interno<a class="headerlink" href="#fase-4-estado-fisico-interno" title="Permanent link">&para;</a></h1>
+<p>Com o computador desligado e desconectado, o gabinete é aberto.</p>
+<p>Observações:</p>
+<ul>
+<li>grande quantidade de poeira no filtro frontal;</li>
+<li>cooler do processador aparentemente firme;</li>
+<li>dois módulos de memória instalados;</li>
+<li>GPU corretamente fixada;</li>
+<li>cabo de energia da GPU aparentemente encaixado;</li>
+<li>nenhum capacitor visualmente danificado;</li>
+<li>nenhum conector derretido;</li>
+<li>uma ventoinha frontal possui bastante poeira;</li>
+<li>SSD NVMe sem dissipador adicional;</li>
+<li>nenhum cabo encostando nas pás;</li>
+<li>não existem marcas evidentes de líquido.</li>
+</ul>
+<p>Nenhuma peça deve ser removida ainda.</p>
+<hr />
+<h1 id="o-que-sabemos-ate-aqui">O que sabemos até aqui?<a class="headerlink" href="#o-que-sabemos-ate-aqui" title="Permanent link">&para;</a></h1>
+<p>Temos:</p>
+<ul>
+<li>poeira;</li>
+<li>histórico de transporte;</li>
+<li>lentidão;</li>
+<li>reinicializações;</li>
+<li>uma tela preta;</li>
+<li>dados importantes;</li>
+<li>aumento de ruído.</li>
+</ul>
+<p>Mas ainda não sabemos:</p>
+<ul>
+<li>se a poeira está causando superaquecimento;</li>
+<li>se a memória foi deslocada no transporte;</li>
+<li>se o SSD apresenta falha;</li>
+<li>se a fonte está instável;</li>
+<li>se a GPU possui problema;</li>
+<li>se o cabo ou monitor estão envolvidos;</li>
+<li>se o sistema operacional possui erros relevantes.</li>
+</ul>
+<hr />
+<h1 id="fase-5-primeiro-acionamento">Fase 5 — Primeiro acionamento<a class="headerlink" href="#fase-5-primeiro-acionamento" title="Permanent link">&para;</a></h1>
+<p>O computador é ligado em bancada com:</p>
+<ul>
+<li>monitor de referência;</li>
+<li>cabo DisplayPort conhecido;</li>
+<li>teclado e mouse simples;</li>
+<li>rede disponível.</li>
+</ul>
+<p>Observações:</p>
+<ul>
+<li>POST concluído;</li>
+<li>sem beeps;</li>
+<li>LEDs de diagnóstico apagam normalmente;</li>
+<li>sistema operacional inicia;</li>
+<li>tempo de inicialização: aproximadamente 58 segundos;</li>
+<li>nenhum erro imediato na tela;</li>
+<li>ventoinhas audíveis, mas sem ruído mecânico anormal.</li>
+</ul>
+<p>O computador está utilizável.</p>
+<hr />
+<h1 id="baseline-inicial">Baseline inicial<a class="headerlink" href="#baseline-inicial" title="Permanent link">&para;</a></h1>
+<p>Após cinco minutos em repouso:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CPU..............4–8%
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>RAM..............13,8 GB / 16 GB
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SSD..............2–15%
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>GPU..............1–3%
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>CPU..............47 °C
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>GPU..............43 °C
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>GPU Hotspot......51 °C
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>SSD..............58 °C
+</code></pre></div>
+<p>A primeira anomalia evidente não está na GPU.</p>
+<p>A memória já está bastante ocupada em repouso.</p>
+<hr />
+<h1 id="fase-6-gerenciador-de-tarefas">Fase 6 — Gerenciador de Tarefas<a class="headerlink" href="#fase-6-gerenciador-de-tarefas" title="Permanent link">&para;</a></h1>
+<p>Os processos mostram:</p>
+<ul>
+<li>navegador com muitas abas;</li>
+<li>aplicativo de videoconferência iniciando automaticamente;</li>
+<li>sincronizador de arquivos;</li>
+<li>ferramenta de edição;</li>
+<li>software de comunicação;</li>
+<li>utilitário do fabricante;</li>
+<li>antivírus;</li>
+<li>alguns aplicativos em segundo plano.</li>
+</ul>
+<p>Depois de alguns minutos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>RAM:
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>14,7 GB / 16 GB
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Memória disponível:
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>aproximadamente 900 MB
+</code></pre></div>
+<p>O sistema começa a utilizar paginação com maior intensidade.</p>
+<hr />
+<h1 id="evidencia-1-pressao-de-memoria">Evidência 1 — Pressão de memória<a class="headerlink" href="#evidencia-1-pressao-de-memoria" title="Permanent link">&para;</a></h1>
+<p>A lentidão pode ter relação com falta de memória disponível.</p>
+<p>Mas isso não explica automaticamente:</p>
+<ul>
+<li>reinicialização;</li>
+<li>tela preta.</li>
+</ul>
+<p>Portanto, podemos ter mais de um fenômeno no mesmo computador.</p>
+<p>Essa é uma situação comum.</p>
+<blockquote>
+<p><strong>Um equipamento pode ter dois problemas diferentes ao mesmo tempo.</strong></p>
+</blockquote>
+<hr />
+<h1 id="fase-7-armazenamento">Fase 7 — Armazenamento<a class="headerlink" href="#fase-7-armazenamento" title="Permanent link">&para;</a></h1>
+<p>O SSD é analisado com ferramenta apropriada.</p>
+<p>Dados observados:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Saúde geral..............Sem alerta crítico
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Temperatura..............59 °C
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Erros críticos...........0
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Media/Data Integrity.....0
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Unsafe Shutdowns.........Alguns registros históricos
+</code></pre></div>
+<p>Nenhum indicador isolado comprova falha do SSD.</p>
+<p>Durante cópia controlada de arquivos:</p>
+<ul>
+<li>velocidade inicialmente normal;</li>
+<li>temperatura sobe para 67 °C;</li>
+<li>desempenho reduz moderadamente;</li>
+<li>não ocorrem erros de leitura;</li>
+<li>não ocorre desconexão;</li>
+<li>nenhum arquivo falha.</li>
+</ul>
+<hr />
+<h1 id="evidencia-2-ssd-quente-mas-sem-falha-comprovada">Evidência 2 — SSD quente, mas sem falha comprovada<a class="headerlink" href="#evidencia-2-ssd-quente-mas-sem-falha-comprovada" title="Permanent link">&para;</a></h1>
+<p>A temperatura merece atenção.</p>
+<p>Mas não temos evidência suficiente para afirmar:</p>
+<blockquote>
+<p>“O SSD está defeituoso.”</p>
+</blockquote>
+<p>A lentidão observada pode estar sendo amplificada pela pressão de memória e paginação.</p>
+<hr />
+<h1 id="fase-8-logs-do-sistema">Fase 8 — Logs do sistema<a class="headerlink" href="#fase-8-logs-do-sistema" title="Permanent link">&para;</a></h1>
+<p>No Monitor de Confiabilidade aparecem:</p>
+<ul>
+<li>dois desligamentos inesperados;</li>
+<li>um evento de falha do driver gráfico;</li>
+<li>algumas falhas de aplicativo;</li>
+<li>nenhum padrão claro de erro de armazenamento.</li>
+</ul>
+<p>No Visualizador de Eventos, próximo a uma das reinicializações:</p>
+<ul>
+<li>evento de desligamento inesperado;</li>
+<li>ausência de uma tela azul registrada;</li>
+<li>nenhum erro definitivo identificando a causa.</li>
+</ul>
+<hr />
+<h1 id="cuidado-com-o-evento-de-desligamento-inesperado">Cuidado com o evento de desligamento inesperado<a class="headerlink" href="#cuidado-com-o-evento-de-desligamento-inesperado" title="Permanent link">&para;</a></h1>
+<p>Um evento desse tipo prova que:</p>
+<blockquote>
+<p>o sistema não foi encerrado normalmente.</p>
+</blockquote>
+<p>Ele não prova sozinho:</p>
+<ul>
+<li>fonte defeituosa;</li>
+<li>placa-mãe defeituosa;</li>
+<li>GPU defeituosa.</li>
+</ul>
+<p>Precisamos reconstruir a cadeia causal.</p>
+<hr />
+<h1 id="o-evento-de-driver-grafico">O evento de driver gráfico<a class="headerlink" href="#o-evento-de-driver-grafico" title="Permanent link">&para;</a></h1>
+<p>A tela preta relatada pelo usuário ganha uma pista.</p>
+<p>Mas lembre-se da Aula 8.</p>
+<p>Um erro de driver pode ser:</p>
+<ul>
+<li>causa;</li>
+<li>consequência;</li>
+<li>reação do sistema a uma GPU que deixou de responder;</li>
+<li>resultado de alimentação instável;</li>
+<li>problema de software;</li>
+<li>erro específico de aplicação.</li>
+</ul>
+<p>O log aumenta a relevância da cadeia gráfica.</p>
+<p>Não encerra o diagnóstico.</p>
+<hr />
+<h1 id="fase-9-teste-da-memoria">Fase 9 — Teste da memória<a class="headerlink" href="#fase-9-teste-da-memoria" title="Permanent link">&para;</a></h1>
+<p>Antes de executar testes mais longos, os programas de inicialização desnecessários são encerrados apenas para estabelecer comparação.</p>
+<p>A RAM cai para:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>7,1 GB / 16 GB
+</code></pre></div>
+<p>A responsividade melhora de forma perceptível.</p>
+<p>Aplicativos abrem mais rapidamente.</p>
+<p>A atividade do SSD diminui.</p>
+<hr />
+<h1 id="evidencia-3-parte-da-lentidao-foi-explicada">Evidência 3 — Parte da lentidão foi explicada<a class="headerlink" href="#evidencia-3-parte-da-lentidao-foi-explicada" title="Permanent link">&para;</a></h1>
+<p>Temos forte evidência de que a lentidão cotidiana estava relacionada à pressão de memória.</p>
+<p>Mas ainda precisamos explicar:</p>
+<ul>
+<li>reinicializações;</li>
+<li>tela preta.</li>
+</ul>
+<hr />
+<h1 id="teste-de-estabilidade-da-ram">Teste de estabilidade da RAM<a class="headerlink" href="#teste-de-estabilidade-da-ram" title="Permanent link">&para;</a></h1>
+<p>É realizado um teste de memória adequado.</p>
+<p>Primeira passagem:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>0 erros
+</code></pre></div>
+<p>Segunda passagem:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>0 erros
+</code></pre></div>
+<p>Isso reduz a suspeita de erro evidente nos módulos.</p>
+<p>Mas nenhum teste garante ausência absoluta de qualquer falha possível.</p>
+<hr />
+<h1 id="fase-10-temperatura">Fase 10 — Temperatura<a class="headerlink" href="#fase-10-temperatura" title="Permanent link">&para;</a></h1>
+<p>Carga moderada de CPU:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>CPU..............75 °C
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Clock............estável
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Sem throttling relevante
+</code></pre></div>
+<p>Carga gráfica:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GPU..............74 °C
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Hotspot..........89 °C
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Ventoinhas.......elevadas
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Clock............estável
+</code></pre></div>
+<p>Carga combinada após dez minutos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>CPU..............79 °C
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>GPU..............76 °C
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Hotspot..........93 °C
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>SSD..............64 °C
+</code></pre></div>
+<p>As temperaturas são relativamente elevadas, mas não aparece throttling severo nem desligamento térmico.</p>
+<hr />
+<h1 id="o-filtro-empoeirado-importa">O filtro empoeirado importa?<a class="headerlink" href="#o-filtro-empoeirado-importa" title="Permanent link">&para;</a></h1>
+<p>Sim.</p>
+<p>Ele pode:</p>
+<ul>
+<li>reduzir fluxo de ar;</li>
+<li>aumentar temperatura interna;</li>
+<li>elevar rotação das ventoinhas;</li>
+<li>aumentar ruído.</li>
+</ul>
+<p>Isso explica parte do relato:</p>
+<blockquote>
+<p>“As ventoinhas ficam mais barulhentas.”</p>
+</blockquote>
+<p>Mas ainda não explica necessariamente a reinicialização.</p>
+<hr />
+<h1 id="fase-11-reproducao-da-tela-preta">Fase 11 — Reprodução da tela preta<a class="headerlink" href="#fase-11-reproducao-da-tela-preta" title="Permanent link">&para;</a></h1>
+<p>Com o monitor e cabo de referência do laboratório:</p>
+<ul>
+<li>1440p;</li>
+<li>165 Hz;</li>
+<li>carga gráfica;</li>
+<li>30 minutos.</li>
+</ul>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Nenhuma perda de sinal.
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Nenhum artefato.
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Nenhuma tela preta.
+</code></pre></div>
+<p>Com o cabo original do cliente conectado ao monitor de referência:</p>
+<ul>
+<li>1440p;</li>
+<li>165 Hz.</li>
+</ul>
+<p>Após alguns minutos:</p>
+<ul>
+<li>uma piscada;</li>
+<li>perda de sinal de aproximadamente dois segundos;</li>
+<li>imagem retorna;</li>
+<li>computador continua executando;</li>
+<li>áudio continua.</li>
+</ul>
+<p>Captura de tela realizada durante o comportamento:</p>
+<ul>
+<li>nenhuma corrupção visível.</li>
+</ul>
+<hr />
+<h1 id="evidencia-4-a-cadeia-externa-de-video-ganha-forca">Evidência 4 — A cadeia externa de vídeo ganha força<a class="headerlink" href="#evidencia-4-a-cadeia-externa-de-video-ganha-forca" title="Permanent link">&para;</a></h1>
+<p>Agora temos:</p>
+<ul>
+<li>defeito ausente com cabo de referência;</li>
+<li>defeito presente com cabo original;</li>
+<li>sistema permanece funcionando;</li>
+<li>captura sem defeito.</li>
+</ul>
+<p>Isso reduz a probabilidade de corrupção do quadro antes da saída.</p>
+<p>O cabo original torna-se uma hipótese forte para a tela preta.</p>
+<hr />
+<h1 id="teste-controlado-de-taxa-de-atualizacao">Teste controlado de taxa de atualização<a class="headerlink" href="#teste-controlado-de-taxa-de-atualizacao" title="Permanent link">&para;</a></h1>
+<p>Mesmo cabo original:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>165 Hz → falha intermitente
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>144 Hz → uma piscada após longo período
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>120 Hz → sem falha durante o teste
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>60 Hz  → sem falha
+</code></pre></div>
+<p>Mesmo monitor.</p>
+<p>Mesma GPU.</p>
+<p>Mesmo driver.</p>
+<p>Mesma resolução.</p>
+<p>A variável principal é a taxa de atualização.</p>
+<p>Esse comportamento é compatível com um enlace que se torna marginal em maior largura de banda.</p>
+<hr />
+<h1 id="teste-com-cabo-de-referencia">Teste com cabo de referência<a class="headerlink" href="#teste-com-cabo-de-referencia" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>165 Hz → estável
+</code></pre></div>
+<p>A evidência converge.</p>
+<p>A tela preta relatada pelo cliente possui uma causa provável diferente da reinicialização.</p>
+<hr />
+<h1 id="fase-12-investigando-as-reinicializacoes">Fase 12 — Investigando as reinicializações<a class="headerlink" href="#fase-12-investigando-as-reinicializacoes" title="Permanent link">&para;</a></h1>
+<p>O computador ainda não reiniciou na bancada.</p>
+<p>O cliente relatou duas ocorrências durante videoconferência.</p>
+<p>Isso parece estranho.</p>
+<p>Videoconferência não costuma representar a maior carga possível do sistema.</p>
+<p>Mas o contexto importa.</p>
+<p>Durante uma videoconferência podem ocorrer simultaneamente:</p>
+<ul>
+<li>vídeo;</li>
+<li>aceleração gráfica;</li>
+<li>navegador;</li>
+<li>sincronização;</li>
+<li>várias abas;</li>
+<li>webcam;</li>
+<li>áudio;</li>
+<li>rede;</li>
+<li>outros programas.</li>
+</ul>
+<p>Ainda assim, precisamos reproduzir a condição.</p>
+<hr />
+<h1 id="carga-isolada-de-cpu">Carga isolada de CPU<a class="headerlink" href="#carga-isolada-de-cpu" title="Permanent link">&para;</a></h1>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>30 minutos
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Estável
+</code></pre></div>
+<h1 id="carga-isolada-de-gpu">Carga isolada de GPU<a class="headerlink" href="#carga-isolada-de-gpu" title="Permanent link">&para;</a></h1>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>30 minutos
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Estável
+</code></pre></div>
+<h1 id="carga-de-armazenamento">Carga de armazenamento<a class="headerlink" href="#carga-de-armazenamento" title="Permanent link">&para;</a></h1>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Estável
+</code></pre></div>
+<h1 id="carga-combinada">Carga combinada<a class="headerlink" href="#carga-combinada" title="Permanent link">&para;</a></h1>
+<p>Após aproximadamente 14 minutos:</p>
+<blockquote>
+<p><strong>o computador reinicia abruptamente.</strong></p>
+</blockquote>
+<p>Não aparece tela azul.</p>
+<hr />
+<h1 id="evidencia-5-a-reinicializacao-foi-reproduzida">Evidência 5 — A reinicialização foi reproduzida<a class="headerlink" href="#evidencia-5-a-reinicializacao-foi-reproduzida" title="Permanent link">&para;</a></h1>
+<p>Agora possuímos uma condição concreta.</p>
+<p>Isso muda completamente a investigação.</p>
+<p>Não dependemos apenas do relato do usuário.</p>
+<hr />
+<h1 id="o-que-estava-acontecendo-antes-da-reinicializacao">O que estava acontecendo antes da reinicialização?<a class="headerlink" href="#o-que-estava-acontecendo-antes-da-reinicializacao" title="Permanent link">&para;</a></h1>
+<p>Telemetria registrada:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>CPU..............82 °C
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>GPU..............77 °C
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>GPU Hotspot......95 °C
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>SSD..............65 °C
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Sem throttling crítico observado.
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Sem artefato gráfico.
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>Sem erro de memória visível.
+</code></pre></div>
+<p>As temperaturas subiram.</p>
+<p>Mas não existe evidência clara de que um limite térmico tenha provocado o reinício.</p>
+<hr />
+<h1 id="fase-13-inspecao-do-sistema-de-alimentacao">Fase 13 — Inspeção do sistema de alimentação<a class="headerlink" href="#fase-13-inspecao-do-sistema-de-alimentacao" title="Permanent link">&para;</a></h1>
+<p>A fonte é identificada corretamente.</p>
+<p>Informações:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Potência nominal........550 W
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Idade aproximada........5 anos
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Uso.....................frequente
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>Cabos...................originais
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Conectores..............sem dano visível
+</code></pre></div>
+<p>Não há:</p>
+<ul>
+<li>cheiro;</li>
+<li>estalo;</li>
+<li>conector derretido;</li>
+<li>ruído elétrico preocupante.</li>
+</ul>
+<p>A idade não prova defeito.</p>
+<p>Mas a alimentação continua como hipótese.</p>
+<hr />
+<h1 id="o-software-mostra-12-v-normal">O software mostra 12 V normal<a class="headerlink" href="#o-software-mostra-12-v-normal" title="Permanent link">&para;</a></h1>
+<p>Durante parte do teste, o sensor informa valor próximo do esperado.</p>
+<p>Isso não elimina a fonte.</p>
+<p>Como vimos anteriormente:</p>
+<ul>
+<li>sensores podem ter limitações;</li>
+<li>leitura de software não captura necessariamente transientes;</li>
+<li>estabilidade dinâmica pode falhar mesmo quando médias parecem normais.</li>
+</ul>
+<hr />
+<h1 id="teste-cruzado-com-fonte-de-referencia">Teste cruzado com fonte de referência<a class="headerlink" href="#teste-cruzado-com-fonte-de-referencia" title="Permanent link">&para;</a></h1>
+<p>É utilizada uma fonte:</p>
+<ul>
+<li>conhecida;</li>
+<li>compatível;</li>
+<li>testada;</li>
+<li>com potência adequada;</li>
+<li>com cabos próprios.</li>
+</ul>
+<p>Nenhum cabo modular da fonte antiga é reutilizado.</p>
+<p>Esse detalhe é essencial.</p>
+<hr />
+<h1 id="resultado-com-a-fonte-de-referencia">Resultado com a fonte de referência<a class="headerlink" href="#resultado-com-a-fonte-de-referencia" title="Permanent link">&para;</a></h1>
+<p>Carga combinada:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>30 minutos → estável
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>45 minutos → estável
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>60 minutos → estável
+</code></pre></div>
+<p>Nenhuma reinicialização.</p>
+<hr />
+<h1 id="repeticao-com-a-fonte-original">Repetição com a fonte original<a class="headerlink" href="#repeticao-com-a-fonte-original" title="Permanent link">&para;</a></h1>
+<p>O sistema é montado novamente com a fonte original.</p>
+<p>Mesma condição de teste.</p>
+<p>Após aproximadamente 17 minutos:</p>
+<blockquote>
+<p>reinicialização abrupta.</p>
+</blockquote>
+<hr />
+<h1 id="evidencia-6-comportamento-acompanha-a-fonte-original">Evidência 6 — Comportamento acompanha a fonte original<a class="headerlink" href="#evidencia-6-comportamento-acompanha-a-fonte-original" title="Permanent link">&para;</a></h1>
+<p>Temos agora uma evidência convergente forte.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Fonte original
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>→ falha reproduzida
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Fonte de referência
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>→ falha não reproduzida
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Fonte original novamente
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>→ falha reproduzida
+</code></pre></div>
+<p>Isso não exige abrir a fonte.</p>
+<p>O sistema de alimentação original se torna a principal causa da reinicialização dentro do escopo dos testes realizados.</p>
+<hr />
+<h1 id="mas-existe-apenas-um-defeito">Mas existe apenas um defeito?<a class="headerlink" href="#mas-existe-apenas-um-defeito" title="Permanent link">&para;</a></h1>
+<p>Não.</p>
+<p>Nosso caso apresenta pelo menos três fenômenos diferentes.</p>
+<h2 id="fenomeno-a-lentidao">Fenômeno A — Lentidão<a class="headerlink" href="#fenomeno-a-lentidao" title="Permanent link">&para;</a></h2>
+<p>Evidências:</p>
+<ul>
+<li>RAM próxima do limite;</li>
+<li>muitos programas;</li>
+<li>paginação;</li>
+<li>SSD trabalhando intensamente;</li>
+<li>melhora ao reduzir carga de memória.</li>
+</ul>
+<h2 id="fenomeno-b-tela-preta">Fenômeno B — Tela preta<a class="headerlink" href="#fenomeno-b-tela-preta" title="Permanent link">&para;</a></h2>
+<p>Evidências:</p>
+<ul>
+<li>ocorre com cabo original;</li>
+<li>desaparece com cabo de referência;</li>
+<li>mais frequente em 165 Hz;</li>
+<li>ausente em 120 Hz;</li>
+<li>captura de tela normal;</li>
+<li>sistema continua funcionando.</li>
+</ul>
+<h2 id="fenomeno-c-reinicializacao">Fenômeno C — Reinicialização<a class="headerlink" href="#fenomeno-c-reinicializacao" title="Permanent link">&para;</a></h2>
+<p>Evidências:</p>
+<ul>
+<li>ocorre em carga combinada;</li>
+<li>temperaturas sem limite crítico demonstrado;</li>
+<li>desaparece com fonte de referência;</li>
+<li>retorna com fonte original.</li>
+</ul>
+<p>Esse é o ponto mais importante do laboratório.</p>
+<blockquote>
+<p><strong>Um relato pode misturar sintomas de causas diferentes.</strong></p>
+</blockquote>
+<hr />
+<h1 id="o-erro-que-um-diagnostico-apressado-cometeria">O erro que um diagnóstico apressado cometeria<a class="headerlink" href="#o-erro-que-um-diagnostico-apressado-cometeria" title="Permanent link">&para;</a></h1>
+<p>O cliente disse:</p>
+<blockquote>
+<p>“Acho que a placa de vídeo está queimando.”</p>
+</blockquote>
+<p>Se aceitássemos essa hipótese imediatamente, poderíamos:</p>
+<ul>
+<li>condenar uma GPU funcional;</li>
+<li>ignorar a fonte;</li>
+<li>ignorar o cabo;</li>
+<li>ignorar a pressão de memória;</li>
+<li>gerar custo desnecessário.</li>
+</ul>
+<p>O processo investigativo evitou isso.</p>
+<hr />
+<h1 id="fase-14-correcoes-propostas">Fase 14 — Correções propostas<a class="headerlink" href="#fase-14-correcoes-propostas" title="Permanent link">&para;</a></h1>
+<p>Com base nas evidências:</p>
+<h2 id="1-sistema-de-alimentacao">1. Sistema de alimentação<a class="headerlink" href="#1-sistema-de-alimentacao" title="Permanent link">&para;</a></h2>
+<p>Recomendar substituição da fonte original por unidade adequada e confiável.</p>
+<p>A fonte defeituosa não deve ser aberta pelo usuário.</p>
+<h2 id="2-cabo-de-video">2. Cabo de vídeo<a class="headerlink" href="#2-cabo-de-video" title="Permanent link">&para;</a></h2>
+<p>Substituir o cabo original por cabo adequado ao modo utilizado.</p>
+<p>Validar 1440p 165 Hz depois da troca.</p>
+<h2 id="3-pressao-de-memoria">3. Pressão de memória<a class="headerlink" href="#3-pressao-de-memoria" title="Permanent link">&para;</a></h2>
+<p>Existem duas abordagens:</p>
+<ul>
+<li>reduzir programas de inicialização e uso simultâneo;</li>
+<li>avaliar expansão de memória conforme a carga real do usuário.</li>
+</ul>
+<p>Não devemos vender memória apenas porque “16 GB é pouco”.</p>
+<p>Devemos relacionar a recomendação ao uso observado.</p>
+<h2 id="4-fluxo-de-ar">4. Fluxo de ar<a class="headerlink" href="#4-fluxo-de-ar" title="Permanent link">&para;</a></h2>
+<p>Realizar limpeza adequada de filtros e ventoinhas.</p>
+<p>Depois validar temperaturas e ruído.</p>
+<hr />
+<h1 id="fase-15-o-que-nao-foi-necessario-fazer">Fase 15 — O que não foi necessário fazer<a class="headerlink" href="#fase-15-o-que-nao-foi-necessario-fazer" title="Permanent link">&para;</a></h1>
+<p>Não foi necessário:</p>
+<ul>
+<li>formatar o Windows;</li>
+<li>trocar a GPU;</li>
+<li>atualizar BIOS sem motivo;</li>
+<li>trocar placa-mãe;</li>
+<li>trocar SSD;</li>
+<li>abrir a fonte;</li>
+<li>fazer reflow;</li>
+<li>fazer reballing;</li>
+<li>substituir RAM aleatoriamente.</li>
+</ul>
+<p>Isso representa economia de:</p>
+<ul>
+<li>tempo;</li>
+<li>dinheiro;</li>
+<li>risco;</li>
+<li>dados.</li>
+</ul>
+<hr />
+<h1 id="fase-16-validacao-apos-correcao">Fase 16 — Validação após correção<a class="headerlink" href="#fase-16-validacao-apos-correcao" title="Permanent link">&para;</a></h1>
+<p>Depois das intervenções:</p>
+<ul>
+<li>fonte de referência/novo sistema de alimentação adequado;</li>
+<li>cabo DisplayPort confiável;</li>
+<li>limpeza do fluxo de ar;</li>
+<li>redução de programas desnecessários na inicialização.</li>
+</ul>
+<p>Novo baseline:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>RAM em repouso...........7,4 GB / 16 GB
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>CPU em repouso...........3–6%
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>SSD em repouso...........baixo uso
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>CPU carga combinada......75 °C
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>GPU......................72 °C
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Hotspot..................87 °C
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>SSD......................57 °C
+</code></pre></div>
+<hr />
+<h1 id="validacao-de-video">Validação de vídeo<a class="headerlink" href="#validacao-de-video" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>1440p / 165 Hz
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>60 minutos de uso
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Sem piscadas
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>Sem perda de sinal
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>Sem tela preta
+</code></pre></div>
+<hr />
+<h1 id="validacao-de-estabilidade">Validação de estabilidade<a class="headerlink" href="#validacao-de-estabilidade" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Carga combinada
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>60 minutos
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Sem reinicialização
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Videoconferência
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Navegador
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Sincronização
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Vídeo
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>30 minutos
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>Estável
+</code></pre></div>
+<hr />
+<h1 id="validacao-da-responsividade">Validação da responsividade<a class="headerlink" href="#validacao-da-responsividade" title="Permanent link">&para;</a></h1>
+<p>Com a inicialização reorganizada:</p>
+<ul>
+<li>área de trabalho responde mais rapidamente;</li>
+<li>atividade do SSD reduz;</li>
+<li>paginação diminui;</li>
+<li>aplicativos abrem com menor atraso.</li>
+</ul>
+<p>Ainda assim, dependendo do padrão de uso da empresa, expansão futura para mais memória pode ser recomendada.</p>
+<hr />
+<h1 id="agora-transforme-a-investigacao-em-documento">Agora transforme a investigação em documento<a class="headerlink" href="#agora-transforme-a-investigacao-em-documento" title="Permanent link">&para;</a></h1>
+<p>O técnico não deve entregar apenas:</p>
+<blockquote>
+<p>“Troquei a fonte e o cabo.”</p>
+</blockquote>
+<p>O cliente precisa receber uma explicação objetiva.</p>
+<p>Outro técnico precisa conseguir compreender o que foi feito.</p>
+<p>Por isso construiremos o primeiro <strong>Laudo Técnico Smarteletrovini Academy</strong>.</p>
+<hr />
+<h1 id="estrutura-do-primeiro-laudo-tecnico">📄 Estrutura do primeiro Laudo Técnico<a class="headerlink" href="#estrutura-do-primeiro-laudo-tecnico" title="Permanent link">&para;</a></h1>
+<h2 id="1-identificacao">1. Identificação<a class="headerlink" href="#1-identificacao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Equipamento:
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Desktop
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>Data da análise:
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>____/____/____
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>Responsável:
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>____________________________
+</code></pre></div>
+<hr />
+<h1 id="2-sintoma-relatado">2. Sintoma relatado<a class="headerlink" href="#2-sintoma-relatado" title="Permanent link">&para;</a></h1>
+<p>Registre somente o que foi informado.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>Cliente relata lentidão intermitente, reinicializações, uma ocorrência de tela preta, aumento ocasional do ruído das ventoinhas e demora de inicialização.</p>
+</blockquote>
+<p>Não escreva ainda a conclusão.</p>
+<hr />
+<h1 id="3-estado-inicial">3. Estado inicial<a class="headerlink" href="#3-estado-inicial" title="Permanent link">&para;</a></h1>
+<p>Exemplo:</p>
+<blockquote>
+<p>Equipamento recebido sem sinais externos de dano elétrico ou líquido. Inspeção interna revelou acúmulo de poeira no filtro frontal. Sistema realizou POST e iniciou normalmente em bancada.</p>
+</blockquote>
+<hr />
+<h1 id="4-configuracao">4. Configuração<a class="headerlink" href="#4-configuracao" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>CPU:
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Placa-mãe:
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>RAM:
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>GPU:
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Armazenamento:
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>Fonte:
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>Monitor:
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>Sistema:
+</code></pre></div>
+<hr />
+<h1 id="5-evidencias-coletadas">5. Evidências coletadas<a class="headerlink" href="#5-evidencias-coletadas" title="Permanent link">&para;</a></h1>
+<p>Devem ser fatos.</p>
+<p>Exemplo:</p>
+<ul>
+<li>RAM chegou a aproximadamente 14,7 GB de 16 GB em uso cotidiano;</li>
+<li>desempenho melhorou após reduzir programas residentes;</li>
+<li>SSD não apresentou erros críticos no teste realizado;</li>
+<li>tela preta foi reproduzida com o cabo original em 165 Hz;</li>
+<li>tela preta não foi reproduzida com cabo de referência;</li>
+<li>reinicialização foi reproduzida em carga combinada;</li>
+<li>falha deixou de ocorrer com fonte de referência;</li>
+<li>falha retornou com a fonte original.</li>
+</ul>
+<hr />
+<h1 id="6-hipoteses-consideradas">6. Hipóteses consideradas<a class="headerlink" href="#6-hipoteses-consideradas" title="Permanent link">&para;</a></h1>
+<p>Exemplo:</p>
+<ul>
+<li>falha de GPU;</li>
+<li>falha de cabo;</li>
+<li>falha de monitor;</li>
+<li>instabilidade de fonte;</li>
+<li>problema térmico;</li>
+<li>erro de memória;</li>
+<li>falha de armazenamento;</li>
+<li>pressão de memória;</li>
+<li>driver gráfico.</li>
+</ul>
+<p>Registrar hipóteses descartadas também é importante.</p>
+<hr />
+<h1 id="7-testes-realizados">7. Testes realizados<a class="headerlink" href="#7-testes-realizados" title="Permanent link">&para;</a></h1>
+<p>Cada teste deve possuir objetivo.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Teste:
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Cabo de referência.
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Objetivo:
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Verificar se a perda de vídeo acompanha o cabo original.
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Resultado:
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>165 Hz permaneceu estável.
+</code></pre></div>
+<hr />
+<h1 id="8-conclusao-tecnica">8. Conclusão técnica<a class="headerlink" href="#8-conclusao-tecnica" title="Permanent link">&para;</a></h1>
+<p>A conclusão deve relacionar cada sintoma às evidências.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>A investigação identificou três fenômenos distintos. A lentidão observada apresentou forte relação com pressão de memória e paginação decorrentes de múltiplos aplicativos simultâneos. A perda de vídeo foi reproduzida com o cabo DisplayPort original em alta taxa de atualização e não ocorreu com cabo de referência, indicando falha de integridade do enlace original. As reinicializações foram reproduzidas sob carga combinada com a fonte original, deixaram de ocorrer com fonte de referência compatível e retornaram após reinstalação da fonte original, constituindo forte evidência de instabilidade no sistema de alimentação original dentro das condições testadas.</p>
+</blockquote>
+<p>Observe a linguagem.</p>
+<p>Não escrevemos:</p>
+<blockquote>
+<p>“A fonte está 100% queimada internamente no componente X.”</p>
+</blockquote>
+<p>Os testes não demonstraram isso.</p>
+<hr />
+<h1 id="9-procedimentos-recomendados">9. Procedimentos recomendados<a class="headerlink" href="#9-procedimentos-recomendados" title="Permanent link">&para;</a></h1>
+<p>Exemplo:</p>
+<ul>
+<li>substituir a fonte original;</li>
+<li>substituir o cabo DisplayPort;</li>
+<li>realizar limpeza do fluxo de ar;</li>
+<li>revisar programas de inicialização;</li>
+<li>avaliar expansão de RAM conforme carga real;</li>
+<li>realizar backup regular dos dados.</li>
+</ul>
+<hr />
+<h1 id="10-validacao">10. Validação<a class="headerlink" href="#10-validacao" title="Permanent link">&para;</a></h1>
+<p>Exemplo:</p>
+<blockquote>
+<p>Após substituição da alimentação utilizada no teste, troca do cabo e organização do sistema, foram realizados 60 minutos de carga combinada sem reinicialização e 60 minutos de vídeo em 1440p 165 Hz sem perda de sinal.</p>
+</blockquote>
+<hr />
+<h1 id="11-limitacoes">11. Limitações<a class="headerlink" href="#11-limitacoes" title="Permanent link">&para;</a></h1>
+<p>Todo diagnóstico possui escopo.</p>
+<p>Exemplo:</p>
+<blockquote>
+<p>A análise foi realizada nas condições descritas. Não foi executado diagnóstico eletrônico interno da fonte, nem desmontagem de componentes selados. A ausência de falhas durante o período de validação reduz a probabilidade de recorrência nas condições testadas, mas não constitui garantia de ausência absoluta de qualquer falha futura.</p>
+</blockquote>
+<p>Essa seção demonstra maturidade técnica.</p>
+<hr />
+<h1 id="modelo-completo-de-laudo">Modelo completo de laudo<a class="headerlink" href="#modelo-completo-de-laudo" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>LAUDO TÉCNICO — SMARTELETROVINI ACADEMY
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>1. EQUIPAMENTO
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Tipo:
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>Configuração:
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>Data:
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>2. SINTOMA RELATADO
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>_________________________________________
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>3. ESTADO INICIAL
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>_________________________________________
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>4. EVIDÊNCIAS COLETADAS
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>- _______________________________________
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>- _______________________________________
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>- _______________________________________
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>5. HIPÓTESES CONSIDERADAS
+<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>- _______________________________________
+<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>- _______________________________________
+<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>- _______________________________________
+<a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>
+<a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a>6. TESTES REALIZADOS
+<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a>Teste 1:
+<a id="__codelineno-28-26" name="__codelineno-28-26" href="#__codelineno-28-26"></a>Objetivo:
+<a id="__codelineno-28-27" name="__codelineno-28-27" href="#__codelineno-28-27"></a>Resultado:
+<a id="__codelineno-28-28" name="__codelineno-28-28" href="#__codelineno-28-28"></a>
+<a id="__codelineno-28-29" name="__codelineno-28-29" href="#__codelineno-28-29"></a>Teste 2:
+<a id="__codelineno-28-30" name="__codelineno-28-30" href="#__codelineno-28-30"></a>Objetivo:
+<a id="__codelineno-28-31" name="__codelineno-28-31" href="#__codelineno-28-31"></a>Resultado:
+<a id="__codelineno-28-32" name="__codelineno-28-32" href="#__codelineno-28-32"></a>
+<a id="__codelineno-28-33" name="__codelineno-28-33" href="#__codelineno-28-33"></a>Teste 3:
+<a id="__codelineno-28-34" name="__codelineno-28-34" href="#__codelineno-28-34"></a>Objetivo:
+<a id="__codelineno-28-35" name="__codelineno-28-35" href="#__codelineno-28-35"></a>Resultado:
+<a id="__codelineno-28-36" name="__codelineno-28-36" href="#__codelineno-28-36"></a>
+<a id="__codelineno-28-37" name="__codelineno-28-37" href="#__codelineno-28-37"></a>7. CONCLUSÃO TÉCNICA
+<a id="__codelineno-28-38" name="__codelineno-28-38" href="#__codelineno-28-38"></a>_________________________________________
+<a id="__codelineno-28-39" name="__codelineno-28-39" href="#__codelineno-28-39"></a>
+<a id="__codelineno-28-40" name="__codelineno-28-40" href="#__codelineno-28-40"></a>8. PROCEDIMENTO RECOMENDADO
+<a id="__codelineno-28-41" name="__codelineno-28-41" href="#__codelineno-28-41"></a>_________________________________________
+<a id="__codelineno-28-42" name="__codelineno-28-42" href="#__codelineno-28-42"></a>
+<a id="__codelineno-28-43" name="__codelineno-28-43" href="#__codelineno-28-43"></a>9. VALIDAÇÃO
+<a id="__codelineno-28-44" name="__codelineno-28-44" href="#__codelineno-28-44"></a>_________________________________________
+<a id="__codelineno-28-45" name="__codelineno-28-45" href="#__codelineno-28-45"></a>
+<a id="__codelineno-28-46" name="__codelineno-28-46" href="#__codelineno-28-46"></a>10. LIMITAÇÕES DA ANÁLISE
+<a id="__codelineno-28-47" name="__codelineno-28-47" href="#__codelineno-28-47"></a>_________________________________________
+<a id="__codelineno-28-48" name="__codelineno-28-48" href="#__codelineno-28-48"></a>
+<a id="__codelineno-28-49" name="__codelineno-28-49" href="#__codelineno-28-49"></a>Responsável:
+<a id="__codelineno-28-50" name="__codelineno-28-50" href="#__codelineno-28-50"></a>_________________________________________
+</code></pre></div>
+<hr />
+<h1 id="o-que-diferencia-um-laudo-de-uma-opiniao">O que diferencia um laudo de uma opinião?<a class="headerlink" href="#o-que-diferencia-um-laudo-de-uma-opiniao" title="Permanent link">&para;</a></h1>
+<p>Compare.</p>
+<h2 id="opiniao">Opinião<a class="headerlink" href="#opiniao" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>“Parece que é a fonte.”</p>
+</blockquote>
+<h2 id="registro-tecnico">Registro técnico<a class="headerlink" href="#registro-tecnico" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>A falha foi reproduzida com a fonte original durante carga combinada, não ocorreu durante 60 minutos nas mesmas condições com fonte de referência compatível e voltou a ocorrer após reinstalação da unidade original.</p>
+</blockquote>
+<p>A segunda frase pode ser examinada.</p>
+<p>Ela contém:</p>
+<ul>
+<li>condição;</li>
+<li>comparação;</li>
+<li>resultado;</li>
+<li>repetibilidade.</li>
+</ul>
+<hr />
+<h1 id="evidencia-positiva-e-evidencia-negativa">Evidência positiva e evidência negativa<a class="headerlink" href="#evidencia-positiva-e-evidencia-negativa" title="Permanent link">&para;</a></h1>
+<p>Também é importante registrar quando algo <strong>não aconteceu</strong>.</p>
+<p>Exemplos:</p>
+<ul>
+<li>nenhum erro de memória foi detectado;</li>
+<li>nenhum artefato gráfico foi reproduzido;</li>
+<li>nenhum erro crítico do SSD apareceu;</li>
+<li>nenhuma falha ocorreu com cabo de referência.</li>
+</ul>
+<p>A ausência de um evento em um teste adequado ajuda a reduzir hipóteses.</p>
+<hr />
+<h1 id="mas-ausencia-de-erro-nao-prova-perfeicao">Mas ausência de erro não prova perfeição<a class="headerlink" href="#mas-ausencia-de-erro-nao-prova-perfeicao" title="Permanent link">&para;</a></h1>
+<p>Se um teste de RAM não encontra erros, isso não significa:</p>
+<blockquote>
+<p>“A memória é perfeita em todas as condições possíveis.”</p>
+</blockquote>
+<p>Significa:</p>
+<blockquote>
+<p>“Nenhum erro foi detectado nas condições e duração desse teste.”</p>
+</blockquote>
+<p>Essa distinção deve aparecer na linguagem profissional.</p>
+<hr />
+<h1 id="o-problema-de-diagnosticos-absolutos">O problema de diagnósticos absolutos<a class="headerlink" href="#o-problema-de-diagnosticos-absolutos" title="Permanent link">&para;</a></h1>
+<p>Evite frases como:</p>
+<ul>
+<li>“100% garantido”;</li>
+<li>“não existe nenhuma outra possibilidade”;</li>
+<li>“essa peça nunca mais dará problema”;</li>
+<li>“o computador está perfeito”.</li>
+</ul>
+<p>Prefira:</p>
+<ul>
+<li>“não foi reproduzido”;</li>
+<li>“não foram observados erros”;</li>
+<li>“forte evidência”;</li>
+<li>“dentro das condições testadas”;</li>
+<li>“principal hipótese”;</li>
+<li>“falha isolada no escopo realizado”.</li>
+</ul>
+<hr />
+<h1 id="dossie-da-investigacao-versao-do-aluno">📁 Dossiê da Investigação — versão do aluno<a class="headerlink" href="#dossie-da-investigacao-versao-do-aluno" title="Permanent link">&para;</a></h1>
+<p>Antes de abrir a solução técnica, registre sua própria análise.</p>
+<h2 id="o-que-sabemos">O que sabemos<a class="headerlink" href="#o-que-sabemos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>1.
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>2.
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>3.
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>4.
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>5.
+</code></pre></div>
+<h2 id="o-que-ainda-nao-sabemos">O que ainda não sabemos<a class="headerlink" href="#o-que-ainda-nao-sabemos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>1.
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>2.
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>3.
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>4.
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>5.
+</code></pre></div>
+<h2 id="hipoteses-iniciais">Hipóteses iniciais<a class="headerlink" href="#hipoteses-iniciais" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>1.
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>2.
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>3.
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>4.
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>5.
+</code></pre></div>
+<h2 id="ordem-dos-testes">Ordem dos testes<a class="headerlink" href="#ordem-dos-testes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>1.
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>2.
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>3.
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>4.
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>5.
+</code></pre></div>
+<h2 id="evidencias-mais-fortes">Evidências mais fortes<a class="headerlink" href="#evidencias-mais-fortes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>1.
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>2.
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>3.
+</code></pre></div>
+<h2 id="hipoteses-descartadas-ou-enfraquecidas">Hipóteses descartadas ou enfraquecidas<a class="headerlink" href="#hipoteses-descartadas-ou-enfraquecidas" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>1.
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>2.
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>3.
+</code></pre></div>
+<h2 id="causas-identificadas">Causas identificadas<a class="headerlink" href="#causas-identificadas" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Lentidão:
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>_________________________________________
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>Tela preta:
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>_________________________________________
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>Reinicialização:
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>_________________________________________
+</code></pre></div>
+<h2 id="validacao">Validação<a class="headerlink" href="#validacao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>_________________________________________
+</code></pre></div>
+<hr />
+<details class="note">
+<summary>Solução técnica do caso — abra somente depois de concluir sua investigação</summary>
+<p>A investigação aponta para <strong>três causas principais independentes</strong>.</p>
+<p><strong>Lentidão</strong></p>
+<p>A RAM estava próxima da capacidade durante o uso cotidiano, provocando maior paginação e atividade no SSD. A responsividade melhorou quando os programas residentes foram reduzidos. Isso fornece forte evidência de pressão de memória como causa relevante da lentidão.</p>
+<p><strong>Tela preta</strong></p>
+<p>A perda de sinal foi reproduzida com o cabo DisplayPort original, especialmente em 165 Hz. O problema não apareceu com cabo de referência nas mesmas condições. A captura de tela permaneceu correta e o sistema continuou executando. O enlace de vídeo original é a principal causa do sintoma observado.</p>
+<p><strong>Reinicialização</strong></p>
+<p>A falha foi reproduzida em carga combinada com a fonte original. Com fonte de referência compatível, o sistema permaneceu estável. Após reinstalar a fonte original, a falha voltou a ocorrer. Isso constitui evidência convergente forte de instabilidade do sistema de alimentação original nas condições testadas.</p>
+<p><strong>Fatores secundários</strong></p>
+<p>A poeira e o fluxo de ar restrito contribuíam para temperaturas e ruído maiores, mas não foram demonstrados como causa primária das reinicializações.</p>
+<p>O SSD apresentou temperatura elevada, porém não mostrou erros críticos ou falhas de leitura durante os testes executados.</p>
+<p>A GPU não apresentou artefatos, falhas reproduzíveis com cabo de referência ou comportamento que justificasse condená-la.</p>
+</details>
+<hr />
+<h1 id="um-caso-pode-ter-pistas-verdadeiras-e-irrelevantes">Um caso pode ter pistas verdadeiras e irrelevantes<a class="headerlink" href="#um-caso-pode-ter-pistas-verdadeiras-e-irrelevantes" title="Permanent link">&para;</a></h1>
+<p>Durante o diagnóstico encontramos:</p>
+<ul>
+<li>SSD quente;</li>
+<li>filtro empoeirado;</li>
+<li>evento de driver;</li>
+<li>fonte antiga;</li>
+<li>RAM cheia.</li>
+</ul>
+<p>Todas são informações verdadeiras.</p>
+<p>Mas nem todas explicam todos os sintomas.</p>
+<p>Esse é um dos maiores desafios da investigação real.</p>
+<blockquote>
+<p><strong>Evidência relevante é aquela que ajuda a explicar o comportamento observado e resiste a testes de comparação.</strong></p>
+</blockquote>
+<hr />
+<h1 id="o-vies-de-confirmacao">O viés de confirmação<a class="headerlink" href="#o-vies-de-confirmacao" title="Permanent link">&para;</a></h1>
+<p>Imagine que você tenha decidido cedo:</p>
+<blockquote>
+<p>“É a GPU.”</p>
+</blockquote>
+<p>Depois disso, pode começar a interpretar tudo para confirmar sua ideia.</p>
+<ul>
+<li>tela preta → GPU;</li>
+<li>driver falhou → GPU;</li>
+<li>jogo reiniciou → GPU;</li>
+<li>ventoinha aumentou → GPU.</li>
+</ul>
+<p>Esse é um exemplo de <strong>viés de confirmação</strong>.</p>
+<p>O método investigativo tenta reduzir esse problema exigindo:</p>
+<ul>
+<li>hipóteses alternativas;</li>
+<li>testes controlados;</li>
+<li>evidências contrárias;</li>
+<li>repetição.</li>
+</ul>
+<hr />
+<h1 id="procure-tambem-evidencias-que-contradizem-sua-hipotese">Procure também evidências que contradizem sua hipótese<a class="headerlink" href="#procure-tambem-evidencias-que-contradizem-sua-hipotese" title="Permanent link">&para;</a></h1>
+<p>Se você suspeita da GPU, pergunte:</p>
+<blockquote>
+<p>O que mostraria que a GPU provavelmente não é a causa?</p>
+</blockquote>
+<p>Exemplos:</p>
+<ul>
+<li>falha desaparece com outro cabo;</li>
+<li>GPU funciona em outro sistema;</li>
+<li>captura de tela permanece correta;</li>
+<li>problema depende da fonte;</li>
+<li>defeito ocorre com vídeo integrado.</li>
+</ul>
+<p>Um bom investigador tenta falsificar a própria hipótese.</p>
+<hr />
+<h1 id="diagnostico-como-processo-cientifico">Diagnóstico como processo científico<a class="headerlink" href="#diagnostico-como-processo-cientifico" title="Permanent link">&para;</a></h1>
+<p>Existe uma semelhança forte entre diagnóstico técnico e método científico.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Observação
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    ↓
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>Hipótese
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>    ↓
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>Previsão
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>    ↓
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>Teste
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>    ↓
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>Resultado
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a>    ↓
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>Revisão da hipótese
+</code></pre></div>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Hipótese:
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>o cabo falha em alta largura de banda.
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>Previsão:
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>reduzir a taxa de atualização deve diminuir a falha.
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>Teste:
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>165 Hz → 120 Hz.
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>Resultado:
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>falha desaparece.
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>Novo teste:
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>cabo de referência em 165 Hz.
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>
+<a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>Resultado:
+<a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a>estável.
+</code></pre></div>
+<p>A confiança na hipótese aumenta.</p>
+<hr />
+<h1 id="diagnostico-e-reducao-de-incerteza">Diagnóstico é redução de incerteza<a class="headerlink" href="#diagnostico-e-reducao-de-incerteza" title="Permanent link">&para;</a></h1>
+<p>No início do caso, quase tudo era possível.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>GPU?
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>Fonte?
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>RAM?
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>SSD?
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>Temperatura?
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>Driver?
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>Cabo?
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>Monitor?
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>Sistema?
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>Placa-mãe?
+</code></pre></div>
+<p>A cada evidência:</p>
+<ul>
+<li>algumas hipóteses ganham força;</li>
+<li>outras perdem força;</li>
+<li>novas hipóteses podem surgir.</li>
+</ul>
+<p>O objetivo é chegar ao menor conjunto plausível de causas sustentadas pelos dados.</p>
+<hr />
+<h1 id="a-investigacao-em-sete-frases">A investigação em sete frases<a class="headerlink" href="#a-investigacao-em-sete-frases" title="Permanent link">&para;</a></h1>
+<p>Depois de todo o módulo, podemos representar nosso método assim:</p>
+<ol>
+<li><strong>Descreva o sintoma sem assumir a causa.</strong></li>
+<li><strong>Preserve dados e segurança antes de intervir.</strong></li>
+<li><strong>Colete evidências no estado original.</strong></li>
+<li><strong>Construa hipóteses alternativas.</strong></li>
+<li><strong>Altere uma variável por vez.</strong></li>
+<li><strong>Confirme a causa com comparação e repetição.</strong></li>
+<li><strong>Valide e documente a correção.</strong></li>
+</ol>
+<p>Essas sete frases serão reutilizadas em módulos futuros.</p>
+<hr />
+<h1 id="o-hardware-foi-apenas-o-primeiro-laboratorio">O hardware foi apenas o primeiro laboratório<a class="headerlink" href="#o-hardware-foi-apenas-o-primeiro-laboratorio" title="Permanent link">&para;</a></h1>
+<p>O método que aprendemos não termina em componentes físicos.</p>
+<p>Nos próximos módulos poderemos investigar:</p>
+<ul>
+<li>sistemas operacionais;</li>
+<li>processos;</li>
+<li>arquivos;</li>
+<li>permissões;</li>
+<li>serviços;</li>
+<li>rede;</li>
+<li>DNS;</li>
+<li>protocolos;</li>
+<li>logs;</li>
+<li>segurança;</li>
+<li>aplicações;</li>
+<li>APIs;</li>
+<li>bancos de dados;</li>
+<li>automações;</li>
+<li>inteligência artificial.</li>
+</ul>
+<p>A estrutura de raciocínio continua semelhante.</p>
+<hr />
+<h1 id="do-componente-para-o-sistema">Do componente para o sistema<a class="headerlink" href="#do-componente-para-o-sistema" title="Permanent link">&para;</a></h1>
+<p>No começo do módulo, a pergunta era:</p>
+<blockquote>
+<p>“O que faz cada peça?”</p>
+</blockquote>
+<p>Agora a pergunta mudou:</p>
+<blockquote>
+<p><strong>“Como essas peças interagem e como suas falhas aparecem no comportamento do sistema?”</strong></p>
+</blockquote>
+<p>Essa mudança é fundamental.</p>
+<p>Conhecer hardware é importante.</p>
+<p>Saber investigar sistemas é ainda mais valioso.</p>
+<hr />
+<h1 id="quando-o-computador-deixa-de-ser-uma-caixa-misteriosa">Quando o computador deixa de ser uma caixa misteriosa<a class="headerlink" href="#quando-o-computador-deixa-de-ser-uma-caixa-misteriosa" title="Permanent link">&para;</a></h1>
+<p>Depois deste módulo, um computador não deve mais ser visto apenas como:</p>
+<ul>
+<li>processador;</li>
+<li>memória;</li>
+<li>SSD;</li>
+<li>placa de vídeo;</li>
+<li>fonte.</li>
+</ul>
+<p>Ele deve ser visto como uma cadeia de subsistemas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Energia
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>   ↓
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Inicialização
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>   ↓
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>Processamento
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>   ↓
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>Memória
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>   ↓
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>Armazenamento
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>   ↓
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>Gráficos
+<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>   ↓
+<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a>Saída
+<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>   ↓
+<a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>Usuário
+</code></pre></div>
+<p>E cada camada produz evidências.</p>
+<hr />
+<h1 id="o-inicio-da-postura-profissional">O início da postura profissional<a class="headerlink" href="#o-inicio-da-postura-profissional" title="Permanent link">&para;</a></h1>
+<p>Você não precisa conhecer todos os defeitos possíveis.</p>
+<p>Ninguém conhece.</p>
+<p>O que diferencia uma investigação técnica é a capacidade de:</p>
+<ul>
+<li>admitir o que ainda não sabe;</li>
+<li>formular boas hipóteses;</li>
+<li>escolher testes apropriados;</li>
+<li>preservar evidências;</li>
+<li>evitar conclusões prematuras;</li>
+<li>reconhecer limites;</li>
+<li>explicar o resultado.</li>
+</ul>
+<p>Essa postura será mais importante do que decorar listas de defeitos.</p>
+<hr />
+<h1 id="encerramento-do-dossie-do-modulo-2">📁 Encerramento do Dossiê do Módulo 2<a class="headerlink" href="#encerramento-do-dossie-do-modulo-2" title="Permanent link">&para;</a></h1>
+<p>Ao terminar este módulo, seu dossiê deve conter registros sobre:</p>
+<ul>
+<li>método de investigação;</li>
+<li>CPU;</li>
+<li>RAM;</li>
+<li>armazenamento;</li>
+<li>placa-mãe;</li>
+<li>fonte;</li>
+<li>refrigeração;</li>
+<li>GPU;</li>
+<li>monitor e cabos;</li>
+<li>ruídos;</li>
+<li>protocolo de bancada;</li>
+<li>caso final;</li>
+<li>primeiro laudo técnico.</li>
+</ul>
+<p>Esse material representa a passagem do conhecimento introdutório para a investigação aplicada.</p>
+<hr />
+<h1 id="proxima-etapa-da-formacao">Próxima etapa da formação<a class="headerlink" href="#proxima-etapa-da-formacao" title="Permanent link">&para;</a></h1>
+<p>Até agora investigamos principalmente o computador físico.</p>
+<p>Mas muitos problemas não deixam marcas visíveis em componentes.</p>
+<p>Um computador pode apresentar:</p>
+<ul>
+<li>lentidão;</li>
+<li>erro;</li>
+<li>travamento;</li>
+<li>comportamento estranho;</li>
+<li>acesso negado;</li>
+<li>programa que não inicia;</li>
+<li>serviço parado;</li>
+<li>arquivo corrompido;</li>
+<li>processo desconhecido;</li>
+<li>conexão inesperada;</li>
+</ul>
+<p>mesmo quando todo o hardware está saudável.</p>
+<p>Nos próximos módulos, entraremos na camada lógica.</p>
+<p>Começaremos a observar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Sistema operacional
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>        ↓
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Processos
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>        ↓
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>Memória lógica
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>        ↓
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>Arquivos
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>        ↓
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>Permissões
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>        ↓
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>Serviços
+<a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>        ↓
+<a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>Logs
+<a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>        ↓
+<a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a>Rede
+<a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a>        ↓
+<a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a>Segurança
+</code></pre></div>
+<p>A bancada física continua importante.</p>
+<p>Mas agora nossa investigação começa a entrar dentro do sistema.</p>
+<h1 id="proximo-modulo-investigacao-computacional-ii-sistema-operacional-processos-arquivos-e-evidencias">Próximo módulo — Investigação Computacional II: Sistema Operacional, Processos, Arquivos e Evidências<a class="headerlink" href="#proximo-modulo-investigacao-computacional-ii-sistema-operacional-processos-arquivos-e-evidencias" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
