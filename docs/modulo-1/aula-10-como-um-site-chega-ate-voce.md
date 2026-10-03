@@ -21,6 +21,14 @@ Mas existe uma pergunta muito interessante.
 
 Hoje vamos acompanhar essa viagem.
 
+<figure class="sev-learning-figure">
+  <picture>
+    <source media="(max-width: 700px)" srcset="../../assets/aulas/modulo-1/aula-10/viagem-do-site-mobile.webp">
+    <img src="../../assets/aulas/modulo-1/aula-10/viagem-do-site.webp" alt="Uma pessoa acessa uma loja virtual: o navegador consulta o DNS, recebe o endereço da rede, envia uma solicitação ao servidor, que pode consultar o banco de dados, e recebe a página como resposta." loading="lazy">
+  </picture>
+  <figcaption>A viagem acontece em etapas: o DNS informa o endereço; depois, o navegador se conecta ao servidor, que pode consultar o banco de dados antes de devolver a página.</figcaption>
+</figure>
+
 ## Imagine que você quer visitar um amigo
 Você sabe apenas o nome dele.  
 Mas não sabe onde ele mora.  
