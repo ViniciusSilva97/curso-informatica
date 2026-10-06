@@ -1,0 +1,3420 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-3/aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador/">
+      
+      
+        <link rel="prev" href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador? - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-3-sistemas-operacionais" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-2/aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 3 - Sistemas operacionais
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-09-monitores-e-cabos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-12-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3 - Sistemas operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 3 - Sistemas operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - Sistema Operacional. O Que Realmente Acontece Entre o Hardware e os Programas?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#investigacao-da-camada-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação da Camada Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#investigacao-da-camada-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação da Camada Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-3-sistemas-operacionais">Módulo 3 — Sistemas Operacionais<a class="headerlink" href="#modulo-3-sistemas-operacionais" title="Permanent link">&para;</a></h1>
+<h2 id="investigacao-da-camada-logica">Investigação da Camada Lógica<a class="headerlink" href="#investigacao-da-camada-logica" title="Permanent link">&para;</a></h2>
+<h1 id="aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador">Aula 2 — Processos e Threads: O Que Está Realmente Rodando no Seu Computador?<a class="headerlink" href="#aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Quando um programa trava, consome 100% da CPU ou aparece como “não respondendo”, o que realmente está acontecendo dentro do sistema operacional?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-012-o-programa-que-travava-o-computador-inteiro">Caso nº 012 — O programa que “travava o computador inteiro”<a class="headerlink" href="#caso-no-012-o-programa-que-travava-o-computador-inteiro" title="Permanent link">&para;</a></h2>
+<p>Um usuário relata:</p>
+<blockquote>
+<p>“Quando abro o programa de edição, o computador fica muito lento. Às vezes aparece ‘Não respondendo’, a ventoinha acelera e eu preciso esperar vários minutos.”</p>
+</blockquote>
+<p>A primeira reação poderia ser:</p>
+<blockquote>
+<p>“O processador não aguenta.”</p>
+</blockquote>
+<p>Mas essa conclusão é prematura.</p>
+<p>O computador possui:</p>
+<ul>
+<li>CPU de seis núcleos;</li>
+<li>16 GB de RAM;</li>
+<li>SSD;</li>
+<li>temperaturas normais;</li>
+<li>hardware aprovado nos testes anteriores.</li>
+</ul>
+<p>Ao reproduzir o problema, observamos:</p>
+<ul>
+<li>o programa abre normalmente;</li>
+<li>ao importar um projeto grande, a interface deixa de responder;</li>
+<li>o uso total de CPU fica em aproximadamente 32%;</li>
+<li>um dos núcleos permanece próximo de 100%;</li>
+<li>o disco apresenta picos;</li>
+<li>a memória aumenta gradualmente;</li>
+<li>o restante do sistema continua funcionando;</li>
+<li>depois de algum tempo, a aplicação volta a responder.</li>
+</ul>
+<p>O computador travou?</p>
+<p>Ou apenas uma parte do programa ficou ocupada?</p>
+<p>Para responder, precisamos entender:</p>
+<ul>
+<li>processo;</li>
+<li>thread;</li>
+<li>estado;</li>
+<li>escalonamento;</li>
+<li>espera;</li>
+<li>uso de CPU;</li>
+<li>I/O;</li>
+<li>memória;</li>
+<li>relações entre processos.</li>
+</ul>
+<hr />
+<h1 id="o-objetivo-desta-aula">O objetivo desta aula<a class="headerlink" href="#o-objetivo-desta-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta investigação, você deverá ser capaz de:</p>
+<ul>
+<li>diferenciar programa, processo e thread;</li>
+<li>compreender o que é um PID;</li>
+<li>interpretar uma árvore de processos;</li>
+<li>entender processos pai e filho;</li>
+<li>compreender estados de execução;</li>
+<li>entender o papel do escalonador;</li>
+<li>interpretar uso total e uso por núcleo;</li>
+<li>diferenciar CPU ocupada de processo esperando;</li>
+<li>compreender tempo de usuário e tempo de kernel;</li>
+<li>entender prioridade sem tratá-la como “turbo”;</li>
+<li>compreender troca de contexto;</li>
+<li>interpretar I/O de processos;</li>
+<li>entender handles e descritores de arquivo;</li>
+<li>reconhecer processos em segundo plano;</li>
+<li>compreender processos órfãos e zumbis em sistemas Unix-like;</li>
+<li>entender por que uma interface pode congelar sem o processo inteiro morrer;</li>
+<li>reconhecer bloqueios e deadlocks conceitualmente;</li>
+<li>utilizar ferramentas do Windows e Linux para observar processos;</li>
+<li>construir uma investigação antes de encerrar processos ou reiniciar o computador.</li>
+</ul>
+<hr />
+<h1 id="programa-processo-e-thread-nao-sao-sinonimos">Programa, processo e thread não são sinônimos<a class="headerlink" href="#programa-processo-e-thread-nao-sao-sinonimos" title="Permanent link">&para;</a></h1>
+<p>Essa diferença é fundamental.</p>
+<h2 id="programa">Programa<a class="headerlink" href="#programa" title="Permanent link">&para;</a></h2>
+<p>Um programa é um conjunto de instruções armazenado.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>editor.exe
+</code></pre></div>
+<p>ou:</p>
+<div class="highlight"><pre><span></span><code>/usr/bin/python3
+</code></pre></div>
+<p>Enquanto está no armazenamento, ele não está necessariamente executando.</p>
+<hr />
+<h1 id="processo">Processo<a class="headerlink" href="#processo" title="Permanent link">&para;</a></h1>
+<p>Quando o sistema inicia uma instância de um programa, cria estruturas para representá-la.</p>
+<p>Essa instância em execução é um processo.</p>
+<p>O processo possui contexto próprio.</p>
+<p>Pode incluir:</p>
+<ul>
+<li>identificador;</li>
+<li>espaço de memória;</li>
+<li>arquivos abertos;</li>
+<li>credenciais;</li>
+<li>ambiente;</li>
+<li>estado;</li>
+<li>recursos;</li>
+<li>uma ou mais threads.</li>
+</ul>
+<hr />
+<h1 id="thread">Thread<a class="headerlink" href="#thread" title="Permanent link">&para;</a></h1>
+<p>A thread é uma unidade de execução dentro de um processo.</p>
+<p>Um processo pode ter:</p>
+<ul>
+<li>uma thread;</li>
+<li>duas threads;</li>
+<li>dezenas;</li>
+<li>centenas.</li>
+</ul>
+<p>Aplicações modernas frequentemente dividem trabalho entre várias threads.</p>
+<hr />
+<h1 id="um-exemplo-simples">Um exemplo simples<a class="headerlink" href="#um-exemplo-simples" title="Permanent link">&para;</a></h1>
+<p>Imagine um navegador.</p>
+<p>Ele pode ter atividades diferentes:</p>
+<ul>
+<li>interface;</li>
+<li>rede;</li>
+<li>renderização;</li>
+<li>áudio;</li>
+<li>vídeo;</li>
+<li>extensões;</li>
+<li>abas;</li>
+<li>processos auxiliares.</li>
+</ul>
+<p>Isso não significa que tudo acontece dentro de uma única sequência de instruções.</p>
+<p>Parte do trabalho pode ser distribuída entre:</p>
+<ul>
+<li>threads;</li>
+<li>processos auxiliares;</li>
+<li>GPU;</li>
+<li>serviços.</li>
+</ul>
+<hr />
+<h1 id="por-que-dividir-trabalho">Por que dividir trabalho?<a class="headerlink" href="#por-que-dividir-trabalho" title="Permanent link">&para;</a></h1>
+<p>Separar tarefas pode permitir:</p>
+<ul>
+<li>melhor responsividade;</li>
+<li>paralelismo;</li>
+<li>isolamento;</li>
+<li>aproveitamento de múltiplos núcleos;</li>
+<li>menor impacto quando uma parte falha.</li>
+</ul>
+<p>Mas também aumenta complexidade.</p>
+<p>É necessário coordenar:</p>
+<ul>
+<li>dados;</li>
+<li>locks;</li>
+<li>filas;</li>
+<li>eventos;</li>
+<li>sincronização.</li>
+</ul>
+<hr />
+<h1 id="pid-process-identifier">PID — Process Identifier<a class="headerlink" href="#pid-process-identifier" title="Permanent link">&para;</a></h1>
+<p>Cada processo precisa ser identificado.</p>
+<p>O sistema utiliza um identificador.</p>
+<p>Frequentemente chamamos esse número de PID.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>navegador.exe
+PID 4312
+</code></pre></div>
+<p>Outra instância do mesmo programa pode possuir:</p>
+<div class="highlight"><pre><span></span><code>navegador.exe
+PID 5880
+</code></pre></div>
+<p>O nome é igual.</p>
+<p>O processo não é o mesmo.</p>
+<hr />
+<h1 id="o-pid-nao-e-permanente">O PID não é permanente<a class="headerlink" href="#o-pid-nao-e-permanente" title="Permanent link">&para;</a></h1>
+<p>Um PID pode ser reutilizado depois que um processo termina.</p>
+<p>Portanto:</p>
+<blockquote>
+<p>PID identifica uma instância em um determinado momento.</p>
+</blockquote>
+<p>Em uma investigação, registre também:</p>
+<ul>
+<li>horário;</li>
+<li>nome;</li>
+<li>caminho;</li>
+<li>usuário;</li>
+<li>processo pai.</li>
+</ul>
+<hr />
+<h1 id="processo-pai-e-processo-filho">Processo pai e processo filho<a class="headerlink" href="#processo-pai-e-processo-filho" title="Permanent link">&para;</a></h1>
+<p>Processos podem iniciar outros processos.</p>
+<p>Podemos representar:</p>
+<div class="highlight"><pre><span></span><code>shell
+  ↓
+aplicativo
+  ↓
+processo auxiliar
+</code></pre></div>
+<p>Ou:</p>
+<div class="highlight"><pre><span></span><code>serviço
+  ↓
+trabalhador
+  ↓
+subprocesso
+</code></pre></div>
+<p>Essa relação forma árvores.</p>
+<hr />
+<h1 id="por-que-a-arvore-de-processos-importa">Por que a árvore de processos importa?<a class="headerlink" href="#por-que-a-arvore-de-processos-importa" title="Permanent link">&para;</a></h1>
+<p>Imagine encontrar:</p>
+<div class="highlight"><pre><span></span><code>powershell.exe
+    ↓
+programa-desconhecido.exe
+</code></pre></div>
+<p>A relação pode ser relevante.</p>
+<p>Outro exemplo:</p>
+<div class="highlight"><pre><span></span><code>navegador.exe
+    ↓
+renderer.exe
+</code></pre></div>
+<p>Isso pode ser completamente esperado.</p>
+<p>O contexto muda a interpretação.</p>
+<hr />
+<h1 id="nome-sozinho-nao-basta">Nome sozinho não basta<a class="headerlink" href="#nome-sozinho-nao-basta" title="Permanent link">&para;</a></h1>
+<p>Dois arquivos podem possuir nomes semelhantes.</p>
+<p>Um processo legítimo pode executar em:</p>
+<div class="highlight"><pre><span></span><code>C:\Windows\System32
+</code></pre></div>
+<p>enquanto outro arquivo com nome parecido pode estar em:</p>
+<div class="highlight"><pre><span></span><code>C:\Users\Usuario\Downloads
+</code></pre></div>
+<p>Isso não prova malícia.</p>
+<p>Mas muda a investigação.</p>
+<p>Sempre que necessário, observe:</p>
+<ul>
+<li>caminho;</li>
+<li>assinatura;</li>
+<li>editor;</li>
+<li>processo pai;</li>
+<li>usuário;</li>
+<li>horário.</li>
+</ul>
+<hr />
+<h1 id="o-processo-possui-memoria-propria">O processo possui memória própria?<a class="headerlink" href="#o-processo-possui-memoria-propria" title="Permanent link">&para;</a></h1>
+<p>Conceitualmente, cada processo recebe um espaço de endereçamento virtual.</p>
+<p>Ele enxerga seu próprio ambiente.</p>
+<p>Isso ajuda a criar isolamento.</p>
+<p>Porém, processos podem compartilhar recursos de maneira controlada.</p>
+<p>Exemplos:</p>
+<ul>
+<li>memória compartilhada;</li>
+<li>arquivos;</li>
+<li>sockets;</li>
+<li>bibliotecas;</li>
+<li>objetos do sistema.</li>
+</ul>
+<hr />
+<h1 id="threads-compartilham-o-processo">Threads compartilham o processo<a class="headerlink" href="#threads-compartilham-o-processo" title="Permanent link">&para;</a></h1>
+<p>Threads do mesmo processo geralmente compartilham elementos como:</p>
+<ul>
+<li>memória do processo;</li>
+<li>arquivos abertos;</li>
+<li>recursos comuns.</li>
+</ul>
+<p>Mas cada thread precisa de informações próprias para executar.</p>
+<p>Por exemplo:</p>
+<ul>
+<li>registradores;</li>
+<li>pilha;</li>
+<li>estado;</li>
+<li>contador de instrução.</li>
+</ul>
+<hr />
+<h1 id="por-que-isso-importa-no-diagnostico">Por que isso importa no diagnóstico?<a class="headerlink" href="#por-que-isso-importa-no-diagnostico" title="Permanent link">&para;</a></h1>
+<p>Uma aplicação pode possuir:</p>
+<ul>
+<li>processo ativo;</li>
+<li>CPU baixa;</li>
+<li>interface congelada.</li>
+</ul>
+<p>Isso parece contraditório.</p>
+<p>Mas a thread responsável pela interface pode estar:</p>
+<ul>
+<li>esperando;</li>
+<li>bloqueada;</li>
+<li>ocupada;</li>
+<li>presa em uma operação.</li>
+</ul>
+<p>Enquanto outras threads continuam vivas.</p>
+<hr />
+<h1 id="nao-respondendo-nao-significa-processo-morto">“Não respondendo” não significa “processo morto”<a class="headerlink" href="#nao-respondendo-nao-significa-processo-morto" title="Permanent link">&para;</a></h1>
+<p>Em interfaces gráficas, o sistema espera que a aplicação processe mensagens e eventos.</p>
+<p>Se a thread responsável pela interface deixa de responder em tempo adequado, o sistema pode marcá-la como:</p>
+<blockquote>
+<p>Não respondendo.</p>
+</blockquote>
+<p>O processo ainda pode:</p>
+<ul>
+<li>executar;</li>
+<li>calcular;</li>
+<li>ler arquivos;</li>
+<li>esperar rede;</li>
+<li>voltar a responder.</li>
+</ul>
+<hr />
+<h1 id="o-erro-classico">O erro clássico<a class="headerlink" href="#o-erro-classico" title="Permanent link">&para;</a></h1>
+<p>Usuário vê:</p>
+<blockquote>
+<p>Não respondendo.</p>
+</blockquote>
+<p>Conclusão:</p>
+<blockquote>
+<p>O programa morreu.</p>
+</blockquote>
+<p>Nem sempre.</p>
+<p>Precisamos observar:</p>
+<ul>
+<li>CPU;</li>
+<li>disco;</li>
+<li>memória;</li>
+<li>estado;</li>
+<li>duração;</li>
+<li>I/O;</li>
+<li>logs.</li>
+</ul>
+<hr />
+<h1 id="um-programa-pode-estar-ocupado-legitimamente">Um programa pode estar ocupado legitimamente<a class="headerlink" href="#um-programa-pode-estar-ocupado-legitimamente" title="Permanent link">&para;</a></h1>
+<p>Imagine uma aplicação compactando um arquivo enorme em uma única thread.</p>
+<p>Um núcleo pode chegar a 100%.</p>
+<p>Uso total do processador pode parecer baixo.</p>
+<p>Em uma CPU com muitos núcleos, isso é esperado.</p>
+<hr />
+<h1 id="100-de-um-nucleo-nao-e-100-do-processador-inteiro">100% de um núcleo não é 100% do processador inteiro<a class="headerlink" href="#100-de-um-nucleo-nao-e-100-do-processador-inteiro" title="Permanent link">&para;</a></h1>
+<p>Suponha uma CPU com oito processadores lógicos.</p>
+<p>Uma thread ocupa completamente apenas um.</p>
+<p>De forma simplificada:</p>
+<div class="highlight"><pre><span></span><code>Núcleo lógico 1 → 100%
+Núcleo lógico 2 → 0%
+Núcleo lógico 3 → 0%
+Núcleo lógico 4 → 0%
+Núcleo lógico 5 → 0%
+Núcleo lógico 6 → 0%
+Núcleo lógico 7 → 0%
+Núcleo lógico 8 → 0%
+</code></pre></div>
+<p>A média total pode aparecer próxima de:</p>
+<div class="highlight"><pre><span></span><code>12,5%
+</code></pre></div>
+<p>Isso não significa que a thread possa usar mais CPU automaticamente.</p>
+<p>Ela pode ser essencialmente sequencial.</p>
+<hr />
+<h1 id="paralelismo-nao-acontece-por-magica">Paralelismo não acontece por mágica<a class="headerlink" href="#paralelismo-nao-acontece-por-magica" title="Permanent link">&para;</a></h1>
+<p>Para usar vários núcleos, o software precisa conseguir dividir trabalho.</p>
+<p>Nem toda tarefa pode ser paralelizada de maneira eficiente.</p>
+<p>Existem dependências.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Etapa B depende de A
+Etapa C depende de B
+</code></pre></div>
+<p>Nesse caso, não é simples executar tudo ao mesmo tempo.</p>
+<hr />
+<h1 id="concorrencia-e-paralelismo">Concorrência e paralelismo<a class="headerlink" href="#concorrencia-e-paralelismo" title="Permanent link">&para;</a></h1>
+<p>Os termos se relacionam, mas não são idênticos.</p>
+<h2 id="concorrencia">Concorrência<a class="headerlink" href="#concorrencia" title="Permanent link">&para;</a></h2>
+<p>Várias tarefas progridem ao longo do tempo.</p>
+<h2 id="paralelismo">Paralelismo<a class="headerlink" href="#paralelismo" title="Permanent link">&para;</a></h2>
+<p>Várias tarefas executam fisicamente ao mesmo tempo em diferentes unidades de execução.</p>
+<p>Um sistema pode ter concorrência mesmo com um único núcleo, alternando rapidamente entre tarefas.</p>
+<hr />
+<h1 id="o-escalonador">O escalonador<a class="headerlink" href="#o-escalonador" title="Permanent link">&para;</a></h1>
+<p>O sistema operacional decide quais threads podem usar a CPU.</p>
+<p>Essa função pertence ao escalonador.</p>
+<p>Uma representação simplificada:</p>
+<div class="highlight"><pre><span></span><code>Threads prontas
+   ↓
+Escalonador
+   ↓
+Processadores lógicos
+</code></pre></div>
+<p>O escalonador considera várias informações.</p>
+<p>Por exemplo:</p>
+<ul>
+<li>prioridade;</li>
+<li>estado;</li>
+<li>políticas;</li>
+<li>afinidade;</li>
+<li>carga;</li>
+<li>tempo;</li>
+<li>características do sistema.</li>
+</ul>
+<hr />
+<h1 id="uma-thread-nao-fica-sempre-executando">Uma thread não fica sempre executando<a class="headerlink" href="#uma-thread-nao-fica-sempre-executando" title="Permanent link">&para;</a></h1>
+<p>Ela pode alternar entre estados.</p>
+<p>Uma simplificação didática:</p>
+<div class="highlight"><pre><span></span><code>Pronta
+  ↓
+Executando
+  ↓
+Esperando
+  ↓
+Pronta novamente
+</code></pre></div>
+<hr />
+<h1 id="estado-pronto">Estado pronto<a class="headerlink" href="#estado-pronto" title="Permanent link">&para;</a></h1>
+<p>A thread pode executar.</p>
+<p>Mas está aguardando oportunidade de CPU.</p>
+<hr />
+<h1 id="estado-executando">Estado executando<a class="headerlink" href="#estado-executando" title="Permanent link">&para;</a></h1>
+<p>Está utilizando CPU naquele momento.</p>
+<hr />
+<h1 id="estado-de-espera">Estado de espera<a class="headerlink" href="#estado-de-espera" title="Permanent link">&para;</a></h1>
+<p>Está aguardando algum evento.</p>
+<p>Exemplos:</p>
+<ul>
+<li>leitura do disco;</li>
+<li>resposta de rede;</li>
+<li>lock;</li>
+<li>temporizador;</li>
+<li>entrada do usuário.</li>
+</ul>
+<hr />
+<h1 id="esperar-nao-e-o-mesmo-que-travar">Esperar não é o mesmo que travar<a class="headerlink" href="#esperar-nao-e-o-mesmo-que-travar" title="Permanent link">&para;</a></h1>
+<p>Imagine:</p>
+<div class="highlight"><pre><span></span><code>programa solicita dados da internet
+    ↓
+rede ainda não respondeu
+    ↓
+thread espera
+</code></pre></div>
+<p>Isso pode ser comportamento normal.</p>
+<p>Se a interface foi mal projetada e depende da mesma thread, o usuário pode perceber congelamento.</p>
+<hr />
+<h1 id="cpu-baixa-pode-coexistir-com-lentidao">CPU baixa pode coexistir com lentidão<a class="headerlink" href="#cpu-baixa-pode-coexistir-com-lentidao" title="Permanent link">&para;</a></h1>
+<p>Um aplicativo lento com CPU baixa pode estar esperando:</p>
+<ul>
+<li>disco;</li>
+<li>rede;</li>
+<li>outro processo;</li>
+<li>serviço;</li>
+<li>lock;</li>
+<li>resposta externa.</li>
+</ul>
+<p>Por isso:</p>
+<blockquote>
+<p>CPU baixa não prova que “não há nada acontecendo”.</p>
+</blockquote>
+<hr />
+<h1 id="io-entrada-e-saida">I/O — entrada e saída<a class="headerlink" href="#io-entrada-e-saida" title="Permanent link">&para;</a></h1>
+<p>Processos interagem com recursos externos à CPU.</p>
+<p>Chamamos muitas dessas operações de I/O.</p>
+<p>Exemplos:</p>
+<ul>
+<li>leitura de SSD;</li>
+<li>gravação;</li>
+<li>rede;</li>
+<li>periféricos;</li>
+<li>pipes.</li>
+</ul>
+<p>Um processo pode passar grande parte do tempo esperando I/O.</p>
+<hr />
+<h1 id="cpu-bound-e-io-bound">CPU-bound e I/O-bound<a class="headerlink" href="#cpu-bound-e-io-bound" title="Permanent link">&para;</a></h1>
+<p>Dois conceitos úteis.</p>
+<h2 id="cpu-bound">CPU-bound<a class="headerlink" href="#cpu-bound" title="Permanent link">&para;</a></h2>
+<p>A tarefa é limitada principalmente por processamento.</p>
+<p>Exemplos:</p>
+<ul>
+<li>cálculo;</li>
+<li>compressão;</li>
+<li>renderização de CPU;</li>
+<li>compilação.</li>
+</ul>
+<h2 id="io-bound">I/O-bound<a class="headerlink" href="#io-bound" title="Permanent link">&para;</a></h2>
+<p>A tarefa passa muito tempo esperando entrada e saída.</p>
+<p>Exemplos:</p>
+<ul>
+<li>leitura massiva;</li>
+<li>cópia;</li>
+<li>consulta remota;</li>
+<li>rede lenta.</li>
+</ul>
+<hr />
+<h1 id="o-mesmo-programa-pode-mudar-de-comportamento">O mesmo programa pode mudar de comportamento<a class="headerlink" href="#o-mesmo-programa-pode-mudar-de-comportamento" title="Permanent link">&para;</a></h1>
+<p>Durante uma operação:</p>
+<div class="highlight"><pre><span></span><code>carregar projeto
+    → I/O intenso
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>processar dados
+    → CPU intensa
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>salvar
+    → I/O novamente
+</code></pre></div>
+<p>Precisamos observar o momento.</p>
+<hr />
+<h1 id="tempo-de-usuario-e-tempo-de-kernel">Tempo de usuário e tempo de kernel<a class="headerlink" href="#tempo-de-usuario-e-tempo-de-kernel" title="Permanent link">&para;</a></h1>
+<p>O uso de CPU pode ser dividido conceitualmente entre diferentes modos.</p>
+<h2 id="tempo-de-usuario">Tempo de usuário<a class="headerlink" href="#tempo-de-usuario" title="Permanent link">&para;</a></h2>
+<p>Execução de código no espaço do usuário.</p>
+<h2 id="tempo-de-kernel">Tempo de kernel<a class="headerlink" href="#tempo-de-kernel" title="Permanent link">&para;</a></h2>
+<p>Tempo gasto executando operações privilegiadas do sistema.</p>
+<p>Se um processo gera muita atividade de sistema, parte do tempo pode aparecer associada ao kernel.</p>
+<hr />
+<h1 id="por-que-isso-ajuda">Por que isso ajuda?<a class="headerlink" href="#por-que-isso-ajuda" title="Permanent link">&para;</a></h1>
+<p>Um processo que faz muitas chamadas de sistema pode produzir:</p>
+<ul>
+<li>alto I/O;</li>
+<li>atividade de rede;</li>
+<li>manipulação de arquivos;</li>
+<li>operações com dispositivos.</li>
+</ul>
+<p>A distribuição entre tempo de usuário e kernel ajuda investigações mais avançadas.</p>
+<hr />
+<h1 id="context-switch-troca-de-contexto">Context switch — troca de contexto<a class="headerlink" href="#context-switch-troca-de-contexto" title="Permanent link">&para;</a></h1>
+<p>Quando a CPU deixa uma thread e passa para outra, o sistema precisa preservar e restaurar informações.</p>
+<p>Chamamos isso de troca de contexto.</p>
+<p>De forma simplificada:</p>
+<div class="highlight"><pre><span></span><code>Thread A executa
+   ↓
+salva contexto A
+   ↓
+carrega contexto B
+   ↓
+Thread B executa
+</code></pre></div>
+<hr />
+<h1 id="muitas-trocas-de-contexto-sao-ruins">Muitas trocas de contexto são ruins?<a class="headerlink" href="#muitas-trocas-de-contexto-sao-ruins" title="Permanent link">&para;</a></h1>
+<p>Não necessariamente.</p>
+<p>Sistemas multitarefa realizam muitas trocas.</p>
+<p>Um número elevado pode ser normal.</p>
+<p>Mas em alguns cenários, excesso pode indicar:</p>
+<ul>
+<li>muitas threads;</li>
+<li>sincronização excessiva;</li>
+<li>alta frequência de eventos;</li>
+<li>desenho ineficiente.</li>
+</ul>
+<p>Novamente, contexto é essencial.</p>
+<hr />
+<h1 id="thread-demais-tambem-pode-prejudicar">Thread demais também pode prejudicar<a class="headerlink" href="#thread-demais-tambem-pode-prejudicar" title="Permanent link">&para;</a></h1>
+<p>Criar mais threads não garante mais desempenho.</p>
+<p>Pode aumentar:</p>
+<ul>
+<li>memória;</li>
+<li>sincronização;</li>
+<li>contenção;</li>
+<li>trocas de contexto;</li>
+<li>complexidade.</li>
+</ul>
+<p>Existe um ponto em que mais paralelismo produz sobrecarga.</p>
+<hr />
+<h1 id="prioridade">Prioridade<a class="headerlink" href="#prioridade" title="Permanent link">&para;</a></h1>
+<p>Sistemas permitem diferentes prioridades de execução.</p>
+<p>Prioridade influencia a preferência do escalonador.</p>
+<p>Mas não transforma um processador lento em rápido.</p>
+<hr />
+<h1 id="aumentar-prioridade-nao-cria-capacidade">Aumentar prioridade não cria capacidade<a class="headerlink" href="#aumentar-prioridade-nao-cria-capacidade" title="Permanent link">&para;</a></h1>
+<p>Se uma CPU está saturada, aumentar prioridade de um processo significa:</p>
+<blockquote>
+<p>ele pode receber preferência sobre outros.</p>
+</blockquote>
+<p>Isso pode melhorar responsividade daquele processo.</p>
+<p>Mas pode prejudicar:</p>
+<ul>
+<li>interface;</li>
+<li>áudio;</li>
+<li>serviços;</li>
+<li>outros programas.</li>
+</ul>
+<hr />
+<h1 id="nao-altere-prioridade-por-tentativa">Não altere prioridade por tentativa<a class="headerlink" href="#nao-altere-prioridade-por-tentativa" title="Permanent link">&para;</a></h1>
+<p>Em diagnóstico, alterar prioridade cedo demais muda a cena.</p>
+<p>Primeiro observe:</p>
+<ul>
+<li>comportamento original;</li>
+<li>uso;</li>
+<li>estado;</li>
+<li>carga;</li>
+<li>dependências.</li>
+</ul>
+<p>Depois teste uma hipótese específica.</p>
+<hr />
+<h1 id="afinidade">Afinidade<a class="headerlink" href="#afinidade" title="Permanent link">&para;</a></h1>
+<p>Alguns sistemas permitem definir em quais processadores lógicos uma tarefa pode executar.</p>
+<p>Isso é afinidade.</p>
+<p>Exemplo conceitual:</p>
+<div class="highlight"><pre><span></span><code>Processo A
+permitido em CPU 0 e CPU 1
+</code></pre></div>
+<p>A afinidade pode ser útil em:</p>
+<ul>
+<li>testes;</li>
+<li>compatibilidade;</li>
+<li>cargas específicas.</li>
+</ul>
+<p>Mas não deve ser usada como “otimização universal”.</p>
+<hr />
+<h1 id="handles-no-windows">Handles no Windows<a class="headerlink" href="#handles-no-windows" title="Permanent link">&para;</a></h1>
+<p>Processos precisam referenciar objetos do sistema.</p>
+<p>No Windows, um conceito importante é handle.</p>
+<p>Um processo pode possuir handles para:</p>
+<ul>
+<li>arquivos;</li>
+<li>eventos;</li>
+<li>processos;</li>
+<li>threads;</li>
+<li>chaves de registro;</li>
+<li>objetos de sincronização.</li>
+</ul>
+<hr />
+<h1 id="descritores-de-arquivo-em-sistemas-unix-like">Descritores de arquivo em sistemas Unix-like<a class="headerlink" href="#descritores-de-arquivo-em-sistemas-unix-like" title="Permanent link">&para;</a></h1>
+<p>Em Linux e outros sistemas Unix-like, encontramos descritores de arquivo.</p>
+<p>Eles podem representar:</p>
+<ul>
+<li>arquivos;</li>
+<li>sockets;</li>
+<li>pipes;</li>
+<li>dispositivos.</li>
+</ul>
+<p>O conceito ajuda a entender como processos acessam recursos.</p>
+<hr />
+<h1 id="arquivo-em-uso">“Arquivo em uso”<a class="headerlink" href="#arquivo-em-uso" title="Permanent link">&para;</a></h1>
+<p>Se um processo mantém um arquivo aberto, outro programa pode encontrar restrições dependendo das regras do sistema e da aplicação.</p>
+<p>Sintoma:</p>
+<blockquote>
+<p>Não foi possível excluir o arquivo porque está sendo usado.</p>
+</blockquote>
+<p>Pergunta:</p>
+<blockquote>
+<p>Qual processo possui uma referência ativa para esse arquivo?</p>
+</blockquote>
+<p>Isso é investigação de processo.</p>
+<hr />
+<h1 id="vazamento-de-handles">Vazamento de handles<a class="headerlink" href="#vazamento-de-handles" title="Permanent link">&para;</a></h1>
+<p>Assim como memória, um programa pode deixar de liberar recursos.</p>
+<p>Ao longo do tempo:</p>
+<div class="highlight"><pre><span></span><code>300 handles
+   ↓
+2.000
+   ↓
+10.000
+   ↓
+50.000
+</code></pre></div>
+<p>Isso pode contribuir para instabilidade.</p>
+<p>Mas aumento não prova vazamento.</p>
+<p>Precisamos observar crescimento anormal e contínuo.</p>
+<hr />
+<h1 id="threads-e-sincronizacao">Threads e sincronização<a class="headerlink" href="#threads-e-sincronizacao" title="Permanent link">&para;</a></h1>
+<p>Quando várias threads compartilham dados, precisam evitar conflitos.</p>
+<p>Mecanismos de sincronização podem incluir conceitos como:</p>
+<ul>
+<li>mutex;</li>
+<li>semáforo;</li>
+<li>evento;</li>
+<li>lock;</li>
+<li>condição.</li>
+</ul>
+<p>O objetivo é controlar acesso concorrente.</p>
+<hr />
+<h1 id="corrida-race-condition">Corrida — race condition<a class="headerlink" href="#corrida-race-condition" title="Permanent link">&para;</a></h1>
+<p>Imagine duas threads alterando o mesmo dado sem coordenação.</p>
+<p>O resultado pode depender da ordem de execução.</p>
+<p>Isso pode gerar comportamento:</p>
+<ul>
+<li>intermitente;</li>
+<li>difícil de reproduzir;</li>
+<li>aparentemente aleatório.</li>
+</ul>
+<p>Esse tipo de problema é chamado de condição de corrida.</p>
+<hr />
+<h1 id="deadlock">Deadlock<a class="headerlink" href="#deadlock" title="Permanent link">&para;</a></h1>
+<p>Considere:</p>
+<div class="highlight"><pre><span></span><code>Thread A possui Recurso 1
+e espera Recurso 2
+
+Thread B possui Recurso 2
+e espera Recurso 1
+</code></pre></div>
+<p>Nenhuma avança.</p>
+<p>Temos um bloqueio mútuo.</p>
+<p>Esse é o conceito de deadlock.</p>
+<hr />
+<h1 id="nem-todo-congelamento-e-deadlock">Nem todo congelamento é deadlock<a class="headerlink" href="#nem-todo-congelamento-e-deadlock" title="Permanent link">&para;</a></h1>
+<p>Uma aplicação pode congelar por:</p>
+<ul>
+<li>cálculo longo;</li>
+<li>I/O lento;</li>
+<li>servidor remoto;</li>
+<li>lock temporário;</li>
+<li>bug;</li>
+<li>loop;</li>
+<li>falta de memória.</li>
+</ul>
+<p>Precisamos de evidência antes de usar o termo.</p>
+<hr />
+<h1 id="processo-orfao">Processo órfão<a class="headerlink" href="#processo-orfao" title="Permanent link">&para;</a></h1>
+<p>Em sistemas Unix-like, um processo pode continuar existindo depois que seu processo pai termina.</p>
+<p>O sistema precisa tratá-lo adequadamente.</p>
+<p>Essa situação é diferente de processo zumbi.</p>
+<hr />
+<h1 id="processo-zumbi">Processo zumbi<a class="headerlink" href="#processo-zumbi" title="Permanent link">&para;</a></h1>
+<p>Um processo zumbi em sistemas Unix-like já terminou a execução, mas ainda possui uma pequena entrada na tabela de processos porque seu estado de término ainda não foi coletado pelo pai.</p>
+<p>Ele não é:</p>
+<ul>
+<li>um processo usando CPU normalmente;</li>
+<li>um programa “ressuscitado”;</li>
+<li>necessariamente malware.</li>
+</ul>
+<p>É um estado específico de gerenciamento de processos.</p>
+<hr />
+<h1 id="o-nome-zumbi-confunde">O nome “zumbi” confunde<a class="headerlink" href="#o-nome-zumbi-confunde" title="Permanent link">&para;</a></h1>
+<p>Em cursos superficiais, a palavra pode criar a impressão de um programa morto que continua executando.</p>
+<p>Não é isso.</p>
+<p>O processo já terminou sua execução.</p>
+<p>O que permanece é informação administrativa até que o sistema/processo responsável a recolha.</p>
+<hr />
+<h1 id="processos-em-segundo-plano">Processos em segundo plano<a class="headerlink" href="#processos-em-segundo-plano" title="Permanent link">&para;</a></h1>
+<p>Nem todo processo possui janela.</p>
+<p>Podem existir processos associados a:</p>
+<ul>
+<li>serviços;</li>
+<li>atualizadores;</li>
+<li>sincronização;</li>
+<li>drivers auxiliares;</li>
+<li>segurança;</li>
+<li>impressão;</li>
+<li>banco de dados;</li>
+<li>áudio.</li>
+</ul>
+<p>Não encerre um processo apenas porque você não vê interface.</p>
+<hr />
+<h1 id="servico-nao-e-exatamente-o-mesmo-que-processo">Serviço não é exatamente o mesmo que processo<a class="headerlink" href="#servico-nao-e-exatamente-o-mesmo-que-processo" title="Permanent link">&para;</a></h1>
+<p>Um serviço é uma função administrada pelo sistema.</p>
+<p>Ele pode estar associado a:</p>
+<ul>
+<li>um processo próprio;</li>
+<li>um processo compartilhado;</li>
+<li>múltiplos componentes.</li>
+</ul>
+<p>Em alguns sistemas, vários serviços podem existir dentro de um mesmo processo host.</p>
+<p>Por isso:</p>
+<blockquote>
+<p>processo e serviço não devem ser tratados como sinônimos.</p>
+</blockquote>
+<hr />
+<h1 id="arvore-de-processos">Árvore de processos<a class="headerlink" href="#arvore-de-processos" title="Permanent link">&para;</a></h1>
+<p>Uma árvore permite observar origem.</p>
+<p>Exemplo didático:</p>
+<div class="highlight"><pre><span></span><code>sistema
+  ├── serviço A
+  │    └── trabalhador
+  ├── shell
+  │    ├── navegador
+  │    │    ├── renderizador
+  │    │    └── GPU helper
+  │    └── editor
+  └── serviço B
+</code></pre></div>
+<p>Isso é muito mais informativo do que uma lista plana.</p>
+<hr />
+<h1 id="ferramentas-no-windows">Ferramentas no Windows<a class="headerlink" href="#ferramentas-no-windows" title="Permanent link">&para;</a></h1>
+<h2 id="gerenciador-de-tarefas">Gerenciador de Tarefas<a class="headerlink" href="#gerenciador-de-tarefas" title="Permanent link">&para;</a></h2>
+<p>Permite observar:</p>
+<ul>
+<li>processos;</li>
+<li>CPU;</li>
+<li>memória;</li>
+<li>disco;</li>
+<li>rede;</li>
+<li>GPU;</li>
+<li>usuários;</li>
+<li>inicialização.</li>
+</ul>
+<p>É excelente para uma primeira triagem.</p>
+<hr />
+<h1 id="aba-detalhes">Aba Detalhes<a class="headerlink" href="#aba-detalhes" title="Permanent link">&para;</a></h1>
+<p>A aba de detalhes pode mostrar informações mais técnicas.</p>
+<p>Dependendo da configuração, podemos observar:</p>
+<ul>
+<li>PID;</li>
+<li>status;</li>
+<li>usuário;</li>
+<li>CPU;</li>
+<li>memória;</li>
+<li>prioridade;</li>
+<li>arquitetura.</li>
+</ul>
+<p>Colunas adicionais podem ser ativadas.</p>
+<hr />
+<h1 id="monitor-de-recursos">Monitor de Recursos<a class="headerlink" href="#monitor-de-recursos" title="Permanent link">&para;</a></h1>
+<p>Permite observar relações mais detalhadas entre:</p>
+<ul>
+<li>CPU;</li>
+<li>disco;</li>
+<li>rede;</li>
+<li>memória.</li>
+</ul>
+<p>É útil quando a pergunta é:</p>
+<blockquote>
+<p>Qual processo está gerando esta atividade?</p>
+</blockquote>
+<hr />
+<h1 id="powershell">PowerShell<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h1>
+<p>Para observação, podemos utilizar:</p>
+<div class="highlight"><pre><span></span><code>Get-Process
+</code></pre></div>
+<p>Isso lista processos.</p>
+<p>Podemos selecionar propriedades:</p>
+<div class="highlight"><pre><span></span><code>Get-Process | Select-Object Id, ProcessName, CPU
+</code></pre></div>
+<p>Esse comando apenas consulta informações.</p>
+<hr />
+<h1 id="tasklist">tasklist<a class="headerlink" href="#tasklist" title="Permanent link">&para;</a></h1>
+<p>Outra ferramenta nativa:</p>
+<div class="highlight"><pre><span></span><code>tasklist
+</code></pre></div>
+<p>Ela exibe processos ativos e seus identificadores.</p>
+<p>Não é tão rica quanto ferramentas gráficas, mas é útil em diagnóstico e automação.</p>
+<hr />
+<h1 id="process-explorer">Process Explorer<a class="headerlink" href="#process-explorer" title="Permanent link">&para;</a></h1>
+<p>A suíte Sysinternals da Microsoft oferece ferramentas avançadas.</p>
+<p>Process Explorer pode ajudar a observar:</p>
+<ul>
+<li>árvore de processos;</li>
+<li>handles;</li>
+<li>threads;</li>
+<li>assinaturas;</li>
+<li>imagens carregadas;</li>
+<li>relações pai/filho.</li>
+</ul>
+<p>É uma ferramenta profissional muito valiosa.</p>
+<p>Nesta aula, porém, o objetivo é entender os conceitos antes de depender de ferramentas avançadas.</p>
+<hr />
+<h1 id="ferramentas-no-linux">Ferramentas no Linux<a class="headerlink" href="#ferramentas-no-linux" title="Permanent link">&para;</a></h1>
+<h2 id="ps">ps<a class="headerlink" href="#ps" title="Permanent link">&para;</a></h2>
+<p>Comando clássico para observar processos.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>ps aux
+</code></pre></div>
+<p>Ele pode mostrar:</p>
+<ul>
+<li>usuário;</li>
+<li>PID;</li>
+<li>CPU;</li>
+<li>memória;</li>
+<li>comando.</li>
+</ul>
+<hr />
+<h1 id="top">top<a class="headerlink" href="#top" title="Permanent link">&para;</a></h1>
+<p>Permite observação dinâmica.</p>
+<p>Pode mostrar:</p>
+<ul>
+<li>carga;</li>
+<li>processos;</li>
+<li>CPU;</li>
+<li>memória;</li>
+<li>estados.</li>
+</ul>
+<hr />
+<h1 id="htop">htop<a class="headerlink" href="#htop" title="Permanent link">&para;</a></h1>
+<p>Quando disponível, fornece uma interface mais amigável e interativa.</p>
+<p>Mas não está instalado em todos os sistemas.</p>
+<hr />
+<h1 id="pstree">pstree<a class="headerlink" href="#pstree" title="Permanent link">&para;</a></h1>
+<p>Pode mostrar relações hierárquicas.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>pstree
+</code></pre></div>
+<p>Isso ajuda a visualizar processos pai e filho.</p>
+<hr />
+<h1 id="proc">/proc<a class="headerlink" href="#proc" title="Permanent link">&para;</a></h1>
+<p>Em muitos sistemas Linux, informações sobre processos são expostas pelo pseudo-sistema de arquivos /proc.</p>
+<p>Exemplo conceitual:</p>
+<div class="highlight"><pre><span></span><code>/proc/1234/
+</code></pre></div>
+<p>onde 1234 seria um PID.</p>
+<p>Ali podem existir informações sobre:</p>
+<ul>
+<li>status;</li>
+<li>memória;</li>
+<li>arquivos abertos;</li>
+<li>linha de comando.</li>
+</ul>
+<p>É um recurso poderoso para investigação.</p>
+<hr />
+<h1 id="nao-precisamos-decorar-comandos">Não precisamos decorar comandos<a class="headerlink" href="#nao-precisamos-decorar-comandos" title="Permanent link">&para;</a></h1>
+<p>O curso não quer formar usuários que apenas repetem comandos.</p>
+<p>Queremos formar investigadores.</p>
+<p>A pergunta vem primeiro.</p>
+<p>Depois escolhemos a ferramenta.</p>
+<hr />
+<h1 id="pergunta-quem-usa-cpu">Pergunta: quem usa CPU?<a class="headerlink" href="#pergunta-quem-usa-cpu" title="Permanent link">&para;</a></h1>
+<p>Windows:</p>
+<ul>
+<li>Gerenciador de Tarefas;</li>
+<li>Monitor de Recursos;</li>
+<li>PowerShell.</li>
+</ul>
+<p>Linux:</p>
+<ul>
+<li>top;</li>
+<li>htop;</li>
+<li>ps.</li>
+</ul>
+<hr />
+<h1 id="pergunta-quem-abriu-determinado-arquivo">Pergunta: quem abriu determinado arquivo?<a class="headerlink" href="#pergunta-quem-abriu-determinado-arquivo" title="Permanent link">&para;</a></h1>
+<p>Ferramentas avançadas podem ajudar a identificar:</p>
+<ul>
+<li>handles;</li>
+<li>descritores;</li>
+<li>processos associados.</li>
+</ul>
+<hr />
+<h1 id="pergunta-qual-processo-iniciou-este-processo">Pergunta: qual processo iniciou este processo?<a class="headerlink" href="#pergunta-qual-processo-iniciou-este-processo" title="Permanent link">&para;</a></h1>
+<p>Precisamos observar:</p>
+<ul>
+<li>PPID;</li>
+<li>árvore;</li>
+<li>histórico;</li>
+<li>ferramenta apropriada.</li>
+</ul>
+<hr />
+<h1 id="pergunta-o-processo-esta-executando-ou-esperando">Pergunta: o processo está executando ou esperando?<a class="headerlink" href="#pergunta-o-processo-esta-executando-ou-esperando" title="Permanent link">&para;</a></h1>
+<p>Precisamos analisar:</p>
+<ul>
+<li>CPU;</li>
+<li>estado;</li>
+<li>I/O;</li>
+<li>threads;</li>
+<li>dependências.</li>
+</ul>
+<hr />
+<h1 id="o-caso-volta-a-bancada">O caso volta à bancada<a class="headerlink" href="#o-caso-volta-a-bancada" title="Permanent link">&para;</a></h1>
+<p>Vamos retornar ao programa de edição.</p>
+<p>Sintomas:</p>
+<ul>
+<li>interface “Não respondendo”;</li>
+<li>um núcleo em 100%;</li>
+<li>uso total de CPU em 32%;</li>
+<li>disco com picos;</li>
+<li>memória aumentando;</li>
+<li>sistema continua utilizável.</li>
+</ul>
+<hr />
+<h1 id="primeira-hipotese">Primeira hipótese<a class="headerlink" href="#primeira-hipotese" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>O programa está utilizando uma thread principal para trabalho pesado.</p>
+</blockquote>
+<p>Essa hipótese prevê:</p>
+<ul>
+<li>um núcleo muito ocupado;</li>
+<li>interface pouco responsiva;</li>
+<li>processo ainda vivo;</li>
+<li>retorno da interface após concluir a tarefa.</li>
+</ul>
+<hr />
+<h1 id="teste">Teste<a class="headerlink" href="#teste" title="Permanent link">&para;</a></h1>
+<p>Observamos o comportamento por alguns minutos.</p>
+<p>Resultados:</p>
+<ul>
+<li>uso do mesmo núcleo permanece alto;</li>
+<li>atividade de disco ocorre ao carregar recursos;</li>
+<li>memória estabiliza;</li>
+<li>nenhuma falha é registrada;</li>
+<li>ao concluir a importação, CPU cai;</li>
+<li>interface volta a responder;</li>
+<li>arquivo aparece corretamente.</li>
+</ul>
+<hr />
+<h1 id="conclusao-parcial">Conclusão parcial<a class="headerlink" href="#conclusao-parcial" title="Permanent link">&para;</a></h1>
+<p>O comportamento é compatível com:</p>
+<blockquote>
+<p>tarefa pesada executada de maneira que bloqueia temporariamente a responsividade da interface.</p>
+</blockquote>
+<p>Isso é diferente de:</p>
+<blockquote>
+<p>falha do processador.</p>
+</blockquote>
+<hr />
+<h1 id="a-ventoinha-acelerou">A ventoinha acelerou<a class="headerlink" href="#a-ventoinha-acelerou" title="Permanent link">&para;</a></h1>
+<p>Isso também fazia parte da reclamação.</p>
+<p>Com CPU trabalhando, consumo e temperatura aumentam.</p>
+<p>O sistema de refrigeração responde.</p>
+<p>Portanto:</p>
+<div class="highlight"><pre><span></span><code>carga legítima
+   ↓
+temperatura sobe
+   ↓
+ventoinha acelera
+</code></pre></div>
+<p>A ventoinha não prova defeito.</p>
+<hr />
+<h1 id="e-a-memoria-aumentando">E a memória aumentando?<a class="headerlink" href="#e-a-memoria-aumentando" title="Permanent link">&para;</a></h1>
+<p>Durante a importação, o programa carrega dados.</p>
+<p>A memória sobe.</p>
+<p>Depois estabiliza.</p>
+<p>Isso não demonstra vazamento.</p>
+<p>Se continuasse crescendo indefinidamente a cada operação, sem liberação, a hipótese de vazamento ficaria mais relevante.</p>
+<hr />
+<h1 id="uma-investigacao-ruim">Uma investigação ruim<a class="headerlink" href="#uma-investigacao-ruim" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>Programa não responde
+    ↓
+“CPU fraca”
+    ↓
+troca de processador
+</code></pre></div>
+<hr />
+<h1 id="uma-investigacao-melhor">Uma investigação melhor<a class="headerlink" href="#uma-investigacao-melhor" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>Programa não responde
+    ↓
+observar processo
+    ↓
+identificar thread/carga
+    ↓
+correlacionar CPU, I/O e memória
+    ↓
+verificar se tarefa conclui
+    ↓
+comparar comportamento
+    ↓
+concluir
+</code></pre></div>
+<hr />
+<h1 id="quando-encerrar-um-processo">Quando encerrar um processo?<a class="headerlink" href="#quando-encerrar-um-processo" title="Permanent link">&para;</a></h1>
+<p>Às vezes é necessário.</p>
+<p>Mas antes, pergunte:</p>
+<ul>
+<li>existem dados não salvos?</li>
+<li>o programa ainda está fazendo I/O?</li>
+<li>existe operação crítica?</li>
+<li>é um processo do sistema?</li>
+<li>sabemos o impacto?</li>
+<li>a investigação precisa preservar o estado?</li>
+</ul>
+<p>Encerrar deve ser decisão consciente.</p>
+<hr />
+<h1 id="nao-finalize-processos-criticos-aleatoriamente">Não finalize processos críticos aleatoriamente<a class="headerlink" href="#nao-finalize-processos-criticos-aleatoriamente" title="Permanent link">&para;</a></h1>
+<p>Encerrar processos do sistema pode causar:</p>
+<ul>
+<li>perda de sessão;</li>
+<li>instabilidade;</li>
+<li>desligamento;</li>
+<li>perda de dados;</li>
+<li>comportamento imprevisível.</li>
+</ul>
+<p>Durante o curso, priorizaremos observação segura.</p>
+<hr />
+<h1 id="reiniciar-apaga-evidencias-volateis">Reiniciar apaga evidências voláteis<a class="headerlink" href="#reiniciar-apaga-evidencias-volateis" title="Permanent link">&para;</a></h1>
+<p>Ao reiniciar, perdemos informações como:</p>
+<ul>
+<li>processos ativos;</li>
+<li>PIDs;</li>
+<li>memória volátil;</li>
+<li>conexões;</li>
+<li>handles;</li>
+<li>estado de threads.</li>
+</ul>
+<p>Por isso, se a investigação for importante:</p>
+<blockquote>
+<p>observe e registre antes de reiniciar.</p>
+</blockquote>
+<hr />
+<h1 id="tempo-de-cpu">Tempo de CPU<a class="headerlink" href="#tempo-de-cpu" title="Permanent link">&para;</a></h1>
+<p>Ferramentas podem mostrar tempo acumulado de CPU.</p>
+<p>Isso é diferente de porcentagem instantânea.</p>
+<p>Um processo pode:</p>
+<ul>
+<li>ter usado muita CPU anteriormente;</li>
+<li>estar ocioso agora.</li>
+</ul>
+<p>A interpretação precisa considerar janela temporal.</p>
+<hr />
+<h1 id="uso-instantaneo-tambem-engana">Uso instantâneo também engana<a class="headerlink" href="#uso-instantaneo-tambem-engana" title="Permanent link">&para;</a></h1>
+<p>Um pico rápido pode desaparecer antes de ser observado.</p>
+<p>Ferramentas de monitoramento e histórico ajudam.</p>
+<p>Em investigação avançada, podemos registrar:</p>
+<ul>
+<li>contadores;</li>
+<li>traces;</li>
+<li>eventos;</li>
+<li>perfis.</li>
+</ul>
+<hr />
+<h1 id="amostragem">Amostragem<a class="headerlink" href="#amostragem" title="Permanent link">&para;</a></h1>
+<p>Muitos monitores trabalham por amostragem.</p>
+<p>Eles observam em intervalos.</p>
+<p>Portanto, um número exibido é uma representação do período.</p>
+<p>Isso explica pequenas diferenças entre ferramentas.</p>
+<hr />
+<h1 id="processo-com-0-pode-trabalhar">Processo com 0% pode trabalhar<a class="headerlink" href="#processo-com-0-pode-trabalhar" title="Permanent link">&para;</a></h1>
+<p>Se o uso é muito pequeno ou intermitente, a interface pode arredondar para zero.</p>
+<p>Não conclua:</p>
+<blockquote>
+<p>“esse processo nunca usa CPU.”</p>
+</blockquote>
+<hr />
+<h1 id="processo-suspenso">Processo suspenso<a class="headerlink" href="#processo-suspenso" title="Permanent link">&para;</a></h1>
+<p>Alguns sistemas podem suspender processos temporariamente.</p>
+<p>Isso reduz consumo quando não precisam executar.</p>
+<p>Aplicativos modernos podem ser suspensos em determinados cenários.</p>
+<p>Suspenso não significa encerrado.</p>
+<hr />
+<h1 id="prioridade-de-io">Prioridade de I/O<a class="headerlink" href="#prioridade-de-io" title="Permanent link">&para;</a></h1>
+<p>Além da CPU, sistemas podem aplicar políticas sobre operações de entrada e saída.</p>
+<p>Um processo em segundo plano pode receber tratamento diferente de uma tarefa interativa.</p>
+<p>Isso ajuda a preservar responsividade.</p>
+<hr />
+<h1 id="qos-e-classes-de-trabalho">QoS e classes de trabalho<a class="headerlink" href="#qos-e-classes-de-trabalho" title="Permanent link">&para;</a></h1>
+<p>Sistemas modernos utilizam várias políticas para equilibrar:</p>
+<ul>
+<li>responsividade;</li>
+<li>eficiência;</li>
+<li>energia;</li>
+<li>desempenho.</li>
+</ul>
+<p>O escalonamento real é muito mais complexo que uma fila simples.</p>
+<p>Nosso modelo serve para diagnóstico inicial.</p>
+<hr />
+<h1 id="processos-e-seguranca">Processos e segurança<a class="headerlink" href="#processos-e-seguranca" title="Permanent link">&para;</a></h1>
+<p>Um processo executa com um contexto de segurança.</p>
+<p>Isso influencia:</p>
+<ul>
+<li>arquivos que pode acessar;</li>
+<li>operações permitidas;</li>
+<li>recursos disponíveis.</li>
+</ul>
+<p>Por isso, o mesmo executável pode se comportar diferente quando executado:</p>
+<ul>
+<li>por outro usuário;</li>
+<li>com outro nível de privilégio.</li>
+</ul>
+<hr />
+<h1 id="elevacao-de-privilegio">Elevação de privilégio<a class="headerlink" href="#elevacao-de-privilegio" title="Permanent link">&para;</a></h1>
+<p>Executar como administrador pode mudar permissões.</p>
+<p>Mas isso não deve ser usado como:</p>
+<blockquote>
+<p>“tente como administrador até funcionar.”</p>
+</blockquote>
+<p>Primeiro pergunte:</p>
+<blockquote>
+<p>por que o programa precisa de privilégio?</p>
+</blockquote>
+<p>Se um aplicativo comum exige privilégios inesperados, isso merece análise.</p>
+<hr />
+<h1 id="processo-e-ambiente">Processo e ambiente<a class="headerlink" href="#processo-e-ambiente" title="Permanent link">&para;</a></h1>
+<p>Processos podem herdar informações do ambiente.</p>
+<p>Exemplos:</p>
+<ul>
+<li>variáveis;</li>
+<li>diretório atual;</li>
+<li>credenciais;</li>
+<li>sessão.</li>
+</ul>
+<p>Diferenças de ambiente podem explicar:</p>
+<blockquote>
+<p>funciona em um terminal, mas não em outro.</p>
+</blockquote>
+<hr />
+<h1 id="dlls-e-bibliotecas">DLLs e bibliotecas<a class="headerlink" href="#dlls-e-bibliotecas" title="Permanent link">&para;</a></h1>
+<p>Processos carregam bibliotecas.</p>
+<p>Uma falha pode envolver:</p>
+<ul>
+<li>versão;</li>
+<li>arquitetura;</li>
+<li>dependência;</li>
+<li>conflito;</li>
+<li>arquivo ausente.</li>
+</ul>
+<p>Então:</p>
+<blockquote>
+<p>processo fecha ao iniciar</p>
+</blockquote>
+<p>não significa necessariamente erro no executável principal.</p>
+<hr />
+<h1 id="crash">Crash<a class="headerlink" href="#crash" title="Permanent link">&para;</a></h1>
+<p>Crash significa que a execução terminou de forma anormal.</p>
+<p>Pode ocorrer por:</p>
+<ul>
+<li>acesso inválido à memória;</li>
+<li>exceção não tratada;</li>
+<li>biblioteca;</li>
+<li>bug;</li>
+<li>driver;</li>
+<li>corrupção;</li>
+<li>recursos.</li>
+</ul>
+<p>Um crash é diferente de uma aplicação que continua viva, mas não responde.</p>
+<hr />
+<h1 id="hang">Hang<a class="headerlink" href="#hang" title="Permanent link">&para;</a></h1>
+<p>Hang é um termo usado para descrever uma aplicação que permanece ativa, mas deixa de progredir ou responder adequadamente.</p>
+<p>Pode estar relacionado a:</p>
+<ul>
+<li>deadlock;</li>
+<li>espera infinita;</li>
+<li>I/O;</li>
+<li>loop;</li>
+<li>bloqueio.</li>
+</ul>
+<p>Precisamos descobrir qual.</p>
+<hr />
+<h1 id="loop-de-cpu">Loop de CPU<a class="headerlink" href="#loop-de-cpu" title="Permanent link">&para;</a></h1>
+<p>Um programa pode entrar em uma repetição que consome CPU continuamente.</p>
+<p>Sintomas:</p>
+<ul>
+<li>uso alto;</li>
+<li>pouca ou nenhuma progressão;</li>
+<li>comportamento reproduzível.</li>
+</ul>
+<p>Isso é diferente de esperar I/O.</p>
+<hr />
+<h1 id="espera-infinita">Espera infinita<a class="headerlink" href="#espera-infinita" title="Permanent link">&para;</a></h1>
+<p>Uma thread pode aguardar um evento que nunca ocorre.</p>
+<p>Uso de CPU pode permanecer baixo.</p>
+<p>A aplicação parece congelada.</p>
+<p>Esse é um bom exemplo de por que:</p>
+<blockquote>
+<p>CPU baixa não significa ausência de problema.</p>
+</blockquote>
+<hr />
+<h1 id="wait-chain">Wait chain<a class="headerlink" href="#wait-chain" title="Permanent link">&para;</a></h1>
+<p>Ferramentas avançadas podem analisar cadeias de espera.</p>
+<p>A ideia é descobrir:</p>
+<blockquote>
+<p>esta thread espera o quê?</p>
+</blockquote>
+<p>E talvez:</p>
+<blockquote>
+<p>o recurso depende de qual outra thread?</p>
+</blockquote>
+<p>Isso pode revelar bloqueios.</p>
+<hr />
+<h1 id="contencao">Contenção<a class="headerlink" href="#contencao" title="Permanent link">&para;</a></h1>
+<p>Quando muitas threads disputam o mesmo recurso, temos contenção.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Thread A
+Thread B
+Thread C
+   ↓
+mesmo lock
+</code></pre></div>
+<p>Mesmo com vários núcleos, as threads podem acabar esperando.</p>
+<p>Paralelismo teórico não garante desempenho real.</p>
+<hr />
+<h1 id="escalabilidade">Escalabilidade<a class="headerlink" href="#escalabilidade" title="Permanent link">&para;</a></h1>
+<p>Um programa que usa 2 threads muito bem pode não dobrar desempenho com 4, 8 ou 16.</p>
+<p>Razões:</p>
+<ul>
+<li>parte sequencial;</li>
+<li>sincronização;</li>
+<li>memória;</li>
+<li>cache;</li>
+<li>I/O;</li>
+<li>sobrecarga.</li>
+</ul>
+<p>Por isso, avaliar desempenho exige entender a carga.</p>
+<hr />
+<h1 id="o-sistema-tambem-possui-processos">O sistema também possui processos<a class="headerlink" href="#o-sistema-tambem-possui-processos" title="Permanent link">&para;</a></h1>
+<p>Nem tudo é aplicativo do usuário.</p>
+<p>O sistema executa componentes relacionados a:</p>
+<ul>
+<li>sessões;</li>
+<li>serviços;</li>
+<li>segurança;</li>
+<li>rede;</li>
+<li>áudio;</li>
+<li>interface;</li>
+<li>gerenciamento.</li>
+</ul>
+<p>Muitos são essenciais.</p>
+<hr />
+<h1 id="pids-muito-baixos-sao-sempre-sistema">PIDs muito baixos são sempre sistema?<a class="headerlink" href="#pids-muito-baixos-sao-sempre-sistema" title="Permanent link">&para;</a></h1>
+<p>Não devemos utilizar regras simplistas.</p>
+<p>A convenção varia entre sistemas.</p>
+<p>No Linux, PID 1 possui papel especial.</p>
+<p>No Windows, a arquitetura é diferente.</p>
+<p>Conheça o sistema antes de interpretar.</p>
+<hr />
+<h1 id="pid-1-no-linux">PID 1 no Linux<a class="headerlink" href="#pid-1-no-linux" title="Permanent link">&para;</a></h1>
+<p>Em sistemas Linux modernos, o PID 1 geralmente corresponde ao processo de inicialização do espaço do usuário.</p>
+<p>Em muitas distribuições, é o systemd.</p>
+<p>Ele possui responsabilidades especiais.</p>
+<p>Mas não devemos generalizar para todos os sistemas operacionais.</p>
+<hr />
+<h1 id="o-processo-idle">O processo idle<a class="headerlink" href="#o-processo-idle" title="Permanent link">&para;</a></h1>
+<p>Sistemas podem representar tempo ocioso de maneiras específicas.</p>
+<p>No Windows, existe o conceito de System Idle Process.</p>
+<p>Um valor alto normalmente indica:</p>
+<blockquote>
+<p>CPU ociosa.</p>
+</blockquote>
+<p>Isso é contraintuitivo para iniciantes.</p>
+<p>“Idle 95%” não significa:</p>
+<blockquote>
+<p>processo usando 95% para fazer algo.</p>
+</blockquote>
+<p>Significa que grande parte da capacidade está ociosa.</p>
+<hr />
+<h1 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h1>
+<h2 id="100-de-cpu-significa-processador-defeituoso">“100% de CPU significa processador defeituoso.”<a class="headerlink" href="#100-de-cpu-significa-processador-defeituoso" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Pode ser carga legítima ou problema de software.</p>
+<hr />
+<h2 id="nao-respondendo-significa-que-o-processo-morreu">“Não respondendo significa que o processo morreu.”<a class="headerlink" href="#nao-respondendo-significa-que-o-processo-morreu" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Ele pode estar ocupado ou esperando.</p>
+<hr />
+<h2 id="mais-threads-sempre-deixa-o-programa-mais-rapido">“Mais threads sempre deixa o programa mais rápido.”<a class="headerlink" href="#mais-threads-sempre-deixa-o-programa-mais-rapido" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Sincronização e sobrecarga podem reduzir desempenho.</p>
+<hr />
+<h2 id="se-um-processo-nao-tem-janela-e-suspeito">“Se um processo não tem janela, é suspeito.”<a class="headerlink" href="#se-um-processo-nao-tem-janela-e-suspeito" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Muitos serviços e componentes funcionam em segundo plano.</p>
+<hr />
+<h2 id="prioridade-alta-melhora-qualquer-programa">“Prioridade alta melhora qualquer programa.”<a class="headerlink" href="#prioridade-alta-melhora-qualquer-programa" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Pode apenas deslocar recursos de outras tarefas.</p>
+<hr />
+<h2 id="cpu-baixa-significa-que-o-aplicativo-esta-saudavel">“CPU baixa significa que o aplicativo está saudável.”<a class="headerlink" href="#cpu-baixa-significa-que-o-aplicativo-esta-saudavel" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Ele pode estar bloqueado ou esperando I/O.</p>
+<hr />
+<h2 id="processo-zumbi-esta-executando-escondido">“Processo zumbi está executando escondido.”<a class="headerlink" href="#processo-zumbi-esta-executando-escondido" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Em sistemas Unix-like, é um estado administrativo após término.</p>
+<hr />
+<h1 id="laboratorio-observando-processos-sem-alterar-o-sistema">🔬 Laboratório — observando processos sem alterar o sistema<a class="headerlink" href="#laboratorio-observando-processos-sem-alterar-o-sistema" title="Permanent link">&para;</a></h1>
+<p>O objetivo é coletar evidências.</p>
+<p>Não encerre processos importantes.</p>
+<hr />
+<h1 id="etapa-1-abra-seu-monitor-de-processos">Etapa 1 — Abra seu monitor de processos<a class="headerlink" href="#etapa-1-abra-seu-monitor-de-processos" title="Permanent link">&para;</a></h1>
+<p>No Windows:</p>
+<ul>
+<li>Gerenciador de Tarefas.</li>
+</ul>
+<p>No Linux:</p>
+<ul>
+<li>Monitor do Sistema;</li>
+<li>top;</li>
+<li>htop, se disponível.</li>
+</ul>
+<p>Observe por dois minutos sem abrir nada novo.</p>
+<hr />
+<h1 id="etapa-2-registre-cinco-processos">Etapa 2 — Registre cinco processos<a class="headerlink" href="#etapa-2-registre-cinco-processos" title="Permanent link">&para;</a></h1>
+<p>Para cada processo, anote:</p>
+<div class="highlight"><pre><span></span><code>Nome:
+PID:
+Usuário:
+CPU:
+Memória:
+Possui interface?
+Função provável:
+</code></pre></div>
+<hr />
+<h1 id="etapa-3-abra-um-aplicativo-conhecido">Etapa 3 — Abra um aplicativo conhecido<a class="headerlink" href="#etapa-3-abra-um-aplicativo-conhecido" title="Permanent link">&para;</a></h1>
+<p>Escolha algo simples:</p>
+<ul>
+<li>navegador;</li>
+<li>editor de texto;</li>
+<li>calculadora.</li>
+</ul>
+<p>Observe:</p>
+<ul>
+<li>surge um ou vários processos?</li>
+<li>quem é o processo pai?</li>
+<li>CPU aumenta?</li>
+<li>memória aumenta?</li>
+</ul>
+<hr />
+<h1 id="etapa-4-abra-uma-segunda-instancia">Etapa 4 — Abra uma segunda instância<a class="headerlink" href="#etapa-4-abra-uma-segunda-instancia" title="Permanent link">&para;</a></h1>
+<p>Se o aplicativo permitir, abra novamente.</p>
+<p>Pergunte:</p>
+<blockquote>
+<p>surgiu outro PID?</p>
+</blockquote>
+<p>Isso mostra a diferença entre:</p>
+<ul>
+<li>programa;</li>
+<li>instância.</li>
+</ul>
+<hr />
+<h1 id="etapa-5-observe-cpu-por-nucleo">Etapa 5 — Observe CPU por núcleo<a class="headerlink" href="#etapa-5-observe-cpu-por-nucleo" title="Permanent link">&para;</a></h1>
+<p>Abra uma operação segura.</p>
+<p>Exemplo:</p>
+<ul>
+<li>carregar uma página pesada;</li>
+<li>compactar arquivo de teste;</li>
+<li>abrir projeto conhecido.</li>
+</ul>
+<p>Observe:</p>
+<ul>
+<li>todos os núcleos sobem?</li>
+<li>apenas alguns?</li>
+<li>existe um núcleo muito ocupado?</li>
+</ul>
+<p>Registre.</p>
+<hr />
+<h1 id="etapa-6-observe-io">Etapa 6 — Observe I/O<a class="headerlink" href="#etapa-6-observe-io" title="Permanent link">&para;</a></h1>
+<p>Durante abertura de um arquivo grande, veja:</p>
+<ul>
+<li>atividade de armazenamento;</li>
+<li>processo responsável;</li>
+<li>duração.</li>
+</ul>
+<p>Pergunte:</p>
+<blockquote>
+<p>a tarefa é limitada por CPU ou por I/O?</p>
+</blockquote>
+<hr />
+<h1 id="etapa-7-observe-a-arvore">Etapa 7 — Observe a árvore<a class="headerlink" href="#etapa-7-observe-a-arvore" title="Permanent link">&para;</a></h1>
+<p>Se sua ferramenta permitir, encontre:</p>
+<ul>
+<li>processo pai;</li>
+<li>processos filhos.</li>
+</ul>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code>Pai:
+Filho:
+Relação provável:
+</code></pre></div>
+<hr />
+<h1 id="etapa-8-powershell-no-windows">Etapa 8 — PowerShell no Windows<a class="headerlink" href="#etapa-8-powershell-no-windows" title="Permanent link">&para;</a></h1>
+<p>Execute apenas para observação:</p>
+<div class="highlight"><pre><span></span><code>Get-Process
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>Get-Process | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, CPU
+</code></pre></div>
+<p>Compare com o Gerenciador de Tarefas.</p>
+<hr />
+<h1 id="etapa-9-linux">Etapa 9 — Linux<a class="headerlink" href="#etapa-9-linux" title="Permanent link">&para;</a></h1>
+<p>Se estiver em Linux:</p>
+<div class="highlight"><pre><span></span><code>ps aux
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>ps -eo pid,ppid,comm,%cpu,%mem --sort=-%cpu
+</code></pre></div>
+<p>Compare:</p>
+<ul>
+<li>PID;</li>
+<li>PPID;</li>
+<li>CPU;</li>
+<li>memória.</li>
+</ul>
+<hr />
+<h1 id="etapa-10-nao-conclua-rapido">Etapa 10 — Não conclua rápido<a class="headerlink" href="#etapa-10-nao-conclua-rapido" title="Permanent link">&para;</a></h1>
+<p>Escolha o processo com maior CPU.</p>
+<p>Responda:</p>
+<ul>
+<li>é esperado?</li>
+<li>quanto tempo permanece alto?</li>
+<li>existe uma tarefa em andamento?</li>
+<li>CPU cai depois?</li>
+<li>qual evidência explica o comportamento?</li>
+</ul>
+<hr />
+<h1 id="registro-do-laboratorio">📁 Registro do laboratório<a class="headerlink" href="#registro-do-laboratorio" title="Permanent link">&para;</a></h1>
+<p>Adicione ao Dossiê:</p>
+<div class="highlight"><pre><span></span><code>Sistema operacional:
+Data e horário:
+
+Processo observado:
+PID:
+Processo pai:
+CPU:
+Memória:
+I/O:
+Número aproximado de threads:
+
+Sintoma:
+Hipótese:
+Evidência:
+Teste:
+Resultado:
+Conclusão:
+</code></pre></div>
+<hr />
+<h1 id="estudo-de-caso-1-um-nucleo-em-100">Estudo de caso 1 — Um núcleo em 100%<a class="headerlink" href="#estudo-de-caso-1-um-nucleo-em-100" title="Permanent link">&para;</a></h1>
+<p>Sintoma:</p>
+<blockquote>
+<p>programa parece lento.</p>
+</blockquote>
+<p>CPU:</p>
+<div class="highlight"><pre><span></span><code>total → 18%
+um núcleo → 100%
+</code></pre></div>
+<p>O programa realiza uma tarefa sequencial.</p>
+<p>Conclusão:</p>
+<blockquote>
+<p>existe saturação de uma linha de execução, não da CPU inteira.</p>
+</blockquote>
+<p>Trocar para uma CPU com mais núcleos pode não resolver proporcionalmente.</p>
+<p>Desempenho por núcleo pode importar mais nesse cenário.</p>
+<hr />
+<h1 id="estudo-de-caso-2-3-de-cpu-e-aplicacao-congelada">Estudo de caso 2 — 3% de CPU e aplicação congelada<a class="headerlink" href="#estudo-de-caso-2-3-de-cpu-e-aplicacao-congelada" title="Permanent link">&para;</a></h1>
+<p>Sintoma:</p>
+<blockquote>
+<p>aplicativo não responde.</p>
+</blockquote>
+<p>Evidências:</p>
+<ul>
+<li>CPU baixa;</li>
+<li>processo continua ativo;</li>
+<li>rede possui latência;</li>
+<li>interface volta quando servidor responde.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>comportamento compatível com espera de I/O/rede.</p>
+</blockquote>
+<hr />
+<h1 id="estudo-de-caso-3-cpu-alta-depois-de-fechar-a-janela">Estudo de caso 3 — CPU alta depois de fechar a janela<a class="headerlink" href="#estudo-de-caso-3-cpu-alta-depois-de-fechar-a-janela" title="Permanent link">&para;</a></h1>
+<p>Usuário fecha a interface.</p>
+<p>Mas um processo continua ativo.</p>
+<p>Hipóteses:</p>
+<ul>
+<li>tarefa em segundo plano;</li>
+<li>fechamento incompleto;</li>
+<li>serviço auxiliar;</li>
+<li>bug.</li>
+</ul>
+<p>Primeiro identifique a função.</p>
+<p>Não finalize imediatamente.</p>
+<hr />
+<h1 id="estudo-de-caso-4-muitos-processos-do-navegador">Estudo de caso 4 — Muitos processos do navegador<a class="headerlink" href="#estudo-de-caso-4-muitos-processos-do-navegador" title="Permanent link">&para;</a></h1>
+<p>Usuário vê vinte processos.</p>
+<p>Conclusão precipitada:</p>
+<blockquote>
+<p>“O navegador está duplicado e com vírus.”</p>
+</blockquote>
+<p>Mas navegadores modernos podem usar múltiplos processos para:</p>
+<ul>
+<li>abas;</li>
+<li>renderização;</li>
+<li>extensões;</li>
+<li>GPU;</li>
+<li>isolamento.</li>
+</ul>
+<p>Quantidade sozinha não prova anomalia.</p>
+<hr />
+<h1 id="estudo-de-caso-5-memoria-cresce-ao-longo-do-dia">Estudo de caso 5 — Memória cresce ao longo do dia<a class="headerlink" href="#estudo-de-caso-5-memoria-cresce-ao-longo-do-dia" title="Permanent link">&para;</a></h1>
+<p>Sintoma:</p>
+<blockquote>
+<p>programa começa com 800 MB e termina com 9 GB.</p>
+</blockquote>
+<p>Perguntas:</p>
+<ul>
+<li>crescimento é contínuo?</li>
+<li>cai ao fechar documentos?</li>
+<li>cache é liberado?</li>
+<li>ocorre em toda execução?</li>
+<li>sistema começa a paginar?</li>
+</ul>
+<p>A hipótese de vazamento cresce se o comportamento for:</p>
+<ul>
+<li>contínuo;</li>
+<li>reproduzível;</li>
+<li>sem liberação proporcional.</li>
+</ul>
+<hr />
+<h1 id="estudo-de-caso-6-sistema-lento-cpu-baixa">Estudo de caso 6 — Sistema lento, CPU baixa<a class="headerlink" href="#estudo-de-caso-6-sistema-lento-cpu-baixa" title="Permanent link">&para;</a></h1>
+<p>Evidências:</p>
+<ul>
+<li>CPU 8%;</li>
+<li>RAM quase cheia;</li>
+<li>SSD com alto I/O;</li>
+<li>paginação intensa.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>CPU não é o gargalo principal.</p>
+</blockquote>
+<p>Processos ajudam a localizar quem está consumindo memória e gerando I/O.</p>
+<hr />
+<h1 id="o-metodo-aplicado-a-processos">O método aplicado a processos<a class="headerlink" href="#o-metodo-aplicado-a-processos" title="Permanent link">&para;</a></h1>
+<h2 id="1-sintoma">1. Sintoma<a class="headerlink" href="#1-sintoma" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Programa não responde.</p>
+</blockquote>
+<h2 id="2-observacao">2. Observação<a class="headerlink" href="#2-observacao" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Processo continua ativo.</p>
+</blockquote>
+<h2 id="3-evidencia">3. Evidência<a class="headerlink" href="#3-evidencia" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>CPU baixa, I/O de rede ativo.</p>
+</blockquote>
+<h2 id="4-hipotese">4. Hipótese<a class="headerlink" href="#4-hipotese" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Espera por resposta externa.</p>
+</blockquote>
+<h2 id="5-teste">5. Teste<a class="headerlink" href="#5-teste" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Observar rede e reproduzir com conectividade diferente.</p>
+</blockquote>
+<h2 id="6-resultado">6. Resultado<a class="headerlink" href="#6-resultado" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Interface retorna assim que operação remota conclui.</p>
+</blockquote>
+<h2 id="7-conclusao">7. Conclusão<a class="headerlink" href="#7-conclusao" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Comportamento ligado à espera de rede, não à falha física da CPU.</p>
+</blockquote>
+<hr />
+<h1 id="o-que-um-profissional-avancado-observaria">O que um profissional avançado observaria?<a class="headerlink" href="#o-que-um-profissional-avancado-observaria" title="Permanent link">&para;</a></h1>
+<p>Em uma análise mais profunda, poderíamos investigar:</p>
+<ul>
+<li>pilhas de threads;</li>
+<li>wait states;</li>
+<li>contadores;</li>
+<li>handles;</li>
+<li>DLLs;</li>
+<li>chamadas de sistema;</li>
+<li>traces;</li>
+<li>eventos do kernel;</li>
+<li>amostragem de CPU;</li>
+<li>perfis de desempenho.</li>
+</ul>
+<p>Ferramentas especializadas podem incluir analisadores de desempenho e depuradores.</p>
+<p>Mas a lógica continua igual.</p>
+<hr />
+<h1 id="um-profiler-nao-e-magico">Um profiler não é mágico<a class="headerlink" href="#um-profiler-nao-e-magico" title="Permanent link">&para;</a></h1>
+<p>Ferramentas de profiling ajudam a responder:</p>
+<blockquote>
+<p>onde o programa gasta tempo?</p>
+</blockquote>
+<p>Podem revelar:</p>
+<ul>
+<li>função pesada;</li>
+<li>espera;</li>
+<li>alocação;</li>
+<li>contenção.</li>
+</ul>
+<p>Mas os dados precisam ser interpretados.</p>
+<hr />
+<h1 id="tempo-de-parede-e-tempo-de-cpu">Tempo de parede e tempo de CPU<a class="headerlink" href="#tempo-de-parede-e-tempo-de-cpu" title="Permanent link">&para;</a></h1>
+<p>Imagine uma tarefa que leva:</p>
+<div class="highlight"><pre><span></span><code>10 segundos no relógio
+</code></pre></div>
+<p>Mas utiliza:</p>
+<div class="highlight"><pre><span></span><code>2 segundos de CPU
+</code></pre></div>
+<p>Isso significa que os outros 8 segundos podem ter sido gastos:</p>
+<ul>
+<li>esperando;</li>
+<li>bloqueada;</li>
+<li>dormindo;</li>
+<li>em I/O.</li>
+</ul>
+<p>Tempo total e tempo de CPU não são iguais.</p>
+<hr />
+<h1 id="latencia-versus-throughput">Latência versus throughput<a class="headerlink" href="#latencia-versus-throughput" title="Permanent link">&para;</a></h1>
+<h2 id="latencia">Latência<a class="headerlink" href="#latencia" title="Permanent link">&para;</a></h2>
+<p>Tempo para concluir uma operação individual.</p>
+<h2 id="throughput">Throughput<a class="headerlink" href="#throughput" title="Permanent link">&para;</a></h2>
+<p>Quantidade total de trabalho por unidade de tempo.</p>
+<p>Um sistema pode ter:</p>
+<ul>
+<li>bom throughput;</li>
+<li>latência ruim.</li>
+</ul>
+<p>Para aplicações interativas, latência importa muito.</p>
+<hr />
+<h1 id="responsividade">Responsividade<a class="headerlink" href="#responsividade" title="Permanent link">&para;</a></h1>
+<p>Um computador “rápido” precisa responder ao usuário.</p>
+<p>Mesmo que uma tarefa pesada execute corretamente, a interface deve idealmente continuar responsiva.</p>
+<p>Esse é um problema de projeto de software e escalonamento de trabalho.</p>
+<hr />
+<h1 id="por-que-isso-importa-para-suporte-tecnico">Por que isso importa para suporte técnico?<a class="headerlink" href="#por-que-isso-importa-para-suporte-tecnico" title="Permanent link">&para;</a></h1>
+<p>Porque o técnico precisa separar:</p>
+<ul>
+<li>hardware insuficiente;</li>
+<li>software mal otimizado;</li>
+<li>configuração;</li>
+<li>operação legítima;</li>
+<li>bug;</li>
+<li>recurso externo lento.</li>
+</ul>
+<p>Sem observar processos, tudo vira:</p>
+<blockquote>
+<p>“computador lento.”</p>
+</blockquote>
+<hr />
+<h1 id="o-diagnostico-nao-deve-comecar-pela-troca-de-pecas">O diagnóstico não deve começar pela troca de peças<a class="headerlink" href="#o-diagnostico-nao-deve-comecar-pela-troca-de-pecas" title="Permanent link">&para;</a></h1>
+<p>Um processo consumindo CPU não significa:</p>
+<blockquote>
+<p>compre outro processador.</p>
+</blockquote>
+<p>Precisamos descobrir:</p>
+<ul>
+<li>qual tarefa;</li>
+<li>se é esperada;</li>
+<li>se conclui;</li>
+<li>se a aplicação escala;</li>
+<li>se existe erro.</li>
+</ul>
+<hr />
+<h1 id="o-diagnostico-tambem-nao-deve-comecar-pelo-encerramento">O diagnóstico também não deve começar pelo encerramento<a class="headerlink" href="#o-diagnostico-tambem-nao-deve-comecar-pelo-encerramento" title="Permanent link">&para;</a></h1>
+<p>Encerrar o processo pode remover o sintoma.</p>
+<p>Mas não explica:</p>
+<ul>
+<li>por que aconteceu;</li>
+<li>quando começou;</li>
+<li>como reproduzir;</li>
+<li>qual recurso estava esperando.</li>
+</ul>
+<p>Observe primeiro.</p>
+<hr />
+<h1 id="processos-como-evidencia">Processos como evidência<a class="headerlink" href="#processos-como-evidencia" title="Permanent link">&para;</a></h1>
+<p>Processos revelam o estado atual do sistema.</p>
+<p>Eles podem indicar:</p>
+<ul>
+<li>programas ativos;</li>
+<li>tarefas em segundo plano;</li>
+<li>consumo;</li>
+<li>origem;</li>
+<li>relações.</li>
+</ul>
+<p>Mas são evidências voláteis.</p>
+<p>Depois de reiniciar, o cenário muda.</p>
+<hr />
+<h1 id="a-importancia-do-horario">A importância do horário<a class="headerlink" href="#a-importancia-do-horario" title="Permanent link">&para;</a></h1>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code>21:05 — aplicação abriu
+21:06 — CPU subiu
+21:07 — interface não respondeu
+21:08 — disco caiu
+21:09 — aplicação voltou
+</code></pre></div>
+<p>Essa linha do tempo vale muito mais que:</p>
+<blockquote>
+<p>“travou por alguns minutos.”</p>
+</blockquote>
+<hr />
+<h1 id="a-importancia-de-reproduzir">A importância de reproduzir<a class="headerlink" href="#a-importancia-de-reproduzir" title="Permanent link">&para;</a></h1>
+<p>Se o comportamento ocorre sempre ao:</p>
+<ul>
+<li>importar arquivo;</li>
+<li>conectar a servidor;</li>
+<li>abrir projeto;</li>
+<li>carregar extensão;</li>
+</ul>
+<p>temos uma condição reproduzível.</p>
+<p>Isso permite testar uma variável de cada vez.</p>
+<hr />
+<h1 id="o-que-nao-devemos-fazer">O que não devemos fazer<a class="headerlink" href="#o-que-nao-devemos-fazer" title="Permanent link">&para;</a></h1>
+<p>Evite:</p>
+<ul>
+<li>finalizar processos aleatoriamente;</li>
+<li>desativar serviços sem entender;</li>
+<li>instalar “otimizadores”;</li>
+<li>aumentar prioridade de tudo;</li>
+<li>limpar RAM com programas milagrosos;</li>
+<li>formatar sem investigação.</li>
+</ul>
+<p>Essas ações podem mascarar a causa.</p>
+<hr />
+<h1 id="limpadores-de-ram">“Limpadores de RAM”<a class="headerlink" href="#limpadores-de-ram" title="Permanent link">&para;</a></h1>
+<p>Sistemas modernos gerenciam memória de maneira sofisticada.</p>
+<p>Ferramentas que prometem “liberar RAM” podem:</p>
+<ul>
+<li>forçar descarte de cache;</li>
+<li>aumentar paginação;</li>
+<li>criar sensação temporária de espaço livre.</li>
+</ul>
+<p>RAM vazia não é objetivo.</p>
+<p>O objetivo é uso eficiente e responsivo.</p>
+<hr />
+<h1 id="o-processo-certo-pode-usar-muita-ram">O processo certo pode usar muita RAM<a class="headerlink" href="#o-processo-certo-pode-usar-muita-ram" title="Permanent link">&para;</a></h1>
+<p>Um editor trabalhando com projeto grande pode legitimamente utilizar vários gigabytes.</p>
+<p>O que importa é:</p>
+<ul>
+<li>necessidade;</li>
+<li>comportamento;</li>
+<li>estabilidade;</li>
+<li>pressão geral.</li>
+</ul>
+<hr />
+<h1 id="o-processo-errado-pode-usar-pouca-ram-e-ainda-causar-problema">O processo errado pode usar pouca RAM e ainda causar problema<a class="headerlink" href="#o-processo-errado-pode-usar-pouca-ram-e-ainda-causar-problema" title="Permanent link">&para;</a></h1>
+<p>Um serviço usando 50 MB pode:</p>
+<ul>
+<li>bloquear recurso;</li>
+<li>falhar repetidamente;</li>
+<li>gerar erros;</li>
+<li>impedir inicialização.</li>
+</ul>
+<p>Quantidade de memória não define importância.</p>
+<hr />
+<h1 id="investigacao-por-camada">Investigação por camada<a class="headerlink" href="#investigacao-por-camada" title="Permanent link">&para;</a></h1>
+<p>Quando um programa apresenta problema, tente identificar:</p>
+<div class="highlight"><pre><span></span><code>Aplicação
+   ↓
+Processo
+   ↓
+Threads
+   ↓
+Recursos
+   ↓
+Serviço / driver / I/O
+   ↓
+Kernel
+   ↓
+Hardware
+</code></pre></div>
+<p>A falha pode estar em qualquer ponto.</p>
+<hr />
+<h1 id="relacao-com-a-aula-1">Relação com a Aula 1<a class="headerlink" href="#relacao-com-a-aula-1" title="Permanent link">&para;</a></h1>
+<p>Na Aula 1, vimos que o sistema operacional administra recursos.</p>
+<p>Agora enxergamos uma parte concreta desse gerenciamento.</p>
+<p>O escalonador distribui CPU.</p>
+<p>O sistema mantém:</p>
+<ul>
+<li>processos;</li>
+<li>threads;</li>
+<li>estados;</li>
+<li>identificadores;</li>
+<li>recursos.</li>
+</ul>
+<p>A abstração começa a ficar observável.</p>
+<hr />
+<h1 id="dossie-da-investigacao-atualizacao">📁 Dossiê da Investigação — atualização<a class="headerlink" href="#dossie-da-investigacao-atualizacao" title="Permanent link">&para;</a></h1>
+<p>Adicione uma nova ficha:</p>
+<h2 id="ficha-de-processo">Ficha de processo<a class="headerlink" href="#ficha-de-processo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Nome:
+PID:
+Usuário:
+Caminho:
+Processo pai:
+Filhos:
+CPU:
+Memória:
+I/O:
+Estado:
+Threads:
+Horário observado:
+Comportamento esperado:
+Comportamento observado:
+Hipótese:
+Teste:
+Resultado:
+</code></pre></div>
+<p>Essa ficha será reutilizada em aulas futuras.</p>
+<hr />
+<h1 id="conexao-com-a-proxima-aula">Conexão com a próxima aula<a class="headerlink" href="#conexao-com-a-proxima-aula" title="Permanent link">&para;</a></h1>
+<p>Processos não trabalham apenas com CPU.</p>
+<p>Eles precisam de memória.</p>
+<p>Até agora, sabemos que cada processo recebe um espaço virtual.</p>
+<p>Mas isso abre novas perguntas:</p>
+<ul>
+<li>de onde vem essa memória?</li>
+<li>por que um processo enxerga endereços que não correspondem diretamente à RAM?</li>
+<li>o que acontece quando a memória física fica cheia?</li>
+<li>o que são páginas?</li>
+<li>o que significa commit?</li>
+<li>por que o SSD começa a trabalhar quando falta RAM?</li>
+<li>quando paginação é normal?</li>
+<li>quando ela se torna um problema?</li>
+<li>o que é cache?</li>
+<li>por que “RAM livre” não é necessariamente melhor?</li>
+</ul>
+<p>Na próxima aula, vamos investigar a memória do ponto de vista do sistema operacional.</p>
+<h1 id="proxima-aula-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu">Próxima aula — Memória Virtual e Paginação: Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?<a class="headerlink" href="#proxima-aula-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 1 - Sistema Operacional. O Que Realmente Acontece Entre o Hardware e os Programas?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 1 - Sistema Operacional. O Que Realmente Acontece Entre o Hardware e os Programas?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
