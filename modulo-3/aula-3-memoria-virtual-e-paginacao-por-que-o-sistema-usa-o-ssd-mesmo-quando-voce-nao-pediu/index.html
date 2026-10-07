@@ -1,0 +1,3085 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso gratuito de informática, hardware, redes, sistemas operacionais e infraestrutura">
+      
+      
+        <meta name="author" content="Vinícius Silva">
+      
+      
+        <link rel="canonical" href="https://viniciussilva97.github.io/curso-informatica/modulo-3/aula-3-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu/">
+      
+      
+        <link rel="prev" href="../aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/brand/smart-eletro-vini-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Aula 3 - Memória Virtual e Paginação. Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu? - Curso de Informática</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-3-sistemas-operacionais" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <div class="sev-utility-bar" aria-label="Diferenciais do curso">
+    <span aria-hidden="true">★</span>
+    <strong>Curso 100% gratuito</strong>
+    <i aria-hidden="true">•</i>
+    <strong>Conhecimento para todos</strong>
+    <span aria-hidden="true">★</span>
+  </div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Curso de Informática" class="md-header__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso de Informática
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 3 - Memória Virtual e Paginação. Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sev-light" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Usar tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="sev-dark" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Usar tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Usar tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 1 - Fundamentos da informática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modulo-2/aula-1-o-metodo-da-investigacao-computacional/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 2 - Investigação computacional I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Módulo 3 - Sistemas operacionais
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Curso de Informática" class="md-nav__button md-logo" aria-label="Curso de Informática" data-md-component="logo">
+      
+  <img src="../../assets/brand/smart-eletro-vini-header.png" alt="logo">
+
+    </a>
+    Curso de Informática
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViniciusSilva97/curso-informatica" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ViniciusSilva97/curso-informatica
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 1 - Fundamentos da informática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-1-o-que-e-informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O que é informática?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-2-cpu-ram-ssd-e-placa-mae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - CPU, RAM, SSD e Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-3-dispositivos-de-entrada-e-saida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Dispositivos de entrada e saída
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-4-sistemas-operacionais-o-maestro-do-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - Sistemas operacionais — o maestro do computador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-5-windows-linux-macos-android-e-ios-entendendo-as-diferencas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Windows, Linux, macOS, Android e iOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-6-por-que-um-computador-fica-lento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Por que um computador fica lento?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-7-o-que-acontence-quando-voce-liga-um-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - O que acontece quando você liga um computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-8-como-o-computador-entende-as-informacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Como o computador entende as informações?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-9-como-a-internet-funciona-a-maior-rede-do-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Como a internet funciona?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-10-como-um-site-chega-ate-voce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Como um site chega até você?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-1/aula-11-como-os-arquivos-sao-organizados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Como os arquivos são organizados?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 2 - Investigação computacional I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 2 - Investigação computacional I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-1-o-metodo-da-investigacao-computacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - O método da investigação computacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-2-processador-quem-realmente-comanda-o-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-3-memoria-ram-o-laboratorio-de-trabalho-do-processador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória RAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-4-ssds-e-hds-o-que-realmente-acontece-quando-um-arquivo-e-apagado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 4 - SSDs e HDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-5-placa-mae-a-cena-onde-todos-os-componentes-se-encontram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 5 - Placa-mãe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-6-fonte-de-alimentacao-por-que-leituras-de-software-n%C3%A3o-contam-toda-a-historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 6 - Fonte de alimentação. Por que leituras de software não contam toda a história
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-7-refrigeracao-quando-a-temperatura-e-um-problema-e-qaundo-e-apenas-uma-caracteristica-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 7 - Refrigeração. Quando a Temperatura é um Problema e Quando é Apenas uma Característica do Projeto?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-8-placa-de-video-nem-todo-artefato-significa-gpu-queimada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 8 - Placa de vídeo. Nem todo artefato significa GPU queimada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-09-monitores-e-cabos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 9 - Monitores e Cabos. Quando o defeito da imagem está fora do computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-10-ruidos-do-computador-o-que-beeps-estalos-ventoinhas-e-coil-whine-podem-revelar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 10 - Ruídos do Computador. O Que Beeps, Estalos, Ventoinhas e Coil Whine Podem Revelar?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-11-da-bancada-ao-diagnostico-como-investigar-um-computador-desconhecido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 11 - Da Bancada ao Diagnóstico. Como Investigar um Computador Desconhecido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo-2/aula-12-laboratorio-final-resolva-o-caso-e-construa-o-primeiro-laudo-tecnico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 12 - Laboratório Final. Resolva o Caso e Construa o Primeiro Laudo Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 3 - Sistemas operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulo 3 - Sistemas operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 1 - Sistema Operacional. O Que Realmente Acontece Entre o Hardware e os Programas?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória Virtual e Paginação. Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 3 - Memória Virtual e Paginação. Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#investigacao-da-camada-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação da Camada Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#investigacao-da-camada-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação da Camada Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modulo-3-sistemas-operacionais">Módulo 3 — Sistemas Operacionais<a class="headerlink" href="#modulo-3-sistemas-operacionais" title="Permanent link">&para;</a></h1>
+<h2 id="investigacao-da-camada-logica">Investigação da Camada Lógica<a class="headerlink" href="#investigacao-da-camada-logica" title="Permanent link">&para;</a></h2>
+<h1 id="aula-3-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu">Aula 3 — Memória Virtual e Paginação: Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?<a class="headerlink" href="#aula-3-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Pergunta da investigação</strong></p>
+<p>Se um computador ainda possui memória RAM instalada, por que o sistema operacional pode começar a usar o SSD, ficar lento e mostrar números de memória que parecem não fazer sentido?</p>
+</blockquote>
+<hr />
+<h1 id="dossie-da-investigacao">📁 Dossiê da Investigação<a class="headerlink" href="#dossie-da-investigacao" title="Permanent link">&para;</a></h1>
+<h2 id="caso-no-013-o-computador-com-16-gb-que-usa-o-ssd-como-ram">Caso nº 013 — O computador com 16 GB que “usa o SSD como RAM”<a class="headerlink" href="#caso-no-013-o-computador-com-16-gb-que-usa-o-ssd-como-ram" title="Permanent link">&para;</a></h2>
+<p>Um usuário relata:</p>
+<blockquote>
+<p>“Meu computador tem 16 GB de RAM, mas quando abro navegador, editor, Discord e uma máquina virtual, o SSD começa a trabalhar muito. O Windows diz que a memória está quase cheia. Então o sistema está usando o SSD como RAM?”</p>
+</blockquote>
+<p>A frase parece simples.</p>
+<p>Mas ela mistura vários conceitos diferentes:</p>
+<ul>
+<li>memória física;</li>
+<li>memória virtual;</li>
+<li>memória comprometida;</li>
+<li>working set;</li>
+<li>cache;</li>
+<li>paginação;</li>
+<li>arquivo de paginação;</li>
+<li>memória comprimida;</li>
+<li>falhas de página;</li>
+<li>memória compartilhada;</li>
+<li>memória privada.</li>
+</ul>
+<p>Se tratarmos tudo como “RAM cheia”, podemos diagnosticar errado.</p>
+<hr />
+<h1 id="o-objetivo-desta-aula">O objetivo desta aula<a class="headerlink" href="#o-objetivo-desta-aula" title="Permanent link">&para;</a></h1>
+<p>Ao final desta investigação, você deverá ser capaz de:</p>
+<ul>
+<li>diferenciar memória física de memória virtual;</li>
+<li>entender por que cada processo enxerga seu próprio espaço de endereçamento;</li>
+<li>compreender páginas e mapeamentos;</li>
+<li>diferenciar memória residente de memória comprometida;</li>
+<li>interpretar o conceito de commit;</li>
+<li>entender o papel do arquivo de paginação no Windows;</li>
+<li>entender o papel de swap em Linux;</li>
+<li>compreender page faults sem tratá-los automaticamente como erro;</li>
+<li>diferenciar page fault leve e acesso que exige I/O;</li>
+<li>compreender working set;</li>
+<li>entender cache e memória standby;</li>
+<li>compreender por que RAM “ocupada” pode ser saudável;</li>
+<li>reconhecer pressão de memória;</li>
+<li>entender memória comprimida;</li>
+<li>interpretar sinais de paginação excessiva;</li>
+<li>reconhecer vazamento de memória;</li>
+<li>entender por que desativar o pagefile pode piorar o sistema;</li>
+<li>investigar lentidão sem culpar o SSD ou a RAM prematuramente.</li>
+</ul>
+<hr />
+<h1 id="a-memoria-que-o-programa-enxerga-nao-e-a-ram-diretamente">A memória que o programa enxerga não é a RAM diretamente<a class="headerlink" href="#a-memoria-que-o-programa-enxerga-nao-e-a-ram-diretamente" title="Permanent link">&para;</a></h1>
+<p>Na aula anterior, vimos que um processo possui um espaço de memória próprio.</p>
+<p>Agora vamos aprofundar.</p>
+<p>Um processo não recebe simplesmente:</p>
+<blockquote>
+<p>“este pedaço físico do pente de RAM é seu.”</p>
+</blockquote>
+<p>Em vez disso, o sistema operacional cria uma visão virtual.</p>
+<p>De forma simplificada:</p>
+<div class="highlight"><pre><span></span><code>Processo
+   ↓
+Endereços virtuais
+   ↓
+Mapeamentos do sistema
+   ↓
+Memória física / armazenamento / arquivos
+</code></pre></div>
+<p>O processo trabalha com endereços virtuais.</p>
+<p>O sistema operacional e o hardware de gerenciamento de memória fazem a tradução necessária.</p>
+<hr />
+<h1 id="por-que-usar-memoria-virtual">Por que usar memória virtual?<a class="headerlink" href="#por-que-usar-memoria-virtual" title="Permanent link">&para;</a></h1>
+<p>Porque ela permite várias coisas importantes:</p>
+<ul>
+<li>isolamento entre processos;</li>
+<li>proteção;</li>
+<li>organização;</li>
+<li>compartilhamento controlado;</li>
+<li>mapeamento de arquivos;</li>
+<li>uso eficiente da memória física;</li>
+<li>abstração da localização real dos dados.</li>
+</ul>
+<p>Sem isso, cada aplicação precisaria conhecer diretamente onde seus dados estão na RAM.</p>
+<hr />
+<h1 id="cada-processo-enxerga-seu-proprio-espaco">Cada processo enxerga seu próprio espaço<a class="headerlink" href="#cada-processo-enxerga-seu-proprio-espaco" title="Permanent link">&para;</a></h1>
+<p>Imagine dois processos.</p>
+<div class="highlight"><pre><span></span><code>Processo A
+endereço virtual 0x1000
+      ↓
+página física X
+
+Processo B
+endereço virtual 0x1000
+      ↓
+página física Y
+</code></pre></div>
+<p>Os dois podem usar o mesmo endereço virtual.</p>
+<p>Mas os dados reais podem estar em lugares físicos diferentes.</p>
+<p>Isso é uma das bases do isolamento moderno.</p>
+<hr />
+<h1 id="a-cpu-participa-dessa-traducao">A CPU participa dessa tradução<a class="headerlink" href="#a-cpu-participa-dessa-traducao" title="Permanent link">&para;</a></h1>
+<p>Processadores modernos possuem mecanismos de gerenciamento de memória.</p>
+<p>Um componente importante é a MMU — Memory Management Unit.</p>
+<p>Ela ajuda a traduzir:</p>
+<div class="highlight"><pre><span></span><code>endereço virtual
+    ↓
+endereço físico
+</code></pre></div>
+<p>A tradução utiliza estruturas mantidas pelo sistema operacional.</p>
+<p>Essas estruturas são geralmente organizadas em tabelas de páginas.</p>
+<hr />
+<h1 id="paginas">Páginas<a class="headerlink" href="#paginas" title="Permanent link">&para;</a></h1>
+<p>A memória virtual costuma ser gerenciada em blocos chamados páginas.</p>
+<p>Em muitos sistemas, um tamanho comum é 4 KiB.</p>
+<p>Mas isso não deve ser tratado como valor universal.</p>
+<p>Podem existir:</p>
+<ul>
+<li>páginas padrão;</li>
+<li>páginas grandes;</li>
+<li>tamanhos diferentes conforme arquitetura e sistema.</li>
+</ul>
+<p>O conceito importante é:</p>
+<blockquote>
+<p>o sistema administra memória em unidades discretas, não byte a byte.</p>
+</blockquote>
+<hr />
+<h1 id="page-table">Page table<a class="headerlink" href="#page-table" title="Permanent link">&para;</a></h1>
+<p>O sistema precisa registrar como páginas virtuais se relacionam com recursos reais.</p>
+<p>Conceitualmente:</p>
+<div class="highlight"><pre><span></span><code>Página virtual A
+    → página física 42
+
+Página virtual B
+    → página física 91
+
+Página virtual C
+    → ainda não residente
+
+Página virtual D
+    → mapeada para arquivo
+</code></pre></div>
+<p>Essas relações permitem que o processo utilize um espaço lógico contínuo mesmo quando os dados físicos estão espalhados.</p>
+<hr />
+<h1 id="tlb-translation-lookaside-buffer">TLB — Translation Lookaside Buffer<a class="headerlink" href="#tlb-translation-lookaside-buffer" title="Permanent link">&para;</a></h1>
+<p>Traduzir endereços consultando tabelas o tempo todo seria caro.</p>
+<p>Processadores usam caches especializados para traduções recentes.</p>
+<p>Um deles é a TLB.</p>
+<p>Ela guarda traduções utilizadas recentemente.</p>
+<p>Isso reduz o custo de muitos acessos.</p>
+<hr />
+<h1 id="a-memoria-virtual-e-maior-que-a-ram">A memória virtual é maior que a RAM?<a class="headerlink" href="#a-memoria-virtual-e-maior-que-a-ram" title="Permanent link">&para;</a></h1>
+<p>Frequentemente sim.</p>
+<p>Mas isso precisa ser entendido corretamente.</p>
+<p>Um processo pode possuir um espaço de endereçamento virtual enorme sem ocupar toda essa quantidade de RAM.</p>
+<p>Reservar espaço de endereço não significa necessariamente consumir memória física imediatamente.</p>
+<hr />
+<h1 id="reservar-nao-e-o-mesmo-que-comprometer">Reservar não é o mesmo que comprometer<a class="headerlink" href="#reservar-nao-e-o-mesmo-que-comprometer" title="Permanent link">&para;</a></h1>
+<p>Em sistemas como Windows, existem conceitos diferentes.</p>
+<h2 id="reserva">Reserva<a class="headerlink" href="#reserva" title="Permanent link">&para;</a></h2>
+<p>O sistema separa uma faixa do espaço de endereçamento virtual.</p>
+<p>Ainda pode não existir armazenamento comprometido para todas essas páginas.</p>
+<h2 id="commit">Commit<a class="headerlink" href="#commit" title="Permanent link">&para;</a></h2>
+<p>O sistema assume a obrigação de fornecer armazenamento para aquelas páginas caso sejam necessárias.</p>
+<p>Isso é mais importante para capacidade real.</p>
+<hr />
+<h1 id="commit-nao-e-ram-usada">Commit não é “RAM usada”<a class="headerlink" href="#commit-nao-e-ram-usada" title="Permanent link">&para;</a></h1>
+<p>Esse é um dos pontos que mais confundem.</p>
+<p>No Windows, a memória comprometida representa memória virtual privada que precisa de suporte de armazenamento pelo sistema.</p>
+<p>Em termos práticos, o limite de commit está relacionado principalmente a:</p>
+<ul>
+<li>RAM;</li>
+<li>arquivos de paginação;</li>
+<li>reservas internas do sistema.</li>
+</ul>
+<p>Por isso, você pode ver:</p>
+<div class="highlight"><pre><span></span><code>RAM usada: 11 GB
+</code></pre></div>
+<p>mas:</p>
+<div class="highlight"><pre><span></span><code>Commit: 18 GB / 28 GB
+</code></pre></div>
+<p>Os números medem coisas diferentes.</p>
+<hr />
+<h1 id="commit-charge">Commit charge<a class="headerlink" href="#commit-charge" title="Permanent link">&para;</a></h1>
+<p>O valor de commit atual representa quanto o sistema prometeu suportar.</p>
+<p>O limite representa a capacidade total disponível para esse compromisso.</p>
+<p>Se o commit se aproxima do limite, o sistema entra em situação crítica.</p>
+<p>Isso pode ocorrer mesmo quando a leitura superficial de “RAM em uso” parece não explicar tudo.</p>
+<hr />
+<h1 id="por-que-o-pagefile-existe">Por que o pagefile existe?<a class="headerlink" href="#por-que-o-pagefile-existe" title="Permanent link">&para;</a></h1>
+<p>No Windows, o arquivo de paginação é um mecanismo de suporte à memória virtual.</p>
+<p>Ele pode armazenar páginas que não precisam permanecer residentes na RAM naquele momento.</p>
+<p>Mas sua função não é apenas:</p>
+<blockquote>
+<p>“substituir RAM quando ela acaba.”</p>
+</blockquote>
+<p>Ele participa da política de memória do sistema.</p>
+<hr />
+<h1 id="desativar-o-pagefile-nao-transforma-o-computador-em-maquina-mais-rapida">Desativar o pagefile não transforma o computador em máquina “mais rápida”<a class="headerlink" href="#desativar-o-pagefile-nao-transforma-o-computador-em-maquina-mais-rapida" title="Permanent link">&para;</a></h1>
+<p>Esse é um mito comum.</p>
+<p>Sem pagefile:</p>
+<ul>
+<li>o limite de commit pode cair;</li>
+<li>algumas cargas podem falhar antes;</li>
+<li>dumps de memória podem ser afetados;</li>
+<li>aplicativos podem receber falha de alocação.</li>
+</ul>
+<p>O sistema perde flexibilidade.</p>
+<p>Ter muita RAM não significa automaticamente que o arquivo de paginação é inútil.</p>
+<hr />
+<h1 id="mas-ssd-e-muito-mais-lento-que-ram">“Mas SSD é muito mais lento que RAM”<a class="headerlink" href="#mas-ssd-e-muito-mais-lento-que-ram" title="Permanent link">&para;</a></h1>
+<p>Correto.</p>
+<p>RAM possui latência e largura de banda muito superiores.</p>
+<p>Se o sistema precisa buscar páginas constantemente no armazenamento, o impacto pode ser grande.</p>
+<p>O problema não é a existência do pagefile.</p>
+<p>O problema é:</p>
+<blockquote>
+<p><strong>pressão de memória acompanhada de atividade de paginação suficiente para prejudicar a carga real.</strong></p>
+</blockquote>
+<hr />
+<h1 id="resident-versus-nao-residente">Resident versus não residente<a class="headerlink" href="#resident-versus-nao-residente" title="Permanent link">&para;</a></h1>
+<p>Uma página pode fazer parte do espaço virtual de um processo sem estar atualmente na RAM.</p>
+<p>Quando está na RAM, dizemos que está residente.</p>
+<p>Um processo pode ter:</p>
+<ul>
+<li>grande espaço virtual;</li>
+<li>parte residente;</li>
+<li>parte não residente;</li>
+<li>páginas compartilhadas;</li>
+<li>páginas mapeadas.</li>
+</ul>
+<hr />
+<h1 id="working-set">Working set<a class="headerlink" href="#working-set" title="Permanent link">&para;</a></h1>
+<p>No Windows, um conceito importante é o working set.</p>
+<p>Ele representa, de forma simplificada, o conjunto de páginas de um processo que está residente na memória física naquele momento.</p>
+<p>Isso muda com o tempo.</p>
+<p>O sistema pode:</p>
+<ul>
+<li>adicionar páginas;</li>
+<li>remover páginas;</li>
+<li>compartilhar páginas.</li>
+</ul>
+<p>Por isso, o valor de memória de um processo não é uma verdade única.</p>
+<hr />
+<h1 id="quanto-de-ram-este-programa-usa">“Quanto de RAM este programa usa?”<a class="headerlink" href="#quanto-de-ram-este-programa-usa" title="Permanent link">&para;</a></h1>
+<p>Essa pergunta parece simples.</p>
+<p>Mas pode significar:</p>
+<ul>
+<li>working set;</li>
+<li>private working set;</li>
+<li>commit privado;</li>
+<li>memória compartilhada;</li>
+<li>memória virtual reservada.</li>
+</ul>
+<p>Ferramentas diferentes podem mostrar números diferentes porque medem coisas diferentes.</p>
+<hr />
+<h1 id="memoria-privada">Memória privada<a class="headerlink" href="#memoria-privada" title="Permanent link">&para;</a></h1>
+<p>Memória privada é aquela associada especificamente ao processo.</p>
+<p>Ela não pode simplesmente ser contabilizada como compartilhada com vários processos.</p>
+<p>Em uma investigação de vazamento, esse valor pode ser muito útil.</p>
+<hr />
+<h1 id="memoria-compartilhada">Memória compartilhada<a class="headerlink" href="#memoria-compartilhada" title="Permanent link">&para;</a></h1>
+<p>Bibliotecas e outros recursos podem ser compartilhados entre processos.</p>
+<p>Se dez processos utilizam a mesma biblioteca, não devemos imaginar necessariamente dez cópias físicas completas na RAM.</p>
+<p>O sistema pode compartilhar páginas.</p>
+<hr />
+<h1 id="mapear-arquivo-em-memoria">Mapear arquivo em memória<a class="headerlink" href="#mapear-arquivo-em-memoria" title="Permanent link">&para;</a></h1>
+<p>Sistemas operacionais podem mapear arquivos no espaço de endereçamento.</p>
+<p>Isso permite que aplicações tratem partes de arquivos como regiões de memória.</p>
+<p>O sistema cuida de carregar páginas conforme necessário.</p>
+<p>Esse mecanismo é muito usado.</p>
+<hr />
+<h1 id="page-fault-nao-significa-falha-fisica">Page fault não significa falha física<a class="headerlink" href="#page-fault-nao-significa-falha-fisica" title="Permanent link">&para;</a></h1>
+<p>O termo “fault” assusta.</p>
+<p>Mas uma page fault pode ser parte normal do funcionamento do sistema.</p>
+<p>Ela ocorre quando o processo acessa uma página que exige intervenção do sistema operacional.</p>
+<hr />
+<h1 id="falha-de-pagina-leve">Falha de página leve<a class="headerlink" href="#falha-de-pagina-leve" title="Permanent link">&para;</a></h1>
+<p>Uma page fault pode ser resolvida sem ler dados do armazenamento físico.</p>
+<p>Exemplos:</p>
+<ul>
+<li>página já está em memória;</li>
+<li>página compartilhada já existe;</li>
+<li>mapeamento pode ser atualizado rapidamente.</li>
+</ul>
+<p>Esses eventos são comuns.</p>
+<hr />
+<h1 id="falha-que-exige-io">Falha que exige I/O<a class="headerlink" href="#falha-que-exige-io" title="Permanent link">&para;</a></h1>
+<p>Em outros casos, o sistema precisa buscar dados.</p>
+<p>Pode precisar ler:</p>
+<ul>
+<li>arquivo;</li>
+<li>executável;</li>
+<li>biblioteca;</li>
+<li>pagefile;</li>
+<li>swap.</li>
+</ul>
+<p>Isso é muito mais caro.</p>
+<p>O acesso ao armazenamento possui latência muito maior que o acesso à RAM.</p>
+<hr />
+<h1 id="hard-fault-no-windows">Hard fault no Windows<a class="headerlink" href="#hard-fault-no-windows" title="Permanent link">&para;</a></h1>
+<p>Ferramentas do Windows podem usar o termo hard fault.</p>
+<p>Ele não significa:</p>
+<blockquote>
+<p>defeito físico no hardware.</p>
+</blockquote>
+<p>Significa que a página necessária precisou ser recuperada de armazenamento em vez de simplesmente resolvida em memória.</p>
+<p>Essa distinção é essencial.</p>
+<hr />
+<h1 id="por-que-o-ssd-trabalha-ao-abrir-um-programa">Por que o SSD trabalha ao abrir um programa?<a class="headerlink" href="#por-que-o-ssd-trabalha-ao-abrir-um-programa" title="Permanent link">&para;</a></h1>
+<p>Porque o sistema precisa carregar:</p>
+<ul>
+<li>executável;</li>
+<li>bibliotecas;</li>
+<li>arquivos;</li>
+<li>dados.</li>
+</ul>
+<p>Isso não é necessariamente paginação por falta de RAM.</p>
+<p>Disco ativo não significa automaticamente:</p>
+<blockquote>
+<p>“Windows está usando SSD como RAM.”</p>
+</blockquote>
+<hr />
+<h1 id="o-ssd-pode-trabalhar-por-varios-motivos">O SSD pode trabalhar por vários motivos<a class="headerlink" href="#o-ssd-pode-trabalhar-por-varios-motivos" title="Permanent link">&para;</a></h1>
+<p>Exemplos:</p>
+<ul>
+<li>leitura de aplicativo;</li>
+<li>gravação de arquivo;</li>
+<li>cache;</li>
+<li>atualização;</li>
+<li>antivírus;</li>
+<li>indexação;</li>
+<li>sincronização;</li>
+<li>pagefile;</li>
+<li>logs.</li>
+</ul>
+<p>A investigação precisa identificar:</p>
+<blockquote>
+<p>qual processo e qual tipo de I/O?</p>
+</blockquote>
+<hr />
+<h1 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h1>
+<p>RAM não utilizada pode ser aproveitada para acelerar o sistema.</p>
+<p>O sistema pode manter dados recentemente acessados em cache.</p>
+<p>Isso é bom.</p>
+<p>Quando um aplicativo precisa de memória, parte desse cache pode ser reaproveitada.</p>
+<hr />
+<h1 id="ram-vazia-nao-e-objetivo">RAM vazia não é objetivo<a class="headerlink" href="#ram-vazia-nao-e-objetivo" title="Permanent link">&para;</a></h1>
+<p>Se o computador possui 32 GB e apenas 5 GB estão realmente necessários para aplicações, deixar 27 GB completamente inúteis seria desperdício.</p>
+<p>O sistema pode usar parte desse espaço para:</p>
+<ul>
+<li>cache;</li>
+<li>standby;</li>
+<li>pré-carregamento;</li>
+<li>estruturas internas.</li>
+</ul>
+<p>A memória pode ser “ocupada” e ainda estar prontamente reutilizável.</p>
+<hr />
+<h1 id="memoria-disponivel">Memória disponível<a class="headerlink" href="#memoria-disponivel" title="Permanent link">&para;</a></h1>
+<p>Um número muito mais útil que “livre” isoladamente é a memória disponível.</p>
+<p>Ela pode incluir memória:</p>
+<ul>
+<li>livre;</li>
+<li>reutilizável rapidamente;</li>
+<li>em standby.</li>
+</ul>
+<p>Por isso:</p>
+<blockquote>
+<p>pouca memória livre não significa necessariamente falta de memória.</p>
+</blockquote>
+<hr />
+<h1 id="standby">Standby<a class="headerlink" href="#standby" title="Permanent link">&para;</a></h1>
+<p>No Windows, páginas podem permanecer em uma lista de standby.</p>
+<p>Elas ainda contêm dados potencialmente úteis.</p>
+<p>Mas podem ser reaproveitadas se outra aplicação precisar.</p>
+<p>Isso é eficiente.</p>
+<hr />
+<h1 id="cache-do-linux">Cache do Linux<a class="headerlink" href="#cache-do-linux" title="Permanent link">&para;</a></h1>
+<p>Linux também utiliza agressivamente RAM para cache.</p>
+<p>Comandos podem mostrar:</p>
+<ul>
+<li>free;</li>
+<li>used;</li>
+<li>buff/cache;</li>
+<li>available.</li>
+</ul>
+<p>Iniciantes frequentemente olham apenas “used” e concluem:</p>
+<blockquote>
+<p>“Linux consumiu toda a RAM.”</p>
+</blockquote>
+<p>Mas boa parte pode ser cache recuperável.</p>
+<hr />
+<h1 id="free-no-linux">free no Linux<a class="headerlink" href="#free-no-linux" title="Permanent link">&para;</a></h1>
+<p>Um comando comum:</p>
+<div class="highlight"><pre><span></span><code>free -h
+</code></pre></div>
+<p>Pode exibir:</p>
+<ul>
+<li>total;</li>
+<li>used;</li>
+<li>free;</li>
+<li>shared;</li>
+<li>buff/cache;</li>
+<li>available.</li>
+</ul>
+<p>O campo available é muito importante para interpretar capacidade real de atender novas cargas.</p>
+<hr />
+<h1 id="swap-no-linux">Swap no Linux<a class="headerlink" href="#swap-no-linux" title="Permanent link">&para;</a></h1>
+<p>Linux pode utilizar swap.</p>
+<p>Swap pode existir em:</p>
+<ul>
+<li>partição;</li>
+<li>arquivo;</li>
+<li>outros mecanismos suportados.</li>
+</ul>
+<p>Assim como o pagefile, swap não deve ser entendido apenas como:</p>
+<blockquote>
+<p>RAM extra lenta.</p>
+</blockquote>
+<p>Ele faz parte da política de gerenciamento de memória.</p>
+<hr />
+<h1 id="swappiness">swappiness<a class="headerlink" href="#swappiness" title="Permanent link">&para;</a></h1>
+<p>Linux possui parâmetros que influenciam a tendência de utilização de swap.</p>
+<p>Um conceito conhecido é swappiness.</p>
+<p>Mas alterar esse valor por receita pronta pode ser um erro.</p>
+<p>O comportamento ideal depende de:</p>
+<ul>
+<li>carga;</li>
+<li>servidor;</li>
+<li>desktop;</li>
+<li>memória;</li>
+<li>armazenamento;</li>
+<li>aplicações.</li>
+</ul>
+<hr />
+<h1 id="oom-out-of-memory">OOM — Out Of Memory<a class="headerlink" href="#oom-out-of-memory" title="Permanent link">&para;</a></h1>
+<p>Quando o sistema não consegue satisfazer demandas de memória, pode ocorrer situação de falta de memória.</p>
+<p>No Linux, mecanismos como o OOM killer podem encerrar processos para preservar o sistema.</p>
+<p>Isso é diferente de:</p>
+<blockquote>
+<p>“o sistema ficou um pouco lento.”</p>
+</blockquote>
+<p>É uma situação de pressão extrema.</p>
+<hr />
+<h1 id="pressao-de-memoria">Pressão de memória<a class="headerlink" href="#pressao-de-memoria" title="Permanent link">&para;</a></h1>
+<p>O conceito central desta aula é pressão.</p>
+<p>Não existe um único número mágico.</p>
+<p>Devemos observar um conjunto:</p>
+<ul>
+<li>memória disponível;</li>
+<li>commit;</li>
+<li>page faults;</li>
+<li>atividade de armazenamento;</li>
+<li>latência;</li>
+<li>swap/pagefile;</li>
+<li>crescimento de processos;</li>
+<li>responsividade.</li>
+</ul>
+<hr />
+<h1 id="um-cenario-saudavel">Um cenário saudável<a class="headerlink" href="#um-cenario-saudavel" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>RAM total.............16 GB
+Em uso................10 GB
+Disponível............6 GB
+Commit................12 / 28 GB
+Pagefile I/O..........baixo
+Sistema...............responsivo
+</code></pre></div>
+<p>Mesmo com 10 GB usados, não há evidência de problema.</p>
+<hr />
+<h1 id="um-cenario-de-pressao">Um cenário de pressão<a class="headerlink" href="#um-cenario-de-pressao" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>RAM total.............16 GB
+Em uso................15,5 GB
+Disponível............300 MB
+Commit................24 / 28 GB
+Hard faults...........altos e persistentes
+SSD...................muito ativo
+Sistema...............lento
+</code></pre></div>
+<p>Agora o conjunto sugere pressão séria.</p>
+<hr />
+<h1 id="um-cenario-de-vazamento">Um cenário de vazamento<a class="headerlink" href="#um-cenario-de-vazamento" title="Permanent link">&para;</a></h1>
+<p>Imagine um serviço:</p>
+<div class="highlight"><pre><span></span><code>08:00 → 500 MB
+10:00 → 1,4 GB
+12:00 → 3,2 GB
+14:00 → 5,7 GB
+16:00 → 8,9 GB
+</code></pre></div>
+<p>Sem carga proporcional.</p>
+<p>Sem liberação.</p>
+<p>Reiniciar o serviço faz voltar para 500 MB.</p>
+<p>Isso é compatível com hipótese de vazamento.</p>
+<p>Ainda precisamos investigar.</p>
+<hr />
+<h1 id="vazamento-de-memoria">Vazamento de memória<a class="headerlink" href="#vazamento-de-memoria" title="Permanent link">&para;</a></h1>
+<p>Um vazamento ocorre quando um programa mantém memória que deveria ter sido liberada.</p>
+<p>Consequências possíveis:</p>
+<ul>
+<li>crescimento progressivo;</li>
+<li>pressão;</li>
+<li>paginação;</li>
+<li>lentidão;</li>
+<li>falha de alocação;</li>
+<li>crash.</li>
+</ul>
+<hr />
+<h1 id="mas-cache-pode-parecer-vazamento">Mas cache pode parecer vazamento<a class="headerlink" href="#mas-cache-pode-parecer-vazamento" title="Permanent link">&para;</a></h1>
+<p>Um programa pode intencionalmente manter dados em cache.</p>
+<p>Perguntas:</p>
+<ul>
+<li>memória cresce até estabilizar?</li>
+<li>cai quando necessário?</li>
+<li>responde à pressão?</li>
+<li>está associada a dados ativos?</li>
+<li>crescimento é ilimitado?</li>
+</ul>
+<p>Não rotule cedo.</p>
+<hr />
+<h1 id="memoria-comprimida">Memória comprimida<a class="headerlink" href="#memoria-comprimida" title="Permanent link">&para;</a></h1>
+<p>Sistemas modernos podem comprimir páginas em memória.</p>
+<p>A ideia é:</p>
+<blockquote>
+<p>comprimir dados pouco ativos em vez de enviá-los imediatamente para armazenamento.</p>
+</blockquote>
+<p>Isso troca parte do custo de I/O por:</p>
+<ul>
+<li>CPU;</li>
+<li>compressão;</li>
+<li>descompressão.</li>
+</ul>
+<hr />
+<h1 id="no-windows">No Windows<a class="headerlink" href="#no-windows" title="Permanent link">&para;</a></h1>
+<p>O Windows utiliza mecanismos de compressão de memória.</p>
+<p>Isso pode aparecer em ferramentas de monitoramento.</p>
+<p>A memória comprimida não é “memória falsa”.</p>
+<p>São dados reais mantidos em forma comprimida para economizar espaço físico.</p>
+<hr />
+<h1 id="em-linux">Em Linux<a class="headerlink" href="#em-linux" title="Permanent link">&para;</a></h1>
+<p>Linux pode utilizar tecnologias como zswap ou zram, dependendo da configuração.</p>
+<p>Elas também exploram compressão.</p>
+<p>Não são obrigatórias em todas as distribuições.</p>
+<hr />
+<h1 id="por-que-compressao-pode-ajudar">Por que compressão pode ajudar?<a class="headerlink" href="#por-que-compressao-pode-ajudar" title="Permanent link">&para;</a></h1>
+<p>Considere:</p>
+<div class="highlight"><pre><span></span><code>1 GB de páginas
+   ↓
+comprimidas para 500 MB
+</code></pre></div>
+<p>Isso permite manter dados em RAM.</p>
+<p>Evita parte do acesso ao SSD.</p>
+<p>Mas consome CPU.</p>
+<p>É uma troca.</p>
+<hr />
+<h1 id="quando-ram-comeca-a-faltar">Quando RAM começa a faltar<a class="headerlink" href="#quando-ram-comeca-a-faltar" title="Permanent link">&para;</a></h1>
+<p>O sistema pode adotar várias estratégias.</p>
+<p>De forma conceitual:</p>
+<div class="highlight"><pre><span></span><code>reduzir caches
+   ↓
+remover páginas pouco usadas
+   ↓
+comprimir
+   ↓
+paginar
+   ↓
+negar novas alocações em situação extrema
+</code></pre></div>
+<p>A ordem e detalhes variam.</p>
+<hr />
+<h1 id="nao-existe-ram-cheia-como-um-unico-evento">Não existe “RAM cheia” como um único evento<a class="headerlink" href="#nao-existe-ram-cheia-como-um-unico-evento" title="Permanent link">&para;</a></h1>
+<p>A situação depende de:</p>
+<ul>
+<li>tipo das páginas;</li>
+<li>possibilidade de descarte;</li>
+<li>memória compartilhada;</li>
+<li>cache;</li>
+<li>commit;</li>
+<li>armazenamento;</li>
+<li>política do sistema.</li>
+</ul>
+<p>Dois computadores com 95% de RAM podem ter comportamentos completamente diferentes.</p>
+<hr />
+<h1 id="memoria-anonima-e-memoria-baseada-em-arquivo">Memória anônima e memória baseada em arquivo<a class="headerlink" href="#memoria-anonima-e-memoria-baseada-em-arquivo" title="Permanent link">&para;</a></h1>
+<p>Em sistemas Unix-like, uma distinção útil é:</p>
+<h2 id="file-backed">File-backed<a class="headerlink" href="#file-backed" title="Permanent link">&para;</a></h2>
+<p>Páginas derivadas de arquivos.</p>
+<p>Se forem limpas, podem ser descartadas e lidas novamente do arquivo.</p>
+<h2 id="anonymous">Anonymous<a class="headerlink" href="#anonymous" title="Permanent link">&para;</a></h2>
+<p>Memória que não possui um arquivo original simples para ser recarregado.</p>
+<p>Pode precisar de swap se for removida da RAM.</p>
+<p>Isso ajuda a entender por que algumas páginas são mais fáceis de descartar que outras.</p>
+<hr />
+<h1 id="dirty-pages">Dirty pages<a class="headerlink" href="#dirty-pages" title="Permanent link">&para;</a></h1>
+<p>Uma página “dirty” contém alterações ainda não gravadas no armazenamento correspondente.</p>
+<p>Antes de descartá-la, o sistema pode precisar escrever.</p>
+<p>Isso introduz I/O.</p>
+<hr />
+<h1 id="flush">Flush<a class="headerlink" href="#flush" title="Permanent link">&para;</a></h1>
+<p>O sistema periodicamente grava dados pendentes.</p>
+<p>Picos de disco podem estar associados a:</p>
+<ul>
+<li>flush;</li>
+<li>cache;</li>
+<li>banco de dados;</li>
+<li>arquivos modificados.</li>
+</ul>
+<p>Não atribua todo I/O ao pagefile.</p>
+<hr />
+<h1 id="copy-on-write">Copy-on-write<a class="headerlink" href="#copy-on-write" title="Permanent link">&para;</a></h1>
+<p>Um conceito importante em sistemas modernos é copy-on-write.</p>
+<p>Dois contextos podem compartilhar páginas enquanto ninguém altera.</p>
+<p>Quando um deles escreve, o sistema cria uma cópia privada.</p>
+<p>Isso melhora eficiência.</p>
+<hr />
+<h1 id="fork-no-linux">Fork no Linux<a class="headerlink" href="#fork-no-linux" title="Permanent link">&para;</a></h1>
+<p>Em sistemas Unix-like, fork cria um novo processo baseado no atual.</p>
+<p>Com copy-on-write, não é necessário duplicar imediatamente toda a memória física.</p>
+<p>As páginas podem ser compartilhadas até uma escrita ocorrer.</p>
+<hr />
+<h1 id="memoria-virtual-e-seguranca">Memória virtual e segurança<a class="headerlink" href="#memoria-virtual-e-seguranca" title="Permanent link">&para;</a></h1>
+<p>Isolamento de memória impede que um processo comum leia ou altere livremente a memória de outro.</p>
+<p>Isso ajuda a proteger:</p>
+<ul>
+<li>estabilidade;</li>
+<li>confidencialidade;</li>
+<li>integridade.</li>
+</ul>
+<p>Privilégios especiais ainda podem permitir inspeção em cenários controlados.</p>
+<hr />
+<h1 id="aslr">ASLR<a class="headerlink" href="#aslr" title="Permanent link">&para;</a></h1>
+<p>Address Space Layout Randomization altera a localização de certas regiões no espaço de endereçamento.</p>
+<p>Isso dificulta alguns tipos de exploração.</p>
+<p>Ele mostra que memória virtual também participa da segurança.</p>
+<hr />
+<h1 id="nx-dep">NX / DEP<a class="headerlink" href="#nx-dep" title="Permanent link">&para;</a></h1>
+<p>Sistemas modernos podem marcar regiões como não executáveis.</p>
+<p>Isso ajuda a impedir execução de código onde deveria existir apenas dado.</p>
+<p>No Windows, isso se relaciona ao DEP.</p>
+<p>Em outras plataformas existem mecanismos equivalentes.</p>
+<hr />
+<h1 id="32-bits-versus-64-bits">32 bits versus 64 bits<a class="headerlink" href="#32-bits-versus-64-bits" title="Permanent link">&para;</a></h1>
+<p>Arquiteturas de 32 bits possuem espaço de endereçamento muito mais limitado.</p>
+<p>Aplicações 32-bit podem encontrar limites mesmo em máquinas com muita RAM.</p>
+<p>Arquiteturas 64-bit ampliam enormemente o espaço possível.</p>
+<hr />
+<h1 id="4-gb-em-32-bits">4 GB em 32 bits<a class="headerlink" href="#4-gb-em-32-bits" title="Permanent link">&para;</a></h1>
+<p>Um espaço de 32 bits possui:</p>
+<div class="highlight"><pre><span></span><code>2³² = 4.294.967.296 endereços
+</code></pre></div>
+<p>Se cada endereço representa um byte:</p>
+<div class="highlight"><pre><span></span><code>aproximadamente 4 GiB
+</code></pre></div>
+<p>Mas o espaço disponível a um processo pode ser menor dependendo da arquitetura e configuração.</p>
+<hr />
+<h1 id="um-aplicativo-32-bit-pode-ficar-sem-espaco-virtual-antes-da-ram-fisica-acabar">Um aplicativo 32-bit pode ficar sem espaço virtual antes da RAM física acabar<a class="headerlink" href="#um-aplicativo-32-bit-pode-ficar-sem-espaco-virtual-antes-da-ram-fisica-acabar" title="Permanent link">&para;</a></h1>
+<p>Isso é importante.</p>
+<p>Computador:</p>
+<div class="highlight"><pre><span></span><code>32 GB de RAM
+</code></pre></div>
+<p>Aplicação:</p>
+<div class="highlight"><pre><span></span><code>32-bit
+</code></pre></div>
+<p>Ela pode encontrar limite de espaço de endereçamento mesmo com muita RAM livre.</p>
+<p>O problema não é capacidade física total.</p>
+<hr />
+<h1 id="fragmentacao-virtual">Fragmentação virtual<a class="headerlink" href="#fragmentacao-virtual" title="Permanent link">&para;</a></h1>
+<p>Mesmo havendo capacidade total, um programa pode precisar de uma região contígua de endereço virtual.</p>
+<p>Dependendo do contexto, fragmentação pode impedir uma alocação específica.</p>
+<p>Esse problema foi mais relevante em aplicações 32-bit.</p>
+<hr />
+<h1 id="memoria-fisica-tambem-possui-limitacoes">Memória física também possui limitações<a class="headerlink" href="#memoria-fisica-tambem-possui-limitacoes" title="Permanent link">&para;</a></h1>
+<p>O sistema precisa reservar regiões e estruturas internas.</p>
+<p>Nem toda RAM instalada aparece necessariamente como memória disponível ao usuário.</p>
+<p>Firmware, hardware e arquitetura podem influenciar.</p>
+<hr />
+<h1 id="gpu-integrada-e-memoria-compartilhada">GPU integrada e memória compartilhada<a class="headerlink" href="#gpu-integrada-e-memoria-compartilhada" title="Permanent link">&para;</a></h1>
+<p>GPUs integradas podem utilizar memória do sistema.</p>
+<p>Isso pode reduzir memória disponível para outras cargas.</p>
+<p>Mas a contabilização varia conforme plataforma.</p>
+<p>Não conclua:</p>
+<blockquote>
+<p>“a RAM sumiu.”</p>
+</blockquote>
+<p>Observe a reserva real.</p>
+<hr />
+<h1 id="maquinas-virtuais">Máquinas virtuais<a class="headerlink" href="#maquinas-virtuais" title="Permanent link">&para;</a></h1>
+<p>Uma VM pode reservar grande quantidade de memória.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Host...............16 GB
+VM.................8 GB
+Navegador..........3 GB
+Editor.............2 GB
+Sistema............restante
+</code></pre></div>
+<p>Agora a margem fica pequena.</p>
+<p>O problema pode surgir rapidamente.</p>
+<hr />
+<h1 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h1>
+<p>Containers não funcionam exatamente como VMs.</p>
+<p>Mas podem ter limites de memória.</p>
+<p>Em Linux, cgroups podem controlar recursos.</p>
+<p>Um processo dentro de container pode sofrer pressão mesmo quando o host ainda possui memória.</p>
+<hr />
+<h1 id="browser-moderno">Browser moderno<a class="headerlink" href="#browser-moderno" title="Permanent link">&para;</a></h1>
+<p>Navegadores utilizam muitos processos.</p>
+<p>Cada aba, extensão e componente pode consumir memória.</p>
+<p>O total pode ser grande.</p>
+<p>Mas isso também melhora isolamento.</p>
+<p>Não existe um único “processo navegador” representando tudo.</p>
+<hr />
+<h1 id="o-caso-retorna">O caso retorna<a class="headerlink" href="#o-caso-retorna" title="Permanent link">&para;</a></h1>
+<p>Nosso usuário possui:</p>
+<ul>
+<li>16 GB de RAM;</li>
+<li>navegador;</li>
+<li>editor;</li>
+<li>Discord;</li>
+<li>máquina virtual.</li>
+</ul>
+<p>Observação:</p>
+<div class="highlight"><pre><span></span><code>RAM em uso...........15,4 GB
+Disponível...........420 MB
+Commit...............25 / 30 GB
+SSD..................alto uso
+Hard faults..........persistentes
+</code></pre></div>
+<p>O sistema está lento.</p>
+<p>Agora temos evidências de pressão real.</p>
+<hr />
+<h1 id="primeira-hipotese">Primeira hipótese<a class="headerlink" href="#primeira-hipotese" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>A carga ativa excede confortavelmente a memória física disponível e o sistema precisa movimentar páginas com frequência.</p>
+</blockquote>
+<p>Essa hipótese prevê:</p>
+<ul>
+<li>baixa memória disponível;</li>
+<li>hard faults;</li>
+<li>I/O;</li>
+<li>latência;</li>
+<li>melhora ao reduzir carga.</li>
+</ul>
+<hr />
+<h1 id="teste-controlado">Teste controlado<a class="headerlink" href="#teste-controlado" title="Permanent link">&para;</a></h1>
+<p>Fechamos a máquina virtual.</p>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code>RAM em uso...........9,8 GB
+Disponível...........5,9 GB
+Commit...............15 / 30 GB
+Hard faults..........caem drasticamente
+SSD..................reduz atividade
+Sistema..............responsivo
+</code></pre></div>
+<p>A hipótese ganha força.</p>
+<hr />
+<h1 id="mas-fechar-a-vm-nao-prova-que-a-vm-esta-defeituosa">Mas fechar a VM não prova que a VM está defeituosa<a class="headerlink" href="#mas-fechar-a-vm-nao-prova-que-a-vm-esta-defeituosa" title="Permanent link">&para;</a></h1>
+<p>A máquina virtual pode estar funcionando perfeitamente.</p>
+<p>Ela apenas consome um recurso real.</p>
+<p>O problema é capacidade versus carga.</p>
+<hr />
+<h1 id="solucoes-possiveis">Soluções possíveis<a class="headerlink" href="#solucoes-possiveis" title="Permanent link">&para;</a></h1>
+<p>Dependendo da necessidade:</p>
+<ul>
+<li>reduzir aplicativos simultâneos;</li>
+<li>reduzir memória atribuída à VM;</li>
+<li>expandir RAM;</li>
+<li>revisar processos desnecessários;</li>
+<li>corrigir vazamento, se existir.</li>
+</ul>
+<p>A solução deve responder à causa.</p>
+<hr />
+<h1 id="compre-mais-ram-nao-e-sempre-resposta">“Compre mais RAM” não é sempre resposta<a class="headerlink" href="#compre-mais-ram-nao-e-sempre-resposta" title="Permanent link">&para;</a></h1>
+<p>Antes de recomendar expansão, pergunte:</p>
+<ul>
+<li>carga é legítima?</li>
+<li>existe vazamento?</li>
+<li>programa anormal?</li>
+<li>VM superdimensionada?</li>
+<li>pagefile configurado?</li>
+<li>aplicação 32-bit?</li>
+</ul>
+<p>Mais RAM não corrige todos os problemas de memória.</p>
+<hr />
+<h1 id="pagefile-fixo-e-melhor">Pagefile fixo é melhor?<a class="headerlink" href="#pagefile-fixo-e-melhor" title="Permanent link">&para;</a></h1>
+<p>Não existe regra universal.</p>
+<p>Deixar o sistema gerenciar é apropriado para muitos ambientes.</p>
+<p>Definir tamanho manual pode ser necessário em cenários específicos.</p>
+<p>Mas receitas como:</p>
+<blockquote>
+<p>“sempre use 1,5 × a RAM”</p>
+</blockquote>
+<p>não devem ser tratadas como verdade moderna universal.</p>
+<hr />
+<h1 id="colocar-pagefile-em-ssd-estraga-o-ssd">Colocar pagefile em SSD estraga o SSD?<a class="headerlink" href="#colocar-pagefile-em-ssd-estraga-o-ssd" title="Permanent link">&para;</a></h1>
+<p>SSDs possuem desgaste por escrita.</p>
+<p>Mas isso não significa que o pagefile deva ser evitado.</p>
+<p>SSDs modernos são projetados para carga de escrita significativa.</p>
+<p>Em uso normal, desativar mecanismos do sistema por medo genérico de desgaste pode causar mais problemas que benefícios.</p>
+<p>Avalie:</p>
+<ul>
+<li>workload;</li>
+<li>TBW;</li>
+<li>monitoramento;</li>
+<li>necessidade real.</li>
+</ul>
+<hr />
+<h1 id="pagefile-em-hdd">Pagefile em HDD<a class="headerlink" href="#pagefile-em-hdd" title="Permanent link">&para;</a></h1>
+<p>Se paginação pesada ocorrer em HDD, o impacto pode ser muito maior devido à latência e acesso aleatório.</p>
+<p>SSD reduz a penalidade.</p>
+<p>Mas ainda é muito mais lento que RAM.</p>
+<hr />
+<h1 id="o-que-causa-thrashing">O que causa thrashing?<a class="headerlink" href="#o-que-causa-thrashing" title="Permanent link">&para;</a></h1>
+<p>Thrashing ocorre quando o sistema gasta grande parte do tempo movendo páginas e atendendo faltas de memória em vez de realizar trabalho útil.</p>
+<p>Sintomas:</p>
+<ul>
+<li>sistema extremamente lento;</li>
+<li>armazenamento muito ativo;</li>
+<li>baixa memória disponível;</li>
+<li>aplicativos demorando para alternar;</li>
+<li>hard faults constantes.</li>
+</ul>
+<hr />
+<h1 id="thrashing-nao-e-apenas-disco-em-100">Thrashing não é apenas “disco em 100%”<a class="headerlink" href="#thrashing-nao-e-apenas-disco-em-100" title="Permanent link">&para;</a></h1>
+<p>Disco em 100% pode ocorrer por:</p>
+<ul>
+<li>cópia;</li>
+<li>atualização;</li>
+<li>antivírus;</li>
+<li>indexação;</li>
+<li>banco de dados.</li>
+</ul>
+<p>Para caracterizar thrashing, precisamos relacionar:</p>
+<ul>
+<li>memória;</li>
+<li>paginação;</li>
+<li>I/O;</li>
+<li>latência.</li>
+</ul>
+<hr />
+<h1 id="memoria-e-latencia">Memória e latência<a class="headerlink" href="#memoria-e-latencia" title="Permanent link">&para;</a></h1>
+<p>A hierarquia de memória existe porque cada nível possui custo diferente.</p>
+<p>Conceitualmente:</p>
+<div class="highlight"><pre><span></span><code>Registradores
+   ↓
+Cache CPU
+   ↓
+RAM
+   ↓
+SSD
+   ↓
+armazenamento remoto
+</code></pre></div>
+<p>Quanto mais longe da CPU, maior tende a ser a latência.</p>
+<p>Por isso, page faults que exigem armazenamento são caros.</p>
+<hr />
+<h1 id="localidade">Localidade<a class="headerlink" href="#localidade" title="Permanent link">&para;</a></h1>
+<p>Programas tendem a reutilizar dados próximos no tempo ou espaço.</p>
+<p>Chamamos isso de localidade.</p>
+<h2 id="localidade-temporal">Localidade temporal<a class="headerlink" href="#localidade-temporal" title="Permanent link">&para;</a></h2>
+<p>Dados usados recentemente podem ser usados novamente.</p>
+<h2 id="localidade-espacial">Localidade espacial<a class="headerlink" href="#localidade-espacial" title="Permanent link">&para;</a></h2>
+<p>Dados próximos aos usados podem ser acessados em seguida.</p>
+<p>Caches e páginas exploram esse comportamento.</p>
+<hr />
+<h1 id="working-set-como-conjunto-ativo">Working set como conjunto ativo<a class="headerlink" href="#working-set-como-conjunto-ativo" title="Permanent link">&para;</a></h1>
+<p>Podemos imaginar o working set como:</p>
+<blockquote>
+<p>páginas que um processo precisa ativamente em um intervalo.</p>
+</blockquote>
+<p>Se o working set de todas as cargas cabe confortavelmente na RAM:</p>
+<ul>
+<li>sistema tende a permanecer responsivo.</li>
+</ul>
+<p>Se não cabe:</p>
+<ul>
+<li>aumenta disputa;</li>
+<li>páginas são removidas;</li>
+<li>precisam retornar;</li>
+<li>paginação cresce.</li>
+</ul>
+<hr />
+<h1 id="memoria-disponivel-e-folga">Memória disponível e folga<a class="headerlink" href="#memoria-disponivel-e-folga" title="Permanent link">&para;</a></h1>
+<p>Para uma máquina interativa, não queremos operar permanentemente no limite.</p>
+<p>Folga permite absorver:</p>
+<ul>
+<li>picos;</li>
+<li>novas abas;</li>
+<li>atualizações;</li>
+<li>tarefas temporárias.</li>
+</ul>
+<p>Dimensionamento deve considerar comportamento real.</p>
+<hr />
+<h1 id="ferramentas-no-windows">Ferramentas no Windows<a class="headerlink" href="#ferramentas-no-windows" title="Permanent link">&para;</a></h1>
+<h2 id="gerenciador-de-tarefas">Gerenciador de Tarefas<a class="headerlink" href="#gerenciador-de-tarefas" title="Permanent link">&para;</a></h2>
+<p>Na aba de desempenho, podemos observar:</p>
+<ul>
+<li>Em uso;</li>
+<li>Disponível;</li>
+<li>Comprometida;</li>
+<li>Em cache;</li>
+<li>pools;</li>
+<li>velocidade da RAM.</li>
+</ul>
+<p>Esses números ajudam a criar o panorama.</p>
+<hr />
+<h1 id="monitor-de-recursos">Monitor de Recursos<a class="headerlink" href="#monitor-de-recursos" title="Permanent link">&para;</a></h1>
+<p>Pode mostrar:</p>
+<ul>
+<li>hard faults;</li>
+<li>memória física;</li>
+<li>processos;</li>
+<li>commit;</li>
+<li>working set.</li>
+</ul>
+<p>É útil para relacionar processo e pressão.</p>
+<hr />
+<h1 id="rammap">RAMMap<a class="headerlink" href="#rammap" title="Permanent link">&para;</a></h1>
+<p>A ferramenta RAMMap, da Sysinternals, permite análise mais profunda da utilização da memória física.</p>
+<p>Pode ajudar a entender:</p>
+<ul>
+<li>listas;</li>
+<li>arquivos;</li>
+<li>processos;</li>
+<li>standby;</li>
+<li>driver allocations.</li>
+</ul>
+<p>É uma ferramenta avançada.</p>
+<hr />
+<h1 id="process-explorer">Process Explorer<a class="headerlink" href="#process-explorer" title="Permanent link">&para;</a></h1>
+<p>Pode mostrar métricas relacionadas a memória por processo.</p>
+<p>Útil para investigar crescimento e commit.</p>
+<hr />
+<h1 id="powershell">PowerShell<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h1>
+<p>Para observação inicial:</p>
+<div class="highlight"><pre><span></span><code>Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 ProcessName, Id, WorkingSet64
+</code></pre></div>
+<p>Esse comando lista processos com working set elevado.</p>
+<p>Mas lembre-se:</p>
+<blockquote>
+<p>working set não é o único número de memória relevante.</p>
+</blockquote>
+<hr />
+<h1 id="ferramentas-no-linux">Ferramentas no Linux<a class="headerlink" href="#ferramentas-no-linux" title="Permanent link">&para;</a></h1>
+<h2 id="free">free<a class="headerlink" href="#free" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>free -h
+</code></pre></div>
+<p>Ajuda a observar memória geral.</p>
+<hr />
+<h1 id="vmstat">vmstat<a class="headerlink" href="#vmstat" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>vmstat 1
+</code></pre></div>
+<p>Pode mostrar atividade relacionada a:</p>
+<ul>
+<li>processos;</li>
+<li>memória;</li>
+<li>swap;</li>
+<li>I/O;</li>
+<li>CPU.</li>
+</ul>
+<p>É uma ferramenta muito útil.</p>
+<hr />
+<h1 id="top-e-htop">top e htop<a class="headerlink" href="#top-e-htop" title="Permanent link">&para;</a></h1>
+<p>Permitem observar:</p>
+<ul>
+<li>RES;</li>
+<li>VIRT;</li>
+<li>SHR;</li>
+<li>CPU;</li>
+<li>processos.</li>
+</ul>
+<p>Mas os campos precisam ser entendidos.</p>
+<hr />
+<h1 id="virt">VIRT<a class="headerlink" href="#virt" title="Permanent link">&para;</a></h1>
+<p>Em ferramentas Linux, VIRT pode ser enorme.</p>
+<p>Isso não significa que toda aquela memória está fisicamente na RAM.</p>
+<p>Inclui espaço virtual mapeado.</p>
+<hr />
+<h1 id="res">RES<a class="headerlink" href="#res" title="Permanent link">&para;</a></h1>
+<p>RES representa memória residente.</p>
+<p>É mais próximo do quanto está fisicamente presente naquele momento.</p>
+<hr />
+<h1 id="shr">SHR<a class="headerlink" href="#shr" title="Permanent link">&para;</a></h1>
+<p>SHR indica uma estimativa de memória compartilhável/compartilhada.</p>
+<p>Não some valores de vários processos ingenuamente.</p>
+<p>Você pode contar a mesma memória mais de uma vez.</p>
+<hr />
+<h1 id="smem">smem<a class="headerlink" href="#smem" title="Permanent link">&para;</a></h1>
+<p>Ferramentas como smem podem apresentar métricas como PSS.</p>
+<p>PSS distribui páginas compartilhadas proporcionalmente entre processos.</p>
+<p>Pode fornecer uma visão mais justa do consumo.</p>
+<p>Nem sempre está instalada.</p>
+<hr />
+<h1 id="pss-proportional-set-size">PSS — Proportional Set Size<a class="headerlink" href="#pss-proportional-set-size" title="Permanent link">&para;</a></h1>
+<p>Imagine uma página de 12 MB compartilhada por 3 processos.</p>
+<p>Em PSS, cada processo poderia receber aproximadamente:</p>
+<div class="highlight"><pre><span></span><code>4 MB
+</code></pre></div>
+<p>Isso evita contabilizar 12 MB para cada um.</p>
+<hr />
+<h1 id="uss">USS<a class="headerlink" href="#uss" title="Permanent link">&para;</a></h1>
+<p>Unique Set Size tenta representar memória exclusiva do processo.</p>
+<p>É útil em certas análises.</p>
+<p>Novamente, nenhuma métrica isolada responde tudo.</p>
+<hr />
+<h1 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h1>
+<p>O Monitor de Atividade apresenta conceitos como:</p>
+<ul>
+<li>pressão da memória;</li>
+<li>memória física;</li>
+<li>memória usada;</li>
+<li>arquivos em cache;</li>
+<li>swap utilizado.</li>
+</ul>
+<p>A métrica de pressão é particularmente útil para interpretar o estado do sistema.</p>
+<hr />
+<h1 id="pressao-e-mais-importante-que-percentual-isolado">Pressão é mais importante que percentual isolado<a class="headerlink" href="#pressao-e-mais-importante-que-percentual-isolado" title="Permanent link">&para;</a></h1>
+<p>Essa ideia vale para todas as plataformas.</p>
+<p>Perguntar apenas:</p>
+<blockquote>
+<p>“Quantos por cento de RAM está usando?”</p>
+</blockquote>
+<p>é insuficiente.</p>
+<p>Pergunte:</p>
+<ul>
+<li>há memória disponível?</li>
+<li>há paginação?</li>
+<li>há latência?</li>
+<li>há crescimento anormal?</li>
+<li>há swap?</li>
+<li>o sistema responde bem?</li>
+</ul>
+<hr />
+<h1 id="mito-ou-evidencia">Mito ou Evidência?<a class="headerlink" href="#mito-ou-evidencia" title="Permanent link">&para;</a></h1>
+<h2 id="ram-usada-deve-ser-sempre-a-menor-possivel">“RAM usada deve ser sempre a menor possível.”<a class="headerlink" href="#ram-usada-deve-ser-sempre-a-menor-possivel" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Cache e uso eficiente são desejáveis.</p>
+<hr />
+<h2 id="page-fault-significa-defeito">“Page fault significa defeito.”<a class="headerlink" href="#page-fault-significa-defeito" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Muitas page faults são normais.</p>
+<hr />
+<h2 id="hard-fault-significa-ssd-quebrado">“Hard fault significa SSD quebrado.”<a class="headerlink" href="#hard-fault-significa-ssd-quebrado" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Significa necessidade de recuperar página de armazenamento.</p>
+<hr />
+<h2 id="se-existe-pagefile-o-computador-esta-usando-ssd-como-ram-o-tempo-todo">“Se existe pagefile, o computador está usando SSD como RAM o tempo todo.”<a class="headerlink" href="#se-existe-pagefile-o-computador-esta-usando-ssd-como-ram-o-tempo-todo" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>A existência do arquivo não prova atividade intensa.</p>
+<hr />
+<h2 id="desativar-pagefile-sempre-melhora-desempenho">“Desativar pagefile sempre melhora desempenho.”<a class="headerlink" href="#desativar-pagefile-sempre-melhora-desempenho" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Pode reduzir o limite de commit e prejudicar estabilidade.</p>
+<hr />
+<h2 id="mais-ram-sempre-corrige-lentidao">“Mais RAM sempre corrige lentidão.”<a class="headerlink" href="#mais-ram-sempre-corrige-lentidao" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Se o gargalo for CPU, I/O, rede ou software, o ganho pode ser mínimo.</p>
+<hr />
+<h2 id="linux-usa-toda-a-ram-porque-esta-mal-otimizado">“Linux usa toda a RAM porque está mal otimizado.”<a class="headerlink" href="#linux-usa-toda-a-ram-porque-esta-mal-otimizado" title="Permanent link">&para;</a></h2>
+<p><strong>Mito.</strong></p>
+<p>Grande parte pode estar sendo usada como cache reutilizável.</p>
+<hr />
+<h1 id="laboratorio-investigando-pressao-de-memoria">🔬 Laboratório — investigando pressão de memória<a class="headerlink" href="#laboratorio-investigando-pressao-de-memoria" title="Permanent link">&para;</a></h1>
+<p>O laboratório será apenas de observação e carga segura.</p>
+<p>Não altere pagefile ou swap nesta etapa.</p>
+<hr />
+<h1 id="etapa-1-baseline">Etapa 1 — Baseline<a class="headerlink" href="#etapa-1-baseline" title="Permanent link">&para;</a></h1>
+<p>Reinicie apenas se isso fizer parte da sua rotina de teste.</p>
+<p>Espere o sistema estabilizar.</p>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code>RAM total:
+Em uso:
+Disponível:
+Cache:
+Commit:
+Swap/pagefile em uso:
+</code></pre></div>
+<hr />
+<h1 id="etapa-2-identifique-os-maiores-consumidores">Etapa 2 — Identifique os maiores consumidores<a class="headerlink" href="#etapa-2-identifique-os-maiores-consumidores" title="Permanent link">&para;</a></h1>
+<p>No Windows:</p>
+<ul>
+<li>Gerenciador de Tarefas;</li>
+<li>Monitor de Recursos.</li>
+</ul>
+<p>No Linux:</p>
+<ul>
+<li>top;</li>
+<li>htop;</li>
+<li>ps.</li>
+</ul>
+<p>Registre cinco processos.</p>
+<hr />
+<h1 id="etapa-3-abra-uma-carga-conhecida">Etapa 3 — Abra uma carga conhecida<a class="headerlink" href="#etapa-3-abra-uma-carga-conhecida" title="Permanent link">&para;</a></h1>
+<p>Exemplos:</p>
+<ul>
+<li>várias abas;</li>
+<li>editor;</li>
+<li>IDE;</li>
+<li>VM;</li>
+<li>arquivo grande.</li>
+</ul>
+<p>Evite criar situação extrema.</p>
+<p>Observe:</p>
+<ul>
+<li>memória disponível;</li>
+<li>commit;</li>
+<li>I/O;</li>
+<li>responsividade.</li>
+</ul>
+<hr />
+<h1 id="etapa-4-compare-antes-e-depois">Etapa 4 — Compare antes e depois<a class="headerlink" href="#etapa-4-compare-antes-e-depois" title="Permanent link">&para;</a></h1>
+<p>Tabela:</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th style="text-align: right;">Antes</th>
+<th style="text-align: right;">Depois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAM em uso</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Disponível</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Commit</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Swap/pagefile</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Hard faults</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>SSD</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="etapa-5-feche-uma-carga-grande">Etapa 5 — Feche uma carga grande<a class="headerlink" href="#etapa-5-feche-uma-carga-grande" title="Permanent link">&para;</a></h1>
+<p>Observe por alguns minutos.</p>
+<p>Pergunte:</p>
+<ul>
+<li>memória cai imediatamente?</li>
+<li>cache permanece?</li>
+<li>disponível aumenta?</li>
+<li>I/O reduz?</li>
+</ul>
+<p>Não espere que todos os números retornem exatamente ao baseline.</p>
+<hr />
+<h1 id="etapa-6-procure-crescimento-continuo">Etapa 6 — Procure crescimento contínuo<a class="headerlink" href="#etapa-6-procure-crescimento-continuo" title="Permanent link">&para;</a></h1>
+<p>Escolha um processo.</p>
+<p>Observe por 10 a 15 minutos.</p>
+<p>Registre:</p>
+<div class="highlight"><pre><span></span><code>0 min:
+5 min:
+10 min:
+15 min:
+</code></pre></div>
+<p>Pergunte:</p>
+<blockquote>
+<p>o crescimento corresponde à atividade?</p>
+</blockquote>
+<hr />
+<h1 id="etapa-7-windows">Etapa 7 — Windows<a class="headerlink" href="#etapa-7-windows" title="Permanent link">&para;</a></h1>
+<p>No Gerenciador de Tarefas, observe:</p>
+<ul>
+<li>Em uso;</li>
+<li>Disponível;</li>
+<li>Comprometida;</li>
+<li>Em cache.</li>
+</ul>
+<p>Anote os valores.</p>
+<hr />
+<h1 id="etapa-8-linux">Etapa 8 — Linux<a class="headerlink" href="#etapa-8-linux" title="Permanent link">&para;</a></h1>
+<p>Execute:</p>
+<div class="highlight"><pre><span></span><code>free -h
+</code></pre></div>
+<p>Depois:</p>
+<div class="highlight"><pre><span></span><code>vmstat 1
+</code></pre></div>
+<p>Observe alguns ciclos.</p>
+<p>Não encerre processos.</p>
+<hr />
+<h1 id="registro-do-laboratorio">📁 Registro do laboratório<a class="headerlink" href="#registro-do-laboratorio" title="Permanent link">&para;</a></h1>
+<p>Adicione ao Dossiê:</p>
+<div class="highlight"><pre><span></span><code>Sistema operacional:
+RAM física:
+Memória disponível:
+Commit:
+Swap/pagefile:
+Processo de maior consumo:
+Working set/RES:
+Crescimento observado:
+Atividade de armazenamento:
+Sintoma:
+Hipótese:
+Teste:
+Resultado:
+Conclusão:
+</code></pre></div>
+<hr />
+<h1 id="estudo-de-caso-1-ram-em-85-sistema-rapido">Estudo de caso 1 — RAM em 85%, sistema rápido<a class="headerlink" href="#estudo-de-caso-1-ram-em-85-sistema-rapido" title="Permanent link">&para;</a></h1>
+<p>Evidências:</p>
+<ul>
+<li>32 GB instalados;</li>
+<li>27 GB em uso/cache;</li>
+<li>5 GB disponíveis;</li>
+<li>pouca paginação;</li>
+<li>sistema responsivo.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>não há evidência de problema apenas pelo percentual.</p>
+</blockquote>
+<hr />
+<h1 id="estudo-de-caso-2-ram-em-95-ssd-em-100">Estudo de caso 2 — RAM em 95%, SSD em 100%<a class="headerlink" href="#estudo-de-caso-2-ram-em-95-ssd-em-100" title="Permanent link">&para;</a></h1>
+<p>Evidências:</p>
+<ul>
+<li>disponível abaixo de 200 MB;</li>
+<li>hard faults persistentes;</li>
+<li>commit próximo do limite;</li>
+<li>alternar janelas demora;</li>
+<li>SSD com I/O intenso.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>forte evidência de pressão de memória com paginação relevante.</p>
+</blockquote>
+<hr />
+<h1 id="estudo-de-caso-3-processo-usa-8-gb-e-esta-saudavel">Estudo de caso 3 — Processo usa 8 GB e está saudável<a class="headerlink" href="#estudo-de-caso-3-processo-usa-8-gb-e-esta-saudavel" title="Permanent link">&para;</a></h1>
+<p>Aplicação:</p>
+<ul>
+<li>edição de vídeo;</li>
+<li>projeto grande;</li>
+<li>uso estável;</li>
+<li>memória disponível ainda adequada.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>consumo alto pode ser legítimo.</p>
+</blockquote>
+<hr />
+<h1 id="estudo-de-caso-4-servico-cresce-sem-parar">Estudo de caso 4 — Serviço cresce sem parar<a class="headerlink" href="#estudo-de-caso-4-servico-cresce-sem-parar" title="Permanent link">&para;</a></h1>
+<p>Evidências:</p>
+<ul>
+<li>começa com 300 MB;</li>
+<li>sobe 200 MB por hora;</li>
+<li>não libera;</li>
+<li>commit aumenta;</li>
+<li>após reiniciar o serviço volta ao início.</li>
+</ul>
+<p>Hipótese forte:</p>
+<blockquote>
+<p>vazamento ou retenção anormal.</p>
+</blockquote>
+<hr />
+<h1 id="estudo-de-caso-5-ssd-lento">Estudo de caso 5 — “SSD lento”<a class="headerlink" href="#estudo-de-caso-5-ssd-lento" title="Permanent link">&para;</a></h1>
+<p>Usuário relata:</p>
+<blockquote>
+<p>“Quando abro a VM, o SSD fica em 100%.”</p>
+</blockquote>
+<p>Evidências:</p>
+<ul>
+<li>RAM quase cheia;</li>
+<li>hard faults aumentam;</li>
+<li>pagefile ativo;</li>
+<li>ao fechar VM, disco normaliza.</li>
+</ul>
+<p>Conclusão:</p>
+<blockquote>
+<p>SSD está respondendo à pressão de memória.</p>
+</blockquote>
+<p>Não há evidência de defeito físico no SSD.</p>
+<hr />
+<h1 id="estudo-de-caso-6-aplicativo-32-bit-falha-com-muita-ram-livre">Estudo de caso 6 — Aplicativo 32-bit falha com muita RAM livre<a class="headerlink" href="#estudo-de-caso-6-aplicativo-32-bit-falha-com-muita-ram-livre" title="Permanent link">&para;</a></h1>
+<p>Evidências:</p>
+<ul>
+<li>host possui 64 GB;</li>
+<li>processo é 32-bit;</li>
+<li>erro ocorre ao crescer espaço virtual;</li>
+<li>outros aplicativos funcionam.</li>
+</ul>
+<p>Hipótese:</p>
+<blockquote>
+<p>limite de espaço de endereçamento da aplicação.</p>
+</blockquote>
+<p>Adicionar mais RAM física pode não resolver.</p>
+<hr />
+<h1 id="diagnostico-por-correlacao">Diagnóstico por correlação<a class="headerlink" href="#diagnostico-por-correlacao" title="Permanent link">&para;</a></h1>
+<p>Não queremos um número isolado.</p>
+<p>Queremos correlacionar:</p>
+<div class="highlight"><pre><span></span><code>memória disponível cai
+   ↓
+hard faults sobem
+   ↓
+SSD aumenta I/O
+   ↓
+latência cresce
+   ↓
+sistema perde responsividade
+</code></pre></div>
+<p>Essa sequência é muito mais forte.</p>
+<hr />
+<h1 id="diagnostico-por-intervencao-minima">Diagnóstico por intervenção mínima<a class="headerlink" href="#diagnostico-por-intervencao-minima" title="Permanent link">&para;</a></h1>
+<p>Teste:</p>
+<blockquote>
+<p>fechar uma carga grande.</p>
+</blockquote>
+<p>Se:</p>
+<div class="highlight"><pre><span></span><code>disponível sobe
+hard faults caem
+I/O reduz
+responsividade volta
+</code></pre></div>
+<p>a hipótese de pressão ganha força.</p>
+<hr />
+<h1 id="nao-confunda-causa-e-efeito">Não confunda causa e efeito<a class="headerlink" href="#nao-confunda-causa-e-efeito" title="Permanent link">&para;</a></h1>
+<p>SSD em 100% pode ser consequência da falta de memória.</p>
+<p>A causa pode ser:</p>
+<ul>
+<li>carga legítima;</li>
+<li>memória insuficiente;</li>
+<li>vazamento;</li>
+<li>configuração.</li>
+</ul>
+<p>Se trocarmos o SSD sem entender isso, o sintoma pode continuar.</p>
+<hr />
+<h1 id="memoria-e-um-sistema">Memória é um sistema<a class="headerlink" href="#memoria-e-um-sistema" title="Permanent link">&para;</a></h1>
+<p>Precisamos pensar em conjunto:</p>
+<div class="highlight"><pre><span></span><code>Aplicação
+   ↓
+Endereços virtuais
+   ↓
+Commit
+   ↓
+Working set
+   ↓
+RAM
+   ↓
+Cache / standby
+   ↓
+Pagefile / swap
+   ↓
+Armazenamento
+</code></pre></div>
+<p>Cada camada possui função própria.</p>
+<hr />
+<h1 id="o-que-um-profissional-avancado-observaria">O que um profissional avançado observaria?<a class="headerlink" href="#o-que-um-profissional-avancado-observaria" title="Permanent link">&para;</a></h1>
+<p>Dependendo do caso:</p>
+<ul>
+<li>commit por processo;</li>
+<li>working set;</li>
+<li>private bytes;</li>
+<li>page fault rate;</li>
+<li>hard faults;</li>
+<li>standby lists;</li>
+<li>pool paginado;</li>
+<li>pool não paginado;</li>
+<li>PSS;</li>
+<li>RSS;</li>
+<li>swap-in;</li>
+<li>swap-out;</li>
+<li>reclaim;</li>
+<li>major/minor faults;</li>
+<li>traces do kernel.</li>
+</ul>
+<p>Não precisamos dominar tudo agora.</p>
+<p>Mas já sabemos interpretar o princípio.</p>
+<hr />
+<h1 id="pools-do-kernel">Pools do kernel<a class="headerlink" href="#pools-do-kernel" title="Permanent link">&para;</a></h1>
+<p>O próprio kernel utiliza memória.</p>
+<p>No Windows, podemos observar conceitos como:</p>
+<ul>
+<li>paged pool;</li>
+<li>non-paged pool.</li>
+</ul>
+<p>Drivers e kernel também podem vazar recursos.</p>
+<p>Se o consumo cresce anormalmente, o problema pode não estar em um aplicativo comum.</p>
+<hr />
+<h1 id="non-paged-pool">Non-paged pool<a class="headerlink" href="#non-paged-pool" title="Permanent link">&para;</a></h1>
+<p>Algumas estruturas precisam permanecer residentes.</p>
+<p>Não podem simplesmente ser paginadas.</p>
+<p>Crescimento anormal pode indicar:</p>
+<ul>
+<li>driver;</li>
+<li>componente do kernel.</li>
+</ul>
+<p>Esse tipo de investigação é mais avançado.</p>
+<hr />
+<h1 id="memoria-e-drivers">Memória e drivers<a class="headerlink" href="#memoria-e-drivers" title="Permanent link">&para;</a></h1>
+<p>Um driver defeituoso pode:</p>
+<ul>
+<li>alocar memória;</li>
+<li>não liberar;</li>
+<li>crescer pools;</li>
+<li>causar instabilidade.</li>
+</ul>
+<p>Então “RAM acabando” não significa sempre:</p>
+<blockquote>
+<p>aplicativo usando demais.</p>
+</blockquote>
+<hr />
+<h1 id="o-sistema-operacional-precisa-sobreviver-a-pressao">O sistema operacional precisa sobreviver à pressão<a class="headerlink" href="#o-sistema-operacional-precisa-sobreviver-a-pressao" title="Permanent link">&para;</a></h1>
+<p>Um bom gerenciador de memória tenta equilibrar:</p>
+<ul>
+<li>desempenho;</li>
+<li>disponibilidade;</li>
+<li>cache;</li>
+<li>isolamento;</li>
+<li>estabilidade.</li>
+</ul>
+<p>O objetivo não é manter RAM vazia.</p>
+<p>É manter o sistema útil.</p>
+<hr />
+<h1 id="a-pergunta-correta">A pergunta correta<a class="headerlink" href="#a-pergunta-correta" title="Permanent link">&para;</a></h1>
+<p>Em vez de:</p>
+<blockquote>
+<p>“Quanto de RAM está usando?”</p>
+</blockquote>
+<p>Pergunte:</p>
+<blockquote>
+<p>“A carga ativa cabe confortavelmente na memória física e o sistema consegue atender páginas sem gerar latência perceptível?”</p>
+</blockquote>
+<p>Essa pergunta é muito mais profissional.</p>
+<hr />
+<h1 id="dossie-da-investigacao-nova-ficha">📁 Dossiê da Investigação — nova ficha<a class="headerlink" href="#dossie-da-investigacao-nova-ficha" title="Permanent link">&para;</a></h1>
+<h2 id="ficha-de-memoria">Ficha de memória<a class="headerlink" href="#ficha-de-memoria" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Data/hora:
+Sistema:
+RAM física:
+Disponível:
+Commit atual:
+Limite de commit:
+Cache:
+Swap/pagefile:
+Processo:
+Working set/RES:
+Memória privada:
+Hard/major faults:
+I/O:
+Sintoma:
+Hipótese:
+Teste:
+Resultado:
+Conclusão:
+</code></pre></div>
+<p>Use essa ficha sempre que investigar:</p>
+<ul>
+<li>lentidão;</li>
+<li>congelamentos;</li>
+<li>swap;</li>
+<li>pagefile;</li>
+<li>vazamento;</li>
+<li>consumo excessivo.</li>
+</ul>
+<hr />
+<h1 id="conexao-com-a-proxima-aula">Conexão com a próxima aula<a class="headerlink" href="#conexao-com-a-proxima-aula" title="Permanent link">&para;</a></h1>
+<p>Memória virtual mostrou que o sistema operacional cria abstrações.</p>
+<p>Agora vamos explorar outra abstração essencial:</p>
+<blockquote>
+<p>arquivos e diretórios.</p>
+</blockquote>
+<p>Quando você salva:</p>
+<div class="highlight"><pre><span></span><code>relatorio.docx
+</code></pre></div>
+<p>o sistema precisa decidir:</p>
+<ul>
+<li>onde os dados ficam;</li>
+<li>quais metadados existem;</li>
+<li>quem é o proprietário;</li>
+<li>quem pode ler;</li>
+<li>quem pode modificar;</li>
+<li>o que significa excluir;</li>
+<li>como caminhos funcionam;</li>
+<li>como sistemas de arquivos organizam tudo.</li>
+</ul>
+<p>E uma nova investigação surgirá:</p>
+<blockquote>
+<p><strong>Se um arquivo “sumiu”, ele foi realmente apagado?</strong></p>
+</blockquote>
+<h1 id="proxima-aula-sistemas-de-arquivos-caminhos-e-metadados-o-que-acontece-quando-voce-salva-move-ou-exclui-um-arquivo">Próxima aula — Sistemas de Arquivos, Caminhos e Metadados: O Que Acontece Quando Você Salva, Move ou Exclui um Arquivo?<a class="headerlink" href="#proxima-aula-sistemas-de-arquivos-caminhos-e-metadados-o-que-acontece-quando-voce-salva-move-ou-exclui-um-arquivo" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+  
+    
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Smart Eletro Vini · Conhecimento gratuito para todos.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ViniciusSilva97" target="_blank" rel="noopener" title="GitHub de Vinícius Silva" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
