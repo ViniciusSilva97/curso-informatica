@@ -91,6 +91,7 @@ nav:
     - Aula 1 - Sistema Operacional. O Que Realmente Acontece Entre o Hardware e os Programas?: modulo-3/aula-1-sistema-operacional-o-que-realmente-acontece-entre-o-hardware-e-os-programas.md
     - Aula 2 - Processos e Threads. O Que Está Realmente Rodando no Seu Computador?: modulo-3/aula-2-processos-e-threads-o-que-esta-realmente-rodando-no-seu-computador.md
     - Aula 3 - Memória Virtual e Paginação. Por Que o Sistema Usa o SSD Mesmo Quando Você Não Pediu?: modulo-3/aula-3-memoria-virtual-e-paginacao-por-que-o-sistema-usa-o-ssd-mesmo-quando-voce-nao-pediu.md
+    - Aula 4 - Sistemas de Arquivos, Caminhos e Metadados. O Que Acontece Quando Você Salva, Move ou Exclui um Arquivo?: modulo-3/aula-4-sistemas-de-arquivos-caminhos-e-metadados-o-que-acontece-quando-voce-salva-move-ou-exclui-um-arquivo.md
 
 markdown_extensions:
   - admonition
